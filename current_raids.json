@@ -1,8 +1,20 @@
 {
   "last_updated": "2026-03-17",
-  "tier5": ["Zacian"],
-  "mega": ["Mega Steelix"],
-  "tier3": ["Lapras", "Snorlax", "Dragonite"],
-  "tier1": ["Gulpin", "Drilbur", "Timburr", "Minccino"],
-  "shadow": ["Shadow Latias"]
+  "tier5": [
+    "Zacian"
+  ],
+  "mega": [
+    "Mega Steelix"
+  ],
+  "tier3": [
+    "Pinsir",
+    "Scizor",
+    "Kleavor"
+  ],
+  "tier1": [
+    "Blipbug"
+  ],
+  "shadow": [
+    "Shadow Latias"
+  ]
 }
