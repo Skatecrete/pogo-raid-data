@@ -2,7 +2,7 @@ name: Update Raid Data from Snack Nap
 
 on:
   schedule:
-    - cron: '0 */6 * * *'
+    - cron: '0 */6 * * *'  # Run every 6 hours
   workflow_dispatch:
 
 permissions:
@@ -14,10 +14,10 @@ jobs:
     
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4  # Changed from v3 to v4
+        uses: actions/checkout@v4
       
       - name: Set up Python
-        uses: actions/setup-python@v5  # Changed from v4 to v5
+        uses: actions/setup-python@v5
         with:
           python-version: '3.10'
       
@@ -26,8 +26,8 @@ jobs:
           python -m pip install --upgrade pip
           pip install requests beautifulsoup4
       
-      - name: Run Snack Nap scraper
-        run: python scrape_snacknap.py
+      - name: Run Snack Nap Max Battles scraper
+        run: python scrape_snacknap_maxbattles.py
       
       - name: Commit and push if changed
         run: |
