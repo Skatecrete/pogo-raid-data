@@ -4,12 +4,18 @@ import json
 import re
 from datetime import datetime
 
+def clean_pokemon_name(text):
+    """Extract clean Pokemon name from link text"""
+    # Remove common prefixes
+    text = text.replace('Shiny', '').replace('D-Max', '').replace('G-Max', '')
+    # Take first word and clean it
+    return text.strip().split()[0]
+
 def scrape_snacknap():
     """Scrape all raid data from Snack Nap"""
     
     print("🚀 Starting Snack Nap scraper...")
     
-    # Initialize data structure
     raid_data = {
         "last_updated": datetime.now().strftime("%Y-%m-%d"),
         "tier5": [],
@@ -32,50 +38,64 @@ def scrape_snacknap():
         response = requests.get(raids_url, headers=headers, timeout=10)
         soup = BeautifulSoup(response.text, 'html.parser')
         
-        # Find all raid sections
-        content = soup.get_text()
-        
-        # Simple extraction patterns (you can expand these)
-        if "Zacian" in content:
-            raid_data["tier5"] = ["Zacian", "Zamazenta"]
-        if "Mega Steelix" in content:
-            raid_data["mega"] = ["Mega Steelix", "Mega Slowbro"]
-        if "Pinsir" in content:
-            raid_data["tier3"] = ["Pinsir", "Scizor", "Kleavor"]
-        if "Blipbug" in content:
-            raid_data["tier1"] = ["Blipbug"]
-        if "Shadow Latias" in content:
-            raid_data["shadow"] = [
-                "Shadow Latias", "Shadow Dratini", "Shadow Gligar",
-                "Shadow Cacnea", "Shadow Joltik", "Shadow Alolan Marowak",
-                "Shadow Lapras", "Shadow Stantler"
-            ]
+        # Find all Pokemon links
+        for link in soup.find_all('a', href=True):
+            if '/pokemon/' in link['href']:
+                text = link.get_text()
+                pokemon = clean_pokemon_name(text)
+                
+                # Categorize based on context (you'll need to expand this)
+                if 'Zacian' in text or 'Zamazenta' in text:
+                    if pokemon not in raid_data['tier5']:
+                        raid_data['tier5'].append(pokemon)
+                elif 'Mega' in text:
+                    if pokemon not in raid_data['mega']:
+                        raid_data['mega'].append(pokemon)
+                elif 'Shadow' in text:
+                    # Add D-Max prefix for shadow Pokemon
+                    full_name = f"Shadow {pokemon}"
+                    if full_name not in raid_data['shadow']:
+                        raid_data['shadow'].append(full_name)
         
         # Scrape max battles
         print("📡 Fetching max battles...")
         max_url = "https://www.snacknap.com/max-battles"
         response = requests.get(max_url, headers=headers, timeout=10)
         soup = BeautifulSoup(response.text, 'html.parser')
-        content = soup.get_text()
         
-        # Dynamax Tier 1
-        dynamax_t1 = ["Bulbasaur", "Charmander", "Squirtle", "Pidove", "Woobat", 
-                     "Drilbur", "Inkay", "Bounsweet", "Grookey", "Sobble", 
-                     "Skwovet", "Wooloo", "Scorbunny", "Trubbish", "Rookidee",
-                     "Spheal", "Roggenrola", "Gastly", "Caterpie", "Growlithe",
-                     "Krabby", "Kabuto", "Omanyte", "Abra", "Ralts", "Hatenna"]
-        raid_data["dynamax_tier1"] = [p for p in dynamax_t1 if p in content]
+        current_tier = None
         
-        # Dynamax Tier 2
-        dynamax_t2 = ["Machop", "Darumaka", "Eevee", "Shuckle", "Wailmer"]
-        raid_data["dynamax_tier2"] = [p for p in dynamax_t2 if p in content]
-        
-        # Dynamax Tier 3
-        dynamax_t3 = ["Sableye", "Chansey", "Drampa", "Hitmonchan", "Hitmonlee",
-                     "Cryogonal", "Passimian", "Beldum", "Falinks"]
-        raid_data["dynamax_tier3"] = [p for p in dynamax_t3 if p in content]
+        for element in soup.find_all(['h2', 'h3', 'ul']):
+            if element.name in ['h2', 'h3']:
+                heading = element.get_text()
+                if 'Tier 1' in heading:
+                    current_tier = 'dynamax_tier1'
+                    print("📋 Found Dynamax Tier 1")
+                elif 'Tier 2' in heading:
+                    current_tier = 'dynamax_tier2'
+                    print("📋 Found Dynamax Tier 2")
+                elif 'Tier 3' in heading:
+                    current_tier = 'dynamax_tier3'
+                    print("📋 Found Dynamax Tier 3")
+                elif 'Gigantamax' in heading:
+                    current_tier = 'gigantamax'
+                    print("📋 Found Gigantamax")
+                else:
+                    current_tier = None
+            
+            elif element.name == 'ul' and current_tier:
+                for item in element.find_all('li'):
+                    link = item.find('a')
+                    if link:
+                        text = link.get_text()
+                        # Keep the D-Max prefix in the JSON
+                        pokemon = text.strip()
+                        if pokemon and pokemon not in raid_data[current_tier]:
+                            raid_data[current_tier].append(pokemon)
+                            print(f"  ✅ Added {pokemon}")
         
         # Print summary
+        print("\n📊 SCRAPE SUMMARY:")
         total = 0
         for tier, pokemon in raid_data.items():
             if tier != 'last_updated':
