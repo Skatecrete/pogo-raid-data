@@ -3,7 +3,7 @@ name: Update Raid Data from Snack Nap
 on:
   schedule:
     - cron: '0 */6 * * *'  # Run every 6 hours
-  workflow_dispatch:
+  workflow_dispatch:  # Allow manual runs
 
 permissions:
   contents: write
@@ -24,10 +24,10 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install requests beautifulsoup4
+          pip install -r requirements.txt
       
-      - name: Run Snack Nap Max Battles scraper
-        run: python scrape_snacknap_maxbattles.py
+      - name: Run Snack Nap scraper
+        run: python scrape_snacknap.py
       
       - name: Commit and push if changed
         run: |
