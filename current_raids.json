@@ -1,109 +1,12 @@
 {
   "last_updated": "2026-03-18",
-  "tier5": [
-    "Zacian",
-    "Zamazenta",
-    "Regieleki",
-    "Latias",
-    "Latios",
-    "Kyogre",
-    "Groudon",
-    "Rayquaza"
-  ],
-  "mega": [
-    "Mega Steelix",
-    "Mega Slowbro",
-    "Mega Houndoom",
-    "Mega Absol",
-    "Mega Pinsir"
-  ],
-  "tier3": [
-    "Pinsir",
-    "Scizor",
-    "Kleavor",
-    "Lapras",
-    "Snorlax",
-    "Dragonite",
-    "Machamp",
-    "Gengar",
-    "Alakazam",
-    "Golem"
-  ],
-  "tier1": [
-    "Blipbug",
-    "Grubbin",
-    "Joltik",
-    "Dwebble",
-    "Gulpin",
-    "Drilbur",
-    "Timburr",
-    "Minccino",
-    "Bulbasaur",
-    "Charmander",
-    "Squirtle"
-  ],
-  "shadow": [
-    "Shadow Latias",
-    "Shadow Dratini",
-    "Shadow Gligar",
-    "Shadow Cacnea",
-    "Shadow Joltik",
-    "Shadow Alolan Marowak",
-    "Shadow Lapras",
-    "Shadow Stantler"
-  ],
-  "dynamax_tier1": [
-    "Bulbasaur",
-    "Charmander",
-    "Squirtle",
-    "Skwovet",
-    "Wooloo",
-    "Rookidee",
-    "Blipbug",
-    "Grubbin",
-    "Joltik",
-    "Dwebble"
-  ],
-  "dynamax_tier3": [
-    "Pikachu",
-    "Eevee",
-    "Galarian Meowth",
-    "Galarian Ponyta",
-    "Beldum",
-    "Machop",
-    "Gastly",
-    "Magnemite"
-  ],
-  "dynamax_tier5": [
-    "Rillaboom",
-    "Cinderace",
-    "Inteleon",
-    "Corviknight",
-    "Drednaw",
-    "Coalossal",
-    "Flapple",
-    "Appletun",
-    "Sandaconda",
-    "Toxtricity",
-    "Centiskorch",
-    "Grimmsnarl",
-    "Hatterene",
-    "Copperajah",
-    "Duraludon"
-  ],
-  "gigantamax": [
-    "Gengar",
-    "Lapras",
-    "Snorlax",
-    "Kingler",
-    "Machamp",
-    "Garbodor",
-    "Melmetal",
-    "Charizard",
-    "Venusaur",
-    "Blastoise",
-    "Pikachu",
-    "Eevee",
-    "Meowth"
-  ]
+  "tier5": ["Zacian (Hero)", "Zamazenta (Hero)"],
+  "mega": ["Mega Steelix", "Mega Slowbro"],
+  "tier3": ["Pinsir", "Kleavor", "Scizor"],
+  "tier1": ["Blipbug"],
+  "shadow": ["Shadow Latias", "Shadow Stantler", "Shadow Alolan Marowak", "Shadow Lapras", "Shadow Gligar", "Shadow Dratini", "Shadow Cacnea", "Shadow Joltik"],
+  "dynamax_tier1": ["Bulbasaur", "Pidove", "Woobat", "Drilbur", "Inkay", "Bounsweet", "Grookey", "Sobble", "Skwovet", "Wooloo", "Scorbunny", "Trubbish", "Rookidee", "Spheal", "Roggenrola", "Gastly", "Caterpie", "Growlithe", "Krabby", "Kabuto", "Omanyte", "Abra", "Ralts", "Hatenna", "Squirtle", "Charmander"],
+  "dynamax_tier2": ["Machop", "Darumaka", "Eevee", "Shuckle", "Wailmer"],
+  "dynamax_tier3": ["Sableye", "Chansey", "Drampa", "Hitmonchan", "Hitmonlee", "Cryogonal", "Passimian", "Beldum", "Falinks"],
+  "gigantamax": []
 }
