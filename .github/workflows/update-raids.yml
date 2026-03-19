@@ -2,8 +2,7 @@ name: update-raids
 
 on:
   schedule:
-    # Runs every hour (at minute 0)
-    - cron: '0 * * * *'
+    - cron: '0 * * * *'  # Every hour
   workflow_dispatch:
 
 permissions:
@@ -46,10 +45,14 @@ jobs:
         
     - name: Send Discord notification
       if: steps.commit.outputs.changed == 'true'
+      env:
+        DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
       run: |
-        curl -H "Content-Type: application/json" \
-          -X POST \
-          -d '{
-            "content": "@here 🔔 **Raid rotation detected!**\nNew raid bosses are now available in `current_raids.json`\n🔗 https://github.com/${{ github.repository }}/blob/main/current_raids.json"
-          }' \
-          https://discord.com/api/webhooks/1483974704153886842/_2i_UwvaJZuGz97XNzlbKbwWB2plRUS18190Pvjnfm3jqNJ9Wg9M0I2wGn01R_mffAY5
+        if [ -f discord_message.txt ]; then
+          MESSAGE=$(cat discord_message.txt)
+          curl -H "Content-Type: application/json" \
+            -X POST \
+            -d "{\"content\": \"$MESSAGE\"}" \
+            $DISCORD_WEBHOOK
+          rm discord_message.txt
+        fi
