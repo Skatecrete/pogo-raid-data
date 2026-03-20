@@ -53,6 +53,8 @@ jobs:
           curl -H "Content-Type: application/json" \
             -X POST \
             -d "{\"content\": \"$MESSAGE\"}" \
-            $DISCORD_WEBHOOK
+            "$DISCORD_WEBHOOK"
           rm discord_message.txt
+        else
+          echo "No discord_message.txt found, skipping notification"
         fi
