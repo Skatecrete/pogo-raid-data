@@ -50,34 +50,11 @@ jobs:
       run: |
         if [ -f discord_message.txt ]; then
           MESSAGE=$(cat discord_message.txt)
-          # Escape the message for JSON
-          ESCAPED_MESSAGE=$(echo "$MESSAGE" | sed 's/"/\\"/g')
+          # Escape double quotes in message
+          ESCAPED_MESSAGE="${MESSAGE//\"/\\\"}"
           curl -X POST \
             -H "Content-Type: application/json" \
             -d "{\"content\": \"$ESCAPED_MESSAGE\"}" \
-            "$DISCORD_WEBHOOK"
-          rm discord_message.txt
-        else
-          echo "No discord_message.txt found, skipping notification"
-        fi        if git diff --staged --quiet; then
-          echo "No changes to commit"
-          echo "changed=false" >> $GITHUB_OUTPUT
-        else
-          git commit -m "Update raids data"
-          git push
-          echo "changed=true" >> $GITHUB_OUTPUT
-        fi
-        
-    - name: Send Discord notification
-      if: steps.commit.outputs.changed == 'true'
-      env:
-        DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
-      run: |
-        if [ -f discord_message.txt ]; then
-          MESSAGE=$(cat discord_message.txt)
-          curl -H "Content-Type: application/json" \
-            -X POST \
-            -d "{\"content\": \"$MESSAGE\"}" \
             "$DISCORD_WEBHOOK"
           rm discord_message.txt
         else
