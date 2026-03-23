@@ -7,6 +7,7 @@
   "mega": [
     "Mega Slowbro"
   ],
+  "tier4": [],
   "tier3": [
     "Pinsir",
     "Kleavor",
@@ -15,6 +16,7 @@
     "Stantler",
     "Lapras"
   ],
+  "tier2": [],
   "tier1": [
     "Blipbug",
     "Gligar",
@@ -23,6 +25,7 @@
     "Dratini"
   ],
   "shadow": [],
+  "six_star": [],
   "dynamax_tier1": [
     "D-Max Bulbasaur",
     "D-Max Caterpie",
@@ -67,7 +70,10 @@
     "D-Max Beldum",
     "D-Max Chansey",
     "D-Max Falinks",
-    "D-Max Sableye",
+    "D-Max Sableye"
+  ],
+  "dynamax_tier4": [],
+  "dynamax_tier5": [
     "D-Max Regice"
   ],
   "gigantamax": []
