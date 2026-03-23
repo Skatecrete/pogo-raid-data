@@ -9,20 +9,24 @@
   ],
   "tier4": [],
   "tier3": [
-    "Pinsir",
     "Kleavor",
+    "Pinsir",
     "Scizor",
-    "Alolan Marowak",
     "Stantler",
+    "Alolan Marowak",
     "Lapras"
   ],
   "tier2": [],
   "tier1": [
+    "Nincada",
+    "Pineco",
+    "Cutiefly",
     "Blipbug",
-    "Gligar",
+    "Dwebble",
     "Joltik",
-    "Cacnea",
-    "Dratini"
+    "Dratini",
+    "Gligar",
+    "Cacnea"
   ],
   "shadow": [],
   "six_star": [],
