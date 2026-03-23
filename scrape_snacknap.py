@@ -15,8 +15,14 @@ def scrape_snacknap_raids():
         soup = BeautifulSoup(response.text, 'html.parser')
         
         raid_data = {
-            "tier5": [], "mega": [], "tier4": [], "tier3": [], 
-            "tier2": [], "tier1": [], "shadow": [], "six_star": []
+            "tier5": [],
+            "mega": [],
+            "tier4": [],
+            "tier3": [],
+            "tier2": [],
+            "tier1": [],
+            "tier6": [],
+            "shadow": []
         }
         pokemon_container = soup.find('div', id='pokemon')
         if not pokemon_container:
@@ -40,8 +46,8 @@ def scrape_snacknap_raids():
                     current_tier = 'mega'
                 elif 'Shadow' in header:
                     current_tier = 'shadow'
-                elif '6-Star' in header or 'Elite' in header:
-                    current_tier = 'six_star'
+                elif '6-Star' in header or 'Elite' in header or 'Tier 6' in header:
+                    current_tier = 'tier6'
                 continue
             
             if current_tier and element.name == 'div' and 'col-xl-2' in element.get('class', []):
@@ -66,8 +72,12 @@ def scrape_snacknap_maxbattles():
         soup = BeautifulSoup(response.text, 'html.parser')
         
         raid_data = {
-            "dynamax_tier1": [], "dynamax_tier2": [], "dynamax_tier3": [],
-            "dynamax_tier4": [], "dynamax_tier5": [], "gigantamax": []
+            "dynamax_tier1": [],
+            "dynamax_tier2": [],
+            "dynamax_tier3": [],
+            "dynamax_tier4": [],
+            "dynamax_tier5": [],
+            "gigantamax": []
         }
         pokemon_container = soup.find('div', id='pokemon')
         if not pokemon_container:
@@ -104,9 +114,11 @@ def scrape_snacknap_maxbattles():
 
 def compare_changes(old_data, new_data):
     changes = {"added": {}, "counts": {}}
-    all_tiers = ["tier5", "mega", "tier4", "tier3", "tier2", "tier1", "shadow", 
-                 "dynamax_tier1", "dynamax_tier2", "dynamax_tier3", "dynamax_tier4", 
-                 "dynamax_tier5", "gigantamax", "six_star"]
+    all_tiers = [
+        "tier5", "mega", "tier4", "tier3", "tier2", "tier1", "shadow", "tier6",
+        "dynamax_tier1", "dynamax_tier2", "dynamax_tier3", "dynamax_tier4", 
+        "dynamax_tier5", "gigantamax"
+    ]
     for tier in all_tiers:
         old_list = old_data.get(tier, []) if old_data else []
         new_list = new_data.get(tier, [])
@@ -127,7 +139,7 @@ def format_discord_message(changes):
         "tier2": "⭐⭐ Tier 2",
         "tier1": "⭐ Tier 1",
         "shadow": "🌑 Shadow",
-        "six_star": "⭐⭐⭐⭐⭐⭐ 6-Star",
+        "tier6": "⭐⭐⭐⭐⭐⭐ 6-Star",
         "dynamax_tier1": "⚡ Dynamax Tier 1",
         "dynamax_tier2": "⚡⚡ Dynamax Tier 2",
         "dynamax_tier3": "⚡⚡⚡ Dynamax Tier 3",
