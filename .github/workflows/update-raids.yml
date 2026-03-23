@@ -15,7 +15,10 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
-      
+      with:
+        fetch-depth: 0
+        ref: main
+        
     - name: Set up Python
       uses: actions/setup-python@v5
       with:
@@ -33,13 +36,17 @@ jobs:
       run: |
         git config --global user.name 'github-actions'
         git config --global user.email 'github-actions@github.com'
+        
+        # Pull latest changes first
+        git pull origin main --rebase
+        
         git add current_raids.json
         if git diff --staged --quiet; then
           echo "No changes to commit"
           echo "changed=false" >> $GITHUB_OUTPUT
         else
           git commit -m "Update raids data"
-          git push
+          git push origin main
           echo "changed=true" >> $GITHUB_OUTPUT
         fi
         
@@ -50,7 +57,6 @@ jobs:
       run: |
         if [ -f discord_message.txt ]; then
           MESSAGE=$(cat discord_message.txt)
-          # Escape the message for JSON
           ESCAPED_MESSAGE=$(echo "$MESSAGE" | sed 's/"/\\"/g')
           curl -X POST \
             -H "Content-Type: application/json" \
