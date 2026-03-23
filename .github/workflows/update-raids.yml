@@ -50,8 +50,8 @@ jobs:
       run: |
         if [ -f discord_message.txt ]; then
           MESSAGE=$(cat discord_message.txt)
-          # Escape double quotes in message
-          ESCAPED_MESSAGE="${MESSAGE//\"/\\\"}"
+          # Escape the message for JSON
+          ESCAPED_MESSAGE=$(echo "$MESSAGE" | sed 's/"/\\"/g')
           curl -X POST \
             -H "Content-Type: application/json" \
             -d "{\"content\": \"$ESCAPED_MESSAGE\"}" \
