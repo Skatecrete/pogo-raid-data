@@ -17,7 +17,6 @@ jobs:
       uses: actions/checkout@v4
       with:
         fetch-depth: 0
-        ref: main
         
     - name: Set up Python
       uses: actions/setup-python@v5
@@ -37,15 +36,20 @@ jobs:
         git config --global user.name 'github-actions'
         git config --global user.email 'github-actions@github.com'
         
-        # Pull latest changes first
+        # Stash any local changes
+        git stash || true
+        
+        # Pull latest changes
         git pull origin main --rebase
         
+        # Add the updated file
         git add current_raids.json
+        
         if git diff --staged --quiet; then
           echo "No changes to commit"
           echo "changed=false" >> $GITHUB_OUTPUT
         else
-          git commit -m "Update raids data"
+          git commit -m "Update raids data - $(date +'%Y-%m-%d %H:%M:%S')"
           git push origin main
           echo "changed=true" >> $GITHUB_OUTPUT
         fi
