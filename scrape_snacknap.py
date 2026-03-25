@@ -28,110 +28,78 @@ def scrape_snacknap_raids():
         
         # Track current section
         current_tier = None
-        is_shadow_section = False
         
         # Find all elements in order
         all_elements = soup.find_all(['h2', 'h3', 'div', 'a', 'img'])
         
         for element in all_elements:
-            # Check if this is a header
+            # Check if this is a header (Tier 1, Tier 3, Legendary, Mega, Shadow Tier, etc.)
             if element.name in ['h2', 'h3']:
                 header_text = element.get_text().strip()
+                print(f"    Found header: {header_text}")
                 
-                # Reset section tracking
-                is_shadow_section = False
-                current_tier = None
-                
-                # Check for regular raid tiers
-                if 'Tier 1' in header_text and 'Shadow' not in header_text:
+                # Check for Shadow sections first
+                if 'Shadow Tier 1' in header_text:
+                    current_tier = 'shadow_tier1'
+                    continue
+                elif 'Shadow Tier 3' in header_text:
+                    current_tier = 'shadow_tier3'
+                    continue
+                elif 'Shadow Legendary' in header_text:
+                    current_tier = 'shadow_legendary'
+                    continue
+                # Regular tiers
+                elif 'Tier 1' in header_text:
                     current_tier = 'tier1'
-                elif 'Tier 2' in header_text and 'Shadow' not in header_text:
-                    current_tier = 'tier2'
-                elif 'Tier 3' in header_text and 'Shadow' not in header_text:
+                    continue
+                elif 'Tier 3' in header_text:
                     current_tier = 'tier3'
-                elif 'Tier 4' in header_text and 'Shadow' not in header_text:
-                    current_tier = 'tier4'
-                elif 'Tier 5' in header_text or 'Legendary' in header_text:
-                    if 'Shadow' not in header_text:
-                        current_tier = 'tier5'
+                    continue
+                elif 'Legendary' in header_text:
+                    current_tier = 'tier5'
+                    continue
                 elif 'Mega' in header_text:
                     current_tier = 'mega'
-                # Check for Shadow sections
-                elif 'Shadow' in header_text:
-                    is_shadow_section = True
-                    print(f"    Found Shadow section: {header_text}")
-                    # Determine which shadow tier this is
-                    if 'Tier 1' in header_text:
-                        current_tier = 'tier1'
-                    elif 'Tier 3' in header_text:
-                        current_tier = 'tier3'
-                    elif 'Legendary' in header_text:
-                        current_tier = 'tier5'
-                    else:
-                        current_tier = 'tier3'  # default
+                    continue
+                else:
+                    current_tier = None
                 continue
             
-            # If we're in a shadow section, look for Pokemon names
-            if is_shadow_section and current_tier:
-                pokemon_name = None
-                
-                # Try to get Pokemon name from img alt
-                if element.name == 'img' and element.get('alt'):
-                    alt = element.get('alt', '')
-                    # Clean the alt text
-                    pokemon_name = alt.replace('Shadow', '').replace('Shiny', '').strip()
-                    # Remove type words if present
-                    for type_word in ['Normal', 'Fire', 'Water', 'Grass', 'Electric', 'Bug', 'Ground', 
-                                     'Flying', 'Ghost', 'Ice', 'Psychic', 'Dragon', 'Dark', 'Steel', 
-                                     'Fairy', 'Rock', 'Fighting', 'Poison']:
-                        pokemon_name = pokemon_name.replace(type_word, '').strip()
-                
-                # Try to get Pokemon name from link title
-                if not pokemon_name and element.name == 'a' and element.get('title'):
-                    pokemon_name = element.get('title').strip()
-                
-                # Try to get from text content (look for Pokemon names)
-                if not pokemon_name and element.name == 'div':
-                    text = element.get_text().strip()
-                    # Look for lines that look like Pokemon names
-                    lines = text.split('\n')
-                    for line in lines:
-                        line = line.strip()
-                        # Skip lines with CP, numbers, or common words
-                        if line and not any(x in line for x in ['CP', 'cp', 'CP:', 'Stardust', 'Candy', 'Normal', 'Fire', 'Water']):
-                            if len(line) < 30 and not line.isdigit():
-                                pokemon_name = line
-                                break
-                
-                if pokemon_name and len(pokemon_name) > 2 and pokemon_name not in raid_data['shadow']:
-                    print(f"      Adding Shadow Pokemon: {pokemon_name} (from {current_tier})")
-                    raid_data['shadow'].append(pokemon_name)
-            
-            # For non-shadow sections, also capture regular Pokemon
-            elif not is_shadow_section and current_tier and current_tier in raid_data:
-                pokemon_name = None
-                
-                # Try from img alt
-                if element.name == 'img' and element.get('alt'):
-                    pokemon_name = element.get('alt').strip()
-                    # Clean mega/shiny prefixes
-                    pokemon_name = pokemon_name.replace('Mega', '').replace('Shiny', '').strip()
-                
-                # Try from link title
-                if not pokemon_name and element.name == 'a' and element.get('title'):
-                    pokemon_name = element.get('title').strip()
-                
-                if pokemon_name and len(pokemon_name) > 2 and pokemon_name not in raid_data[current_tier]:
-                    raid_data[current_tier].append(pokemon_name)
+            # Look for images which contain Pokemon names in alt text
+            if element.name == 'img' and element.get('alt'):
+                alt_text = element.get('alt', '').strip()
+                if alt_text:
+                    print(f"      Image alt: {alt_text}")
+                    
+                    # Check if this is a Shadow Pokemon
+                    if alt_text.startswith('Shadow'):
+                        # Clean the name: remove "Shadow" and "Shiny"
+                        clean_name = alt_text.replace('Shadow', '').replace('Shiny', '').strip()
+                        # Add to shadow array if not already there
+                        if clean_name and clean_name not in raid_data['shadow']:
+                            raid_data['shadow'].append(clean_name)
+                            print(f"        Added Shadow: {clean_name}")
+                    
+                    # Regular Pokemon (non-shadow)
+                    elif current_tier and current_tier in raid_data:
+                        # Clean Mega and Shiny prefixes
+                        clean_name = alt_text.replace('Mega', '').replace('Shiny', '').strip()
+                        if clean_name and clean_name not in raid_data[current_tier]:
+                            raid_data[current_tier].append(clean_name)
+                            print(f"        Added {current_tier}: {clean_name}")
         
-        # Remove duplicates
+        # Remove duplicates and sort
         for tier in raid_data:
-            raid_data[tier] = list(set(raid_data[tier]))
+            raid_data[tier] = sorted(list(set(raid_data[tier])))
         
-        print(f"    Regular raids - Tier1: {len(raid_data['tier1'])}, Tier3: {len(raid_data['tier3'])}, Tier5: {len(raid_data['tier5'])}, Mega: {len(raid_data['mega'])}")
-        print(f"    Shadow raids found: {len(raid_data['shadow'])}")
+        print(f"\n  📊 SUMMARY:")
+        print(f"    Tier 1: {len(raid_data['tier1'])} Pokemon")
+        print(f"    Tier 3: {len(raid_data['tier3'])} Pokemon")
+        print(f"    Tier 5 (Legendary): {len(raid_data['tier5'])} Pokemon")
+        print(f"    Mega: {len(raid_data['mega'])} Pokemon")
+        print(f"    Shadow: {len(raid_data['shadow'])} Pokemon")
         if raid_data['shadow']:
-            print(f"    Shadow: {', '.join(raid_data['shadow'][:10])}")
+            print(f"      Shadow list: {', '.join(raid_data['shadow'])}")
         
         return raid_data
     except Exception as e:
@@ -161,10 +129,9 @@ def scrape_snacknap_maxbattles():
         
         current_tier = None
         
-        for element in soup.find_all(['h2', 'h3', 'div', 'a', 'img']):
+        for element in soup.find_all(['h2', 'h3', 'img']):
             if element.name in ['h2', 'h3']:
                 header_text = element.get_text().strip()
-                current_tier = None
                 if 'Tier 1' in header_text:
                     current_tier = 'dynamax_tier1'
                 elif 'Tier 2' in header_text:
@@ -179,16 +146,23 @@ def scrape_snacknap_maxbattles():
                     current_tier = 'gigantamax'
                 continue
             
-            if current_tier and element.name == 'img' and element.get('alt'):
-                pokemon_name = element.get('alt').strip()
-                pokemon_name = pokemon_name.replace('D-Max', '').strip()
-                if pokemon_name and pokemon_name not in raid_data[current_tier]:
-                    raid_data[current_tier].append(pokemon_name)
+            if element.name == 'img' and element.get('alt') and current_tier:
+                alt_text = element.get('alt', '').strip()
+                if alt_text:
+                    # Clean D-Max prefix
+                    clean_name = alt_text.replace('D-Max', '').replace('Shiny', '').strip()
+                    if clean_name and clean_name not in raid_data[current_tier]:
+                        raid_data[current_tier].append(clean_name)
         
         for tier in raid_data:
-            raid_data[tier] = list(set(raid_data[tier]))
+            raid_data[tier] = sorted(list(set(raid_data[tier])))
         
-        print(f"    Max battles found - Tier1: {len(raid_data['dynamax_tier1'])}, Tier3: {len(raid_data['dynamax_tier3'])}, Gigantamax: {len(raid_data['gigantamax'])}")
+        print(f"  📊 MAX BATTLES SUMMARY:")
+        print(f"    Dynamax Tier 1: {len(raid_data['dynamax_tier1'])}")
+        print(f"    Dynamax Tier 3: {len(raid_data['dynamax_tier3'])}")
+        print(f"    Dynamax Tier 5: {len(raid_data['dynamax_tier5'])}")
+        print(f"    Gigantamax: {len(raid_data['gigantamax'])}")
+        
         return raid_data
     except Exception as e:
         print(f"    ❌ Error: {e}")
@@ -214,13 +188,13 @@ def format_discord_message(changes):
     if not changes["added"]:
         return None
     tier_names = {
-        "tier5": "⭐ Tier 5",
+        "tier5": "⭐ Tier 5 (Legendary)",
         "mega": "💎 Mega",
         "tier4": "⭐⭐⭐⭐ Tier 4",
         "tier3": "⭐⭐⭐ Tier 3",
         "tier2": "⭐⭐ Tier 2",
         "tier1": "⭐ Tier 1",
-        "shadow": "🌑 Shadow",
+        "shadow": "🌑 Shadow Raids",
         "six_star": "⭐⭐⭐⭐⭐⭐ 6-Star",
         "dynamax_tier1": "⚡ Dynamax Tier 1",
         "dynamax_tier2": "⚡⚡ Dynamax Tier 2",
@@ -263,14 +237,7 @@ def main():
     changes = compare_changes(old_data, new_data)
     with open('current_raids.json', 'w') as f:
         json.dump(new_data, f, indent=2)
-    print("\n📊 TOTAL SUMMARY:")
-    total = 0
-    for tier, pokemon in new_data.items():
-        if tier != 'last_updated':
-            print(f"  {tier}: {len(pokemon)} Pokemon")
-            total += len(pokemon)
-    print(f"  TOTAL: {total} Pokemon")
-    print(f"\n💾 Saved to current_raids.json")
+    print("\n💾 Saved to current_raids.json")
     discord_message = format_discord_message(changes)
     if discord_message:
         with open('discord_message.txt', 'w', encoding='utf-8') as f:
