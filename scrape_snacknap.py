@@ -27,16 +27,15 @@ def scrape_snacknap_raids():
         }
         
         # Filter out social media and non-Pokemon names
-        social_media = ['Telegram', 'Facebook', 'Instagram', 'Threads', 'Bluesky', 'X', 'Twitter', 'Discord']
+        social_media = ['Telegram', 'Facebook', 'Instagram', 'Threads', 'Bluesky', 'X', 'Twitter', 'Discord', 'Patreon', 'YouTube', 'Twitch']
         type_words = ['fire', 'water', 'grass', 'electric', 'bug', 'ground', 'flying', 'ghost', 
                      'ice', 'psychic', 'dragon', 'dark', 'steel', 'fairy', 'rock', 'fighting', 
-                     'poison', 'normal', 'shiny']
+                     'poison', 'normal', 'shiny', 'electric', 'psychic', 'ice', 'dragon', 'ghost', 'dark']
         
         # Find all rows that contain Pokemon cards
         rows = soup.find_all('div', class_=re.compile('row'))
         
         current_section = None
-        shadow_pokemon = []
         
         for row in rows:
             # Check if this row has a header
@@ -51,9 +50,9 @@ def scrape_snacknap_raids():
                     current_section = 'tier5'
                 elif 'Mega' in header_text:
                     current_section = 'mega'
-                elif 'Tier 3' in header_text:
+                elif 'Tier 3' in header_text and 'Shadow' not in header_text:
                     current_section = 'tier3'
-                elif 'Tier 1' in header_text:
+                elif 'Tier 1' in header_text and 'Shadow' not in header_text:
                     current_section = 'tier1'
                 else:
                     current_section = None
@@ -78,6 +77,10 @@ def scrape_snacknap_raids():
                         if clean_name.lower() in type_words:
                             continue
                         
+                        # Skip if it's a single word that's likely a type
+                        if len(clean_name.split()) == 1 and clean_name.lower() in type_words:
+                            continue
+                        
                         # Add to the appropriate section
                         if clean_name and clean_name not in raid_data[current_section]:
                             raid_data[current_section].append(clean_name)
@@ -86,6 +89,9 @@ def scrape_snacknap_raids():
         # Remove duplicates and sort
         for tier in raid_data:
             raid_data[tier] = sorted(list(set(raid_data[tier])))
+        
+        # Also filter out any remaining social media from shadow array
+        raid_data['shadow'] = [p for p in raid_data['shadow'] if p not in social_media]
         
         print(f"\n  📊 SHADOW RAID SUMMARY:")
         print(f"    Shadow Pokemon found: {len(raid_data['shadow'])}")
