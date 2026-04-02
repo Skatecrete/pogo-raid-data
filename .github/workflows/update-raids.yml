@@ -51,8 +51,8 @@ jobs:
         
     - name: Send Discord notification
       if: steps.commit.outputs.changed == 'true'
-      env:
-        DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
       run: |
-        MESSAGE="Raid rotation updated! Check the app for new raids."
-        curl -X POST -H "Content-Type: application/json" -d "{\"content\": \"$MESSAGE\"}" "$DISCORD_WEBHOOK"
+        curl -X POST \
+          -H "Content-Type: application/json" \
+          -d '{"content": "🔥 Raid rotation updated! Check the app for new raids."}' \
+          "https://discord.com/api/webhooks/1489355050689232986/DCRk5aPaslfBAytB1_Wkel5B9uvIC5uxfLWNfJ1CpnncZOJsPdo4KyAcEttFiQrIvXcW"
