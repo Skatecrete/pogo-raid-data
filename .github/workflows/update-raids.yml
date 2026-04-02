@@ -2,8 +2,8 @@ name: update-raids
 
 on:
   schedule:
-    - cron: '0 */6 * * *'  # Run every 6 hours instead of hourly
-  workflow_dispatch:  # Allow manual trigger
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -37,10 +37,8 @@ jobs:
         git config --global user.name 'github-actions'
         git config --global user.email 'github-actions@github.com'
         
-        # Pull latest changes
         git pull origin main --rebase || true
         
-        # Check if file changed
         if git diff --quiet current_raids.json; then
           echo "No changes to commit"
           echo "changed=false" >> $GITHUB_OUTPUT
@@ -56,5 +54,5 @@ jobs:
       env:
         DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
       run: |
-        MESSAGE="🔄 Raid rotation updated! Check the app for new raids."
+        MESSAGE="Raid rotation updated! Check the app for new raids."
         curl -X POST -H "Content-Type: application/json" -d "{\"content\": \"$MESSAGE\"}" "$DISCORD_WEBHOOK"
