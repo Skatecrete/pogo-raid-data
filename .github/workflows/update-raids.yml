@@ -2,8 +2,8 @@ name: update-raids
 
 on:
   schedule:
-    - cron: '0 * * * *'
-  workflow_dispatch:
+    - cron: '0 */6 * * *'  # Run every 6 hours instead of hourly
+  workflow_dispatch:  # Allow manual trigger
 
 permissions:
   contents: write
@@ -25,7 +25,8 @@ jobs:
         
     - name: Install dependencies
       run: |
-        pip install -r requirements.txt
+        pip install requests==2.31.0
+        pip install beautifulsoup4==4.12.2
         
     - name: Run scraper
       run: python scrape_snacknap.py
@@ -36,19 +37,15 @@ jobs:
         git config --global user.name 'github-actions'
         git config --global user.email 'github-actions@github.com'
         
-        # Stash any local changes
-        git stash || true
-        
         # Pull latest changes
-        git pull origin main --rebase
+        git pull origin main --rebase || true
         
-        # Add the updated file
-        git add current_raids.json
-        
-        if git diff --staged --quiet; then
+        # Check if file changed
+        if git diff --quiet current_raids.json; then
           echo "No changes to commit"
           echo "changed=false" >> $GITHUB_OUTPUT
         else
+          git add current_raids.json
           git commit -m "Update raids data - $(date +'%Y-%m-%d %H:%M:%S')"
           git push origin main
           echo "changed=true" >> $GITHUB_OUTPUT
@@ -59,14 +56,5 @@ jobs:
       env:
         DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
       run: |
-        if [ -f discord_message.txt ]; then
-          MESSAGE=$(cat discord_message.txt)
-          ESCAPED_MESSAGE=$(echo "$MESSAGE" | sed 's/"/\\"/g')
-          curl -X POST \
-            -H "Content-Type: application/json" \
-            -d "{\"content\": \"$ESCAPED_MESSAGE\"}" \
-            "$DISCORD_WEBHOOK"
-          rm discord_message.txt
-        else
-          echo "No discord_message.txt found, skipping notification"
-        fi
+        MESSAGE="🔄 Raid rotation updated! Check the app for new raids."
+        curl -X POST -H "Content-Type: application/json" -d "{\"content\": \"$MESSAGE\"}" "$DISCORD_WEBHOOK"
