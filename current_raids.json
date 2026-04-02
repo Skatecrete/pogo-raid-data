@@ -1,62 +1,5 @@
 {
-  "last_updated": "2026-03-24",
-  "tier5": [
-    "Regieleki",
-    "Zamazenta (Hero)"
-  ],
-  "mega": [
-    "Mega Houndoom",
-    "Mega Slowbro"
-  ],
-  "tier4": [],
-  "tier3": [
-    "Bombirdier",
-    "Charjabug",
-    "Hippowdon",
-    "Machamp",
-    "Swadloon",
-    "Yanma"
-  ],
-  "tier2": [],
-  "tier1": [
-    "Alolan Marowak",
-    "Bombirdier",
-    "Cacnea",
-    "Charjabug",
-    "Cutiefly",
-    "Dratini",
-    "Dwebble",
-    "Galarian Stunfisk",
-    "Gligar",
-    "Hippowdon",
-    "Joltik",
-    "Lapras",
-    "Larvitar",
-    "Latias",
-    "Lileep",
-    "Machamp",
-    "Mega Houndoom",
-    "Mega Slowbro",
-    "Nincada",
-    "Pineco",
-    "Regieleki",
-    "Rockruff",
-    "Stantler",
-    "Swadloon",
-    "Yanma",
-    "Zamazenta (Hero)"
-  ],
-  "six_star": [],
-  "shadow": [
-    "Alolan Marowak",
-    "Cacnea",
-    "Dratini",
-    "Gligar",
-    "Joltik",
-    "Lapras",
-    "Latias",
-    "Stantler"
-  ],
+  "last_updated": "2026-04-02",
   "dynamax_tier1": [
     "Abra",
     "Beldum",
@@ -85,7 +28,6 @@
     "Passimian",
     "Pidove",
     "Ralts",
-    "Regice",
     "Roggenrola",
     "Rookidee",
     "Sableye",
@@ -98,37 +40,14 @@
     "Trubbish",
     "Wailmer",
     "Woobat",
-    "Wooloo",
-    "bug",
-    "dark",
-    "dragon",
-    "fairy",
-    "fighting",
-    "fire",
-    "flying",
-    "ghost",
-    "grass",
-    "ground",
-    "ice",
-    "normal",
-    "poison",
-    "psychic",
-    "rock",
-    "steel",
-    "water"
+    "Wooloo"
   ],
   "dynamax_tier2": [
     "Darumaka",
     "Eevee",
     "Machop",
     "Shuckle",
-    "Wailmer",
-    "bug",
-    "fighting",
-    "fire",
-    "normal",
-    "rock",
-    "water"
+    "Wailmer"
   ],
   "dynamax_tier3": [
     "Beldum",
@@ -139,25 +58,9 @@
     "Hitmonchan",
     "Hitmonlee",
     "Passimian",
-    "Sableye",
-    "dark",
-    "dragon",
-    "fighting",
-    "ghost",
-    "ice",
-    "normal",
-    "psychic",
-    "steel"
+    "Sableye"
   ],
   "dynamax_tier4": [],
-  "dynamax_tier5": [
-    "Bluesky",
-    "Facebook",
-    "Instagram",
-    "Regice",
-    "Telegram",
-    "Threads",
-    "ice"
-  ],
+  "dynamax_tier5": [],
   "gigantamax": []
 }
