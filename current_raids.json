@@ -1,9 +1,55 @@
 {
   "last_updated": "2026-04-07",
-  "dynamax_tier1": [],
-  "dynamax_tier2": [],
-  "dynamax_tier3": [],
+  "dynamax_tier1": [
+    "Abra",
+    "Bounsweet",
+    "Bulbasaur",
+    "Caterpie",
+    "Charmander",
+    "Drilbur",
+    "Gastly",
+    "Grookey",
+    "Growlithe",
+    "Hatenna",
+    "Inkay",
+    "Kabuto",
+    "Krabby",
+    "Omanyte",
+    "Pidove",
+    "Ralts",
+    "Roggenrola",
+    "Rookidee",
+    "Scorbunny",
+    "Skwovet",
+    "Sobble",
+    "Spheal",
+    "Squirtle",
+    "Trapinch",
+    "Trubbish",
+    "Woobat",
+    "Wooloo"
+  ],
+  "dynamax_tier2": [
+    "Darumaka",
+    "Eevee",
+    "Machop",
+    "Shuckle",
+    "Wailmer"
+  ],
+  "dynamax_tier3": [
+    "Beldum",
+    "Chansey",
+    "Cryogonal",
+    "Drampa",
+    "Falinks",
+    "Hitmonchan",
+    "Hitmonlee",
+    "Passimian",
+    "Sableye"
+  ],
   "dynamax_tier4": [],
   "dynamax_tier5": [],
-  "gigantamax": []
+  "gigantamax": [
+    "Search..."
+  ]
 }
