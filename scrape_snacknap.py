@@ -20,52 +20,59 @@ def scrape_snacknap_raids():
             "tier3": []
         }
         
-        # Find all h2 headers (tier titles)
-        for h2 in soup.find_all('h2'):
-            title = h2.get_text().strip()
+        # Find the main container with id="pokemon"
+        main_container = soup.find('div', id='pokemon')
+        if not main_container:
+            print("    ❌ Could not find main container")
+            return raid_data
+        
+        # Find all tier headers (h2) within the main container
+        for h2 in main_container.find_all('h2'):
+            tier_title = h2.get_text().strip()
+            print(f"    Found header: {tier_title}")
             
-            # Check for Tier 1
-            if title == "Tier 1":
+            # Determine which tier this is
+            current_tier = None
+            if tier_title == "Tier 1":
                 current_tier = "tier1"
-                # Get the next div with the pokemon cards
-                next_div = h2.find_next('div', class_=re.compile(r'row'))
-                if next_div:
-                    # Find all pokemon cards in this tier
-                    pokemon_cards = next_div.find_all('a', href=re.compile(r'/pokedex/pokemon/'))
-                    for card in pokemon_cards:
-                        # Get pokemon name from the paragraph
-                        name_elem = card.find('p', class_='pkmn-title')
-                        if name_elem:
-                            # Clean name (remove type icons)
-                            name = name_elem.get_text().strip()
-                            # Remove any extra whitespace and type indicators
-                            name = re.sub(r'\s+', ' ', name).strip()
-                            if name and name not in raid_data[current_tier]:
-                                raid_data[current_tier].append(name)
-                                print(f"      Added to {current_tier}: {name}")
-            
-            # Check for Tier 3
-            elif title == "Tier 3":
+            elif tier_title == "Tier 3":
                 current_tier = "tier3"
-                next_div = h2.find_next('div', class_=re.compile(r'row'))
-                if next_div:
-                    pokemon_cards = next_div.find_all('a', href=re.compile(r'/pokedex/pokemon/'))
-                    for card in pokemon_cards:
-                        name_elem = card.find('p', class_='pkmn-title')
-                        if name_elem:
-                            name = name_elem.get_text().strip()
-                            name = re.sub(r'\s+', ' ', name).strip()
-                            if name and name not in raid_data[current_tier]:
-                                raid_data[current_tier].append(name)
-                                print(f"      Added to {current_tier}: {name}")
+            else:
+                continue  # Skip other tiers (Legendary, Mega, Shadow, etc.)
+            
+            # Find the div that contains the Pokemon cards for this tier
+            # It's the next div with class containing "row g-2"
+            tier_container = h2.find_next('div', class_=re.compile(r'row g-2'))
+            if not tier_container:
+                print(f"    Could not find container for {tier_title}")
+                continue
+            
+            # Find all Pokemon cards in this container
+            pokemon_cards = tier_container.find_all('a', href=re.compile(r'/pokedex/pokemon/'))
+            
+            for card in pokemon_cards:
+                # Find the paragraph with pokemon name
+                name_elem = card.find('p', class_='pkmn-title')
+                if name_elem:
+                    # Get the text and clean it (remove extra spaces, type icons)
+                    raw_name = name_elem.get_text().strip()
+                    # Remove any extra whitespace and special characters
+                    clean_name = re.sub(r'\s+', ' ', raw_name).strip()
+                    
+                    # Skip if empty or already in list
+                    if clean_name and clean_name not in raid_data[current_tier]:
+                        raid_data[current_tier].append(clean_name)
+                        print(f"      Added to {current_tier}: {clean_name}")
         
         print(f"\n  📊 SNACKNAP RAID SUMMARY:")
-        print(f"    Tier 1: {len(raid_data['tier1'])}")
-        print(f"    Tier 3: {len(raid_data['tier3'])}")
+        print(f"    Tier 1: {len(raid_data['tier1'])} - {raid_data['tier1']}")
+        print(f"    Tier 3: {len(raid_data['tier3'])} - {raid_data['tier3']}")
         
         return raid_data
     except Exception as e:
         print(f"    ❌ Error scraping raids: {e}")
+        import traceback
+        traceback.print_exc()
         return {"tier1": [], "tier3": []}
 
 def scrape_snacknap_maxbattles():
@@ -146,6 +153,8 @@ def scrape_snacknap_maxbattles():
         return raid_data
     except Exception as e:
         print(f"    ❌ Error: {e}")
+        import traceback
+        traceback.print_exc()
         return None
 
 def main():
@@ -173,6 +182,7 @@ def main():
         json.dump(new_data, f, indent=2)
     
     print("\n💾 Saved to current_raids.json")
+    print(json.dumps(new_data, indent=2))
 
 if __name__ == "__main__":
     main()
