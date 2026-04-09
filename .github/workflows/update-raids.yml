@@ -28,9 +28,70 @@ jobs:
         pip install requests==2.31.0
         pip install beautifulsoup4==4.12.2
         
+    - name: Save current raids.json for comparison
+      run: |
+        if [ -f current_raids.json ]; then
+          cp current_raids.json current_raids_old.json
+        else
+          echo '{"last_updated": "", "tier1": [], "tier3": [], "dynamax_tier1": [], "dynamax_tier2": [], "dynamax_tier3": [], "gigantamax": []}' > current_raids_old.json
+        fi
+        
     - name: Run scraper
       run: python scrape_snacknap.py
       
+    - name: Compare and generate raid changes
+      id: changes
+      run: |
+        python - <<EOF
+        import json
+        
+        # Load old and new raid data
+        with open('current_raids_old.json', 'r') as f:
+            old = json.load(f)
+        with open('current_raids.json', 'r') as f:
+            new = json.load(f)
+        
+        changes = []
+        
+        # Define raid categories to compare
+        categories = ['tier1', 'tier3', 'dynamax_tier1', 'dynamax_tier2', 'dynamax_tier3', 'gigantamax']
+        
+        # Category display names
+        display_names = {
+            'tier1': '⭐ 1-Star Raids',
+            'tier3': '⭐⭐⭐ 3-Star Raids',
+            'dynamax_tier1': '⚡ Dynamax Tier 1',
+            'dynamax_tier2': '⚡⚡ Dynamax Tier 2',
+            'dynamax_tier3': '⚡⚡⚡ Dynamax Tier 3',
+            'gigantamax': '💥 Gigantamax'
+        }
+        
+        for category in categories:
+            old_set = set(old.get(category, []))
+            new_set = set(new.get(category, []))
+            
+            added = new_set - old_set
+            removed = old_set - new_set
+            
+            if added or removed:
+                changes.append(f"\n**{display_names[category]}:**")
+                if added:
+                    changes.append(f"  ✅ Added: {', '.join(sorted(added))}")
+                if removed:
+                    changes.append(f"  ❌ Removed: {', '.join(sorted(removed))}")
+        
+        # Save changes to file for later use
+        with open('raid_changes.txt', 'w') as f:
+            if changes:
+                f.write('\n'.join(changes))
+                print("changes=true")
+            else:
+                f.write("No changes detected")
+                print("changes=false")
+        EOF
+        
+        echo "changes=${{ steps.changes.outputs.changes }}" >> $GITHUB_OUTPUT
+        
     - name: Commit and push if changes
       id: commit
       run: |
@@ -49,10 +110,25 @@ jobs:
           echo "changed=true" >> $GITHUB_OUTPUT
         fi
         
-    - name: Send Discord notification
+    - name: Send Discord notification with raid changes
       if: steps.commit.outputs.changed == 'true'
       run: |
+        # Read the raid changes
+        CHANGES=$(cat raid_changes.txt)
+        
+        # Escape for JSON
+        ESCAPED_CHANGES=$(echo "$CHANGES" | jq -Rs .)
+        
+        # Send to Discord
         curl -X POST \
           -H "Content-Type: application/json" \
-          -d '{"content": "🔥 Raid rotation updated! Check the app for new raids."}' \
+          -d "{
+            \"content\": \"🔁 **RAID ROTATION UPDATE** 🔁\",
+            \"embeds\": [{
+              \"title\": \"📅 $(date +'%B %d, %Y')\",
+              \"description\": $ESCAPED_CHANGES,
+              \"color\": 16753920,
+              \"footer\": {\"text\": \"PokeSpawn Raid Tracker\"}
+            }]
+          }" \
           "https://discord.com/api/webhooks/1489355050689232986/DCRk5aPaslfBAytB1_Wkel5B9uvIC5uxfLWNfJ1CpnncZOJsPdo4KyAcEttFiQrIvXcW"
