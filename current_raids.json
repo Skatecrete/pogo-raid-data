@@ -1,5 +1,16 @@
 {
   "last_updated": "2026-04-09",
+  "tier1": [
+    "Alolan Vulpix",
+    "Rookidee",
+    "Goomy",
+    "Sinistea (Phony)"
+  ],
+  "tier3": [
+    "Dhelmise",
+    "Ampharos",
+    "Shiftry"
+  ],
   "dynamax_tier1": [
     "Abra",
     "Bounsweet",
@@ -47,8 +58,6 @@
     "Passimian",
     "Sableye"
   ],
-  "dynamax_tier4": [],
-  "dynamax_tier5": [],
   "gigantamax": [
     "Search..."
   ]
