@@ -15,9 +15,7 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
-      with:
-        fetch-depth: 0
-        
+      
     - name: Set up Python
       uses: actions/setup-python@v5
       with:
@@ -32,7 +30,6 @@ jobs:
       run: python scrape_debuts.py
       
     - name: Commit and push if changes
-      id: commit
       run: |
         git config --global user.name 'github-actions'
         git config --global user.email 'github-actions@github.com'
@@ -41,10 +38,8 @@ jobs:
         
         if git diff --quiet debuts.json; then
           echo "No changes to commit"
-          echo "changed=false" >> $GITHUB_OUTPUT
         else
           git add debuts.json
           git commit -m "Update debuts data - $(date +'%Y-%m-%d %H:%M:%S')"
           git push origin main
-          echo "changed=true" >> $GITHUB_OUTPUT
         fi
