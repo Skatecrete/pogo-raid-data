@@ -1,4 +1,54 @@
 {
-  "last_updated": "2026-04-10 22:59:41",
-  "debuts": []
+  "last_updated": "2026-04-10 23:02:13",
+  "debuts": [
+    {
+      "event_name": "Steeled Resolve 2026",
+      "event_date": "April 28th - May 4th 2026",
+      "new_pokemon": [
+        "Orthworm"
+      ],
+      "new_shiny": [
+        "Orthworm"
+      ],
+      "event_type": "global"
+    },
+    {
+      "event_name": "Sustainability Week 2026",
+      "event_date": "April 14th - April 20th 2026",
+      "new_pokemon": [
+        "Silicobra",
+        "Sandaconda",
+        "Corsola (Galarian Form (Sunglasses))"
+      ],
+      "new_shiny": [
+        "Toedscool",
+        "Toedscruel"
+      ],
+      "event_type": "global"
+    },
+    {
+      "event_name": "GO Fest 2026 Chicago",
+      "event_date": "June 5th - 7th 2026",
+      "new_pokemon": [
+        "Zeraora"
+      ],
+      "new_shiny": [
+        "Tauros (Paldean Form - Blaze Breed)",
+        "Rotom (Wash Rotom)"
+      ],
+      "event_type": "reallife"
+    },
+    {
+      "event_name": "GO Fest 2026 Tokyo",
+      "event_date": "May 29th - June 1st 2026",
+      "new_pokemon": [
+        "Zeraora"
+      ],
+      "new_shiny": [
+        "Tauros (Paldean Form - Aqua Breed)",
+        "Rotom (Wash Rotom)"
+      ],
+      "event_type": "reallife"
+    }
+  ]
 }
