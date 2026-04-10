@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-04-10 23:02:13",
+  "last_updated": "2026-04-10 23:57:25",
   "debuts": [
     {
       "event_name": "Steeled Resolve 2026",
@@ -10,6 +10,9 @@
       "new_shiny": [
         "Orthworm"
       ],
+      "pokemon_images": {
+        "Orthworm": "https://www.serebii.net/pokemongo/pokemon/shiny/968.png"
+      },
       "event_type": "global"
     },
     {
@@ -24,6 +27,13 @@
         "Toedscool",
         "Toedscruel"
       ],
+      "pokemon_images": {
+        "Silicobra": "https://www.serebii.net/pokemongo/pokemon/843.png",
+        "Sandaconda": "https://www.serebii.net/pokemongo/pokemon/844.png",
+        "Corsola (Galarian Form (Sunglasses))": "https://www.serebii.net/pokemongo/pokemon/222-glasses.png",
+        "Toedscool": "https://www.serebii.net/pokemongo/pokemon/shiny/948.png",
+        "Toedscruel": "https://www.serebii.net/pokemongo/pokemon/shiny/949.png"
+      },
       "event_type": "global"
     },
     {
@@ -36,6 +46,11 @@
         "Tauros (Paldean Form - Blaze Breed)",
         "Rotom (Wash Rotom)"
       ],
+      "pokemon_images": {
+        "Zeraora": "https://www.serebii.net/pokemongo/pokemon/807.png",
+        "Tauros (Paldean Form - Blaze Breed)": "https://www.serebii.net/pokemongo/pokemon/shiny/128-b.png",
+        "Rotom (Wash Rotom)": "https://www.serebii.net/pokemongo/pokemon/shiny/479-w.png"
+      },
       "event_type": "reallife"
     },
     {
@@ -48,6 +63,11 @@
         "Tauros (Paldean Form - Aqua Breed)",
         "Rotom (Wash Rotom)"
       ],
+      "pokemon_images": {
+        "Zeraora": "https://www.serebii.net/pokemongo/pokemon/807.png",
+        "Tauros (Paldean Form - Aqua Breed)": "https://www.serebii.net/pokemongo/pokemon/shiny/128-a.png",
+        "Rotom (Wash Rotom)": "https://www.serebii.net/pokemongo/pokemon/shiny/479-w.png"
+      },
       "event_type": "reallife"
     }
   ]
