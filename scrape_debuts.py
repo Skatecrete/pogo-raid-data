@@ -6,7 +6,7 @@ import re
 import time
 
 def scrape_global_events():
-    """Scrape global events with image URLs from /pokemongo/events.shtml"""
+    """Scrape global events from /pokemongo/events.shtml"""
     print("\n🌍 Scraping Global Events...")
     url = "https://www.serebii.net/pokemongo/events.shtml"
     base_url = "https://www.serebii.net"
@@ -34,17 +34,6 @@ def scrape_global_events():
                         for row in rows:
                             cells = row.find_all('td')
                             if len(cells) >= 3:
-                                # Get image URL from first column
-                                image_cell = cells[0]
-                                img_tag = image_cell.find('img')
-                                image_url = ""
-                                if img_tag and img_tag.get('src'):
-                                    img_src = img_tag.get('src')
-                                    if img_src.startswith('/'):
-                                        image_url = base_url + img_src
-                                    else:
-                                        image_url = img_src
-                                
                                 # Get event name and link from second column
                                 name_cell = cells[1]
                                 link_tag = name_cell.find('a')
@@ -73,7 +62,6 @@ def scrape_global_events():
                                             'name': event_name,
                                             'date': date_text,
                                             'link': full_link,
-                                            'image_url': image_url,
                                             'type': 'global'
                                         })
                                         print(f"    Found: {event_name} - {date_text}")
@@ -110,7 +98,7 @@ def scrape_event_details(event, headers):
                         cells = row.find_all('td')
                         if len(cells) >= 3:
                             poke_name = cells[2].get_text().strip()
-                            # Get image from the table
+                            # Get image from the table (column 2 usually has the image)
                             img_tag = cells[1].find('img')
                             img_url = ""
                             if img_tag and img_tag.get('src'):
@@ -203,7 +191,6 @@ def main():
                 'new_pokemon': new_pokemon,
                 'new_shiny': new_shiny,
                 'pokemon_images': pokemon_images,
-                'event_image': event.get('image_url', ''),
                 'event_type': event.get('type', 'global')
             })
             print(f"    ✅ Found debuts!")
@@ -221,6 +208,7 @@ def main():
         json.dump(output, f, indent=2)
     
     print(f"\n💾 Saved to debuts.json")
+    print(json.dumps(output, indent=2))
 
 if __name__ == "__main__":
     main()
