@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-04-11 18:39:18",
+  "last_updated": "2026-04-12 02:12:05",
   "debuts": [
     {
       "event_name": "Steeled Resolve 2026",
@@ -35,6 +35,23 @@
         "Toedscruel": "https://www.serebii.net/pokemongo/pokemon/shiny/949.png"
       },
       "event_type": "global"
+    },
+    {
+      "event_name": "GO Fest 2026 Copenhagen",
+      "event_date": "June 12th - 14th 2026",
+      "new_pokemon": [
+        "Zeraora"
+      ],
+      "new_shiny": [
+        "Tauros (Paldean Form - Combat Breed)",
+        "Rotom (Wash Rotom)"
+      ],
+      "pokemon_images": {
+        "Zeraora": "https://www.serebii.net/pokemongo/pokemon/807.png",
+        "Tauros (Paldean Form - Combat Breed)": "https://www.serebii.net/pokemongo/pokemon/shiny/128-p.png",
+        "Rotom (Wash Rotom)": "https://www.serebii.net/pokemongo/pokemon/shiny/479-w.png"
+      },
+      "event_type": "reallife"
     },
     {
       "event_name": "GO Fest 2026 Chicago",
