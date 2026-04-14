@@ -28,14 +28,6 @@ jobs:
         pip install requests==2.31.0
         pip install beautifulsoup4==4.12.2
         
-    - name: Save current raids.json for comparison
-      run: |
-        if [ -f current_raids.json ]; then
-          cp current_raids.json current_raids_old.json
-        else
-          echo '{"last_updated": "", "tier1": [], "tier3": [], "dynamax_tier1": [], "dynamax_tier2": [], "dynamax_tier3": [], "gigantamax": []}' > current_raids_old.json
-        fi
-        
     - name: Run scraper
       run: python scrape_snacknap.py
       
@@ -62,12 +54,9 @@ jobs:
         
         def get_raid_key(raid):
             """Create a unique key for a raid"""
-            name = raid.get('name', '').lower()
-            tier = raid.get('tier', '').lower()
-            # Skip 1-star and 3-star from ScrapedDuck (they come from SnackNap)
-            if '1-star' in tier or '3-star' in tier:
-                return None
-            return f"{name}_{tier}"
+            name = raid.get('name', '').strip()
+            tier = raid.get('tier', '').strip()
+            return f"{name}|{tier}"
         
         # Load old SnackNap data
         with open('current_raids_old.json', 'r') as f:
@@ -75,36 +64,32 @@ jobs:
         with open('current_raids.json', 'r') as f:
             new_snacknap = json.load(f)
         
-        # Fetch current ScrapedDuck raids
-        scrapedduck_raids = fetch_scrapedduck_raids()
-        
         # Load old ScrapedDuck data if exists
         try:
             with open('scrapedduck_old.json', 'r') as f:
-                old_scrapedduck = json.load(f)
+                old_scrapedduck_data = json.load(f)
         except:
-            old_scrapedduck = []
+            old_scrapedduck_data = []
         
-        # Save current ScrapedDuck for next comparison
-        with open('scrapedduck_old.json', 'w') as f:
-            json.dump(scrapedduck_raids, f)
+        # Fetch current ScrapedDuck raids
+        current_scrapedduck = fetch_scrapedduck_raids()
         
-        # Build sets for comparison
+        # Build sets for comparison using the unique key
         old_scrapedduck_set = set()
-        for raid in old_scrapedduck:
-            key = get_raid_key(raid)
-            if key:
-                old_scrapedduck_set.add(key)
+        for raid in old_scrapedduck_data:
+            old_scrapedduck_set.add(get_raid_key(raid))
         
         new_scrapedduck_set = set()
-        for raid in scrapedduck_raids:
-            key = get_raid_key(raid)
-            if key:
-                new_scrapedduck_set.add(key)
+        for raid in current_scrapedduck:
+            new_scrapedduck_set.add(get_raid_key(raid))
         
         # Find added and removed ScrapedDuck raids
         scrapedduck_added = new_scrapedduck_set - old_scrapedduck_set
         scrapedduck_removed = old_scrapedduck_set - new_scrapedduck_set
+        
+        # Save current ScrapedDuck for next comparison (after calculating changes)
+        with open('scrapedduck_old.json', 'w') as f:
+            json.dump(current_scrapedduck, f)
         
         # SnackNap categories
         categories = ['tier1', 'tier3', 'dynamax_tier1', 'dynamax_tier2', 'dynamax_tier3', 'gigantamax']
@@ -134,16 +119,33 @@ jobs:
                 if removed:
                     changes.append(f"  ❌ Removed: {', '.join(sorted(removed))}")
         
-        # Check ScrapedDuck changes (5-Star, Mega, Shadow)
+        # Check ScrapedDuck changes (5-Star, Mega, Shadow, etc.)
+        # Group by tier for better readability
         if scrapedduck_added or scrapedduck_removed:
-            changes.append(f"\n**🔥 REGULAR/MEGA/SHADOW RAIDS:**")
-            if scrapedduck_added:
-                # Convert keys back to readable format
-                added_names = [key.split('_')[0].title() for key in scrapedduck_added]
-                changes.append(f"  ✅ Added: {', '.join(sorted(added_names))}")
-            if scrapedduck_removed:
-                removed_names = [key.split('_')[0].title() for key in scrapedduck_removed]
-                changes.append(f"  ❌ Removed: {', '.join(sorted(removed_names))}")
+            # Parse added raids by tier
+            added_by_tier = {}
+            for key in scrapedduck_added:
+                name, tier = key.rsplit('|', 1)
+                if tier not in added_by_tier:
+                    added_by_tier[tier] = []
+                added_by_tier[tier].append(name)
+            
+            removed_by_tier = {}
+            for key in scrapedduck_removed:
+                name, tier = key.rsplit('|', 1)
+                if tier not in removed_by_tier:
+                    removed_by_tier[tier] = []
+                removed_by_tier[tier].append(name)
+            
+            changes.append(f"\n**🔥 OTHER RAIDS (5-Star, Mega, Shadow):**")
+            
+            for tier, names in added_by_tier.items():
+                tier_display = tier.replace('-Star', '-Star').replace('Shadow', '🌑 Shadow').replace('Mega', '🔴 Mega')
+                changes.append(f"  ✅ Added {tier_display}: {', '.join(sorted(names))}")
+            
+            for tier, names in removed_by_tier.items():
+                tier_display = tier.replace('-Star', '-Star').replace('Shadow', '🌑 Shadow').replace('Mega', '🔴 Mega')
+                changes.append(f"  ❌ Removed {tier_display}: {', '.join(sorted(names))}")
         
         # Save changes to file
         with open('raid_changes.txt', 'w') as f:
@@ -166,30 +168,26 @@ jobs:
         git pull origin main --rebase || true
         
         # Check if SnackNap file changed
-        snacknap_changed=false
-        if ! git diff --quiet current_raids.json; then
+        if git diff --quiet current_raids.json; then
+          echo "No SnackNap changes"
+          snacknap_changed=false
+        else
           snacknap_changed=true
         fi
         
-        # Always commit ScrapedDuck cache if it changed
-        if git diff --quiet scrapedduck_old.json; then
-          echo "No ScrapedDuck changes"
-        else
-          git add scrapedduck_old.json
-        fi
-        
+        # Always stage files
+        git add scrapedduck_old.json
         if [ "$snacknap_changed" = true ]; then
           git add current_raids.json
+        fi
+        
+        # Commit if anything staged
+        if ! git diff --cached --quiet; then
           git commit -m "Update raids data - $(date +'%Y-%m-%d %H:%M:%S')"
           git push origin main
           echo "changed=true" >> $GITHUB_OUTPUT
         else
-          # Check if only ScrapedDuck cache changed
-          if ! git diff --quiet scrapedduck_old.json; then
-            git commit -m "Update ScrapedDuck cache - $(date +'%Y-%m-%d %H:%M:%S')"
-            git push origin main
-          fi
-          echo "changed=$snacknap_changed" >> $GITHUB_OUTPUT
+          echo "changed=false" >> $GITHUB_OUTPUT
         fi
         
     - name: Send Discord notification with raid changes
@@ -198,8 +196,8 @@ jobs:
         # Read the raid changes
         CHANGES=$(cat raid_changes.txt)
         
-        # Escape for JSON
-        ESCAPED_CHANGES=$(echo "$CHANGES" | python -c 'import json,sys; print(json.dumps(sys.stdin.read()))')
+        # Escape for JSON using Python
+        ESCAPED_CHANGES=$(python -c 'import json,sys; print(json.dumps(sys.stdin.read()))' <<< "$CHANGES")
         
         # Send to Discord
         curl -X POST \
