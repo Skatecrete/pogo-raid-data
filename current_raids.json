@@ -2,14 +2,19 @@
   "last_updated": "2026-04-14",
   "tier1": [
     "Alolan Vulpix",
+    "Phantump",
     "Rookidee",
     "Goomy",
-    "Sinistea (Phony)"
+    "Sandygast",
+    "Foongus",
+    "Sinistea (Phony)",
+    "Gossifleur"
   ],
   "tier3": [
-    "Dhelmise",
     "Ampharos",
-    "Shiftry"
+    "Vileplume",
+    "Shiftry",
+    "Dhelmise"
   ],
   "dynamax_tier1": [
     "Abra",
