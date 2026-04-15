@@ -1,12 +1,12 @@
-name: update-shungo-forms
+name: update-spawns
 
 on:
   schedule:
-    - cron: '0 * * * *'  # Every hour at minute 0
+    - cron: '*/30 * * * *'  # Every 30 minutes
   workflow_dispatch:
 
 jobs:
-  update-forms:
+  update-spawns:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -16,18 +16,21 @@ jobs:
         with:
           python-version: '3.x'
           
-      - name: Install Playwright
+      - name: Install dependencies
         run: |
-          pip install playwright
+          pip install playwright requests
           playwright install chromium
           
-      - name: Run scraper
+      - name: Run form scraper
         run: python scrape_shungo_forms.py
+        
+      - name: Run spawns scraper
+        run: python scrape_shungo_spawns.py
         
       - name: Commit and push if changed
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
-          git add shungo_forms.json
-          git diff --quiet && git diff --staged --quiet || git commit -m "Auto-update shungo forms $(date +'%Y-%m-%d %H:%M:%S')"
+          git add shungo_forms.json spawns.json
+          git diff --quiet && git diff --staged --quiet || git commit -m "Auto-update spawns $(date +'%Y-%m-%d %H:%M:%S')"
           git push
