@@ -2,7 +2,7 @@ name: update-shungo-forms
 
 on:
   schedule:
-    - cron: '0 * * * *' 
+    - cron: '* * * * *'  # Every minute
   workflow_dispatch:
 
 jobs:
