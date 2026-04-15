@@ -14,10 +14,14 @@ def scrape_shungo_forms():
     response = requests.get(url, headers=headers)
     html = response.text
     
-    # The data is embedded in the HTML as plain text
-    # Look for patterns like "Pokemon Name\nXX.XX%\nID"
+    print(f"HTML length: {len(html)}")
+    print(f"First 500 chars: {html[:500]}")
+    
+    # Look for patterns
     pattern = r'([A-Za-z\s\-\(\)]+)\n(\d+\.?\d*)%\n(\d+)'
     matches = re.findall(pattern, html)
+    
+    print(f"Found {len(matches)} matches via regex")
     
     form_map = {}
     
@@ -40,7 +44,6 @@ def scrape_shungo_forms():
         
         print(f"Found: ID {pokemon_id}, Rate {rounded_rate}%, Name: {name}")
     
-    # Save to JSON
     output = {
         "last_updated": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
         "form_mappings": form_map
@@ -50,7 +53,6 @@ def scrape_shungo_forms():
         json.dump(output, f, indent=2)
     
     print(f"\n💾 Saved to shungo_forms.json")
-    print(f"Total Pokémon with forms: {len(form_map)}")
 
 if __name__ == "__main__":
     scrape_shungo_forms()
