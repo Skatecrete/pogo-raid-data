@@ -13,8 +13,8 @@ async def scrape_shungo_forms():
         print("📄 Loading page...")
         await page.goto("https://shungo.app/tools/wild")
         
-        # Wait for the table or card elements to load
-        await page.wait_for_timeout(5000)  # Wait 5 seconds for JS to render
+        # Wait for page to fully load (5 seconds)
+        await page.wait_for_timeout(5000)
         
         print("✅ Page loaded, extracting data...")
         
@@ -22,76 +22,55 @@ async def scrape_shungo_forms():
         page_text = await page.evaluate('() => document.body.innerText')
         print(f"Page text preview: {page_text[:500]}")
         
-        # Extract Pokémon data using more reliable selectors
+        # Extract Pokémon data using the actual page structure
         pokemon_data = await page.evaluate('''
             () => {
                 const items = [];
                 
-                // Look for any elements containing Pokémon names and percentages
-                const allText = document.body.innerText;
+                // Find all card elements
+                const cards = document.querySelectorAll('.card');
                 
-                // Find all percentage matches in the page
-                const percentRegex = /(\\d+\\.?\\d*)%/g;
-                const lines = allText.split('\\n');
-                
-                let currentName = null;
-                let currentRate = null;
-                
-                for (let i = 0; i < lines.length; i++) {
-                    const line = lines[i].trim();
-                    if (!line) continue;
+                for (const card of cards) {
+                    // Get the text content
+                    const text = card.innerText;
+                    if (!text) continue;
                     
-                    // Check if line contains a percentage
-                    const percentMatch = line.match(/(\\d+\\.?\\d*)%/);
-                    if (percentMatch) {
-                        currentRate = parseFloat(percentMatch[1]);
-                        // Look back for the name (previous line or earlier)
-                        for (let j = i-1; j >= 0 && j >= i-5; j--) {
-                            const prevLine = lines[j].trim();
-                            if (prevLine && !prevLine.match(/\\d/) && prevLine.length > 2 && prevLine.length < 30) {
-                                currentName = prevLine;
-                                break;
-                            }
-                        }
-                        
-                        if (currentName && currentRate) {
-                            items.push({
-                                name: currentName,
-                                rate: currentRate,
-                                id: null
-                            });
-                            currentName = null;
-                            currentRate = null;
+                    // Look for percentage
+                    const percentMatch = text.match(/(\\d+\\.?\\d*)%/);
+                    if (!percentMatch) continue;
+                    
+                    const rate = parseFloat(percentMatch[1]);
+                    
+                    // Get name (usually first line of text)
+                    const lines = text.split('\\n');
+                    let name = lines[0].trim();
+                    
+                    // Skip if name is empty or looks like CP
+                    if (!name || name.includes('CP')) {
+                        // Try the second line
+                        name = lines[1]?.trim() || '';
+                    }
+                    
+                    // Clean up name
+                    name = name.replace(/\\n/g, '').trim();
+                    
+                    // Get ID from image src
+                    const img = card.querySelector('img');
+                    let id = null;
+                    if (img && img.src) {
+                        const idMatch = img.src.match(/\\/(\\d+)[_.]/);
+                        if (idMatch) {
+                            id = parseInt(idMatch[1]);
                         }
                     }
-                }
-                
-                // Try to get IDs from image URLs
-                const images = document.querySelectorAll('img');
-                for (const img of images) {
-                    const src = img.src;
-                    if (src && src.includes('/sprites/')) {
-                        const idMatch = src.match(/\\/(\\d+)\\./);
-                        if (idMatch) {
-                            const id = parseInt(idMatch[1]);
-                            // Find the closest text to this image
-                            let parent = img.parentElement;
-                            let text = '';
-                            for (let k = 0; k < 5 && parent; k++) {
-                                text = parent.innerText;
-                                if (text && text.length > 2) break;
-                                parent = parent.parentElement;
-                            }
-                            if (text) {
-                                // Find which item this ID belongs to
-                                for (const item of items) {
-                                    if (text.includes(item.name)) {
-                                        item.id = id;
-                                        break;
-                                    }
-                                }
-                            }
-                        }
+                    
+                    if (name && rate && name.length > 2 && name.length < 40) {
+                        items.push({
+                            name: name,
+                            rate: rate,
+                            id: id
+                        });
+                        console.log(`Found: ${name} - ${rate}% - ID: ${id}`);
                     }
                 }
                 
@@ -101,18 +80,15 @@ async def scrape_shungo_forms():
         
         await browser.close()
         
-        # Clean up and group by ID and rate
+        # Group by ID and rate
         form_map = {}
         for item in pokemon_data:
-            if not item['id'] or not item['rate'] or not item['name']:
+            if not item['id']:
                 continue
             
             id = item['id']
             rate = round(item['rate'], 2)
             name = item['name']
-            
-            # Clean up name
-            name = name.replace('Shiny', '').strip()
             
             if id not in form_map:
                 form_map[id] = {}
