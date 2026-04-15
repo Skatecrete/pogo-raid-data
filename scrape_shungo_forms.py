@@ -1,58 +1,86 @@
-import requests
-import re
+import asyncio
 import json
+from playwright.async_api import async_playwright
 from datetime import datetime
 
-def scrape_shungo_forms():
-    print("🚀 Scraping Shungo forms from webpage...")
+async def scrape_shungo_forms():
+    print("🚀 Launching browser to scrape Shungo forms...")
     
-    url = "https://shungo.app/tools/wild"
-    headers = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
-    }
-    
-    response = requests.get(url, headers=headers)
-    html = response.text
-    
-    print(f"HTML length: {len(html)}")
-    print(f"First 500 chars: {html[:500]}")
-    
-    # Look for patterns
-    pattern = r'([A-Za-z\s\-\(\)]+)\n(\d+\.?\d*)%\n(\d+)'
-    matches = re.findall(pattern, html)
-    
-    print(f"Found {len(matches)} matches via regex")
-    
-    form_map = {}
-    
-    for match in matches:
-        name = match[0].strip()
-        rate = float(match[1])
-        pokemon_id = int(match[2])
+    async with async_playwright() as p:
+        browser = await p.chromium.launch(headless=True)
+        page = await browser.new_page()
         
-        rounded_rate = round(rate, 2)
+        print("📄 Loading page...")
+        await page.goto("https://shungo.app/tools/wild")
         
-        if pokemon_id not in form_map:
-            form_map[pokemon_id] = {}
+        # Wait for initial content
+        await page.wait_for_timeout(3000)
         
-        if rounded_rate in form_map[pokemon_id]:
-            existing = form_map[pokemon_id][rounded_rate]
-            if existing != name:
-                form_map[pokemon_id][rounded_rate] = f"{existing} or {name}"
-        else:
-            form_map[pokemon_id][rounded_rate] = name
+        # Scroll to bottom to load all Pokémon
+        print("📜 Scrolling to load all Pokémon...")
+        last_height = await page.evaluate('() => document.body.scrollHeight')
         
-        print(f"Found: ID {pokemon_id}, Rate {rounded_rate}%, Name: {name}")
-    
-    output = {
-        "last_updated": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-        "form_mappings": form_map
-    }
-    
-    with open('shungo_forms.json', 'w') as f:
-        json.dump(output, f, indent=2)
-    
-    print(f"\n💾 Saved to shungo_forms.json")
+        while True:
+            # Scroll down
+            await page.evaluate('window.scrollTo(0, document.body.scrollHeight)')
+            await page.wait_for_timeout(2000)
+            
+            # Check if we've reached the bottom
+            new_height = await page.evaluate('() => document.body.scrollHeight')
+            if new_height == last_height:
+                break
+            last_height = new_height
+        
+        print("✅ Page fully loaded, extracting data...")
+        
+        # Get the text content of the body
+        text = await page.evaluate('() => document.body.innerText')
+        
+        # Parse the text
+        lines = text.split('\n')
+        form_map = {}
+        
+        i = 0
+        while i < len(lines) - 2:
+            name = lines[i].strip()
+            rate_line = lines[i + 1].strip()
+            id_line = lines[i + 2].strip()
+            
+            # Check if this looks like a Pokémon entry
+            if name and rate_line.endswith('%') and id_line.isdigit():
+                rate = float(rate_line.replace('%', ''))
+                pokemon_id = int(id_line)
+                
+                rounded_rate = round(rate, 2)
+                
+                if pokemon_id not in form_map:
+                    form_map[pokemon_id] = {}
+                
+                if rounded_rate in form_map[pokemon_id]:
+                    existing = form_map[pokemon_id][rounded_rate]
+                    if existing != name and name not in existing:
+                        form_map[pokemon_id][rounded_rate] = f"{existing} or {name}"
+                else:
+                    form_map[pokemon_id][rounded_rate] = name
+                
+                i += 3
+            else:
+                i += 1
+        
+        await browser.close()
+        
+        # Save to JSON
+        output = {
+            "last_updated": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+            "form_mappings": form_map
+        }
+        
+        with open('shungo_forms.json', 'w') as f:
+            json.dump(output, f, indent=2)
+        
+        print(f"\n💾 Saved to shungo_forms.json")
+        print(f"Total Pokémon with forms: {len(form_map)}")
+        print(f"Sample: {dict(list(form_map.items())[:5])}")
 
 if __name__ == "__main__":
-    scrape_shungo_forms()
+    asyncio.run(scrape_shungo_forms())
