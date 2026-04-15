@@ -13,49 +13,85 @@ async def scrape_shungo_forms():
         print("📄 Loading page...")
         await page.goto("https://shungo.app/tools/wild")
         
-        # Wait for the Pokémon list to load
-        await page.wait_for_selector(".pkmn-list-img", timeout=30000)
+        # Wait for the table or card elements to load
+        await page.wait_for_timeout(5000)  # Wait 5 seconds for JS to render
         
         print("✅ Page loaded, extracting data...")
         
-        # Extract all Pokémon entries from the rendered page
+        # Get all text content for debugging
+        page_text = await page.evaluate('() => document.body.innerText')
+        print(f"Page text preview: {page_text[:500]}")
+        
+        # Extract Pokémon data using more reliable selectors
         pokemon_data = await page.evaluate('''
             () => {
                 const items = [];
-                const cards = document.querySelectorAll('.pkmn-list-img');
                 
-                for (const card of cards) {
-                    // Get the parent container
-                    const container = card.closest('.col-xl-2, .col-4');
-                    if (!container) continue;
+                // Look for any elements containing Pokémon names and percentages
+                const allText = document.body.innerText;
+                
+                // Find all percentage matches in the page
+                const percentRegex = /(\\d+\\.?\\d*)%/g;
+                const lines = allText.split('\\n');
+                
+                let currentName = null;
+                let currentRate = null;
+                
+                for (let i = 0; i < lines.length; i++) {
+                    const line = lines[i].trim();
+                    if (!line) continue;
                     
-                    // Get Pokémon name
-                    const nameElement = container.querySelector('.pkmn-title');
-                    let name = nameElement ? nameElement.innerText.trim() : '';
-                    
-                    // Get spawn rate
-                    const cpText = container.querySelector('.pkmn-cp')?.innerText || '';
-                    const rateMatch = cpText.match(/CP\\s+\\d+\\s*-\\s*\\d+\\s*\\n\\s*CP\\s+\\d+\\s*-\\s*\\d+/);
-                    // Alternative: find the percentage in the text
-                    let rate = null;
-                    const allText = container.innerText;
-                    const percentMatch = allText.match(/(\\d+\\.?\\d*)%/);
+                    // Check if line contains a percentage
+                    const percentMatch = line.match(/(\\d+\\.?\\d*)%/);
                     if (percentMatch) {
-                        rate = parseFloat(percentMatch[1]);
-                    }
-                    
-                    // Get Pokémon ID from image src
-                    const img = card.querySelector('img.sprite, img:not(.shiny):not(.overlay)');
-                    let id = null;
-                    if (img && img.src) {
-                        const idMatch = img.src.match(/\\/(\\d+)[_.]/);
-                        if (idMatch) {
-                            id = parseInt(idMatch[1]);
+                        currentRate = parseFloat(percentMatch[1]);
+                        // Look back for the name (previous line or earlier)
+                        for (let j = i-1; j >= 0 && j >= i-5; j--) {
+                            const prevLine = lines[j].trim();
+                            if (prevLine && !prevLine.match(/\\d/) && prevLine.length > 2 && prevLine.length < 30) {
+                                currentName = prevLine;
+                                break;
+                            }
+                        }
+                        
+                        if (currentName && currentRate) {
+                            items.push({
+                                name: currentName,
+                                rate: currentRate,
+                                id: null
+                            });
+                            currentName = null;
+                            currentRate = null;
                         }
                     }
-                    
-                    if (name && rate && id) {
-                        items.push({ id, rate, name });
+                }
+                
+                // Try to get IDs from image URLs
+                const images = document.querySelectorAll('img');
+                for (const img of images) {
+                    const src = img.src;
+                    if (src && src.includes('/sprites/')) {
+                        const idMatch = src.match(/\\/(\\d+)\\./);
+                        if (idMatch) {
+                            const id = parseInt(idMatch[1]);
+                            // Find the closest text to this image
+                            let parent = img.parentElement;
+                            let text = '';
+                            for (let k = 0; k < 5 && parent; k++) {
+                                text = parent.innerText;
+                                if (text && text.length > 2) break;
+                                parent = parent.parentElement;
+                            }
+                            if (text) {
+                                // Find which item this ID belongs to
+                                for (const item of items) {
+                                    if (text.includes(item.name)) {
+                                        item.id = id;
+                                        break;
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
                 
@@ -65,24 +101,28 @@ async def scrape_shungo_forms():
         
         await browser.close()
         
-        # Group by ID and rate
+        # Clean up and group by ID and rate
         form_map = {}
         for item in pokemon_data:
+            if not item['id'] or not item['rate'] or not item['name']:
+                continue
+            
             id = item['id']
-            rate = item['rate']
+            rate = round(item['rate'], 2)
             name = item['name']
+            
+            # Clean up name
+            name = name.replace('Shiny', '').strip()
             
             if id not in form_map:
                 form_map[id] = {}
             
-            rounded_rate = round(rate, 2)
-            if rounded_rate in form_map[id]:
-                # Same rate, combine names
-                existing = form_map[id][rounded_rate]
+            if rate in form_map[id]:
+                existing = form_map[id][rate]
                 if existing != name and name not in existing:
-                    form_map[id][rounded_rate] = f"{existing} or {name}"
+                    form_map[id][rate] = f"{existing} or {name}"
             else:
-                form_map[id][rounded_rate] = name
+                form_map[id][rate] = name
         
         # Save to JSON
         output = {
