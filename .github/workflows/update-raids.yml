@@ -49,30 +49,36 @@ jobs:
       run: |
         python compare_raids.py
         
+    - name: Check if changes exist
+      id: has_changes
+      run: |
+        CHANGES=$(cat raid_changes.txt)
+        if [ "$CHANGES" != "No changes detected" ]; then
+          echo "has_changes=true" >> $GITHUB_OUTPUT
+        else
+          echo "has_changes=false" >> $GITHUB_OUTPUT
+        fi
+        
     - name: Commit and push if changes
       id: commit
+      if: steps.has_changes.outputs.has_changes == 'true'
       run: |
         git config --global user.name 'github-actions'
         git config --global user.email 'github-actions@github.com'
         
         git pull origin main --rebase || true
         
-        # Stage both files
         git add scrapedduck_old.json
         git add current_raids.json
         
-        # Check if anything changed
-        if git diff --cached --quiet; then
-          echo "No changes to commit"
-          echo "changed=false" >> $GITHUB_OUTPUT
-        else
+        if ! git diff --cached --quiet; then
           git commit -m "Update raids data - $(date +'%Y-%m-%d %H:%M:%S')"
           git push origin main
-          echo "changed=true" >> $GITHUB_OUTPUT
+          echo "committed=true" >> $GITHUB_OUTPUT
         fi
         
     - name: Send Discord notification with raid changes
-      if: steps.commit.outputs.changed == 'true'
+      if: steps.has_changes.outputs.has_changes == 'true'
       run: |
         CHANGES=$(cat raid_changes.txt)
         ESCAPED_CHANGES=$(python -c 'import json,sys; print(json.dumps(sys.stdin.read()))' <<< "$CHANGES")
