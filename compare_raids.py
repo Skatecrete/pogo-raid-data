@@ -147,12 +147,12 @@ def main():
     
     # Save changes to file
     with open('raid_changes.txt', 'w') as f:
-    if changes:
-        f.write('\n'.join(changes))
-        print("changes=true")
-    else:
-        f.write("No changes detected")
-        print("changes=false")
+        if changes:
+            f.write('\n'.join(changes))
+            print("changes=true")
+        else:
+            f.write("No changes detected")
+            print("changes=false")
 
 if __name__ == "__main__":
     main()
