@@ -1,22 +1,15 @@
 {
   "last_updated": "2026-04-15",
   "tier1": [
-    "Alolan Vulpix",
-    "Phantump",
-    "Rookidee",
-    "Goomy",
-    "Sandygast",
-    "Foongus",
     "Gossifleur",
-    "Sinistea (Phony)"
+    "Phantump",
+    "Sandygast",
+    "Foongus"
   ],
   "tier3": [
+    "Torterra",
     "Vileplume",
-    "Ampharos",
-    "Dhelmise",
-    "Dugtrio (Brendan's Hat)",
-    "Shiftry",
-    "Torterra"
+    "Dugtrio (Brendan's Hat)"
   ],
   "dynamax_tier1": [
     "Abra",
