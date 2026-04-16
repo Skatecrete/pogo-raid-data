@@ -31,7 +31,7 @@ jobs:
     - name: Create old files if not exist
       run: |
         if [ ! -f current_raids_old.json ]; then
-          echo '{"last_updated": "", "tier1": [], "tier3": [], "dynamax_tier1": [], "dynamax_tier2": [], "dynamax_tier3": [], "gigantamax": []}' > current_raids_old.json
+          echo '{"last_updated": "", "tier1": [], "tier3": [], "dynamax_tier1": [], "dynamax_tier2": [], "dynamax_tier3": [], "dynamax_tier4": [], "dynamax_tier5": [], "gigantamax": []}' > current_raids_old.json
         fi
         if [ ! -f scrapedduck_old.json ]; then
           echo '[]' > scrapedduck_old.json
@@ -43,6 +43,9 @@ jobs:
         
     - name: Run scraper
       run: python scrape_snacknap.py
+      
+    - name: Run RotomLabs raid image scraper
+      run: python scrape_rotomlabs_raids.py
       
     - name: Compare and generate raid changes
       id: changes
@@ -70,6 +73,7 @@ jobs:
         
         git add scrapedduck_old.json
         git add current_raids.json
+        git add images/
         
         if ! git diff --cached --quiet; then
           git commit -m "Update raids data - $(date +'%Y-%m-%d %H:%M:%S')"
