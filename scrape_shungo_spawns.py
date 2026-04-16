@@ -13,20 +13,20 @@ def get_rotomlabs_slug(pokemon_name):
     
     # Special case mappings for known tricky names
     special_mappings = {
-        "Nidoran\u2640": "nidoran-f",      # Female symbol
-        "Nidoran\u2642": "nidoran-m",      # Male symbol
-        "Farfetch'd": "farfetchd",         # Remove apostrophe
-        "Mr. Mime": "mr-mime",             # Handle punctuation
+        "Nidoran\u2640": "nidoran-f",
+        "Nidoran\u2642": "nidoran-m",
+        "Farfetch'd": "farfetchd",
+        "Mr. Mime": "mr-mime",
         "Type: Null": "type-null",
-        "Flabébé": "flabebe",              # Remove accent
-        "Nidoran♀": "nidoran-f",           # Female symbol (literal)
-        "Nidoran♂": "nidoran-m",           # Male symbol (literal)
-        "Porygon2": "porygon2",            # Keep as is
-        "Porygon-Z": "porygon-z",          # Hyphenated
-        "Ho-Oh": "ho-oh",                  # Hyphenated
-        "Mime Jr.": "mime-jr",             # Punctuation
-        "Sirfetch'd": "sirfetchd",         # Remove apostrophe
-        "Mr. Rime": "mr-rime",             # Handle punctuation
+        "Flabébé": "flabebe",
+        "Nidoran♀": "nidoran-f",
+        "Nidoran♂": "nidoran-m",
+        "Porygon2": "porygon2",
+        "Porygon-Z": "porygon-z",
+        "Ho-Oh": "ho-oh",
+        "Mime Jr.": "mime-jr",
+        "Sirfetch'd": "sirfetchd",
+        "Mr. Rime": "mr-rime",
         "Great Tusk": "great-tusk",
         "Scream Tail": "scream-tail",
         "Brute Bonnet": "brute-bonnet",
@@ -203,61 +203,50 @@ def get_rotomlabs_slug(pokemon_name):
         "Enamorus Therian": "enamorus-therian",
         "Koraidon": "koraidon",
         "Koraidon Battle": "koraidon-battle",
-        "Koraidon Sprint": "koraidon-sprint",
-        "Koraidon Swim": "koraidon-swim",
-        "Koraidon Glide": "koraidon-glide",
         "Miraidon": "miraidon",
         "Miraidon Battle": "miraidon-battle",
-        "Miraidon Sprint": "miraidon-sprint",
-        "Miraidon Swim": "miraidon-swim",
-        "Miraidon Glide": "miraidon-glide",
         "Wooper Paldea": "wooper-paldea",
         "Tauros Paldean Blaze Breed": "tauros-paldea-blaze",
         "Tauros Paldean Aqua Breed": "tauros-paldea-aqua",
         "Tauros Paldean Combat Breed": "tauros-paldea-combat",
     }
     
-    # Check for special mapping first
     if clean_name in special_mappings:
         clean_name = special_mappings[clean_name]
-    else:
-        # Handle "Form" patterns (e.g., "Deoxys Attack Forme" -> "deoxys-attack")
-        clean_name = re.sub(r'\s+(Form|Forme|Style)$', '', clean_name, flags=re.IGNORECASE)
-        clean_name = re.sub(r'\s+(Form|Forme|Style)\s+', ' ', clean_name, flags=re.IGNORECASE)
-        
-        # Handle apostrophes
-        clean_name = clean_name.replace("'", "")
-        
-        # Handle special characters
-        clean_name = clean_name.replace("♀", "-f").replace("♂", "-m")
-        clean_name = clean_name.replace("é", "e").replace("è", "e").replace("ë", "e")
-        clean_name = clean_name.replace("û", "u").replace("ü", "u")
-        
-        # Convert to lowercase and replace spaces with hyphens
         slug = clean_name.lower().replace(" ", "-")
-        
-        # Remove any remaining non-alphanumeric characters (except hyphens)
         slug = re.sub(r'[^a-z0-9-]', '', slug)
-        
-        # Remove duplicate hyphens
-        slug = re.sub(r'-+', '-', slug)
-        
-        # Remove leading/trailing hyphens
-        slug = slug.strip('-')
-        
+        slug = re.sub(r'-+', '-', slug).strip('-')
         return slug
     
-    # For special mappings, convert to lowercase and ensure hyphens
+    # Handle "Form" patterns
+    clean_name = re.sub(r'\s+(Form|Forme|Style)$', '', clean_name, flags=re.IGNORECASE)
+    clean_name = re.sub(r'\s+(Form|Forme|Style)\s+', ' ', clean_name, flags=re.IGNORECASE)
+    
+    # Handle apostrophes
+    clean_name = clean_name.replace("'", "")
+    
+    # Handle special characters
+    clean_name = clean_name.replace("♀", "-f").replace("♂", "-m")
+    clean_name = clean_name.replace("é", "e").replace("è", "e").replace("ë", "e")
+    clean_name = clean_name.replace("û", "u").replace("ü", "u")
+    
+    # Convert to lowercase and replace spaces with hyphens
     slug = clean_name.lower().replace(" ", "-")
+    
+    # Remove any remaining non-alphanumeric characters (except hyphens)
     slug = re.sub(r'[^a-z0-9-]', '', slug)
-    slug = re.sub(r'-+', '-', slug).strip('-')
+    
+    # Remove duplicate hyphens
+    slug = re.sub(r'-+', '-', slug)
+    
+    # Remove leading/trailing hyphens
+    slug = slug.strip('-')
     
     return slug
 
 def scrape_shungo_spawns():
     print("🚀 Fetching spawns from Shungo API...")
     
-    # 1. Get raw spawn data
     api_url = "https://shungo.app/api/shungo/data/spawns"
     response = requests.get(api_url)
     data = response.json()
@@ -265,7 +254,6 @@ def scrape_shungo_spawns():
     
     print(f"📊 Raw spawns: {len(result_array)} entries")
     
-    # 2. Load form mappings
     try:
         with open('shungo_forms.json', 'r') as f:
             forms_data = json.load(f)
@@ -275,7 +263,6 @@ def scrape_shungo_spawns():
         print("⚠️ shungo_forms.json not found, run scrape_shungo_forms.py first")
         form_mappings = {}
     
-    # 3. Convert to usable format
     form_map = {}
     for id_str, rates in form_mappings.items():
         pokemon_id = int(id_str)
@@ -284,14 +271,12 @@ def scrape_shungo_spawns():
             rate = float(rate_str)
             form_map[pokemon_id][rate] = name
     
-    # 4. Build spawns list with image URLs
     spawns = []
     for item in result_array:
         pokemon_id = item[0]
         rate = item[2]
         is_shiny = item[3] == "true" or item[3] == True
         
-        # Find form name
         pokemon_name = None
         if pokemon_id in form_map:
             closest_rate = None
@@ -305,10 +290,8 @@ def scrape_shungo_spawns():
                 pokemon_name = form_map[pokemon_id][closest_rate]
         
         if not pokemon_name:
-            # Fallback: Use default name from ID if no form mapping found
             pokemon_name = f"Pokemon #{pokemon_id}"
         
-        # Generate RotomLabs image URL based on the form name
         slug = get_rotomlabs_slug(pokemon_name)
         image_url = f"https://rotomlabs.net/dex/{slug}"
         
@@ -317,10 +300,9 @@ def scrape_shungo_spawns():
             "name": pokemon_name,
             "rate": round(rate, 2),
             "shiny": is_shiny,
-            "image_url": image_url  # ADDED: RotomLabs image URL
+            "image_url": image_url
         })
     
-    # 5. Save to JSON
     output = {
         "last_updated": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
         "total": len(spawns),
@@ -332,8 +314,6 @@ def scrape_shungo_spawns():
     
     print(f"\n💾 Saved to spawns.json")
     print(f"   Total spawns: {len(spawns)}")
-    
-    # Print a few examples to verify
     print("\n📸 Sample image URLs generated:")
     for spawn in spawns[:10]:
         print(f"   {spawn['name']}: {spawn['image_url']}")
