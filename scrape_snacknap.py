@@ -340,4 +340,15 @@ def main():
         "gigantamax": max_battles.get("gigantamax", [])
     }
     
-    with open('current_raids.json', 'w') as f
+    with open('current_raids.json', 'w') as f:
+        json.dump(new_data, f, indent=2)
+    
+    print("\n💾 Saved to current_raids.json")
+    print("\n📸 Sample raid image URLs:")
+    for tier in ['tier1', 'tier3', 'gigantamax']:
+        if new_data.get(tier) and len(new_data[tier]) > 0:
+            sample = new_data[tier][0]
+            print(f"   {tier}: {sample['name']} -> {sample['imageUrl']}")
+
+if __name__ == "__main__":
+    main()
