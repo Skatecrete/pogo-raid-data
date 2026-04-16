@@ -1,0 +1,42 @@
+name: update-spawns
+
+on:
+  schedule:
+    - cron: '*/30 * * * *'  # Every 30 minutes
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-spawns:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+          
+      - name: Install dependencies
+        run: |
+          pip install playwright requests beautifulsoup4
+          playwright install chromium
+          
+      - name: Run form scraper
+        run: python scrape_shungo_forms.py
+        
+      - name: Run spawns scraper
+        run: python scrape_shungo_spawns.py
+        
+      - name: Run RotomLabs image scraper
+        run: python scrape_rotomlabs_images.py
+        
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add shungo_forms.json spawns.json images/
+          git diff --quiet && git diff --staged --quiet || git commit -m "Auto-update spawns $(date +'%Y-%m-%d %H:%M:%S')"
+          git push
