@@ -45,11 +45,119 @@ def get_rotomlabs_slug(pokemon_name):
         "Castform Sunny": "castform-sunny",
         "Castform Rainy": "castform-rainy",
         "Castform Snowy": "castform-snowy",
+        "Cherrim Overcast Form": "cherrim-overcast",
+        "Cherrim Sunshine Form": "cherrim-sunshine",
+        "Cherrim Sunny": "cherrim-sunshine",
+        "Floette Blue Flower": "floette-blue-flower",
+        "Floette Red Flower": "floette-red-flower",
+        "Floette Yellow Flower": "floette-yellow-flower",
+        "Floette White Flower": "floette-white-flower",
+        "Floette Orange Flower": "floette-orange-flower",
+        "Flabébé Blue Flower": "flabebe-blue-flower",
+        "Flabébé Red Flower": "flabebe-red-flower",
+        "Flabébé Yellow Flower": "flabebe-yellow-flower",
+        "Flabébé White Flower": "flabebe-white-flower",
+        "Flabébé Orange Flower": "flabebe-orange-flower",
+        "Oricorio Baile Style": "oricorio-baile",
+        "Oricorio Pom-Pom Style": "oricorio-pompom",
+        "Oricorio Pa'u Style": "oricorio-pau",
+        "Oricorio Sensu Style": "oricorio-sensu",
+        "Rotom Heat": "rotom-heat",
+        "Rotom Wash": "rotom-wash",
+        "Rotom Frost": "rotom-frost",
+        "Rotom Fan": "rotom-fan",
+        "Rotom Mow": "rotom-mow",
+        "Giratina Origin": "giratina-origin",
+        "Shaymin Sky": "shaymin-sky",
+        "Basculin Blue-Striped": "basculin-blue-striped",
+        "Darmanitan Zen": "darmanitan-zen",
+        "Tornadus Therian": "tornadus-therian",
+        "Thundurus Therian": "thundurus-therian",
+        "Landorus Therian": "landorus-therian",
+        "Keldeo Resolute": "keldeo-resolute",
+        "Meloetta Pirouette": "meloetta-pirouette",
+        "Genesect Burn": "genesect-burn",
+        "Genesect Chill": "genesect-chill",
+        "Genesect Douse": "genesect-douse",
+        "Genesect Shock": "genesect-shock",
+        "Greninja Ash": "greninja-ash",
+        "Vivillon Polar": "vivillon-polar",
+        "Vivillon Tundra": "vivillon-tundra",
+        "Vivillon Continental": "vivillon-continental",
+        "Vivillon Garden": "vivillon-garden",
+        "Vivillon Elegant": "vivillon-elegant",
+        "Vivillon Modern": "vivillon-modern",
+        "Vivillon Marine": "vivillon-marine",
+        "Vivillon Archipelago": "vivillon-archipelago",
+        "Vivillon High Plains": "vivillon-high-plains",
+        "Vivillon Sandstorm": "vivillon-sandstorm",
+        "Vivillon River": "vivillon-river",
+        "Vivillon Monsoon": "vivillon-monsoon",
+        "Vivillon Savanna": "vivillon-savanna",
+        "Vivillon Sun": "vivillon-sun",
+        "Vivillon Ocean": "vivillon-ocean",
+        "Vivillon Jungle": "vivillon-jungle",
+        "Furfrou Heart": "furfrou-heart",
+        "Furfrou Star": "furfrou-star",
+        "Furfrou Diamond": "furfrou-diamond",
+        "Furfrou Debutante": "furfrou-debutante",
+        "Furfrou Matron": "furfrou-matron",
+        "Furfrou Dandy": "furfrou-dandy",
+        "Furfrou La Reine": "furfrou-la-reine",
+        "Furfrou Kabuki": "furfrou-kabuki",
+        "Furfrou Pharaoh": "furfrou-pharaoh",
+        "Aegislash Blade": "aegislash-blade",
+        "Pumpkaboo Average": "pumpkaboo-average",
+        "Pumpkaboo Large": "pumpkaboo-large",
+        "Pumpkaboo Super": "pumpkaboo-super",
+        "Gourgeist Average": "gourgeist-average",
+        "Gourgeist Large": "gourgeist-large",
+        "Gourgeist Super": "gourgeist-super",
+        "Zygarde 10%": "zygarde-10",
+        "Zygarde Complete": "zygarde-complete",
+        "Lycanroc Midnight": "lycanroc-midnight",
+        "Lycanroc Dusk": "lycanroc-dusk",
+        "Wishiwashi School": "wishiwashi-school",
+        "Minior Orange": "minior-orange",
+        "Minior Yellow": "minior-yellow",
+        "Minior Green": "minior-green",
+        "Minior Blue": "minior-blue",
+        "Minior Indigo": "minior-indigo",
+        "Minior Violet": "minior-violet",
+        "Mimikyu Busted": "mimikyu-busted",
+        "Necrozma Dusk Mane": "necrozma-dusk",
+        "Necrozma Dawn Wings": "necrozma-dawn",
+        "Toxtricity Low Key": "toxtricity-low-key",
+        "Eiscue Noice": "eiscue-noice",
+        "Indeedee Female": "indeedee-female",
+        "Morpeko Hangry": "morpeko-hangry",
+        "Zacian Crowned": "zacian-crowned",
+        "Zamazenta Crowned": "zamazenta-crowned",
+        "Urshifu Rapid Strike": "urshifu-rapid",
+        "Calyrex Ice Rider": "calyrex-ice",
+        "Calyrex Shadow Rider": "calyrex-shadow",
+        "Basculegion Female": "basculegion-female",
+        "Enamorus Therian": "enamorus-therian",
+        "Wooper Paldea": "wooper-paldea",
+        "Tauros Paldean Blaze Breed": "tauros-paldea-blaze",
+        "Tauros Paldean Aqua Breed": "tauros-paldea-aqua",
+        "Tauros Paldean Combat Breed": "tauros-paldea-combat",
     }
     
     # Check special mappings first
     if clean_name in special_mappings:
         return special_mappings[clean_name]
+    
+    # Handle specific form patterns
+    # Overcast form
+    if 'overcast' in clean_name.lower():
+        base = clean_name.lower().replace(' overcast form', '').replace(' overcast', '')
+        return f"{base}-overcast"
+    
+    # Sunshine/Sunny form
+    if 'sunshine' in clean_name.lower() or 'sunny' in clean_name.lower():
+        base = clean_name.lower().replace(' sunshine form', '').replace(' sunny', '').replace(' sunny form', '')
+        return f"{base}-sunshine"
     
     # Remove "Form" or "Style" suffix
     clean_name = re.sub(r'\s+(Form|Forme|Style)$', '', clean_name, flags=re.IGNORECASE)
@@ -74,6 +182,41 @@ def get_rotomlabs_slug(pokemon_name):
     slug = slug.strip('-')
     
     return slug
+
+def split_or_name(pokemon_name, pokemon_id, rate, is_shiny):
+    """
+    Split names like 'Cherrim Overcast Form or Cherrim Sunny' into separate entries.
+    Also handles 'Castform Rainy or Castform' etc.
+    """
+    if ' or ' not in pokemon_name:
+        return [{'name': pokemon_name, 'id': pokemon_id, 'rate': rate, 'shiny': is_shiny}]
+    
+    # Split by " or "
+    parts = pokemon_name.split(' or ')
+    result = []
+    
+    for part in parts:
+        part = part.strip()
+        
+        # Clean up common issues
+        # Fix "Castform Rainy or Castform" -> both get proper names
+        if part == 'Castform' and 'Rainy' in pokemon_name:
+            part = 'Castform Normal'
+        elif part == 'Castform' and 'Sunny' in pokemon_name:
+            part = 'Castform Normal'
+        
+        # Fix "Cherrim Overcast Form or Cherrim Sunny" -> "Cherrim Overcast Form" and "Cherrim Sunshine Form"
+        if 'sunny' in part.lower() and 'cherrim' in part.lower():
+            part = 'Cherrim Sunshine Form'
+        
+        result.append({
+            'name': part,
+            'id': pokemon_id,
+            'rate': rate,
+            'shiny': is_shiny
+        })
+    
+    return result
 
 def scrape_shungo_spawns():
     print("🚀 Fetching spawns from Shungo API...")
@@ -103,6 +246,8 @@ def scrape_shungo_spawns():
             form_map[pokemon_id][rate] = name
     
     spawns = []
+    split_count = 0
+    
     for item in result_array:
         pokemon_id = item[0]
         rate = item[2]
@@ -123,17 +268,34 @@ def scrape_shungo_spawns():
         if not pokemon_name:
             pokemon_name = f"Pokemon #{pokemon_id}"
         
-        # Generate local image URL (will be populated by the image scraper)
-        slug = get_rotomlabs_slug(pokemon_name)
-        local_image_url = f"https://raw.githubusercontent.com/Skatecrete/pogo-raid-data/main/images/{pokemon_id}_{slug}.webp"
-        
-        spawns.append({
-            "id": pokemon_id,
-            "name": pokemon_name,
-            "rate": round(rate, 2),
-            "shiny": is_shiny,
-            "image_url": local_image_url
-        })
+        # Check if name contains "or" and split if needed
+        if ' or ' in pokemon_name:
+            print(f"  Splitting: {pokemon_name}")
+            split_entries = split_or_name(pokemon_name, pokemon_id, rate, is_shiny)
+            split_count += len(split_entries) - 1
+            
+            for entry in split_entries:
+                slug = get_rotomlabs_slug(entry['name'])
+                local_image_url = f"https://raw.githubusercontent.com/Skatecrete/pogo-raid-data/main/images/{entry['id']}_{slug}.webp"
+                spawns.append({
+                    "id": entry['id'],
+                    "name": entry['name'],
+                    "rate": round(entry['rate'], 2),
+                    "shiny": entry['shiny'],
+                    "image_url": local_image_url
+                })
+                print(f"    Created: {entry['name']}")
+        else:
+            # Normal processing
+            slug = get_rotomlabs_slug(pokemon_name)
+            local_image_url = f"https://raw.githubusercontent.com/Skatecrete/pogo-raid-data/main/images/{pokemon_id}_{slug}.webp"
+            spawns.append({
+                "id": pokemon_id,
+                "name": pokemon_name,
+                "rate": round(rate, 2),
+                "shiny": is_shiny,
+                "image_url": local_image_url
+            })
     
     output = {
         "last_updated": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
@@ -146,6 +308,7 @@ def scrape_shungo_spawns():
     
     print(f"\n💾 Saved to spawns.json")
     print(f"   Total spawns: {len(spawns)}")
+    print(f"   Split entries: {split_count}")
 
 if __name__ == "__main__":
     scrape_shungo_spawns()
