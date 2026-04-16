@@ -210,14 +210,29 @@ def get_rotomlabs_slug(pokemon_name):
      if clean_name in special_mappings:
         return special_mappings[clean_name]
     
-    clean_name = clean_name.lower()
-    clean_name = clean_name.replace("'", "")
-    clean_name = clean_name.replace(" ", "-")
-    clean_name = re.sub(r'[^a-z0-9-]', '', clean_name)
-    clean_name = re.sub(r'-+', '-', clean_name)
-    clean_name = clean_name.strip('-')
+    # Remove "Form" or "Style" suffix
+    clean_name = re.sub(r'\s+(Form|Forme|Style)$', '', clean_name, flags=re.IGNORECASE)
+    clean_name = re.sub(r'\s+(Form|Forme|Style)\s+', ' ', clean_name, flags=re.IGNORECASE)
     
-    return clean_name
+    # Handle special characters
+    clean_name = clean_name.replace("'", "")
+    clean_name = clean_name.replace("♀", "-f").replace("♂", "-m")
+    clean_name = clean_name.replace("é", "e").replace("è", "e").replace("ë", "e")
+    clean_name = clean_name.replace("û", "u").replace("ü", "u")
+    
+    # Convert to lowercase and replace spaces with hyphens
+    slug = clean_name.lower().replace(" ", "-")
+    
+    # Remove any non-alphanumeric characters (except hyphens)
+    slug = re.sub(r'[^a-z0-9-]', '', slug)
+    
+    # Remove duplicate hyphens
+    slug = re.sub(r'-+', '-', slug)
+    
+    # Remove leading/trailing hyphens
+    slug = slug.strip('-')
+    
+    return slug
 
 def scrape_shungo_spawns():
     print("🚀 Fetching spawns from Shungo API...")
@@ -271,16 +286,12 @@ def scrape_shungo_spawns():
         slug = get_rotomlabs_slug(pokemon_name)
         local_image_url = f"https://raw.githubusercontent.com/Skatecrete/pogo-raid-data/main/images/{pokemon_id}_{slug}.webp"
         
-        # Also keep PokeAPI as fallback
-        pokeapi_url = f"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/{pokemon_id}.png"
-        
         spawns.append({
             "id": pokemon_id,
             "name": pokemon_name,
             "rate": round(rate, 2),
             "shiny": is_shiny,
-            "image_url": local_image_url,  # Will be updated by image scraper
-            "fallback_url": pokeapi_url
+            "image_url": local_image_url
         })
     
     output = {
