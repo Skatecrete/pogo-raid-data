@@ -4,11 +4,7 @@ import re
 from datetime import datetime
 
 def get_rotomlabs_slug(pokemon_name):
-    """
-    Converts a Pokemon name with form into a RotomLabs URL slug.
-    e.g., "Oricorio Pom-Pom Style" -> "oricorio-pom-pom-style"
-    """
-    # Remove any parenthetical notes (like "(Sunglasses)") that might be in the name
+    """Convert Pokemon name to RotomLabs URL slug."""
     clean_name = re.sub(r'\([^)]*\)', '', pokemon_name).strip()
     
     # Special case mappings for known tricky names
@@ -211,38 +207,17 @@ def get_rotomlabs_slug(pokemon_name):
         "Tauros Paldean Combat Breed": "tauros-paldea-combat",
     }
     
-    if clean_name in special_mappings:
-        clean_name = special_mappings[clean_name]
-        slug = clean_name.lower().replace(" ", "-")
-        slug = re.sub(r'[^a-z0-9-]', '', slug)
-        slug = re.sub(r'-+', '-', slug).strip('-')
-        return slug
+     if clean_name in special_mappings:
+        return special_mappings[clean_name]
     
-    # Handle "Form" patterns
-    clean_name = re.sub(r'\s+(Form|Forme|Style)$', '', clean_name, flags=re.IGNORECASE)
-    clean_name = re.sub(r'\s+(Form|Forme|Style)\s+', ' ', clean_name, flags=re.IGNORECASE)
-    
-    # Handle apostrophes
+    clean_name = clean_name.lower()
     clean_name = clean_name.replace("'", "")
+    clean_name = clean_name.replace(" ", "-")
+    clean_name = re.sub(r'[^a-z0-9-]', '', clean_name)
+    clean_name = re.sub(r'-+', '-', clean_name)
+    clean_name = clean_name.strip('-')
     
-    # Handle special characters
-    clean_name = clean_name.replace("♀", "-f").replace("♂", "-m")
-    clean_name = clean_name.replace("é", "e").replace("è", "e").replace("ë", "e")
-    clean_name = clean_name.replace("û", "u").replace("ü", "u")
-    
-    # Convert to lowercase and replace spaces with hyphens
-    slug = clean_name.lower().replace(" ", "-")
-    
-    # Remove any remaining non-alphanumeric characters (except hyphens)
-    slug = re.sub(r'[^a-z0-9-]', '', slug)
-    
-    # Remove duplicate hyphens
-    slug = re.sub(r'-+', '-', slug)
-    
-    # Remove leading/trailing hyphens
-    slug = slug.strip('-')
-    
-    return slug
+    return clean_name
 
 def scrape_shungo_spawns():
     print("🚀 Fetching spawns from Shungo API...")
@@ -292,15 +267,20 @@ def scrape_shungo_spawns():
         if not pokemon_name:
             pokemon_name = f"Pokemon #{pokemon_id}"
         
+        # Generate local image URL (will be populated by the image scraper)
         slug = get_rotomlabs_slug(pokemon_name)
-        image_url = f"https://rotomlabs.net/dex/{slug}"
+        local_image_url = f"https://raw.githubusercontent.com/Skatecrete/pogo-raid-data/main/images/{pokemon_id}_{slug}.webp"
+        
+        # Also keep PokeAPI as fallback
+        pokeapi_url = f"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/{pokemon_id}.png"
         
         spawns.append({
             "id": pokemon_id,
             "name": pokemon_name,
             "rate": round(rate, 2),
             "shiny": is_shiny,
-            "image_url": image_url
+            "image_url": local_image_url,  # Will be updated by image scraper
+            "fallback_url": pokeapi_url
         })
     
     output = {
@@ -314,9 +294,6 @@ def scrape_shungo_spawns():
     
     print(f"\n💾 Saved to spawns.json")
     print(f"   Total spawns: {len(spawns)}")
-    print("\n📸 Sample image URLs generated:")
-    for spawn in spawns[:10]:
-        print(f"   {spawn['name']}: {spawn['image_url']}")
 
 if __name__ == "__main__":
     scrape_shungo_spawns()
