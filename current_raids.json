@@ -1,63 +1,269 @@
 {
   "last_updated": "2026-04-16",
   "tier1": [
-    "Gossifleur",
-    "Phantump",
-    "Sandygast",
-    "Foongus"
+    {
+      "name": "Gossifleur",
+      "imageUrl": "https://rotomlabs.net/dex/gossifleur"
+    },
+    {
+      "name": "Phantump",
+      "imageUrl": "https://rotomlabs.net/dex/phantump"
+    },
+    {
+      "name": "Sandygast",
+      "imageUrl": "https://rotomlabs.net/dex/sandygast"
+    },
+    {
+      "name": "Foongus",
+      "imageUrl": "https://rotomlabs.net/dex/foongus"
+    }
   ],
   "tier3": [
-    "Torterra",
-    "Vileplume",
-    "Dugtrio"
+    {
+      "name": "Torterra",
+      "imageUrl": "https://rotomlabs.net/dex/torterra"
+    },
+    {
+      "name": "Vileplume",
+      "imageUrl": "https://rotomlabs.net/dex/vileplume"
+    },
+    {
+      "name": "Dugtrio",
+      "imageUrl": "https://rotomlabs.net/dex/dugtrio"
+    }
   ],
   "dynamax_tier1": [
-    "Abra",
-    "Bounsweet",
-    "Bulbasaur",
-    "Caterpie",
-    "Charmander",
-    "Drilbur",
-    "Gastly",
-    "Grookey",
-    "Growlithe",
-    "Hatenna",
-    "Inkay",
-    "Kabuto",
-    "Krabby",
-    "Omanyte",
-    "Pidove",
-    "Ralts",
-    "Roggenrola",
-    "Rookidee",
-    "Scorbunny",
-    "Skwovet",
-    "Sobble",
-    "Spheal",
-    "Squirtle",
-    "Trubbish",
-    "Woobat",
-    "Wooloo"
+    {
+      "name": "Abra",
+      "imageUrl": "https://rotomlabs.net/dex/abra"
+    },
+    {
+      "name": "Beldum",
+      "imageUrl": "https://rotomlabs.net/dex/beldum"
+    },
+    {
+      "name": "Bounsweet",
+      "imageUrl": "https://rotomlabs.net/dex/bounsweet"
+    },
+    {
+      "name": "Bulbasaur",
+      "imageUrl": "https://rotomlabs.net/dex/bulbasaur"
+    },
+    {
+      "name": "Caterpie",
+      "imageUrl": "https://rotomlabs.net/dex/caterpie"
+    },
+    {
+      "name": "Chansey",
+      "imageUrl": "https://rotomlabs.net/dex/chansey"
+    },
+    {
+      "name": "Charmander",
+      "imageUrl": "https://rotomlabs.net/dex/charmander"
+    },
+    {
+      "name": "Cryogonal",
+      "imageUrl": "https://rotomlabs.net/dex/cryogonal"
+    },
+    {
+      "name": "Darumaka",
+      "imageUrl": "https://rotomlabs.net/dex/darumaka"
+    },
+    {
+      "name": "Drampa",
+      "imageUrl": "https://rotomlabs.net/dex/drampa"
+    },
+    {
+      "name": "Drilbur",
+      "imageUrl": "https://rotomlabs.net/dex/drilbur"
+    },
+    {
+      "name": "Eevee",
+      "imageUrl": "https://rotomlabs.net/dex/eevee"
+    },
+    {
+      "name": "Falinks",
+      "imageUrl": "https://rotomlabs.net/dex/falinks"
+    },
+    {
+      "name": "Gastly",
+      "imageUrl": "https://rotomlabs.net/dex/gastly"
+    },
+    {
+      "name": "Grookey",
+      "imageUrl": "https://rotomlabs.net/dex/grookey"
+    },
+    {
+      "name": "Growlithe",
+      "imageUrl": "https://rotomlabs.net/dex/growlithe"
+    },
+    {
+      "name": "Hatenna",
+      "imageUrl": "https://rotomlabs.net/dex/hatenna"
+    },
+    {
+      "name": "Hitmonchan",
+      "imageUrl": "https://rotomlabs.net/dex/hitmonchan"
+    },
+    {
+      "name": "Hitmonlee",
+      "imageUrl": "https://rotomlabs.net/dex/hitmonlee"
+    },
+    {
+      "name": "Inkay",
+      "imageUrl": "https://rotomlabs.net/dex/inkay"
+    },
+    {
+      "name": "Kabuto",
+      "imageUrl": "https://rotomlabs.net/dex/kabuto"
+    },
+    {
+      "name": "Krabby",
+      "imageUrl": "https://rotomlabs.net/dex/krabby"
+    },
+    {
+      "name": "Machop",
+      "imageUrl": "https://rotomlabs.net/dex/machop"
+    },
+    {
+      "name": "Omanyte",
+      "imageUrl": "https://rotomlabs.net/dex/omanyte"
+    },
+    {
+      "name": "Passimian",
+      "imageUrl": "https://rotomlabs.net/dex/passimian"
+    },
+    {
+      "name": "Pidove",
+      "imageUrl": "https://rotomlabs.net/dex/pidove"
+    },
+    {
+      "name": "Ralts",
+      "imageUrl": "https://rotomlabs.net/dex/ralts"
+    },
+    {
+      "name": "Roggenrola",
+      "imageUrl": "https://rotomlabs.net/dex/roggenrola"
+    },
+    {
+      "name": "Rookidee",
+      "imageUrl": "https://rotomlabs.net/dex/rookidee"
+    },
+    {
+      "name": "Sableye",
+      "imageUrl": "https://rotomlabs.net/dex/sableye"
+    },
+    {
+      "name": "Scorbunny",
+      "imageUrl": "https://rotomlabs.net/dex/scorbunny"
+    },
+    {
+      "name": "Search...",
+      "imageUrl": "https://rotomlabs.net/dex/search"
+    },
+    {
+      "name": "Shuckle",
+      "imageUrl": "https://rotomlabs.net/dex/shuckle"
+    },
+    {
+      "name": "Skwovet",
+      "imageUrl": "https://rotomlabs.net/dex/skwovet"
+    },
+    {
+      "name": "Sobble",
+      "imageUrl": "https://rotomlabs.net/dex/sobble"
+    },
+    {
+      "name": "Spheal",
+      "imageUrl": "https://rotomlabs.net/dex/spheal"
+    },
+    {
+      "name": "Squirtle",
+      "imageUrl": "https://rotomlabs.net/dex/squirtle"
+    },
+    {
+      "name": "Trubbish",
+      "imageUrl": "https://rotomlabs.net/dex/trubbish"
+    },
+    {
+      "name": "Wailmer",
+      "imageUrl": "https://rotomlabs.net/dex/wailmer"
+    },
+    {
+      "name": "Woobat",
+      "imageUrl": "https://rotomlabs.net/dex/woobat"
+    },
+    {
+      "name": "Wooloo",
+      "imageUrl": "https://rotomlabs.net/dex/wooloo"
+    }
   ],
   "dynamax_tier2": [
-    "Darumaka",
-    "Eevee",
-    "Machop",
-    "Shuckle",
-    "Wailmer"
+    {
+      "name": "Darumaka",
+      "imageUrl": "https://rotomlabs.net/dex/darumaka"
+    },
+    {
+      "name": "Eevee",
+      "imageUrl": "https://rotomlabs.net/dex/eevee"
+    },
+    {
+      "name": "Machop",
+      "imageUrl": "https://rotomlabs.net/dex/machop"
+    },
+    {
+      "name": "Shuckle",
+      "imageUrl": "https://rotomlabs.net/dex/shuckle"
+    },
+    {
+      "name": "Wailmer",
+      "imageUrl": "https://rotomlabs.net/dex/wailmer"
+    }
   ],
   "dynamax_tier3": [
-    "Beldum",
-    "Chansey",
-    "Cryogonal",
-    "Drampa",
-    "Falinks",
-    "Hitmonchan",
-    "Hitmonlee",
-    "Passimian",
-    "Sableye"
+    {
+      "name": "Beldum",
+      "imageUrl": "https://rotomlabs.net/dex/beldum"
+    },
+    {
+      "name": "Chansey",
+      "imageUrl": "https://rotomlabs.net/dex/chansey"
+    },
+    {
+      "name": "Cryogonal",
+      "imageUrl": "https://rotomlabs.net/dex/cryogonal"
+    },
+    {
+      "name": "Drampa",
+      "imageUrl": "https://rotomlabs.net/dex/drampa"
+    },
+    {
+      "name": "Falinks",
+      "imageUrl": "https://rotomlabs.net/dex/falinks"
+    },
+    {
+      "name": "Hitmonchan",
+      "imageUrl": "https://rotomlabs.net/dex/hitmonchan"
+    },
+    {
+      "name": "Hitmonlee",
+      "imageUrl": "https://rotomlabs.net/dex/hitmonlee"
+    },
+    {
+      "name": "Passimian",
+      "imageUrl": "https://rotomlabs.net/dex/passimian"
+    },
+    {
+      "name": "Sableye",
+      "imageUrl": "https://rotomlabs.net/dex/sableye"
+    }
   ],
+  "dynamax_tier4": [],
+  "dynamax_tier5": [],
   "gigantamax": [
-    "Search..."
+    {
+      "name": "Search...",
+      "imageUrl": "https://rotomlabs.net/dex/search/gigantamax"
+    }
   ]
 }
