@@ -4,20 +4,6 @@ import json
 from datetime import datetime
 import re
 
-def fetch_scrapedduck_raids():
-    """Fetch current raids from ScrapedDuck API"""
-    try:
-        url = "https://raw.githubusercontent.com/bigfoott/ScrapedDuck/data/raids.min.json"
-        response = requests.get(url, timeout=10)
-        if response.status_code == 200:
-            return response.json()
-        else:
-            print(f"  ScrapedDuck API returned {response.status_code}")
-            return []
-    except Exception as e:
-        print(f"  Error fetching ScrapedDuck: {e}")
-        return []
-
 def scrape_snacknap_raids():
     """Scrape Tier 1 and Tier 3 raids from snacknap.com/raids"""
     print("  📡 Fetching Tier 1 & 3 raids from SnackNap...")
@@ -44,15 +30,16 @@ def scrape_snacknap_raids():
             print(f"    Found header: {tier_title}")
             
             current_tier = None
-            if "Tier 1" in tier_title:
+            if tier_title == "Tier 1":
                 current_tier = "tier1"
-            elif "Tier 3" in tier_title:
+            elif tier_title == "Tier 3":
                 current_tier = "tier3"
             else:
                 continue
             
             tier_container = h2.find_next('div', class_=re.compile(r'row g-2'))
             if not tier_container:
+                print(f"    Could not find container for {tier_title}")
                 continue
             
             pokemon_cards = tier_container.find_all('a', href=re.compile(r'/pokedex/pokemon/'))
@@ -67,13 +54,19 @@ def scrape_snacknap_raids():
                         raid_data[current_tier].append(clean_name)
                         print(f"      Added to {current_tier}: {clean_name}")
         
+        print(f"\n  📊 SNACKNAP RAID SUMMARY:")
+        print(f"    Tier 1: {len(raid_data['tier1'])} - {raid_data['tier1']}")
+        print(f"    Tier 3: {len(raid_data['tier3'])} - {raid_data['tier3']}")
+        
         return raid_data
     except Exception as e:
-        print(f"    ❌ Error: {e}")
+        print(f"    ❌ Error scraping raids: {e}")
+        import traceback
+        traceback.print_exc()
         return {"tier1": [], "tier3": []}
 
 def scrape_snacknap_maxbattles():
-    """Scrape Dynamax and Gigantamax battles"""
+    """Scrape Dynamax Tier 1,2,3 and Gigantamax from snacknap.com/max-battles"""
     print("  📡 Fetching Dynamax & Gigantamax battles...")
     url = "https://www.snacknap.com/max-battles"
     headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'}
@@ -87,35 +80,35 @@ def scrape_snacknap_maxbattles():
             "dynamax_tier1": [],
             "dynamax_tier2": [],
             "dynamax_tier3": [],
-            "dynamax_tier4": [],
-            "dynamax_tier5": [],
             "gigantamax": []
         }
         
-        # Filter out invalid names
-        invalid_names = ['bug', 'dark', 'dragon', 'electric', 'fairy', 'fighting', 'fire', 
-                         'flying', 'ghost', 'grass', 'ground', 'ice', 'normal', 'poison', 
-                         'psychic', 'rock', 'steel', 'water', 'Search...', 'Telegram', 
-                         'Facebook', 'Instagram', 'Discord', 'Threads', 'Bluesky']
+        social_media = ['Telegram', 'Facebook', 'Instagram', 'Threads', 'Bluesky', 'X', 'Twitter', 'Discord', 'Patreon', 'YouTube', 'Twitch']
+        type_words = ['fire', 'water', 'grass', 'electric', 'bug', 'ground', 'flying', 'ghost', 
+                     'ice', 'psychic', 'dragon', 'dark', 'steel', 'fairy', 'rock', 'fighting', 
+                     'poison', 'normal', 'shiny']
         
         current_tier = None
-        tier_map = {
-            'dynamax_tier1': ['Tier 1', 'TIER 1', 'tier 1'],
-            'dynamax_tier2': ['Tier 2', 'TIER 2', 'tier 2'],
-            'dynamax_tier3': ['Tier 3', 'TIER 3', 'tier 3'],
-            'dynamax_tier4': ['Tier 4', 'TIER 4', 'tier 4'],
-            'dynamax_tier5': ['Tier 5', 'TIER 5', 'tier 5'],
-            'gigantamax': ['Gigantamax', 'GIGANTAMAX', 'gigantamax']
-        }
         
         for element in soup.find_all(['h2', 'h3', 'div']):
             text = element.get_text().strip()
             
-            for tier_key, tier_patterns in tier_map.items():
-                if any(pattern in text for pattern in tier_patterns):
-                    current_tier = tier_key
-                    print(f"    Found {current_tier} section")
-                    break
+            if 'Tier 1' in text or 'Tier 1' in text.upper():
+                current_tier = 'dynamax_tier1'
+                print(f"    Found Dynamax Tier 1 section")
+                continue
+            elif 'Tier 2' in text or 'Tier 2' in text.upper():
+                current_tier = 'dynamax_tier2'
+                print(f"    Found Dynamax Tier 2 section")
+                continue
+            elif 'Tier 3' in text or 'Tier 3' in text.upper():
+                current_tier = 'dynamax_tier3'
+                print(f"    Found Dynamax Tier 3 section")
+                continue
+            elif 'Gigantamax' in text:
+                current_tier = 'gigantamax'
+                print(f"    Found Gigantamax section")
+                continue
             
             if current_tier and current_tier in raid_data:
                 imgs = element.find_all('img')
@@ -124,44 +117,40 @@ def scrape_snacknap_maxbattles():
                     if alt and len(alt) > 2:
                         clean_name = alt.replace('D-Max', '').replace('Shiny', '').replace('ShinyD-Max', '').strip()
                         
-                        if not clean_name or clean_name in invalid_names or clean_name.lower() in invalid_names:
+                        if not clean_name:
+                            continue
+                        if clean_name in social_media:
+                            continue
+                        if clean_name.lower() in type_words:
                             continue
                         
                         if clean_name and clean_name not in raid_data[current_tier]:
                             raid_data[current_tier].append(clean_name)
                             print(f"      Added to {current_tier}: {clean_name}")
         
+        for tier in raid_data:
+            raid_data[tier] = sorted(list(set(raid_data[tier])))
+        
+        print(f"\n  📊 MAX BATTLES SUMMARY:")
+        print(f"    Dynamax Tier 1: {len(raid_data['dynamax_tier1'])}")
+        print(f"    Dynamax Tier 2: {len(raid_data['dynamax_tier2'])}")
+        print(f"    Dynamax Tier 3: {len(raid_data['dynamax_tier3'])}")
+        print(f"    Gigantamax: {len(raid_data['gigantamax'])}")
+        
         return raid_data
     except Exception as e:
         print(f"    ❌ Error: {e}")
+        import traceback
+        traceback.print_exc()
         return None
 
 def main():
     print("🚀 Starting Snack Nap scraper...")
     print(f"Time: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
     
-    # Get SnackNap data
     raids = scrape_snacknap_raids()
     max_battles = scrape_snacknap_maxbattles() or {}
     
-    # Get ScrapedDuck data (5-Star, Mega, Shadow)
-    scrapedduck_raids = fetch_scrapedduck_raids()
-    print(f"  📡 ScrapedDuck: {len(scrapedduck_raids)} raids found")
-    
-    # Filter ScrapedDuck raids by tier for the JSON output
-    filtered_scrapedduck = []
-    for raid in scrapedduck_raids:
-        tier = raid.get('tier', '')
-        name = raid.get('name', '')
-        # Keep 5-Star, Mega, and ALL Shadow raids (including 1-star and 3-star Shadow)
-        if ('5-Star' in tier or 
-            'Mega' in tier or 
-            'Shadow' in name or 
-            'Shadow' in tier):
-            filtered_scrapedduck.append(raid)
-            print(f"      Kept ScrapedDuck: {name} ({tier})")
-    
-    # Combine all data
     new_data = {
         "last_updated": datetime.now().strftime("%Y-%m-%d"),
         "tier1": raids.get("tier1", []),
@@ -169,20 +158,14 @@ def main():
         "dynamax_tier1": max_battles.get("dynamax_tier1", []),
         "dynamax_tier2": max_battles.get("dynamax_tier2", []),
         "dynamax_tier3": max_battles.get("dynamax_tier3", []),
-        "dynamax_tier4": max_battles.get("dynamax_tier4", []),
-        "dynamax_tier5": max_battles.get("dynamax_tier5", []),
-        "gigantamax": max_battles.get("gigantamax", []),
-        "scrapedduck_raids": filtered_scrapedduck  # ADD THIS - contains 5-Star, Mega, Shadow
+        "gigantamax": max_battles.get("gigantamax", [])
     }
     
     with open('current_raids.json', 'w') as f:
         json.dump(new_data, f, indent=2)
     
     print("\n💾 Saved to current_raids.json")
-    print(f"   SnackNap Tier 1: {len(new_data['tier1'])}")
-    print(f"   SnackNap Tier 3: {len(new_data['tier3'])}")
-    print(f"   Dynamax/Gmax: {len(new_data['dynamax_tier1']) + len(new_data['dynamax_tier2']) + len(new_data['dynamax_tier3']) + len(new_data['gigantamax'])}")
-    print(f"   ScrapedDuck (5-Star/Mega/Shadow): {len(filtered_scrapedduck)}")
+    print(json.dumps(new_data, indent=2))
 
 if __name__ == "__main__":
     main()
