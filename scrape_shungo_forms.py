@@ -13,10 +13,8 @@ async def scrape_shungo_forms():
         print("📄 Loading page...")
         await page.goto("https://shungo.app/tools/wild")
         
-        # Wait for content to load
         await page.wait_for_timeout(5000)
         
-        # Scroll to load all Pokémon
         print("📜 Scrolling to load all Pokémon...")
         last_height = await page.evaluate('() => document.body.scrollHeight')
         
@@ -30,12 +28,10 @@ async def scrape_shungo_forms():
         
         print("✅ Page fully loaded, extracting data...")
         
-        # Get the text content
         text = await page.evaluate('() => document.body.innerText')
         
         await browser.close()
         
-        # Parse the text
         lines = text.split('\n')
         form_map = {}
         
@@ -64,7 +60,6 @@ async def scrape_shungo_forms():
             else:
                 i += 1
         
-        # Save to JSON
         output = {
             "last_updated": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
             "form_mappings": form_map
