@@ -3,9 +3,9 @@ from bs4 import BeautifulSoup
 import json
 import re
 import time
-from datetime import datetime
 import os
 from urllib.parse import unquote
+from datetime import datetime
 
 def get_rotomlabs_base_slug(pokemon_name):
     """Get the base Pokemon slug (without form) for URL like /dex/{base}/{form}"""
@@ -24,6 +24,25 @@ def get_rotomlabs_base_slug(pokemon_name):
         "Darmanitan": "darmanitan",
         "Rapidash": "rapidash",
         "Pikachu": "pikachu",
+        "Geodude": "geodude",
+        "Grimer": "grimer",
+        "Meowth": "meowth",
+        "Vulpix": "vulpix",
+        "Rattata": "rattata",
+        "Diglett": "diglett",
+        "Sandshrew": "sandshrew",
+        "Dugtrio": "dugtrio",
+        "Graveler": "graveler",
+        "Persian": "persian",
+        "Raticate": "raticate",
+        "Muk": "muk",
+        "Ninetales": "ninetales",
+        "Oinkologne": "oinkologne",
+        "Flabébé": "flabebe",
+        "Floette": "floette",
+        "Cherrim": "cherrim",
+        "Burmy": "burmy",
+        "Sandslash": "sandslash",
     }
     
     for name, slug in special_mappings.items():
@@ -74,20 +93,10 @@ def get_form_slug(pokemon_name):
     
     return None
 
-def get_image_url(pokemon_name, pokemon_id):
-    """Get the RotomLabs image URL for a Pokemon."""
-    base_slug = get_rotomlabs_base_slug(pokemon_name)
-    form_slug = get_form_slug(pokemon_name)
-    
-    if form_slug:
-        return f"https://rotomlabs.net/dex/{base_slug}/{form_slug}"
-    else:
-        return f"https://rotomlabs.net/dex/{base_slug}"
-
 def download_image(url, output_path):
     """Download an image from URL to local path."""
     try:
-        headers = {'User-Agent': 'Mozilla/5.0'}
+        headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'}
         response = requests.get(url, headers=headers, timeout=30)
         if response.status_code == 200:
             with open(output_path, 'wb') as f:
@@ -98,24 +107,33 @@ def download_image(url, output_path):
         return False
 
 def main():
-    print("🚀 Starting RotomLabs Image URL Updater...")
+    print("🚀 Starting RotomLabs Image Downloader...")
+    print("="*60)
     
+    # Load spawns.json
     with open('spawns.json', 'r') as f:
         spawns_data = json.load(f)
     
     spawns = spawns_data.get('spawns', [])
     print(f"📊 Loaded {len(spawns)} spawns")
     
+    # Create images directory
     os.makedirs('images', exist_ok=True)
     
-    updated = 0
+    downloaded = 0
+    skipped = 0
+    failed = 0
+    
     for i, spawn in enumerate(spawns):
         name = spawn['name']
         pokemon_id = spawn['id']
         
+        # Skip Pokemon #XXX entries
         if name.startswith('Pokemon #'):
+            skipped += 1
             continue
         
+        # Generate filename
         base_slug = get_rotomlabs_base_slug(name)
         form_slug = get_form_slug(name)
         
@@ -128,25 +146,42 @@ def main():
         local_path = f"images/{local_filename}"
         github_url = f"https://raw.githubusercontent.com/Skatecrete/pogo-raid-data/main/images/{local_filename}"
         
-        # Only download if image doesn't exist
-        if not os.path.exists(local_path):
-            image_url = get_image_url(name, pokemon_id)
-            if download_image(image_url, local_path):
-                print(f"✓ Downloaded: {name}")
-                updated += 1
-            else:
-                print(f"✗ Failed: {name}")
-        
-        # Update the spawn with the GitHub URL
+        # Update spawn with GitHub URL (always, even if image exists)
         spawn['image_url'] = github_url
         
+        # Download if not exists
+        if not os.path.exists(local_path):
+            # Construct URL
+            if form_slug:
+                image_url = f"https://rotomlabs.net/dex/{base_slug}/{form_slug}"
+            else:
+                image_url = f"https://rotomlabs.net/dex/{base_slug}"
+            
+            print(f"  Downloading: {name} -> {local_filename}")
+            if download_image(image_url, local_path):
+                downloaded += 1
+                print(f"    ✓ Success")
+            else:
+                failed += 1
+                print(f"    ✗ Failed")
+        else:
+            skipped += 1
+        
+        # Be nice to the server
         time.sleep(0.2)
     
     # Save updated spawns.json
     with open('spawns.json', 'w') as f:
         json.dump(spawns_data, f, indent=2)
     
-    print(f"\n💾 Updated {updated} new images in spawns.json")
+    print("\n" + "="*60)
+    print("📊 SUMMARY")
+    print("="*60)
+    print(f"   Downloaded: {downloaded}")
+    print(f"   Already existed: {skipped}")
+    print(f"   Failed: {failed}")
+    print(f"\n💾 Updated spawns.json with image URLs")
+    print("✨ Done!")
 
 if __name__ == "__main__":
     main()
