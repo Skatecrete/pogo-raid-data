@@ -2,6 +2,7 @@ import requests
 import json
 import re
 from datetime import datetime
+from collections import defaultdict
 
 def get_rotomlabs_slug(pokemon_name):
     """
