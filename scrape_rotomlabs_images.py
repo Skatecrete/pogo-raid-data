@@ -7,168 +7,184 @@ from datetime import datetime
 import os
 from urllib.parse import unquote
 
-def get_rotomlabs_slug(pokemon_name):
-    """Convert Pokemon name to RotomLabs URL slug."""
-    clean_name = re.sub(r'\([^)]*\)', '', pokemon_name).strip()
+def get_rotomlabs_base_slug(pokemon_name):
+    """Get the base Pokemon slug (without form) for URL like /dex/{base}/{form}"""
+    clean_name = re.sub(r'\s+(Form|Forme|Style)$', '', pokemon_name, flags=re.IGNORECASE)
+    clean_name = re.sub(r'\s+(Form|Forme|Style)\s+', ' ', clean_name, flags=re.IGNORECASE)
     
-    special_mappings = {
-        "Nidoran\u2640": "nidoran-f",
-        "Nidoran\u2642": "nidoran-m",
-        "Farfetch'd": "farfetchd",
-        "Mr. Mime": "mr-mime",
-        "Type: Null": "type-null",
-        "Flabébé": "flabebe",
-        "Ho-Oh": "ho-oh",
-        "Sirfetch'd": "sirfetchd",
-        "Mr. Rime": "mr-rime",
-        "Great Tusk": "great-tusk",
-        "Scream Tail": "scream-tail",
-        "Flutter Mane": "flutter-mane",
-        "Slither Wing": "slither-wing",
-        "Sandy Shocks": "sandy-shocks",
-        "Iron Treads": "iron-treads",
-        "Iron Bundle": "iron-bundle",
-        "Iron Hands": "iron-hands",
-        "Iron Jugulis": "iron-jugulis",
-        "Iron Moth": "iron-moth",
-        "Iron Thorns": "iron-thorns",
-        "Roaring Moon": "roaring-moon",
-        "Iron Valiant": "iron-valiant",
-        "Walking Wake": "walking-wake",
-        "Iron Leaves": "iron-leaves",
-        "Gouging Fire": "gouging-fire",
-        "Raging Bolt": "raging-bolt",
-        "Iron Boulder": "iron-boulder",
-        "Iron Crown": "iron-crown",
-        "Deerling Spring Form": "deerling-spring",
-        "Deerling Autumn Form": "deerling-autumn",
-        "Castform Sunny": "castform-sunny",
-        "Castform Rainy": "castform-rainy",
-        "Castform Snowy": "castform-snowy",
-        "Cherrim Overcast Form": "cherrim-overcast",
-        "Cherrim Sunshine Form": "cherrim-sunshine",
-        "Cherrim Normal": "cherrim",
-        "Floette Blue Flower": "floette-blue-flower",
-        "Floette Red Flower": "floette-red-flower",
-        "Floette Yellow Flower": "floette-yellow-flower",
-        "Floette White Flower": "floette-white-flower",
-        "Floette Orange Flower": "floette-orange-flower",
-        "Flabébé Blue Flower": "flabebe-blue-flower",
-        "Flabébé Red Flower": "flabebe-red-flower",
-        "Flabébé Yellow Flower": "flabebe-yellow-flower",
-        "Flabébé White Flower": "flabebe-white-flower",
-        "Flabébé Orange Flower": "flabebe-orange-flower",
+    # Remove specific form suffixes
+    form_suffixes = [' Rainy', ' Sunny', ' Snowy', ' Heat', ' Wash', ' Frost', ' Fan', ' Mow',
+                     ' Overcast', ' Sunshine', ' Blue Flower', ' Red Flower', ' Yellow Flower',
+                     ' White Flower', ' Orange Flower', ' Baile Style', ' Pom-Pom Style',
+                     " Pa'u Style", ' Sensu Style', ' Origin', ' Sky', ' Therian', ' Resolute',
+                     ' Pirouette', ' Burn', ' Chill', ' Douse', ' Shock', ' Ash', ' Zen',
+                     ' Crowned', ' Hero', ' Single Strike', ' Rapid Strike', ' Ice Rider',
+                     ' Shadow Rider', ' Midnight', ' Dusk', ' School', ' Busted', ' Dusk Mane',
+                     ' Dawn Wings', ' Ultra', ' Low Key', ' Noice', ' Female', ' Hangry',
+                     ' Blaze Breed', ' Aqua Breed', ' Combat Breed', ' Paldea']
+    
+    for suffix in form_suffixes:
+        if clean_name.endswith(suffix):
+            clean_name = clean_name[:-len(suffix)].strip()
+            break
+    
+    clean_name = clean_name.replace("'", "")
+    clean_name = clean_name.replace("♀", "-f").replace("♂", "-m")
+    clean_name = clean_name.replace("é", "e").replace("è", "e").replace("ë", "e")
+    clean_name = clean_name.replace("û", "u").replace("ü", "u")
+    
+    slug = clean_name.lower().replace(" ", "-")
+    slug = re.sub(r'[^a-z0-9-]', '', slug)
+    slug = re.sub(r'-+', '-', slug)
+    slug = slug.strip('-')
+    
+    return slug
+
+def get_form_slug(pokemon_name):
+    """Extract the form slug for the second part of the URL (/dex/{base}/{form})"""
+    name_lower = pokemon_name.lower()
+    
+    form_mappings = {
+        'rainy': 'rainy',
+        'sunny': 'sunny',
+        'snowy': 'snowy',
+        'overcast': 'overcast',
+        'sunshine': 'sunshine',
+        'heat': 'heat',
+        'wash': 'wash',
+        'frost': 'frost',
+        'fan': 'fan',
+        'mow': 'mow',
+        'origin': 'origin',
+        'sky': 'sky',
+        'blue-striped': 'blue-striped',
+        'zen': 'zen',
+        'therian': 'therian',
+        'resolute': 'resolute',
+        'pirouette': 'pirouette',
+        'burn': 'burn',
+        'chill': 'chill',
+        'douse': 'douse',
+        'shock': 'shock',
+        'ash': 'ash',
+        'blue flower': 'blue-flower',
+        'red flower': 'red-flower',
+        'yellow flower': 'yellow-flower',
+        'white flower': 'white-flower',
+        'orange flower': 'orange-flower',
+        'heart': 'heart',
+        'star': 'star',
+        'diamond': 'diamond',
+        'debutante': 'debutante',
+        'matron': 'matron',
+        'dandy': 'dandy',
+        'la reine': 'la-reine',
+        'kabuki': 'kabuki',
+        'pharaoh': 'pharaoh',
+        'blade': 'blade',
+        'average': 'average',
+        'large': 'large',
+        'super': 'super',
+        '10%': '10',
+        'complete': 'complete',
+        'baile': 'baile',
+        'pom-pom': 'pompom',
+        'pau': 'pau',
+        'sensu': 'sensu',
+        'midnight': 'midnight',
+        'dusk': 'dusk',
+        'school': 'school',
+        'busted': 'busted',
+        'dusk mane': 'dusk',
+        'dawn wings': 'dawn',
+        'low key': 'low-key',
+        'noice': 'noice',
+        'female': 'female',
+        'hangry': 'hangry',
+        'crowned': 'crowned',
+        'rapid strike': 'rapid-strike',
+        'ice rider': 'ice',
+        'shadow rider': 'shadow',
+        'paldea': 'paldea',
+        'blaze breed': 'blaze',
+        'aqua breed': 'aqua',
+        'combat breed': 'combat',
     }
     
-    if clean_name in special_mappings:
-        return special_mappings[clean_name]
+    for pattern, form in form_mappings.items():
+        if pattern in name_lower:
+            return form
     
-    clean_name = clean_name.lower()
-    clean_name = clean_name.replace("'", "")
-    clean_name = clean_name.replace(" ", "-")
-    clean_name = re.sub(r'[^a-z0-9-]', '', clean_name)
-    clean_name = re.sub(r'-+', '-', clean_name)
-    clean_name = clean_name.strip('-')
-    
-    return clean_name
+    return None
 
 def scrape_rotomlabs_image(pokemon_name, pokemon_id):
     """Scrape RotomLabs page to get the official artwork image URL."""
-    slug = get_rotomlabs_slug(pokemon_name)
+    base_slug = get_rotomlabs_base_slug(pokemon_name)
+    form_slug = get_form_slug(pokemon_name)
     
-    # Extract form from name for URL construction
-    name_lower = pokemon_name.lower()
-    form_slug = None
-    
-    form_patterns = [
-        ('overcast', 'overcast'),
-        ('sunshine', 'sunshine'),
-        ('sunny', 'sunshine'),
-        ('blue flower', 'blue-flower'),
-        ('red flower', 'red-flower'),
-        ('yellow flower', 'yellow-flower'),
-        ('white flower', 'white-flower'),
-        ('orange flower', 'orange-flower'),
-        ('rainy', 'rainy'),
-        ('snowy', 'snowy'),
-        ('heat', 'heat'),
-        ('wash', 'wash'),
-        ('frost', 'frost'),
-        ('fan', 'fan'),
-        ('mow', 'mow'),
-        ('origin', 'origin'),
-        ('sky', 'sky'),
-        ('baile', 'baile'),
-        ('pom-pom', 'pompom'),
-        ('pau', 'pau'),
-        ('sensu', 'sensu'),
-    ]
-    
-    for pattern, form in form_patterns:
-        if pattern in name_lower:
-            form_slug = form
-            break
-    
-    urls_to_try = []
-    
-    # Pattern 1: /dex/{slug}/{form}
+    # Build URL with slash pattern: /dex/{base}/{form}
     if form_slug:
-        urls_to_try.append(f"https://rotomlabs.net/dex/{slug}/{form_slug}")
-    
-    # Pattern 2: /dex/{slug}
-    urls_to_try.append(f"https://rotomlabs.net/dex/{slug}")
+        url = f"https://rotomlabs.net/dex/{base_slug}/{form_slug}"
+    else:
+        url = f"https://rotomlabs.net/dex/{base_slug}"
     
     headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'}
     
-    for url in urls_to_try:
-        try:
-            response = requests.get(url, headers=headers, timeout=10)
-            if response.status_code != 200:
-                continue
-            
-            soup = BeautifulSoup(response.text, 'html.parser')
-            
-            # Find official artwork image
-            artwork_img = soup.find('img', src=re.compile(r'official-artwork'))
-            if artwork_img and artwork_img.get('src'):
-                img_src = artwork_img['src']
+    try:
+        print(f"  Trying: {url}")
+        response = requests.get(url, headers=headers, timeout=10)
+        
+        if response.status_code != 200:
+            print(f"    Failed: HTTP {response.status_code}")
+            # Try constructing direct static URL as fallback
+            padded_id = str(pokemon_id).zfill(4)
+            if form_slug:
+                direct_url = f"https://static.rotomlabs.net/images/official-artwork/{padded_id}-{base_slug}-{form_slug}.webp"
+            else:
+                direct_url = f"https://static.rotomlabs.net/images/official-artwork/{padded_id}-{base_slug}.webp"
+            print(f"    Trying direct: {direct_url}")
+            return direct_url
+        
+        soup = BeautifulSoup(response.text, 'html.parser')
+        
+        # Find official artwork image
+        artwork_img = soup.find('img', src=re.compile(r'official-artwork'))
+        if artwork_img and artwork_img.get('src'):
+            img_src = artwork_img['src']
+            if img_src.startswith('/'):
+                img_src = f"https://rotomlabs.net{img_src}"
+            if '_next/image' in img_src:
+                url_match = re.search(r'url=([^&]+)', img_src)
+                if url_match:
+                    img_src = unquote(url_match.group(1))
+            print(f"    Found: {img_src}")
+            return img_src
+        
+        # Check picture element
+        picture = soup.find('picture')
+        if picture:
+            img = picture.find('img')
+            if img and img.get('src'):
+                img_src = img['src']
                 if img_src.startswith('/'):
                     img_src = f"https://rotomlabs.net{img_src}"
                 if '_next/image' in img_src:
                     url_match = re.search(r'url=([^&]+)', img_src)
                     if url_match:
                         img_src = unquote(url_match.group(1))
+                print(f"    Found: {img_src}")
                 return img_src
-            
-            # Check picture element
-            picture = soup.find('picture')
-            if picture:
-                img = picture.find('img')
-                if img and img.get('src'):
-                    img_src = img['src']
-                    if img_src.startswith('/'):
-                        img_src = f"https://rotomlabs.net{img_src}"
-                    if '_next/image' in img_src:
-                        url_match = re.search(r'url=([^&]+)', img_src)
-                        if url_match:
-                            img_src = unquote(url_match.group(1))
-                    return img_src
-                    
-        except Exception:
-            continue
+                
+    except Exception as e:
+        print(f"    Error: {e}")
     
     # Fallback: construct direct static URL
     padded_id = str(pokemon_id).zfill(4)
     if form_slug:
-        direct_url = f"https://static.rotomlabs.net/images/official-artwork/{padded_id}-{slug}-{form_slug}.webp"
-        try:
-            head_response = requests.head(direct_url, headers=headers, timeout=5)
-            if head_response.status_code == 200:
-                return direct_url
-        except:
-            pass
+        direct_url = f"https://static.rotomlabs.net/images/official-artwork/{padded_id}-{base_slug}-{form_slug}.webp"
+    else:
+        direct_url = f"https://static.rotomlabs.net/images/official-artwork/{padded_id}-{base_slug}.webp"
     
-    direct_url = f"https://static.rotomlabs.net/images/official-artwork/{padded_id}-{slug}.webp"
     return direct_url
 
 def download_image(url, output_path):
@@ -214,8 +230,14 @@ def main():
         
         print(f"\n[{i+1}/{len(spawns)}] Processing: {name}")
         
-        slug = get_rotomlabs_slug(name)
-        local_filename = f"{pokemon_id}_{slug}.webp"
+        base_slug = get_rotomlabs_base_slug(name)
+        form_slug = get_form_slug(name)
+        
+        if form_slug:
+            local_filename = f"{pokemon_id}_{base_slug}_{form_slug}.webp"
+        else:
+            local_filename = f"{pokemon_id}_{base_slug}.webp"
+        
         local_path = f"images/{local_filename}"
         github_image_url = f"https://raw.githubusercontent.com/Skatecrete/pogo-raid-data/main/images/{local_filename}"
         
