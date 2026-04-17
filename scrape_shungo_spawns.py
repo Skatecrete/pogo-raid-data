@@ -148,75 +148,14 @@ def get_rotomlabs_slug(pokemon_name):
     if clean_name in special_mappings:
         return special_mappings[clean_name]
     
-    # Handle specific form patterns
-    # Overcast form
-    if 'overcast' in clean_name.lower():
-        base = clean_name.lower().replace(' overcast form', '').replace(' overcast', '')
-        return f"{base}-overcast"
-    
-    # Sunshine/Sunny form
-    if 'sunshine' in clean_name.lower() or 'sunny' in clean_name.lower():
-        base = clean_name.lower().replace(' sunshine form', '').replace(' sunny', '').replace(' sunny form', '')
-        return f"{base}-sunshine"
-    
-    # Remove "Form" or "Style" suffix
-    clean_name = re.sub(r'\s+(Form|Forme|Style)$', '', clean_name, flags=re.IGNORECASE)
-    clean_name = re.sub(r'\s+(Form|Forme|Style)\s+', ' ', clean_name, flags=re.IGNORECASE)
-    
-    # Handle special characters
+    clean_name = clean_name.lower()
     clean_name = clean_name.replace("'", "")
-    clean_name = clean_name.replace("♀", "-f").replace("♂", "-m")
-    clean_name = clean_name.replace("é", "e").replace("è", "e").replace("ë", "e")
-    clean_name = clean_name.replace("û", "u").replace("ü", "u")
+    clean_name = clean_name.replace(" ", "-")
+    clean_name = re.sub(r'[^a-z0-9-]', '', clean_name)
+    clean_name = re.sub(r'-+', '-', clean_name)
+    clean_name = clean_name.strip('-')
     
-    # Convert to lowercase and replace spaces with hyphens
-    slug = clean_name.lower().replace(" ", "-")
-    
-    # Remove any non-alphanumeric characters (except hyphens)
-    slug = re.sub(r'[^a-z0-9-]', '', slug)
-    
-    # Remove duplicate hyphens
-    slug = re.sub(r'-+', '-', slug)
-    
-    # Remove leading/trailing hyphens
-    slug = slug.strip('-')
-    
-    return slug
-
-def split_or_name(pokemon_name, pokemon_id, rate, is_shiny):
-    """
-    Split names like 'Cherrim Overcast Form or Cherrim Sunny' into separate entries.
-    Also handles 'Castform Rainy or Castform' etc.
-    """
-    if ' or ' not in pokemon_name:
-        return [{'name': pokemon_name, 'id': pokemon_id, 'rate': rate, 'shiny': is_shiny}]
-    
-    # Split by " or "
-    parts = pokemon_name.split(' or ')
-    result = []
-    
-    for part in parts:
-        part = part.strip()
-        
-        # Clean up common issues
-        # Fix "Castform Rainy or Castform" -> both get proper names
-        if part == 'Castform' and 'Rainy' in pokemon_name:
-            part = 'Castform Normal'
-        elif part == 'Castform' and 'Sunny' in pokemon_name:
-            part = 'Castform Normal'
-        
-        # Fix "Cherrim Overcast Form or Cherrim Sunny" -> "Cherrim Overcast Form" and "Cherrim Sunshine Form"
-        if 'sunny' in part.lower() and 'cherrim' in part.lower():
-            part = 'Cherrim Sunshine Form'
-        
-        result.append({
-            'name': part,
-            'id': pokemon_id,
-            'rate': rate,
-            'shiny': is_shiny
-        })
-    
-    return result
+    return clean_name
 
 def scrape_shungo_spawns():
     print("🚀 Fetching spawns from Shungo API...")
@@ -245,8 +184,8 @@ def scrape_shungo_spawns():
             rate = float(rate_str)
             form_map[pokemon_id][rate] = name
     
-    spawns = []
-    split_count = 0
+    # Temporary dictionary to deduplicate by (pokemon_id, name)
+    unique_spawns = {}
     
     for item in result_array:
         pokemon_id = item[0]
@@ -268,34 +207,36 @@ def scrape_shungo_spawns():
         if not pokemon_name:
             pokemon_name = f"Pokemon #{pokemon_id}"
         
-        # Check if name contains "or" and split if needed
-        if ' or ' in pokemon_name:
-            print(f"  Splitting: {pokemon_name}")
-            split_entries = split_or_name(pokemon_name, pokemon_id, rate, is_shiny)
-            split_count += len(split_entries) - 1
-            
-            for entry in split_entries:
-                slug = get_rotomlabs_slug(entry['name'])
-                local_image_url = f"https://raw.githubusercontent.com/Skatecrete/pogo-raid-data/main/images/{entry['id']}_{slug}.webp"
-                spawns.append({
-                    "id": entry['id'],
-                    "name": entry['name'],
-                    "rate": round(entry['rate'], 2),
-                    "shiny": entry['shiny'],
-                    "image_url": local_image_url
-                })
-                print(f"    Created: {entry['name']}")
-        else:
-            # Normal processing
-            slug = get_rotomlabs_slug(pokemon_name)
-            local_image_url = f"https://raw.githubusercontent.com/Skatecrete/pogo-raid-data/main/images/{pokemon_id}_{slug}.webp"
-            spawns.append({
+        # Create a unique key for this Pokémon + form
+        key = f"{pokemon_id}_{pokemon_name}"
+        
+        # Keep the HIGHEST spawn rate for each unique Pokémon/form
+        if key not in unique_spawns or rate > unique_spawns[key]['rate']:
+            unique_spawns[key] = {
                 "id": pokemon_id,
                 "name": pokemon_name,
-                "rate": round(rate, 2),
-                "shiny": is_shiny,
-                "image_url": local_image_url
-            })
+                "rate": rate,
+                "shiny": is_shiny
+            }
+    
+    # Convert back to list and sort by rate descending
+    spawns = []
+    for item in unique_spawns.values():
+        slug = get_rotomlabs_slug(item['name'])
+        local_image_url = f"https://raw.githubusercontent.com/Skatecrete/pogo-raid-data/main/images/{item['id']}_{slug}.webp"
+        spawns.append({
+            "id": item['id'],
+            "name": item['name'],
+            "rate": round(item['rate'], 2),
+            "shiny": item['shiny'],
+            "image_url": local_image_url
+        })
+    
+    # Sort by spawn rate (highest first)
+    spawns.sort(key=lambda x: x['rate'], reverse=True)
+    
+    # Count how many duplicates were removed
+    duplicates_removed = len(result_array) - len(spawns)
     
     output = {
         "last_updated": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
@@ -307,8 +248,8 @@ def scrape_shungo_spawns():
         json.dump(output, f, indent=2)
     
     print(f"\n💾 Saved to spawns.json")
-    print(f"   Total spawns: {len(spawns)}")
-    print(f"   Split entries: {split_count}")
+    print(f"   Total unique spawns: {len(spawns)}")
+    print(f"   Duplicates removed: {duplicates_removed}")
 
 if __name__ == "__main__":
     scrape_shungo_spawns()
