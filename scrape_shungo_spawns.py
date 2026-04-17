@@ -2,7 +2,6 @@ import requests
 import json
 import re
 from datetime import datetime
-from collections import defaultdict
 
 def get_rotomlabs_slug(pokemon_name):
     """
@@ -160,7 +159,6 @@ def get_rotomlabs_slug(pokemon_name):
 
 def get_form_name(pokemon_name):
     """Extract just the form part for display in duplicate summary"""
-    # Common form indicators
     forms = [
         'Alola', 'Alolan', 'Galarian', 'Hisuian', 'Paldea', 'Paldean',
         'Rainy', 'Sunny', 'Snowy', 'Heat', 'Wash', 'Frost', 'Fan', 'Mow',
@@ -258,21 +256,25 @@ def scrape_shungo_spawns():
                 unique_spawns[key]['shiny'] = is_shiny
     
     # ============================================================
-    # METHOD 5: DETAILED DUPLICATE SUMMARY
+    # DUPLICATE SUMMARY (without defaultdict)
     # ============================================================
     print("\n" + "="*60)
     print("📋 DUPLICATE SUMMARY")
     print("="*60)
     
     if duplicate_log:
-        # Group duplicates by Pokémon name
-        grouped_dupes = defaultdict(list)
+        # Group duplicates by Pokémon name using a regular dictionary
+        grouped_dupes = {}
         for dup in duplicate_log:
-            grouped_dupes[dup['name']].append(dup)
+            name = dup['name']
+            if name not in grouped_dupes:
+                grouped_dupes[name] = []
+            grouped_dupes[name].append(dup)
         
         print(f"\nFound {len(duplicate_log)} duplicate entries for {len(grouped_dupes)} Pokémon:\n")
         
-        for name, dups in sorted(grouped_dupes.items()):
+        for name in sorted(grouped_dupes.keys()):
+            dups = grouped_dupes[name]
             form_type = get_form_name(name)
             print(f"  🔄 {name} [{form_type}]")
             for dup in dups:
