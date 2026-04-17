@@ -21,7 +21,7 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v5
       with:
-        python-version: '3.12'   # USE PYTHON 3.12, NOT 3.x
+        python-version: '3.x'
         
     - name: Install dependencies
       run: |
@@ -31,7 +31,7 @@ jobs:
     - name: Create old files if not exist
       run: |
         if [ ! -f current_raids_old.json ]; then
-          echo '{"last_updated": "", "tier1": [], "tier3": [], "dynamax_tier1": [], "dynamax_tier2": [], "dynamax_tier3": [], "dynamax_tier4": [], "dynamax_tier5": [], "gigantamax": []}' > current_raids_old.json
+          echo '{"last_updated": "", "tier1": [], "tier3": [], "dynamax_tier1": [], "dynamax_tier2": [], "dynamax_tier3": [], "gigantamax": []}' > current_raids_old.json
         fi
         if [ ! -f scrapedduck_old.json ]; then
           echo '[]' > scrapedduck_old.json
@@ -41,7 +41,7 @@ jobs:
       run: |
         cp current_raids.json current_raids_old.json
         
-    - name: Run SnackNap scraper
+    - name: Run scraper
       run: python scrape_snacknap.py
       
     - name: Compare and generate raid changes
