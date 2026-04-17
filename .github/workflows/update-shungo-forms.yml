@@ -1,15 +1,15 @@
-name: update-shungo-forms
+name: update-spawns
 
 on:
   schedule:
-    - cron: '*/30 * * * *'  # Every 30 minutes
-  workflow_dispatch:         # Allow manual trigger
+    - cron: '*/30 * * * *'
+  workflow_dispatch:
 
 permissions:
   contents: write
 
 jobs:
-  update-shungo-forms:
+  update-spawns:
     runs-on: ubuntu-latest
     
     steps:
@@ -19,16 +19,14 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v5
       with:
-        python-version: '3.x'
+        python-version: '3.12'
         
     - name: Install dependencies
       run: |
         pip install requests==2.31.0
-        pip install playwright==1.40.0
-        playwright install chromium
         
-    - name: Run Shungo forms scraper
-      run: python scrape_shungo_forms.py
+    - name: Run Shungo spawns scraper
+      run: python scrape_shungo_spawns.py
       
     - name: Commit and push if changed
       run: |
@@ -37,12 +35,12 @@ jobs:
         
         git pull origin main --rebase || true
         
-        git add shungo_forms.json
+        git add spawns.json
         
         if git diff --staged --quiet; then
-          echo "No changes to shungo_forms.json"
+          echo "No changes to spawns.json"
         else
-          git commit -m "Auto-update Shungo forms - $(date +'%Y-%m-%d %H:%M:%S')"
+          git commit -m "Auto-update spawns - $(date +'%Y-%m-%d %H:%M:%S')"
           git push origin main
           echo "Changes pushed to GitHub"
         fi
