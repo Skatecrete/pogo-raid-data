@@ -1,36 +1,48 @@
-name: update-spawns
+name: update-shungo-forms
 
 on:
   schedule:
     - cron: '*/30 * * * *'  # Every 30 minutes
-  workflow_dispatch:
+  workflow_dispatch:         # Allow manual trigger
+
+permissions:
+  contents: write
 
 jobs:
-  update-spawns:
+  update-shungo-forms:
     runs-on: ubuntu-latest
+    
     steps:
-      - uses: actions/checkout@v4
+    - name: Checkout repository
+      uses: actions/checkout@v4
       
-      - name: Setup Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.x'
-          
-      - name: Install dependencies
-        run: |
-          pip install playwright requests
-          playwright install chromium
-          
-      - name: Run form scraper
-        run: python scrape_shungo_forms.py
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.x'
         
-      - name: Run spawns scraper
-        run: python scrape_shungo_spawns.py
+    - name: Install dependencies
+      run: |
+        pip install requests==2.31.0
+        pip install playwright==1.40.0
+        playwright install chromium
         
-      - name: Commit and push if changed
-        run: |
-          git config user.name "github-actions"
-          git config user.email "github-actions@github.com"
-          git add shungo_forms.json spawns.json
-          git diff --quiet && git diff --staged --quiet || git commit -m "Auto-update spawns $(date +'%Y-%m-%d %H:%M:%S')"
-          git push
+    - name: Run Shungo forms scraper
+      run: python scrape_shungo_forms.py
+      
+    - name: Commit and push if changed
+      run: |
+        git config --global user.name 'github-actions'
+        git config --global user.email 'github-actions@github.com'
+        
+        git pull origin main --rebase || true
+        
+        git add shungo_forms.json
+        
+        if git diff --staged --quiet; then
+          echo "No changes to shungo_forms.json"
+        else
+          git commit -m "Auto-update Shungo forms - $(date +'%Y-%m-%d %H:%M:%S')"
+          git push origin main
+          echo "Changes pushed to GitHub"
+        fi
