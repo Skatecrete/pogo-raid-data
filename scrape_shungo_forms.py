@@ -1,48 +1,81 @@
-name: update-shungo-forms
+import asyncio
+import json
+from playwright.async_api import async_playwright
+from datetime import datetime
 
-on:
-  schedule:
-    - cron: '*/30 * * * *'
-  workflow_dispatch:
-
-permissions:
-  contents: write
-
-jobs:
-  update-shungo-forms:
-    runs-on: ubuntu-latest
+async def scrape_shungo_forms():
+    print("🚀 Launching browser to scrape Shungo forms...")
     
-    steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
-      
-    - name: Set up Python
-      uses: actions/setup-python@v5
-      with:
-        python-version: '3.12'   # ← CHANGE THIS from '3.x' to '3.12'
+    async with async_playwright() as p:
+        browser = await p.chromium.launch(headless=True)
+        page = await browser.new_page()
         
-    - name: Install dependencies
-      run: |
-        pip install requests==2.31.0
-        pip install playwright==1.40.0
-        playwright install chromium
+        print("📄 Loading page...")
+        await page.goto("https://shungo.app/tools/wild")
         
-    - name: Run Shungo forms scraper
-      run: python scrape_shungo_forms.py
-      
-    - name: Commit and push if changed
-      run: |
-        git config --global user.name 'github-actions'
-        git config --global user.email 'github-actions@github.com'
+        # Wait for content to load
+        await page.wait_for_timeout(5000)
         
-        git pull origin main --rebase || true
+        # Scroll to load all Pokémon
+        print("📜 Scrolling to load all Pokémon...")
+        last_height = await page.evaluate('() => document.body.scrollHeight')
         
-        git add shungo_forms.json
+        while True:
+            await page.evaluate('window.scrollTo(0, document.body.scrollHeight)')
+            await page.wait_for_timeout(2000)
+            new_height = await page.evaluate('() => document.body.scrollHeight')
+            if new_height == last_height:
+                break
+            last_height = new_height
         
-        if git diff --staged --quiet; then
-          echo "No changes to shungo_forms.json"
-        else
-          git commit -m "Auto-update Shungo forms - $(date +'%Y-%m-%d %H:%M:%S')"
-          git push origin main
-          echo "Changes pushed to GitHub"
-        fi
+        print("✅ Page fully loaded, extracting data...")
+        
+        # Get the text content
+        text = await page.evaluate('() => document.body.innerText')
+        
+        await browser.close()
+        
+        # Parse the text
+        lines = text.split('\n')
+        form_map = {}
+        
+        i = 0
+        while i < len(lines) - 2:
+            name = lines[i].strip()
+            rate_line = lines[i + 1].strip()
+            id_line = lines[i + 2].strip()
+            
+            if name and rate_line.endswith('%') and id_line.isdigit():
+                rate = float(rate_line.replace('%', ''))
+                pokemon_id = int(id_line)
+                rounded_rate = round(rate, 2)
+                
+                if pokemon_id not in form_map:
+                    form_map[pokemon_id] = {}
+                
+                if rounded_rate in form_map[pokemon_id]:
+                    existing = form_map[pokemon_id][rounded_rate]
+                    if existing != name and name not in existing:
+                        form_map[pokemon_id][rounded_rate] = f"{existing} or {name}"
+                else:
+                    form_map[pokemon_id][rounded_rate] = name
+                
+                i += 3
+            else:
+                i += 1
+        
+        # Save to JSON
+        output = {
+            "last_updated": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+            "form_mappings": form_map
+        }
+        
+        with open('shungo_forms.json', 'w') as f:
+            json.dump(output, f, indent=2)
+        
+        print(f"\n💾 Saved to shungo_forms.json")
+        print(f"Total Pokémon with forms: {len(form_map)}")
+        return form_map
+
+if __name__ == "__main__":
+    asyncio.run(scrape_shungo_forms())
