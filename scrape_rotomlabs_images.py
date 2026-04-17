@@ -7,53 +7,59 @@ from datetime import datetime
 import os
 from urllib.parse import unquote
 
+# ============================================================================
+# 1. HELPER FUNCTIONS FOR SLUG GENERATION (THE FIX IS HERE)
+# ============================================================================
+
 def get_rotomlabs_base_slug(pokemon_name):
-    """Get the base Pokemon slug (without form) for URL like /dex/{base}/{form}"""
+    """Get the base Pokemon slug (e.g., 'darmanitan', 'farfetch-d')."""
     clean_name = re.sub(r'\s+(Form|Forme|Style)$', '', pokemon_name, flags=re.IGNORECASE)
     clean_name = re.sub(r'\s+(Form|Forme|Style)\s+', ' ', clean_name, flags=re.IGNORECASE)
     
-    # Special base name mappings
-    base_mappings = {
+    # 1. MANUAL MAPPINGS FOR SPECIAL NAMES (APPLIED FIRST)
+    special_base_mappings = {
         'Farfetch\'d': 'farfetch-d',
         'Mr. Mime': 'mr-mime',
         'Mime Jr.': 'mime-jr',
         'Sirfetch\'d': 'sirfetchd',
         'Mr. Rime': 'mr-rime',
         'Type: Null': 'type-null',
-        'Porygon-Z': 'porygon-z',
         'Ho-Oh': 'ho-oh',
+        'Porygon-Z': 'porygon-z',
         'Flabébé': 'flabebe',
         'Nidoran♀': 'nidoran-f',
         'Nidoran♂': 'nidoran-m',
-        'Pumpkaboo': 'pumpkaboo',
-        'Gourgeist': 'gourgeist',
-        'Darmanitan': 'darmanitan',
+        'Darmanitan': 'darmanitan',  # Explicitly map base to 'darmanitan'
         'Rapidash': 'rapidash',
         'Pikachu': 'pikachu',
     }
     
-    for name, slug in base_mappings.items():
+    # Check if the cleaned name matches any of the special mappings
+    for name, slug in special_base_mappings.items():
         if clean_name.startswith(name):
             return slug
-    
-    # Remove specific form suffixes
-    form_suffixes = [' Rainy', ' Sunny', ' Snowy', ' Heat', ' Wash', ' Frost', ' Fan', ' Mow',
-                     ' Overcast', ' Sunshine', ' Blue Flower', ' Red Flower', ' Yellow Flower',
-                     ' White Flower', ' Orange Flower', ' Baile Style', ' Pom-Pom Style',
-                     " Pa'u Style", ' Sensu Style', ' Origin', ' Sky', ' Therian', ' Resolute',
-                     ' Pirouette', ' Burn', ' Chill', ' Douse', ' Shock', ' Ash', ' Zen',
-                     ' Crowned', ' Hero', ' Single Strike', ' Rapid Strike', ' Ice Rider',
-                     ' Shadow Rider', ' Midnight', ' Dusk', ' School', ' Busted', ' Dusk Mane',
-                     ' Dawn Wings', ' Ultra', ' Low Key', ' Noice', ' Female', ' Hangry',
-                     ' Blaze Breed', ' Aqua Breed', ' Combat Breed', ' Paldea', ' Alola', ' Alolan',
-                     ' Galarian', ' Hisuian', ' Small', ' Large', ' Super', ' Average',
-                     ' Standard', ' Trash Cloak', ' Plant Cloak', ' Sandy Cloak', ' Tshirt 02']
-    
-    for suffix in form_suffixes:
+
+    # 2. REMOVE FORM SUFFIXES
+    form_suffixes_to_remove = [
+        ' Rainy', ' Sunny', ' Snowy', ' Heat', ' Wash', ' Frost', ' Fan', ' Mow',
+        ' Overcast', ' Sunshine',
+        ' Blue Flower', ' Red Flower', ' Yellow Flower', ' White Flower', ' Orange Flower',
+        ' Baile Style', ' Pom-Pom Style', " Pa'u Style", ' Sensu Style',
+        ' Origin', ' Sky', ' Therian', ' Resolute', ' Pirouette', ' Burn', ' Chill', ' Douse', ' Shock',
+        ' Ash', ' Zen', ' Crowned', ' Hero', ' Single Strike', ' Rapid Strike',
+        ' Ice Rider', ' Shadow Rider', ' Midnight', ' Dusk', ' School', ' Busted',
+        ' Dusk Mane', ' Dawn Wings', ' Ultra', ' Low Key', ' Noice', ' Female', ' Hangry',
+        ' Blaze Breed', ' Aqua Breed', ' Combat Breed', ' Paldea', ' Alola', ' Alolan',
+        ' Galarian', ' Hisuian', ' Small', ' Large', ' Super', ' Average',
+        ' Standard', ' Trash Cloak', ' Plant Cloak', ' Sandy Cloak', ' Tshirt 02',
+        ' Mode'  # <-- ADDED: To handle "Standard Mode"
+    ]
+    for suffix in form_suffixes_to_remove:
         if clean_name.endswith(suffix):
             clean_name = clean_name[:-len(suffix)].strip()
             break
     
+    # 3. FINAL CLEANING FOR URL
     clean_name = clean_name.replace("'", "")
     clean_name = clean_name.replace("♀", "-f").replace("♂", "-m")
     clean_name = clean_name.replace("é", "e").replace("è", "e").replace("ë", "e")
@@ -67,204 +73,77 @@ def get_rotomlabs_base_slug(pokemon_name):
     return slug
 
 def get_form_slug(pokemon_name):
-    """Extract the form slug for the second part of the URL (/dex/{base}/{form})"""
+    """Extract the form slug (e.g., 'alolan', 'standard-mode', 'super-size')."""
     name_lower = pokemon_name.lower()
     
-    form_mappings = {
-        # Castform
-        'rainy': 'rainy',
-        'sunny': 'sunny',
-        'snowy': 'snowy',
-        
-        # Cherrim
-        'overcast': 'overcast',
-        'sunshine': 'sunshine',
-        
-        # Rotom
-        'heat': 'heat',
-        'wash': 'wash',
-        'frost': 'frost',
-        'fan': 'fan',
-        'mow': 'mow',
-        
-        # Giratina
-        'origin': 'origin',
-        
-        # Shaymin
-        'sky': 'sky',
-        
-        # Basculin
-        'blue-striped': 'blue-striped',
-        
-        # Darmanitan
-        'standard': 'standard-mode',
-        'zen': 'zen-mode',
-        
-        # Tornadus/Thundurus/Landorus
-        'therian': 'therian',
-        
-        # Keldeo
-        'resolute': 'resolute',
-        
-        # Meloetta
-        'pirouette': 'pirouette',
-        
-        # Genesect
-        'burn': 'burn',
-        'chill': 'chill',
-        'douse': 'douse',
-        'shock': 'shock',
-        
-        # Greninja
-        'ash': 'ash',
-        
-        # Vivillon
-        'polar': 'polar',
-        'tundra': 'tundra',
-        'continental': 'continental',
-        'garden': 'garden',
-        'elegant': 'elegant',
-        'modern': 'modern',
-        'marine': 'marine',
-        'archipelago': 'archipelago',
-        'high-plains': 'high-plains',
-        'sandstorm': 'sandstorm',
-        'river': 'river',
-        'monsoon': 'monsoon',
-        'savanna': 'savanna',
-        'sun': 'sun',
-        'ocean': 'ocean',
-        'jungle': 'jungle',
-        
-        # Flabébé/Floette
-        'blue flower': 'blue-flower',
-        'red flower': 'red-flower',
-        'yellow flower': 'yellow-flower',
-        'white flower': 'white-flower',
-        'orange flower': 'orange-flower',
-        
-        # Furfrou
-        'heart': 'heart',
-        'star': 'star',
-        'diamond': 'diamond',
-        'debutante': 'debutante',
-        'matron': 'matron',
-        'dandy': 'dandy',
-        'la reine': 'la-reine',
-        'kabuki': 'kabuki',
-        'pharaoh': 'pharaoh',
-        
-        # Aegislash
-        'blade': 'blade',
-        
-        # Pumpkaboo / Gourgeist
-        'small': 'small-size',
-        'average': 'average-size',
-        'large': 'large-size',
-        'super': 'super-size',
-        
-        # Zygarde
-        '10%': '10',
-        'complete': 'complete',
-        
-        # Oricorio
-        'baile style': 'baile-style',
-        'pom-pom style': 'pom-pom-style',
-        "pa'u style": 'pau-style',
-        'sensu style': 'sensu-style',
-        
-        # Lycanroc
-        'midnight': 'midnight',
-        'dusk': 'dusk',
-        
-        # Wishiwashi
-        'school': 'school',
-        
-        # Minior
-        'orange': 'orange',
-        'yellow': 'yellow',
-        'green': 'green',
-        'blue': 'blue',
-        'indigo': 'indigo',
-        'violet': 'violet',
-        
-        # Mimikyu
-        'busted': 'busted',
-        
-        # Necrozma
-        'dusk mane': 'dusk',
-        'dawn wings': 'dawn',
-        
-        # Toxtricity
-        'low key': 'low-key',
-        
-        # Eiscue
-        'noice': 'noice',
-        
-        # Indeedee
-        'female': 'female',
-        
-        # Morpeko
-        'hangry': 'hangry',
-        
-        # Zacian/Zamazenta
-        'crowned': 'crowned',
-        
-        # Urshifu
-        'rapid strike': 'rapid-strike',
-        
-        # Calyrex
-        'ice rider': 'ice',
-        'shadow rider': 'shadow',
-        
-        # Basculegion
-        'female': 'female',
-        
-        # Enamorus
-        'therian': 'therian',
-        
-        # Wooper
-        'paldea': 'paldean',
-        
-        # Tauros Paldean
-        'blaze breed': 'blaze',
-        'aqua breed': 'aqua',
-        'combat breed': 'combat',
-        
-        # Regional forms (Alolan, Galarian, Hisuian)
-        'alola': 'alolan',
-        'alolan': 'alolan',
-        'galarian': 'galarian',
-        'hisuian': 'hisuian',
-        
-        # Burmy forms
-        'plant cloak': 'plant-cloak',
-        'sandy cloak': 'sandy-cloak',
-        'trash cloak': 'trash-cloak',
-        
-        # Pikachu hats (use base form - too many variations)
-        'tshirt 02': None,  # Use base Pikachu
+    # 1. SPECIFIC RULES FROM YOUR FEEDBACK
+    specific_form_mappings = {
+        # Your examples
+        'farfetch\'d': None,  # Base form, no extra slug
+        'graveler alola': 'alolan',
+        'darmanitan standard': 'standard-mode',
+        'darmanitan zen': 'zen-mode',
+        'rapidash galarian': 'galarian',
+        'pumpkaboo super': 'super-size',
+        'pumpkaboo large': 'large-size',
+        'pumpkaboo small': 'small-size',
+        'pumpkaboo average': 'average-size',
+        'oricorio sensu style': 'sensu-style',
+        'oricorio pa\'u style': 'pau-style',
+        'oricorio baile style': 'baile-style',
+        'oricorio pom-pom style': 'pom-pom-style',
+        'burmy trash cloak': 'trash-cloak',
+        'meowth alola': 'alolan',
+        'vulpix alola': 'alolan',
+        'raticate alola': 'alolan',
+        'diglett alola': 'alolan',
+        'persian alola': 'alolan',
+        'muk alola': 'alolan',
+        'sandshrew alola': 'alolan',
+        'dugtrio alola': 'alolan',
+        'geodude alola': 'alolan',
+        'grimer alola': 'alolan',
     }
     
-    for pattern, form in form_mappings.items():
+    for pattern, form in specific_form_mappings.items():
         if pattern in name_lower:
             return form
-    
-    # Special handling for "Alola" variations
+
+    # 2. GENERAL PATTERN FOR "ALOLA/ALOLAN" FORMS (CATCHES EVERYTHING ELSE)
     if 'alola' in name_lower or 'alolan' in name_lower:
         return 'alolan'
+
+    # 3. GENERAL PATTERNS FOR OTHER COMMON FORMS
+    general_form_mappings = {
+        'rainy': 'rainy', 'sunny': 'sunny', 'snowy': 'snowy',
+        'overcast': 'overcast', 'sunshine': 'sunshine',
+        'heat': 'heat', 'wash': 'wash', 'frost': 'frost', 'fan': 'fan', 'mow': 'mow',
+        'origin': 'origin', 'sky': 'sky',
+        'therian': 'therian', 'resolute': 'resolute', 'pirouette': 'pirouette',
+        'ash': 'ash', 'school': 'school', 'busted': 'busted',
+        'dusk': 'dusk', 'dawn': 'dawn', 'low-key': 'low-key', 'noice': 'noice',
+        'female': 'female', 'hangry': 'hangry', 'crowned': 'crowned',
+        'rapid-strike': 'rapid-strike', 'ice': 'ice', 'shadow': 'shadow',
+        'paldean': 'paldean', 'blaze': 'blaze', 'aqua': 'aqua', 'combat': 'combat',
+        'galarian': 'galarian', 'hisuian': 'hisuian',
+        'plant-cloak': 'plant-cloak', 'sandy-cloak': 'sandy-cloak', 'trash-cloak': 'trash-cloak',
+        'small-size': 'small-size', 'average-size': 'average-size', 'large-size': 'large-size', 'super-size': 'super-size',
+        'standard-mode': 'standard-mode', 'zen-mode': 'zen-mode',
+        'baile-style': 'baile-style', 'pom-pom-style': 'pom-pom-style', 'pau-style': 'pau-style', 'sensu-style': 'sensu-style',
+        'blue-flower': 'blue-flower', 'red-flower': 'red-flower', 'yellow-flower': 'yellow-flower',
+        'white-flower': 'white-flower', 'orange-flower': 'orange-flower',
+    }
     
-    # Special handling for Pumpkaboo sizes
-    if 'pumpkaboo small' in name_lower:
-        return 'small-size'
-    if 'pumpkaboo average' in name_lower:
-        return 'average-size'
-    if 'pumpkaboo large' in name_lower:
-        return 'large-size'
-    if 'pumpkaboo super' in name_lower:
-        return 'super-size'
-    
+    for pattern, form in general_form_mappings.items():
+        if pattern in name_lower:
+            return form
+            
     return None
+
+
+# ============================================================================
+# 2. IMAGE SCRAPING AND DOWNLOADING (UNCHANGED LOGIC)
+# ============================================================================
 
 def scrape_rotomlabs_image(pokemon_name, pokemon_id):
     """Scrape RotomLabs page to get the official artwork image URL."""
@@ -274,13 +153,12 @@ def scrape_rotomlabs_image(pokemon_name, pokemon_id):
     # Special case for Pikachu Tshirt - use base Pikachu
     if 'tshirt' in pokemon_name.lower():
         return "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/25.png"
-    
-    # Build URL with slash pattern: /dex/{base}/{form}
+
     if form_slug:
         url = f"https://rotomlabs.net/dex/{base_slug}/{form_slug}"
     else:
         url = f"https://rotomlabs.net/dex/{base_slug}"
-    
+
     headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'}
     
     try:
@@ -289,7 +167,7 @@ def scrape_rotomlabs_image(pokemon_name, pokemon_id):
         
         if response.status_code != 200:
             print(f"    Failed: HTTP {response.status_code}")
-            # Try constructing direct static URL as fallback
+            # Fallback to constructing direct static URL
             padded_id = str(pokemon_id).zfill(4)
             if form_slug:
                 direct_url = f"https://static.rotomlabs.net/images/official-artwork/{padded_id}-{base_slug}-{form_slug}.webp"
@@ -313,7 +191,7 @@ def scrape_rotomlabs_image(pokemon_name, pokemon_id):
             print(f"    Found: {img_src}")
             return img_src
         
-        # Check picture element
+        # Check picture element as fallback
         picture = soup.find('picture')
         if picture:
             img = picture.find('img')
@@ -331,13 +209,12 @@ def scrape_rotomlabs_image(pokemon_name, pokemon_id):
     except Exception as e:
         print(f"    Error: {e}")
     
-    # Fallback: construct direct static URL
+    # Ultimate fallback
     padded_id = str(pokemon_id).zfill(4)
     if form_slug:
         direct_url = f"https://static.rotomlabs.net/images/official-artwork/{padded_id}-{base_slug}-{form_slug}.webp"
     else:
         direct_url = f"https://static.rotomlabs.net/images/official-artwork/{padded_id}-{base_slug}.webp"
-    
     return direct_url
 
 def download_image(url, output_path):
@@ -355,6 +232,11 @@ def download_image(url, output_path):
         return False
     except Exception:
         return False
+
+
+# ============================================================================
+# 3. MAIN SCRIPT EXECUTION
+# ============================================================================
 
 def main():
     print("🚀 Starting RotomLabs Image Scraper...")
