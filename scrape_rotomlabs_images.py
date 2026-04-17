@@ -12,6 +12,30 @@ def get_rotomlabs_base_slug(pokemon_name):
     clean_name = re.sub(r'\s+(Form|Forme|Style)$', '', pokemon_name, flags=re.IGNORECASE)
     clean_name = re.sub(r'\s+(Form|Forme|Style)\s+', ' ', clean_name, flags=re.IGNORECASE)
     
+    # Special base name mappings
+    base_mappings = {
+        'Farfetch\'d': 'farfetch-d',
+        'Mr. Mime': 'mr-mime',
+        'Mime Jr.': 'mime-jr',
+        'Sirfetch\'d': 'sirfetchd',
+        'Mr. Rime': 'mr-rime',
+        'Type: Null': 'type-null',
+        'Porygon-Z': 'porygon-z',
+        'Ho-Oh': 'ho-oh',
+        'Flabébé': 'flabebe',
+        'Nidoran♀': 'nidoran-f',
+        'Nidoran♂': 'nidoran-m',
+        'Pumpkaboo': 'pumpkaboo',
+        'Gourgeist': 'gourgeist',
+        'Darmanitan': 'darmanitan',
+        'Rapidash': 'rapidash',
+        'Pikachu': 'pikachu',
+    }
+    
+    for name, slug in base_mappings.items():
+        if clean_name.startswith(name):
+            return slug
+    
     # Remove specific form suffixes
     form_suffixes = [' Rainy', ' Sunny', ' Snowy', ' Heat', ' Wash', ' Frost', ' Fan', ' Mow',
                      ' Overcast', ' Sunshine', ' Blue Flower', ' Red Flower', ' Yellow Flower',
@@ -21,7 +45,9 @@ def get_rotomlabs_base_slug(pokemon_name):
                      ' Crowned', ' Hero', ' Single Strike', ' Rapid Strike', ' Ice Rider',
                      ' Shadow Rider', ' Midnight', ' Dusk', ' School', ' Busted', ' Dusk Mane',
                      ' Dawn Wings', ' Ultra', ' Low Key', ' Noice', ' Female', ' Hangry',
-                     ' Blaze Breed', ' Aqua Breed', ' Combat Breed', ' Paldea']
+                     ' Blaze Breed', ' Aqua Breed', ' Combat Breed', ' Paldea', ' Alola', ' Alolan',
+                     ' Galarian', ' Hisuian', ' Small', ' Large', ' Super', ' Average',
+                     ' Standard', ' Trash Cloak', ' Plant Cloak', ' Sandy Cloak', ' Tshirt 02']
     
     for suffix in form_suffixes:
         if clean_name.endswith(suffix):
@@ -45,33 +71,79 @@ def get_form_slug(pokemon_name):
     name_lower = pokemon_name.lower()
     
     form_mappings = {
+        # Castform
         'rainy': 'rainy',
         'sunny': 'sunny',
         'snowy': 'snowy',
+        
+        # Cherrim
         'overcast': 'overcast',
         'sunshine': 'sunshine',
+        
+        # Rotom
         'heat': 'heat',
         'wash': 'wash',
         'frost': 'frost',
         'fan': 'fan',
         'mow': 'mow',
+        
+        # Giratina
         'origin': 'origin',
+        
+        # Shaymin
         'sky': 'sky',
+        
+        # Basculin
         'blue-striped': 'blue-striped',
-        'zen': 'zen',
+        
+        # Darmanitan
+        'standard': 'standard-mode',
+        'zen': 'zen-mode',
+        
+        # Tornadus/Thundurus/Landorus
         'therian': 'therian',
+        
+        # Keldeo
         'resolute': 'resolute',
+        
+        # Meloetta
         'pirouette': 'pirouette',
+        
+        # Genesect
         'burn': 'burn',
         'chill': 'chill',
         'douse': 'douse',
         'shock': 'shock',
+        
+        # Greninja
         'ash': 'ash',
+        
+        # Vivillon
+        'polar': 'polar',
+        'tundra': 'tundra',
+        'continental': 'continental',
+        'garden': 'garden',
+        'elegant': 'elegant',
+        'modern': 'modern',
+        'marine': 'marine',
+        'archipelago': 'archipelago',
+        'high-plains': 'high-plains',
+        'sandstorm': 'sandstorm',
+        'river': 'river',
+        'monsoon': 'monsoon',
+        'savanna': 'savanna',
+        'sun': 'sun',
+        'ocean': 'ocean',
+        'jungle': 'jungle',
+        
+        # Flabébé/Floette
         'blue flower': 'blue-flower',
         'red flower': 'red-flower',
         'yellow flower': 'yellow-flower',
         'white flower': 'white-flower',
         'orange flower': 'orange-flower',
+        
+        # Furfrou
         'heart': 'heart',
         'star': 'star',
         'diamond': 'diamond',
@@ -81,39 +153,116 @@ def get_form_slug(pokemon_name):
         'la reine': 'la-reine',
         'kabuki': 'kabuki',
         'pharaoh': 'pharaoh',
+        
+        # Aegislash
         'blade': 'blade',
-        'average': 'average',
-        'large': 'large',
-        'super': 'super',
+        
+        # Pumpkaboo / Gourgeist
+        'small': 'small-size',
+        'average': 'average-size',
+        'large': 'large-size',
+        'super': 'super-size',
+        
+        # Zygarde
         '10%': '10',
         'complete': 'complete',
-        'baile': 'baile',
-        'pom-pom': 'pompom',
-        'pau': 'pau',
-        'sensu': 'sensu',
+        
+        # Oricorio
+        'baile style': 'baile-style',
+        'pom-pom style': 'pom-pom-style',
+        "pa'u style": 'pau-style',
+        'sensu style': 'sensu-style',
+        
+        # Lycanroc
         'midnight': 'midnight',
         'dusk': 'dusk',
+        
+        # Wishiwashi
         'school': 'school',
+        
+        # Minior
+        'orange': 'orange',
+        'yellow': 'yellow',
+        'green': 'green',
+        'blue': 'blue',
+        'indigo': 'indigo',
+        'violet': 'violet',
+        
+        # Mimikyu
         'busted': 'busted',
+        
+        # Necrozma
         'dusk mane': 'dusk',
         'dawn wings': 'dawn',
+        
+        # Toxtricity
         'low key': 'low-key',
+        
+        # Eiscue
         'noice': 'noice',
+        
+        # Indeedee
         'female': 'female',
+        
+        # Morpeko
         'hangry': 'hangry',
+        
+        # Zacian/Zamazenta
         'crowned': 'crowned',
+        
+        # Urshifu
         'rapid strike': 'rapid-strike',
+        
+        # Calyrex
         'ice rider': 'ice',
         'shadow rider': 'shadow',
-        'paldea': 'paldea',
+        
+        # Basculegion
+        'female': 'female',
+        
+        # Enamorus
+        'therian': 'therian',
+        
+        # Wooper
+        'paldea': 'paldean',
+        
+        # Tauros Paldean
         'blaze breed': 'blaze',
         'aqua breed': 'aqua',
         'combat breed': 'combat',
+        
+        # Regional forms (Alolan, Galarian, Hisuian)
+        'alola': 'alolan',
+        'alolan': 'alolan',
+        'galarian': 'galarian',
+        'hisuian': 'hisuian',
+        
+        # Burmy forms
+        'plant cloak': 'plant-cloak',
+        'sandy cloak': 'sandy-cloak',
+        'trash cloak': 'trash-cloak',
+        
+        # Pikachu hats (use base form - too many variations)
+        'tshirt 02': None,  # Use base Pikachu
     }
     
     for pattern, form in form_mappings.items():
         if pattern in name_lower:
             return form
+    
+    # Special handling for "Alola" variations
+    if 'alola' in name_lower or 'alolan' in name_lower:
+        return 'alolan'
+    
+    # Special handling for Pumpkaboo sizes
+    if 'pumpkaboo small' in name_lower:
+        return 'small-size'
+    if 'pumpkaboo average' in name_lower:
+        return 'average-size'
+    if 'pumpkaboo large' in name_lower:
+        return 'large-size'
+    if 'pumpkaboo super' in name_lower:
+        return 'super-size'
     
     return None
 
@@ -121,6 +270,10 @@ def scrape_rotomlabs_image(pokemon_name, pokemon_id):
     """Scrape RotomLabs page to get the official artwork image URL."""
     base_slug = get_rotomlabs_base_slug(pokemon_name)
     form_slug = get_form_slug(pokemon_name)
+    
+    # Special case for Pikachu Tshirt - use base Pikachu
+    if 'tshirt' in pokemon_name.lower():
+        return "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/25.png"
     
     # Build URL with slash pattern: /dex/{base}/{form}
     if form_slug:
@@ -238,6 +391,8 @@ def main():
         else:
             local_filename = f"{pokemon_id}_{base_slug}.webp"
         
+        # Clean filename
+        local_filename = re.sub(r'[^a-z0-9_-]', '', local_filename.lower())
         local_path = f"images/{local_filename}"
         github_image_url = f"https://raw.githubusercontent.com/Skatecrete/pogo-raid-data/main/images/{local_filename}"
         
