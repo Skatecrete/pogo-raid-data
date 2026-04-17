@@ -99,7 +99,7 @@ def main():
             if removed:
                 changes.append(f"  ❌ Removed: {', '.join(sorted(removed))}")
     
-    # Check ScrapedDuck changes
+    # Check ScrapedDuck changes (5-Star, Mega, Shadow)
     if scrapedduck_added or scrapedduck_removed:
         added_by_tier = {}
         for key in scrapedduck_added:
@@ -116,6 +116,8 @@ def main():
                     display_tier = '🌑 Shadow'
             elif 'Mega' in tier:
                 display_tier = '🔴 Mega'
+            elif '5-Star' in tier:
+                display_tier = '⭐⭐⭐⭐⭐ 5-Star Raids'
             else:
                 display_tier = tier
             
@@ -138,6 +140,8 @@ def main():
                     display_tier = '🌑 Shadow'
             elif 'Mega' in tier:
                 display_tier = '🔴 Mega'
+            elif '5-Star' in tier:
+                display_tier = '⭐⭐⭐⭐⭐ 5-Star Raids'
             else:
                 display_tier = tier
             
@@ -162,6 +166,16 @@ def main():
         else:
             f.write("No changes detected")
             print("changes=false")
+    
+    # IMPORTANT: Save the ScrapedDuck raids to a separate file for the Android app to use
+    # Or merge them into current_raids.json
+    merged_raids = new_snacknap.copy()
+    merged_raids['scrapedduck_raids'] = current_scrapedduck
+    merged_raids['last_updated'] = new_snacknap.get('last_updated', datetime.now().strftime("%Y-%m-%d"))
+    
+    with open('current_raids.json', 'w') as f:
+        json.dump(merged_raids, f, indent=2)
 
 if __name__ == "__main__":
+    from datetime import datetime
     main()
