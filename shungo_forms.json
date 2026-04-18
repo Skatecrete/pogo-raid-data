@@ -1,358 +1,322 @@
 {
-  "last_updated": "2026-04-18 18:41:22",
+  "last_updated": "2026-04-18 19:36:58",
   "form_mappings": {
     "742": {
-      "3.05": "Cutiefly"
+      "3.12": "Cutiefly"
     },
     "829": {
-      "2.89": "Gossifleur"
+      "2.95": "Gossifleur"
     },
     "273": {
-      "2.56": "Seedot"
+      "2.55": "Seedot"
     },
     "688": {
-      "2.19": "Binacle"
+      "2.24": "Binacle"
     },
     "590": {
-      "2.0": "Foongus"
+      "2.01": "Foongus"
     },
     "351": {
-      "1.99": "Castform Rainy",
+      "1.92": "Castform Rainy",
       "1.58": "Castform",
-      "0.27": "Castform Sunny"
+      "0.28": "Castform Sunny"
     },
     "948": {
-      "0.94": "Toedscool"
-    },
-    "631": {
-      "0.32": "Heatmor"
+      "0.98": "Toedscool"
     },
     "506": {
-      "0.32": "Lillipup"
-    },
-    "540": {
-      "0.32": "Sewaddle"
-    },
-    "335": {
-      "0.32": "Zangoose"
-    },
-    "261": {
-      "0.31": "Poochyena"
-    },
-    "915": {
-      "0.31": "Lechonk"
-    },
-    "338": {
-      "0.31": "Solrock"
+      "0.33": "Lillipup"
     },
     "543": {
-      "0.31": "Venipede"
+      "0.32": "Venipede"
     },
-    "16": {
-      "0.3": "Pidgey"
+    "338": {
+      "0.32": "Solrock"
     },
-    "538": {
-      "0.3": "Throh"
+    "177": {
+      "0.32": "Natu"
     },
-    "511": {
-      "0.3": "Pansage"
+    "43": {
+      "0.31": "Oddish"
     },
-    "313": {
-      "0.3": "Volbeat"
+    "631": {
+      "0.31": "Heatmor"
     },
-    "60": {
-      "0.3": "Poliwag"
+    "335": {
+      "0.31": "Zangoose"
     },
-    "725": {
-      "0.3": "Litten"
-    },
-    "960": {
-      "0.3": "Wiglett"
+    "540": {
+      "0.31": "Sewaddle"
     },
     "10": {
-      "0.3": "Caterpie"
+      "0.31": "Caterpie"
+    },
+    "81": {
+      "0.3": "Magnemite"
+    },
+    "32": {
+      "0.3": "Nidoran\u2642"
     },
     "682": {
       "0.3": "Spritzee"
     },
-    "29": {
-      "0.29": "Nidoran\u2640"
+    "813": {
+      "0.3": "Scorbunny"
     },
-    "909": {
-      "0.29": "Fuecoco"
-    },
-    "661": {
-      "0.29": "Fletchling"
-    },
-    "539": {
-      "0.29": "Sawk"
+    "821": {
+      "0.3": "Rookidee"
     },
     "632": {
-      "0.29": "Durant"
+      "0.3": "Durant"
     },
-    "177": {
-      "0.29": "Natu"
+    "16": {
+      "0.3": "Pidgey"
     },
-    "831": {
-      "0.29": "Wooloo"
+    "427": {
+      "0.29": "Buneary"
+    },
+    "515": {
+      "0.29": "Panpour"
     },
     "322": {
       "0.29": "Numel"
     },
-    "265": {
-      "0.29": "Wurmple"
+    "539": {
+      "0.29": "Sawk"
     },
-    "43": {
-      "0.29": "Oddish"
+    "333": {
+      "0.29": "Swablu"
     },
-    "819": {
-      "0.28": "Skwovet"
+    "434": {
+      "0.29": "Stunky"
     },
-    "1": {
-      "0.28": "Bulbasaur"
+    "915": {
+      "0.29": "Lechonk"
+    },
+    "313": {
+      "0.29": "Volbeat"
+    },
+    "431": {
+      "0.29": "Glameow"
+    },
+    "511": {
+      "0.29": "Pansage"
+    },
+    "960": {
+      "0.29": "Wiglett"
     },
     "535": {
-      "0.28": "Tympole"
+      "0.29": "Tympole"
     },
-    "309": {
-      "0.28": "Electrike"
+    "835": {
+      "0.29": "Yamper"
     },
-    "21": {
-      "0.28": "Spearow"
+    "928": {
+      "0.29": "Smoliv"
     },
-    "427": {
-      "0.28": "Buneary"
+    "261": {
+      "0.29": "Poochyena"
     },
-    "111": {
-      "0.28": "Rhyhorn"
-    },
-    "515": {
-      "0.28": "Panpour"
-    },
-    "399": {
-      "0.28": "Bidoof"
-    },
-    "35": {
-      "0.28": "Clefairy"
-    },
-    "155": {
-      "0.28": "Cyndaquil"
-    },
-    "165": {
-      "0.28": "Ledyba"
-    },
-    "736": {
-      "0.28": "Grubbin"
-    },
-    "69": {
-      "0.28": "Bellsprout"
-    },
-    "761": {
-      "0.28": "Bounsweet"
-    },
-    "13": {
-      "0.28": "Weedle"
-    },
-    "498": {
-      "0.28": "Tepig"
-    },
-    "337": {
-      "0.28": "Lunatone"
-    },
-    "276": {
-      "0.28": "Taillow"
+    "296": {
+      "0.29": "Makuhita"
     },
     "759": {
-      "0.28": "Stufful"
+      "0.29": "Stufful"
     },
-    "4": {
-      "0.28": "Charmander"
-    },
-    "906": {
-      "0.28": "Sprigatito"
+    "13": {
+      "0.29": "Weedle"
     },
     "128": {
       "0.28": "Tauros"
     },
-    "46": {
-      "0.28": "Paras"
+    "495": {
+      "0.28": "Snivy"
     },
-    "813": {
-      "0.28": "Scorbunny"
+    "111": {
+      "0.28": "Rhyhorn"
     },
-    "193": {
-      "0.28": "Yanma"
+    "283": {
+      "0.28": "Surskit"
+    },
+    "316": {
+      "0.28": "Gulpin"
+    },
+    "29": {
+      "0.28": "Nidoran\u2640"
+    },
+    "684": {
+      "0.28": "Swirlix"
+    },
+    "574": {
+      "0.28": "Gothita"
+    },
+    "265": {
+      "0.28": "Wurmple"
+    },
+    "769": {
+      "0.28": "Sandygast"
+    },
+    "501": {
+      "0.28": "Oshawott"
+    },
+    "519": {
+      "0.28": "Pidove"
+    },
+    "23": {
+      "0.28": "Ekans"
+    },
+    "919": {
+      "0.28": "Nymble"
+    },
+    "66": {
+      "0.28": "Machop"
+    },
+    "336": {
+      "0.28": "Seviper"
+    },
+    "60": {
+      "0.28": "Poliwag"
+    },
+    "909": {
+      "0.28": "Fuecoco"
     },
     "200": {
       "0.28": "Misdreavus"
     },
-    "54": {
-      "0.28": "Psyduck"
+    "538": {
+      "0.28": "Throh"
     },
-    "667": {
-      "0.28": "Litleo"
+    "355": {
+      "0.28": "Duskull"
     },
-    "821": {
-      "0.28": "Rookidee"
+    "102": {
+      "0.28": "Exeggcute"
     },
-    "32": {
-      "0.28": "Nidoran\u2642"
+    "39": {
+      "0.28": "Jigglypuff"
     },
-    "509": {
-      "0.28": "Purrloin"
+    "35": {
+      "0.28": "Clefairy"
     },
-    "133": {
-      "0.28": "Eevee"
-    },
-    "333": {
-      "0.27": "Swablu"
+    "921": {
+      "0.28": "Pawmi"
     },
     "529": {
-      "0.27": "Drilbur"
+      "0.28": "Drilbur"
     },
-    "459": {
-      "0.27": "Snover"
+    "228": {
+      "0.28": "Houndour"
+    },
+    "152": {
+      "0.28": "Chikorita"
+    },
+    "736": {
+      "0.28": "Grubbin"
+    },
+    "46": {
+      "0.27": "Paras"
+    },
+    "276": {
+      "0.27": "Taillow"
+    },
+    "69": {
+      "0.27": "Bellsprout"
+    },
+    "21": {
+      "0.27": "Spearow"
     },
     "522": {
       "0.27": "Blitzle"
     },
-    "572": {
-      "0.27": "Minccino"
+    "831": {
+      "0.27": "Wooloo"
     },
-    "434": {
-      "0.27": "Stunky"
-    },
-    "919": {
-      "0.27": "Nymble"
-    },
-    "921": {
-      "0.27": "Pawmi"
-    },
-    "495": {
-      "0.27": "Snivy"
-    },
-    "39": {
-      "0.27": "Jigglypuff"
-    },
-    "63": {
-      "0.27": "Abra"
-    },
-    "659": {
-      "0.27": "Bunnelby"
-    },
-    "314": {
-      "0.27": "Illumise"
-    },
-    "431": {
-      "0.27": "Glameow"
-    },
-    "81": {
-      "0.27": "Magnemite"
-    },
-    "209": {
-      "0.27": "Snubbull"
-    },
-    "316": {
-      "0.27": "Gulpin"
-    },
-    "835": {
-      "0.27": "Yamper"
-    },
-    "66": {
-      "0.27": "Machop"
-    },
-    "519": {
-      "0.27": "Pidove"
-    },
-    "296": {
-      "0.27": "Makuhita"
-    },
-    "102": {
-      "0.27": "Exeggcute"
-    },
-    "48": {
-      "0.27": "Venonat"
-    },
-    "56": {
-      "0.27": "Mankey"
-    },
-    "96": {
-      "0.27": "Drowzee"
-    },
-    "336": {
-      "0.27": "Seviper"
-    },
-    "504": {
-      "0.27": "Patrat"
-    },
-    "179": {
-      "0.27": "Mareep"
+    "133": {
+      "0.27": "Eevee"
     },
     "731": {
       "0.27": "Pikipek"
     },
-    "501": {
-      "0.27": "Oshawott"
+    "309": {
+      "0.27": "Electrike"
     },
-    "574": {
-      "0.26": "Gothita"
+    "325": {
+      "0.27": "Spoink"
     },
-    "769": {
-      "0.26": "Sandygast"
+    "7": {
+      "0.27": "Squirtle"
     },
-    "114": {
-      "0.26": "Tangela"
+    "198": {
+      "0.27": "Murkrow"
     },
-    "283": {
-      "0.26": "Surskit"
+    "498": {
+      "0.27": "Tepig"
     },
-    "559": {
-      "0.26": "Scraggy"
+    "179": {
+      "0.27": "Mareep"
     },
-    "557": {
-      "0.26": "Dwebble"
+    "661": {
+      "0.27": "Fletchling"
     },
-    "684": {
-      "0.26": "Swirlix"
-    },
-    "393": {
-      "0.26": "Piplup"
+    "312": {
+      "0.27": "Minun"
     },
     "616": {
-      "0.26": "Shelmet"
+      "0.27": "Shelmet"
+    },
+    "557": {
+      "0.27": "Dwebble"
+    },
+    "587": {
+      "0.27": "Emolga"
+    },
+    "337": {
+      "0.27": "Lunatone"
+    },
+    "725": {
+      "0.27": "Litten"
+    },
+    "595": {
+      "0.27": "Joltik"
+    },
+    "56": {
+      "0.27": "Mankey"
+    },
+    "906": {
+      "0.27": "Sprigatito"
+    },
+    "843": {
+      "0.27": "Silicobra"
+    },
+    "54": {
+      "0.27": "Psyduck"
+    },
+    "84": {
+      "0.27": "Doduo"
+    },
+    "399": {
+      "0.27": "Bidoof"
+    },
+    "572": {
+      "0.27": "Minccino"
+    },
+    "546": {
+      "0.26": "Cottonee"
     },
     "396": {
       "0.26": "Starly"
     },
-    "415": {
-      "0.26": "Combee"
+    "193": {
+      "0.26": "Yanma"
     },
-    "187": {
-      "0.26": "Hoppip"
+    "509": {
+      "0.26": "Purrloin"
     },
-    "104": {
-      "0.26": "Cubone"
+    "694": {
+      "0.26": "Helioptile"
     },
-    "587": {
-      "0.26": "Emolga"
-    },
-    "307": {
-      "0.26": "Meditite"
-    },
-    "627": {
-      "0.26": "Rufflet"
-    },
-    "123": {
-      "0.26": "Scyther"
-    },
-    "198": {
-      "0.26": "Murkrow"
-    },
-    "228": {
-      "0.26": "Houndour"
-    },
-    "152": {
-      "0.26": "Chikorita"
+    "456": {
+      "0.26": "Finneon"
     },
     "548": {
       "0.26": "Petilil"
@@ -360,951 +324,1044 @@
     "387": {
       "0.26": "Turtwig"
     },
-    "325": {
-      "0.26": "Spoink"
+    "504": {
+      "0.26": "Patrat"
     },
-    "206": {
-      "0.26": "Dunsparce"
+    "582": {
+      "0.26": "Vanillite"
     },
-    "694": {
-      "0.26": "Helioptile"
+    "96": {
+      "0.26": "Drowzee"
     },
-    "92": {
-      "0.26": "Gastly"
+    "63": {
+      "0.26": "Abra"
     },
-    "185": {
-      "0.26": "Sudowoodo"
+    "755": {
+      "0.26": "Morelull"
     },
-    "315": {
-      "0.26": "Roselia"
-    },
-    "517": {
-      "0.26": "Munna"
-    },
-    "7": {
-      "0.26": "Squirtle"
+    "122": {
+      "0.26": "Mr. Mime"
     },
     "912": {
       "0.26": "Quaxly"
     },
-    "456": {
-      "0.26": "Finneon"
-    },
-    "856": {
-      "0.26": "Hatenna"
-    },
-    "23": {
-      "0.26": "Ekans"
-    },
-    "84": {
-      "0.26": "Doduo"
-    },
     "252": {
       "0.26": "Treecko"
     },
-    "607": {
-      "0.26": "Litwick"
+    "667": {
+      "0.26": "Litleo"
     },
-    "425": {
-      "0.26": "Drifloon"
+    "280": {
+      "0.26": "Ralts"
     },
-    "827": {
-      "0.26": "Nickit"
+    "143": {
+      "0.26": "Snorlax"
     },
-    "588": {
-      "0.26": "Karrablast"
+    "513": {
+      "0.26": "Pansear"
     },
-    "285": {
-      "0.26": "Shroomish"
+    "517": {
+      "0.26": "Munna"
     },
-    "767": {
-      "0.26": "Wimpod"
+    "315": {
+      "0.26": "Roselia"
     },
-    "255": {
-      "0.26": "Torchic"
+    "524": {
+      "0.26": "Roggenrola"
     },
-    "231": {
-      "0.26": "Phanpy"
+    "459": {
+      "0.26": "Snover"
     },
-    "568": {
-      "0.26": "Trubbish"
+    "92": {
+      "0.26": "Gastly"
+    },
+    "401": {
+      "0.26": "Kricketot"
     },
     "278": {
       "0.26": "Wingull"
     },
-    "816": {
-      "0.26": "Sobble"
-    },
-    "355": {
-      "0.26": "Duskull"
-    },
-    "928": {
-      "0.26": "Smoliv"
-    },
-    "755": {
-      "0.25": "Morelull"
-    },
-    "109": {
-      "0.25": "Koffing"
-    },
-    "312": {
-      "0.25": "Minun"
-    },
-    "418": {
-      "0.25": "Buizel"
-    },
-    "122": {
-      "0.25": "Mr. Mime"
-    },
-    "126": {
-      "0.25": "Magmar"
-    },
     "353": {
-      "0.25": "Shuppet"
+      "0.26": "Shuppet"
     },
-    "234": {
-      "0.25": "Stantler"
+    "107": {
+      "0.26": "Hitmonchan"
     },
-    "513": {
-      "0.25": "Pansear"
+    "83": {
+      "0.26": "Farfetch'd",
+      "0.03": "Farfetch'd Galarian"
+    },
+    "314": {
+      "0.26": "Illumise"
+    },
+    "819": {
+      "0.26": "Skwovet"
+    },
+    "187": {
+      "0.26": "Hoppip"
+    },
+    "761": {
+      "0.26": "Bounsweet"
     },
     "311": {
-      "0.25": "Plusle"
+      "0.26": "Plusle"
     },
-    "451": {
-      "0.25": "Skorupi"
-    },
-    "161": {
-      "0.25": "Sentret"
-    },
-    "158": {
-      "0.25": "Totodile"
-    },
-    "25": {
-      "0.25": "Pikachu",
-      "0.01": "Pikachu Tshirt 02"
-    },
-    "227": {
-      "0.25": "Skarmory"
-    },
-    "524": {
-      "0.25": "Roggenrola"
-    },
-    "293": {
-      "0.25": "Whismur"
-    },
-    "619": {
-      "0.25": "Mienfoo"
-    },
-    "124": {
-      "0.25": "Jynx"
-    },
-    "527": {
-      "0.25": "Woobat"
-    },
-    "926": {
-      "0.25": "Fidough"
+    "104": {
+      "0.26": "Cubone"
     },
     "127": {
       "0.25": "Pinsir"
     },
-    "258": {
-      "0.25": "Mudkip"
+    "300": {
+      "0.25": "Skitty"
     },
-    "843": {
-      "0.25": "Silicobra"
-    },
-    "810": {
-      "0.25": "Grookey"
-    },
-    "582": {
-      "0.25": "Vanillite"
-    },
-    "401": {
-      "0.25": "Kricketot"
-    },
-    "751": {
-      "0.25": "Dewpider"
-    },
-    "971": {
-      "0.25": "Greavard"
-    },
-    "777": {
-      "0.25": "Togedemaru"
-    },
-    "702": {
-      "0.25": "Dedenne"
-    },
-    "129": {
-      "0.25": "Magikarp"
-    },
-    "546": {
-      "0.25": "Cottonee"
-    },
-    "453": {
-      "0.25": "Croagunk"
-    },
-    "83": {
-      "0.25": "Farfetch'd",
-      "0.03": "Farfetch'd Galarian"
-    },
-    "106": {
-      "0.25": "Hitmonlee"
-    },
-    "850": {
-      "0.25": "Sizzlipede"
-    },
-    "410": {
-      "0.25": "Shieldon"
-    },
-    "241": {
-      "0.25": "Miltank"
-    },
-    "237": {
-      "0.25": "Hitmontop"
-    },
-    "203": {
-      "0.25": "Girafarig"
-    },
-    "183": {
-      "0.25": "Marill"
+    "218": {
+      "0.25": "Slugma"
     },
     "108": {
       "0.25": "Lickitung"
     },
+    "692": {
+      "0.25": "Clauncher"
+    },
+    "926": {
+      "0.25": "Fidough"
+    },
+    "155": {
+      "0.25": "Cyndaquil"
+    },
+    "225": {
+      "0.25": "Delibird"
+    },
+    "627": {
+      "0.25": "Rufflet"
+    },
+    "850": {
+      "0.25": "Sizzlipede"
+    },
+    "163": {
+      "0.25": "Hoothoot"
+    },
+    "856": {
+      "0.25": "Hatenna"
+    },
+    "1": {
+      "0.25": "Bulbasaur"
+    },
+    "810": {
+      "0.25": "Grookey"
+    },
+    "418": {
+      "0.25": "Buizel"
+    },
+    "597": {
+      "0.25": "Ferroseed"
+    },
+    "420": {
+      "0.25": "Cherubi"
+    },
+    "129": {
+      "0.25": "Magikarp"
+    },
+    "223": {
+      "0.25": "Remoraid"
+    },
+    "588": {
+      "0.25": "Karrablast"
+    },
+    "106": {
+      "0.25": "Hitmonlee"
+    },
+    "4": {
+      "0.25": "Charmander"
+    },
+    "436": {
+      "0.25": "Bronzor"
+    },
+    "659": {
+      "0.25": "Bunnelby"
+    },
+    "213": {
+      "0.25": "Shuckle"
+    },
+    "415": {
+      "0.25": "Combee"
+    },
+    "299": {
+      "0.25": "Nosepass"
+    },
     "722": {
       "0.25": "Rowlet"
     },
-    "449": {
-      "0.24": "Hippopotas"
-    },
-    "107": {
-      "0.24": "Hitmonchan"
-    },
     "580": {
-      "0.24": "Ducklett"
-    },
-    "436": {
-      "0.24": "Bronzor"
-    },
-    "163": {
-      "0.24": "Hoothoot"
-    },
-    "390": {
-      "0.24": "Chimchar"
-    },
-    "299": {
-      "0.24": "Nosepass"
-    },
-    "938": {
-      "0.24": "Tadbulb"
-    },
-    "41": {
-      "0.24": "Zubat"
-    },
-    "734": {
-      "0.24": "Yungoos"
-    },
-    "118": {
-      "0.24": "Goldeen"
-    },
-    "218": {
-      "0.24": "Slugma"
-    },
-    "287": {
-      "0.24": "Slakoth"
+      "0.25": "Ducklett"
     },
     "125": {
-      "0.24": "Electabuzz"
-    },
-    "216": {
-      "0.24": "Teddiursa"
+      "0.25": "Electabuzz"
     },
     "318": {
-      "0.24": "Carvanha"
+      "0.25": "Carvanha"
     },
-    "585": {
-      "0.24": "Deerling Spring Form"
-    },
-    "610": {
-      "0.24": "Axew"
-    },
-    "597": {
-      "0.24": "Ferroseed"
-    },
-    "602": {
-      "0.24": "Tynamo"
-    },
-    "339": {
-      "0.24": "Barboach"
+    "285": {
+      "0.25": "Shroomish"
     },
     "358": {
-      "0.24": "Chimecho"
+      "0.25": "Chimecho"
     },
-    "222": {
-      "0.24": "Corsola"
+    "258": {
+      "0.25": "Mudkip"
     },
-    "300": {
-      "0.24": "Skitty"
+    "971": {
+      "0.25": "Greavard"
     },
-    "554": {
-      "0.24": "Darumaka"
+    "25": {
+      "0.25": "Pikachu",
+      "0.02": "Pikachu Tshirt 02"
     },
-    "280": {
-      "0.24": "Ralts"
+    "165": {
+      "0.25": "Ledyba"
     },
-    "420": {
-      "0.24": "Cherubi"
+    "206": {
+      "0.25": "Dunsparce"
     },
-    "304": {
-      "0.24": "Aron"
+    "123": {
+      "0.25": "Scyther"
+    },
+    "209": {
+      "0.25": "Snubbull"
+    },
+    "425": {
+      "0.25": "Drifloon"
+    },
+    "241": {
+      "0.25": "Miltank"
+    },
+    "255": {
+      "0.25": "Torchic"
+    },
+    "672": {
+      "0.25": "Skiddo"
+    },
+    "109": {
+      "0.24": "Koffing"
     },
     "917": {
       "0.24": "Tarountula"
     },
-    "595": {
-      "0.24": "Joltik"
+    "734": {
+      "0.24": "Yungoos"
     },
-    "213": {
-      "0.24": "Shuckle"
+    "339": {
+      "0.24": "Barboach"
     },
-    "303": {
-      "0.23": "Mawile"
+    "185": {
+      "0.24": "Sudowoodo"
     },
-    "27": {
-      "0.23": "Sandshrew",
-      "0.01": "Sandshrew Alola"
+    "390": {
+      "0.24": "Chimchar"
     },
-    "142": {
-      "0.23": "Aerodactyl"
+    "183": {
+      "0.24": "Marill"
+    },
+    "293": {
+      "0.24": "Whismur"
+    },
+    "938": {
+      "0.24": "Tadbulb"
+    },
+    "237": {
+      "0.24": "Hitmontop"
     },
     "176": {
-      "0.23": "Togetic"
+      "0.24": "Togetic"
     },
-    "242": {
-      "0.23": "Blissey"
+    "137": {
+      "0.24": "Porygon"
+    },
+    "568": {
+      "0.24": "Trubbish"
+    },
+    "619": {
+      "0.24": "Mienfoo"
+    },
+    "767": {
+      "0.24": "Wimpod"
+    },
+    "216": {
+      "0.24": "Teddiursa"
+    },
+    "408": {
+      "0.24": "Cranidos"
+    },
+    "203": {
+      "0.24": "Girafarig"
+    },
+    "531": {
+      "0.24": "Audino"
+    },
+    "451": {
+      "0.24": "Skorupi"
+    },
+    "126": {
+      "0.24": "Magmar"
+    },
+    "343": {
+      "0.24": "Baltoy"
+    },
+    "827": {
+      "0.24": "Nickit"
+    },
+    "702": {
+      "0.24": "Dedenne"
+    },
+    "607": {
+      "0.24": "Litwick"
+    },
+    "48": {
+      "0.24": "Venonat"
+    },
+    "222": {
+      "0.24": "Corsola"
+    },
+    "161": {
+      "0.24": "Sentret"
+    },
+    "118": {
+      "0.24": "Goldeen"
+    },
+    "585": {
+      "0.24": "Deerling Spring Form"
+    },
+    "287": {
+      "0.24": "Slakoth"
+    },
+    "27": {
+      "0.24": "Sandshrew",
+      "0.02": "Sandshrew Alola"
+    },
+    "527": {
+      "0.24": "Woobat"
+    },
+    "816": {
+      "0.24": "Sobble"
+    },
+    "191": {
+      "0.24": "Sunkern"
+    },
+    "124": {
+      "0.24": "Jynx"
+    },
+    "676": {
+      "0.24": "Furfrou Natural"
+    },
+    "559": {
+      "0.24": "Scraggy"
+    },
+    "41": {
+      "0.24": "Zubat"
+    },
+    "307": {
+      "0.24": "Meditite"
+    },
+    "777": {
+      "0.24": "Togedemaru"
+    },
+    "304": {
+      "0.24": "Aron"
+    },
+    "751": {
+      "0.23": "Dewpider"
+    },
+    "234": {
+      "0.23": "Stantler"
+    },
+    "602": {
+      "0.23": "Tynamo"
     },
     "626": {
       "0.23": "Bouffalant"
     },
-    "605": {
-      "0.23": "Elgyem"
+    "453": {
+      "0.23": "Croagunk"
+    },
+    "696": {
+      "0.23": "Tyrunt"
+    },
+    "113": {
+      "0.23": "Chansey"
+    },
+    "410": {
+      "0.23": "Shieldon"
+    },
+    "302": {
+      "0.23": "Sableye"
+    },
+    "393": {
+      "0.23": "Piplup"
+    },
+    "231": {
+      "0.23": "Phanpy"
+    },
+    "227": {
+      "0.23": "Skarmory"
+    },
+    "142": {
+      "0.23": "Aerodactyl"
+    },
+    "775": {
+      "0.23": "Komala"
+    },
+    "114": {
+      "0.23": "Tangela"
+    },
+    "554": {
+      "0.23": "Darumaka",
+      "0.01": "Darumaka Galarian"
+    },
+    "242": {
+      "0.23": "Blissey"
+    },
+    "366": {
+      "0.23": "Clamperl"
     },
     "686": {
       "0.23": "Inkay"
     },
-    "191": {
-      "0.23": "Sunkern"
+    "449": {
+      "0.23": "Hippopotas"
     },
-    "143": {
-      "0.23": "Snorlax"
+    "158": {
+      "0.22": "Totodile"
     },
     "622": {
-      "0.23": "Golett"
+      "0.22": "Golett"
     },
-    "95": {
-      "0.23": "Onix"
-    },
-    "672": {
-      "0.23": "Skiddo"
-    },
-    "531": {
-      "0.23": "Audino"
-    },
-    "408": {
-      "0.23": "Cranidos"
-    },
-    "343": {
-      "0.23": "Baltoy"
-    },
-    "676": {
-      "0.23": "Furfrou Natural"
-    },
-    "225": {
-      "0.23": "Delibird"
-    },
-    "366": {
-      "0.22": "Clamperl"
-    },
-    "692": {
-      "0.22": "Clauncher"
-    },
-    "696": {
-      "0.22": "Tyrunt"
-    },
-    "113": {
-      "0.22": "Chansey"
-    },
-    "223": {
-      "0.22": "Remoraid"
-    },
-    "422": {
-      "0.22": "Shellos East Sea",
-      "0.15": "Shellos West Sea"
-    },
-    "775": {
-      "0.22": "Komala"
+    "441": {
+      "0.22": "Chatot"
     },
     "58": {
       "0.22": "Growlithe",
-      "0.06": "Growlithe Hisuian"
+      "0.05": "Growlithe Hisuian"
+    },
+    "605": {
+      "0.22": "Elgyem"
+    },
+    "202": {
+      "0.22": "Wobbuffet"
     },
     "556": {
-      "0.21": "Maractus"
+      "0.22": "Maractus"
+    },
+    "610": {
+      "0.22": "Axew"
+    },
+    "422": {
+      "0.21": "Shellos East Sea",
+      "0.15": "Shellos West Sea"
     },
     "50": {
       "0.21": "Diglett",
-      "0.05": "Diglett Alola"
+      "0.06": "Diglett Alola"
     },
-    "202": {
-      "0.21": "Wobbuffet"
+    "712": {
+      "0.2": "Bergmite"
     },
-    "302": {
-      "0.21": "Sableye"
-    },
-    "137": {
-      "0.21": "Porygon"
-    },
-    "270": {
-      "0.2": "Lotad"
+    "204": {
+      "0.2": "Pineco"
     },
     "714": {
       "0.2": "Noibat"
     },
-    "140": {
-      "0.19": "Kabuto"
+    "303": {
+      "0.2": "Mawile"
     },
-    "79": {
-      "0.19": "Slowpoke",
-      "0.06": "Slowpoke Galarian"
-    },
-    "712": {
-      "0.19": "Bergmite"
-    },
-    "441": {
-      "0.19": "Chatot"
-    },
-    "214": {
-      "0.19": "Heracross"
+    "703": {
+      "0.19": "Carbink"
     },
     "707": {
       "0.19": "Klefki"
     },
-    "19": {
-      "0.18": "Rattata Alola",
-      "0.15": "Rattata"
+    "100": {
+      "0.19": "Voltorb",
+      "0.06": "Voltorb Hisuian"
     },
-    "541": {
-      "0.18": "Swadloon"
-    },
-    "703": {
-      "0.18": "Carbink"
+    "270": {
+      "0.19": "Lotad"
     },
     "194": {
-      "0.18": "Wooper Paldea",
-      "0.07": "Wooper"
+      "0.19": "Wooper Paldea",
+      "0.08": "Wooper"
+    },
+    "79": {
+      "0.18": "Slowpoke",
+      "0.07": "Slowpoke Galarian"
+    },
+    "214": {
+      "0.18": "Heracross"
+    },
+    "874": {
+      "0.18": "Stonjourner"
+    },
+    "95": {
+      "0.18": "Onix"
+    },
+    "19": {
+      "0.18": "Rattata Alola",
+      "0.13": "Rattata"
+    },
+    "37": {
+      "0.17": "Vulpix",
+      "0.1": "Vulpix Alola"
+    },
+    "741": {
+      "0.17": "Oricorio Sensu Style",
+      "0.13": "Oricorio Pom-Pom Style",
+      "0.04": "Oricorio Baile Style"
+    },
+    "74": {
+      "0.17": "Geodude Alola",
+      "0.11": "Geodude"
+    },
+    "618": {
+      "0.17": "Stunfisk",
+      "0.09": "Stunfisk Galarian"
+    },
+    "814": {
+      "0.17": "Raboot"
+    },
+    "140": {
+      "0.17": "Kabuto"
+    },
+    "77": {
+      "0.17": "Ponyta",
+      "0.08": "Ponyta Galarian"
     },
     "132": {
       "0.17": "Ditto",
       "0.05": "Ditto",
       "0.01": "Ditto"
     },
-    "74": {
-      "0.17": "Geodude Alola",
-      "0.1": "Geodude"
-    },
-    "100": {
-      "0.17": "Voltorb",
-      "0.07": "Voltorb Hisuian"
-    },
-    "77": {
-      "0.17": "Ponyta",
-      "0.1": "Ponyta Galarian"
-    },
-    "747": {
-      "0.17": "Mareanie"
-    },
-    "204": {
-      "0.17": "Pineco"
-    },
-    "207": {
-      "0.16": "Gligar"
-    },
-    "814": {
-      "0.16": "Raboot"
-    },
-    "710": {
-      "0.16": "Pumpkaboo Super",
-      "0.1": "Pumpkaboo Small",
-      "0.08": "Pumpkaboo Average",
-      "0.06": "Pumpkaboo Large"
+    "88": {
+      "0.17": "Grimer",
+      "0.1": "Grimer Alola"
     },
     "263": {
       "0.16": "Zigzagoon Galarian",
       "0.12": "Zigzagoon"
     },
-    "455": {
-      "0.16": "Carnivine"
+    "207": {
+      "0.16": "Gligar"
     },
-    "88": {
-      "0.15": "Grimer",
-      "0.11": "Grimer Alola"
+    "747": {
+      "0.16": "Mareanie"
     },
-    "779": {
-      "0.15": "Bruxish"
-    },
-    "618": {
-      "0.15": "Stunfisk",
-      "0.09": "Stunfisk Galarian"
-    },
-    "37": {
-      "0.15": "Vulpix",
-      "0.1": "Vulpix Alola"
-    },
-    "874": {
-      "0.15": "Stonjourner"
-    },
-    "662": {
-      "0.15": "Fletchinder"
+    "541": {
+      "0.16": "Swadloon"
     },
     "544": {
-      "0.15": "Whirlipede"
+      "0.16": "Whirlipede"
+    },
+    "536": {
+      "0.15": "Palpitoad"
     },
     "417": {
-      "0.14": "Pachirisu"
+      "0.15": "Pachirisu"
     },
-    "562": {
-      "0.14": "Yamask",
-      "0.1": "Yamask Galarian"
+    "190": {
+      "0.15": "Aipom"
     },
-    "741": {
-      "0.14": "Oricorio Sensu Style",
-      "0.13": "Oricorio Pom-Pom Style",
-      "0.04": "Oricorio Baile Style"
+    "910": {
+      "0.14": "Crocalor"
+    },
+    "662": {
+      "0.14": "Fletchinder"
     },
     "507": {
       "0.14": "Herdier"
     },
-    "536": {
-      "0.14": "Palpitoad"
-    },
     "973": {
-      "0.14": "Flamigo"
+      "0.13": "Flamigo"
     },
-    "190": {
-      "0.14": "Aipom"
+    "779": {
+      "0.13": "Bruxish"
     },
-    "17": {
-      "0.13": "Pidgeotto"
+    "24": {
+      "0.13": "Arbok"
+    },
+    "669": {
+      "0.13": "Flab\u00e9b\u00e9 Blue Flower",
+      "0.09": "Flab\u00e9b\u00e9 Yellow Flower",
+      "0.05": "Flab\u00e9b\u00e9 White Flower",
+      "0.04": "Flab\u00e9b\u00e9 Orange Flower",
+      "0.03": "Flab\u00e9b\u00e9 Red Flower"
     },
     "98": {
       "0.13": "Krabby"
     },
-    "910": {
-      "0.13": "Crocalor"
+    "370": {
+      "0.13": "Luvdisc"
+    },
+    "455": {
+      "0.13": "Carnivine"
+    },
+    "562": {
+      "0.13": "Yamask Galarian"
+    },
+    "726": {
+      "0.12": "Torracat"
+    },
+    "400": {
+      "0.12": "Bibarel"
+    },
+    "766": {
+      "0.12": "Passimian"
     },
     "765": {
-      "0.13": "Oranguru"
+      "0.12": "Oranguru"
+    },
+    "359": {
+      "0.12": "Absol"
     },
     "90": {
       "0.12": "Shellder"
-    },
-    "120": {
-      "0.12": "Staryu"
     },
     "423": {
       "0.12": "Gastrodon East Sea",
       "0.09": "Gastrodon West Sea"
     },
-    "726": {
-      "0.12": "Torracat"
-    },
-    "370": {
-      "0.12": "Luvdisc"
-    },
     "324": {
       "0.12": "Torkoal"
     },
-    "24": {
-      "0.12": "Arbok"
+    "52": {
+      "0.12": "Meowth",
+      "0.1": "Meowth Alola",
+      "0.07": "Meowth Galarian"
     },
-    "359": {
-      "0.12": "Absol"
+    "710": {
+      "0.12": "Pumpkaboo Super",
+      "0.1": "Pumpkaboo Small",
+      "0.09": "Pumpkaboo Average",
+      "0.06": "Pumpkaboo Large"
     },
     "916": {
-      "0.12": "Oinkologne",
-      "0.1": "Oinkologne Female"
+      "0.11": "Oinkologne Female",
+      "0.09": "Oinkologne"
     },
-    "766": {
-      "0.11": "Passimian"
+    "17": {
+      "0.11": "Pidgeotto"
     },
-    "907": {
-      "0.11": "Floragato"
+    "120": {
+      "0.11": "Staryu"
     },
-    "52": {
-      "0.11": "Meowth or Meowth Galarian",
-      "0.08": "Meowth Alola"
-    },
-    "496": {
-      "0.11": "Servine"
-    },
-    "669": {
-      "0.11": "Flab\u00e9b\u00e9 Blue Flower",
-      "0.1": "Flab\u00e9b\u00e9 Yellow Flower",
-      "0.04": "Flab\u00e9b\u00e9 Red Flower or Flab\u00e9b\u00e9 White Flower or Flab\u00e9b\u00e9 Orange Flower"
+    "499": {
+      "0.11": "Pignite"
     },
     "11": {
       "0.11": "Metapod"
     },
-    "732": {
-      "0.1": "Trumbeak"
+    "670": {
+      "0.11": "Floette Blue Flower",
+      "0.08": "Floette Yellow Flower",
+      "0.03": "Floette Red Flower"
+    },
+    "5": {
+      "0.1": "Charmeleon"
     },
     "156": {
       "0.1": "Quilava"
     },
-    "14": {
-      "0.1": "Kakuna"
-    },
-    "400": {
-      "0.1": "Bibarel"
-    },
-    "502": {
-      "0.1": "Dewott"
+    "22": {
+      "0.1": "Fearow"
     },
     "226": {
       "0.1": "Mantine"
     },
-    "670": {
-      "0.1": "Floette Blue Flower",
-      "0.09": "Floette Yellow Flower",
-      "0.03": "Floette Red Flower"
+    "502": {
+      "0.1": "Dewott"
     },
-    "188": {
-      "0.1": "Skiploom"
+    "907": {
+      "0.1": "Floragato"
     },
-    "723": {
-      "0.1": "Dartrix"
+    "732": {
+      "0.1": "Trumbeak"
     },
-    "22": {
-      "0.1": "Fearow"
+    "14": {
+      "0.09": "Kakuna"
+    },
+    "40": {
+      "0.09": "Wigglytuff"
     },
     "20": {
       "0.09": "Raticate",
-      "0.07": "Raticate Alola"
+      "0.06": "Raticate Alola"
     },
-    "575": {
-      "0.09": "Gothorita"
+    "2": {
+      "0.09": "Ivysaur"
+    },
+    "167": {
+      "0.09": "Spinarak"
+    },
+    "496": {
+      "0.09": "Servine"
+    },
+    "723": {
+      "0.09": "Dartrix"
+    },
+    "262": {
+      "0.09": "Mightyena"
+    },
+    "822": {
+      "0.09": "Corvisquire"
     },
     "520": {
       "0.09": "Tranquill"
     },
-    "5": {
-      "0.09": "Charmeleon"
+    "188": {
+      "0.09": "Skiploom"
     },
-    "660": {
-      "0.08": "Diggersby"
-    },
-    "153": {
-      "0.08": "Bayleef"
-    },
-    "499": {
-      "0.08": "Pignite"
-    },
-    "8": {
-      "0.08": "Wartortle"
-    },
-    "363": {
-      "0.08": "Spheal"
-    },
-    "40": {
-      "0.08": "Wigglytuff"
+    "575": {
+      "0.08": "Gothorita"
     },
     "922": {
       "0.08": "Pawmo"
     },
-    "264": {
-      "0.08": "Linoone Galarian",
-      "0.04": "Linoone"
+    "832": {
+      "0.08": "Dubwool"
     },
-    "167": {
-      "0.08": "Spinarak"
+    "8": {
+      "0.07": "Wartortle"
     },
-    "262": {
-      "0.08": "Mightyena"
+    "363": {
+      "0.07": "Spheal"
     },
-    "822": {
-      "0.08": "Corvisquire"
+    "448": {
+      "0.07": "Lucario"
     },
-    "764": {
-      "0.07": "Comfey"
+    "103": {
+      "0.07": "Exeggutor"
     },
-    "2": {
-      "0.07": "Ivysaur"
-    },
-    "169": {
-      "0.07": "Crobat"
+    "153": {
+      "0.07": "Bayleef"
     },
     "820": {
       "0.07": "Greedent"
     },
-    "832": {
-      "0.07": "Dubwool"
+    "764": {
+      "0.06": "Comfey"
     },
-    "728": {
-      "0.06": "Popplio"
-    },
-    "432": {
-      "0.06": "Purugly"
-    },
-    "412": {
-      "0.06": "Burmy Sandy Cloak or Burmy Plant Cloak",
-      "0.04": "Burmy Trash Cloak"
-    },
-    "505": {
-      "0.06": "Watchog"
-    },
-    "388": {
-      "0.06": "Grotle"
-    },
-    "131": {
-      "0.06": "Lapras"
-    },
-    "885": {
-      "0.06": "Dreepy"
-    },
-    "448": {
-      "0.06": "Lucario"
-    },
-    "178": {
-      "0.06": "Xatu"
-    },
-    "277": {
-      "0.06": "Swellow"
+    "743": {
+      "0.06": "Ribombee"
     },
     "397": {
       "0.06": "Staravia"
     },
-    "103": {
-      "0.06": "Exeggutor"
-    },
-    "426": {
-      "0.05": "Drifblim"
-    },
-    "30": {
-      "0.05": "Nidorina"
-    },
-    "753": {
-      "0.05": "Fomantis"
-    },
     "836": {
-      "0.05": "Boltund"
+      "0.06": "Boltund"
     },
-    "828": {
-      "0.05": "Thievul"
+    "169": {
+      "0.06": "Crobat"
     },
-    "817": {
-      "0.05": "Drizzile"
-    },
-    "369": {
-      "0.05": "Relicanth"
-    },
-    "85": {
-      "0.05": "Dodrio"
-    },
-    "86": {
-      "0.05": "Seel"
+    "264": {
+      "0.06": "Linoone Galarian",
+      "0.04": "Linoone"
     },
     "428": {
-      "0.05": "Lopunny"
+      "0.06": "Lopunny"
     },
-    "608": {
-      "0.05": "Lampent"
+    "412": {
+      "0.06": "Burmy Sandy Cloak or Burmy Trash Cloak",
+      "0.04": "Burmy Plant Cloak"
     },
-    "323": {
-      "0.05": "Camerupt"
+    "86": {
+      "0.06": "Seel"
+    },
+    "660": {
+      "0.06": "Diggersby"
+    },
+    "432": {
+      "0.06": "Purugly"
+    },
+    "388": {
+      "0.06": "Grotle"
+    },
+    "178": {
+      "0.06": "Xatu"
+    },
+    "505": {
+      "0.06": "Watchog"
+    },
+    "728": {
+      "0.05": "Popplio"
+    },
+    "28": {
+      "0.05": "Sandslash"
+    },
+    "131": {
+      "0.05": "Lapras"
     },
     "26": {
       "0.05": "Raichu"
     },
-    "743": {
-      "0.05": "Ribombee"
+    "913": {
+      "0.05": "Quaxwell"
     },
-    "28": {
-      "0.05": "Sandslash",
-      "0.01": "Sandslash Alola"
+    "753": {
+      "0.05": "Fomantis"
     },
-    "279": {
-      "0.04": "Pelipper"
-    },
-    "33": {
-      "0.04": "Nidorino"
-    },
-    "391": {
-      "0.04": "Monferno"
-    },
-    "89": {
-      "0.04": "Muk Alola"
+    "284": {
+      "0.05": "Masquerain"
     },
     "53": {
-      "0.04": "Persian Alola",
-      "0.02": "Persian"
+      "0.05": "Persian Alola",
+      "0.04": "Persian"
     },
-    "698": {
-      "0.04": "Amaura"
+    "426": {
+      "0.05": "Drifblim"
     },
-    "356": {
-      "0.04": "Dusclops"
+    "828": {
+      "0.05": "Thievul"
     },
-    "596": {
-      "0.04": "Galvantula"
+    "608": {
+      "0.05": "Lampent"
     },
-    "613": {
-      "0.04": "Cubchoo"
+    "277": {
+      "0.05": "Swellow"
+    },
+    "85": {
+      "0.04": "Dodrio"
+    },
+    "281": {
+      "0.04": "Kirlia"
+    },
+    "75": {
+      "0.04": "Graveler Alola",
+      "0.03": "Graveler"
     },
     "690": {
       "0.04": "Skrelp"
     },
-    "357": {
-      "0.04": "Tropius"
+    "323": {
+      "0.04": "Camerupt"
     },
-    "317": {
-      "0.04": "Swalot"
+    "596": {
+      "0.04": "Galvantula"
+    },
+    "89": {
+      "0.04": "Muk",
+      "0.03": "Muk Alola"
+    },
+    "170": {
+      "0.04": "Chinchou"
+    },
+    "369": {
+      "0.04": "Relicanth"
     },
     "97": {
       "0.04": "Hypno"
     },
-    "284": {
-      "0.04": "Masquerain"
+    "885": {
+      "0.04": "Dreepy"
     },
-    "215": {
-      "0.04": "Sneasel Hisuian",
-      "0.02": "Sneasel"
+    "592": {
+      "0.04": "Frillish Female"
     },
-    "93": {
-      "0.04": "Haunter"
+    "33": {
+      "0.04": "Nidorino"
     },
-    "811": {
-      "0.04": "Thwackey"
-    },
-    "830": {
-      "0.04": "Eldegoss"
-    },
-    "105": {
-      "0.04": "Marowak"
-    },
-    "331": {
-      "0.04": "Cacnea"
-    },
-    "253": {
-      "0.03": "Grovyle"
+    "30": {
+      "0.04": "Nidorina"
     },
     "510": {
-      "0.03": "Liepard"
+      "0.04": "Liepard"
     },
-    "857": {
-      "0.03": "Hattrem"
+    "782": {
+      "0.04": "Jangmo-o"
     },
-    "310": {
-      "0.03": "Manectric"
+    "115": {
+      "0.04": "Kangaskhan"
     },
-    "274": {
-      "0.03": "Nuzleaf"
+    "613": {
+      "0.04": "Cubchoo"
     },
-    "563": {
-      "0.03": "Cofagrigus"
+    "817": {
+      "0.04": "Drizzile"
     },
-    "210": {
-      "0.03": "Granbull"
+    "215": {
+      "0.03": "Sneasel Hisuian",
+      "0.02": "Sneasel"
     },
-    "75": {
-      "0.03": "Graveler or Graveler Alola"
+    "67": {
+      "0.03": "Machoke"
+    },
+    "279": {
+      "0.03": "Pelipper"
+    },
+    "93": {
+      "0.03": "Haunter"
     },
     "72": {
       "0.03": "Tentacool"
     },
-    "101": {
-      "0.03": "Electrode",
-      "0.01": "Electrode Hisuian"
-    },
-    "115": {
-      "0.03": "Kangaskhan"
-    },
-    "110": {
-      "0.03": "Weezing"
+    "857": {
+      "0.03": "Hattrem"
     },
     "927": {
       "0.03": "Dachsbun"
     },
-    "38": {
-      "0.03": "Ninetales",
-      "0.02": "Ninetales Alola"
-    },
-    "913": {
-      "0.03": "Quaxwell"
-    },
-    "371": {
-      "0.03": "Bagon"
-    },
-    "341": {
-      "0.03": "Corphish"
-    },
-    "354": {
-      "0.03": "Banette"
-    },
-    "220": {
-      "0.03": "Swinub"
-    },
-    "294": {
-      "0.03": "Loudred"
+    "162": {
+      "0.03": "Furret"
     },
     "180": {
       "0.03": "Flaaffy"
+    },
+    "530": {
+      "0.03": "Excadrill"
+    },
+    "110": {
+      "0.03": "Weezing"
+    },
+    "566": {
+      "0.03": "Archen"
+    },
+    "698": {
+      "0.03": "Amaura"
     },
     "59": {
       "0.03": "Arcanine",
       "0.01": "Arcanine Hisuian"
     },
+    "830": {
+      "0.03": "Eldegoss"
+    },
+    "811": {
+      "0.03": "Thwackey"
+    },
     "112": {
       "0.03": "Rhydon"
     },
-    "782": {
-      "0.03": "Jangmo-o"
+    "443": {
+      "0.03": "Gible"
     },
-    "281": {
-      "0.03": "Kirlia"
+    "357": {
+      "0.03": "Tropius"
     },
-    "67": {
-      "0.03": "Machoke"
+    "391": {
+      "0.03": "Monferno"
     },
-    "530": {
-      "0.03": "Excadrill"
+    "317": {
+      "0.03": "Swalot"
     },
-    "929": {
-      "0.03": "Dolliv"
+    "105": {
+      "0.03": "Marowak"
     },
-    "170": {
-      "0.03": "Chinchou"
+    "159": {
+      "0.03": "Croconaw"
+    },
+    "274": {
+      "0.03": "Nuzleaf"
+    },
+    "64": {
+      "0.03": "Kadabra"
+    },
+    "253": {
+      "0.03": "Grovyle"
+    },
+    "294": {
+      "0.03": "Loudred"
+    },
+    "259": {
+      "0.03": "Marshtomp"
+    },
+    "220": {
+      "0.03": "Swinub"
+    },
+    "356": {
+      "0.03": "Dusclops"
+    },
+    "500": {
+      "0.02": "Emboar"
+    },
+    "286": {
+      "0.02": "Breloom"
+    },
+    "347": {
+      "0.02": "Anorith"
     },
     "288": {
       "0.02": "Vigoroth"
     },
+    "708": {
+      "0.02": "Phantump"
+    },
+    "12": {
+      "0.02": "Butterfree"
+    },
+    "735": {
+      "0.02": "Gumshoos"
+    },
+    "256": {
+      "0.02": "Combusken"
+    },
+    "341": {
+      "0.02": "Corphish"
+    },
+    "402": {
+      "0.02": "Kricketune"
+    },
+    "166": {
+      "0.02": "Ledian"
+    },
+    "394": {
+      "0.02": "Prinplup"
+    },
+    "929": {
+      "0.02": "Dolliv"
+    },
+    "331": {
+      "0.02": "Cacnea"
+    },
+    "421": {
+      "0.02": "Cherrim Overcast Form",
+      "0.01": "Cherrim Sunny"
+    },
+    "290": {
+      "0.02": "Nincada"
+    },
+    "210": {
+      "0.02": "Granbull"
+    },
     "972": {
       "0.02": "Houndstone"
     },
-    "211": {
-      "0.02": "Qwilfish"
+    "371": {
+      "0.02": "Bagon"
     },
-    "911": {
-      "0.02": "Skeledirge"
+    "354": {
+      "0.02": "Banette"
     },
-    "452": {
-      "0.02": "Drapion"
+    "328": {
+      "0.02": "Trapinch"
     },
-    "594": {
-      "0.02": "Alomomola"
+    "663": {
+      "0.02": "Talonflame"
     },
-    "232": {
-      "0.02": "Donphan"
+    "586": {
+      "0.02": "Sawsbuck Spring Form"
+    },
+    "555": {
+      "0.02": "Darmanitan Standard"
+    },
+    "673": {
+      "0.02": "Gogoat"
+    },
+    "266": {
+      "0.02": "Silcoon"
+    },
+    "563": {
+      "0.02": "Cofagrigus"
+    },
+    "310": {
+      "0.02": "Manectric"
     },
     "558": {
       "0.02": "Crustle"
@@ -1312,307 +1369,41 @@
     "737": {
       "0.02": "Charjabug"
     },
-    "82": {
-      "0.02": "Magneton"
-    },
-    "457": {
-      "0.02": "Lumineon"
-    },
-    "592": {
-      "0.02": "Frillish Female",
-      "0.01": "Frillish"
-    },
-    "815": {
-      "0.02": "Cinderace"
-    },
-    "340": {
-      "0.02": "Whiscash"
-    },
-    "560": {
-      "0.02": "Scrafty"
+    "246": {
+      "0.02": "Larvitar"
     },
     "419": {
       "0.02": "Floatzel"
     },
-    "566": {
-      "0.02": "Archen"
-    },
-    "555": {
-      "0.02": "Darmanitan Standard"
-    },
     "116": {
       "0.02": "Horsea"
     },
-    "443": {
-      "0.02": "Gible"
+    "38": {
+      "0.02": "Ninetales or Ninetales Alola"
     },
-    "402": {
-      "0.02": "Kricketune"
+    "308": {
+      "0.02": "Medicham"
     },
-    "162": {
-      "0.02": "Furret"
-    },
-    "328": {
-      "0.02": "Trapinch"
-    },
-    "6": {
-      "0.02": "Charizard"
-    },
-    "51": {
-      "0.02": "Dugtrio",
-      "0.01": "Dugtrio Alola"
-    },
-    "500": {
-      "0.02": "Emboar"
-    },
-    "561": {
-      "0.02": "Sigilyph"
-    },
-    "663": {
-      "0.02": "Talonflame"
-    },
-    "319": {
-      "0.02": "Sharpedo"
-    },
-    "581": {
-      "0.02": "Swanna"
-    },
-    "286": {
-      "0.02": "Breloom"
-    },
-    "290": {
-      "0.02": "Nincada"
-    },
-    "259": {
-      "0.02": "Marshtomp"
+    "560": {
+      "0.02": "Scrafty"
     },
     "525": {
       "0.02": "Boldore"
     },
-    "15": {
-      "0.02": "Beedrill"
+    "6": {
+      "0.02": "Charizard"
     },
-    "586": {
-      "0.02": "Sawsbuck Spring Form"
+    "211": {
+      "0.02": "Qwilfish"
     },
-    "708": {
-      "0.02": "Phantump"
+    "82": {
+      "0.02": "Magneton"
     },
-    "64": {
-      "0.02": "Kadabra"
+    "101": {
+      "0.02": "Electrode"
     },
-    "159": {
-      "0.02": "Croconaw"
-    },
-    "246": {
-      "0.02": "Larvitar"
-    },
-    "219": {
-      "0.02": "Magcargo"
-    },
-    "70": {
-      "0.02": "Weepinbell"
-    },
-    "256": {
-      "0.02": "Combusken"
-    },
-    "611": {
-      "0.01": "Fraxure"
-    },
-    "326": {
-      "0.01": "Grumpig"
-    },
-    "164": {
-      "0.01": "Noctowl"
-    },
-    "80": {
-      "0.01": "Slowbro"
-    },
-    "482": {
-      "0.01": "Azelf"
-    },
-    "31": {
-      "0.01": "Nidoqueen"
-    },
-    "704": {
-      "0.01": "Goomy"
-    },
-    "633": {
-      "0.01": "Deino"
-    },
-    "508": {
-      "0.01": "Stoutland"
-    },
-    "42": {
-      "0.01": "Golbat"
-    },
-    "344": {
-      "0.01": "Claydol"
-    },
-    "980": {
-      "0.01": "Clodsire"
-    },
-    "266": {
-      "0.01": "Silcoon"
-    },
-    "229": {
-      "0.01": "Houndoom"
-    },
-    "184": {
-      "0.01": "Azumarill"
-    },
-    "603": {
-      "0.01": "Eelektrik"
-    },
-    "521": {
-      "0.01": "Unfezant"
-    },
-    "301": {
-      "0.01": "Delcatty"
-    },
-    "727": {
-      "0.01": "Incineroar"
-    },
-    "450": {
-      "0.01": "Hippowdon"
-    },
-    "374": {
-      "0.01": "Beldum"
-    },
-    "18": {
-      "0.01": "Pidgeot"
-    },
-    "914": {
-      "0.01": "Quaquaval"
-    },
-    "454": {
-      "0.01": "Toxicroak"
-    },
-    "939": {
-      "0.01": "Bellibolt"
-    },
-    "154": {
-      "0.01": "Meganium"
-    },
-    "620": {
-      "0.01": "Mienshao"
-    },
-    "673": {
-      "0.01": "Gogoat"
-    },
-    "908": {
-      "0.01": "Meowscarada"
-    },
-    "45": {
-      "0.01": "Vileplume"
-    },
-    "851": {
-      "0.01": "Centiskorch"
-    },
-    "949": {
-      "0.01": "Toedscruel"
-    },
-    "308": {
-      "0.01": "Medicham"
-    },
-    "345": {
-      "0.01": "Lileep"
-    },
-    "78": {
-      "0.01": "Rapidash Galarian"
-    },
-    "437": {
-      "0.01": "Bronzong"
-    },
-    "523": {
-      "0.01": "Zebstrika"
-    },
-    "693": {
-      "0.01": "Clawitzer"
-    },
-    "606": {
-      "0.01": "Beheeyem"
-    },
-    "320": {
-      "0.01": "Wailmer"
-    },
-    "542": {
-      "0.01": "Leavanny"
-    },
-    "36": {
-      "0.01": "Clefable"
-    },
-    "537": {
-      "0.01": "Seismitoad"
-    },
-    "147": {
-      "0.01": "Dratini"
-    },
-    "166": {
-      "0.01": "Ledian"
-    },
-    "34": {
-      "0.01": "Nidoking"
-    },
-    "157": {
-      "0.01": "Typhlosion"
-    },
-    "305": {
-      "0.01": "Lairon"
-    },
-    "12": {
-      "0.01": "Butterfree"
-    },
-    "421": {
-      "0.01": "Cherrim Overcast Form"
-    },
-    "564": {
-      "0.01": "Tirtouga"
-    },
-    "735": {
-      "0.01": "Gumshoos"
-    },
-    "497": {
-      "0.01": "Serperior"
-    },
-    "823": {
-      "0.01": "Corviknight"
-    },
-    "347": {
-      "0.01": "Anorith"
-    },
-    "61": {
-      "0.01": "Poliwhirl"
-    },
-    "9": {
-      "0.01": "Blastoise"
-    },
-    "394": {
-      "0.01": "Prinplup"
-    },
-    "189": {
-      "0.01": "Jumpluff"
-    },
-    "480": {
-      "0.01": "Uxie"
-    },
-    "3": {
-      "0.01": "Venusaur"
-    },
-    "701": {
-      "0.01": "Hawlucha"
-    },
-    "996": {
-      "0.01": "Frigibax"
-    },
-    "181": {
-      "0.01": "Ampharos"
-    },
-    "349": {
-      "0.01": "Feebas"
-    },
-    "668": {
-      "0.01": "Pyroar"
+    "232": {
+      "0.02": "Donphan"
     },
     "268": {
       "0.01": "Cascoon"
@@ -1620,26 +1411,173 @@
     "598": {
       "0.01": "Ferrothorn"
     },
-    "503": {
-      "0.01": "Samurott"
+    "457": {
+      "0.01": "Lumineon"
+    },
+    "340": {
+      "0.01": "Whiscash"
+    },
+    "138": {
+      "0.01": "Omanyte"
+    },
+    "9": {
+      "0.01": "Blastoise"
+    },
+    "497": {
+      "0.01": "Serperior"
+    },
+    "195": {
+      "0.01": "Quagsire"
+    },
+    "911": {
+      "0.01": "Skeledirge"
     },
     "217": {
       "0.01": "Ursaring"
     },
-    "91": {
-      "0.01": "Cloyster"
+    "701": {
+      "0.01": "Hawlucha"
+    },
+    "189": {
+      "0.01": "Jumpluff"
+    },
+    "271": {
+      "0.01": "Lombre"
+    },
+    "51": {
+      "0.01": "Dugtrio Alola"
+    },
+    "452": {
+      "0.01": "Drapion"
+    },
+    "815": {
+      "0.01": "Cinderace"
+    },
+    "939": {
+      "0.01": "Bellibolt"
+    },
+    "3": {
+      "0.01": "Venusaur"
+    },
+    "480": {
+      "0.01": "Uxie"
+    },
+    "996": {
+      "0.01": "Frigibax"
+    },
+    "542": {
+      "0.01": "Leavanny"
+    },
+    "229": {
+      "0.01": "Houndoom"
+    },
+    "594": {
+      "0.01": "Alomomola"
+    },
+    "537": {
+      "0.01": "Seismitoad"
+    },
+    "437": {
+      "0.01": "Bronzong"
+    },
+    "823": {
+      "0.01": "Corviknight"
+    },
+    "61": {
+      "0.01": "Poliwhirl"
+    },
+    "78": {
+      "0.01": "Rapidash Galarian"
+    },
+    "561": {
+      "0.01": "Sigilyph"
+    },
+    "564": {
+      "0.01": "Tirtouga"
+    },
+    "693": {
+      "0.01": "Clawitzer"
+    },
+    "219": {
+      "0.01": "Magcargo"
+    },
+    "923": {
+      "0.01": "Pawmot"
+    },
+    "36": {
+      "0.01": "Clefable"
     },
     "119": {
       "0.01": "Seaking"
     },
-    "756": {
-      "0.01": "Shiinotic"
+    "34": {
+      "0.01": "Nidoking"
+    },
+    "305": {
+      "0.01": "Lairon"
+    },
+    "181": {
+      "0.01": "Ampharos"
+    },
+    "70": {
+      "0.01": "Weepinbell"
+    },
+    "444": {
+      "0.01": "Gabite"
+    },
+    "15": {
+      "0.01": "Beedrill"
+    },
+    "295": {
+      "0.01": "Exploud"
     },
     "460": {
       "0.01": "Abomasnow"
     },
-    "195": {
-      "0.01": "Quagsire"
+    "326": {
+      "0.01": "Grumpig"
+    },
+    "545": {
+      "0.01": "Scolipede"
+    },
+    "389": {
+      "0.01": "Torterra"
+    },
+    "31": {
+      "0.01": "Nidoqueen"
+    },
+    "42": {
+      "0.01": "Golbat"
+    },
+    "344": {
+      "0.01": "Claydol"
+    },
+    "482": {
+      "0.01": "Azelf"
+    },
+    "633": {
+      "0.01": "Deino"
+    },
+    "320": {
+      "0.01": "Wailmer"
+    },
+    "606": {
+      "0.01": "Beheeyem"
+    },
+    "508": {
+      "0.01": "Stoutland"
+    },
+    "319": {
+      "0.01": "Sharpedo"
+    },
+    "147": {
+      "0.01": "Dratini"
+    },
+    "581": {
+      "0.01": "Swanna"
+    },
+    "521": {
+      "0.01": "Unfezant"
     },
     "762": {
       "0.01": "Steenee"
@@ -1647,26 +1585,77 @@
     "569": {
       "0.01": "Garbodor"
     },
-    "576": {
-      "0.01": "Gothitelle"
+    "157": {
+      "0.01": "Typhlosion"
     },
-    "271": {
-      "0.01": "Lombre"
+    "345": {
+      "0.01": "Lileep"
     },
-    "44": {
-      "0.01": "Gloom"
+    "908": {
+      "0.01": "Meowscarada"
     },
-    "138": {
-      "0.01": "Omanyte"
+    "62": {
+      "0.01": "Poliwrath"
     },
-    "295": {
-      "0.01": "Exploud"
+    "620": {
+      "0.01": "Mienshao"
+    },
+    "454": {
+      "0.01": "Toxicroak"
+    },
+    "668": {
+      "0.01": "Pyroar"
+    },
+    "704": {
+      "0.01": "Goomy"
+    },
+    "184": {
+      "0.01": "Azumarill"
+    },
+    "756": {
+      "0.01": "Shiinotic"
     },
     "724": {
       "0.01": "Decidueye"
     },
-    "395": {
-      "0.01": "Empoleon"
+    "164": {
+      "0.01": "Noctowl"
+    },
+    "603": {
+      "0.01": "Eelektrik"
+    },
+    "80": {
+      "0.01": "Slowbro"
+    },
+    "851": {
+      "0.01": "Centiskorch"
+    },
+    "301": {
+      "0.01": "Delcatty"
+    },
+    "18": {
+      "0.01": "Pidgeot"
+    },
+    "481": {
+      "0.01": "Mesprit"
+    },
+    "576": {
+      "0.01": "Gothitelle"
+    },
+    "503": {
+      "0.01": "Samurott"
+    },
+    "374": {
+      "0.01": "Beldum"
+    },
+    "44": {
+      "0.01": "Gloom"
+    },
+    "611": {
+      "0.01": "Fraxure"
+    },
+    "154": {
+      "0.01": "Meganium"
     }
   }
 }
