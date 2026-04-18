@@ -1,62 +1,76 @@
 {
-  "last_updated": "2026-04-18 19:36:59",
-  "total": 620,
+  "last_updated": "2026-04-18 20:29:10",
+  "total": 622,
   "spawns": [
-    {
-      "id": 742,
-      "name": "Cutiefly",
-      "rate": 3.12,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/cutiefly"
-    },
     {
       "id": 829,
       "name": "Gossifleur",
-      "rate": 2.95,
+      "rate": 3.07,
       "shiny": false,
       "image_url": "https://rotomlabs.net/dex/gossifleur"
     },
     {
+      "id": 742,
+      "name": "Cutiefly",
+      "rate": 3.06,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/cutiefly"
+    },
+    {
       "id": 273,
       "name": "Seedot",
-      "rate": 2.55,
+      "rate": 2.66,
       "shiny": true,
       "image_url": "https://rotomlabs.net/dex/seedot"
     },
     {
       "id": 688,
       "name": "Binacle",
-      "rate": 2.24,
+      "rate": 2.27,
       "shiny": true,
       "image_url": "https://rotomlabs.net/dex/binacle"
     },
     {
       "id": 590,
       "name": "Foongus",
-      "rate": 2.01,
+      "rate": 2.09,
       "shiny": true,
       "image_url": "https://rotomlabs.net/dex/foongus"
     },
     {
       "id": 351,
       "name": "Castform Rainy",
-      "rate": 1.92,
+      "rate": 1.9,
       "shiny": true,
       "image_url": "https://rotomlabs.net/dex/castform-rainy"
     },
     {
       "id": 351,
       "name": "Castform",
-      "rate": 1.58,
+      "rate": 1.64,
       "shiny": true,
       "image_url": "https://rotomlabs.net/dex/castform"
     },
     {
       "id": 948,
       "name": "Toedscool",
-      "rate": 0.98,
+      "rate": 0.99,
       "shiny": true,
       "image_url": "https://rotomlabs.net/dex/toedscool"
+    },
+    {
+      "id": 338,
+      "name": "Solrock",
+      "rate": 0.33,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/solrock"
+    },
+    {
+      "id": 540,
+      "name": "Sewaddle",
+      "rate": 0.33,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/sewaddle"
     },
     {
       "id": 506,
@@ -66,39 +80,18 @@
       "image_url": "https://rotomlabs.net/dex/lillipup"
     },
     {
-      "id": 543,
-      "name": "Venipede",
+      "id": 16,
+      "name": "Pidgey",
       "rate": 0.32,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/venipede"
+      "image_url": "https://rotomlabs.net/dex/pidgey"
     },
     {
-      "id": 338,
-      "name": "Solrock",
+      "id": 10,
+      "name": "Caterpie",
       "rate": 0.32,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/solrock"
-    },
-    {
-      "id": 177,
-      "name": "Natu",
-      "rate": 0.32,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/natu"
-    },
-    {
-      "id": 43,
-      "name": "Oddish",
-      "rate": 0.31,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/oddish"
-    },
-    {
-      "id": 631,
-      "name": "Heatmor",
-      "rate": 0.31,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/heatmor"
+      "image_url": "https://rotomlabs.net/dex/caterpie"
     },
     {
       "id": 335,
@@ -108,74 +101,95 @@
       "image_url": "https://rotomlabs.net/dex/zangoose"
     },
     {
-      "id": 540,
-      "name": "Sewaddle",
+      "id": 313,
+      "name": "Volbeat",
       "rate": 0.31,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/sewaddle"
+      "image_url": "https://rotomlabs.net/dex/volbeat"
     },
     {
-      "id": 10,
-      "name": "Caterpie",
+      "id": 539,
+      "name": "Sawk",
       "rate": 0.31,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/caterpie"
+      "image_url": "https://rotomlabs.net/dex/sawk"
     },
     {
-      "id": 81,
-      "name": "Magnemite",
+      "id": 631,
+      "name": "Heatmor",
+      "rate": 0.31,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/heatmor"
+    },
+    {
+      "id": 543,
+      "name": "Venipede",
+      "rate": 0.31,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/venipede"
+    },
+    {
+      "id": 177,
+      "name": "Natu",
       "rate": 0.3,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/magnemite"
+      "image_url": "https://rotomlabs.net/dex/natu"
     },
     {
-      "id": 32,
-      "name": "Nidoran\u2642",
+      "id": 915,
+      "name": "Lechonk",
       "rate": 0.3,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/nidoran-m"
+      "image_url": "https://rotomlabs.net/dex/lechonk"
     },
     {
-      "id": 682,
-      "name": "Spritzee",
+      "id": 60,
+      "name": "Poliwag",
       "rate": 0.3,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/spritzee"
+      "image_url": "https://rotomlabs.net/dex/poliwag"
     },
     {
-      "id": 813,
-      "name": "Scorbunny",
+      "id": 322,
+      "name": "Numel",
       "rate": 0.3,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/scorbunny"
+      "image_url": "https://rotomlabs.net/dex/numel"
     },
     {
-      "id": 821,
-      "name": "Rookidee",
+      "id": 261,
+      "name": "Poochyena",
       "rate": 0.3,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/rookidee"
+      "image_url": "https://rotomlabs.net/dex/poochyena"
     },
     {
-      "id": 632,
-      "name": "Durant",
-      "rate": 0.3,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/durant"
-    },
-    {
-      "id": 16,
-      "name": "Pidgey",
-      "rate": 0.3,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/pidgey"
-    },
-    {
-      "id": 427,
-      "name": "Buneary",
+      "id": 43,
+      "name": "Oddish",
       "rate": 0.29,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/buneary"
+      "image_url": "https://rotomlabs.net/dex/oddish"
+    },
+    {
+      "id": 314,
+      "name": "Illumise",
+      "rate": 0.29,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/illumise"
+    },
+    {
+      "id": 102,
+      "name": "Exeggcute",
+      "rate": 0.29,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/exeggcute"
+    },
+    {
+      "id": 309,
+      "name": "Electrike",
+      "rate": 0.29,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/electrike"
     },
     {
       "id": 515,
@@ -185,95 +199,25 @@
       "image_url": "https://rotomlabs.net/dex/panpour"
     },
     {
-      "id": 322,
-      "name": "Numel",
+      "id": 66,
+      "name": "Machop",
       "rate": 0.29,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/numel"
+      "image_url": "https://rotomlabs.net/dex/machop"
     },
     {
-      "id": 539,
-      "name": "Sawk",
+      "id": 336,
+      "name": "Seviper",
       "rate": 0.29,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/sawk"
+      "image_url": "https://rotomlabs.net/dex/seviper"
     },
     {
-      "id": 333,
-      "name": "Swablu",
+      "id": 813,
+      "name": "Scorbunny",
       "rate": 0.29,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/swablu"
-    },
-    {
-      "id": 434,
-      "name": "Stunky",
-      "rate": 0.29,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/stunky"
-    },
-    {
-      "id": 915,
-      "name": "Lechonk",
-      "rate": 0.29,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/lechonk"
-    },
-    {
-      "id": 313,
-      "name": "Volbeat",
-      "rate": 0.29,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/volbeat"
-    },
-    {
-      "id": 431,
-      "name": "Glameow",
-      "rate": 0.29,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/glameow"
-    },
-    {
-      "id": 511,
-      "name": "Pansage",
-      "rate": 0.29,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/pansage"
-    },
-    {
-      "id": 960,
-      "name": "Wiglett",
-      "rate": 0.29,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/wiglett"
-    },
-    {
-      "id": 535,
-      "name": "Tympole",
-      "rate": 0.29,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/tympole"
-    },
-    {
-      "id": 835,
-      "name": "Yamper",
-      "rate": 0.29,
-      "shiny": false,
-      "image_url": "https://rotomlabs.net/dex/yamper"
-    },
-    {
-      "id": 928,
-      "name": "Smoliv",
-      "rate": 0.29,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/smoliv"
-    },
-    {
-      "id": 261,
-      "name": "Poochyena",
-      "rate": 0.29,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/poochyena"
+      "image_url": "https://rotomlabs.net/dex/scorbunny"
     },
     {
       "id": 296,
@@ -283,221 +227,32 @@
       "image_url": "https://rotomlabs.net/dex/makuhita"
     },
     {
-      "id": 759,
-      "name": "Stufful",
+      "id": 960,
+      "name": "Wiglett",
       "rate": 0.29,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/stufful"
+      "image_url": "https://rotomlabs.net/dex/wiglett"
     },
     {
-      "id": 13,
-      "name": "Weedle",
-      "rate": 0.29,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/weedle"
-    },
-    {
-      "id": 128,
-      "name": "Tauros",
+      "id": 661,
+      "name": "Fletchling",
       "rate": 0.28,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/tauros"
+      "image_url": "https://rotomlabs.net/dex/fletchling"
     },
     {
-      "id": 495,
-      "name": "Snivy",
+      "id": 209,
+      "name": "Snubbull",
       "rate": 0.28,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/snivy"
+      "image_url": "https://rotomlabs.net/dex/snubbull"
     },
     {
-      "id": 111,
-      "name": "Rhyhorn",
+      "id": 459,
+      "name": "Snover",
       "rate": 0.28,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/rhyhorn"
-    },
-    {
-      "id": 283,
-      "name": "Surskit",
-      "rate": 0.28,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/surskit"
-    },
-    {
-      "id": 316,
-      "name": "Gulpin",
-      "rate": 0.28,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/gulpin"
-    },
-    {
-      "id": 351,
-      "name": "Castform Sunny",
-      "rate": 0.28,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/castform-sunny"
-    },
-    {
-      "id": 29,
-      "name": "Nidoran\u2640",
-      "rate": 0.28,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/nidoran-f"
-    },
-    {
-      "id": 684,
-      "name": "Swirlix",
-      "rate": 0.28,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/swirlix"
-    },
-    {
-      "id": 574,
-      "name": "Gothita",
-      "rate": 0.28,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/gothita"
-    },
-    {
-      "id": 265,
-      "name": "Wurmple",
-      "rate": 0.28,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/wurmple"
-    },
-    {
-      "id": 769,
-      "name": "Sandygast",
-      "rate": 0.28,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/sandygast"
-    },
-    {
-      "id": 501,
-      "name": "Oshawott",
-      "rate": 0.28,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/oshawott"
-    },
-    {
-      "id": 519,
-      "name": "Pidove",
-      "rate": 0.28,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/pidove"
-    },
-    {
-      "id": 23,
-      "name": "Ekans",
-      "rate": 0.28,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/ekans"
-    },
-    {
-      "id": 919,
-      "name": "Nymble",
-      "rate": 0.28,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/nymble"
-    },
-    {
-      "id": 66,
-      "name": "Machop",
-      "rate": 0.28,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/machop"
-    },
-    {
-      "id": 336,
-      "name": "Seviper",
-      "rate": 0.28,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/seviper"
-    },
-    {
-      "id": 60,
-      "name": "Poliwag",
-      "rate": 0.28,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/poliwag"
-    },
-    {
-      "id": 909,
-      "name": "Fuecoco",
-      "rate": 0.28,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/fuecoco"
-    },
-    {
-      "id": 200,
-      "name": "Misdreavus",
-      "rate": 0.28,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/misdreavus"
-    },
-    {
-      "id": 538,
-      "name": "Throh",
-      "rate": 0.28,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/throh"
-    },
-    {
-      "id": 355,
-      "name": "Duskull",
-      "rate": 0.28,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/duskull"
-    },
-    {
-      "id": 102,
-      "name": "Exeggcute",
-      "rate": 0.28,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/exeggcute"
-    },
-    {
-      "id": 39,
-      "name": "Jigglypuff",
-      "rate": 0.28,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/jigglypuff"
-    },
-    {
-      "id": 35,
-      "name": "Clefairy",
-      "rate": 0.28,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/clefairy"
-    },
-    {
-      "id": 921,
-      "name": "Pawmi",
-      "rate": 0.28,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/pawmi"
-    },
-    {
-      "id": 529,
-      "name": "Drilbur",
-      "rate": 0.28,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/drilbur"
-    },
-    {
-      "id": 228,
-      "name": "Houndour",
-      "rate": 0.28,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/houndour"
-    },
-    {
-      "id": 152,
-      "name": "Chikorita",
-      "rate": 0.28,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/chikorita"
+      "image_url": "https://rotomlabs.net/dex/snover"
     },
     {
       "id": 736,
@@ -507,186 +262,172 @@
       "image_url": "https://rotomlabs.net/dex/grubbin"
     },
     {
-      "id": 46,
-      "name": "Paras",
-      "rate": 0.27,
+      "id": 63,
+      "name": "Abra",
+      "rate": 0.28,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/paras"
-    },
-    {
-      "id": 276,
-      "name": "Taillow",
-      "rate": 0.27,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/taillow"
-    },
-    {
-      "id": 69,
-      "name": "Bellsprout",
-      "rate": 0.27,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/bellsprout"
-    },
-    {
-      "id": 21,
-      "name": "Spearow",
-      "rate": 0.27,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/spearow"
-    },
-    {
-      "id": 522,
-      "name": "Blitzle",
-      "rate": 0.27,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/blitzle"
+      "image_url": "https://rotomlabs.net/dex/abra"
     },
     {
       "id": 831,
       "name": "Wooloo",
-      "rate": 0.27,
+      "rate": 0.28,
       "shiny": true,
       "image_url": "https://rotomlabs.net/dex/wooloo"
     },
     {
-      "id": 133,
-      "name": "Eevee",
-      "rate": 0.27,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/eevee"
-    },
-    {
-      "id": 731,
-      "name": "Pikipek",
-      "rate": 0.27,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/pikipek"
-    },
-    {
-      "id": 309,
-      "name": "Electrike",
-      "rate": 0.27,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/electrike"
-    },
-    {
-      "id": 325,
-      "name": "Spoink",
-      "rate": 0.27,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/spoink"
-    },
-    {
-      "id": 7,
-      "name": "Squirtle",
-      "rate": 0.27,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/squirtle"
-    },
-    {
-      "id": 198,
-      "name": "Murkrow",
-      "rate": 0.27,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/murkrow"
-    },
-    {
-      "id": 498,
-      "name": "Tepig",
-      "rate": 0.27,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/tepig"
-    },
-    {
-      "id": 179,
-      "name": "Mareep",
-      "rate": 0.27,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/mareep"
-    },
-    {
-      "id": 661,
-      "name": "Fletchling",
-      "rate": 0.27,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/fletchling"
-    },
-    {
-      "id": 312,
-      "name": "Minun",
-      "rate": 0.27,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/minun"
-    },
-    {
-      "id": 616,
-      "name": "Shelmet",
-      "rate": 0.27,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/shelmet"
-    },
-    {
-      "id": 557,
-      "name": "Dwebble",
-      "rate": 0.27,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/dwebble"
-    },
-    {
-      "id": 587,
-      "name": "Emolga",
-      "rate": 0.27,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/emolga"
-    },
-    {
-      "id": 337,
-      "name": "Lunatone",
-      "rate": 0.27,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/lunatone"
-    },
-    {
-      "id": 725,
-      "name": "Litten",
-      "rate": 0.27,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/litten"
-    },
-    {
-      "id": 595,
-      "name": "Joltik",
-      "rate": 0.27,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/joltik"
-    },
-    {
-      "id": 56,
-      "name": "Mankey",
-      "rate": 0.27,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/mankey"
-    },
-    {
       "id": 906,
       "name": "Sprigatito",
-      "rate": 0.27,
+      "rate": 0.28,
       "shiny": true,
       "image_url": "https://rotomlabs.net/dex/sprigatito"
     },
     {
-      "id": 843,
-      "name": "Silicobra",
-      "rate": 0.27,
-      "shiny": false,
-      "image_url": "https://rotomlabs.net/dex/silicobra"
+      "id": 725,
+      "name": "Litten",
+      "rate": 0.28,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/litten"
     },
     {
-      "id": 54,
-      "name": "Psyduck",
+      "id": 333,
+      "name": "Swablu",
+      "rate": 0.28,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/swablu"
+    },
+    {
+      "id": 632,
+      "name": "Durant",
+      "rate": 0.28,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/durant"
+    },
+    {
+      "id": 316,
+      "name": "Gulpin",
+      "rate": 0.28,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/gulpin"
+    },
+    {
+      "id": 283,
+      "name": "Surskit",
+      "rate": 0.28,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/surskit"
+    },
+    {
+      "id": 265,
+      "name": "Wurmple",
+      "rate": 0.28,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/wurmple"
+    },
+    {
+      "id": 498,
+      "name": "Tepig",
+      "rate": 0.28,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/tepig"
+    },
+    {
+      "id": 535,
+      "name": "Tympole",
+      "rate": 0.28,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/tympole"
+    },
+    {
+      "id": 434,
+      "name": "Stunky",
+      "rate": 0.28,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/stunky"
+    },
+    {
+      "id": 23,
+      "name": "Ekans",
+      "rate": 0.28,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/ekans"
+    },
+    {
+      "id": 81,
+      "name": "Magnemite",
+      "rate": 0.28,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/magnemite"
+    },
+    {
+      "id": 919,
+      "name": "Nymble",
+      "rate": 0.28,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/nymble"
+    },
+    {
+      "id": 13,
+      "name": "Weedle",
+      "rate": 0.28,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/weedle"
+    },
+    {
+      "id": 179,
+      "name": "Mareep",
+      "rate": 0.28,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/mareep"
+    },
+    {
+      "id": 759,
+      "name": "Stufful",
+      "rate": 0.28,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/stufful"
+    },
+    {
+      "id": 821,
+      "name": "Rookidee",
+      "rate": 0.28,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/rookidee"
+    },
+    {
+      "id": 32,
+      "name": "Nidoran\u2642",
+      "rate": 0.28,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/nidoran-m"
+    },
+    {
+      "id": 276,
+      "name": "Taillow",
+      "rate": 0.28,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/taillow"
+    },
+    {
+      "id": 396,
+      "name": "Starly",
+      "rate": 0.28,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/starly"
+    },
+    {
+      "id": 56,
+      "name": "Mankey",
+      "rate": 0.28,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/mankey"
+    },
+    {
+      "id": 511,
+      "name": "Pansage",
       "rate": 0.27,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/psyduck"
+      "image_url": "https://rotomlabs.net/dex/pansage"
     },
     {
       "id": 84,
@@ -696,11 +437,123 @@
       "image_url": "https://rotomlabs.net/dex/doduo"
     },
     {
+      "id": 616,
+      "name": "Shelmet",
+      "rate": 0.27,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/shelmet"
+    },
+    {
+      "id": 48,
+      "name": "Venonat",
+      "rate": 0.27,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/venonat"
+    },
+    {
       "id": 399,
       "name": "Bidoof",
       "rate": 0.27,
       "shiny": true,
       "image_url": "https://rotomlabs.net/dex/bidoof"
+    },
+    {
+      "id": 909,
+      "name": "Fuecoco",
+      "rate": 0.27,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/fuecoco"
+    },
+    {
+      "id": 917,
+      "name": "Tarountula",
+      "rate": 0.27,
+      "shiny": false,
+      "image_url": "https://rotomlabs.net/dex/tarountula"
+    },
+    {
+      "id": 538,
+      "name": "Throh",
+      "rate": 0.27,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/throh"
+    },
+    {
+      "id": 928,
+      "name": "Smoliv",
+      "rate": 0.27,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/smoliv"
+    },
+    {
+      "id": 522,
+      "name": "Blitzle",
+      "rate": 0.27,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/blitzle"
+    },
+    {
+      "id": 682,
+      "name": "Spritzee",
+      "rate": 0.27,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/spritzee"
+    },
+    {
+      "id": 152,
+      "name": "Chikorita",
+      "rate": 0.27,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/chikorita"
+    },
+    {
+      "id": 819,
+      "name": "Skwovet",
+      "rate": 0.27,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/skwovet"
+    },
+    {
+      "id": 54,
+      "name": "Psyduck",
+      "rate": 0.27,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/psyduck"
+    },
+    {
+      "id": 501,
+      "name": "Oshawott",
+      "rate": 0.27,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/oshawott"
+    },
+    {
+      "id": 835,
+      "name": "Yamper",
+      "rate": 0.27,
+      "shiny": false,
+      "image_url": "https://rotomlabs.net/dex/yamper"
+    },
+    {
+      "id": 193,
+      "name": "Yanma",
+      "rate": 0.27,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/yanma"
+    },
+    {
+      "id": 595,
+      "name": "Joltik",
+      "rate": 0.27,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/joltik"
+    },
+    {
+      "id": 415,
+      "name": "Combee",
+      "rate": 0.27,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/combee"
     },
     {
       "id": 572,
@@ -710,151 +563,102 @@
       "image_url": "https://rotomlabs.net/dex/minccino"
     },
     {
-      "id": 546,
-      "name": "Cottonee",
-      "rate": 0.26,
+      "id": 427,
+      "name": "Buneary",
+      "rate": 0.27,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/cottonee"
+      "image_url": "https://rotomlabs.net/dex/buneary"
     },
     {
-      "id": 396,
-      "name": "Starly",
-      "rate": 0.26,
+      "id": 659,
+      "name": "Bunnelby",
+      "rate": 0.27,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/starly"
+      "image_url": "https://rotomlabs.net/dex/bunnelby"
     },
     {
-      "id": 193,
-      "name": "Yanma",
-      "rate": 0.26,
+      "id": 351,
+      "name": "Castform Sunny",
+      "rate": 0.27,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/yanma"
+      "image_url": "https://rotomlabs.net/dex/castform-sunny"
     },
     {
-      "id": 509,
-      "name": "Purrloin",
-      "rate": 0.26,
+      "id": 337,
+      "name": "Lunatone",
+      "rate": 0.27,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/purrloin"
+      "image_url": "https://rotomlabs.net/dex/lunatone"
     },
     {
-      "id": 694,
-      "name": "Helioptile",
-      "rate": 0.26,
+      "id": 165,
+      "name": "Ledyba",
+      "rate": 0.27,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/helioptile"
+      "image_url": "https://rotomlabs.net/dex/ledyba"
     },
     {
-      "id": 456,
-      "name": "Finneon",
-      "rate": 0.26,
+      "id": 21,
+      "name": "Spearow",
+      "rate": 0.27,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/finneon"
+      "image_url": "https://rotomlabs.net/dex/spearow"
     },
     {
-      "id": 548,
-      "name": "Petilil",
-      "rate": 0.26,
+      "id": 495,
+      "name": "Snivy",
+      "rate": 0.27,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/petilil"
+      "image_url": "https://rotomlabs.net/dex/snivy"
     },
     {
-      "id": 387,
-      "name": "Turtwig",
-      "rate": 0.26,
+      "id": 111,
+      "name": "Rhyhorn",
+      "rate": 0.27,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/turtwig"
+      "image_url": "https://rotomlabs.net/dex/rhyhorn"
     },
     {
-      "id": 504,
-      "name": "Patrat",
-      "rate": 0.26,
+      "id": 29,
+      "name": "Nidoran\u2640",
+      "rate": 0.27,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/patrat"
-    },
-    {
-      "id": 582,
-      "name": "Vanillite",
-      "rate": 0.26,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/vanillite"
+      "image_url": "https://rotomlabs.net/dex/nidoran-f"
     },
     {
       "id": 96,
       "name": "Drowzee",
-      "rate": 0.26,
+      "rate": 0.27,
       "shiny": true,
       "image_url": "https://rotomlabs.net/dex/drowzee"
     },
     {
-      "id": 63,
-      "name": "Abra",
-      "rate": 0.26,
+      "id": 155,
+      "name": "Cyndaquil",
+      "rate": 0.27,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/abra"
+      "image_url": "https://rotomlabs.net/dex/cyndaquil"
     },
     {
-      "id": 755,
-      "name": "Morelull",
+      "id": 114,
+      "name": "Tangela",
       "rate": 0.26,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/morelull"
+      "image_url": "https://rotomlabs.net/dex/tangela"
     },
     {
-      "id": 122,
-      "name": "Mr. Mime",
+      "id": 307,
+      "name": "Meditite",
       "rate": 0.26,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/mr-mime"
+      "image_url": "https://rotomlabs.net/dex/meditite"
     },
     {
-      "id": 912,
-      "name": "Quaxly",
+      "id": 258,
+      "name": "Mudkip",
       "rate": 0.26,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/quaxly"
-    },
-    {
-      "id": 252,
-      "name": "Treecko",
-      "rate": 0.26,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/treecko"
-    },
-    {
-      "id": 667,
-      "name": "Litleo",
-      "rate": 0.26,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/litleo"
-    },
-    {
-      "id": 280,
-      "name": "Ralts",
-      "rate": 0.26,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/ralts"
-    },
-    {
-      "id": 143,
-      "name": "Snorlax",
-      "rate": 0.26,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/snorlax"
-    },
-    {
-      "id": 513,
-      "name": "Pansear",
-      "rate": 0.26,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/pansear"
-    },
-    {
-      "id": 517,
-      "name": "Munna",
-      "rate": 0.26,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/munna"
+      "image_url": "https://rotomlabs.net/dex/mudkip"
     },
     {
       "id": 315,
@@ -864,32 +668,81 @@
       "image_url": "https://rotomlabs.net/dex/roselia"
     },
     {
-      "id": 524,
-      "name": "Roggenrola",
+      "id": 513,
+      "name": "Pansear",
       "rate": 0.26,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/roggenrola"
+      "image_url": "https://rotomlabs.net/dex/pansear"
     },
     {
-      "id": 459,
-      "name": "Snover",
+      "id": 198,
+      "name": "Murkrow",
       "rate": 0.26,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/snover"
+      "image_url": "https://rotomlabs.net/dex/murkrow"
     },
     {
-      "id": 92,
-      "name": "Gastly",
+      "id": 200,
+      "name": "Misdreavus",
       "rate": 0.26,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/gastly"
+      "image_url": "https://rotomlabs.net/dex/misdreavus"
     },
     {
-      "id": 401,
-      "name": "Kricketot",
+      "id": 588,
+      "name": "Karrablast",
       "rate": 0.26,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/kricketot"
+      "image_url": "https://rotomlabs.net/dex/karrablast"
+    },
+    {
+      "id": 4,
+      "name": "Charmander",
+      "rate": 0.26,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/charmander"
+    },
+    {
+      "id": 318,
+      "name": "Carvanha",
+      "rate": 0.26,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/carvanha"
+    },
+    {
+      "id": 280,
+      "name": "Ralts",
+      "rate": 0.26,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/ralts"
+    },
+    {
+      "id": 122,
+      "name": "Mr. Mime",
+      "rate": 0.26,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/mr-mime"
+    },
+    {
+      "id": 285,
+      "name": "Shroomish",
+      "rate": 0.26,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/shroomish"
+    },
+    {
+      "id": 810,
+      "name": "Grookey",
+      "rate": 0.26,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/grookey"
+    },
+    {
+      "id": 926,
+      "name": "Fidough",
+      "rate": 0.26,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/fidough"
     },
     {
       "id": 278,
@@ -899,41 +752,6 @@
       "image_url": "https://rotomlabs.net/dex/wingull"
     },
     {
-      "id": 353,
-      "name": "Shuppet",
-      "rate": 0.26,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/shuppet"
-    },
-    {
-      "id": 107,
-      "name": "Hitmonchan",
-      "rate": 0.26,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/hitmonchan"
-    },
-    {
-      "id": 83,
-      "name": "Farfetch'd",
-      "rate": 0.26,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/farfetchd"
-    },
-    {
-      "id": 314,
-      "name": "Illumise",
-      "rate": 0.26,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/illumise"
-    },
-    {
-      "id": 819,
-      "name": "Skwovet",
-      "rate": 0.26,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/skwovet"
-    },
-    {
       "id": 187,
       "name": "Hoppip",
       "rate": 0.26,
@@ -941,18 +759,102 @@
       "image_url": "https://rotomlabs.net/dex/hoppip"
     },
     {
-      "id": 761,
-      "name": "Bounsweet",
+      "id": 25,
+      "name": "Pikachu",
       "rate": 0.26,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/bounsweet"
+      "image_url": "https://rotomlabs.net/dex/pikachu"
     },
     {
-      "id": 311,
-      "name": "Plusle",
+      "id": 92,
+      "name": "Gastly",
       "rate": 0.26,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/plusle"
+      "image_url": "https://rotomlabs.net/dex/gastly"
+    },
+    {
+      "id": 921,
+      "name": "Pawmi",
+      "rate": 0.26,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/pawmi"
+    },
+    {
+      "id": 587,
+      "name": "Emolga",
+      "rate": 0.26,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/emolga"
+    },
+    {
+      "id": 109,
+      "name": "Koffing",
+      "rate": 0.26,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/koffing"
+    },
+    {
+      "id": 574,
+      "name": "Gothita",
+      "rate": 0.26,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/gothita"
+    },
+    {
+      "id": 769,
+      "name": "Sandygast",
+      "rate": 0.26,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/sandygast"
+    },
+    {
+      "id": 353,
+      "name": "Shuppet",
+      "rate": 0.26,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/shuppet"
+    },
+    {
+      "id": 203,
+      "name": "Girafarig",
+      "rate": 0.26,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/girafarig"
+    },
+    {
+      "id": 582,
+      "name": "Vanillite",
+      "rate": 0.26,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/vanillite"
+    },
+    {
+      "id": 161,
+      "name": "Sentret",
+      "rate": 0.26,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/sentret"
+    },
+    {
+      "id": 393,
+      "name": "Piplup",
+      "rate": 0.26,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/piplup"
+    },
+    {
+      "id": 912,
+      "name": "Quaxly",
+      "rate": 0.26,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/quaxly"
+    },
+    {
+      "id": 519,
+      "name": "Pidove",
+      "rate": 0.26,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/pidove"
     },
     {
       "id": 104,
@@ -962,116 +864,130 @@
       "image_url": "https://rotomlabs.net/dex/cubone"
     },
     {
-      "id": 127,
-      "name": "Pinsir",
-      "rate": 0.25,
+      "id": 761,
+      "name": "Bounsweet",
+      "rate": 0.26,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/pinsir"
+      "image_url": "https://rotomlabs.net/dex/bounsweet"
     },
     {
-      "id": 300,
-      "name": "Skitty",
-      "rate": 0.25,
+      "id": 425,
+      "name": "Drifloon",
+      "rate": 0.26,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/skitty"
+      "image_url": "https://rotomlabs.net/dex/drifloon"
+    },
+    {
+      "id": 46,
+      "name": "Paras",
+      "rate": 0.26,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/paras"
+    },
+    {
+      "id": 504,
+      "name": "Patrat",
+      "rate": 0.26,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/patrat"
+    },
+    {
+      "id": 672,
+      "name": "Skiddo",
+      "rate": 0.26,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/skiddo"
     },
     {
       "id": 218,
       "name": "Slugma",
-      "rate": 0.25,
+      "rate": 0.26,
       "shiny": true,
       "image_url": "https://rotomlabs.net/dex/slugma"
     },
     {
-      "id": 108,
-      "name": "Lickitung",
-      "rate": 0.25,
+      "id": 667,
+      "name": "Litleo",
+      "rate": 0.26,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/lickitung"
+      "image_url": "https://rotomlabs.net/dex/litleo"
     },
     {
-      "id": 692,
-      "name": "Clauncher",
-      "rate": 0.25,
+      "id": 431,
+      "name": "Glameow",
+      "rate": 0.26,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/clauncher"
+      "image_url": "https://rotomlabs.net/dex/glameow"
     },
     {
-      "id": 926,
-      "name": "Fidough",
-      "rate": 0.25,
+      "id": 83,
+      "name": "Farfetch'd",
+      "rate": 0.26,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/fidough"
-    },
-    {
-      "id": 155,
-      "name": "Cyndaquil",
-      "rate": 0.25,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/cyndaquil"
-    },
-    {
-      "id": 225,
-      "name": "Delibird",
-      "rate": 0.25,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/delibird"
-    },
-    {
-      "id": 627,
-      "name": "Rufflet",
-      "rate": 0.25,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/rufflet"
-    },
-    {
-      "id": 850,
-      "name": "Sizzlipede",
-      "rate": 0.25,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/sizzlipede"
-    },
-    {
-      "id": 163,
-      "name": "Hoothoot",
-      "rate": 0.25,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/hoothoot"
+      "image_url": "https://rotomlabs.net/dex/farfetchd"
     },
     {
       "id": 856,
       "name": "Hatenna",
-      "rate": 0.25,
+      "rate": 0.26,
       "shiny": true,
       "image_url": "https://rotomlabs.net/dex/hatenna"
     },
     {
-      "id": 1,
-      "name": "Bulbasaur",
-      "rate": 0.25,
+      "id": 69,
+      "name": "Bellsprout",
+      "rate": 0.26,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/bulbasaur"
+      "image_url": "https://rotomlabs.net/dex/bellsprout"
     },
     {
-      "id": 810,
-      "name": "Grookey",
-      "rate": 0.25,
+      "id": 191,
+      "name": "Sunkern",
+      "rate": 0.26,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/grookey"
+      "image_url": "https://rotomlabs.net/dex/sunkern"
     },
     {
-      "id": 418,
-      "name": "Buizel",
-      "rate": 0.25,
+      "id": 128,
+      "name": "Tauros",
+      "rate": 0.26,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/buizel"
+      "image_url": "https://rotomlabs.net/dex/tauros"
     },
     {
-      "id": 597,
-      "name": "Ferroseed",
+      "id": 228,
+      "name": "Houndour",
+      "rate": 0.26,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/houndour"
+    },
+    {
+      "id": 125,
+      "name": "Electabuzz",
+      "rate": 0.26,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/electabuzz"
+    },
+    {
+      "id": 827,
+      "name": "Nickit",
+      "rate": 0.26,
+      "shiny": false,
+      "image_url": "https://rotomlabs.net/dex/nickit"
+    },
+    {
+      "id": 311,
+      "name": "Plusle",
       "rate": 0.25,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/ferroseed"
+      "image_url": "https://rotomlabs.net/dex/plusle"
+    },
+    {
+      "id": 607,
+      "name": "Litwick",
+      "rate": 0.25,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/litwick"
     },
     {
       "id": 420,
@@ -1081,13 +997,6 @@
       "image_url": "https://rotomlabs.net/dex/cherubi"
     },
     {
-      "id": 129,
-      "name": "Magikarp",
-      "rate": 0.25,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/magikarp"
-    },
-    {
       "id": 223,
       "name": "Remoraid",
       "rate": 0.25,
@@ -1095,109 +1004,18 @@
       "image_url": "https://rotomlabs.net/dex/remoraid"
     },
     {
-      "id": 588,
-      "name": "Karrablast",
+      "id": 252,
+      "name": "Treecko",
       "rate": 0.25,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/karrablast"
+      "image_url": "https://rotomlabs.net/dex/treecko"
     },
     {
-      "id": 106,
-      "name": "Hitmonlee",
+      "id": 602,
+      "name": "Tynamo",
       "rate": 0.25,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/hitmonlee"
-    },
-    {
-      "id": 4,
-      "name": "Charmander",
-      "rate": 0.25,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/charmander"
-    },
-    {
-      "id": 436,
-      "name": "Bronzor",
-      "rate": 0.25,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/bronzor"
-    },
-    {
-      "id": 659,
-      "name": "Bunnelby",
-      "rate": 0.25,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/bunnelby"
-    },
-    {
-      "id": 213,
-      "name": "Shuckle",
-      "rate": 0.25,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/shuckle"
-    },
-    {
-      "id": 415,
-      "name": "Combee",
-      "rate": 0.25,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/combee"
-    },
-    {
-      "id": 299,
-      "name": "Nosepass",
-      "rate": 0.25,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/nosepass"
-    },
-    {
-      "id": 722,
-      "name": "Rowlet",
-      "rate": 0.25,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/rowlet"
-    },
-    {
-      "id": 580,
-      "name": "Ducklett",
-      "rate": 0.25,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/ducklett"
-    },
-    {
-      "id": 125,
-      "name": "Electabuzz",
-      "rate": 0.25,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/electabuzz"
-    },
-    {
-      "id": 318,
-      "name": "Carvanha",
-      "rate": 0.25,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/carvanha"
-    },
-    {
-      "id": 285,
-      "name": "Shroomish",
-      "rate": 0.25,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/shroomish"
-    },
-    {
-      "id": 358,
-      "name": "Chimecho",
-      "rate": 0.25,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/chimecho"
-    },
-    {
-      "id": 258,
-      "name": "Mudkip",
-      "rate": 0.25,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/mudkip"
+      "image_url": "https://rotomlabs.net/dex/tynamo"
     },
     {
       "id": 971,
@@ -1207,25 +1025,46 @@
       "image_url": "https://rotomlabs.net/dex/greavard"
     },
     {
-      "id": 25,
-      "name": "Pikachu",
+      "id": 185,
+      "name": "Sudowoodo",
       "rate": 0.25,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/pikachu"
+      "image_url": "https://rotomlabs.net/dex/sudowoodo"
     },
     {
-      "id": 165,
-      "name": "Ledyba",
+      "id": 694,
+      "name": "Helioptile",
       "rate": 0.25,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/ledyba"
+      "image_url": "https://rotomlabs.net/dex/helioptile"
     },
     {
-      "id": 206,
-      "name": "Dunsparce",
+      "id": 107,
+      "name": "Hitmonchan",
       "rate": 0.25,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/dunsparce"
+      "image_url": "https://rotomlabs.net/dex/hitmonchan"
+    },
+    {
+      "id": 546,
+      "name": "Cottonee",
+      "rate": 0.25,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/cottonee"
+    },
+    {
+      "id": 390,
+      "name": "Chimchar",
+      "rate": 0.25,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/chimchar"
+    },
+    {
+      "id": 39,
+      "name": "Jigglypuff",
+      "rate": 0.25,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/jigglypuff"
     },
     {
       "id": 123,
@@ -1235,25 +1074,32 @@
       "image_url": "https://rotomlabs.net/dex/scyther"
     },
     {
-      "id": 209,
-      "name": "Snubbull",
+      "id": 568,
+      "name": "Trubbish",
       "rate": 0.25,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/snubbull"
+      "image_url": "https://rotomlabs.net/dex/trubbish"
     },
     {
-      "id": 425,
-      "name": "Drifloon",
+      "id": 436,
+      "name": "Bronzor",
       "rate": 0.25,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/drifloon"
+      "image_url": "https://rotomlabs.net/dex/bronzor"
     },
     {
-      "id": 241,
-      "name": "Miltank",
+      "id": 767,
+      "name": "Wimpod",
       "rate": 0.25,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/miltank"
+      "image_url": "https://rotomlabs.net/dex/wimpod"
+    },
+    {
+      "id": 293,
+      "name": "Whismur",
+      "rate": 0.25,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/whismur"
     },
     {
       "id": 255,
@@ -1263,172 +1109,228 @@
       "image_url": "https://rotomlabs.net/dex/torchic"
     },
     {
-      "id": 672,
-      "name": "Skiddo",
+      "id": 355,
+      "name": "Duskull",
       "rate": 0.25,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/skiddo"
+      "image_url": "https://rotomlabs.net/dex/duskull"
     },
     {
-      "id": 109,
-      "name": "Koffing",
-      "rate": 0.24,
+      "id": 548,
+      "name": "Petilil",
+      "rate": 0.25,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/koffing"
+      "image_url": "https://rotomlabs.net/dex/petilil"
     },
     {
-      "id": 917,
-      "name": "Tarountula",
-      "rate": 0.24,
-      "shiny": false,
-      "image_url": "https://rotomlabs.net/dex/tarountula"
-    },
-    {
-      "id": 734,
-      "name": "Yungoos",
-      "rate": 0.24,
+      "id": 509,
+      "name": "Purrloin",
+      "rate": 0.25,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/yungoos"
+      "image_url": "https://rotomlabs.net/dex/purrloin"
     },
     {
-      "id": 339,
-      "name": "Barboach",
-      "rate": 0.24,
+      "id": 401,
+      "name": "Kricketot",
+      "rate": 0.25,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/barboach"
+      "image_url": "https://rotomlabs.net/dex/kricketot"
     },
     {
-      "id": 185,
-      "name": "Sudowoodo",
-      "rate": 0.24,
+      "id": 206,
+      "name": "Dunsparce",
+      "rate": 0.25,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/sudowoodo"
+      "image_url": "https://rotomlabs.net/dex/dunsparce"
     },
     {
-      "id": 390,
-      "name": "Chimchar",
-      "rate": 0.24,
+      "id": 129,
+      "name": "Magikarp",
+      "rate": 0.25,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/chimchar"
+      "image_url": "https://rotomlabs.net/dex/magikarp"
     },
     {
-      "id": 183,
-      "name": "Marill",
-      "rate": 0.24,
+      "id": 358,
+      "name": "Chimecho",
+      "rate": 0.25,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/marill"
+      "image_url": "https://rotomlabs.net/dex/chimecho"
     },
     {
-      "id": 293,
-      "name": "Whismur",
-      "rate": 0.24,
+      "id": 231,
+      "name": "Phanpy",
+      "rate": 0.25,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/whismur"
+      "image_url": "https://rotomlabs.net/dex/phanpy"
     },
     {
-      "id": 938,
-      "name": "Tadbulb",
-      "rate": 0.24,
+      "id": 684,
+      "name": "Swirlix",
+      "rate": 0.25,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/tadbulb"
+      "image_url": "https://rotomlabs.net/dex/swirlix"
+    },
+    {
+      "id": 585,
+      "name": "Deerling Spring Form",
+      "rate": 0.25,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/deerling-spring"
+    },
+    {
+      "id": 108,
+      "name": "Lickitung",
+      "rate": 0.25,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/lickitung"
+    },
+    {
+      "id": 287,
+      "name": "Slakoth",
+      "rate": 0.25,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/slakoth"
+    },
+    {
+      "id": 35,
+      "name": "Clefairy",
+      "rate": 0.25,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/clefairy"
+    },
+    {
+      "id": 580,
+      "name": "Ducklett",
+      "rate": 0.25,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/ducklett"
+    },
+    {
+      "id": 453,
+      "name": "Croagunk",
+      "rate": 0.25,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/croagunk"
+    },
+    {
+      "id": 517,
+      "name": "Munna",
+      "rate": 0.25,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/munna"
+    },
+    {
+      "id": 1,
+      "name": "Bulbasaur",
+      "rate": 0.25,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/bulbasaur"
+    },
+    {
+      "id": 133,
+      "name": "Eevee",
+      "rate": 0.25,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/eevee"
+    },
+    {
+      "id": 387,
+      "name": "Turtwig",
+      "rate": 0.25,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/turtwig"
     },
     {
       "id": 237,
       "name": "Hitmontop",
-      "rate": 0.24,
+      "rate": 0.25,
       "shiny": true,
       "image_url": "https://rotomlabs.net/dex/hitmontop"
     },
     {
-      "id": 176,
-      "name": "Togetic",
-      "rate": 0.24,
+      "id": 850,
+      "name": "Sizzlipede",
+      "rate": 0.25,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/togetic"
+      "image_url": "https://rotomlabs.net/dex/sizzlipede"
     },
     {
-      "id": 137,
-      "name": "Porygon",
-      "rate": 0.24,
+      "id": 312,
+      "name": "Minun",
+      "rate": 0.25,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/porygon"
+      "image_url": "https://rotomlabs.net/dex/minun"
     },
     {
-      "id": 568,
-      "name": "Trubbish",
-      "rate": 0.24,
+      "id": 7,
+      "name": "Squirtle",
+      "rate": 0.25,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/trubbish"
+      "image_url": "https://rotomlabs.net/dex/squirtle"
     },
     {
-      "id": 619,
-      "name": "Mienfoo",
-      "rate": 0.24,
+      "id": 241,
+      "name": "Miltank",
+      "rate": 0.25,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/mienfoo"
+      "image_url": "https://rotomlabs.net/dex/miltank"
     },
     {
-      "id": 767,
-      "name": "Wimpod",
-      "rate": 0.24,
+      "id": 325,
+      "name": "Spoink",
+      "rate": 0.25,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/wimpod"
+      "image_url": "https://rotomlabs.net/dex/spoink"
     },
     {
-      "id": 216,
-      "name": "Teddiursa",
-      "rate": 0.24,
+      "id": 118,
+      "name": "Goldeen",
+      "rate": 0.25,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/teddiursa"
+      "image_url": "https://rotomlabs.net/dex/goldeen"
     },
     {
-      "id": 408,
-      "name": "Cranidos",
-      "rate": 0.24,
+      "id": 731,
+      "name": "Pikipek",
+      "rate": 0.25,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/cranidos"
-    },
-    {
-      "id": 203,
-      "name": "Girafarig",
-      "rate": 0.24,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/girafarig"
-    },
-    {
-      "id": 531,
-      "name": "Audino",
-      "rate": 0.24,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/audino"
-    },
-    {
-      "id": 451,
-      "name": "Skorupi",
-      "rate": 0.24,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/skorupi"
+      "image_url": "https://rotomlabs.net/dex/pikipek"
     },
     {
       "id": 126,
       "name": "Magmar",
-      "rate": 0.24,
+      "rate": 0.25,
       "shiny": true,
       "image_url": "https://rotomlabs.net/dex/magmar"
     },
     {
-      "id": 343,
-      "name": "Baltoy",
+      "id": 300,
+      "name": "Skitty",
       "rate": 0.24,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/baltoy"
+      "image_url": "https://rotomlabs.net/dex/skitty"
     },
     {
-      "id": 827,
-      "name": "Nickit",
+      "id": 299,
+      "name": "Nosepass",
       "rate": 0.24,
-      "shiny": false,
-      "image_url": "https://rotomlabs.net/dex/nickit"
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/nosepass"
+    },
+    {
+      "id": 106,
+      "name": "Hitmonlee",
+      "rate": 0.24,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/hitmonlee"
+    },
+    {
+      "id": 163,
+      "name": "Hoothoot",
+      "rate": 0.24,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/hoothoot"
     },
     {
       "id": 702,
@@ -1438,53 +1340,25 @@
       "image_url": "https://rotomlabs.net/dex/dedenne"
     },
     {
-      "id": 607,
-      "name": "Litwick",
+      "id": 183,
+      "name": "Marill",
       "rate": 0.24,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/litwick"
+      "image_url": "https://rotomlabs.net/dex/marill"
     },
     {
-      "id": 48,
-      "name": "Venonat",
+      "id": 225,
+      "name": "Delibird",
       "rate": 0.24,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/venonat"
+      "image_url": "https://rotomlabs.net/dex/delibird"
     },
     {
-      "id": 222,
-      "name": "Corsola",
+      "id": 557,
+      "name": "Dwebble",
       "rate": 0.24,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/corsola"
-    },
-    {
-      "id": 161,
-      "name": "Sentret",
-      "rate": 0.24,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/sentret"
-    },
-    {
-      "id": 118,
-      "name": "Goldeen",
-      "rate": 0.24,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/goldeen"
-    },
-    {
-      "id": 585,
-      "name": "Deerling Spring Form",
-      "rate": 0.24,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/deerling-spring"
-    },
-    {
-      "id": 287,
-      "name": "Slakoth",
-      "rate": 0.24,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/slakoth"
+      "image_url": "https://rotomlabs.net/dex/dwebble"
     },
     {
       "id": 27,
@@ -1494,25 +1368,81 @@
       "image_url": "https://rotomlabs.net/dex/sandshrew"
     },
     {
-      "id": 527,
-      "name": "Woobat",
+      "id": 751,
+      "name": "Dewpider",
       "rate": 0.24,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/woobat"
+      "image_url": "https://rotomlabs.net/dex/dewpider"
     },
     {
-      "id": 816,
-      "name": "Sobble",
-      "rate": 0.24,
-      "shiny": false,
-      "image_url": "https://rotomlabs.net/dex/sobble"
-    },
-    {
-      "id": 191,
-      "name": "Sunkern",
+      "id": 339,
+      "name": "Barboach",
       "rate": 0.24,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/sunkern"
+      "image_url": "https://rotomlabs.net/dex/barboach"
+    },
+    {
+      "id": 234,
+      "name": "Stantler",
+      "rate": 0.24,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/stantler"
+    },
+    {
+      "id": 938,
+      "name": "Tadbulb",
+      "rate": 0.24,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/tadbulb"
+    },
+    {
+      "id": 722,
+      "name": "Rowlet",
+      "rate": 0.24,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/rowlet"
+    },
+    {
+      "id": 619,
+      "name": "Mienfoo",
+      "rate": 0.24,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/mienfoo"
+    },
+    {
+      "id": 418,
+      "name": "Buizel",
+      "rate": 0.24,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/buizel"
+    },
+    {
+      "id": 692,
+      "name": "Clauncher",
+      "rate": 0.24,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/clauncher"
+    },
+    {
+      "id": 531,
+      "name": "Audino",
+      "rate": 0.24,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/audino"
+    },
+    {
+      "id": 529,
+      "name": "Drilbur",
+      "rate": 0.24,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/drilbur"
+    },
+    {
+      "id": 734,
+      "name": "Yungoos",
+      "rate": 0.24,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/yungoos"
     },
     {
       "id": 124,
@@ -1522,13 +1452,6 @@
       "image_url": "https://rotomlabs.net/dex/jynx"
     },
     {
-      "id": 676,
-      "name": "Furfrou Natural",
-      "rate": 0.24,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/furfrou"
-    },
-    {
       "id": 559,
       "name": "Scraggy",
       "rate": 0.24,
@@ -1536,25 +1459,11 @@
       "image_url": "https://rotomlabs.net/dex/scraggy"
     },
     {
-      "id": 41,
-      "name": "Zubat",
+      "id": 843,
+      "name": "Silicobra",
       "rate": 0.24,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/zubat"
-    },
-    {
-      "id": 307,
-      "name": "Meditite",
-      "rate": 0.24,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/meditite"
-    },
-    {
-      "id": 777,
-      "name": "Togedemaru",
-      "rate": 0.24,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/togedemaru"
+      "shiny": false,
+      "image_url": "https://rotomlabs.net/dex/silicobra"
     },
     {
       "id": 304,
@@ -1564,123 +1473,46 @@
       "image_url": "https://rotomlabs.net/dex/aron"
     },
     {
-      "id": 751,
-      "name": "Dewpider",
-      "rate": 0.23,
+      "id": 456,
+      "name": "Finneon",
+      "rate": 0.24,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/dewpider"
+      "image_url": "https://rotomlabs.net/dex/finneon"
     },
     {
-      "id": 234,
-      "name": "Stantler",
+      "id": 597,
+      "name": "Ferroseed",
       "rate": 0.23,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/stantler"
+      "image_url": "https://rotomlabs.net/dex/ferroseed"
     },
     {
-      "id": 602,
-      "name": "Tynamo",
+      "id": 127,
+      "name": "Pinsir",
       "rate": 0.23,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/tynamo"
+      "image_url": "https://rotomlabs.net/dex/pinsir"
     },
     {
-      "id": 626,
-      "name": "Bouffalant",
+      "id": 137,
+      "name": "Porygon",
       "rate": 0.23,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/bouffalant"
+      "image_url": "https://rotomlabs.net/dex/porygon"
     },
     {
-      "id": 453,
-      "name": "Croagunk",
+      "id": 449,
+      "name": "Hippopotas",
       "rate": 0.23,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/croagunk"
+      "image_url": "https://rotomlabs.net/dex/hippopotas"
     },
     {
-      "id": 696,
-      "name": "Tyrunt",
+      "id": 213,
+      "name": "Shuckle",
       "rate": 0.23,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/tyrunt"
-    },
-    {
-      "id": 113,
-      "name": "Chansey",
-      "rate": 0.23,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/chansey"
-    },
-    {
-      "id": 410,
-      "name": "Shieldon",
-      "rate": 0.23,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/shieldon"
-    },
-    {
-      "id": 302,
-      "name": "Sableye",
-      "rate": 0.23,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/sableye"
-    },
-    {
-      "id": 393,
-      "name": "Piplup",
-      "rate": 0.23,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/piplup"
-    },
-    {
-      "id": 231,
-      "name": "Phanpy",
-      "rate": 0.23,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/phanpy"
-    },
-    {
-      "id": 227,
-      "name": "Skarmory",
-      "rate": 0.23,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/skarmory"
-    },
-    {
-      "id": 142,
-      "name": "Aerodactyl",
-      "rate": 0.23,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/aerodactyl"
-    },
-    {
-      "id": 775,
-      "name": "Komala",
-      "rate": 0.23,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/komala"
-    },
-    {
-      "id": 114,
-      "name": "Tangela",
-      "rate": 0.23,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/tangela"
-    },
-    {
-      "id": 554,
-      "name": "Darumaka",
-      "rate": 0.23,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/darumaka"
-    },
-    {
-      "id": 242,
-      "name": "Blissey",
-      "rate": 0.23,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/blissey"
+      "image_url": "https://rotomlabs.net/dex/shuckle"
     },
     {
       "id": 366,
@@ -1697,60 +1529,165 @@
       "image_url": "https://rotomlabs.net/dex/inkay"
     },
     {
-      "id": 449,
-      "name": "Hippopotas",
+      "id": 627,
+      "name": "Rufflet",
       "rate": 0.23,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/hippopotas"
+      "image_url": "https://rotomlabs.net/dex/rufflet"
     },
     {
-      "id": 158,
-      "name": "Totodile",
-      "rate": 0.22,
+      "id": 777,
+      "name": "Togedemaru",
+      "rate": 0.23,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/totodile"
+      "image_url": "https://rotomlabs.net/dex/togedemaru"
     },
     {
-      "id": 622,
-      "name": "Golett",
-      "rate": 0.22,
+      "id": 755,
+      "name": "Morelull",
+      "rate": 0.23,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/golett"
+      "image_url": "https://rotomlabs.net/dex/morelull"
     },
     {
-      "id": 441,
-      "name": "Chatot",
-      "rate": 0.22,
+      "id": 775,
+      "name": "Komala",
+      "rate": 0.23,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/chatot"
+      "image_url": "https://rotomlabs.net/dex/komala"
     },
     {
-      "id": 58,
-      "name": "Growlithe",
-      "rate": 0.22,
+      "id": 143,
+      "name": "Snorlax",
+      "rate": 0.23,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/growlithe"
+      "image_url": "https://rotomlabs.net/dex/snorlax"
+    },
+    {
+      "id": 524,
+      "name": "Roggenrola",
+      "rate": 0.23,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/roggenrola"
+    },
+    {
+      "id": 41,
+      "name": "Zubat",
+      "rate": 0.23,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/zubat"
+    },
+    {
+      "id": 554,
+      "name": "Darumaka",
+      "rate": 0.23,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/darumaka"
+    },
+    {
+      "id": 113,
+      "name": "Chansey",
+      "rate": 0.23,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/chansey"
+    },
+    {
+      "id": 303,
+      "name": "Mawile",
+      "rate": 0.23,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/mawile"
+    },
+    {
+      "id": 676,
+      "name": "Furfrou Natural",
+      "rate": 0.23,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/furfrou"
+    },
+    {
+      "id": 142,
+      "name": "Aerodactyl",
+      "rate": 0.23,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/aerodactyl"
+    },
+    {
+      "id": 451,
+      "name": "Skorupi",
+      "rate": 0.23,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/skorupi"
+    },
+    {
+      "id": 527,
+      "name": "Woobat",
+      "rate": 0.23,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/woobat"
     },
     {
       "id": 605,
       "name": "Elgyem",
-      "rate": 0.22,
+      "rate": 0.23,
       "shiny": true,
       "image_url": "https://rotomlabs.net/dex/elgyem"
     },
     {
-      "id": 202,
-      "name": "Wobbuffet",
-      "rate": 0.22,
+      "id": 343,
+      "name": "Baltoy",
+      "rate": 0.23,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/wobbuffet"
+      "image_url": "https://rotomlabs.net/dex/baltoy"
     },
     {
-      "id": 556,
-      "name": "Maractus",
+      "id": 227,
+      "name": "Skarmory",
+      "rate": 0.23,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/skarmory"
+    },
+    {
+      "id": 816,
+      "name": "Sobble",
+      "rate": 0.23,
+      "shiny": false,
+      "image_url": "https://rotomlabs.net/dex/sobble"
+    },
+    {
+      "id": 696,
+      "name": "Tyrunt",
+      "rate": 0.23,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/tyrunt"
+    },
+    {
+      "id": 176,
+      "name": "Togetic",
       "rate": 0.22,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/maractus"
+      "image_url": "https://rotomlabs.net/dex/togetic"
+    },
+    {
+      "id": 410,
+      "name": "Shieldon",
+      "rate": 0.22,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/shieldon"
+    },
+    {
+      "id": 50,
+      "name": "Diglett",
+      "rate": 0.22,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/diglett"
+    },
+    {
+      "id": 408,
+      "name": "Cranidos",
+      "rate": 0.22,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/cranidos"
     },
     {
       "id": 610,
@@ -1760,18 +1697,88 @@
       "image_url": "https://rotomlabs.net/dex/axew"
     },
     {
-      "id": 422,
-      "name": "Shellos East Sea",
-      "rate": 0.21,
+      "id": 242,
+      "name": "Blissey",
+      "rate": 0.22,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/shellos-east"
+      "image_url": "https://rotomlabs.net/dex/blissey"
     },
     {
-      "id": 50,
-      "name": "Diglett",
+      "id": 222,
+      "name": "Corsola",
+      "rate": 0.22,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/corsola"
+    },
+    {
+      "id": 202,
+      "name": "Wobbuffet",
+      "rate": 0.22,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/wobbuffet"
+    },
+    {
+      "id": 622,
+      "name": "Golett",
       "rate": 0.21,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/diglett"
+      "image_url": "https://rotomlabs.net/dex/golett"
+    },
+    {
+      "id": 302,
+      "name": "Sableye",
+      "rate": 0.21,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/sableye"
+    },
+    {
+      "id": 158,
+      "name": "Totodile",
+      "rate": 0.21,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/totodile"
+    },
+    {
+      "id": 556,
+      "name": "Maractus",
+      "rate": 0.21,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/maractus"
+    },
+    {
+      "id": 707,
+      "name": "Klefki",
+      "rate": 0.2,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/klefki"
+    },
+    {
+      "id": 216,
+      "name": "Teddiursa",
+      "rate": 0.2,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/teddiursa"
+    },
+    {
+      "id": 441,
+      "name": "Chatot",
+      "rate": 0.2,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/chatot"
+    },
+    {
+      "id": 626,
+      "name": "Bouffalant",
+      "rate": 0.2,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/bouffalant"
+    },
+    {
+      "id": 79,
+      "name": "Slowpoke",
+      "rate": 0.2,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/slowpoke"
     },
     {
       "id": 712,
@@ -1781,53 +1788,32 @@
       "image_url": "https://rotomlabs.net/dex/bergmite"
     },
     {
-      "id": 204,
-      "name": "Pineco",
+      "id": 95,
+      "name": "Onix",
       "rate": 0.2,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/pineco"
+      "image_url": "https://rotomlabs.net/dex/onix"
     },
     {
-      "id": 714,
-      "name": "Noibat",
+      "id": 58,
+      "name": "Growlithe",
       "rate": 0.2,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/noibat"
+      "image_url": "https://rotomlabs.net/dex/growlithe"
     },
     {
-      "id": 303,
-      "name": "Mawile",
-      "rate": 0.2,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/mawile"
-    },
-    {
-      "id": 703,
-      "name": "Carbink",
+      "id": 422,
+      "name": "Shellos East Sea",
       "rate": 0.19,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/carbink"
+      "image_url": "https://rotomlabs.net/dex/shellos-east"
     },
     {
-      "id": 707,
-      "name": "Klefki",
+      "id": 19,
+      "name": "Rattata Alola",
       "rate": 0.19,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/klefki"
-    },
-    {
-      "id": 100,
-      "name": "Voltorb",
-      "rate": 0.19,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/voltorb"
-    },
-    {
-      "id": 270,
-      "name": "Lotad",
-      "rate": 0.19,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/lotad"
+      "image_url": "https://rotomlabs.net/dex/rattata-alola"
     },
     {
       "id": 194,
@@ -1837,11 +1823,46 @@
       "image_url": "https://rotomlabs.net/dex/wooper-paldea"
     },
     {
-      "id": 79,
-      "name": "Slowpoke",
+      "id": 714,
+      "name": "Noibat",
+      "rate": 0.19,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/noibat"
+    },
+    {
+      "id": 140,
+      "name": "Kabuto",
+      "rate": 0.19,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/kabuto"
+    },
+    {
+      "id": 703,
+      "name": "Carbink",
+      "rate": 0.19,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/carbink"
+    },
+    {
+      "id": 747,
+      "name": "Mareanie",
       "rate": 0.18,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/slowpoke"
+      "image_url": "https://rotomlabs.net/dex/mareanie"
+    },
+    {
+      "id": 37,
+      "name": "Vulpix",
+      "rate": 0.18,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/vulpix"
+    },
+    {
+      "id": 74,
+      "name": "Geodude Alola",
+      "rate": 0.18,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/geodude-alola"
     },
     {
       "id": 214,
@@ -1851,53 +1872,25 @@
       "image_url": "https://rotomlabs.net/dex/heracross"
     },
     {
-      "id": 874,
-      "name": "Stonjourner",
-      "rate": 0.18,
-      "shiny": false,
-      "image_url": "https://rotomlabs.net/dex/stonjourner"
-    },
-    {
-      "id": 95,
-      "name": "Onix",
+      "id": 270,
+      "name": "Lotad",
       "rate": 0.18,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/onix"
+      "image_url": "https://rotomlabs.net/dex/lotad"
     },
     {
-      "id": 19,
-      "name": "Rattata Alola",
-      "rate": 0.18,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/rattata-alola"
-    },
-    {
-      "id": 37,
-      "name": "Vulpix",
+      "id": 100,
+      "name": "Voltorb",
       "rate": 0.17,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/vulpix"
+      "image_url": "https://rotomlabs.net/dex/voltorb"
     },
     {
-      "id": 741,
-      "name": "Oricorio Sensu Style",
+      "id": 541,
+      "name": "Swadloon",
       "rate": 0.17,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/oricorio-sensu"
-    },
-    {
-      "id": 74,
-      "name": "Geodude Alola",
-      "rate": 0.17,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/geodude-alola"
-    },
-    {
-      "id": 618,
-      "name": "Stunfisk",
-      "rate": 0.17,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/stunfisk"
+      "image_url": "https://rotomlabs.net/dex/swadloon"
     },
     {
       "id": 814,
@@ -1907,32 +1900,53 @@
       "image_url": "https://rotomlabs.net/dex/raboot"
     },
     {
-      "id": 140,
-      "name": "Kabuto",
+      "id": 874,
+      "name": "Stonjourner",
       "rate": 0.17,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/kabuto"
+      "shiny": false,
+      "image_url": "https://rotomlabs.net/dex/stonjourner"
     },
     {
-      "id": 77,
-      "name": "Ponyta",
+      "id": 207,
+      "name": "Gligar",
       "rate": 0.17,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/ponyta"
+      "image_url": "https://rotomlabs.net/dex/gligar"
     },
     {
-      "id": 132,
-      "name": "Ditto",
-      "rate": 0.17,
+      "id": 507,
+      "name": "Herdier",
+      "rate": 0.16,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/ditto"
+      "image_url": "https://rotomlabs.net/dex/herdier"
     },
     {
-      "id": 88,
-      "name": "Grimer",
-      "rate": 0.17,
+      "id": 455,
+      "name": "Carnivine",
+      "rate": 0.16,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/grimer"
+      "image_url": "https://rotomlabs.net/dex/carnivine"
+    },
+    {
+      "id": 618,
+      "name": "Stunfisk",
+      "rate": 0.16,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/stunfisk"
+    },
+    {
+      "id": 417,
+      "name": "Pachirisu",
+      "rate": 0.16,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/pachirisu"
+    },
+    {
+      "id": 422,
+      "name": "Shellos West Sea",
+      "rate": 0.16,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/shellos-west"
     },
     {
       "id": 263,
@@ -1942,60 +1956,81 @@
       "image_url": "https://rotomlabs.net/dex/zigzagoon-galarian"
     },
     {
-      "id": 207,
-      "name": "Gligar",
-      "rate": 0.16,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/gligar"
-    },
-    {
-      "id": 747,
-      "name": "Mareanie",
-      "rate": 0.16,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/mareanie"
-    },
-    {
-      "id": 541,
-      "name": "Swadloon",
-      "rate": 0.16,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/swadloon"
-    },
-    {
-      "id": 544,
-      "name": "Whirlipede",
-      "rate": 0.16,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/whirlipede"
-    },
-    {
-      "id": 422,
-      "name": "Shellos West Sea",
-      "rate": 0.15,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/shellos-west"
-    },
-    {
       "id": 536,
       "name": "Palpitoad",
-      "rate": 0.15,
+      "rate": 0.16,
       "shiny": true,
       "image_url": "https://rotomlabs.net/dex/palpitoad"
     },
     {
-      "id": 417,
-      "name": "Pachirisu",
+      "id": 132,
+      "name": "Ditto",
       "rate": 0.15,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/pachirisu"
+      "image_url": "https://rotomlabs.net/dex/ditto"
+    },
+    {
+      "id": 741,
+      "name": "Oricorio Sensu Style",
+      "rate": 0.15,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/oricorio-sensu"
+    },
+    {
+      "id": 77,
+      "name": "Ponyta",
+      "rate": 0.15,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/ponyta"
+    },
+    {
+      "id": 88,
+      "name": "Grimer",
+      "rate": 0.15,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/grimer"
+    },
+    {
+      "id": 544,
+      "name": "Whirlipede",
+      "rate": 0.15,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/whirlipede"
+    },
+    {
+      "id": 710,
+      "name": "Pumpkaboo Super",
+      "rate": 0.15,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/pumpkaboo-super"
+    },
+    {
+      "id": 779,
+      "name": "Bruxish",
+      "rate": 0.15,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/bruxish"
+    },
+    {
+      "id": 98,
+      "name": "Krabby",
+      "rate": 0.14,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/krabby"
     },
     {
       "id": 190,
       "name": "Aipom",
-      "rate": 0.15,
+      "rate": 0.14,
       "shiny": true,
       "image_url": "https://rotomlabs.net/dex/aipom"
+    },
+    {
+      "id": 204,
+      "name": "Pineco",
+      "rate": 0.14,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/pineco"
     },
     {
       "id": 910,
@@ -2005,46 +2040,39 @@
       "image_url": "https://rotomlabs.net/dex/crocalor"
     },
     {
+      "id": 370,
+      "name": "Luvdisc",
+      "rate": 0.14,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/luvdisc"
+    },
+    {
+      "id": 562,
+      "name": "Yamask",
+      "rate": 0.13,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/yamask"
+    },
+    {
+      "id": 17,
+      "name": "Pidgeotto",
+      "rate": 0.13,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/pidgeotto"
+    },
+    {
       "id": 662,
       "name": "Fletchinder",
-      "rate": 0.14,
+      "rate": 0.13,
       "shiny": true,
       "image_url": "https://rotomlabs.net/dex/fletchinder"
     },
     {
-      "id": 507,
-      "name": "Herdier",
-      "rate": 0.14,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/herdier"
-    },
-    {
-      "id": 973,
-      "name": "Flamigo",
-      "rate": 0.13,
-      "shiny": false,
-      "image_url": "https://rotomlabs.net/dex/flamigo"
-    },
-    {
-      "id": 779,
-      "name": "Bruxish",
+      "id": 765,
+      "name": "Oranguru",
       "rate": 0.13,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/bruxish"
-    },
-    {
-      "id": 24,
-      "name": "Arbok",
-      "rate": 0.13,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/arbok"
-    },
-    {
-      "id": 741,
-      "name": "Oricorio Pom-Pom Style",
-      "rate": 0.13,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/oricorio-pompom"
+      "image_url": "https://rotomlabs.net/dex/oranguru"
     },
     {
       "id": 669,
@@ -2054,60 +2082,46 @@
       "image_url": "https://rotomlabs.net/dex/flabebe-blue"
     },
     {
-      "id": 98,
-      "name": "Krabby",
-      "rate": 0.13,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/krabby"
-    },
-    {
-      "id": 19,
-      "name": "Rattata",
-      "rate": 0.13,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/rattata"
-    },
-    {
-      "id": 370,
-      "name": "Luvdisc",
-      "rate": 0.13,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/luvdisc"
-    },
-    {
-      "id": 455,
-      "name": "Carnivine",
-      "rate": 0.13,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/carnivine"
-    },
-    {
-      "id": 562,
-      "name": "Yamask Galarian",
-      "rate": 0.13,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/yamask-galarian"
-    },
-    {
-      "id": 562,
-      "name": "Yamask Galarian",
-      "rate": 0.13,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/yamask-galarian"
-    },
-    {
       "id": 726,
       "name": "Torracat",
-      "rate": 0.12,
+      "rate": 0.13,
       "shiny": true,
       "image_url": "https://rotomlabs.net/dex/torracat"
     },
     {
-      "id": 400,
-      "name": "Bibarel",
+      "id": 324,
+      "name": "Torkoal",
+      "rate": 0.13,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/torkoal"
+    },
+    {
+      "id": 359,
+      "name": "Absol",
       "rate": 0.12,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/bibarel"
+      "image_url": "https://rotomlabs.net/dex/absol"
+    },
+    {
+      "id": 19,
+      "name": "Rattata",
+      "rate": 0.12,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/rattata"
+    },
+    {
+      "id": 562,
+      "name": "Yamask Galarian",
+      "rate": 0.12,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/yamask-galarian"
+    },
+    {
+      "id": 11,
+      "name": "Metapod",
+      "rate": 0.12,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/metapod"
     },
     {
       "id": 766,
@@ -2117,18 +2131,18 @@
       "image_url": "https://rotomlabs.net/dex/passimian"
     },
     {
-      "id": 765,
-      "name": "Oranguru",
+      "id": 5,
+      "name": "Charmeleon",
       "rate": 0.12,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/oranguru"
+      "image_url": "https://rotomlabs.net/dex/charmeleon"
     },
     {
-      "id": 359,
-      "name": "Absol",
+      "id": 502,
+      "name": "Dewott",
       "rate": 0.12,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/absol"
+      "image_url": "https://rotomlabs.net/dex/dewott"
     },
     {
       "id": 90,
@@ -2145,60 +2159,25 @@
       "image_url": "https://rotomlabs.net/dex/gastrodon-east"
     },
     {
-      "id": 263,
-      "name": "Zigzagoon",
-      "rate": 0.12,
+      "id": 741,
+      "name": "Oricorio Pom-Pom Style",
+      "rate": 0.11,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/zigzagoon"
+      "image_url": "https://rotomlabs.net/dex/oricorio-pompom"
     },
     {
-      "id": 324,
-      "name": "Torkoal",
-      "rate": 0.12,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/torkoal"
+      "id": 973,
+      "name": "Flamigo",
+      "rate": 0.11,
+      "shiny": false,
+      "image_url": "https://rotomlabs.net/dex/flamigo"
     },
     {
       "id": 52,
-      "name": "Meowth",
-      "rate": 0.12,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/meowth"
-    },
-    {
-      "id": 710,
-      "name": "Pumpkaboo Super",
-      "rate": 0.12,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/pumpkaboo-super"
-    },
-    {
-      "id": 916,
-      "name": "Oinkologne Female",
+      "name": "Meowth Alola",
       "rate": 0.11,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/oinkologne-female"
-    },
-    {
-      "id": 74,
-      "name": "Geodude",
-      "rate": 0.11,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/geodude"
-    },
-    {
-      "id": 17,
-      "name": "Pidgeotto",
-      "rate": 0.11,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/pidgeotto"
-    },
-    {
-      "id": 120,
-      "name": "Staryu",
-      "rate": 0.11,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/staryu"
+      "image_url": "https://rotomlabs.net/dex/meowth-alola"
     },
     {
       "id": 499,
@@ -2208,32 +2187,67 @@
       "image_url": "https://rotomlabs.net/dex/pignite"
     },
     {
-      "id": 11,
-      "name": "Metapod",
+      "id": 907,
+      "name": "Floragato",
       "rate": 0.11,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/metapod"
+      "image_url": "https://rotomlabs.net/dex/floragato"
     },
     {
-      "id": 670,
-      "name": "Floette Blue Flower",
+      "id": 263,
+      "name": "Zigzagoon",
       "rate": 0.11,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/floette-blue"
+      "image_url": "https://rotomlabs.net/dex/zigzagoon"
     },
     {
-      "id": 5,
-      "name": "Charmeleon",
-      "rate": 0.1,
+      "id": 24,
+      "name": "Arbok",
+      "rate": 0.11,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/charmeleon"
+      "image_url": "https://rotomlabs.net/dex/arbok"
     },
     {
-      "id": 156,
-      "name": "Quilava",
+      "id": 52,
+      "name": "Meowth Alola",
+      "rate": 0.11,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/meowth-alola"
+    },
+    {
+      "id": 916,
+      "name": "Oinkologne",
+      "rate": 0.11,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/oinkologne"
+    },
+    {
+      "id": 822,
+      "name": "Corvisquire",
+      "rate": 0.11,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/corvisquire"
+    },
+    {
+      "id": 916,
+      "name": "Oinkologne Female",
       "rate": 0.1,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/quilava"
+      "image_url": "https://rotomlabs.net/dex/oinkologne-female"
+    },
+    {
+      "id": 400,
+      "name": "Bibarel",
+      "rate": 0.1,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/bibarel"
+    },
+    {
+      "id": 669,
+      "name": "Flab\u00e9b\u00e9 Yellow Flower",
+      "rate": 0.1,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/flabebe-yellow"
     },
     {
       "id": 88,
@@ -2243,53 +2257,32 @@
       "image_url": "https://rotomlabs.net/dex/grimer-alola"
     },
     {
-      "id": 37,
-      "name": "Vulpix Alola",
+      "id": 156,
+      "name": "Quilava",
       "rate": 0.1,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/vulpix-alola"
+      "image_url": "https://rotomlabs.net/dex/quilava"
     },
     {
-      "id": 22,
-      "name": "Fearow",
+      "id": 74,
+      "name": "Geodude",
       "rate": 0.1,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/fearow"
+      "image_url": "https://rotomlabs.net/dex/geodude"
     },
     {
-      "id": 226,
-      "name": "Mantine",
+      "id": 120,
+      "name": "Staryu",
       "rate": 0.1,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/mantine"
+      "image_url": "https://rotomlabs.net/dex/staryu"
     },
     {
       "id": 710,
-      "name": "Pumpkaboo Small",
+      "name": "Pumpkaboo Average",
       "rate": 0.1,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/pumpkaboo"
-    },
-    {
-      "id": 52,
-      "name": "Meowth Alola",
-      "rate": 0.1,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/meowth-alola"
-    },
-    {
-      "id": 502,
-      "name": "Dewott",
-      "rate": 0.1,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/dewott"
-    },
-    {
-      "id": 907,
-      "name": "Floragato",
-      "rate": 0.1,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/floragato"
+      "image_url": "https://rotomlabs.net/dex/pumpkaboo-average"
     },
     {
       "id": 732,
@@ -2299,102 +2292,18 @@
       "image_url": "https://rotomlabs.net/dex/trumbeak"
     },
     {
+      "id": 670,
+      "name": "Floette Blue Flower",
+      "rate": 0.1,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/floette-blue"
+    },
+    {
       "id": 14,
       "name": "Kakuna",
-      "rate": 0.09,
+      "rate": 0.1,
       "shiny": true,
       "image_url": "https://rotomlabs.net/dex/kakuna"
-    },
-    {
-      "id": 40,
-      "name": "Wigglytuff",
-      "rate": 0.09,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/wigglytuff"
-    },
-    {
-      "id": 20,
-      "name": "Raticate",
-      "rate": 0.09,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/raticate"
-    },
-    {
-      "id": 423,
-      "name": "Gastrodon West Sea",
-      "rate": 0.09,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/gastrodon-west"
-    },
-    {
-      "id": 2,
-      "name": "Ivysaur",
-      "rate": 0.09,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/ivysaur"
-    },
-    {
-      "id": 167,
-      "name": "Spinarak",
-      "rate": 0.09,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/spinarak"
-    },
-    {
-      "id": 618,
-      "name": "Stunfisk Galarian",
-      "rate": 0.09,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/stunfisk-galarian"
-    },
-    {
-      "id": 496,
-      "name": "Servine",
-      "rate": 0.09,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/servine"
-    },
-    {
-      "id": 669,
-      "name": "Flab\u00e9b\u00e9 Yellow Flower",
-      "rate": 0.09,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/flabebe-yellow"
-    },
-    {
-      "id": 710,
-      "name": "Pumpkaboo Average",
-      "rate": 0.09,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/pumpkaboo-average"
-    },
-    {
-      "id": 723,
-      "name": "Dartrix",
-      "rate": 0.09,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/dartrix"
-    },
-    {
-      "id": 916,
-      "name": "Oinkologne",
-      "rate": 0.09,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/oinkologne"
-    },
-    {
-      "id": 262,
-      "name": "Mightyena",
-      "rate": 0.09,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/mightyena"
-    },
-    {
-      "id": 822,
-      "name": "Corvisquire",
-      "rate": 0.09,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/corvisquire"
     },
     {
       "id": 520,
@@ -2404,32 +2313,102 @@
       "image_url": "https://rotomlabs.net/dex/tranquill"
     },
     {
-      "id": 188,
-      "name": "Skiploom",
+      "id": 37,
+      "name": "Vulpix Alola",
       "rate": 0.09,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/skiploom"
+      "image_url": "https://rotomlabs.net/dex/vulpix-alola"
     },
     {
-      "id": 670,
-      "name": "Floette Yellow Flower",
-      "rate": 0.08,
+      "id": 226,
+      "name": "Mantine",
+      "rate": 0.09,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/floette-yellow"
+      "image_url": "https://rotomlabs.net/dex/mantine"
     },
     {
-      "id": 575,
-      "name": "Gothorita",
-      "rate": 0.08,
+      "id": 832,
+      "name": "Dubwool",
+      "rate": 0.09,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/gothorita"
+      "image_url": "https://rotomlabs.net/dex/dubwool"
     },
     {
-      "id": 194,
-      "name": "Wooper",
+      "id": 710,
+      "name": "Pumpkaboo Small",
+      "rate": 0.09,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/pumpkaboo"
+    },
+    {
+      "id": 22,
+      "name": "Fearow",
+      "rate": 0.09,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/fearow"
+    },
+    {
+      "id": 20,
+      "name": "Raticate",
+      "rate": 0.09,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/raticate"
+    },
+    {
+      "id": 618,
+      "name": "Stunfisk Galarian",
+      "rate": 0.09,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/stunfisk-galarian"
+    },
+    {
+      "id": 412,
+      "name": "Burmy Sandy Cloak",
       "rate": 0.08,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/wooper"
+      "image_url": "https://rotomlabs.net/dex/burmy-sandy"
+    },
+    {
+      "id": 496,
+      "name": "Servine",
+      "rate": 0.08,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/servine"
+    },
+    {
+      "id": 423,
+      "name": "Gastrodon West Sea",
+      "rate": 0.08,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/gastrodon-west"
+    },
+    {
+      "id": 2,
+      "name": "Ivysaur",
+      "rate": 0.08,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/ivysaur"
+    },
+    {
+      "id": 723,
+      "name": "Dartrix",
+      "rate": 0.08,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/dartrix"
+    },
+    {
+      "id": 167,
+      "name": "Spinarak",
+      "rate": 0.08,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/spinarak"
+    },
+    {
+      "id": 52,
+      "name": "Meowth Galarian",
+      "rate": 0.08,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/meowth-galarian"
     },
     {
       "id": 77,
@@ -2439,25 +2418,11 @@
       "image_url": "https://rotomlabs.net/dex/ponyta-galarian"
     },
     {
-      "id": 922,
-      "name": "Pawmo",
+      "id": 262,
+      "name": "Mightyena",
       "rate": 0.08,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/pawmo"
-    },
-    {
-      "id": 832,
-      "name": "Dubwool",
-      "rate": 0.08,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/dubwool"
-    },
-    {
-      "id": 8,
-      "name": "Wartortle",
-      "rate": 0.07,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/wartortle"
+      "image_url": "https://rotomlabs.net/dex/mightyena"
     },
     {
       "id": 363,
@@ -2467,32 +2432,11 @@
       "image_url": "https://rotomlabs.net/dex/spheal"
     },
     {
-      "id": 448,
-      "name": "Lucario",
-      "rate": 0.07,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/lucario"
-    },
-    {
       "id": 103,
       "name": "Exeggutor",
       "rate": 0.07,
       "shiny": true,
       "image_url": "https://rotomlabs.net/dex/exeggutor"
-    },
-    {
-      "id": 153,
-      "name": "Bayleef",
-      "rate": 0.07,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/bayleef"
-    },
-    {
-      "id": 52,
-      "name": "Meowth Galarian",
-      "rate": 0.07,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/meowth-galarian"
     },
     {
       "id": 820,
@@ -2502,130 +2446,151 @@
       "image_url": "https://rotomlabs.net/dex/greedent"
     },
     {
-      "id": 79,
-      "name": "Slowpoke Galarian",
-      "rate": 0.07,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/slowpoke-galarian"
-    },
-    {
-      "id": 764,
-      "name": "Comfey",
-      "rate": 0.06,
-      "shiny": false,
-      "image_url": "https://rotomlabs.net/dex/comfey"
-    },
-    {
-      "id": 743,
-      "name": "Ribombee",
-      "rate": 0.06,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/ribombee"
-    },
-    {
-      "id": 397,
-      "name": "Staravia",
-      "rate": 0.06,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/staravia"
-    },
-    {
-      "id": 836,
-      "name": "Boltund",
-      "rate": 0.06,
-      "shiny": false,
-      "image_url": "https://rotomlabs.net/dex/boltund"
-    },
-    {
-      "id": 169,
-      "name": "Crobat",
-      "rate": 0.06,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/crobat"
-    },
-    {
       "id": 264,
       "name": "Linoone Galarian",
-      "rate": 0.06,
+      "rate": 0.07,
       "shiny": true,
       "image_url": "https://rotomlabs.net/dex/linoone-galarian"
     },
     {
-      "id": 428,
-      "name": "Lopunny",
-      "rate": 0.06,
+      "id": 169,
+      "name": "Crobat",
+      "rate": 0.07,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/lopunny"
+      "image_url": "https://rotomlabs.net/dex/crobat"
     },
     {
-      "id": 412,
-      "name": "Burmy Sandy Cloak or Burmy Trash Cloak",
-      "rate": 0.06,
+      "id": 728,
+      "name": "Popplio",
+      "rate": 0.07,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/burmy-sandy-cloak-or-burmy-trash-cloak"
+      "image_url": "https://rotomlabs.net/dex/popplio"
     },
     {
-      "id": 86,
-      "name": "Seel",
-      "rate": 0.06,
+      "id": 188,
+      "name": "Skiploom",
+      "rate": 0.07,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/seel"
+      "image_url": "https://rotomlabs.net/dex/skiploom"
     },
     {
-      "id": 660,
-      "name": "Diggersby",
-      "rate": 0.06,
+      "id": 40,
+      "name": "Wigglytuff",
+      "rate": 0.07,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/diggersby"
+      "image_url": "https://rotomlabs.net/dex/wigglytuff"
     },
     {
-      "id": 50,
-      "name": "Diglett Alola",
-      "rate": 0.06,
+      "id": 194,
+      "name": "Wooper",
+      "rate": 0.07,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/diglett-alola"
-    },
-    {
-      "id": 432,
-      "name": "Purugly",
-      "rate": 0.06,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/purugly"
+      "image_url": "https://rotomlabs.net/dex/wooper"
     },
     {
       "id": 100,
       "name": "Voltorb Hisuian",
-      "rate": 0.06,
+      "rate": 0.07,
       "shiny": true,
       "image_url": "https://rotomlabs.net/dex/voltorb-hisuian"
     },
     {
-      "id": 412,
-      "name": "Burmy Sandy Cloak or Burmy Trash Cloak",
-      "rate": 0.06,
+      "id": 20,
+      "name": "Raticate Alola",
+      "rate": 0.07,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/burmy-sandy-cloak-or-burmy-trash-cloak"
+      "image_url": "https://rotomlabs.net/dex/raticate-alola"
     },
     {
-      "id": 710,
-      "name": "Pumpkaboo Large",
-      "rate": 0.06,
+      "id": 575,
+      "name": "Gothorita",
+      "rate": 0.07,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/pumpkaboo-large"
+      "image_url": "https://rotomlabs.net/dex/gothorita"
+    },
+    {
+      "id": 153,
+      "name": "Bayleef",
+      "rate": 0.07,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/bayleef"
+    },
+    {
+      "id": 608,
+      "name": "Lampent",
+      "rate": 0.07,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/lampent"
     },
     {
       "id": 388,
       "name": "Grotle",
-      "rate": 0.06,
+      "rate": 0.07,
       "shiny": true,
       "image_url": "https://rotomlabs.net/dex/grotle"
     },
     {
-      "id": 178,
-      "name": "Xatu",
+      "id": 8,
+      "name": "Wartortle",
+      "rate": 0.07,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/wartortle"
+    },
+    {
+      "id": 764,
+      "name": "Comfey",
+      "rate": 0.07,
+      "shiny": false,
+      "image_url": "https://rotomlabs.net/dex/comfey"
+    },
+    {
+      "id": 397,
+      "name": "Staravia",
+      "rate": 0.07,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/staravia"
+    },
+    {
+      "id": 670,
+      "name": "Floette Yellow Flower",
+      "rate": 0.07,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/floette-yellow"
+    },
+    {
+      "id": 922,
+      "name": "Pawmo",
+      "rate": 0.07,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/pawmo"
+    },
+    {
+      "id": 710,
+      "name": "Pumpkaboo Large",
+      "rate": 0.07,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/pumpkaboo-large"
+    },
+    {
+      "id": 885,
+      "name": "Dreepy",
+      "rate": 0.06,
+      "shiny": false,
+      "image_url": "https://rotomlabs.net/dex/dreepy"
+    },
+    {
+      "id": 448,
+      "name": "Lucario",
       "rate": 0.06,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/xatu"
+      "image_url": "https://rotomlabs.net/dex/lucario"
+    },
+    {
+      "id": 412,
+      "name": "Burmy Trash Cloak or Burmy Plant Cloak",
+      "rate": 0.06,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/burmy-trash-cloak-or-burmy-plant-cloak"
     },
     {
       "id": 505,
@@ -2635,46 +2600,109 @@
       "image_url": "https://rotomlabs.net/dex/watchog"
     },
     {
-      "id": 20,
-      "name": "Raticate Alola",
+      "id": 412,
+      "name": "Burmy Trash Cloak or Burmy Plant Cloak",
       "rate": 0.06,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/raticate-alola"
+      "image_url": "https://rotomlabs.net/dex/burmy-trash-cloak-or-burmy-plant-cloak"
     },
     {
-      "id": 728,
-      "name": "Popplio",
-      "rate": 0.05,
+      "id": 79,
+      "name": "Slowpoke Galarian",
+      "rate": 0.06,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/popplio"
+      "image_url": "https://rotomlabs.net/dex/slowpoke-galarian"
+    },
+    {
+      "id": 277,
+      "name": "Swellow",
+      "rate": 0.06,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/swellow"
+    },
+    {
+      "id": 50,
+      "name": "Diglett Alola",
+      "rate": 0.06,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/diglett-alola"
+    },
+    {
+      "id": 836,
+      "name": "Boltund",
+      "rate": 0.06,
+      "shiny": false,
+      "image_url": "https://rotomlabs.net/dex/boltund"
+    },
+    {
+      "id": 660,
+      "name": "Diggersby",
+      "rate": 0.06,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/diggersby"
+    },
+    {
+      "id": 284,
+      "name": "Masquerain",
+      "rate": 0.06,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/masquerain"
+    },
+    {
+      "id": 432,
+      "name": "Purugly",
+      "rate": 0.06,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/purugly"
     },
     {
       "id": 28,
       "name": "Sandslash",
-      "rate": 0.05,
+      "rate": 0.06,
       "shiny": true,
       "image_url": "https://rotomlabs.net/dex/sandslash"
     },
     {
-      "id": 131,
-      "name": "Lapras",
+      "id": 817,
+      "name": "Drizzile",
       "rate": 0.05,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/lapras"
+      "shiny": false,
+      "image_url": "https://rotomlabs.net/dex/drizzile"
     },
     {
-      "id": 26,
-      "name": "Raichu",
+      "id": 30,
+      "name": "Nidorina",
       "rate": 0.05,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/raichu"
+      "image_url": "https://rotomlabs.net/dex/nidorina"
     },
     {
-      "id": 913,
-      "name": "Quaxwell",
+      "id": 264,
+      "name": "Linoone",
       "rate": 0.05,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/quaxwell"
+      "image_url": "https://rotomlabs.net/dex/linoone"
+    },
+    {
+      "id": 178,
+      "name": "Xatu",
+      "rate": 0.05,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/xatu"
+    },
+    {
+      "id": 428,
+      "name": "Lopunny",
+      "rate": 0.05,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/lopunny"
+    },
+    {
+      "id": 75,
+      "name": "Graveler Alola",
+      "rate": 0.05,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/graveler-alola"
     },
     {
       "id": 753,
@@ -2684,32 +2712,18 @@
       "image_url": "https://rotomlabs.net/dex/fomantis"
     },
     {
-      "id": 284,
-      "name": "Masquerain",
+      "id": 86,
+      "name": "Seel",
       "rate": 0.05,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/masquerain"
+      "image_url": "https://rotomlabs.net/dex/seel"
     },
     {
-      "id": 669,
-      "name": "Flab\u00e9b\u00e9 White Flower",
+      "id": 317,
+      "name": "Swalot",
       "rate": 0.05,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/flabebe-white"
-    },
-    {
-      "id": 53,
-      "name": "Persian Alola",
-      "rate": 0.05,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/persian-alola"
-    },
-    {
-      "id": 132,
-      "name": "Ditto",
-      "rate": 0.05,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/ditto"
+      "image_url": "https://rotomlabs.net/dex/swalot"
     },
     {
       "id": 426,
@@ -2717,6 +2731,34 @@
       "rate": 0.05,
       "shiny": true,
       "image_url": "https://rotomlabs.net/dex/drifblim"
+    },
+    {
+      "id": 131,
+      "name": "Lapras",
+      "rate": 0.05,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/lapras"
+    },
+    {
+      "id": 97,
+      "name": "Hypno",
+      "rate": 0.05,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/hypno"
+    },
+    {
+      "id": 369,
+      "name": "Relicanth",
+      "rate": 0.05,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/relicanth"
+    },
+    {
+      "id": 510,
+      "name": "Liepard",
+      "rate": 0.05,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/liepard"
     },
     {
       "id": 58,
@@ -2733,25 +2775,39 @@
       "image_url": "https://rotomlabs.net/dex/thievul"
     },
     {
-      "id": 608,
-      "name": "Lampent",
+      "id": 132,
+      "name": "Ditto",
       "rate": 0.05,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/lampent"
+      "image_url": "https://rotomlabs.net/dex/ditto"
     },
     {
-      "id": 277,
-      "name": "Swellow",
-      "rate": 0.05,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/swellow"
-    },
-    {
-      "id": 85,
-      "name": "Dodrio",
+      "id": 26,
+      "name": "Raichu",
       "rate": 0.04,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/dodrio"
+      "image_url": "https://rotomlabs.net/dex/raichu"
+    },
+    {
+      "id": 101,
+      "name": "Electrode",
+      "rate": 0.04,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/electrode"
+    },
+    {
+      "id": 741,
+      "name": "Oricorio Baile Style",
+      "rate": 0.04,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/oricorio-baile"
+    },
+    {
+      "id": 743,
+      "name": "Ribombee",
+      "rate": 0.04,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/ribombee"
     },
     {
       "id": 281,
@@ -2759,27 +2815,6 @@
       "rate": 0.04,
       "shiny": true,
       "image_url": "https://rotomlabs.net/dex/kirlia"
-    },
-    {
-      "id": 75,
-      "name": "Graveler Alola",
-      "rate": 0.04,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/graveler-alola"
-    },
-    {
-      "id": 690,
-      "name": "Skrelp",
-      "rate": 0.04,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/skrelp"
-    },
-    {
-      "id": 323,
-      "name": "Camerupt",
-      "rate": 0.04,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/camerupt"
     },
     {
       "id": 596,
@@ -2790,59 +2825,10 @@
     },
     {
       "id": 89,
-      "name": "Muk",
+      "name": "Muk or Muk Alola",
       "rate": 0.04,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/muk"
-    },
-    {
-      "id": 170,
-      "name": "Chinchou",
-      "rate": 0.04,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/chinchou"
-    },
-    {
-      "id": 369,
-      "name": "Relicanth",
-      "rate": 0.04,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/relicanth"
-    },
-    {
-      "id": 97,
-      "name": "Hypno",
-      "rate": 0.04,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/hypno"
-    },
-    {
-      "id": 885,
-      "name": "Dreepy",
-      "rate": 0.04,
-      "shiny": false,
-      "image_url": "https://rotomlabs.net/dex/dreepy"
-    },
-    {
-      "id": 669,
-      "name": "Flab\u00e9b\u00e9 Orange Flower",
-      "rate": 0.04,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/flabebe-orange"
-    },
-    {
-      "id": 412,
-      "name": "Burmy Plant Cloak",
-      "rate": 0.04,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/burmy-plant"
-    },
-    {
-      "id": 592,
-      "name": "Frillish Female",
-      "rate": 0.04,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/frillish-female"
+      "image_url": "https://rotomlabs.net/dex/muk-or-muk-alola"
     },
     {
       "id": 33,
@@ -2850,20 +2836,6 @@
       "rate": 0.04,
       "shiny": true,
       "image_url": "https://rotomlabs.net/dex/nidorino"
-    },
-    {
-      "id": 30,
-      "name": "Nidorina",
-      "rate": 0.04,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/nidorina"
-    },
-    {
-      "id": 510,
-      "name": "Liepard",
-      "rate": 0.04,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/liepard"
     },
     {
       "id": 782,
@@ -2874,17 +2846,80 @@
     },
     {
       "id": 53,
-      "name": "Persian",
+      "name": "Persian Alola",
       "rate": 0.04,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/persian"
+      "image_url": "https://rotomlabs.net/dex/persian-alola"
     },
     {
-      "id": 741,
-      "name": "Oricorio Baile Style",
+      "id": 83,
+      "name": "Farfetch'd Galarian",
       "rate": 0.04,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/oricorio-baile"
+      "image_url": "https://rotomlabs.net/dex/farfetchd-galarian"
+    },
+    {
+      "id": 913,
+      "name": "Quaxwell",
+      "rate": 0.04,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/quaxwell"
+    },
+    {
+      "id": 391,
+      "name": "Monferno",
+      "rate": 0.04,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/monferno"
+    },
+    {
+      "id": 215,
+      "name": "Sneasel Hisuian",
+      "rate": 0.04,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/sneasel-hisuian"
+    },
+    {
+      "id": 110,
+      "name": "Weezing",
+      "rate": 0.04,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/weezing"
+    },
+    {
+      "id": 89,
+      "name": "Muk or Muk Alola",
+      "rate": 0.04,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/muk-or-muk-alola"
+    },
+    {
+      "id": 690,
+      "name": "Skrelp",
+      "rate": 0.04,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/skrelp"
+    },
+    {
+      "id": 669,
+      "name": "Flab\u00e9b\u00e9 Orange Flower",
+      "rate": 0.04,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/flabebe-orange"
+    },
+    {
+      "id": 811,
+      "name": "Thwackey",
+      "rate": 0.04,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/thwackey"
+    },
+    {
+      "id": 93,
+      "name": "Haunter",
+      "rate": 0.04,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/haunter"
     },
     {
       "id": 115,
@@ -2894,230 +2929,6 @@
       "image_url": "https://rotomlabs.net/dex/kangaskhan"
     },
     {
-      "id": 264,
-      "name": "Linoone",
-      "rate": 0.04,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/linoone"
-    },
-    {
-      "id": 613,
-      "name": "Cubchoo",
-      "rate": 0.04,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/cubchoo"
-    },
-    {
-      "id": 817,
-      "name": "Drizzile",
-      "rate": 0.04,
-      "shiny": false,
-      "image_url": "https://rotomlabs.net/dex/drizzile"
-    },
-    {
-      "id": 215,
-      "name": "Sneasel Hisuian",
-      "rate": 0.03,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/sneasel-hisuian"
-    },
-    {
-      "id": 67,
-      "name": "Machoke",
-      "rate": 0.03,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/machoke"
-    },
-    {
-      "id": 279,
-      "name": "Pelipper",
-      "rate": 0.03,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/pelipper"
-    },
-    {
-      "id": 93,
-      "name": "Haunter",
-      "rate": 0.03,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/haunter"
-    },
-    {
-      "id": 72,
-      "name": "Tentacool",
-      "rate": 0.03,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/tentacool"
-    },
-    {
-      "id": 857,
-      "name": "Hattrem",
-      "rate": 0.03,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/hattrem"
-    },
-    {
-      "id": 927,
-      "name": "Dachsbun",
-      "rate": 0.03,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/dachsbun"
-    },
-    {
-      "id": 162,
-      "name": "Furret",
-      "rate": 0.03,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/furret"
-    },
-    {
-      "id": 180,
-      "name": "Flaaffy",
-      "rate": 0.03,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/flaaffy"
-    },
-    {
-      "id": 530,
-      "name": "Excadrill",
-      "rate": 0.03,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/excadrill"
-    },
-    {
-      "id": 110,
-      "name": "Weezing",
-      "rate": 0.03,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/weezing"
-    },
-    {
-      "id": 566,
-      "name": "Archen",
-      "rate": 0.03,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/archen"
-    },
-    {
-      "id": 698,
-      "name": "Amaura",
-      "rate": 0.03,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/amaura"
-    },
-    {
-      "id": 59,
-      "name": "Arcanine",
-      "rate": 0.03,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/arcanine"
-    },
-    {
-      "id": 669,
-      "name": "Flab\u00e9b\u00e9 Red Flower",
-      "rate": 0.03,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/flabebe-red"
-    },
-    {
-      "id": 830,
-      "name": "Eldegoss",
-      "rate": 0.03,
-      "shiny": false,
-      "image_url": "https://rotomlabs.net/dex/eldegoss"
-    },
-    {
-      "id": 811,
-      "name": "Thwackey",
-      "rate": 0.03,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/thwackey"
-    },
-    {
-      "id": 112,
-      "name": "Rhydon",
-      "rate": 0.03,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/rhydon"
-    },
-    {
-      "id": 443,
-      "name": "Gible",
-      "rate": 0.03,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/gible"
-    },
-    {
-      "id": 89,
-      "name": "Muk Alola",
-      "rate": 0.03,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/muk-alola"
-    },
-    {
-      "id": 357,
-      "name": "Tropius",
-      "rate": 0.03,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/tropius"
-    },
-    {
-      "id": 391,
-      "name": "Monferno",
-      "rate": 0.03,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/monferno"
-    },
-    {
-      "id": 317,
-      "name": "Swalot",
-      "rate": 0.03,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/swalot"
-    },
-    {
-      "id": 83,
-      "name": "Farfetch'd Galarian",
-      "rate": 0.03,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/farfetchd-galarian"
-    },
-    {
-      "id": 105,
-      "name": "Marowak",
-      "rate": 0.03,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/marowak"
-    },
-    {
-      "id": 159,
-      "name": "Croconaw",
-      "rate": 0.03,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/croconaw"
-    },
-    {
-      "id": 274,
-      "name": "Nuzleaf",
-      "rate": 0.03,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/nuzleaf"
-    },
-    {
-      "id": 64,
-      "name": "Kadabra",
-      "rate": 0.03,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/kadabra"
-    },
-    {
-      "id": 253,
-      "name": "Grovyle",
-      "rate": 0.03,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/grovyle"
-    },
-    {
       "id": 294,
       "name": "Loudred",
       "rate": 0.03,
@@ -3125,18 +2936,11 @@
       "image_url": "https://rotomlabs.net/dex/loudred"
     },
     {
-      "id": 259,
-      "name": "Marshtomp",
+      "id": 85,
+      "name": "Dodrio",
       "rate": 0.03,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/marshtomp"
-    },
-    {
-      "id": 75,
-      "name": "Graveler",
-      "rate": 0.03,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/graveler"
+      "image_url": "https://rotomlabs.net/dex/dodrio"
     },
     {
       "id": 220,
@@ -3146,6 +2950,90 @@
       "image_url": "https://rotomlabs.net/dex/swinub"
     },
     {
+      "id": 592,
+      "name": "Frillish Female",
+      "rate": 0.03,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/frillish-female"
+    },
+    {
+      "id": 246,
+      "name": "Larvitar",
+      "rate": 0.03,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/larvitar"
+    },
+    {
+      "id": 929,
+      "name": "Dolliv",
+      "rate": 0.03,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/dolliv"
+    },
+    {
+      "id": 64,
+      "name": "Kadabra",
+      "rate": 0.03,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/kadabra"
+    },
+    {
+      "id": 38,
+      "name": "Ninetales Alola",
+      "rate": 0.03,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/ninetales-alola"
+    },
+    {
+      "id": 256,
+      "name": "Combusken",
+      "rate": 0.03,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/combusken"
+    },
+    {
+      "id": 67,
+      "name": "Machoke",
+      "rate": 0.03,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/machoke"
+    },
+    {
+      "id": 669,
+      "name": "Flab\u00e9b\u00e9 Red Flower or Flab\u00e9b\u00e9 White Flower",
+      "rate": 0.03,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/flabebe-red-flower-or-flabebe-white-flower"
+    },
+    {
+      "id": 53,
+      "name": "Persian",
+      "rate": 0.03,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/persian"
+    },
+    {
+      "id": 357,
+      "name": "Tropius",
+      "rate": 0.03,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/tropius"
+    },
+    {
+      "id": 830,
+      "name": "Eldegoss",
+      "rate": 0.03,
+      "shiny": false,
+      "image_url": "https://rotomlabs.net/dex/eldegoss"
+    },
+    {
+      "id": 59,
+      "name": "Arcanine",
+      "rate": 0.03,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/arcanine"
+    },
+    {
       "id": 356,
       "name": "Dusclops",
       "rate": 0.03,
@@ -3153,18 +3041,165 @@
       "image_url": "https://rotomlabs.net/dex/dusclops"
     },
     {
-      "id": 670,
-      "name": "Floette Red Flower",
+      "id": 402,
+      "name": "Kricketune",
       "rate": 0.03,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/floette-red"
+      "image_url": "https://rotomlabs.net/dex/kricketune"
     },
     {
-      "id": 500,
-      "name": "Emboar",
+      "id": 253,
+      "name": "Grovyle",
+      "rate": 0.03,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/grovyle"
+    },
+    {
+      "id": 279,
+      "name": "Pelipper",
+      "rate": 0.03,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/pelipper"
+    },
+    {
+      "id": 259,
+      "name": "Marshtomp",
+      "rate": 0.03,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/marshtomp"
+    },
+    {
+      "id": 105,
+      "name": "Marowak",
+      "rate": 0.03,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/marowak"
+    },
+    {
+      "id": 180,
+      "name": "Flaaffy",
+      "rate": 0.03,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/flaaffy"
+    },
+    {
+      "id": 210,
+      "name": "Granbull",
+      "rate": 0.03,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/granbull"
+    },
+    {
+      "id": 159,
+      "name": "Croconaw",
+      "rate": 0.03,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/croconaw"
+    },
+    {
+      "id": 75,
+      "name": "Graveler",
+      "rate": 0.03,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/graveler"
+    },
+    {
+      "id": 530,
+      "name": "Excadrill",
+      "rate": 0.03,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/excadrill"
+    },
+    {
+      "id": 443,
+      "name": "Gible",
+      "rate": 0.03,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/gible"
+    },
+    {
+      "id": 170,
+      "name": "Chinchou",
+      "rate": 0.03,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/chinchou"
+    },
+    {
+      "id": 323,
+      "name": "Camerupt",
+      "rate": 0.03,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/camerupt"
+    },
+    {
+      "id": 698,
+      "name": "Amaura",
+      "rate": 0.03,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/amaura"
+    },
+    {
+      "id": 563,
+      "name": "Cofagrigus",
+      "rate": 0.03,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/cofagrigus"
+    },
+    {
+      "id": 613,
+      "name": "Cubchoo",
+      "rate": 0.03,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/cubchoo"
+    },
+    {
+      "id": 857,
+      "name": "Hattrem",
+      "rate": 0.03,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/hattrem"
+    },
+    {
+      "id": 112,
+      "name": "Rhydon",
+      "rate": 0.03,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/rhydon"
+    },
+    {
+      "id": 72,
+      "name": "Tentacool",
+      "rate": 0.03,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/tentacool"
+    },
+    {
+      "id": 669,
+      "name": "Flab\u00e9b\u00e9 Red Flower or Flab\u00e9b\u00e9 White Flower",
+      "rate": 0.03,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/flabebe-red-flower-or-flabebe-white-flower"
+    },
+    {
+      "id": 6,
+      "name": "Charizard",
       "rate": 0.02,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/emboar"
+      "image_url": "https://rotomlabs.net/dex/charizard"
+    },
+    {
+      "id": 166,
+      "name": "Ledian",
+      "rate": 0.02,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/ledian"
+    },
+    {
+      "id": 663,
+      "name": "Talonflame",
+      "rate": 0.02,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/talonflame"
     },
     {
       "id": 286,
@@ -3174,18 +3209,123 @@
       "image_url": "https://rotomlabs.net/dex/breloom"
     },
     {
-      "id": 215,
-      "name": "Sneasel",
+      "id": 394,
+      "name": "Prinplup",
       "rate": 0.02,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/sneasel"
+      "image_url": "https://rotomlabs.net/dex/prinplup"
     },
     {
-      "id": 347,
-      "name": "Anorith",
+      "id": 305,
+      "name": "Lairon",
       "rate": 0.02,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/anorith"
+      "image_url": "https://rotomlabs.net/dex/lairon"
+    },
+    {
+      "id": 80,
+      "name": "Slowbro",
+      "rate": 0.02,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/slowbro"
+    },
+    {
+      "id": 454,
+      "name": "Toxicroak",
+      "rate": 0.02,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/toxicroak"
+    },
+    {
+      "id": 670,
+      "name": "Floette Red Flower",
+      "rate": 0.02,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/floette-red"
+    },
+    {
+      "id": 419,
+      "name": "Floatzel",
+      "rate": 0.02,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/floatzel"
+    },
+    {
+      "id": 374,
+      "name": "Beldum",
+      "rate": 0.02,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/beldum"
+    },
+    {
+      "id": 308,
+      "name": "Medicham",
+      "rate": 0.02,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/medicham"
+    },
+    {
+      "id": 927,
+      "name": "Dachsbun",
+      "rate": 0.02,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/dachsbun"
+    },
+    {
+      "id": 525,
+      "name": "Boldore",
+      "rate": 0.02,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/boldore"
+    },
+    {
+      "id": 157,
+      "name": "Typhlosion",
+      "rate": 0.02,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/typhlosion"
+    },
+    {
+      "id": 328,
+      "name": "Trapinch",
+      "rate": 0.02,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/trapinch"
+    },
+    {
+      "id": 12,
+      "name": "Butterfree",
+      "rate": 0.02,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/butterfree"
+    },
+    {
+      "id": 345,
+      "name": "Lileep",
+      "rate": 0.02,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/lileep"
+    },
+    {
+      "id": 354,
+      "name": "Banette",
+      "rate": 0.02,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/banette"
+    },
+    {
+      "id": 555,
+      "name": "Darmanitan Standard",
+      "rate": 0.02,
+      "shiny": false,
+      "image_url": "https://rotomlabs.net/dex/darmanitan"
+    },
+    {
+      "id": 70,
+      "name": "Weepinbell",
+      "rate": 0.02,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/weepinbell"
     },
     {
       "id": 288,
@@ -3202,256 +3342,18 @@
       "image_url": "https://rotomlabs.net/dex/phantump"
     },
     {
-      "id": 12,
-      "name": "Butterfree",
+      "id": 274,
+      "name": "Nuzleaf",
       "rate": 0.02,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/butterfree"
+      "image_url": "https://rotomlabs.net/dex/nuzleaf"
     },
     {
-      "id": 735,
-      "name": "Gumshoos",
+      "id": 566,
+      "name": "Archen",
       "rate": 0.02,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/gumshoos"
-    },
-    {
-      "id": 256,
-      "name": "Combusken",
-      "rate": 0.02,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/combusken"
-    },
-    {
-      "id": 341,
-      "name": "Corphish",
-      "rate": 0.02,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/corphish"
-    },
-    {
-      "id": 402,
-      "name": "Kricketune",
-      "rate": 0.02,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/kricketune"
-    },
-    {
-      "id": 166,
-      "name": "Ledian",
-      "rate": 0.02,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/ledian"
-    },
-    {
-      "id": 27,
-      "name": "Sandshrew Alola",
-      "rate": 0.02,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/sandshrew-alola"
-    },
-    {
-      "id": 394,
-      "name": "Prinplup",
-      "rate": 0.02,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/prinplup"
-    },
-    {
-      "id": 929,
-      "name": "Dolliv",
-      "rate": 0.02,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/dolliv"
-    },
-    {
-      "id": 331,
-      "name": "Cacnea",
-      "rate": 0.02,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/cacnea"
-    },
-    {
-      "id": 25,
-      "name": "Pikachu Tshirt 02",
-      "rate": 0.02,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/pikachu-tshirt-02"
-    },
-    {
-      "id": 421,
-      "name": "Cherrim Overcast Form",
-      "rate": 0.02,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/cherrim"
-    },
-    {
-      "id": 290,
-      "name": "Nincada",
-      "rate": 0.02,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/nincada"
-    },
-    {
-      "id": 210,
-      "name": "Granbull",
-      "rate": 0.02,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/granbull"
-    },
-    {
-      "id": 972,
-      "name": "Houndstone",
-      "rate": 0.02,
-      "shiny": false,
-      "image_url": "https://rotomlabs.net/dex/houndstone"
-    },
-    {
-      "id": 371,
-      "name": "Bagon",
-      "rate": 0.02,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/bagon"
-    },
-    {
-      "id": 354,
-      "name": "Banette",
-      "rate": 0.02,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/banette"
-    },
-    {
-      "id": 328,
-      "name": "Trapinch",
-      "rate": 0.02,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/trapinch"
-    },
-    {
-      "id": 663,
-      "name": "Talonflame",
-      "rate": 0.02,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/talonflame"
-    },
-    {
-      "id": 586,
-      "name": "Sawsbuck Spring Form",
-      "rate": 0.02,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/sawsbuck-spring"
-    },
-    {
-      "id": 555,
-      "name": "Darmanitan Standard",
-      "rate": 0.02,
-      "shiny": false,
-      "image_url": "https://rotomlabs.net/dex/darmanitan"
-    },
-    {
-      "id": 673,
-      "name": "Gogoat",
-      "rate": 0.02,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/gogoat"
-    },
-    {
-      "id": 266,
-      "name": "Silcoon",
-      "rate": 0.02,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/silcoon"
-    },
-    {
-      "id": 563,
-      "name": "Cofagrigus",
-      "rate": 0.02,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/cofagrigus"
-    },
-    {
-      "id": 310,
-      "name": "Manectric",
-      "rate": 0.02,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/manectric"
-    },
-    {
-      "id": 558,
-      "name": "Crustle",
-      "rate": 0.02,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/crustle"
-    },
-    {
-      "id": 737,
-      "name": "Charjabug",
-      "rate": 0.02,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/charjabug"
-    },
-    {
-      "id": 246,
-      "name": "Larvitar",
-      "rate": 0.02,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/larvitar"
-    },
-    {
-      "id": 419,
-      "name": "Floatzel",
-      "rate": 0.02,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/floatzel"
-    },
-    {
-      "id": 116,
-      "name": "Horsea",
-      "rate": 0.02,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/horsea"
-    },
-    {
-      "id": 38,
-      "name": "Ninetales or Ninetales Alola",
-      "rate": 0.02,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/ninetales-or-ninetales-alola"
-    },
-    {
-      "id": 308,
-      "name": "Medicham",
-      "rate": 0.02,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/medicham"
-    },
-    {
-      "id": 38,
-      "name": "Ninetales or Ninetales Alola",
-      "rate": 0.02,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/ninetales-or-ninetales-alola"
-    },
-    {
-      "id": 560,
-      "name": "Scrafty",
-      "rate": 0.02,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/scrafty"
-    },
-    {
-      "id": 525,
-      "name": "Boldore",
-      "rate": 0.02,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/boldore"
-    },
-    {
-      "id": 6,
-      "name": "Charizard",
-      "rate": 0.02,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/charizard"
+      "image_url": "https://rotomlabs.net/dex/archen"
     },
     {
       "id": 211,
@@ -3461,6 +3363,62 @@
       "image_url": "https://rotomlabs.net/dex/qwilfish"
     },
     {
+      "id": 371,
+      "name": "Bagon",
+      "rate": 0.02,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/bagon"
+    },
+    {
+      "id": 341,
+      "name": "Corphish",
+      "rate": 0.02,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/corphish"
+    },
+    {
+      "id": 815,
+      "name": "Cinderace",
+      "rate": 0.02,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/cinderace"
+    },
+    {
+      "id": 195,
+      "name": "Quagsire",
+      "rate": 0.02,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/quagsire"
+    },
+    {
+      "id": 737,
+      "name": "Charjabug",
+      "rate": 0.02,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/charjabug"
+    },
+    {
+      "id": 27,
+      "name": "Sandshrew Alola",
+      "rate": 0.02,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/sandshrew-alola"
+    },
+    {
+      "id": 457,
+      "name": "Lumineon",
+      "rate": 0.02,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/lumineon"
+    },
+    {
+      "id": 319,
+      "name": "Sharpedo",
+      "rate": 0.02,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/sharpedo"
+    },
+    {
       "id": 82,
       "name": "Magneton",
       "rate": 0.02,
@@ -3468,207 +3426,88 @@
       "image_url": "https://rotomlabs.net/dex/magneton"
     },
     {
-      "id": 101,
-      "name": "Electrode",
-      "rate": 0.02,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/electrode"
-    },
-    {
-      "id": 232,
-      "name": "Donphan",
-      "rate": 0.02,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/donphan"
-    },
-    {
-      "id": 268,
-      "name": "Cascoon",
-      "rate": 0.01,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/cascoon"
-    },
-    {
-      "id": 598,
-      "name": "Ferrothorn",
-      "rate": 0.01,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/ferrothorn"
-    },
-    {
-      "id": 457,
-      "name": "Lumineon",
-      "rate": 0.01,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/lumineon"
-    },
-    {
-      "id": 340,
-      "name": "Whiscash",
-      "rate": 0.01,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/whiscash"
-    },
-    {
-      "id": 138,
-      "name": "Omanyte",
-      "rate": 0.01,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/omanyte"
-    },
-    {
-      "id": 9,
-      "name": "Blastoise",
-      "rate": 0.01,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/blastoise"
-    },
-    {
-      "id": 497,
-      "name": "Serperior",
-      "rate": 0.01,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/serperior"
-    },
-    {
-      "id": 195,
-      "name": "Quagsire",
-      "rate": 0.01,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/quagsire"
-    },
-    {
       "id": 911,
       "name": "Skeledirge",
-      "rate": 0.01,
+      "rate": 0.02,
       "shiny": true,
       "image_url": "https://rotomlabs.net/dex/skeledirge"
     },
     {
-      "id": 217,
-      "name": "Ursaring",
-      "rate": 0.01,
+      "id": 633,
+      "name": "Deino",
+      "rate": 0.02,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/ursaring"
+      "image_url": "https://rotomlabs.net/dex/deino"
     },
     {
-      "id": 701,
-      "name": "Hawlucha",
-      "rate": 0.01,
+      "id": 558,
+      "name": "Crustle",
+      "rate": 0.02,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/hawlucha"
+      "image_url": "https://rotomlabs.net/dex/crustle"
     },
     {
-      "id": 189,
-      "name": "Jumpluff",
-      "rate": 0.01,
+      "id": 162,
+      "name": "Furret",
+      "rate": 0.02,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/jumpluff"
+      "image_url": "https://rotomlabs.net/dex/furret"
     },
     {
-      "id": 271,
-      "name": "Lombre",
-      "rate": 0.01,
+      "id": 215,
+      "name": "Sneasel",
+      "rate": 0.02,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/lombre"
-    },
-    {
-      "id": 51,
-      "name": "Dugtrio Alola",
-      "rate": 0.01,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/dugtrio-alola"
+      "image_url": "https://rotomlabs.net/dex/sneasel"
     },
     {
       "id": 51,
       "name": "Dugtrio Alola",
-      "rate": 0.01,
+      "rate": 0.02,
       "shiny": true,
       "image_url": "https://rotomlabs.net/dex/dugtrio-alola"
     },
     {
-      "id": 452,
-      "name": "Drapion",
-      "rate": 0.01,
+      "id": 331,
+      "name": "Cacnea",
+      "rate": 0.02,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/drapion"
+      "image_url": "https://rotomlabs.net/dex/cacnea"
     },
     {
-      "id": 815,
-      "name": "Cinderace",
-      "rate": 0.01,
+      "id": 724,
+      "name": "Decidueye",
+      "rate": 0.02,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/cinderace"
+      "image_url": "https://rotomlabs.net/dex/decidueye"
     },
     {
-      "id": 939,
-      "name": "Bellibolt",
-      "rate": 0.01,
+      "id": 78,
+      "name": "Rapidash Galarian",
+      "rate": 0.02,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/bellibolt"
+      "image_url": "https://rotomlabs.net/dex/rapidash-galarian"
     },
     {
-      "id": 3,
-      "name": "Venusaur",
-      "rate": 0.01,
+      "id": 310,
+      "name": "Manectric",
+      "rate": 0.02,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/venusaur"
+      "image_url": "https://rotomlabs.net/dex/manectric"
     },
     {
-      "id": 480,
-      "name": "Uxie",
-      "rate": 0.01,
+      "id": 561,
+      "name": "Sigilyph",
+      "rate": 0.02,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/uxie"
+      "image_url": "https://rotomlabs.net/dex/sigilyph"
     },
     {
-      "id": 996,
-      "name": "Frigibax",
-      "rate": 0.01,
+      "id": 38,
+      "name": "Ninetales",
+      "rate": 0.02,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/frigibax"
-    },
-    {
-      "id": 542,
-      "name": "Leavanny",
-      "rate": 0.01,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/leavanny"
-    },
-    {
-      "id": 229,
-      "name": "Houndoom",
-      "rate": 0.01,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/houndoom"
-    },
-    {
-      "id": 594,
-      "name": "Alomomola",
-      "rate": 0.01,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/alomomola"
-    },
-    {
-      "id": 537,
-      "name": "Seismitoad",
-      "rate": 0.01,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/seismitoad"
-    },
-    {
-      "id": 421,
-      "name": "Cherrim Sunny",
-      "rate": 0.01,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/cherrim-sunshine"
-    },
-    {
-      "id": 437,
-      "name": "Bronzong",
-      "rate": 0.01,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/bronzong"
+      "image_url": "https://rotomlabs.net/dex/ninetales"
     },
     {
       "id": 823,
@@ -3685,74 +3524,32 @@
       "image_url": "https://rotomlabs.net/dex/poliwhirl"
     },
     {
-      "id": 78,
-      "name": "Rapidash Galarian",
+      "id": 560,
+      "name": "Scrafty",
       "rate": 0.01,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/rapidash-galarian"
+      "image_url": "https://rotomlabs.net/dex/scrafty"
     },
     {
-      "id": 561,
-      "name": "Sigilyph",
+      "id": 347,
+      "name": "Anorith",
       "rate": 0.01,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/sigilyph"
+      "image_url": "https://rotomlabs.net/dex/anorith"
     },
     {
-      "id": 59,
-      "name": "Arcanine Hisuian",
+      "id": 497,
+      "name": "Serperior",
       "rate": 0.01,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/arcanine-hisuian"
+      "image_url": "https://rotomlabs.net/dex/serperior"
     },
     {
-      "id": 564,
-      "name": "Tirtouga",
+      "id": 521,
+      "name": "Unfezant",
       "rate": 0.01,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/tirtouga"
-    },
-    {
-      "id": 693,
-      "name": "Clawitzer",
-      "rate": 0.01,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/clawitzer"
-    },
-    {
-      "id": 219,
-      "name": "Magcargo",
-      "rate": 0.01,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/magcargo"
-    },
-    {
-      "id": 923,
-      "name": "Pawmot",
-      "rate": 0.01,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/pawmot"
-    },
-    {
-      "id": 36,
-      "name": "Clefable",
-      "rate": 0.01,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/clefable"
-    },
-    {
-      "id": 119,
-      "name": "Seaking",
-      "rate": 0.01,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/seaking"
-    },
-    {
-      "id": 554,
-      "name": "Darumaka Galarian",
-      "rate": 0.01,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/darumaka-galarian"
+      "image_url": "https://rotomlabs.net/dex/unfezant"
     },
     {
       "id": 34,
@@ -3762,11 +3559,207 @@
       "image_url": "https://rotomlabs.net/dex/nidoking"
     },
     {
-      "id": 305,
-      "name": "Lairon",
+      "id": 229,
+      "name": "Houndoom",
       "rate": 0.01,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/lairon"
+      "image_url": "https://rotomlabs.net/dex/houndoom"
+    },
+    {
+      "id": 996,
+      "name": "Frigibax",
+      "rate": 0.01,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/frigibax"
+    },
+    {
+      "id": 266,
+      "name": "Silcoon",
+      "rate": 0.01,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/silcoon"
+    },
+    {
+      "id": 232,
+      "name": "Donphan",
+      "rate": 0.01,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/donphan"
+    },
+    {
+      "id": 523,
+      "name": "Zebstrika",
+      "rate": 0.01,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/zebstrika"
+    },
+    {
+      "id": 421,
+      "name": "Cherrim Sunny or Cherrim Overcast Form",
+      "rate": 0.01,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/cherrim-sunny-or-cherrim-overcast"
+    },
+    {
+      "id": 500,
+      "name": "Emboar",
+      "rate": 0.01,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/emboar"
+    },
+    {
+      "id": 554,
+      "name": "Darumaka Galarian",
+      "rate": 0.01,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/darumaka-galarian"
+    },
+    {
+      "id": 119,
+      "name": "Seaking",
+      "rate": 0.01,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/seaking"
+    },
+    {
+      "id": 51,
+      "name": "Dugtrio",
+      "rate": 0.01,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/dugtrio"
+    },
+    {
+      "id": 437,
+      "name": "Bronzong",
+      "rate": 0.01,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/bronzong"
+    },
+    {
+      "id": 392,
+      "name": "Infernape",
+      "rate": 0.01,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/infernape"
+    },
+    {
+      "id": 592,
+      "name": "Frillish",
+      "rate": 0.01,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/frillish"
+    },
+    {
+      "id": 3,
+      "name": "Venusaur",
+      "rate": 0.01,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/venusaur"
+    },
+    {
+      "id": 693,
+      "name": "Clawitzer",
+      "rate": 0.01,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/clawitzer"
+    },
+    {
+      "id": 275,
+      "name": "Shiftry",
+      "rate": 0.01,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/shiftry"
+    },
+    {
+      "id": 421,
+      "name": "Cherrim Sunny or Cherrim Overcast Form",
+      "rate": 0.01,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/cherrim-sunny-or-cherrim-overcast"
+    },
+    {
+      "id": 939,
+      "name": "Bellibolt",
+      "rate": 0.01,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/bellibolt"
+    },
+    {
+      "id": 301,
+      "name": "Delcatty",
+      "rate": 0.01,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/delcatty"
+    },
+    {
+      "id": 542,
+      "name": "Leavanny",
+      "rate": 0.01,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/leavanny"
+    },
+    {
+      "id": 735,
+      "name": "Gumshoos",
+      "rate": 0.01,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/gumshoos"
+    },
+    {
+      "id": 28,
+      "name": "Sandslash Alola",
+      "rate": 0.01,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/sandslash-alola"
+    },
+    {
+      "id": 537,
+      "name": "Seismitoad",
+      "rate": 0.01,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/seismitoad"
+    },
+    {
+      "id": 581,
+      "name": "Swanna",
+      "rate": 0.01,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/swanna"
+    },
+    {
+      "id": 594,
+      "name": "Alomomola",
+      "rate": 0.01,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/alomomola"
+    },
+    {
+      "id": 219,
+      "name": "Magcargo",
+      "rate": 0.01,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/magcargo"
+    },
+    {
+      "id": 36,
+      "name": "Clefable",
+      "rate": 0.01,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/clefable"
+    },
+    {
+      "id": 564,
+      "name": "Tirtouga",
+      "rate": 0.01,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/tirtouga"
+    },
+    {
+      "id": 71,
+      "name": "Victreebel",
+      "rate": 0.01,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/victreebel"
     },
     {
       "id": 181,
@@ -3776,53 +3769,102 @@
       "image_url": "https://rotomlabs.net/dex/ampharos"
     },
     {
-      "id": 70,
-      "name": "Weepinbell",
+      "id": 59,
+      "name": "Arcanine Hisuian",
       "rate": 0.01,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/weepinbell"
+      "image_url": "https://rotomlabs.net/dex/arcanine-hisuian"
     },
     {
-      "id": 132,
-      "name": "Ditto",
+      "id": 25,
+      "name": "Pikachu Tshirt 01",
       "rate": 0.01,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/ditto"
+      "image_url": "https://rotomlabs.net/dex/pikachu-tshirt-01"
     },
     {
-      "id": 444,
-      "name": "Gabite",
+      "id": 503,
+      "name": "Samurott",
       "rate": 0.01,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/gabite"
+      "image_url": "https://rotomlabs.net/dex/samurott"
     },
     {
-      "id": 78,
-      "name": "Rapidash Galarian",
+      "id": 91,
+      "name": "Cloyster",
       "rate": 0.01,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/rapidash-galarian"
+      "image_url": "https://rotomlabs.net/dex/cloyster"
     },
     {
-      "id": 15,
-      "name": "Beedrill",
+      "id": 727,
+      "name": "Incineroar",
       "rate": 0.01,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/beedrill"
+      "image_url": "https://rotomlabs.net/dex/incineroar"
     },
     {
-      "id": 295,
-      "name": "Exploud",
+      "id": 508,
+      "name": "Stoutland",
       "rate": 0.01,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/exploud"
+      "image_url": "https://rotomlabs.net/dex/stoutland"
     },
     {
-      "id": 460,
-      "name": "Abomasnow",
+      "id": 972,
+      "name": "Houndstone",
+      "rate": 0.01,
+      "shiny": false,
+      "image_url": "https://rotomlabs.net/dex/houndstone"
+    },
+    {
+      "id": 154,
+      "name": "Meganium",
       "rate": 0.01,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/abomasnow"
+      "image_url": "https://rotomlabs.net/dex/meganium"
+    },
+    {
+      "id": 320,
+      "name": "Wailmer",
+      "rate": 0.01,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/wailmer"
+    },
+    {
+      "id": 576,
+      "name": "Gothitelle",
+      "rate": 0.01,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/gothitelle"
+    },
+    {
+      "id": 164,
+      "name": "Noctowl",
+      "rate": 0.01,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/noctowl"
+    },
+    {
+      "id": 668,
+      "name": "Pyroar",
+      "rate": 0.01,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/pyroar"
+    },
+    {
+      "id": 620,
+      "name": "Mienshao",
+      "rate": 0.01,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/mienshao"
+    },
+    {
+      "id": 851,
+      "name": "Centiskorch",
+      "rate": 0.01,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/centiskorch"
     },
     {
       "id": 326,
@@ -3832,6 +3874,69 @@
       "image_url": "https://rotomlabs.net/dex/grumpig"
     },
     {
+      "id": 18,
+      "name": "Pidgeot",
+      "rate": 0.01,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/pidgeot"
+    },
+    {
+      "id": 914,
+      "name": "Quaquaval",
+      "rate": 0.01,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/quaquaval"
+    },
+    {
+      "id": 569,
+      "name": "Garbodor",
+      "rate": 0.01,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/garbodor"
+    },
+    {
+      "id": 908,
+      "name": "Meowscarada",
+      "rate": 0.01,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/meowscarada"
+    },
+    {
+      "id": 189,
+      "name": "Jumpluff",
+      "rate": 0.01,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/jumpluff"
+    },
+    {
+      "id": 271,
+      "name": "Lombre",
+      "rate": 0.01,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/lombre"
+    },
+    {
+      "id": 762,
+      "name": "Steenee",
+      "rate": 0.01,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/steenee"
+    },
+    {
+      "id": 116,
+      "name": "Horsea",
+      "rate": 0.01,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/horsea"
+    },
+    {
+      "id": 818,
+      "name": "Inteleon",
+      "rate": 0.01,
+      "shiny": false,
+      "image_url": "https://rotomlabs.net/dex/inteleon"
+    },
+    {
       "id": 545,
       "name": "Scolipede",
       "rate": 0.01,
@@ -3839,11 +3944,39 @@
       "image_url": "https://rotomlabs.net/dex/scolipede"
     },
     {
-      "id": 389,
-      "name": "Torterra",
+      "id": 452,
+      "name": "Drapion",
       "rate": 0.01,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/torterra"
+      "image_url": "https://rotomlabs.net/dex/drapion"
+    },
+    {
+      "id": 482,
+      "name": "Azelf",
+      "rate": 0.01,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/azelf"
+    },
+    {
+      "id": 44,
+      "name": "Gloom",
+      "rate": 0.01,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/gloom"
+    },
+    {
+      "id": 673,
+      "name": "Gogoat",
+      "rate": 0.01,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/gogoat"
+    },
+    {
+      "id": 138,
+      "name": "Omanyte",
+      "rate": 0.01,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/omanyte"
     },
     {
       "id": 31,
@@ -3860,6 +3993,13 @@
       "image_url": "https://rotomlabs.net/dex/golbat"
     },
     {
+      "id": 290,
+      "name": "Nincada",
+      "rate": 0.01,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/nincada"
+    },
+    {
       "id": 344,
       "name": "Claydol",
       "rate": 0.01,
@@ -3867,25 +4007,18 @@
       "image_url": "https://rotomlabs.net/dex/claydol"
     },
     {
-      "id": 482,
-      "name": "Azelf",
+      "id": 586,
+      "name": "Sawsbuck Spring Form",
       "rate": 0.01,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/azelf"
+      "image_url": "https://rotomlabs.net/dex/sawsbuck-spring"
     },
     {
-      "id": 633,
-      "name": "Deino",
+      "id": 268,
+      "name": "Cascoon",
       "rate": 0.01,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/deino"
-    },
-    {
-      "id": 320,
-      "name": "Wailmer",
-      "rate": 0.01,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/wailmer"
+      "image_url": "https://rotomlabs.net/dex/cascoon"
     },
     {
       "id": 606,
@@ -3895,18 +4028,11 @@
       "image_url": "https://rotomlabs.net/dex/beheeyem"
     },
     {
-      "id": 508,
-      "name": "Stoutland",
+      "id": 15,
+      "name": "Beedrill",
       "rate": 0.01,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/stoutland"
-    },
-    {
-      "id": 319,
-      "name": "Sharpedo",
-      "rate": 0.01,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/sharpedo"
+      "image_url": "https://rotomlabs.net/dex/beedrill"
     },
     {
       "id": 147,
@@ -3916,186 +4042,25 @@
       "image_url": "https://rotomlabs.net/dex/dratini"
     },
     {
-      "id": 581,
-      "name": "Swanna",
+      "id": 349,
+      "name": "Feebas",
       "rate": 0.01,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/swanna"
+      "image_url": "https://rotomlabs.net/dex/feebas"
     },
     {
-      "id": 521,
-      "name": "Unfezant",
+      "id": 340,
+      "name": "Whiscash",
       "rate": 0.01,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/unfezant"
+      "image_url": "https://rotomlabs.net/dex/whiscash"
     },
     {
-      "id": 762,
-      "name": "Steenee",
+      "id": 389,
+      "name": "Torterra",
       "rate": 0.01,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/steenee"
-    },
-    {
-      "id": 569,
-      "name": "Garbodor",
-      "rate": 0.01,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/garbodor"
-    },
-    {
-      "id": 157,
-      "name": "Typhlosion",
-      "rate": 0.01,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/typhlosion"
-    },
-    {
-      "id": 345,
-      "name": "Lileep",
-      "rate": 0.01,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/lileep"
-    },
-    {
-      "id": 908,
-      "name": "Meowscarada",
-      "rate": 0.01,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/meowscarada"
-    },
-    {
-      "id": 62,
-      "name": "Poliwrath",
-      "rate": 0.01,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/poliwrath"
-    },
-    {
-      "id": 620,
-      "name": "Mienshao",
-      "rate": 0.01,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/mienshao"
-    },
-    {
-      "id": 454,
-      "name": "Toxicroak",
-      "rate": 0.01,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/toxicroak"
-    },
-    {
-      "id": 668,
-      "name": "Pyroar",
-      "rate": 0.01,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/pyroar"
-    },
-    {
-      "id": 704,
-      "name": "Goomy",
-      "rate": 0.01,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/goomy"
-    },
-    {
-      "id": 184,
-      "name": "Azumarill",
-      "rate": 0.01,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/azumarill"
-    },
-    {
-      "id": 756,
-      "name": "Shiinotic",
-      "rate": 0.01,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/shiinotic"
-    },
-    {
-      "id": 724,
-      "name": "Decidueye",
-      "rate": 0.01,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/decidueye"
-    },
-    {
-      "id": 164,
-      "name": "Noctowl",
-      "rate": 0.01,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/noctowl"
-    },
-    {
-      "id": 603,
-      "name": "Eelektrik",
-      "rate": 0.01,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/eelektrik"
-    },
-    {
-      "id": 80,
-      "name": "Slowbro",
-      "rate": 0.01,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/slowbro"
-    },
-    {
-      "id": 851,
-      "name": "Centiskorch",
-      "rate": 0.01,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/centiskorch"
-    },
-    {
-      "id": 301,
-      "name": "Delcatty",
-      "rate": 0.01,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/delcatty"
-    },
-    {
-      "id": 18,
-      "name": "Pidgeot",
-      "rate": 0.01,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/pidgeot"
-    },
-    {
-      "id": 481,
-      "name": "Mesprit",
-      "rate": 0.01,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/mesprit"
-    },
-    {
-      "id": 576,
-      "name": "Gothitelle",
-      "rate": 0.01,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/gothitelle"
-    },
-    {
-      "id": 503,
-      "name": "Samurott",
-      "rate": 0.01,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/samurott"
-    },
-    {
-      "id": 374,
-      "name": "Beldum",
-      "rate": 0.01,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/beldum"
-    },
-    {
-      "id": 44,
-      "name": "Gloom",
-      "rate": 0.01,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/gloom"
+      "image_url": "https://rotomlabs.net/dex/torterra"
     },
     {
       "id": 611,
@@ -4105,102 +4070,32 @@
       "image_url": "https://rotomlabs.net/dex/fraxure"
     },
     {
-      "id": 154,
-      "name": "Meganium",
+      "id": 78,
+      "name": "Rapidash",
       "rate": 0.01,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/meganium"
+      "image_url": "https://rotomlabs.net/dex/rapidash"
     },
     {
-      "id": 364,
-      "name": "Pokemon #364",
-      "rate": 0,
+      "id": 704,
+      "name": "Goomy",
+      "rate": 0.01,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/pokemon-364"
+      "image_url": "https://rotomlabs.net/dex/goomy"
     },
     {
-      "id": 585,
-      "name": "Pokemon #585",
+      "id": 480,
+      "name": "Pokemon #480",
       "rate": 0,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/pokemon-585"
+      "image_url": "https://rotomlabs.net/dex/pokemon-480"
     },
     {
-      "id": 523,
-      "name": "Pokemon #523",
+      "id": 184,
+      "name": "Pokemon #184",
       "rate": 0,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/pokemon-523"
-    },
-    {
-      "id": 168,
-      "name": "Pokemon #168",
-      "rate": 0,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/pokemon-168"
-    },
-    {
-      "id": 584,
-      "name": "Pokemon #584",
-      "rate": 0,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/pokemon-584"
-    },
-    {
-      "id": 392,
-      "name": "Pokemon #392",
-      "rate": 0,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/pokemon-392"
-    },
-    {
-      "id": 257,
-      "name": "Pokemon #257",
-      "rate": 0,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/pokemon-257"
-    },
-    {
-      "id": 783,
-      "name": "Pokemon #783",
-      "rate": 0,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/pokemon-783"
-    },
-    {
-      "id": 713,
-      "name": "Pokemon #713",
-      "rate": 0,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/pokemon-713"
-    },
-    {
-      "id": 71,
-      "name": "Pokemon #71",
-      "rate": 0,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/pokemon-71"
-    },
-    {
-      "id": 221,
-      "name": "Pokemon #221",
-      "rate": 0,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/pokemon-221"
-    },
-    {
-      "id": 254,
-      "name": "Pokemon #254",
-      "rate": 0,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/pokemon-254"
-    },
-    {
-      "id": 858,
-      "name": "Pokemon #858",
-      "rate": 0,
-      "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/pokemon-858"
+      "image_url": "https://rotomlabs.net/dex/pokemon-184"
     },
     {
       "id": 980,
@@ -4210,67 +4105,67 @@
       "image_url": "https://rotomlabs.net/dex/pokemon-980"
     },
     {
-      "id": 275,
-      "name": "Pokemon #275",
+      "id": 130,
+      "name": "Pokemon #130",
       "rate": 0,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/pokemon-275"
+      "image_url": "https://rotomlabs.net/dex/pokemon-130"
     },
     {
-      "id": 450,
-      "name": "Pokemon #450",
+      "id": 923,
+      "name": "Pokemon #923",
       "rate": 0,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/pokemon-450"
+      "image_url": "https://rotomlabs.net/dex/pokemon-923"
     },
     {
-      "id": 411,
-      "name": "Pokemon #411",
+      "id": 247,
+      "name": "Pokemon #247",
       "rate": 0,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/pokemon-411"
+      "image_url": "https://rotomlabs.net/dex/pokemon-247"
     },
     {
-      "id": 349,
-      "name": "Pokemon #349",
+      "id": 812,
+      "name": "Pokemon #812",
       "rate": 0,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/pokemon-349"
+      "image_url": "https://rotomlabs.net/dex/pokemon-812"
     },
     {
-      "id": 729,
-      "name": "Pokemon #729",
+      "id": 701,
+      "name": "Pokemon #701",
       "rate": 0,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/pokemon-729"
+      "image_url": "https://rotomlabs.net/dex/pokemon-701"
     },
     {
-      "id": 592,
-      "name": "Frillish Female",
+      "id": 254,
+      "name": "Pokemon #254",
       "rate": 0,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/frillish-female"
+      "image_url": "https://rotomlabs.net/dex/pokemon-254"
     },
     {
-      "id": 28,
-      "name": "Pokemon #28",
+      "id": 25,
+      "name": "Pikachu Tshirt 01",
       "rate": 0,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/pokemon-28"
+      "image_url": "https://rotomlabs.net/dex/pikachu-tshirt-01"
     },
     {
-      "id": 121,
-      "name": "Pokemon #121",
+      "id": 756,
+      "name": "Pokemon #756",
       "rate": 0,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/pokemon-121"
+      "image_url": "https://rotomlabs.net/dex/pokemon-756"
     },
     {
-      "id": 628,
-      "name": "Pokemon #628",
+      "id": 961,
+      "name": "Pokemon #961",
       "rate": 0,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/pokemon-628"
+      "image_url": "https://rotomlabs.net/dex/pokemon-961"
     },
     {
       "id": 45,
@@ -4280,39 +4175,32 @@
       "image_url": "https://rotomlabs.net/dex/pokemon-45"
     },
     {
-      "id": 224,
-      "name": "Pokemon #224",
+      "id": 409,
+      "name": "Pokemon #409",
       "rate": 0,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/pokemon-224"
+      "image_url": "https://rotomlabs.net/dex/pokemon-409"
     },
     {
-      "id": 784,
-      "name": "Pokemon #784",
+      "id": 282,
+      "name": "Pokemon #282",
       "rate": 0,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/pokemon-784"
+      "image_url": "https://rotomlabs.net/dex/pokemon-282"
     },
     {
-      "id": 372,
-      "name": "Pokemon #372",
+      "id": 295,
+      "name": "Pokemon #295",
       "rate": 0,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/pokemon-372"
+      "image_url": "https://rotomlabs.net/dex/pokemon-295"
     },
     {
-      "id": 201,
-      "name": "Pokemon #201",
+      "id": 168,
+      "name": "Pokemon #168",
       "rate": 0,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/pokemon-201"
-    },
-    {
-      "id": 818,
-      "name": "Pokemon #818",
-      "rate": 0,
-      "shiny": false,
-      "image_url": "https://rotomlabs.net/dex/pokemon-818"
+      "image_url": "https://rotomlabs.net/dex/pokemon-168"
     },
     {
       "id": 741,
@@ -4322,25 +4210,151 @@
       "image_url": "https://rotomlabs.net/dex/oricorio-baile"
     },
     {
-      "id": 668,
-      "name": "Pyroar",
+      "id": 257,
+      "name": "Pokemon #257",
       "rate": 0,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/pyroar"
+      "image_url": "https://rotomlabs.net/dex/pokemon-257"
     },
     {
-      "id": 748,
-      "name": "Pokemon #748",
+      "id": 583,
+      "name": "Pokemon #583",
       "rate": 0,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/pokemon-748"
+      "image_url": "https://rotomlabs.net/dex/pokemon-583"
     },
     {
-      "id": 395,
-      "name": "Pokemon #395",
+      "id": 585,
+      "name": "Pokemon #585",
       "rate": 0,
       "shiny": true,
-      "image_url": "https://rotomlabs.net/dex/pokemon-395"
+      "image_url": "https://rotomlabs.net/dex/pokemon-585"
+    },
+    {
+      "id": 481,
+      "name": "Pokemon #481",
+      "rate": 0,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/pokemon-481"
+    },
+    {
+      "id": 729,
+      "name": "Pokemon #729",
+      "rate": 0,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/pokemon-729"
+    },
+    {
+      "id": 949,
+      "name": "Pokemon #949",
+      "rate": 0,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/pokemon-949"
+    },
+    {
+      "id": 634,
+      "name": "Pokemon #634",
+      "rate": 0,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/pokemon-634"
+    },
+    {
+      "id": 598,
+      "name": "Pokemon #598",
+      "rate": 0,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/pokemon-598"
+    },
+    {
+      "id": 101,
+      "name": "Electrode",
+      "rate": 0,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/electrode"
+    },
+    {
+      "id": 132,
+      "name": "Pokemon #132",
+      "rate": 0,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/pokemon-132"
+    },
+    {
+      "id": 411,
+      "name": "Pokemon #411",
+      "rate": 0,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/pokemon-411"
+    },
+    {
+      "id": 205,
+      "name": "Pokemon #205",
+      "rate": 0,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/pokemon-205"
+    },
+    {
+      "id": 148,
+      "name": "Pokemon #148",
+      "rate": 0,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/pokemon-148"
+    },
+    {
+      "id": 398,
+      "name": "Pokemon #398",
+      "rate": 0,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/pokemon-398"
+    },
+    {
+      "id": 160,
+      "name": "Pokemon #160",
+      "rate": 0,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/pokemon-160"
+    },
+    {
+      "id": 9,
+      "name": "Pokemon #9",
+      "rate": 0,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/pokemon-9"
+    },
+    {
+      "id": 628,
+      "name": "Pokemon #628",
+      "rate": 0,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/pokemon-628"
+    },
+    {
+      "id": 121,
+      "name": "Pokemon #121",
+      "rate": 0,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/pokemon-121"
+    },
+    {
+      "id": 770,
+      "name": "Pokemon #770",
+      "rate": 0,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/pokemon-770"
+    },
+    {
+      "id": 603,
+      "name": "Pokemon #603",
+      "rate": 0,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/pokemon-603"
+    },
+    {
+      "id": 217,
+      "name": "Pokemon #217",
+      "rate": 0,
+      "shiny": true,
+      "image_url": "https://rotomlabs.net/dex/pokemon-217"
     }
   ]
 }
