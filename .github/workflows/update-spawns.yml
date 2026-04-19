@@ -18,16 +18,19 @@ jobs:
           
       - name: Install dependencies
         run: |
-          pip install playwright requests
+          pip install playwright requests beautifulsoup4
           playwright install chromium
           
-      - name: Run spawn scraper (includes form scraping)
+      - name: Run spawn scraper
         run: python scrape_shungo_spawns.py
+        
+      - name: Run RotomLabs image scraper
+        run: python scrape_rotomlabs_images.py
         
       - name: Commit and push if changed
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
-          git add spawns.json
-          git diff --quiet && git diff --staged --quiet || git commit -m "Auto-update spawns $(date +'%Y-%m-%d %H:%M:%S')"
+          git add spawns.json images/
+          git diff --quiet && git diff --staged --quiet || git commit -m "Auto-update spawns and images $(date +'%Y-%m-%d %H:%M:%S')"
           git push
