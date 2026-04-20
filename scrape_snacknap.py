@@ -83,7 +83,8 @@ def scrape_snacknap_maxbattles():
             "gigantamax": []
         }
         
-        social_media = ['Telegram', 'Facebook', 'Instagram', 'Threads', 'Bluesky', 'X', 'Twitter', 'Discord', 'Patreon', 'YouTube', 'Twitch']
+        # ADD 'Search...' to this list
+        invalid_names = ['Telegram', 'Facebook', 'Instagram', 'Threads', 'Bluesky', 'X', 'Twitter', 'Discord', 'Patreon', 'YouTube', 'Twitch', 'Search...']
         type_words = ['fire', 'water', 'grass', 'electric', 'bug', 'ground', 'flying', 'ghost', 
                      'ice', 'psychic', 'dragon', 'dark', 'steel', 'fairy', 'rock', 'fighting', 
                      'poison', 'normal', 'shiny']
@@ -119,7 +120,8 @@ def scrape_snacknap_maxbattles():
                         
                         if not clean_name:
                             continue
-                        if clean_name in social_media:
+                        # Check against invalid_names (now includes 'Search...')
+                        if clean_name in invalid_names:
                             continue
                         if clean_name.lower() in type_words:
                             continue
