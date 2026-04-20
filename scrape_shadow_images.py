@@ -5,97 +5,29 @@ import re
 import os
 import time
 from datetime import datetime
-from urllib.parse import urljoin, urlparse
 
-def get_pokemon_id_from_name(name):
-    """Get Pokémon ID from name using PokeAPI"""
-    # Remove "Shadow " prefix for lookup
-    clean_name = name.replace("Shadow ", "").strip().lower()
-    
-    # Special mappings for forms that might not resolve correctly
-    special_mappings = {
-        "alolan marowak": 105,
-        "alolan vulpix": 37,
-        "alolan raichu": 26,
-        "alolan sandshrew": 27,
-        "alolan sandslash": 28,
-        "alolan diglett": 50,
-        "alolan dugtrio": 51,
-        "alolan meowth": 52,
-        "alolan persian": 53,
-        "alolan geodude": 74,
-        "alolan graveler": 75,
-        "alolan golem": 76,
-        "alolan grimer": 88,
-        "alolan muk": 89,
-        "alolan exeggutor": 103,
-        "alolan marowak": 105,
-        "galarian meowth": 52,
-        "galarian perrserker": 863,
-        "galarian ponyta": 77,
-        "galarian rapidash": 78,
-        "galarian slowpoke": 79,
-        "galarian slowbro": 80,
-        "galarian slowking": 199,
-        "galarian farfetch'd": 83,
-        "galarian sirfetch'd": 865,
-        "galarian weezing": 110,
-        "galarian mr. mime": 122,
-        "galarian mr. rime": 866,
-        "galarian yamask": 562,
-        "galarian runerigus": 867,
-        "galarian zigzagoon": 263,
-        "galarian linoone": 264,
-        "galarian obstagoon": 862,
-        "galarian darumaka": 554,
-        "galarian darmanitan": 555,
-        "galarian stunfisk": 618,
-        "hisuian growlithe": 58,
-        "hisuian arcanine": 59,
-        "hisuian voltorb": 100,
-        "hisuian electrode": 101,
-        "hisuian typhlosion": 157,
-        "hisuian samurott": 503,
-        "hisuian decidueye": 724,
-        "hisuian braviary": 628,
-        "hisuian sneasel": 215,
-        "hisuian weavile": 461,
-        "hisuian zoroark": 571,
-        "hisuian goodra": 706,
-        "hisuian avalugg": 713,
-    }
-    
-    if clean_name in special_mappings:
-        return special_mappings[clean_name]
-    
-    # Handle specific names
-    if clean_name == "cacnea":
-        return 331
-    if clean_name == "joltik":
-        return 595
-    if clean_name == "dratini":
-        return 147
-    if clean_name == "gligar":
-        return 207
-    if clean_name == "lapras":
-        return 131
-    if clean_name == "stantler":
-        return 234
-    if clean_name == "latios":
-        return 381
-    if clean_name == "latias":
-        return 380
-    
+def get_pokemon_id_from_icon_url(icon_url):
+    """Extract Pokémon ID from LeekDuck icon URL"""
+    # Pattern: pm147.icon.png or pm147.icon.png
+    match = re.search(r'pm(\d+)\.icon', icon_url)
+    if match:
+        return int(match.group(1))
+    return None
+
+def get_pokemon_name_from_id(pokemon_id):
+    """Get Pokémon name from ID using PokeAPI"""
     try:
-        url = f"https://pokeapi.co/api/v2/pokemon/{clean_name}"
+        url = f"https://pokeapi.co/api/v2/pokemon-species/{pokemon_id}/"
         response = requests.get(url, timeout=10)
         if response.status_code == 200:
             data = response.json()
-            return data['id']
+            # Find English name
+            for name_entry in data['names']:
+                if name_entry['language']['name'] == 'en':
+                    return name_entry['name']
     except Exception as e:
-        print(f"    Error getting ID for {name}: {e}")
-    
-    return None
+        print(f"    Error getting name for ID {pokemon_id}: {e}")
+    return f"Pokemon_{pokemon_id}"
 
 def download_image(url, output_path):
     """Download an image from URL to local path"""
@@ -115,6 +47,13 @@ def download_image(url, output_path):
         print(f"    Download error: {e}")
         return False
 
+def create_slug(name):
+    """Create a URL-friendly slug from a Pokémon name"""
+    slug = name.lower()
+    slug = re.sub(r'[^a-z0-9-]', '-', slug)
+    slug = re.sub(r'-+', '-', slug).strip('-')
+    return slug
+
 def scrape_shadow_raids():
     """Scrape shadow raid bosses from LeekDuck raid page"""
     print("\n🌑 SCRAPING SHADOW RAID IMAGES")
@@ -128,69 +67,45 @@ def scrape_shadow_raids():
         response.raise_for_status()
         soup = BeautifulSoup(response.text, 'html.parser')
         
-        # Find Shadow Raids section
-        shadow_section = None
-        for h2 in soup.find_all('h2'):
-            if 'Shadow Raids' in h2.get_text():
-                shadow_section = h2
-                break
+        # Find all cards with class containing "-shadow"
+        shadow_cards = soup.find_all('div', class_=re.compile(r'-shadow'))
         
-        if not shadow_section:
-            print("❌ Could not find Shadow Raids section")
-            return []
-        
-        # Find all shadow Pokémon in the section
         shadow_pokemon = []
         
-        # Look for elements that contain shadow Pokémon names
-        # The page structure uses divs with class containing "col"
-        parent_div = shadow_section.find_parent()
-        
-        # Search for all links that might contain shadow Pokémon
-        for link in parent_div.find_all('a', href=True):
-            text = link.get_text().strip()
-            if text.startswith('Shadow ') and len(text) > 7:
-                # Clean up the name
-                name = text.split('\n')[0].strip()
-                if name and name not in [p['name'] for p in shadow_pokemon]:
-                    pokemon_id = get_pokemon_id_from_name(name)
+        for card in shadow_cards:
+            # Find the boss-img div which contains the style attribute
+            boss_img = card.find('div', class_=re.compile(r'boss-img'))
+            if boss_img:
+                # Extract the URL from style attribute
+                style = boss_img.get('style', '')
+                url_match = re.search(r'url\([\'"]?([^\'"\)]+)[\'"]?\)', style)
+                
+                if url_match:
+                    icon_url = url_match.group(1)
+                    pokemon_id = get_pokemon_id_from_icon_url(icon_url)
+                    
                     if pokemon_id:
-                        # Create slug from base name
-                        base_name = name.replace("Shadow ", "").strip()
-                        slug = base_name.lower()
-                        slug = re.sub(r'[^a-z0-9-]', '-', slug)
-                        slug = re.sub(r'-+', '-', slug).strip('-')
+                        # Get the Pokémon name
+                        pokemon_name = get_pokemon_name_from_id(pokemon_id)
+                        
+                        # Create full shadow name
+                        shadow_name = f"Shadow {pokemon_name}"
+                        
+                        # Also check if there's a name in the card
+                        name_elem = card.find(['h3', 'strong', 'span'], class_=re.compile(r'name|title'))
+                        if name_elem:
+                            card_name = name_elem.get_text().strip()
+                            if card_name.startswith('Shadow'):
+                                shadow_name = card_name
                         
                         shadow_pokemon.append({
-                            'name': name,
-                            'base_name': base_name,
+                            'name': shadow_name,
+                            'base_name': pokemon_name,
                             'id': pokemon_id,
-                            'slug': slug
+                            'slug': create_slug(pokemon_name),
+                            'icon_url': icon_url
                         })
-                        print(f"  Found: {name} (ID: {pokemon_id})")
-        
-        # Also check for shadow Pokémon in the main content
-        content_div = soup.find('div', class_='content') or soup.find('main')
-        if content_div:
-            for elem in content_div.find_all(['h3', 'strong', 'a']):
-                text = elem.get_text().strip()
-                if text.startswith('Shadow ') and len(text) > 7:
-                    name = text.split('\n')[0].strip()
-                    if name and name not in [p['name'] for p in shadow_pokemon]:
-                        pokemon_id = get_pokemon_id_from_name(name)
-                        if pokemon_id:
-                            base_name = name.replace("Shadow ", "").strip()
-                            slug = base_name.lower()
-                            slug = re.sub(r'[^a-z0-9-]', '-', slug)
-                            slug = re.sub(r'-+', '-', slug).strip('-')
-                            
-                            shadow_pokemon.append({
-                                'name': name,
-                                'base_name': base_name,
-                                'id': pokemon_id,
-                                'slug': slug
-                            })
-                            print(f"  Found: {name} (ID: {pokemon_id})")
+                        print(f"  Found: {shadow_name} (ID: {pokemon_id})")
         
         # Remove duplicates by ID
         seen_ids = set()
@@ -252,14 +167,13 @@ def main():
     # Download images
     successful = 0
     failed = 0
-    downloaded_files = []
     
     for pokemon in shadow_pokemon:
         pokemon_id = pokemon['id']
         slug = pokemon['slug']
         
-        # LeekDuck icon URL pattern
-        icon_url = f"https://cdn.leekduck.com/assets/img/pokemon_icons/pm{pokemon_id}.icon.png"
+        # Use the icon URL we extracted from the page
+        icon_url = pokemon['icon_url']
         
         # Save as webp with shadow suffix
         filename = f"{pokemon_id}_{slug}_shadow.webp"
@@ -271,7 +185,6 @@ def main():
         if download_image(icon_url, local_path):
             print(f"     ✓ Saved to {filename}")
             successful += 1
-            downloaded_files.append(filename)
         else:
             print(f"     ❌ Failed to download")
             failed += 1
@@ -296,7 +209,7 @@ def main():
             "id": pokemon['id'],
             "slug": pokemon['slug'],
             "image_url": f"https://raw.githubusercontent.com/Skatecrete/pogo-raid-data/main/shadow_images/{filename}",
-            "leekduck_icon": f"https://cdn.leekduck.com/assets/img/pokemon_icons/pm{pokemon['id']}.icon.png"
+            "leekduck_icon": pokemon['icon_url']
         })
     
     with open('shadow_images.json', 'w') as f:
