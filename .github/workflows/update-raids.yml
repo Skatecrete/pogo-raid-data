@@ -41,11 +41,11 @@ jobs:
       run: |
         cp current_raids.json current_raids_old.json
         
-    - name: Run scraper
+    - name: Run SnackNap scraper
       run: python scrape_snacknap.py
       
-    - name: Fix Mega/Gigantamax image URLs
-      run: python fix_raid_image_urls.py
+    - name: Run Shadow Image scraper
+      run: python scrape_shadow_images.py
       
     - name: Compare and generate raid changes
       id: changes
@@ -73,10 +73,11 @@ jobs:
         
         git add scrapedduck_old.json
         git add current_raids.json
-        git add images/
+        git add shadow_images/ || true
+        git add shadow_images.json || true
         
         if ! git diff --cached --quiet; then
-          git commit -m "Update raids data - $(date +'%Y-%m-%d %H:%M:%S')"
+          git commit -m "Update raids and shadow images - $(date +'%Y-%m-%d %H:%M:%S')"
           git push origin main
           echo "committed=true" >> $GITHUB_OUTPUT
         fi
