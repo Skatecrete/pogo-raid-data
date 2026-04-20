@@ -21,10 +21,62 @@ def get_pokemon_name_from_id(pokemon_id):
     return f"Pokemon_{pokemon_id}"
 
 def create_slug(name):
-    """Create a URL-friendly slug from a Pokémon name"""
+    """Create a URL-friendly slug from a Pokémon name matching RotationApi.kt"""
+    # Special form mappings
+    form_mapping = {
+        "Alolan Marowak": "alolan-marowak",
+        "Alolan Vulpix": "alolan-vulpix",
+        "Alolan Sandshrew": "alolan-sandshrew",
+        "Alolan Sandslash": "alolan-sandslash",
+        "Alolan Diglett": "alolan-diglett",
+        "Alolan Dugtrio": "alolan-dugtrio",
+        "Alolan Meowth": "alolan-meowth",
+        "Alolan Persian": "alolan-persian",
+        "Alolan Geodude": "alolan-geodude",
+        "Alolan Graveler": "alolan-graveler",
+        "Alolan Golem": "alolan-golem",
+        "Alolan Grimer": "alolan-grimer",
+        "Alolan Muk": "alolan-muk",
+        "Alolan Exeggutor": "alolan-exeggutor",
+        "Galarian Meowth": "galarian-meowth",
+        "Galarian Ponyta": "galarian-ponyta",
+        "Galarian Rapidash": "galarian-rapidash",
+        "Galarian Slowpoke": "galarian-slowpoke",
+        "Galarian Slowbro": "galarian-slowbro",
+        "Galarian Slowking": "galarian-slowking",
+        "Galarian Farfetch'd": "galarian-farfetchd",
+        "Galarian Weezing": "galarian-weezing",
+        "Galarian Mr. Mime": "galarian-mr-mime",
+        "Galarian Yamask": "galarian-yamask",
+        "Galarian Zigzagoon": "galarian-zigzagoon",
+        "Galarian Linoone": "galarian-linoone",
+        "Galarian Darumaka": "galarian-darumaka",
+        "Galarian Darmanitan": "galarian-darmanitan",
+        "Galarian Stunfisk": "galarian-stunfisk",
+        "Hisuian Growlithe": "hisuian-growlithe",
+        "Hisuian Arcanine": "hisuian-arcanine",
+        "Hisuian Voltorb": "hisuian-voltorb",
+        "Hisuian Electrode": "hisuian-electrode",
+        "Hisuian Typhlosion": "hisuian-typhlosion",
+        "Hisuian Samurott": "hisuian-samurott",
+        "Hisuian Decidueye": "hisuian-decidueye",
+        "Hisuian Braviary": "hisuian-braviary",
+        "Hisuian Sneasel": "hisuian-sneasel",
+        "Hisuian Avalugg": "hisuian-avalugg"
+    }
+    
+    # Check for special form
+    if name in form_mapping:
+        return form_mapping[name]
+    
+    # Default slug generation
     slug = name.lower()
-    slug = re.sub(r'[^a-z0-9-]', '-', slug)
-    slug = re.sub(r'-+', '-', slug).strip('-')
+    slug = slug.replace("'", "")
+    slug = slug.replace(" ", "-")
+    slug = slug.replace(".", "")
+    slug = re.sub(r'[^a-z0-9-]', '', slug)
+    slug = re.sub(r'-+', '-', slug)
+    slug = slug.strip('-')
     return slug
 
 def download_image(url, output_path):
