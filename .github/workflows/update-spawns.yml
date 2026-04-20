@@ -24,9 +24,6 @@ jobs:
       - name: Run spawn scraper
         run: python scrape_shungo_spawns.py
         
-      - name: Run RotomLabs image scraper
-        run: python scrape_rotomlabs_images.py
-        
       - name: Commit and push if changed
         run: |
           git config user.name "github-actions"
