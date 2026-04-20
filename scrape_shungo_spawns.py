@@ -28,7 +28,6 @@ def fix_image_urls():
         return
     
     # COMPLETE mapping of form names to image filenames
-    # Based on the actual files in your images folder
     form_mappings = {
         # ===== Castform =====
         "Castform Rainy": "351_castform-rainy.webp",
@@ -104,7 +103,6 @@ def fix_image_urls():
         "Persian Alola": "53_persian-alola.webp",
         "Geodude Alola": "74_geodude-alola.webp",
         "Graveler Alola": "75_graveler-alola.webp",
-        "Golem Alola": "76_golem-alola.webp",
         "Grimer Alola": "88_grimer-alola.webp",
         "Muk Alola": "89_muk-alola.webp",
         "Exeggutor Alola": "103_exeggutorwebp",
@@ -144,9 +142,6 @@ def fix_image_urls():
         # ===== Paldean Forms =====
         "Wooper Paldea": "194_wooper-paldea.webp",
         "Clodsire": "980_clodsirewebp",
-        "Tauros Paldean Blaze Breed": "128_tauroswebp",
-        "Tauros Paldean Aqua Breed": "128_tauroswebp",
-        "Tauros Paldean Combat Breed": "128_tauroswebp",
         
         # ===== Rotom Forms =====
         "Rotom Heat": "479_rotom-heat.webp",
@@ -170,10 +165,6 @@ def fix_image_urls():
         "Oinkologne Male": "916-oinkologne-male.webp",
         "Frillish Female": "592_frillish-female.webp",
         "Frillish Male": "592_frillishwebp",
-        "Shellos East Sea": "422_shellos-east-seawebp",
-        "Shellos West Sea": "422_shellos-west-seawebp",
-        "Gastrodon East Sea": "423_gastrodon-east-seawebp",
-        "Gastrodon West Sea": "423_gastrodon-west-seawebp",
         "Cherrim Overcast": "421-cherrim-overcast.webp",
         "Cherrim Sunshine": "421_cherrim-sunshine.webp",
         "Deerling Spring": "585_deerling-spring.webp",
@@ -216,7 +207,6 @@ def fix_image_urls():
         # Check if we have a mapping for this exact name
         if name in form_mappings:
             filename = form_mappings[name]
-            # Verify the file exists
             if filename in existing_images:
                 image_url = f"https://raw.githubusercontent.com/Skatecrete/pogo-raid-data/main/images/{filename}"
                 spawn['image_url'] = image_url
@@ -225,15 +215,9 @@ def fix_image_urls():
             else:
                 missing_images.append(f"{name} (expected: {filename})")
         else:
-            # For unmapped names, try to generate filename
-            slug = name.lower().replace(' ', '-').replace("'", "").replace("♀", "-f").replace("♂", "-m")
-            slug = re.sub(r'[^a-z0-9-]', '', slug)
-            filename = f"{pokemon_id}_{slug}.webp"
-            if filename in existing_images:
-                image_url = f"https://raw.githubusercontent.com/Skatecrete/pogo-raid-data/main/images/{filename}"
-                spawn['image_url'] = image_url
-                updated_count += 1
-                print(f"✅ (auto) {name} -> {filename}")
+            # For unmapped names, use PokeAPI fallback
+            image_url = f"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/{pokemon_id}.png"
+            spawn['image_url'] = image_url
     
     # Save updated spawns.json
     output = {
