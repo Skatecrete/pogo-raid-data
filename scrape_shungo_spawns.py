@@ -22,14 +22,6 @@ def get_rotomlabs_slug(pokemon_name):
         "Mime Jr.": "mime-jr",
         "Sirfetch'd": "sirfetchd",
         "Mr. Rime": "mr-rime",
-        "Castform Rainy": "castform-rainy",
-        "Castform Sunny": "castform-sunny",
-        "Castform Snowy": "castform-snowy",
-        "Deerling Spring Form": "deerling-spring",
-        "Deerling Autumn Form": "deerling-autumn",
-        "Deerling Summer Form": "deerling-summer",
-        "Deerling Winter Form": "deerling-winter",
-        "Sawsbuck Spring Form": "sawsbuck-spring",
     }
     
     if clean_name in special_mappings:
@@ -92,9 +84,9 @@ def scrape_shungo_spawns():
         if not pokemon_name:
             pokemon_name = f"Pokemon #{pokemon_id}"
         
-        # Generate image URL using RotomLabs pattern (but app will use whatever)
+        # Generate image URL
         slug = get_rotomlabs_slug(pokemon_name)
-        image_url = f"https://rotomlabs.net/dex/{slug}"
+        image_url = f"https://raw.githubusercontent.com/Skatecrete/pogo-raid-data/main/images/{pokemon_id}_{slug}.webp"
         
         spawns.append({
             "id": pokemon_id,
