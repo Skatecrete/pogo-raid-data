@@ -21,24 +21,35 @@ def get_raid_key(raid):
     tier = raid.get('tier', '').strip()
     return f"{name}|{tier}"
 
+def extract_name_from_raid_obj(raid_obj):
+    """Extract name from raid object (handles both old string format and new dict format)"""
+    if isinstance(raid_obj, dict):
+        return raid_obj.get('name', '')
+    return str(raid_obj)
+
 def main():
+    # Load old SnackNap data
     try:
         with open('current_raids_old.json', 'r') as f:
             old_snacknap = json.load(f)
     except:
         old_snacknap = {"last_updated": "", "tier1": [], "tier3": [], "dynamax_tier1": [], "dynamax_tier2": [], "dynamax_tier3": [], "gigantamax": []}
     
+    # Load new SnackNap data
     with open('current_raids.json', 'r') as f:
         new_snacknap = json.load(f)
     
+    # Load old ScrapedDuck data if exists
     try:
         with open('scrapedduck_old.json', 'r') as f:
             old_scrapedduck_data = json.load(f)
     except:
         old_scrapedduck_data = []
     
+    # Fetch current ScrapedDuck raids
     current_scrapedduck = fetch_scrapedduck_raids()
     
+    # Build sets for comparison
     old_scrapedduck_set = set()
     for raid in old_scrapedduck_data:
         old_scrapedduck_set.add(get_raid_key(raid))
@@ -47,12 +58,15 @@ def main():
     for raid in current_scrapedduck:
         new_scrapedduck_set.add(get_raid_key(raid))
     
+    # Find added and removed ScrapedDuck raids
     scrapedduck_added = new_scrapedduck_set - old_scrapedduck_set
     scrapedduck_removed = old_scrapedduck_set - new_scrapedduck_set
     
+    # Save current ScrapedDuck for next comparison
     with open('scrapedduck_old.json', 'w') as f:
         json.dump(current_scrapedduck, f)
     
+    # SnackNap categories
     categories = ['tier1', 'tier3', 'dynamax_tier1', 'dynamax_tier2', 'dynamax_tier3', 'gigantamax']
     display_names = {
         'tier1': '⭐ 1-Star Raids',
@@ -65,12 +79,16 @@ def main():
     
     changes = []
     
+    # Check SnackNap changes
     for category in categories:
-        old_set = set(old_snacknap.get(category, []))
-        new_set = set(new_snacknap.get(category, []))
+        old_list = old_snacknap.get(category, [])
+        new_list = new_snacknap.get(category, [])
         
-        added = new_set - old_set
-        removed = old_set - new_set
+        old_names = set(extract_name_from_raid_obj(r) for r in old_list)
+        new_names = set(extract_name_from_raid_obj(r) for r in new_list)
+        
+        added = new_names - old_names
+        removed = old_names - new_names
         
         if added or removed:
             changes.append(f"\n**{display_names[category]}:**")
@@ -79,6 +97,7 @@ def main():
             if removed:
                 changes.append(f"  ❌ Removed: {', '.join(sorted(removed))}")
     
+    # Check ScrapedDuck changes
     if scrapedduck_added or scrapedduck_removed:
         added_by_tier = {}
         for key in scrapedduck_added:
@@ -133,6 +152,7 @@ def main():
             for tier, names in removed_by_tier.items():
                 changes.append(f"  ❌ Removed {tier}: {', '.join(sorted(names))}")
     
+    # Save changes to file
     with open('raid_changes.txt', 'w') as f:
         if changes:
             f.write('\n'.join(changes))
