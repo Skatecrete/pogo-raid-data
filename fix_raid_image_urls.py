@@ -308,7 +308,7 @@ def fix_raid_image_urls():
     form_raid_count = 0
     
     # Process each raid tier
-    tiers_to_process = ['tier1', 'tier3', 'dynamax_tier1', 'dynamax_tier2', 'dynamax_tier3', 'gigantamax']
+    tiers_to_process = ['tier1', 'tier3', 'dynamax_tier1', 'dynamax_tier2', 'dynamax_tier3', 'gigantamax', 'mega']
     
     for tier in tiers_to_process:
         if tier not in raids_data:
@@ -333,7 +333,8 @@ def fix_raid_image_urls():
                 continue
             
             # Check if it's a Mega or Gigantamax raid
-            is_mega = 'mega' in raid_name.lower() and 'gigantamax' not in raid_name.lower()
+            # FIXED: Also check if tier is 'mega'
+            is_mega = ('mega' in raid_name.lower() and 'gigantamax' not in raid_name.lower()) or tier == 'mega'
             is_gmax = 'gigantamax' in raid_name.lower() or tier == 'gigantamax'
             
             if is_mega:
