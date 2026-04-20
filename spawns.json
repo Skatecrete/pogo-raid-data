@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-04-20 00:44:52",
+  "last_updated": "2026-04-20 00:46:56",
   "total": 618,
   "spawns": [
     {
@@ -2534,7 +2534,7 @@
       "name": "Voltorb Hisuian",
       "rate": 0.07,
       "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/100.png"
+      "image_url": "https://raw.githubusercontent.com/Skatecrete/pogo-raid-data/main/images/100_voltorb-hisuian.webp"
     },
     {
       "id": 131,
