@@ -25,7 +25,161 @@ def fix_raid_image_urls():
         existing_images = set(os.listdir(images_folder))
         print(f"📁 Found {len(existing_images)} images in {images_folder}/")
     
-        # ===== SPAWN FORM MAPPINGS (COMPLETE from your image list) =====
+    # ===== MEGA EVOLUTION MAPPINGS (with "Mega " prefix) =====
+    mega_mappings = {
+        # Kanto
+        "Mega Venusaur": "venusaur_mega.webp",
+        "Mega Charizard X": "charizard_mega-x.webp",
+        "Mega Charizard Y": "charizard_mega-y.webp",
+        "Mega Blastoise": "blastoise_mega.webp",
+        "Mega Beedrill": "beedrill_mega.webp",
+        "Mega Pidgeot": "pidgeot_mega.webp",
+        "Mega Alakazam": "alakazam_mega.webp",
+        "Mega Slowbro": "slowbro_mega.webp",
+        "Mega Gengar": "gengar_mega.webp",
+        "Mega Kangaskhan": "kangaskhan_mega.webp",
+        "Mega Pinsir": "pinsir_mega.webp",
+        "Mega Gyarados": "gyarados_mega.webp",
+        "Mega Aerodactyl": "aerodactyl_mega.webp",
+        "Mega Mewtwo X": "mewtwo_mega-x.webp",
+        "Mega Mewtwo Y": "mewtwo_mega-y.webp",
+        "Mega Dragonite": "dragonite_mega.webp",
+        "Mega Victreebel": "victreebel_mega.webp",
+        "Mega Starmie": "starmie_mega.webp",
+        
+        # Johto
+        "Mega Meganium": "meganium_mega.webp",
+        "Mega Feraligatr": "feraligatr_mega.webp",
+        "Mega Ampharos": "ampharos_mega.webp",
+        "Mega Steelix": "steelix_mega.webp",
+        "Mega Scizor": "scizor_mega.webp",
+        "Mega Heracross": "heracross_mega.webp",
+        "Mega Houndoom": "houndoom_mega.webp",
+        "Mega Tyranitar": "tyranitar_mega.webp",
+        "Mega Skarmory": "skarmory_mega.webp",
+        
+        # Hoenn
+        "Mega Sceptile": "sceptile_mega.webp",
+        "Mega Blaziken": "blaziken_mega.webp",
+        "Mega Swampert": "swampert_mega.webp",
+        "Mega Gardevoir": "gardevoir_mega.webp",
+        "Mega Sableye": "sableye_mega.webp",
+        "Mega Mawile": "mawile_mega.webp",
+        "Mega Aggron": "aggron_mega.webp",
+        "Mega Medicham": "medicham_mega.webp",
+        "Mega Manectric": "manectric_mega.webp",
+        "Mega Sharpedo": "sharpedo_mega.webp",
+        "Mega Camerupt": "camerupt_mega.webp",
+        "Mega Altaria": "altaria_mega.webp",
+        "Mega Banette": "banette_mega.webp",
+        "Mega Absol": "absol_mega.webp",
+        "Mega Glalie": "glalie_mega.webp",
+        "Mega Salamence": "salamence_mega.webp",
+        "Mega Metagross": "metagross_mega.webp",
+        "Mega Latias": "latias_mega.webp",
+        "Mega Latios": "latios_mega.webp",
+        "Mega Rayquaza": "rayquaza_mega.webp",
+        "Mega Chimecho": "chimecho_mega.webp",
+        
+        # Sinnoh
+        "Mega Lopunny": "lopunny_mega.webp",
+        "Mega Garchomp": "garchomp_mega.webp",
+        "Mega Garchomp Z": "garchomp_mega-z.webp",
+        "Mega Lucario": "lucario_mega.webp",
+        "Mega Lucario Z": "lucario_mega-z.webp",
+        "Mega Abomasnow": "abomasnow_mega.webp",
+        "Mega Gallade": "gallade_mega.webp",
+        "Mega Froslass": "froslass_mega.webp",
+        "Mega Heatran": "heatran_mega.webp",
+        "Mega Staraptor": "staraptor_mega.webp",
+        
+        # Unova
+        "Mega Darkrai": "darkrai_mega.webp",
+        "Mega Emboar": "emboar_mega.webp",
+        "Mega Excadrill": "excadrill_mega.webp",
+        "Mega Audino": "audino_mega.webp",
+        "Mega Scolipede": "scolipede_mega.webp",
+        "Mega Scrafty": "scrafty_mega.webp",
+        "Mega Eelektross": "eelektross_mega.webp",
+        "Mega Chandelure": "chandelure_mega.webp",
+        "Mega Golurk": "golurk_mega.webp",
+        
+        # Kalos
+        "Mega Chesnaught": "chesnaught_mega.webp",
+        "Mega Delphox": "delphox_mega.webp",
+        "Mega Greninja": "greninja_mega.webp",
+        "Mega Pyroar": "pyroar_mega.webp",
+        "Mega Meowstic": "meowstic_mega.webp",
+        "Mega Malamar": "malamar_mega.webp",
+        "Mega Barbaracle": "barbaracle_mega.webp",
+        "Mega Dragalge": "dragalge_mega.webp",
+        "Mega Hawlucha": "hawlucha_mega.webp",
+        "Mega Zygarde": "zygarde_mega.webp",
+        "Mega Diancie": "diancie_mega.webp",
+        
+        # Alola
+        "Mega Crabominable": "crabominable_mega.webp",
+        "Mega Golisopod": "golisopod_mega.webp",
+        "Mega Drampa": "drampa_mega.webp",
+        "Mega Magearna": "magearna_mega.webp",
+        "Mega Magearna Original Color": "magearna-original-color_mega.webp",
+        "Mega Zeraora": "zeraora_mega.webp",
+        
+        # Galar
+        "Mega Falinks": "falinks_mega.webp",
+        
+        # Paldea
+        "Mega Scovillain": "scovillain_mega.webp",
+        "Mega Glimmora": "glimmora_mega.webp",
+        "Mega Baxcalibur": "baxcalibur_mega.webp",
+        
+        # Tatsugiri forms
+        "Mega Tatsugiri Curly Form": "tatsugiri-curly-form_mega.webp",
+        "Mega Tatsugiri Droopy Form": "tatsugiri-droopy-form_mega.webp",
+        "Mega Tatsugiri Stretchy Form": "tatsugiri-stretchy-form_mega.webp",
+        
+        # Floette
+        "Mega Floette Eternal Flower": "floette-eternal-flower_mega.webp",
+    }
+    
+    # ===== GIGANTAMAX MAPPINGS =====
+    gmax_mappings = {
+        "Gigantamax Venusaur": "venusaur_gigantamax.webp",
+        "Gigantamax Charizard": "charizard_gigantamax.webp",
+        "Gigantamax Blastoise": "blastoise_gigantamax.webp",
+        "Gigantamax Butterfree": "butterfree_gigantamax.webp",
+        "Gigantamax Pikachu": "pikachu_gigantamax.webp",
+        "Gigantamax Meowth": "meowth_gigantamax.webp",
+        "Gigantamax Machamp": "machamp_gigantamax.webp",
+        "Gigantamax Gengar": "gengar_gigantamax.webp",
+        "Gigantamax Kingler": "kingler_gigantamax.webp",
+        "Gigantamax Lapras": "lapras_gigantamax.webp",
+        "Gigantamax Eevee": "eevee_gigantamax.webp",
+        "Gigantamax Snorlax": "snorlax_gigantamax.webp",
+        "Gigantamax Garbodor": "garbodor_gigantamax.webp",
+        "Gigantamax Melmetal": "melmetal_gigantamax.webp",
+        "Gigantamax Rillaboom": "rillaboom_gigantamax.webp",
+        "Gigantamax Cinderace": "cinderace_gigantamax.webp",
+        "Gigantamax Inteleon": "inteleon_gigantamax.webp",
+        "Gigantamax Corviknight": "corviknight_gigantamax.webp",
+        "Gigantamax Orbeetle": "orbeetle_gigantamax.webp",
+        "Gigantamax Drednaw": "drednaw_gigantamax.webp",
+        "Gigantamax Coalossal": "coalossal_gigantamax.webp",
+        "Gigantamax Flapple": "flapple_gigantamax.webp",
+        "Gigantamax Appletun": "appletun_gigantamax.webp",
+        "Gigantamax Sandaconda": "sandaconda_gigantamax.webp",
+        "Gigantamax Toxtricity": "toxtricity_gigantamax.webp",
+        "Gigantamax Centiskorch": "centiskorch_gigantamax.webp",
+        "Gigantamax Hatterene": "hatterene_gigantamax.webp",
+        "Gigantamax Grimmsnarl": "grimmsnarl_gigantamax.webp",
+        "Gigantamax Alcremie": "alcremie_gigantamax.webp",
+        "Gigantamax Copperajah": "copperajah_gigantamax.webp",
+        "Gigantamax Duraludon": "duraludon_gigantamax.webp",
+        "Gigantamax Urshifu Single Strike": "urshifu-single-strike_gigantamax.webp",
+        "Gigantamax Urshifu Rapid Strike": "urshifu-rapid-strike_gigantamax.webp",
+    }
+    
+    # ===== SPAWN FORM MAPPINGS =====
     form_mappings = {
         # Castform
         "Castform Rainy": "351_castform-rainy.webp",
@@ -88,7 +242,7 @@ def fix_raid_image_urls():
         "Gastrodon East Sea": "423_gastrodon-east-seawebp",
         "Gastrodon West Sea": "423_gastrodon-west-seawebp",
         
-        # ===== Alolan Forms =====
+        # Alolan Forms
         "Rattata Alola": "19_rattata-alola.webp",
         "Raticate Alola": "20_raticate-alola.webp",
         "Sandshrew Alola": "27_sandshrew-alola.webp",
@@ -101,14 +255,13 @@ def fix_raid_image_urls():
         "Persian Alola": "53_persian-alola.webp",
         "Geodude Alola": "74_geodude-alola.webp",
         "Graveler Alola": "75_graveler-alola.webp",
-        "Golem Alola": "76_golem-alola.webp",
         "Grimer Alola": "88_grimer-alola.webp",
         "Muk Alola": "89_muk-alola.webp",
         "Exeggutor Alola": "103_exeggutorwebp",
         "Marowak Alola": "105_marowakwebp",
         "Raichu Alola": "26_raichuwebp",
         
-        # ===== Galarian Forms =====
+        # Galarian Forms
         "Meowth Galarian": "52_meowth-galarian.webp",
         "Ponyta Galarian": "77_ponyta-galarian.webp",
         "Rapidash Galarian": "78_rapidash-galarian.webp",
@@ -122,124 +275,33 @@ def fix_raid_image_urls():
         "Darumaka Galarian": "554_darumaka-galarian.webp",
         "Corsola Galarian": "222_corsolawebp",
         
-        # ===== Hisuian Forms =====
+        # Hisuian Forms
         "Growlithe Hisuian": "58_growlithe-hisuian.webp",
         "Arcanine Hisuian": "59_arcanine-hisuian.webp",
         "Voltorb Hisuian": "100_voltorb-hisuian.webp",
         "Electrode Hisuian": "101_electrode-hisuian.webp",
-        "Typhlosion Hisuian": "157_typhlosionwebp",
         "Sneasel Hisuian": "215_sneasel-hisuian.webp",
-        "Sliggoo Hisuian": "705_sliggoo-hisuian.webp",
-        "Goodra Hisuian": "706_goodra-hisuian.webp",
-        "Avalugg Hisuian": "713_avalugg-hisuian.webp",
-        "Decidueye Hisuian": "724_decidueyewebp",
-        "Samurott Hisuian": "503_samurottwebp",
-        "Lilligant Hisuian": "549_lilligant-hisuian.webp",
-        "Zoroark Hisuian": "571_zoroark-hisuian.webp",
-        "Braviary Hisuian": "628_braviarywebp",
         
-        # ===== Paldean Forms =====
+        # Paldean Forms
         "Wooper Paldea": "194_wooper-paldea.webp",
         "Clodsire": "980_clodsirewebp",
         "Tauros": "128_tauroswebp",
-        "Tauros Paldean Blaze Breed": "128_tauros-paldea-blaze.webp",
-        "Tauros Paldean Aqua Breed": "128_tauros-paldea-aqua.webp",
-        "Tauros Paldean Combat Breed": "128_tauros-paldea-combat.webp",
         
-        # ===== Rotom Forms =====
-        "Rotom Heat": "479_rotom-heat.webp",
-        "Rotom Wash": "479_rotom-wash.webp",
-        "Rotom Frost": "479_rotom-frost.webp",
-        "Rotom Fan": "479_rotom-fan.webp",
-        "Rotom Mow": "479_rotom-mow.webp",
-        
-        # ===== Darmanitan =====
-        "Darmanitan Standard": "555-darmanitan-standard-mode.webp",
-        "Darmanitan Zen": "555-darmanitan-zen-mode.webp",
-        "Darmanitan Galarian Standard": "555-darmanitan-galarian-zen-mode.webp",
-        "Darmanitan Galarian Zen": "555-darmanitan-galarian-zen-mode.webp",
-        
-        # ===== Other Forms =====
+        # Other
         "Farfetch'd": "83_farfetch-d.webp",
         "Mr. Mime": "122_mr-mime.webp",
         "Nidoran♀": "29_nidoran-f.webp",
         "Nidoran♂": "32_nidoran-m.webp",
         "Oinkologne Female": "916_oinkologne-female.webp",
-        "Oinkologne Male": "916-oinkologne-male.webp",
         "Frillish Female": "592_frillish-female.webp",
-        "Frillish Male": "592_frillishwebp",
-        "Cherrim Overcast": "421-cherrim-overcast.webp",
-        "Cherrim Sunshine": "421_cherrim-sunshine.webp",
-        "Deerling Spring": "585_deerling-spring.webp",
-        "Deerling Summer": "585-deerling-summer.webp",
-        "Deerling Autumn": "585-deerling-autumn.webp",
-        "Deerling Winter": "585-deerling-winter.webp",
-        "Sawsbuck Spring": "586_sawsbuck-spring.webp",
-        "Sawsbuck Summer": "586-sawsbuck-summer.webp",
-        "Sawsbuck Autumn": "586-sawsbuck-autumn.webp",
-        "Sawsbuck Winter": "586-sawsbuck-winter.webp",
-        
-        # ===== Porygon =====
         "Porygon": "137_porygonwebp",
         "Porygon2": "233_porygon2webp",
         "Porygon-Z": "474_porygon-zwebp",
-        
-        # ===== Ho-Oh =====
         "Ho-Oh": "250_ho-ohwebp",
-        
-        # ===== Type Null / Silvally =====
         "Type: Null": "772_type-nullwebp",
-        
-        # ===== Mime Jr. =====
         "Mime Jr.": "439_mime-jrwebp",
-        
-        # ===== Sirfetch'd =====
         "Sirfetch'd": "865_sirfetchdwebp",
-        
-        # ===== Mr. Rime =====
         "Mr. Rime": "866_mr-rimewebp",
-        
-        # ===== Unovan Forms (not regional but different) =====
-        "Basculin Blue-Striped": "550_basculin-blue-striped.webp",
-        "Basculin Red-Striped": "550_basculin-red-striped.webp",
-        
-        # ===== Vivillon Patterns =====
-        "Vivillon Polar": "666_vivillon-polar.webp",
-        "Vivillon Tundra": "666_vivillon-tundra.webp",
-        "Vivillon Continental": "666_vivillon-continental.webp",
-        "Vivillon Garden": "666_vivillon-garden.webp",
-        "Vivillon Elegant": "666_vivillon-elegant.webp",
-        "Vivillon Modern": "666_vivillon-modern.webp",
-        "Vivillon Marine": "666_vivillon-marine.webp",
-        "Vivillon Archipelago": "666_vivillon-archipelago.webp",
-        "Vivillon High Plains": "666_vivillon-high-plains.webp",
-        "Vivillon Sandstorm": "666_vivillon-sandstorm.webp",
-        "Vivillon River": "666_vivillon-river.webp",
-        "Vivillon Monsoon": "666_vivillon-monsoon.webp",
-        "Vivillon Savanna": "666_vivillon-savanna.webp",
-        "Vivillon Sun": "666_vivillon-sun.webp",
-        "Vivillon Ocean": "666_vivillon-ocean.webp",
-        "Vivillon Jungle": "666_vivillon-jungle.webp",
-        
-        # ===== Furfrou Trims =====
-        "Furfrou Heart": "676_furfrou-heart.webp",
-        "Furfrou Star": "676_furfrou-star.webp",
-        "Furfrou Diamond": "676_furfrou-diamond.webp",
-        "Furfrou Debutante": "676_furfrou-debutante.webp",
-        "Furfrou Matron": "676_furfrou-matron.webp",
-        "Furfrou Dandy": "676_furfrou-dandy.webp",
-        "Furfrou La Reine": "676_furfrou-la-reine.webp",
-        "Furfrou Kabuki": "676_furfrou-kabuki.webp",
-        "Furfrou Pharaoh": "676_furfrou-pharaoh.webp",
-        
-        # ===== Minior Colors =====
-        "Minior Red": "774_minior-red.webp",
-        "Minior Orange": "774_minior-orange.webp",
-        "Minior Yellow": "774_minior-yellow.webp",
-        "Minior Green": "774_minior-green.webp",
-        "Minior Blue": "774_minior-blue.webp",
-        "Minior Indigo": "774_minior-indigo.webp",
-        "Minior Violet": "774_minior-violet.webp",
     }
     
     updated_count = 0
@@ -271,56 +333,41 @@ def fix_raid_image_urls():
                 continue
             
             # Check if it's a Mega or Gigantamax raid
-            is_mega = 'mega' in raid_name.lower()
+            is_mega = 'mega' in raid_name.lower() and 'gigantamax' not in raid_name.lower()
             is_gmax = 'gigantamax' in raid_name.lower() or tier == 'gigantamax'
             
             if is_mega:
-                # Handle Mega Evolutions
-                clean_name = raid_name.replace('Mega', '').replace('(Mega)', '').strip()
-                
-                if 'Mega X' in raid_name:
-                    clean_name = clean_name.replace('Mega X', '').strip()
-                    filename = mega_mappings.get(f"{clean_name} X")
-                elif 'Mega Y' in raid_name:
-                    clean_name = clean_name.replace('Mega Y', '').strip()
-                    filename = mega_mappings.get(f"{clean_name} Y")
-                else:
-                    filename = mega_mappings.get(clean_name)
-                
+                # Use the full raid name with "Mega" prefix to look up
+                filename = mega_mappings.get(raid_name)
                 if filename:
                     raid_obj['imageUrl'] = f"https://raw.githubusercontent.com/Skatecrete/pogo-raid-data/main/images/{filename}"
                     updated_count += 1
+                    print(f"  ✅ Mega: {raid_name} -> {filename}")
                 else:
                     raid_obj['imageUrl'] = f"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/0.png"
+                    print(f"  ⚠️ Mega not found: {raid_name}")
                     
             elif is_gmax:
-                # Handle Gigantamax
-                clean_name = raid_name.replace('Gigantamax', '').replace('(Gigantamax)', '').strip()
-                filename = gmax_mappings.get(clean_name)
-                
+                # Use the full raid name with "Gigantamax" prefix to look up
+                filename = gmax_mappings.get(raid_name)
                 if filename:
                     raid_obj['imageUrl'] = f"https://raw.githubusercontent.com/Skatecrete/pogo-raid-data/main/images/{filename}"
                     updated_count += 1
+                    print(f"  ✅ Gmax: {raid_name} -> {filename}")
                 else:
                     raid_obj['imageUrl'] = f"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/0.png"
+                    print(f"  ⚠️ Gmax not found: {raid_name}")
                     
             else:
                 # Regular raid (1-star, 3-star, Dynamax) - use form mappings
-                # Check if this raid name matches a form
                 if raid_name in form_mappings:
                     filename = form_mappings[raid_name]
                     raid_obj['imageUrl'] = f"https://raw.githubusercontent.com/Skatecrete/pogo-raid-data/main/images/{filename}"
                     form_raid_count += 1
+                    print(f"  ✅ Form raid: {raid_name} -> {filename}")
                 else:
-                    # Try to match by cleaning the name
-                    clean_name = raid_name.replace('D-Max', '').strip()
-                    if clean_name in form_mappings:
-                        filename = form_mappings[clean_name]
-                        raid_obj['imageUrl'] = f"https://raw.githubusercontent.com/Skatecrete/pogo-raid-data/main/images/{filename}"
-                        form_raid_count += 1
-                    else:
-                        # Use PokeAPI fallback
-                        raid_obj['imageUrl'] = f"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/0.png"
+                    # Use PokeAPI fallback
+                    raid_obj['imageUrl'] = f"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/0.png"
             
             new_raids.append(raid_obj)
         
