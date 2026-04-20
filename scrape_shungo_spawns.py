@@ -25,17 +25,51 @@ def get_rotomlabs_slug(pokemon_name):
         "Castform Rainy": "castform-rainy",
         "Castform Sunny": "castform-sunny",
         "Castform Snowy": "castform-snowy",
-        "Castform": "castform",
         "Cherrim Overcast Form": "cherrim-overcast",
         "Cherrim Sunny": "cherrim-sunshine",
         "Deerling Spring Form": "deerling-spring",
         "Sawsbuck Spring Form": "sawsbuck-spring",
         "Darmanitan Standard": "darmanitan-standard-mode",
         "Farfetch'd Galarian": "farfetch-d-galarian",
+        "Pumpkaboo Small": "pumpkaboo-small",
+        "Pumpkaboo Large": "pumpkaboo-large",
+        "Pumpkaboo Super": "pumpkaboo-super",
+        "Pumpkaboo Average": "pumpkaboo-average",
+        "Flabébé Blue Flower": "flabebe-blue-flower",
+        "Flabébé Red Flower": "flabebe-red-flower",
+        "Flabébé Yellow Flower": "flabebe-yellow-flower",
+        "Flabébé White Flower": "flabebe-white-flower",
+        "Flabébé Orange Flower": "flabebe-orange-flower",
+        "Floette Blue Flower": "floette-blue-flower",
+        "Floette Red Flower": "floette-red-flower",
+        "Floette Yellow Flower": "floette-yellow-flower",
+        "Burmy Plant Cloak": "burmy-plant-cloak",
+        "Burmy Sandy Cloak": "burmy-sandy-cloak",
+        "Burmy Trash Cloak": "burmy-trash-cloak",
+        "Oricorio Baile Style": "oricorio-baile-style",
+        "Oricorio Pom-Pom Style": "oricorio-pom-pom-style",
+        "Oricorio Sensu Style": "oricorio-sensu-style",
+        "Geodude Alola": "geodude-alolan",
+        "Graveler Alola": "graveler-alolan",
+        "Grimer Alola": "grimer-alolan",
+        "Muk Alola": "muk-alolan",
+        "Rattata Alola": "rattata-alolan",
+        "Raticate Alola": "raticate-alolan",
+        "Meowth Alola": "meowth-alolan",
+        "Persian Alola": "persian-alolan",
+        "Sandshrew Alola": "sandshrew-alolan",
+        "Vulpix Alola": "vulpix-alolan",
+        "Diglett Alola": "diglett-alolan",
+        "Dugtrio Alola": "dugtrio-alolan",
     }
     
     if clean_name in special_mappings:
         return special_mappings[clean_name]
+    
+    # Handle "Alola" in name
+    if 'alola' in clean_name.lower():
+        base = clean_name.lower().replace(' alola', '').replace(' alolan', '')
+        return f"{base}-alolan"
     
     clean_name = clean_name.lower()
     clean_name = clean_name.replace("'", "")
@@ -45,44 +79,6 @@ def get_rotomlabs_slug(pokemon_name):
     clean_name = clean_name.strip('-')
     
     return clean_name
-
-def is_form_pokemon(pokemon_name):
-    """Check if a Pokemon has a special form that should use RotomLabs image."""
-    name_lower = pokemon_name.lower()
-    
-    form_indicators = [
-        'alola', 'alolan', 'galarian', 'hisuian', 'paldea', 'paldean',
-        'rainy', 'sunny', 'snowy',
-        'overcast', 'sunshine',
-        'heat', 'wash', 'frost', 'fan', 'mow',
-        'baile', 'pom-pom', 'pau', 'sensu',
-        'super', 'large', 'small', 'average',
-        'blue flower', 'red flower', 'yellow flower', 'white flower', 'orange flower',
-        'standard', 'zen',
-        'origin', 'sky', 'therian', 'resolute', 'pirouette',
-        'plant cloak', 'sandy cloak', 'trash cloak',
-        'spring', 'summer', 'autumn', 'winter',
-        '♀', '♂', "'", '.', ':',
-    ]
-    
-    for indicator in form_indicators:
-        if indicator in name_lower:
-            return True
-    return False
-
-def get_pokemon_name_from_api(pokemon_id):
-    """Fallback to PokeAPI for unknown Pokémon"""
-    try:
-        url = f"https://pokeapi.co/api/v2/pokemon-species/{pokemon_id}/"
-        response = requests.get(url, timeout=5)
-        if response.status_code == 200:
-            data = response.json()
-            for name_entry in data.get('names', []):
-                if name_entry.get('language', {}).get('name') == 'en':
-                    return name_entry.get('name')
-    except:
-        pass
-    return None
 
 def scrape_shungo_spawns():
     print("="*60)
@@ -114,17 +110,9 @@ def scrape_shungo_spawns():
             rate = float(rate_str)
             form_map[pokemon_id][rate] = name
     
-    # Build ID to name map (for fallback)
-    id_to_name = {}
-    for pid, rates in form_map.items():
-        for rate, name in rates.items():
-            id_to_name[pid] = name
-            break
-    
     spawns = []
     form_count = 0
     regular_count = 0
-    missing_ids = set()
     
     print("\n📝 Processing spawns...")
     
@@ -133,11 +121,11 @@ def scrape_shungo_spawns():
         rate = item[2]
         is_shiny = item[3] == "true" or item[3] == True
         
-        # Get Pokémon name
+        # Get the form name from mappings
         pokemon_name = None
         
-        # Try rate match first
         if pokemon_id in form_map:
+            # Find closest rate match
             closest_rate = None
             closest_diff = 1.0
             for map_rate in form_map[pokemon_id].keys():
@@ -148,28 +136,45 @@ def scrape_shungo_spawns():
             if closest_rate is not None:
                 pokemon_name = form_map[pokemon_id][closest_rate]
         
-        # Fallback to ID mapping
-        if not pokemon_name and pokemon_id in id_to_name:
-            pokemon_name = id_to_name[pokemon_id]
-        
-        # Last resort - PokeAPI
+        # If no name found, use ID
         if not pokemon_name:
-            pokemon_name = get_pokemon_name_from_api(pokemon_id)
-        
-        if not pokemon_name:
-            missing_ids.add(pokemon_id)
             pokemon_name = f"Pokemon #{pokemon_id}"
-        
-        # Determine image URL
-        if is_form_pokemon(pokemon_name) and not pokemon_name.startswith('Pokemon #'):
-            # Form Pokémon - use RotomLabs image
-            slug = get_rotomlabs_slug(pokemon_name)
-            image_url = f"https://raw.githubusercontent.com/Skatecrete/pogo-raid-data/main/images/{pokemon_id}_{slug}.webp"
-            form_count += 1
-        else:
-            # Regular Pokémon - use PokeAPI
-            image_url = f"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/{pokemon_id}.png"
             regular_count += 1
+        else:
+            # Check if this is a form (name has indicators like Rainy, Alola, etc.)
+            name_lower = pokemon_name.lower()
+            is_form = any(x in name_lower for x in [
+                'rainy', 'sunny', 'snowy', 'alola', 'alolan', 'galarian', 
+                'hisuian', 'paldea', 'heat', 'wash', 'frost', 'fan', 'mow',
+                'baile', 'pom-pom', 'pau', 'sensu', 'overcast', 'sunshine',
+                'blue flower', 'red flower', 'yellow flower', 'white flower', 'orange flower',
+                'plant cloak', 'sandy cloak', 'trash cloak', 'spring', 'autumn',
+                'small', 'large', 'super', 'average', 'standard', 'zen'
+            ])
+            
+            if is_form:
+                form_count += 1
+            else:
+                regular_count += 1
+        
+        # Generate image URL - ALWAYS use the form name for the slug
+        slug = get_rotomlabs_slug(pokemon_name)
+        
+        # Check if this should use RotomLabs (forms) or PokeAPI (regular)
+        name_lower = pokemon_name.lower()
+        use_rotomlabs = any(x in name_lower for x in [
+            'rainy', 'sunny', 'snowy', 'alola', 'alolan', 'galarian', 
+            'hisuian', 'paldea', 'heat', 'wash', 'frost', 'fan', 'mow',
+            'baile', 'pom-pom', 'pau', 'sensu', 'overcast', 'sunshine',
+            'blue flower', 'red flower', 'yellow flower', 'white flower', 'orange flower',
+            'plant cloak', 'sandy cloak', 'trash cloak', 'spring', 'autumn',
+            'small', 'large', 'super', 'average', 'standard', 'zen'
+        ])
+        
+        if use_rotomlabs and not pokemon_name.startswith('Pokemon #'):
+            image_url = f"https://raw.githubusercontent.com/Skatecrete/pogo-raid-data/main/images/{pokemon_id}_{slug}.webp"
+        else:
+            image_url = f"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/{pokemon_id}.png"
         
         spawns.append({
             "id": pokemon_id,
@@ -198,13 +203,12 @@ def scrape_shungo_spawns():
     print(f"   🔸 Form Pokémon (RotomLabs): {form_count}")
     print(f"   🔹 Regular Pokémon (PokeAPI): {regular_count}")
     
-    if missing_ids:
-        print(f"   ⚠️ Missing names for IDs: {sorted(missing_ids)[:20]}...")
-    
-    print("\n📊 Top 10 highest spawn rates:")
-    for i, spawn in enumerate(spawns[:10]):
-        source = "RotomLabs" if "rotomlabs" in spawn['image_url'] else "PokeAPI"
-        print(f"   {i+1}. {spawn['name']}: {spawn['rate']}% [{source}]")
+    # Show sample of form Pokémon
+    form_spawns = [s for s in spawns if 'rotomlabs' in s['image_url']]
+    if form_spawns:
+        print(f"\n📸 Sample form Pokémon (using RotomLabs):")
+        for s in form_spawns[:5]:
+            print(f"   - {s['name']}: {s['image_url']}")
     
     print("\n✨ Done!")
 
