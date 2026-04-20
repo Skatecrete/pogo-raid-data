@@ -1,230 +1,241 @@
-import requests
 import json
 import re
-import asyncio
+import os
 from datetime import datetime
-from playwright.async_api import async_playwright
 
-# ============================================================================
-# 1. SCRAPE FORMS DIRECTLY FROM SHUNGO WEBSITE (NO SEPARATE FILE NEEDED)
-# ============================================================================
-
-async def scrape_forms_from_website():
-    """Scrape form names directly from Shungo website"""
-    print("🌐 Scraping form data from Shungo website...")
+def fix_image_urls():
+    """Fix image URLs in spawns.json to match existing files in images folder"""
     
-    async with async_playwright() as p:
-        browser = await p.chromium.launch(headless=True)
-        page = await browser.new_page()
-        
-        print("📄 Loading page...")
-        await page.goto("https://shungo.app/tools/wild")
-        
-        await page.wait_for_timeout(5000)
-        
-        print("📜 Scrolling to load all Pokémon...")
-        last_height = await page.evaluate('() => document.body.scrollHeight')
-        
-        while True:
-            await page.evaluate('window.scrollTo(0, document.body.scrollHeight)')
-            await page.wait_for_timeout(2000)
-            new_height = await page.evaluate('() => document.body.scrollHeight')
-            if new_height == last_height:
-                break
-            last_height = new_height
-        
-        print("✅ Page loaded, extracting data...")
-        
-        text = await page.evaluate('() => document.body.innerText')
-        
-        await browser.close()
-        
-        # Parse the text into form mappings
-        lines = text.split('\n')
-        form_map = {}
-        
-        i = 0
-        while i < len(lines) - 2:
-            name = lines[i].strip()
-            rate_line = lines[i + 1].strip()
-            id_line = lines[i + 2].strip()
-            
-            if name and rate_line.endswith('%') and id_line.isdigit():
-                rate = float(rate_line.replace('%', ''))
-                pokemon_id = int(id_line)
-                rounded_rate = round(rate, 2)
-                
-                if pokemon_id not in form_map:
-                    form_map[pokemon_id] = {}
-                
-                if rounded_rate in form_map[pokemon_id]:
-                    existing = form_map[pokemon_id][rounded_rate]
-                    if existing != name and name not in existing:
-                        form_map[pokemon_id][rounded_rate] = f"{existing} or {name}"
-                else:
-                    form_map[pokemon_id][rounded_rate] = name
-                
-                i += 3
-            else:
-                i += 1
-        
-        print(f"📋 Found {len(form_map)} Pokémon with forms")
-        return form_map
-
-
-# ============================================================================
-# 2. FETCH SPAWNS FROM API
-# ============================================================================
-
-def fetch_spawns_from_api():
-    """Fetch raw spawn data from Shungo API"""
-    print("📡 Fetching spawns from Shungo API...")
-    api_url = "https://shungo.app/api/shungo/data/spawns"
-    response = requests.get(api_url)
-    data = response.json()
-    result_array = data["result"]
-    print(f"📊 Raw spawn entries: {len(result_array)}")
-    return result_array
-
-
-# ============================================================================
-# 3. HELPER FUNCTIONS
-# ============================================================================
-
-def get_rotomlabs_slug(pokemon_name):
-    """Convert Pokemon name to RotomLabs URL slug."""
-    clean_name = re.sub(r'\([^)]*\)', '', pokemon_name).strip()
+    print("="*60)
+    print("🖼️ FIXING IMAGE URLS FOR ALL FORMS")
+    print("="*60)
     
-    special_mappings = {
-        "Nidoran\u2640": "nidoran-f",
-        "Nidoran\u2642": "nidoran-m",
-        "Farfetch'd": "farfetch-d",
-        "Mr. Mime": "mr-mime",
-        "Type: Null": "type-null",
-        "Flabébé": "flabebe",
-        "Ho-Oh": "ho-oh",
-        "Sirfetch'd": "sirfetchd",
-        "Mr. Rime": "mr-rime",
-        "Pumpkaboo": "pumpkaboo",
-        "Darmanitan": "darmanitan",
-        "Rapidash": "rapidash",
-        "Pikachu": "pikachu",
-        "Geodude": "geodude",
-        "Grimer": "grimer",
-        "Meowth": "meowth",
-        "Vulpix": "vulpix",
-        "Rattata": "rattata",
-        "Diglett": "diglett",
-        "Sandshrew": "sandshrew",
-        "Dugtrio": "dugtrio",
-        "Graveler": "graveler",
-        "Persian": "persian",
-        "Raticate": "raticate",
-        "Muk": "muk",
-        "Ninetales": "ninetales",
-        "Oinkologne": "oinkologne",
-        "Flabébé": "flabebe",
-        "Floette": "floette",
-        "Cherrim": "cherrim",
-        "Burmy": "burmy",
-        "Sandslash": "sandslash",
+    # Load spawns.json
+    with open('spawns.json', 'r') as f:
+        data = json.load(f)
+    
+    spawns = data.get('spawns', [])
+    print(f"📊 Loaded {len(spawns)} spawns")
+    
+    # Get list of existing images in the images folder
+    images_folder = 'images'
+    existing_images = set()
+    if os.path.exists(images_folder):
+        existing_images = set(os.listdir(images_folder))
+        print(f"📁 Found {len(existing_images)} images in {images_folder}/")
+    else:
+        print(f"⚠️ Images folder '{images_folder}' not found!")
+        return
+    
+    # COMPLETE mapping of form names to image filenames
+    # Based on the actual files in your images folder
+    form_mappings = {
+        # ===== Castform =====
+        "Castform Rainy": "351_castform-rainy.webp",
+        "Castform Sunny": "351_castform-sunny.webp",
+        "Castform Snowy": "351-castform-snowy.webp",
+        "Castform": "351_castformwebp",
+        
+        # ===== Pumpkaboo sizes =====
+        "Pumpkaboo Small": "710_pumpkaboo-small.webp",
+        "Pumpkaboo Average": "710_pumpkaboo-average.webp",
+        "Pumpkaboo Large": "710_pumpkaboo-large.webp",
+        "Pumpkaboo Super": "710_pumpkaboo-super.webp",
+        "Pumpkaboo": "710_pumpkaboo.webp",
+        
+        # ===== Deerling seasons =====
+        "Deerling Spring Form": "585_deerling-spring.webp",
+        "Deerling Summer Form": "585-deerling-summer.webp",
+        "Deerling Autumn Form": "585-deerling-autumn.webp",
+        "Deerling Winter Form": "585-deerling-winter.webp",
+        
+        # ===== Sawsbuck seasons =====
+        "Sawsbuck Spring Form": "586_sawsbuck-spring.webp",
+        "Sawsbuck Summer Form": "586-sawsbuck-summer.webp",
+        "Sawsbuck Autumn Form": "586-sawsbuck-autumn.webp",
+        "Sawsbuck Winter Form": "586-sawsbuck-winter.webp",
+        
+        # ===== Oricorio styles =====
+        "Oricorio Baile Style": "741_oricorio-baile-style.webp",
+        "Oricorio Pom-Pom Style": "741-oricorio-pom-pom-style.webp",
+        "Oricorio Pa'u Style": "741-oricorio-pau-style.webp",
+        "Oricorio Sensu Style": "741_oricorio-sensu-style.webp",
+        
+        # ===== Cherrim forms =====
+        "Cherrim Overcast Form": "421-cherrim-overcast.webp",
+        "Cherrim Sunny": "421_cherrim-sunshine.webp",
+        
+        # ===== Burmy cloaks =====
+        "Burmy Plant Cloak": "412_burmy-plant-cloak.webp",
+        "Burmy Sandy Cloak": "412_burmy-sandy-cloak.webp",
+        "Burmy Trash Cloak": "412_burmy-trash-cloak.webp",
+        
+        # ===== Flabébé flowers =====
+        "Flabébé Blue Flower": "669_flab-b--blue-flower.webp",
+        "Flabébé Red Flower": "669_flab-b--red-flower.webp",
+        "Flabébé Yellow Flower": "669_flab-b--yellow-flower.webp",
+        "Flabébé White Flower": "669_flab-b--white-flower.webp",
+        "Flabébé Orange Flower": "669_flab-b--orange-flower.webp",
+        
+        # ===== Floette flowers =====
+        "Floette Blue Flower": "670_floette-blue-flower.webp",
+        "Floette Red Flower": "670_floette-red-flower.webp",
+        "Floette Yellow Flower": "670-floette-yellow-flower.webp",
+        "Floette White Flower": "670-floette-white-flower.webp",
+        "Floette Orange Flower": "670-floette-orange-flower.webp",
+        "Floette Eternal Flower": "670-floette-eternal-flower.webp",
+        
+        # ===== Shellos/Gastrodon =====
+        "Shellos East Sea": "422_shellos-east-seawebp",
+        "Shellos West Sea": "422_shellos-west-seawebp",
+        "Gastrodon East Sea": "423_gastrodon-east-seawebp",
+        "Gastrodon West Sea": "423_gastrodon-west-seawebp",
+        
+        # ===== Alolan Forms =====
+        "Rattata Alola": "19_rattata-alola.webp",
+        "Raticate Alola": "20_raticate-alola.webp",
+        "Sandshrew Alola": "27_sandshrew-alola.webp",
+        "Sandslash Alola": "28_sandslashwebp",
+        "Vulpix Alola": "37_vulpix-alola.webp",
+        "Ninetales Alola": "38_ninetaleswebp",
+        "Diglett Alola": "50_diglett-alola.webp",
+        "Dugtrio Alola": "51_dugtrio-alola.webp",
+        "Meowth Alola": "52_meowth-alola.webp",
+        "Persian Alola": "53_persian-alola.webp",
+        "Geodude Alola": "74_geodude-alola.webp",
+        "Graveler Alola": "75_graveler-alola.webp",
+        "Golem Alola": "76_golem-alola.webp",
+        "Grimer Alola": "88_grimer-alola.webp",
+        "Muk Alola": "89_muk-alola.webp",
+        "Exeggutor Alola": "103_exeggutorwebp",
+        "Marowak Alola": "105_marowakwebp",
+        "Raichu Alola": "26_raichuwebp",
+        
+        # ===== Galarian Forms =====
+        "Meowth Galarian": "52_meowth-galarian.webp",
+        "Ponyta Galarian": "77_ponyta-galarian.webp",
+        "Rapidash Galarian": "78_rapidash-galarian.webp",
+        "Slowpoke Galarian": "79_slowpoke-galarian.webp",
+        "Slowbro Galarian": "80_slowbrowebp",
+        "Farfetch'd Galarian": "83-farfetch-d-galarian.webp",
+        "Zigzagoon Galarian": "263_zigzagoon-galarian.webp",
+        "Linoone Galarian": "264_linoone-galarian.webp",
+        "Yamask Galarian": "562_yamask-galarian.webp",
+        "Stunfisk Galarian": "618_stunfisk-galarian.webp",
+        "Darumaka Galarian": "554_darumaka-galarian.webp",
+        "Corsola Galarian": "222_corsolawebp",
+        
+        # ===== Hisuian Forms =====
+        "Growlithe Hisuian": "58_growlithe-hisuian.webp",
+        "Arcanine Hisuian": "59_arcanine-hisuian.webp",
+        "Voltorb Hisuian": "100_voltorb-hisuian.webp",
+        "Electrode Hisuian": "101_electrode-hisuian.webp",
+        "Typhlosion Hisuian": "157_typhlosionwebp",
+        "Sneasel Hisuian": "215_sneasel-hisuian.webp",
+        "Sliggoo Hisuian": "705_sliggoo-hisuian.webp",
+        "Goodra Hisuian": "706_goodra-hisuian.webp",
+        "Avalugg Hisuian": "713_avalugg-hisuian.webp",
+        "Decidueye Hisuian": "724_decidueyewebp",
+        "Samurott Hisuian": "503_samurottwebp",
+        "Lilligant Hisuian": "549_lilligant-hisuian.webp",
+        "Zoroark Hisuian": "571_zoroark-hisuian.webp",
+        "Braviary Hisuian": "628_braviarywebp",
+        
+        # ===== Paldean Forms =====
+        "Wooper Paldea": "194_wooper-paldea.webp",
+        "Clodsire": "980_clodsirewebp",
+        "Tauros Paldean Blaze Breed": "128_tauroswebp",
+        "Tauros Paldean Aqua Breed": "128_tauroswebp",
+        "Tauros Paldean Combat Breed": "128_tauroswebp",
+        
+        # ===== Rotom Forms =====
+        "Rotom Heat": "479_rotom-heat.webp",
+        "Rotom Wash": "479_rotom-wash.webp",
+        "Rotom Frost": "479_rotom-frost.webp",
+        "Rotom Fan": "479_rotom-fan.webp",
+        "Rotom Mow": "479_rotom-mow.webp",
+        
+        # ===== Darmanitan =====
+        "Darmanitan Standard": "555-darmanitan-standard-mode.webp",
+        "Darmanitan Zen": "555-darmanitan-zen-mode.webp",
+        "Darmanitan Galarian Standard": "555-darmanitan-galarian-zen-mode.webp",
+        "Darmanitan Galarian Zen": "555-darmanitan-galarian-zen-mode.webp",
+        
+        # ===== Other Forms =====
+        "Farfetch'd": "83_farfetch-d.webp",
+        "Mr. Mime": "122_mr-mime.webp",
+        "Nidoran♀": "29_nidoran-f.webp",
+        "Nidoran♂": "32_nidoran-m.webp",
+        "Oinkologne Female": "916_oinkologne-female.webp",
+        "Oinkologne Male": "916-oinkologne-male.webp",
+        "Frillish Female": "592_frillish-female.webp",
+        "Frillish Male": "592_frillishwebp",
+        "Shellos East Sea": "422_shellos-east-seawebp",
+        "Shellos West Sea": "422_shellos-west-seawebp",
+        "Gastrodon East Sea": "423_gastrodon-east-seawebp",
+        "Gastrodon West Sea": "423_gastrodon-west-seawebp",
+        "Cherrim Overcast": "421-cherrim-overcast.webp",
+        "Cherrim Sunshine": "421_cherrim-sunshine.webp",
+        "Deerling Spring": "585_deerling-spring.webp",
+        "Deerling Summer": "585-deerling-summer.webp",
+        "Deerling Autumn": "585-deerling-autumn.webp",
+        "Deerling Winter": "585-deerling-winter.webp",
+        "Sawsbuck Spring": "586_sawsbuck-spring.webp",
+        "Sawsbuck Summer": "586-sawsbuck-summer.webp",
+        "Sawsbuck Autumn": "586-sawsbuck-autumn.webp",
+        "Sawsbuck Winter": "586-sawsbuck-winter.webp",
+        
+        # ===== Porygon =====
+        "Porygon": "137_porygonwebp",
+        "Porygon2": "233_porygon2webp",
+        "Porygon-Z": "474_porygon-zwebp",
+        
+        # ===== Ho-Oh =====
+        "Ho-Oh": "250_ho-ohwebp",
+        
+        # ===== Type Null / Silvally =====
+        "Type: Null": "772_type-nullwebp",
+        
+        # ===== Mime Jr. =====
+        "Mime Jr.": "439_mime-jrwebp",
+        
+        # ===== Sirfetch'd =====
+        "Sirfetch'd": "865_sirfetchdwebp",
+        
+        # ===== Mr. Rime =====
+        "Mr. Rime": "866_mr-rimewebp",
     }
     
-    if clean_name in special_mappings:
-        return special_mappings[clean_name]
+    updated_count = 0
+    missing_images = []
     
-    clean_name = clean_name.lower()
-    clean_name = clean_name.replace("'", "")
-    clean_name = clean_name.replace(" ", "-")
-    clean_name = re.sub(r'[^a-z0-9-]', '', clean_name)
-    clean_name = re.sub(r'-+', '-', clean_name)
-    clean_name = clean_name.strip('-')
-    
-    return clean_name
-
-
-def match_spawns_with_forms(spawns_array, form_map):
-    """Match each spawn with its correct form name"""
-    spawns = []
-    matched = 0
-    fallback = 0
-    
-    # Build a quick lookup by ID (for fallback)
-    id_to_any_name = {}
-    for pid, rates in form_map.items():
-        for rate, name in rates.items():
-            id_to_any_name[pid] = name
-            break
-    
-    for item in spawns_array:
-        pokemon_id = item[0]
-        rate = item[2]
-        is_shiny = item[3] == "true" or item[3] == True
+    for spawn in spawns:
+        name = spawn['name']
+        pokemon_id = spawn['id']
         
-        pokemon_name = None
-        
-        # Try to find exact or closest rate match
-        if pokemon_id in form_map:
-            closest_rate = None
-            closest_diff = 1.0
-            for map_rate in form_map[pokemon_id].keys():
-                diff = abs(map_rate - rate)
-                if diff < closest_diff:
-                    closest_diff = diff
-                    closest_rate = map_rate
-            
-            if closest_rate is not None:
-                pokemon_name = form_map[pokemon_id][closest_rate]
-                matched += 1
-        
-        # Fallback: use any name for this ID
-        if not pokemon_name and pokemon_id in id_to_any_name:
-            pokemon_name = id_to_any_name[pokemon_id]
-            fallback += 1
-        
-        # Last resort
-        if not pokemon_name:
-            pokemon_name = f"Pokemon #{pokemon_id}"
-        
-        slug = get_rotomlabs_slug(pokemon_name)
-        image_url = f"https://rotomlabs.net/dex/{slug}"
-        
-        spawns.append({
-            "id": pokemon_id,
-            "name": pokemon_name,
-            "rate": round(rate, 2),
-            "shiny": is_shiny,
-            "image_url": image_url
-        })
+        # Check if we have a mapping for this exact name
+        if name in form_mappings:
+            filename = form_mappings[name]
+            # Verify the file exists
+            if filename in existing_images:
+                image_url = f"https://raw.githubusercontent.com/Skatecrete/pogo-raid-data/main/images/{filename}"
+                spawn['image_url'] = image_url
+                updated_count += 1
+                print(f"✅ {name} -> {filename}")
+            else:
+                missing_images.append(f"{name} (expected: {filename})")
+        else:
+            # For unmapped names, try to generate filename
+            slug = name.lower().replace(' ', '-').replace("'", "").replace("♀", "-f").replace("♂", "-m")
+            slug = re.sub(r'[^a-z0-9-]', '', slug)
+            filename = f"{pokemon_id}_{slug}.webp"
+            if filename in existing_images:
+                image_url = f"https://raw.githubusercontent.com/Skatecrete/pogo-raid-data/main/images/{filename}"
+                spawn['image_url'] = image_url
+                updated_count += 1
+                print(f"✅ (auto) {name} -> {filename}")
     
-    print(f"✅ Exact matches: {matched} | Fallback matches: {fallback}")
-    return spawns
-
-
-# ============================================================================
-# 4. MAIN FUNCTION
-# ============================================================================
-
-async def main():
-    print("="*60)
-    print("🚀 POKESPAWN SPAWN SCRAPER (STANDALONE)")
-    print("="*60)
-    print(f"Time: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
-    print()
-    
-    # Step 1: Scrape form data directly from website
-    form_map = await scrape_forms_from_website()
-    
-    # Step 2: Fetch spawns from API
-    spawns_array = fetch_spawns_from_api()
-    
-    # Step 3: Match and generate spawns
-    spawns = match_spawns_with_forms(spawns_array, form_map)
-    
-    # Step 4: Sort by spawn rate
-    spawns.sort(key=lambda x: x['rate'], reverse=True)
-    
-    # Step 5: Save output
+    # Save updated spawns.json
     output = {
         "last_updated": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
         "total": len(spawns),
@@ -234,19 +245,17 @@ async def main():
     with open('spawns.json', 'w') as f:
         json.dump(output, f, indent=2)
     
-    print(f"\n💾 Saved to spawns.json")
-    print(f"   Total spawns: {len(spawns)}")
-    print(f"\n📊 Top 10 highest spawn rates:")
-    for i, spawn in enumerate(spawns[:10]):
-        print(f"   {i+1}. {spawn['name']}: {spawn['rate']}%")
+    print(f"\n💾 Updated spawns.json")
+    print(f"   ✅ Fixed {updated_count} image URLs")
     
-    print("\n✨ Done!")
-
-
-def run():
-    """Entry point for the script"""
-    asyncio.run(main())
-
+    if missing_images:
+        print(f"\n⚠️ Missing images for {len(missing_images)} forms:")
+        for m in missing_images[:20]:
+            print(f"   - {m}")
+        if len(missing_images) > 20:
+            print(f"   ... and {len(missing_images)-20} more")
+    
+    print("="*60)
 
 if __name__ == "__main__":
-    run()
+    fix_image_urls()
