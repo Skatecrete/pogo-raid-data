@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-04-21 22:10:00",
+  "last_updated": "2026-04-21 23:04:57",
   "total": 637,
   "spawns": [
     {
@@ -2814,14 +2814,14 @@
       "name": "Farfetch'd Galarian",
       "rate": 0.11,
       "shiny": false,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/83.png"
+      "image_url": "https://raw.githubusercontent.com/Skatecrete/pogo-raid-data/main/images/83-farfetch-d-galarian.webp"
     },
     {
       "id": 53,
       "name": "Persian Alola",
       "rate": 0.11,
       "shiny": false,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/53.png"
+      "image_url": "https://raw.githubusercontent.com/Skatecrete/pogo-raid-data/main/images/53_persian-alola.webp"
     },
     {
       "id": 256,
@@ -2863,7 +2863,7 @@
       "name": "Linoone Galarian",
       "rate": 0.11,
       "shiny": false,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/264.png"
+      "image_url": "https://raw.githubusercontent.com/Skatecrete/pogo-raid-data/main/images/264_linoone-galarian.webp"
     },
     {
       "id": 246,
@@ -2884,7 +2884,7 @@
       "name": "Yamask Galarian",
       "rate": 0.1,
       "shiny": false,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/562.png"
+      "image_url": "https://raw.githubusercontent.com/Skatecrete/pogo-raid-data/main/images/562_yamask-galarian.webp"
     },
     {
       "id": 566,
@@ -2975,7 +2975,7 @@
       "name": "Graveler Alola",
       "rate": 0.09,
       "shiny": false,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/75.png"
+      "image_url": "https://raw.githubusercontent.com/Skatecrete/pogo-raid-data/main/images/75_graveler-alola.webp"
     },
     {
       "id": 75,
@@ -3045,7 +3045,7 @@
       "name": "Stunfisk Galarian",
       "rate": 0.09,
       "shiny": false,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/618.png"
+      "image_url": "https://raw.githubusercontent.com/Skatecrete/pogo-raid-data/main/images/618_stunfisk-galarian.webp"
     },
     {
       "id": 37,
@@ -3164,7 +3164,7 @@
       "name": "Darmanitan Standard",
       "rate": 0.08,
       "shiny": false,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/555.png"
+      "image_url": "https://raw.githubusercontent.com/Skatecrete/pogo-raid-data/main/images/555-darmanitan-standard-mode.webp"
     },
     {
       "id": 232,
@@ -3234,7 +3234,7 @@
       "name": "Muk Alola",
       "rate": 0.07,
       "shiny": false,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/89.png"
+      "image_url": "https://raw.githubusercontent.com/Skatecrete/pogo-raid-data/main/images/89_muk-alola.webp"
     },
     {
       "id": 308,
@@ -3339,14 +3339,14 @@
       "name": "Raticate Alola",
       "rate": 0.07,
       "shiny": false,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/20.png"
+      "image_url": "https://raw.githubusercontent.com/Skatecrete/pogo-raid-data/main/images/20_raticate-alola.webp"
     },
     {
       "id": 38,
       "name": "Ninetales Alola",
       "rate": 0.06,
       "shiny": false,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/38.png"
+      "image_url": "https://raw.githubusercontent.com/Skatecrete/pogo-raid-data/main/images/38_ninetaleswebp"
     },
     {
       "id": 79,
@@ -3500,7 +3500,7 @@
       "name": "Rapidash Galarian",
       "rate": 0.06,
       "shiny": false,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/78.png"
+      "image_url": "https://raw.githubusercontent.com/Skatecrete/pogo-raid-data/main/images/78_rapidash-galarian.webp"
     },
     {
       "id": 50,
@@ -3619,7 +3619,7 @@
       "name": "Dugtrio Alola",
       "rate": 0.05,
       "shiny": false,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/51.png"
+      "image_url": "https://raw.githubusercontent.com/Skatecrete/pogo-raid-data/main/images/51_dugtrio-alola.webp"
     },
     {
       "id": 633,
@@ -3969,7 +3969,7 @@
       "name": "Arcanine Hisuian",
       "rate": 0.03,
       "shiny": false,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/59.png"
+      "image_url": "https://raw.githubusercontent.com/Skatecrete/pogo-raid-data/main/images/59_arcanine-hisuian.webp"
     },
     {
       "id": 301,
@@ -4095,7 +4095,7 @@
       "name": "Electrode Hisuian",
       "rate": 0.02,
       "shiny": false,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/101.png"
+      "image_url": "https://raw.githubusercontent.com/Skatecrete/pogo-raid-data/main/images/101_electrode-hisuian.webp"
     },
     {
       "id": 450,
@@ -4438,7 +4438,7 @@
       "name": "Sandslash Alola",
       "rate": 0.01,
       "shiny": false,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/28.png"
+      "image_url": "https://raw.githubusercontent.com/Skatecrete/pogo-raid-data/main/images/28_sandslashwebp"
     },
     {
       "id": 409,
