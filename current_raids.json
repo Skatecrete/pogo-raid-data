@@ -1,16 +1,20 @@
 {
   "last_updated": "2026-04-21",
   "tier1": [
-    "Dratini",
+    "Cubone",
     "Phantump",
     "Sandygast",
+    "Meditite",
     "Foongus",
     "Gossifleur",
-    "Hisuian Qwilfish"
+    "Hisuian Qwilfish",
+    "Dratini"
   ],
   "tier3": [
-    "Dugtrio",
     "Torterra",
+    "Dugtrio",
+    "Nidoking",
+    "Skarmory",
     "Vileplume",
     "Drampa"
   ],
