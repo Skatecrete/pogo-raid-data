@@ -1,15 +1,18 @@
 {
-  "last_updated": "2026-04-20",
+  "last_updated": "2026-04-21",
   "tier1": [
-    "Gossifleur",
+    "Dratini",
     "Phantump",
     "Sandygast",
-    "Foongus"
+    "Foongus",
+    "Gossifleur",
+    "Hisuian Qwilfish"
   ],
   "tier3": [
+    "Dugtrio",
     "Torterra",
     "Vileplume",
-    "Dugtrio"
+    "Drampa"
   ],
   "dynamax_tier1": [
     "Abra",
