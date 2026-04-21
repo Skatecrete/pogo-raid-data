@@ -1,50 +1,55 @@
-import requests
-from bs4 import BeautifulSoup
 import json
 import re
 import os
+import requests
+from bs4 import BeautifulSoup
 from datetime import datetime
 
 def fetch_current_spawns():
-    """Fetch current spawns directly from Shungo website"""
+    """Fetch current spawn data directly from Shungo website"""
     print("📡 Fetching current spawns from Shungo website...")
     url = "https://shungo.app/tools/wild"
     headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'}
     
-    response = requests.get(url, headers=headers, timeout=10)
-    soup = BeautifulSoup(response.text, 'html.parser')
-    
-    spawns = []
-    
-    # Find the table with spawn data
-    table = soup.find('table')
-    if table:
-        rows = table.find_all('tr')
-        for row in rows:
-            cells = row.find_all('td')
-            if len(cells) >= 3:
-                name = cells[0].get_text().strip()
-                rate_text = cells[1].get_text().strip().replace('%', '')
-                id_text = cells[2].get_text().strip()
-                
-                try:
-                    rate = float(rate_text)
-                    pokemon_id = int(id_text)
-                    if name and rate > 0 and pokemon_id > 0:
-                        is_shiny = 'shiny' in name.lower()
-                        spawns.append({
-                            "id": pokemon_id,
-                            "name": name,
-                            "rate": round(rate, 2),
-                            "shiny": is_shiny,
-                            "image_url": f"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/{pokemon_id}.png"
-                        })
-                except:
-                    continue
-    
-    return spawns
+    try:
+        response = requests.get(url, headers=headers, timeout=10)
+        response.raise_for_status()
+        soup = BeautifulSoup(response.text, 'html.parser')
+        
+        spawns = []
+        
+        table = soup.find('table')
+        if table:
+            rows = table.find_all('tr')
+            for row in rows:
+                cells = row.find_all('td')
+                if len(cells) >= 3:
+                    name = cells[0].get_text().strip()
+                    rate_text = cells[1].get_text().strip().replace('%', '')
+                    id_text = cells[2].get_text().strip()
+                    
+                    try:
+                        rate = float(rate_text)
+                        pokemon_id = int(id_text)
+                        if name and rate > 0 and pokemon_id > 0:
+                            is_shiny = 'shiny' in name.lower()
+                            spawns.append({
+                                "id": pokemon_id,
+                                "name": name,
+                                "rate": round(rate, 2),
+                                "shiny": is_shiny,
+                                "image_url": f"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/{pokemon_id}.png"
+                            })
+                    except:
+                        continue
+        
+        print(f"✅ Fetched {len(spawns)} current spawns from website")
+        return spawns
+        
+    except Exception as e:
+        print(f"❌ Error fetching spawns: {e}")
+        return []
 
-# Your existing fix_image_urls function (keep as is)
 def fix_image_urls():
     """Fix image URLs in spawns.json to match existing files in images folder"""
     
@@ -52,14 +57,12 @@ def fix_image_urls():
     print("🖼️ FIXING IMAGE URLS FOR ALL FORMS")
     print("="*60)
     
-    # Load spawns.json
     with open('spawns.json', 'r') as f:
         data = json.load(f)
     
     spawns = data.get('spawns', [])
     print(f"📊 Loaded {len(spawns)} spawns")
     
-    # Get list of existing images in the images folder
     images_folder = 'images'
     existing_images = set()
     if os.path.exists(images_folder):
@@ -69,56 +72,56 @@ def fix_image_urls():
         print(f"⚠️ Images folder '{images_folder}' not found!")
         return
     
-    # COMPLETE mapping of form names to image filenames
+    # ===== FORM MAPPINGS =====
     form_mappings = {
-        # ===== Castform =====
+        # Castform
         "Castform Rainy": "351_castform-rainy.webp",
         "Castform Sunny": "351_castform-sunny.webp",
         "Castform Snowy": "351-castform-snowy.webp",
         "Castform": "351_castformwebp",
         
-        # ===== Pumpkaboo sizes =====
+        # Pumpkaboo sizes
         "Pumpkaboo Small": "710_pumpkaboo-small.webp",
         "Pumpkaboo Average": "710_pumpkaboo-average.webp",
         "Pumpkaboo Large": "710_pumpkaboo-large.webp",
         "Pumpkaboo Super": "710_pumpkaboo-super.webp",
         "Pumpkaboo": "710_pumpkaboo.webp",
         
-        # ===== Deerling seasons =====
+        # Deerling seasons
         "Deerling Spring Form": "585_deerling-spring.webp",
         "Deerling Summer Form": "585-deerling-summer.webp",
         "Deerling Autumn Form": "585-deerling-autumn.webp",
         "Deerling Winter Form": "585-deerling-winter.webp",
         
-        # ===== Sawsbuck seasons =====
+        # Sawsbuck seasons
         "Sawsbuck Spring Form": "586_sawsbuck-spring.webp",
         "Sawsbuck Summer Form": "586-sawsbuck-summer.webp",
         "Sawsbuck Autumn Form": "586-sawsbuck-autumn.webp",
         "Sawsbuck Winter Form": "586-sawsbuck-winter.webp",
         
-        # ===== Oricorio styles =====
+        # Oricorio styles
         "Oricorio Baile Style": "741_oricorio-baile-style.webp",
         "Oricorio Pom-Pom Style": "741-oricorio-pom-pom-style.webp",
         "Oricorio Pa'u Style": "741-oricorio-pau-style.webp",
         "Oricorio Sensu Style": "741_oricorio-sensu-style.webp",
         
-        # ===== Cherrim forms =====
+        # Cherrim forms
         "Cherrim Overcast Form": "421-cherrim-overcast.webp",
         "Cherrim Sunny": "421_cherrim-sunshine.webp",
         
-        # ===== Burmy cloaks =====
+        # Burmy cloaks
         "Burmy Plant Cloak": "412_burmy-plant-cloak.webp",
         "Burmy Sandy Cloak": "412_burmy-sandy-cloak.webp",
         "Burmy Trash Cloak": "412_burmy-trash-cloak.webp",
         
-        # ===== Flabébé flowers =====
+        # Flabébé flowers
         "Flabébé Blue Flower": "669_flab-b--blue-flower.webp",
         "Flabébé Red Flower": "669_flab-b--red-flower.webp",
         "Flabébé Yellow Flower": "669_flab-b--yellow-flower.webp",
         "Flabébé White Flower": "669_flab-b--white-flower.webp",
         "Flabébé Orange Flower": "669_flab-b--orange-flower.webp",
         
-        # ===== Floette flowers =====
+        # Floette flowers
         "Floette Blue Flower": "670_floette-blue-flower.webp",
         "Floette Red Flower": "670_floette-red-flower.webp",
         "Floette Yellow Flower": "670-floette-yellow-flower.webp",
@@ -126,13 +129,13 @@ def fix_image_urls():
         "Floette Orange Flower": "670-floette-orange-flower.webp",
         "Floette Eternal Flower": "670-floette-eternal-flower.webp",
         
-        # ===== Shellos/Gastrodon =====
+        # Shellos/Gastrodon
         "Shellos East Sea": "422_shellos-east-seawebp",
         "Shellos West Sea": "422_shellos-west-seawebp",
         "Gastrodon East Sea": "423_gastrodon-east-seawebp",
         "Gastrodon West Sea": "423_gastrodon-west-seawebp",
         
-        # ===== Alolan Forms =====
+        # Alolan Forms
         "Rattata Alola": "19_rattata-alola.webp",
         "Raticate Alola": "20_raticate-alola.webp",
         "Sandshrew Alola": "27_sandshrew-alola.webp",
@@ -151,7 +154,7 @@ def fix_image_urls():
         "Marowak Alola": "105_marowakwebp",
         "Raichu Alola": "26_raichuwebp",
         
-        # ===== Galarian Forms =====
+        # Galarian Forms
         "Meowth Galarian": "52_meowth-galarian.webp",
         "Ponyta Galarian": "77_ponyta-galarian.webp",
         "Rapidash Galarian": "78_rapidash-galarian.webp",
@@ -165,7 +168,7 @@ def fix_image_urls():
         "Darumaka Galarian": "554_darumaka-galarian.webp",
         "Corsola Galarian": "222_corsolawebp",
         
-        # ===== Hisuian Forms =====
+        # Hisuian Forms
         "Growlithe Hisuian": "58_growlithe-hisuian.webp",
         "Arcanine Hisuian": "59_arcanine-hisuian.webp",
         "Voltorb Hisuian": "100_voltorb-hisuian.webp",
@@ -181,24 +184,24 @@ def fix_image_urls():
         "Zoroark Hisuian": "571_zoroark-hisuian.webp",
         "Braviary Hisuian": "628_braviarywebp",
         
-        # ===== Paldean Forms =====
+        # Paldean Forms
         "Wooper Paldea": "194_wooper-paldea.webp",
         "Clodsire": "980_clodsirewebp",
         
-        # ===== Rotom Forms =====
+        # Rotom Forms
         "Rotom Heat": "479_rotom-heat.webp",
         "Rotom Wash": "479_rotom-wash.webp",
         "Rotom Frost": "479_rotom-frost.webp",
         "Rotom Fan": "479_rotom-fan.webp",
         "Rotom Mow": "479_rotom-mow.webp",
         
-        # ===== Darmanitan =====
+        # Darmanitan
         "Darmanitan Standard": "555-darmanitan-standard-mode.webp",
         "Darmanitan Zen": "555-darmanitan-zen-mode.webp",
         "Darmanitan Galarian Standard": "555-darmanitan-galarian-zen-mode.webp",
         "Darmanitan Galarian Zen": "555-darmanitan-galarian-zen-mode.webp",
         
-        # ===== Other Forms =====
+        # Other Forms
         "Farfetch'd": "83_farfetch-d.webp",
         "Mr. Mime": "122_mr-mime.webp",
         "Nidoran♀": "29_nidoran-f.webp",
@@ -218,24 +221,24 @@ def fix_image_urls():
         "Sawsbuck Autumn": "586-sawsbuck-autumn.webp",
         "Sawsbuck Winter": "586-sawsbuck-winter.webp",
         
-        # ===== Porygon =====
+        # Porygon
         "Porygon": "137_porygonwebp",
         "Porygon2": "233_porygon2webp",
         "Porygon-Z": "474_porygon-zwebp",
         
-        # ===== Ho-Oh =====
+        # Ho-Oh
         "Ho-Oh": "250_ho-ohwebp",
         
-        # ===== Type Null / Silvally =====
+        # Type Null / Silvally
         "Type: Null": "772_type-nullwebp",
         
-        # ===== Mime Jr. =====
+        # Mime Jr.
         "Mime Jr.": "439_mime-jrwebp",
         
-        # ===== Sirfetch'd =====
+        # Sirfetch'd
         "Sirfetch'd": "865_sirfetchdwebp",
         
-        # ===== Mr. Rime =====
+        # Mr. Rime
         "Mr. Rime": "866_mr-rimewebp",
     }
     
@@ -249,15 +252,13 @@ def fix_image_urls():
         if name in form_mappings:
             filename = form_mappings[name]
             if filename in existing_images:
-                image_url = f"https://raw.githubusercontent.com/Skatecrete/pogo-raid-data/main/images/{filename}"
-                spawn['image_url'] = image_url
+                spawn['image_url'] = f"https://raw.githubusercontent.com/Skatecrete/pogo-raid-data/main/images/{filename}"
                 updated_count += 1
                 print(f"✅ {name} -> {filename}")
             else:
                 missing_images.append(f"{name} (expected: {filename})")
         else:
-            image_url = f"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/{pokemon_id}.png"
-            spawn['image_url'] = image_url
+            spawn['image_url'] = f"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/{pokemon_id}.png"
     
     output = {
         "last_updated": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
@@ -286,7 +287,6 @@ if __name__ == "__main__":
     current_spawns = fetch_current_spawns()
     
     if current_spawns:
-        # Save as spawns.json
         output = {
             "last_updated": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
             "total": len(current_spawns),
@@ -296,5 +296,5 @@ if __name__ == "__main__":
             json.dump(output, f, indent=2)
         print(f"✅ Saved {len(current_spawns)} spawns to spawns.json")
     
-    # Step 2: Run your existing fix_image_urls to apply manual mappings
+    # Step 2: Fix image URLs using manual mappings
     fix_image_urls()
