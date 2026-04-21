@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-04-20 19:00:36",
+  "last_updated": "2026-04-21 02:13:07",
   "debuts": [
     {
       "event_name": "Steeled Resolve 2026",
@@ -12,27 +12,6 @@
       ],
       "pokemon_images": {
         "Orthworm": "https://www.serebii.net/pokemongo/pokemon/shiny/968.png"
-      },
-      "event_type": "global"
-    },
-    {
-      "event_name": "Sustainability Week 2026",
-      "event_date": "April 14th - April 20th 2026",
-      "new_pokemon": [
-        "Silicobra",
-        "Sandaconda",
-        "Corsola (Galarian Form (Sunglasses))"
-      ],
-      "new_shiny": [
-        "Toedscool",
-        "Toedscruel"
-      ],
-      "pokemon_images": {
-        "Silicobra": "https://www.serebii.net/pokemongo/pokemon/843.png",
-        "Sandaconda": "https://www.serebii.net/pokemongo/pokemon/844.png",
-        "Corsola (Galarian Form (Sunglasses))": "https://www.serebii.net/pokemongo/pokemon/222-glasses.png",
-        "Toedscool": "https://www.serebii.net/pokemongo/pokemon/shiny/948.png",
-        "Toedscruel": "https://www.serebii.net/pokemongo/pokemon/shiny/949.png"
       },
       "event_type": "global"
     },
