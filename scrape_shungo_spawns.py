@@ -1,8 +1,50 @@
+import requests
+from bs4 import BeautifulSoup
 import json
 import re
 import os
 from datetime import datetime
 
+def fetch_current_spawns():
+    """Fetch current spawns directly from Shungo website"""
+    print("📡 Fetching current spawns from Shungo website...")
+    url = "https://shungo.app/tools/wild"
+    headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'}
+    
+    response = requests.get(url, headers=headers, timeout=10)
+    soup = BeautifulSoup(response.text, 'html.parser')
+    
+    spawns = []
+    
+    # Find the table with spawn data
+    table = soup.find('table')
+    if table:
+        rows = table.find_all('tr')
+        for row in rows:
+            cells = row.find_all('td')
+            if len(cells) >= 3:
+                name = cells[0].get_text().strip()
+                rate_text = cells[1].get_text().strip().replace('%', '')
+                id_text = cells[2].get_text().strip()
+                
+                try:
+                    rate = float(rate_text)
+                    pokemon_id = int(id_text)
+                    if name and rate > 0 and pokemon_id > 0:
+                        is_shiny = 'shiny' in name.lower()
+                        spawns.append({
+                            "id": pokemon_id,
+                            "name": name,
+                            "rate": round(rate, 2),
+                            "shiny": is_shiny,
+                            "image_url": f"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/{pokemon_id}.png"
+                        })
+                except:
+                    continue
+    
+    return spawns
+
+# Your existing fix_image_urls function (keep as is)
 def fix_image_urls():
     """Fix image URLs in spawns.json to match existing files in images folder"""
     
@@ -204,7 +246,6 @@ def fix_image_urls():
         name = spawn['name']
         pokemon_id = spawn['id']
         
-        # Check if we have a mapping for this exact name
         if name in form_mappings:
             filename = form_mappings[name]
             if filename in existing_images:
@@ -215,11 +256,9 @@ def fix_image_urls():
             else:
                 missing_images.append(f"{name} (expected: {filename})")
         else:
-            # For unmapped names, use PokeAPI fallback
             image_url = f"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/{pokemon_id}.png"
             spawn['image_url'] = image_url
     
-    # Save updated spawns.json
     output = {
         "last_updated": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
         "total": len(spawns),
@@ -242,4 +281,20 @@ def fix_image_urls():
     print("="*60)
 
 if __name__ == "__main__":
+    # Step 1: Fetch current spawns from website
+    print("🔄 Fetching current spawns from Shungo website...")
+    current_spawns = fetch_current_spawns()
+    
+    if current_spawns:
+        # Save as spawns.json
+        output = {
+            "last_updated": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+            "total": len(current_spawns),
+            "spawns": current_spawns
+        }
+        with open('spawns.json', 'w') as f:
+            json.dump(output, f, indent=2)
+        print(f"✅ Saved {len(current_spawns)} spawns to spawns.json")
+    
+    # Step 2: Run your existing fix_image_urls to apply manual mappings
     fix_image_urls()
