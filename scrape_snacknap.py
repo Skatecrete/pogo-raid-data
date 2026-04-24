@@ -65,6 +65,41 @@ def scrape_snacknap_raids():
         traceback.print_exc()
         return {"tier1": [], "tier3": []}
 
+def scrape_snacknap_mega_raids():
+    """Scrape Mega raids from snacknap.com/raids"""
+    print("  📡 Fetching Mega Raids from SnackNap...")
+    url = "https://snacknap.com/raids"
+    headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'}
+    
+    try:
+        response = requests.get(url, headers=headers, timeout=10)
+        response.raise_for_status()
+        soup = BeautifulSoup(response.text, 'html.parser')
+        
+        mega_raids = []
+        
+        # Find Mega Raids section
+        for h2 in soup.find_all('h2'):
+            if 'Mega' in h2.get_text():
+                print(f"    Found Mega Raids section")
+                tier_container = h2.find_next('div', class_=re.compile(r'row g-2'))
+                if tier_container:
+                    pokemon_cards = tier_container.find_all('a', href=re.compile(r'/pokedex/pokemon/'))
+                    for card in pokemon_cards:
+                        name_elem = card.find('p', class_='pkmn-title')
+                        if name_elem:
+                            raw_name = name_elem.get_text().strip()
+                            clean_name = re.sub(r'\s+', ' ', raw_name).strip()
+                            if clean_name and clean_name not in mega_raids:
+                                mega_raids.append(clean_name)
+                                print(f"      Added Mega: {clean_name}")
+        
+        print(f"    Mega Raids: {len(mega_raids)} - {mega_raids}")
+        return mega_raids
+    except Exception as e:
+        print(f"    ❌ Error scraping Mega raids: {e}")
+        return []
+
 def scrape_snacknap_maxbattles():
     """Scrape Dynamax Tier 1,2,3 and Gigantamax from snacknap.com/max-battles"""
     print("  📡 Fetching Dynamax & Gigantamax battles...")
