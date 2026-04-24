@@ -5,8 +5,8 @@ from datetime import datetime
 import re
 
 def scrape_snacknap_raids():
-    """Scrape Tier 1 and Tier 3 raids from snacknap.com/raids"""
-    print("  📡 Fetching Tier 1 & 3 raids from SnackNap...")
+    """Scrape all raids from snacknap.com/raids"""
+    print("  📡 Fetching raids from SnackNap...")
     url = "https://snacknap.com/raids"
     headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'}
     
@@ -17,7 +17,9 @@ def scrape_snacknap_raids():
         
         raid_data = {
             "tier1": [],
-            "tier3": []
+            "tier3": [],
+            "tier5": [],      # Add Tier 5
+            "mega": []        # Add Mega
         }
         
         main_container = soup.find('div', id='pokemon')
@@ -34,6 +36,10 @@ def scrape_snacknap_raids():
                 current_tier = "tier1"
             elif tier_title == "Tier 3":
                 current_tier = "tier3"
+            elif tier_title == "Tier 5":
+                current_tier = "tier5"
+            elif "Mega" in tier_title:
+                current_tier = "mega"
             else:
                 continue
             
@@ -55,15 +61,17 @@ def scrape_snacknap_raids():
                         print(f"      Added to {current_tier}: {clean_name}")
         
         print(f"\n  📊 SNACKNAP RAID SUMMARY:")
-        print(f"    Tier 1: {len(raid_data['tier1'])} - {raid_data['tier1']}")
-        print(f"    Tier 3: {len(raid_data['tier3'])} - {raid_data['tier3']}")
+        print(f"    Tier 1: {len(raid_data['tier1'])}")
+        print(f"    Tier 3: {len(raid_data['tier3'])}")
+        print(f"    Tier 5: {len(raid_data['tier5'])}")
+        print(f"    Mega: {len(raid_data['mega'])}")
         
         return raid_data
     except Exception as e:
         print(f"    ❌ Error scraping raids: {e}")
         import traceback
         traceback.print_exc()
-        return {"tier1": [], "tier3": []}
+        return {"tier1": [], "tier3": [], "tier5": [], "mega": []}
 
 def scrape_snacknap_maxbattles():
     """Scrape Dynamax Tier 1,2,3 and Gigantamax from snacknap.com/max-battles"""
@@ -211,15 +219,16 @@ def main():
     mega_raids = scrape_snacknap_mega_raids()
     
     new_data = {
-        "last_updated": datetime.now().strftime("%Y-%m-%d"),
-        "tier1": raids.get("tier1", []),
-        "tier3": raids.get("tier3", []),
-        "mega": mega_raids,
-        "dynamax_tier1": max_battles.get("dynamax_tier1", []),
-        "dynamax_tier2": max_battles.get("dynamax_tier2", []),
-        "dynamax_tier3": max_battles.get("dynamax_tier3", []),
-        "gigantamax": max_battles.get("gigantamax", [])
-    }
+    "last_updated": datetime.now().strftime("%Y-%m-%d"),
+    "tier1": raids.get("tier1", []),
+    "tier3": raids.get("tier3", []),
+    "tier5": raids.get("tier5", []),    # Add this
+    "mega": raids.get("mega", []),       # Add this
+    "dynamax_tier1": max_battles.get("dynamax_tier1", []),
+    "dynamax_tier2": max_battles.get("dynamax_tier2", []),
+    "dynamax_tier3": max_battles.get("dynamax_tier3", []),
+    "gigantamax": max_battles.get("gigantamax", [])
+}
     
     with open('current_raids.json', 'w') as f:
         json.dump(new_data, f, indent=2)
