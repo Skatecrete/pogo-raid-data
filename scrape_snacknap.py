@@ -5,8 +5,8 @@ from datetime import datetime
 import re
 
 def scrape_snacknap_raids():
-    """Scrape Tier 1, Tier 3, Tier 5, and Mega raids from snacknap.com/raids"""
-    print("  📡 Fetching Tier 1, 3, 5 & Mega raids from SnackNap...")
+    """Scrape 1-Star, 3-Star, 5-Star, and Mega raids from snacknap.com/raids"""
+    print("  📡 Fetching 1-Star, 3-Star, 5-Star & Mega raids from SnackNap...")
     url = "https://snacknap.com/raids"
     headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'}
     
@@ -16,10 +16,10 @@ def scrape_snacknap_raids():
         soup = BeautifulSoup(response.text, 'html.parser')
         
         raid_data = {
-            "tier1": [],
-            "tier3": [],
-            "tier5": [],
-            "mega": []
+            "tier1": [],   # 1-Star Raids
+            "tier3": [],   # 3-Star Raids
+            "tier5": [],   # 5-Star Raids
+            "mega": []     # Mega Raids
         }
         
         main_container = soup.find('div', id='pokemon')
@@ -61,9 +61,9 @@ def scrape_snacknap_raids():
                         print(f"      Added to {current_tier}: {clean_name}")
         
         print(f"\n  📊 SNACKNAP RAID SUMMARY:")
-        print(f"    Tier 1: {len(raid_data['tier1'])} - {raid_data['tier1']}")
-        print(f"    Tier 3: {len(raid_data['tier3'])} - {raid_data['tier3']}")
-        print(f"    Tier 5: {len(raid_data['tier5'])} - {raid_data['tier5']}")
+        print(f"    1-Star: {len(raid_data['tier1'])} - {raid_data['tier1']}")
+        print(f"    3-Star: {len(raid_data['tier3'])} - {raid_data['tier3']}")
+        print(f"    5-Star: {len(raid_data['tier5'])} - {raid_data['tier5']}")
         print(f"    Mega: {len(raid_data['mega'])} - {raid_data['mega']}")
         
         return raid_data
@@ -112,6 +112,10 @@ def scrape_snacknap_maxbattles():
             elif 'Tier 3' in text or 'Tier 3' in text.upper():
                 current_tier = 'dynamax_tier3'
                 print(f"    Found Dynamax Tier 3 section")
+                continue
+            elif 'Tier 5' in text or 'Tier 5' in text.upper():
+                current_tier = 'dynamax_tier5'
+                print(f"    Found Dynamax Tier 5 section")
                 continue
             elif 'Gigantamax' in text:
                 current_tier = 'gigantamax'
