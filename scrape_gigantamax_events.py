@@ -25,35 +25,6 @@ def parse_event_date(event_date_str):
     month = month_map.get(month_name, 1)
     return datetime(year, month, day).date()
 
-def get_gigantamax_pokemon(event_name):
-    """Extract Pokémon name from event title"""
-    name = event_name.replace('Gigantamax', '').replace('Raid', '').replace('Day', '').replace('Battle', '').strip()
-    name_lower = name.lower()
-    if 'toxtricity' in name_lower:
-        return 'Toxtricity'
-    if 'flapple' in name_lower or 'appletun' in name_lower:
-        return 'Appletun'
-    return name
-
-def is_gigantamax_relevant(event_name, event_date):
-    """Show Gigantamax if event date is today or tomorrow in UTC-11 (American Samoa)"""
-    if "gigantamax" not in event_name.lower():
-        return False, None
-    
-    event_day = parse_event_date(event_date)
-    if not event_day:
-        return False, None
-    
-    today = get_current_utc11_date()
-    tomorrow = today + timedelta(days=1)
-    
-    # Show if event is today OR tomorrow in American Samoa time
-    if event_day == today or event_day == tomorrow:
-        pokemon = get_gigantamax_pokemon(event_name)
-        return True, pokemon
-    
-    return False, None
-
 def main():
     print("🚀 Starting Gigantamax Event Scraper...")
     today = get_current_utc11_date()
@@ -62,15 +33,30 @@ def main():
     response = requests.get("https://leekduck.com/feeds/events.json", timeout=15)
     events = response.json()
     
+    # DEBUG: Print all events to see what's available
+    print("\n📋 All events from LeekDuck:")
+    for event in events:
+        name = event.get('name', '')
+        event_date = event.get('date', '')
+        print(f"  - {name} | Date: {event_date}")
+    
     gigantamax_list = []
     
     for event in events:
         name = event.get('name', '')
         event_date = event.get('date', '')
-        relevant, pokemon = is_gigantamax_relevant(name, event_date)
-        if relevant and pokemon and pokemon not in gigantamax_list:
-            gigantamax_list.append(pokemon)
-            print(f"  ✅ Adding: {pokemon} (Event on: {event_date})")
+        
+        # Check if event is today or tomorrow
+        event_day = parse_event_date(event_date)
+        if not event_day:
+            continue
+        
+        if event_day == today or event_day == today + timedelta(days=1):
+            print(f"\n  📅 Event on relevant date: {name} ({event_date})")
+            # Check if it might contain Gigantamax
+            if 'gigantamax' in name.lower() or 'replay' in name.lower() or 'bigger' in name.lower():
+                gigantamax_list.append(name)
+                print(f"    ✅ Adding: {name}")
     
     # Update current_raids.json
     with open('current_raids.json', 'r') as f:
