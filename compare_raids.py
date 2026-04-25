@@ -33,7 +33,7 @@ def main():
         with open('current_raids_old.json', 'r') as f:
             old_snacknap = json.load(f)
     except:
-        old_snacknap = {"last_updated": "", "tier1": [], "tier3": [], "dynamax_tier1": [], "dynamax_tier2": [], "dynamax_tier3": [], "gigantamax": []}
+        old_snacknap = {"last_updated": "", "tier1": [], "tier3": [], "tier5": [], "mega": [], "dynamax_tier1": [], "dynamax_tier2": [], "dynamax_tier3": [], "dynamax_tier5": [], "gigantamax": []}
     
     # Load new SnackNap data
     with open('current_raids.json', 'r') as f:
@@ -66,14 +66,17 @@ def main():
     with open('scrapedduck_old.json', 'w') as f:
         json.dump(current_scrapedduck, f)
     
-    # SnackNap categories
-    categories = ['tier1', 'tier3', 'dynamax_tier1', 'dynamax_tier2', 'dynamax_tier3', 'gigantamax']
+    # SnackNap categories - FIXED
+    categories = ['tier1', 'tier3', 'tier5', 'mega', 'dynamax_tier1', 'dynamax_tier2', 'dynamax_tier3', 'dynamax_tier5', 'gigantamax']
     display_names = {
         'tier1': '⭐ 1-Star Raids',
         'tier3': '⭐⭐⭐ 3-Star Raids',
+        'tier5': '⭐⭐⭐⭐⭐ 5-Star Raids',
+        'mega': '🔴 Mega Raids',
         'dynamax_tier1': '⚡ Dynamax Tier 1',
         'dynamax_tier2': '⚡⚡ Dynamax Tier 2',
         'dynamax_tier3': '⚡⚡⚡ Dynamax Tier 3',
+        'dynamax_tier5': '⚡⚡⚡⚡⚡ Dynamax Tier 5',
         'gigantamax': '💥 Gigantamax'
     }
     
