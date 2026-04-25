@@ -144,13 +144,10 @@ def is_valid_pokemon_name(name):
     """Check if a string looks like a valid Pokémon name (not numbers, not too short)"""
     if not name or len(name) < 3:
         return False
-    # Should contain at least one letter
     if not re.search(r'[A-Za-z]', name):
         return False
-    # Should not be all numbers
     if name.isdigit():
         return False
-    # Filter out common non-Pokémon words
     invalid_words = ['pokémon', 'pokemon', 'type', 'name', 'no.', 'pic', 'details', 
                      'event', 'bonus', 'featured', 'shiny', 'costume', 'attack', 'defense',
                      'stamina', 'cp', 'hp', 'level', 'experience', 'stardust', 'candy',
@@ -173,9 +170,8 @@ def scrape_event_details(event, headers):
         
         new_pokemon = []
         new_shiny = []
-        pokemon_images = {}  # ADDED: dictionary for images
+        pokemon_images = {}
         
-        # Look for section headers
         for header in soup.find_all(['h2', 'h3', 'h4']):
             header_text = header.get_text().strip()
             
@@ -184,16 +180,13 @@ def scrape_event_details(event, headers):
                 next_table = header.find_next('table')
                 if next_table:
                     print(f"      Table found with {len(next_table.find_all('tr'))} rows")
-                    for row in next_table.find_all('tr')[1:]:  # Skip header row
+                    for row in next_table.find_all('tr')[1:]:
                         cells = row.find_all('td')
                         if len(cells) >= 3:
-                            # Pokémon name is in column 3 (index 2)
                             poke_name = cells[2].get_text().strip()
-                            # Also check column 2 sometimes
                             if not is_valid_pokemon_name(poke_name) and len(cells) >= 4:
                                 poke_name = cells[3].get_text().strip()
                             
-                            # ADDED: extract image URL from first column
                             img_url = ""
                             if len(cells) >= 1:
                                 img_tag = cells[1].find('img')
@@ -206,7 +199,7 @@ def scrape_event_details(event, headers):
                             
                             if is_valid_pokemon_name(poke_name) and poke_name not in new_pokemon:
                                 new_pokemon.append(poke_name)
-                                if img_url:  # ADDED: store image if found
+                                if img_url:
                                     pokemon_images[poke_name] = img_url
                                 print(f"      New Pokémon: {poke_name}")
             
@@ -222,7 +215,6 @@ def scrape_event_details(event, headers):
                             if not is_valid_pokemon_name(poke_name) and len(cells) >= 4:
                                 poke_name = cells[3].get_text().strip()
                             
-                            # ADDED: extract image URL from first column
                             img_url = ""
                             if len(cells) >= 1:
                                 img_tag = cells[1].find('img')
@@ -235,15 +227,18 @@ def scrape_event_details(event, headers):
                             
                             if is_valid_pokemon_name(poke_name) and poke_name not in new_shiny:
                                 new_shiny.append(poke_name)
-                                if img_url:  # ADDED: store image if found
+                                if img_url:
                                     pokemon_images[poke_name] = img_url
                                 print(f"      New Shiny: {poke_name}")
         
-        return new_pokemon, new_shiny, pokemon_images  # CHANGED: return 3 values
+        # FIX: Remove Pokémon from new_pokemon if they also appear in new_shiny
+        filtered_new_pokemon = [p for p in new_pokemon if p not in new_shiny]
+        
+        return filtered_new_pokemon, new_shiny, pokemon_images
         
     except Exception as e:
         print(f"    ❌ Error: {e}")
-        return [], [], {}  # CHANGED: return empty dict for images
+        return [], [], {}
 
 def filter_events_by_date(events, today):
     """Filter events to those within next 60 days"""
@@ -305,7 +300,7 @@ def main():
     debuts = []
     
     for event in filtered_events:
-        new_pokemon, new_shiny, pokemon_images = scrape_event_details(event, headers)  # CHANGED: get 3 values
+        new_pokemon, new_shiny, pokemon_images = scrape_event_details(event, headers)
         
         if new_pokemon or new_shiny:
             debuts.append({
@@ -313,7 +308,7 @@ def main():
                 'event_date': event['date'],
                 'new_pokemon': new_pokemon,
                 'new_shiny': new_shiny,
-                'pokemon_images': pokemon_images,  # ADDED: include images in output
+                'pokemon_images': pokemon_images,
                 'event_type': event['type']
             })
             print(f"    ✅ Found debuts!")
