@@ -85,7 +85,6 @@ def scrape_snacknap_maxbattles():
             "dynamax_tier2": [],
             "dynamax_tier3": [],
             "dynamax_tier5": [],
-            "gigantamax": []
         }
         
         invalid_names = ['Telegram', 'Facebook', 'Instagram', 'Threads', 'Bluesky', 'X', 'Twitter', 'Discord', 'Patreon', 'YouTube', 'Twitch', 'Search...']
@@ -226,8 +225,7 @@ def main():
         "dynamax_tier1": max_battles.get("dynamax_tier1", []),
         "dynamax_tier2": max_battles.get("dynamax_tier2", []),
         "dynamax_tier3": max_battles.get("dynamax_tier3", []),
-        "dynamax_tier5": max_battles.get("dynamax_tier5", []),
-        "gigantamax": max_battles.get("gigantamax", [])
+        "dynamax_tier5": max_battles.get("dynamax_tier5", [])
 }
     
     with open('current_raids.json', 'w') as f:
