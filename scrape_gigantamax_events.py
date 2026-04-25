@@ -35,12 +35,19 @@ def parse_event_date(event_date_str):
     return datetime(year, month, day)
 
 def get_gigantamax_pokemon(event_name):
-    """Extract Pokémon name from event title"""
+    """Extract Pokémon name from event title and handle special cases"""
     # Remove common words
     name = event_name.replace('Gigantamax', '').replace('Raid', '').replace('Day', '').replace('Battle', '').strip()
-    # Handle Toxtricity (only one image for both forms)
-    if 'toxtricity' in name.lower():
+    
+    # Special cases for shared images
+    name_lower = name.lower()
+    if 'toxtricity' in name_lower:
         return 'Toxtricity'
+    if 'flapple' in name_lower:
+        return 'Appletun'  # Flapple uses Appletun's Gigantamax image
+    if 'appletun' in name_lower:
+        return 'Appletun'
+    
     return name
 
 def is_gigantamax_relevant(event_name, event_date):
@@ -67,6 +74,7 @@ def is_gigantamax_relevant(event_name, event_date):
 
 def main():
     print("🚀 Starting Gigantamax Event Scraper...")
+    print(f"Current NZ time: {get_current_nz_time()}")
     
     response = requests.get("https://leekduck.com/feeds/events.json", timeout=15)
     events = response.json()
@@ -79,14 +87,16 @@ def main():
         relevant, start_time, pokemon = is_gigantamax_relevant(name, event_date)
         if relevant and pokemon and pokemon not in gigantamax_list:
             gigantamax_list.append(pokemon)
-            print(f"  ✅ Adding: {pokemon}")
+            print(f"  ✅ Adding: {pokemon} (from: {name})")
+            if pokemon == 'Appletun' and 'flapple' in name.lower():
+                print(f"     → Flapple will use Appletun image")
     
     # Update current_raids.json
     with open('current_raids.json', 'r') as f:
         data = json.load(f)
     
     data['gigantamax'] = gigantamax_list
-    data['last_updated'] = datetime.now().strftime("%Y-%m-%d")
+    data['gigantamax_last_updated'] = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     
     with open('current_raids.json', 'w') as f:
         json.dump(data, f, indent=2)
