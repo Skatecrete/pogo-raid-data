@@ -81,11 +81,11 @@ def main():
                     all_gigantamax.append(pokemon)
                     print(f"  ✅ Added: {pokemon}")
     
-    # 4. Update current_raids.json
+    # 4. Update current_raids.json (merge with existing data)
     with open('current_raids.json', 'r') as f:
         data = json.load(f)
     
-    # Always set the gigantamax field (even if empty list)
+    # Set gigantamax field
     data['gigantamax'] = all_gigantamax
     data['gigantamax_last_updated'] = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     
