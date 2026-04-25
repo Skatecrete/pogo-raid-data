@@ -231,10 +231,7 @@ def scrape_event_details(event, headers):
                                     pokemon_images[poke_name] = img_url
                                 print(f"      New Shiny: {poke_name}")
         
-        # FIX: Remove Pokémon from new_pokemon if they also appear in new_shiny
-        filtered_new_pokemon = [p for p in new_pokemon if p not in new_shiny]
-        
-        return filtered_new_pokemon, new_shiny, pokemon_images
+        return new_pokemon, new_shiny, pokemon_images
         
     except Exception as e:
         print(f"    ❌ Error: {e}")
