@@ -1,7 +1,7 @@
 import requests
-from bs4 import BeautifulSoup
 import json
 from datetime import datetime, timedelta, timezone
+from bs4 import BeautifulSoup
 import re
 
 def get_current_utc11_date():
@@ -10,52 +10,8 @@ def get_current_utc11_date():
     utc11_now = utc_now - timedelta(hours=11)
     return utc11_now.date()
 
-def scrape_events_from_webpage():
-    """Scrape events directly from LeekDuck website with dates"""
-    url = "https://leekduck.com/events/"
-    headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'}
-    
-    response = requests.get(url, headers=headers, timeout=15)
-    soup = BeautifulSoup(response.text, 'html.parser')
-    
-    events = []
-    
-    # Find all event cards
-    event_cards = soup.find_all('div', class_=re.compile('event-card|card'))
-    
-    for card in event_cards:
-        # Get event name
-        name_elem = card.find('h3') or card.find('a', class_=re.compile('title'))
-        if not name_elem:
-            continue
-        name = name_elem.get_text().strip()
-        
-        # Get date
-        date_elem = card.find('div', class_=re.compile('date')) or card.find('time')
-        if date_elem:
-            date_text = date_elem.get_text().strip()
-        else:
-            # Try to find date in text
-            card_text = card.get_text()
-            date_match = re.search(r'(\w+\s+\d+(?:st|nd|rd|th)?,?\s+\d{4})', card_text)
-            date_text = date_match.group(1) if date_match else ""
-        
-        # Get link
-        link_elem = card.find('a', href=True)
-        link = link_elem['href'] if link_elem else ""
-        if link and not link.startswith('http'):
-            link = f"https://leekduck.com{link}"
-        
-        events.append({
-            'name': name,
-            'date': date_text,
-            'link': link
-        })
-    
-    return events
-
 def scrape_gigantamax_from_event_page(event_url):
-    """Scrape Gigantamax Pokémon from individual LeekDuck event page"""
+    """Scrape Gigantamax Pokémon from the event's LeekDuck page"""
     try:
         headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'}
         response = requests.get(event_url, headers=headers, timeout=15)
@@ -63,97 +19,89 @@ def scrape_gigantamax_from_event_page(event_url):
         
         gigantamax_list = []
         
-        # Look for Featured Pokémon section
+        # Look for the "Featured Pokémon" section
         featured_section = soup.find('h2', string=re.compile(r'Featured Pokémon', re.I))
         if featured_section:
-            parent = featured_section.find_parent()
-            # Find all Pokémon names in the section
-            pokemon_links = parent.find_all('a')
-            for link in pokemon_links:
-                name = link.get_text().strip()
-                if 'Gigantamax' in name:
-                    pokemon = name.replace('Gigantamax', '').strip()
-                    if pokemon and pokemon not in gigantamax_list:
-                        gigantamax_list.append(pokemon)
+            # Find the parent container and then all Pokémon links
+            parent_container = featured_section.find_parent('div')
+            if parent_container:
+                # Find links that contain "Gigantamax"
+                gigantamax_links = parent_container.find_all('a', href=re.compile(r'/pokedex/'))
+                for link in gigantamax_links:
+                    name = link.get_text().strip()
+                    if 'Gigantamax' in name:
+                        pokemon_name = name.replace('Gigantamax', '').strip()
+                        if pokemon_name and pokemon_name not in gigantamax_list:
+                            gigantamax_list.append(pokemon_name)
+                            print(f"      Found Gigantamax: {pokemon_name}")
         
-        # Alternative: look for specific event name in the results
-        if not gigantamax_list:
-            if 'replay' in event_url.lower() or 'bigger' in event_url.lower():
-                # Replay: GO Bigger event has these Gigantamax
-                gigantamax_list = ['Venusaur', 'Charizard', 'Blastoise', 'Gengar']
+        # Fallback for known events if scraping fails
+        if not gigantamax_list and 'replay-go-bigger' in event_url:
+            print("      Using fallback for Replay: GO Bigger")
+            gigantamax_list = ['Venusaur', 'Charizard', 'Blastoise', 'Gengar']
         
         return gigantamax_list
     except Exception as e:
         print(f"  Error scraping event page: {e}")
         return []
 
-def get_gigantamax_pokemon(name):
-    """Handle special cases for shared images"""
-    name_lower = name.lower()
-    if 'toxtricity' in name_lower:
-        return 'Toxtricity'
-    if 'flapple' in name_lower or 'appletun' in name_lower:
-        return 'Appletun'
-    return name
-
 def main():
     print("🚀 Starting Gigantamax Event Scraper...")
     today = get_current_utc11_date()
     print(f"Today's date (UTC-11 American Samoa): {today}")
     
-    # Scrape events from webpage instead of JSON feed
-    events = scrape_events_from_webpage()
+    # 1. Fetch the ScrapedDuck events feed
+    events_url = "https://raw.githubusercontent.com/bigfoott/ScrapedDuck/data/events.min.json"
+    response = requests.get(events_url, timeout=15)
+    events = response.json()
     
-    print(f"\n📋 Found {len(events)} events")
+    all_gigantamax = []
     
-    gigantamax_list = []
-    
+    # 2. Find relevant events
     for event in events:
-        name = event['name']
-        date_text = event['date']
-        link = event['link']
+        event_name = event.get('name', '')
+        start_date_str = event.get('start', '')
+        event_link = event.get('link', '')
         
-        # Parse date
-        event_date = None
-        if date_text:
-            date_match = re.search(r'(\w+)\s+(\d+)(?:st|nd|rd|th)?', date_text)
-            if date_match:
-                month_name = date_match.group(1)
-                day = int(date_match.group(2))
-                year_match = re.search(r'(\d{4})', date_text)
-                year = int(year_match.group(1)) if year_match else datetime.now().year
-                month_map = {
-                    'January': 1, 'February': 2, 'March': 3, 'April': 4,
-                    'May': 5, 'June': 6, 'July': 7, 'August': 8,
-                    'September': 9, 'October': 10, 'November': 11, 'December': 12
-                }
-                month = month_map.get(month_name, 1)
-                event_date = datetime(year, month, day).date()
+        # Check if it's a Gigantamax event (by name or link)
+        is_gmax_event = (
+            'gigantamax' in event_name.lower() or 
+            'replay' in event_name.lower() or
+            'max battle' in event.get('eventType', '').lower()
+        )
         
-        # Check if event is today or tomorrow
-        if event_date and (event_date == today or event_date == today + timedelta(days=1)):
-            print(f"\n  📅 Event on relevant date: {name} ({date_text})")
+        if not is_gmax_event:
+            continue
+        
+        # Parse the start date (YYYY-MM-DDTHH:MM:SS)
+        try:
+            start_date = datetime.fromisoformat(start_date_str.replace('Z', '+00:00')).date()
+        except:
+            continue
+        
+        # Check if the event is today or tomorrow in UTC-11
+        if start_date == today or start_date == today + timedelta(days=1):
+            print(f"\n📅 Processing event: {event_name} ({start_date})")
+            print(f"   Link: {event_link}")
             
-            # Check if it might have Gigantamax
-            if any(keyword in name.lower() for keyword in ['gigantamax', 'replay', 'bigger', 'max']):
-                pokemon_list = scrape_gigantamax_from_event_page(link)
-                for pokemon in pokemon_list:
-                    display_name = get_gigantamax_pokemon(pokemon)
-                    if display_name not in gigantamax_list:
-                        gigantamax_list.append(display_name)
-                        print(f"    ✅ Adding Gigantamax: {display_name}")
+            # 3. Scrape the event page for Pokémon
+            pokemon_list = scrape_gigantamax_from_event_page(event_link)
+            for pokemon in pokemon_list:
+                if pokemon not in all_gigantamax:
+                    all_gigantamax.append(pokemon)
+                    print(f"  ✅ Added: {pokemon}")
     
-    # Update current_raids.json
+    # 4. Update current_raids.json
     with open('current_raids.json', 'r') as f:
         data = json.load(f)
     
-    data['gigantamax'] = gigantamax_list
+    data['gigantamax'] = all_gigantamax
     data['gigantamax_last_updated'] = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     
     with open('current_raids.json', 'w') as f:
         json.dump(data, f, indent=2)
     
-    print(f"\n📊 Gigantamax showing: {gigantamax_list}")
+    print(f"\n📊 Gigantamax showing: {all_gigantamax}")
 
 if __name__ == "__main__":
     main()
