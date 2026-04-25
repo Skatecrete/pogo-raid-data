@@ -18,7 +18,6 @@ def scrape_snacknap_raids():
         raid_data = {
             "tier1": [],   # 1-Star Raids
             "tier3": [],   # 3-Star Raids
-            "tier5": [],   # 5-Star Raids
             "mega": []     # Mega Raids
         }
         
@@ -36,8 +35,6 @@ def scrape_snacknap_raids():
                 current_tier = "tier1"
             elif tier_title == "Tier 3":
                 current_tier = "tier3"
-            elif tier_title == "Tier 5":
-                current_tier = "tier5"
             elif "Mega" in tier_title:
                 current_tier = "mega"
             else:
@@ -63,7 +60,6 @@ def scrape_snacknap_raids():
         print(f"\n  📊 SNACKNAP RAID SUMMARY:")
         print(f"    1-Star: {len(raid_data['tier1'])} - {raid_data['tier1']}")
         print(f"    3-Star: {len(raid_data['tier3'])} - {raid_data['tier3']}")
-        print(f"    5-Star: {len(raid_data['tier5'])} - {raid_data['tier5']}")
         print(f"    Mega: {len(raid_data['mega'])} - {raid_data['mega']}")
         
         return raid_data
@@ -71,7 +67,7 @@ def scrape_snacknap_raids():
         print(f"    ❌ Error scraping raids: {e}")
         import traceback
         traceback.print_exc()
-        return {"tier1": [], "tier3": [], "tier5": [], "mega": []}
+        return {"tier1": [], "tier3": [], "mega": []}
 
 def scrape_snacknap_maxbattles():
     """Scrape Dynamax Tier 1,2,3 and Gigantamax from snacknap.com/max-battles"""
@@ -226,7 +222,6 @@ def main():
         "last_updated": datetime.now().strftime("%Y-%m-%d"),
         "tier1": raids.get("tier1", []),
         "tier3": raids.get("tier3", []),
-        "tier5": raids.get("tier5", []),
         "mega": raids.get("mega", []),
         "dynamax_tier1": max_battles.get("dynamax_tier1", []),
         "dynamax_tier2": max_battles.get("dynamax_tier2", []),
