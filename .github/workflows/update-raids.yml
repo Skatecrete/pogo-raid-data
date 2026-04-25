@@ -36,13 +36,13 @@ jobs:
         if [ ! -f scrapedduck_old.json ]; then
           echo '[]' > scrapedduck_old.json
         fi
-
-    - name: Run Gigantamax Event scraper
-      run: python scrape_gigantamax_events.py
       
     - name: Save current raids.json for comparison
       run: |
         cp current_raids.json current_raids_old.json
+
+    - name: Run Gigantamax Event scraper
+      run: python scrape_gigantamax_events.py
         
     - name: Run SnackNap scraper
       run: python scrape_snacknap.py
