@@ -22,23 +22,23 @@ def scrape_gigantamax_from_event_page(event_url):
         # Look for the "Featured Pokémon" section
         featured_section = soup.find('h2', string=re.compile(r'Featured Pokémon', re.I))
         if featured_section:
-            # Find the parent container and then all Pokémon links
-            parent_container = featured_section.find_parent('div')
-            if parent_container:
-                # Find links that contain "Gigantamax"
-                gigantamax_links = parent_container.find_all('a', href=re.compile(r'/pokedex/'))
-                for link in gigantamax_links:
-                    name = link.get_text().strip()
-                    if 'Gigantamax' in name:
-                        pokemon_name = name.replace('Gigantamax', '').strip()
-                        if pokemon_name and pokemon_name not in gigantamax_list:
-                            gigantamax_list.append(pokemon_name)
-                            print(f"      Found Gigantamax: {pokemon_name}")
+            # Find the unordered list or div containing the Pokémon
+            parent = featured_section.find_parent()
+            # Look for list items or links with Gigantamax in the text
+            for element in parent.find_all(['li', 'a']):
+                text = element.get_text().strip()
+                if 'Gigantamax' in text:
+                    # Extract just the Pokémon name
+                    pokemon = text.replace('Gigantamax', '').strip()
+                    if pokemon and pokemon not in gigantamax_list:
+                        gigantamax_list.append(pokemon)
+                        print(f"      Found: {pokemon}")
         
-        # Fallback for known events if scraping fails
-        if not gigantamax_list and 'replay-go-bigger' in event_url:
-            print("      Using fallback for Replay: GO Bigger")
-            gigantamax_list = ['Venusaur', 'Charizard', 'Blastoise', 'Gengar']
+        # Fallback to known events if scraping fails
+        if not gigantamax_list:
+            if 'replay-go-bigger' in event_url:
+                print("      Using fallback for Replay: GO Bigger")
+                gigantamax_list = ['Venusaur', 'Charizard', 'Blastoise', 'Gengar']
         
         return gigantamax_list
     except Exception as e:
@@ -57,23 +57,13 @@ def main():
     
     all_gigantamax = []
     
-    # 2. Find relevant events
+    # 2. Find relevant events (today or tomorrow)
     for event in events:
         event_name = event.get('name', '')
         start_date_str = event.get('start', '')
         event_link = event.get('link', '')
         
-        # Check if it's a Gigantamax event (by name or link)
-        is_gmax_event = (
-            'gigantamax' in event_name.lower() or 
-            'replay' in event_name.lower() or
-            'max battle' in event.get('eventType', '').lower()
-        )
-        
-        if not is_gmax_event:
-            continue
-        
-        # Parse the start date (YYYY-MM-DDTHH:MM:SS)
+        # Parse the start date
         try:
             start_date = datetime.fromisoformat(start_date_str.replace('Z', '+00:00')).date()
         except:
@@ -84,7 +74,7 @@ def main():
             print(f"\n📅 Processing event: {event_name} ({start_date})")
             print(f"   Link: {event_link}")
             
-            # 3. Scrape the event page for Pokémon
+            # 3. Scrape the event page for Gigantamax Pokémon
             pokemon_list = scrape_gigantamax_from_event_page(event_link)
             for pokemon in pokemon_list:
                 if pokemon not in all_gigantamax:
@@ -102,6 +92,7 @@ def main():
         json.dump(data, f, indent=2)
     
     print(f"\n📊 Gigantamax showing: {all_gigantamax}")
+    print("\n✨ Done! The Gigantamax list has been saved to current_raids.json")
 
 if __name__ == "__main__":
     main()
