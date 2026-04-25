@@ -113,10 +113,6 @@ def scrape_snacknap_maxbattles():
                 current_tier = 'dynamax_tier5'
                 print(f"    Found Dynamax Tier 5 section")
                 continue
-            elif 'Gigantamax' in text:
-                current_tier = 'gigantamax'
-                print(f"    Found Gigantamax section")
-                continue
             
             if current_tier and current_tier in raid_data:
                 imgs = element.find_all('img')
