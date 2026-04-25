@@ -5,7 +5,8 @@ import re
 
 def get_current_utc14_date():
     """Get current DATE in UTC+14 (latest timezone on Earth) - just the date, not time"""
-    utc_now = datetime.now(timezone.UTC)
+    # Use timezone.utc (lowercase) instead of timezone.UTC
+    utc_now = datetime.now(timezone.utc)
     utc14_now = utc_now + timedelta(hours=14)
     return utc14_now.date()
 
