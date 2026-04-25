@@ -64,7 +64,7 @@ def main():
     
     # Save current ScrapedDuck for next comparison
     with open('scrapedduck_old.json', 'w') as f:
-        json.dump(current_scrapedduck, f)
+        json.dump(current_scrapedduck, f, indent=2)
     
     # SnackNap categories - FIXED
     categories = ['tier1', 'tier3', 'tier5', 'mega', 'dynamax_tier1', 'dynamax_tier2', 'dynamax_tier3', 'dynamax_tier5', 'gigantamax']
