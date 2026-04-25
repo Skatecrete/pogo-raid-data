@@ -5,7 +5,6 @@ import re
 
 def get_current_utc14_time():
     """Get current time in UTC+14 (latest timezone on Earth)"""
-    # UTC+14 is used by Kiribati (Line Islands)
     return datetime.utcnow() + timedelta(hours=14)
 
 def parse_event_date(event_date_str):
@@ -25,43 +24,39 @@ def parse_event_date(event_date_str):
     return datetime(year, month, day)
 
 def get_gigantamax_pokemon(event_name):
-    """Extract Pokémon name from event title and handle special cases"""
+    """Extract Pokémon name from event title"""
     name = event_name.replace('Gigantamax', '').replace('Raid', '').replace('Day', '').replace('Battle', '').strip()
-    
     name_lower = name.lower()
     if 'toxtricity' in name_lower:
         return 'Toxtricity'
-    if 'flapple' in name_lower:
+    if 'flapple' in name_lower or 'appletun' in name_lower:
         return 'Appletun'
-    if 'appletun' in name_lower:
-        return 'Appletun'
-    
     return name
 
 def is_gigantamax_relevant(event_name, event_date):
-    """Determine if a Gigantamax event should be shown using UTC+14"""
+    """Show Gigantamax 24 hours BEFORE event day and THROUGHOUT the event day until UTC+14 ends"""
     if "gigantamax" not in event_name.lower():
-        return False, None, None
+        return False, None
     
     event_day = parse_event_date(event_date)
     if not event_day:
-        return False, None, None
+        return False, None
     
     now_utc14 = get_current_utc14_time()
     
-    # Event starts at midnight of that day in UTC+14
+    # Event day in UTC+14 (midnight to midnight)
     event_start = event_day.replace(hour=0, minute=0, second=0)
-    # Event ends at 11:59:59 PM in UTC+14
     event_end = event_day.replace(hour=23, minute=59, second=59)
     
-    # Show if event starts within next 24 hours OR event is currently ongoing in UTC+14
-    hours_until_start = (event_start - now_utc14).total_seconds() / 3600
+    # When to start showing: 24 hours BEFORE event day begins
+    show_from = event_start - timedelta(hours=24)
     
-    if 0 <= hours_until_start <= 24 or now_utc14 <= event_end:
+    # Show if we're within 24 hours BEFORE event day OR during the event day
+    if show_from <= now_utc14 <= event_end:
         pokemon = get_gigantamax_pokemon(event_name)
-        return True, event_start, pokemon
+        return True, pokemon
     
-    return False, None, None
+    return False, None
 
 def main():
     print("🚀 Starting Gigantamax Event Scraper...")
@@ -76,14 +71,10 @@ def main():
     for event in events:
         name = event.get('name', '')
         event_date = event.get('date', '')
-        relevant, start_time, pokemon = is_gigantamax_relevant(name, event_date)
+        relevant, pokemon = is_gigantamax_relevant(name, event_date)
         if relevant and pokemon and pokemon not in gigantamax_list:
             gigantamax_list.append(pokemon)
-            hours_until = (start_time - now_utc14).total_seconds() / 3600
-            if hours_until > 0:
-                print(f"  ✅ Adding: {pokemon} (starts in {hours_until:.0f} hours)")
-            else:
-                print(f"  ✅ Adding: {pokemon} (active now)")
+            print(f"  ✅ Adding: {pokemon}")
     
     # Update current_raids.json
     with open('current_raids.json', 'r') as f:
