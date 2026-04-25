@@ -1,11 +1,13 @@
 import requests
 import json
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 import re
 
-def get_current_utc14_time():
-    """Get current time in UTC+14 (latest timezone on Earth)"""
-    return datetime.utcnow() + timedelta(hours=14)
+def get_current_utc14_date():
+    """Get current DATE in UTC+14 (latest timezone on Earth) - just the date, not time"""
+    utc_now = datetime.now(timezone.UTC)
+    utc14_now = utc_now + timedelta(hours=14)
+    return utc14_now.date()
 
 def parse_event_date(event_date_str):
     """Parse LeekDuck date format like 'April 25th, 2026'"""
@@ -21,7 +23,7 @@ def parse_event_date(event_date_str):
         'September': 9, 'October': 10, 'November': 11, 'December': 12
     }
     month = month_map.get(month_name, 1)
-    return datetime(year, month, day)
+    return datetime(year, month, day).date()
 
 def get_gigantamax_pokemon(event_name):
     """Extract Pokémon name from event title"""
@@ -34,7 +36,7 @@ def get_gigantamax_pokemon(event_name):
     return name
 
 def is_gigantamax_relevant(event_name, event_date):
-    """Show Gigantamax 24 hours BEFORE event day and THROUGHOUT the event day until UTC+14 ends"""
+    """Show Gigantamax if event date is today or tomorrow (UTC+14)"""
     if "gigantamax" not in event_name.lower():
         return False, None
     
@@ -42,17 +44,11 @@ def is_gigantamax_relevant(event_name, event_date):
     if not event_day:
         return False, None
     
-    now_utc14 = get_current_utc14_time()
+    today = get_current_utc14_date()
+    tomorrow = today + timedelta(days=1)
     
-    # Event day in UTC+14 (midnight to midnight)
-    event_start = event_day.replace(hour=0, minute=0, second=0)
-    event_end = event_day.replace(hour=23, minute=59, second=59)
-    
-    # When to start showing: 24 hours BEFORE event day begins
-    show_from = event_start - timedelta(hours=24)
-    
-    # Show if we're within 24 hours BEFORE event day OR during the event day
-    if show_from <= now_utc14 <= event_end:
+    # Show if event is today OR tomorrow
+    if event_day == today or event_day == tomorrow:
         pokemon = get_gigantamax_pokemon(event_name)
         return True, pokemon
     
@@ -60,8 +56,8 @@ def is_gigantamax_relevant(event_name, event_date):
 
 def main():
     print("🚀 Starting Gigantamax Event Scraper...")
-    now_utc14 = get_current_utc14_time()
-    print(f"Current UTC+14 time: {now_utc14}")
+    today = get_current_utc14_date()
+    print(f"Today's date (UTC+14): {today}")
     
     response = requests.get("https://leekduck.com/feeds/events.json", timeout=15)
     events = response.json()
@@ -74,7 +70,7 @@ def main():
         relevant, pokemon = is_gigantamax_relevant(name, event_date)
         if relevant and pokemon and pokemon not in gigantamax_list:
             gigantamax_list.append(pokemon)
-            print(f"  ✅ Adding: {pokemon}")
+            print(f"  ✅ Adding: {pokemon} (Event on: {event_date})")
     
     # Update current_raids.json
     with open('current_raids.json', 'r') as f:
@@ -86,7 +82,7 @@ def main():
     with open('current_raids.json', 'w') as f:
         json.dump(data, f, indent=2)
     
-    print(f"\n📊 Active Gigantamax: {gigantamax_list}")
+    print(f"\n📊 Gigantamax showing: {gigantamax_list}")
 
 if __name__ == "__main__":
     main()
