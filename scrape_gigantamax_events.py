@@ -1,14 +1,13 @@
 import requests
-from bs4 import BeautifulSoup
 import json
 from datetime import datetime, timedelta, timezone
 import re
 
-def get_current_utc14_date():
-    """Get current DATE in UTC+14"""
+def get_current_utc11_date():
+    """Get current DATE in UTC-11 (American Samoa - latest timezone on Earth)"""
     utc_now = datetime.now(timezone.utc)
-    utc14_now = utc_now + timedelta(hours=14)
-    return utc14_now.date()
+    utc11_now = utc_now - timedelta(hours=11)
+    return utc11_now.date()
 
 def parse_event_date(event_date_str):
     """Parse LeekDuck date format like 'April 25th, 2026'"""
@@ -26,113 +25,64 @@ def parse_event_date(event_date_str):
     month = month_map.get(month_name, 1)
     return datetime(year, month, day).date()
 
-def scrape_gigantamax_from_event_page(event_url):
-    """Scrape Gigantamax Pokémon from individual LeekDuck event page"""
-    try:
-        response = requests.get(event_url, timeout=15)
-        soup = BeautifulSoup(response.text, 'html.parser')
-        
-        gigantamax_list = []
-        
-        # Look for Featured Pokémon section
-        featured_section = soup.find('h2', string=re.compile(r'Featured Pokémon', re.I))
-        if featured_section:
-            # Find all Pokémon names in the section
-            pokemon_links = featured_section.find_next('div').find_all('a')
-            for link in pokemon_links:
-                name = link.get_text().strip()
-                if 'Gigantamax' in name:
-                    # Extract just the Pokémon name
-                    pokemon = name.replace('Gigantamax', '').strip()
-                    if pokemon and pokemon not in gigantamax_list:
-                        gigantamax_list.append(pokemon)
-                        print(f"    Found: {pokemon}")
-        
-        # Alternative: look for table with featured Pokémon
-        if not gigantamax_list:
-            tables = soup.find_all('table')
-            for table in tables:
-                if 'Featured Pokémon' in table.get_text():
-                    rows = table.find_all('tr')
-                    for row in rows:
-                        cells = row.find_all('td')
-                        for cell in cells:
-                            if 'Gigantamax' in cell.get_text():
-                                pokemon = cell.get_text().replace('Gigantamax', '').strip()
-                                if pokemon and pokemon not in gigantamax_list:
-                                    gigantamax_list.append(pokemon)
-                                    print(f"    Found in table: {pokemon}")
-        
-        return gigantamax_list
-    except Exception as e:
-        print(f"  Error scraping event page: {e}")
-        return []
-
 def get_gigantamax_pokemon(event_name):
-    """Handle special cases for shared images"""
-    name_lower = event_name.lower()
+    """Extract Pokémon name from event title"""
+    name = event_name.replace('Gigantamax', '').replace('Raid', '').replace('Day', '').replace('Battle', '').strip()
+    name_lower = name.lower()
     if 'toxtricity' in name_lower:
         return 'Toxtricity'
     if 'flapple' in name_lower or 'appletun' in name_lower:
         return 'Appletun'
-    return event_name
+    return name
 
-def is_gigantamax_relevant(event_name, event_date, event_link):
-    """Check if event should be shown and get Pokémon list"""
+def is_gigantamax_relevant(event_name, event_date):
+    """Show Gigantamax if event date is today or tomorrow in UTC-11 (American Samoa)"""
     if "gigantamax" not in event_name.lower():
-        return False, []
+        return False, None
     
     event_day = parse_event_date(event_date)
     if not event_day:
-        return False, []
+        return False, None
     
-    today = get_current_utc14_date()
+    today = get_current_utc11_date()
     tomorrow = today + timedelta(days=1)
     
-    # Show if event is today OR tomorrow
+    # Show if event is today OR tomorrow in American Samoa time
     if event_day == today or event_day == tomorrow:
-        # Scrape the event page for Pokémon
-        print(f"  Scraping event: {event_name}")
-        pokemon_list = scrape_gigantamax_from_event_page(event_link)
-        return True, pokemon_list
+        pokemon = get_gigantamax_pokemon(event_name)
+        return True, pokemon
     
-    return False, []
+    return False, None
 
 def main():
     print("🚀 Starting Gigantamax Event Scraper...")
-    today = get_current_utc14_date()
-    print(f"Today's date (UTC+14): {today}")
+    today = get_current_utc11_date()
+    print(f"Today's date (UTC-11 American Samoa): {today}")
     
-    # First, get events from LeekDuck
     response = requests.get("https://leekduck.com/feeds/events.json", timeout=15)
     events = response.json()
     
-    all_gigantamax = []
+    gigantamax_list = []
     
     for event in events:
         name = event.get('name', '')
         event_date = event.get('date', '')
-        event_link = event.get('link', '')
-        
-        relevant, pokemon_list = is_gigantamax_relevant(name, event_date, event_link)
-        if relevant and pokemon_list:
-            for pokemon in pokemon_list:
-                display_name = get_gigantamax_pokemon(pokemon)
-                if display_name not in all_gigantamax:
-                    all_gigantamax.append(display_name)
-                    print(f"  ✅ Adding: {display_name}")
+        relevant, pokemon = is_gigantamax_relevant(name, event_date)
+        if relevant and pokemon and pokemon not in gigantamax_list:
+            gigantamax_list.append(pokemon)
+            print(f"  ✅ Adding: {pokemon} (Event on: {event_date})")
     
     # Update current_raids.json
     with open('current_raids.json', 'r') as f:
         data = json.load(f)
     
-    data['gigantamax'] = all_gigantamax
+    data['gigantamax'] = gigantamax_list
     data['gigantamax_last_updated'] = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     
     with open('current_raids.json', 'w') as f:
         json.dump(data, f, indent=2)
     
-    print(f"\n📊 Gigantamax showing: {all_gigantamax}")
+    print(f"\n📊 Gigantamax showing: {gigantamax_list}")
 
 if __name__ == "__main__":
     main()
