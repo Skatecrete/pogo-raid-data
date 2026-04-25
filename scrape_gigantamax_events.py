@@ -85,8 +85,27 @@ def main():
     with open('current_raids.json', 'r') as f:
         data = json.load(f)
     
+    # Always set the gigantamax field (even if empty list)
     data['gigantamax'] = all_gigantamax
     data['gigantamax_last_updated'] = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    
+    # Ensure other fields remain intact (optional, just to be safe)
+    if 'tier1' not in data:
+        data['tier1'] = []
+    if 'tier3' not in data:
+        data['tier3'] = []
+    if 'tier5' not in data:
+        data['tier5'] = []
+    if 'mega' not in data:
+        data['mega'] = []
+    if 'dynamax_tier1' not in data:
+        data['dynamax_tier1'] = []
+    if 'dynamax_tier2' not in data:
+        data['dynamax_tier2'] = []
+    if 'dynamax_tier3' not in data:
+        data['dynamax_tier3'] = []
+    if 'dynamax_tier5' not in data:
+        data['dynamax_tier5'] = []
     
     with open('current_raids.json', 'w') as f:
         json.dump(data, f, indent=2)
