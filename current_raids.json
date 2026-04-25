@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-04-24",
+  "last_updated": "2026-04-25",
   "tier1": [
     "Cubone",
     "Dratini",
@@ -60,6 +60,9 @@
     "Hitmonlee",
     "Passimian",
     "Sableye"
+  ],
+  "dynamax_tier5": [
+    "Regirock"
   ],
   "gigantamax": []
 }
