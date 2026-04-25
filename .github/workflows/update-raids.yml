@@ -40,12 +40,12 @@ jobs:
     - name: Save current raids.json for comparison
       run: |
         cp current_raids.json current_raids_old.json
-
-    - name: Run Gigantamax Event scraper
-      run: python scrape_gigantamax_events.py
         
     - name: Run SnackNap scraper
       run: python scrape_snacknap.py
+    
+    - name: Run Gigantamax Event scraper
+      run: python scrape_gigantamax_events.py
       
     - name: Compare and generate raid changes
       id: changes
