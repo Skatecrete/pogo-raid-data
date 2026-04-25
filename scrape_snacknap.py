@@ -145,7 +145,7 @@ def scrape_snacknap_maxbattles():
         
         print(f"\n  📊 MAX BATTLES SUMMARY:")
         print(f"    Dynamax Tier 1: {len(raid_data['dynamax_tier1'])}")
-        print(f)    Dynamax Tier 2: {len(raid_data['dynamax_tier2'])}")
+        print(f"    Dynamax Tier 2: {len(raid_data['dynamax_tier2'])}")
         print(f"    Dynamax Tier 3: {len(raid_data['dynamax_tier3'])}")
         print(f"    Dynamax Tier 5: {len(raid_data['dynamax_tier5'])}")
         
