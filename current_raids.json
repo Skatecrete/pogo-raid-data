@@ -17,5 +17,12 @@
   "dynamax_tier1": [],
   "dynamax_tier2": [],
   "dynamax_tier3": [],
-  "dynamax_tier5": []
+  "dynamax_tier5": [],
+  "gigantamax": [
+    "Venusaur",
+    "Charizard",
+    "Blastoise",
+    "Gengar"
+  ],
+  "gigantamax_last_updated": "2026-04-25 13:54:26"
 }
