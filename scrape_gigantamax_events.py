@@ -36,15 +36,13 @@ def parse_event_date(event_date_str):
 
 def get_gigantamax_pokemon(event_name):
     """Extract Pokémon name from event title and handle special cases"""
-    # Remove common words
     name = event_name.replace('Gigantamax', '').replace('Raid', '').replace('Day', '').replace('Battle', '').strip()
     
-    # Special cases for shared images
     name_lower = name.lower()
     if 'toxtricity' in name_lower:
         return 'Toxtricity'
     if 'flapple' in name_lower:
-        return 'Appletun'  # Flapple uses Appletun's Gigantamax image
+        return 'Appletun'
     if 'appletun' in name_lower:
         return 'Appletun'
     
@@ -55,18 +53,22 @@ def is_gigantamax_relevant(event_name, event_date):
     if "gigantamax" not in event_name.lower():
         return False, None, None
     
-    event_start_day = parse_event_date(event_date)
-    if not event_start_day:
+    event_day = parse_event_date(event_date)
+    if not event_day:
         return False, None, None
     
-    # Event window: midnight to midnight NZT
-    event_start = event_start_day.replace(hour=0, minute=0, second=0)
-    event_end = event_start_day.replace(hour=23, minute=59, second=59)
-    
     now = get_current_nz_time()
-    show_from = event_start - timedelta(hours=24)
     
-    if show_from <= now <= event_end:
+    # Event starts at midnight of that day
+    event_start = event_day.replace(hour=0, minute=0, second=0)
+    # Event ends at 11:59:59 PM of that day
+    event_end = event_day.replace(hour=23, minute=59, second=59)
+    
+    # Show if event starts within next 24 hours OR event is currently ongoing
+    # This matches your events logic: show when starting today or already started
+    hours_until_start = (event_start - now).total_seconds() / 3600
+    
+    if 0 <= hours_until_start <= 24 or now <= event_end:
         pokemon = get_gigantamax_pokemon(event_name)
         return True, event_start, pokemon
     
@@ -74,7 +76,8 @@ def is_gigantamax_relevant(event_name, event_date):
 
 def main():
     print("🚀 Starting Gigantamax Event Scraper...")
-    print(f"Current NZ time: {get_current_nz_time()}")
+    now = get_current_nz_time()
+    print(f"Current NZ time: {now}")
     
     response = requests.get("https://leekduck.com/feeds/events.json", timeout=15)
     events = response.json()
@@ -87,9 +90,11 @@ def main():
         relevant, start_time, pokemon = is_gigantamax_relevant(name, event_date)
         if relevant and pokemon and pokemon not in gigantamax_list:
             gigantamax_list.append(pokemon)
-            print(f"  ✅ Adding: {pokemon} (from: {name})")
-            if pokemon == 'Appletun' and 'flapple' in name.lower():
-                print(f"     → Flapple will use Appletun image")
+            hours_until = (start_time - now).total_seconds() / 3600
+            if hours_until > 0:
+                print(f"  ✅ Adding: {pokemon} (starts in {hours_until:.0f} hours)")
+            else:
+                print(f"  ✅ Adding: {pokemon} (active now)")
     
     # Update current_raids.json
     with open('current_raids.json', 'r') as f:
