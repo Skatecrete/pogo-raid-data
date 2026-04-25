@@ -31,7 +31,7 @@ jobs:
     - name: Create old files if not exist
       run: |
         if [ ! -f current_raids_old.json ]; then
-          echo '{"last_updated": "", "tier1": [], "tier3": [], "dynamax_tier1": [], "dynamax_tier2": [], "dynamax_tier3": [], "gigantamax": []}' > current_raids_old.json
+          echo '{"last_updated": "", "tier1": [], "tier3": [], "tier5": [], "mega": [], "dynamax_tier1": [], "dynamax_tier2": [], "dynamax_tier3": [], "dynamax_tier5": [], "gigantamax": []}' > current_raids_old.json
         fi
         if [ ! -f scrapedduck_old.json ]; then
           echo '[]' > scrapedduck_old.json
