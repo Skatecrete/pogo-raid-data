@@ -1,5 +1,12 @@
 import json
 import requests
+import os
+from datetime import datetime
+
+# Configuration - number of consecutive scans required before sending notification
+# Set to 2 for 1 hour (runs every 30 min), change as needed
+CONFIRMATION_COUNT = 2
+TRACKER_FILE = 'pending_removals.json'
 
 def fetch_scrapedduck_raids():
     """Fetch current raids from ScrapedDuck API"""
@@ -27,7 +34,47 @@ def extract_name_from_raid_obj(raid_obj):
         return raid_obj.get('name', '')
     return str(raid_obj)
 
+def load_removal_tracker():
+    """Load the tracking file for pending removals"""
+    if os.path.exists(TRACKER_FILE):
+        with open(TRACKER_FILE, 'r') as f:
+            return json.load(f)
+    return {}
+
+def save_removal_tracker(tracker):
+    """Save the tracking file"""
+    with open(TRACKER_FILE, 'w') as f:
+        json.dump(tracker, f, indent=2)
+
+def get_confirmed_removals(removed_set, tracker):
+    """Return raids that have been removed for CONFIRMATION_COUNT consecutive scans"""
+    now = datetime.now().isoformat()
+    new_tracker = {}
+    confirmed = set()
+    
+    for raid in removed_set:
+        if raid in tracker:
+            # Already in tracker, increment count
+            count = tracker[raid]['count'] + 1
+            if count >= CONFIRMATION_COUNT:
+                confirmed.add(raid)
+            new_tracker[raid] = {
+                'first_seen': tracker[raid]['first_seen'],
+                'count': count
+            }
+        else:
+            # Newly removed, add to tracker
+            new_tracker[raid] = {
+                'first_seen': now,
+                'count': 1
+            }
+    
+    return confirmed, new_tracker
+
 def main():
+    # Load removal tracker
+    tracker = load_removal_tracker()
+    
     # Load old SnackNap data
     try:
         with open('current_raids_old.json', 'r') as f:
@@ -62,11 +109,21 @@ def main():
     scrapedduck_added = new_scrapedduck_set - old_scrapedduck_set
     scrapedduck_removed = old_scrapedduck_set - new_scrapedduck_set
     
+    # Apply confirmation logic to removals
+    confirmed_removals, updated_tracker = get_confirmed_removals(scrapedduck_removed, tracker)
+    
+    # Clean up tracker (remove raids that are no longer removed)
+    for raid in list(updated_tracker.keys()):
+        if raid not in scrapedduck_removed:
+            del updated_tracker[raid]
+    
+    save_removal_tracker(updated_tracker)
+    
     # Save current ScrapedDuck for next comparison
     with open('scrapedduck_old.json', 'w') as f:
         json.dump(current_scrapedduck, f, indent=2)
     
-    # SnackNap categories - FIXED
+    # SnackNap categories
     categories = ['tier1', 'tier3', 'tier5', 'mega', 'dynamax_tier1', 'dynamax_tier2', 'dynamax_tier3', 'dynamax_tier5', 'gigantamax']
     display_names = {
         'tier1': '⭐ 1-Star Raids',
@@ -98,10 +155,13 @@ def main():
             if added:
                 changes.append(f"  ✅ Added: {', '.join(sorted(added))}")
             if removed:
-                changes.append(f"  ❌ Removed: {', '.join(sorted(removed))}")
+                # Only include removals that have been confirmed
+                confirmed_removed_names = [r for r in removed if r in confirmed_removals]
+                if confirmed_removed_names:
+                    changes.append(f"  ❌ Removed: {', '.join(sorted(confirmed_removed_names))}")
     
-    # Check ScrapedDuck changes
-    if scrapedduck_added or scrapedduck_removed:
+    # Check ScrapedDuck changes (only confirmed removals)
+    if scrapedduck_added or confirmed_removals:
         added_by_tier = {}
         for key in scrapedduck_added:
             name, tier = key.rsplit('|', 1)
@@ -125,7 +185,7 @@ def main():
             added_by_tier[display_tier].append(name)
         
         removed_by_tier = {}
-        for key in scrapedduck_removed:
+        for key in confirmed_removals:
             name, tier = key.rsplit('|', 1)
             display_tier = tier
             if 'Shadow' in tier:
