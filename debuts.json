@@ -1,6 +1,22 @@
 {
-  "last_updated": "2026-04-27 08:17:35",
+  "last_updated": "2026-04-27 14:04:40",
   "debuts": [
+    {
+      "event_name": "Spring Marathon",
+      "event_date": "May 12th - May 18th 2026",
+      "new_pokemon": [
+        "Flittle",
+        "Espathra",
+        "Pikachu (Marathon Visor)"
+      ],
+      "new_shiny": [],
+      "pokemon_images": {
+        "Flittle": "https://www.serebii.net/pokemongo/pokemon/955.png",
+        "Espathra": "https://www.serebii.net/pokemongo/pokemon/956.png",
+        "Pikachu (Marathon Visor)": "https://www.serebii.net/pokemongo/pokemon/025-marathon.png"
+      },
+      "event_type": "global"
+    },
     {
       "event_name": "Steeled Resolve 2026",
       "event_date": "April 28th - May 4th 2026",
