@@ -11,16 +11,16 @@ permissions:
 jobs:
   update-debuts:
     runs-on: ubuntu-latest
-    
+
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
-      
+
     - name: Set up Python
       uses: actions/setup-python@v5
       with:
         python-version: '3.x'
-        
+
     - name: Install dependencies
       run: |
         pip install requests==2.31.0
@@ -28,18 +28,36 @@ jobs:
         
     - name: Run debut scraper
       run: python scrape_debuts.py
-      
+
     - name: Commit and push if changes
       run: |
         git config --global user.name 'github-actions'
         git config --global user.email 'github-actions@github.com'
         
-        git pull origin main --rebase || true
+        # Fetch latest changes from remote
+        git fetch origin main
         
+        # Stash any local changes (including scraper output)
+        git stash || true
+        
+        # Reset to latest remote state
+        git reset --hard origin/main
+        
+        # Apply stashed changes (our new debuts.json)
+        git stash pop || true
+        
+        # Check if debuts.json actually changed
         if git diff --quiet debuts.json; then
           echo "No changes to commit"
         else
           git add debuts.json
           git commit -m "Update debuts data - $(date +'%Y-%m-%d %H:%M:%S')"
-          git push origin main
+          
+          # Push with retry on conflict
+          for i in 1 2 3; do
+            git push origin main && break
+            echo "Push attempt $i failed, pulling latest changes..."
+            git pull origin main --rebase
+            sleep 5
+          done
         fi
