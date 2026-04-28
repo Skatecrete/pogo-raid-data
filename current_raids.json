@@ -1,19 +1,12 @@
 {
   "last_updated": "2026-04-28",
   "tier1": [
-    "Cubone",
-    "Honedge",
-    "Meditite",
-    "Shieldon",
-    "Hisuian Qwilfish",
     "Beldum",
-    "Dratini"
+    "Honedge",
+    "Shieldon"
   ],
   "tier3": [
-    "Orthworm",
-    "Nidoking",
-    "Skarmory",
-    "Drampa"
+    "Orthworm"
   ],
   "mega": [
     "Sharpedo",
@@ -67,5 +60,5 @@
   ],
   "dynamax_tier5": [],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-04-28 20:47:07"
+  "gigantamax_last_updated": "2026-04-28 22:54:38"
 }
