@@ -1,20 +1,16 @@
 {
   "last_updated": "2026-04-29",
   "tier1": [
-    "Galarian Meowth",
-    "Klink",
-    "Shieldon",
-    "Honedge",
-    "Bronzor",
     "Beldum",
+    "Honedge",
+    "Shieldon",
     "Rockruff"
   ],
   "tier3": [
     "Orthworm"
   ],
   "mega": [
-    "Banette",
-    "Sharpedo"
+    "Banette"
   ],
   "dynamax_tier1": [
     "Abra",
@@ -64,5 +60,5 @@
   ],
   "dynamax_tier5": [],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-04-29 05:52:05"
+  "gigantamax_last_updated": "2026-04-29 22:57:58"
 }
