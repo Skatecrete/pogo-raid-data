@@ -1,104 +1,84 @@
 [
   {
-    "name": "Cubone",
+    "name": "Honedge",
     "tier": "1-Star Raids",
     "canBeShiny": true,
     "types": [
       {
-        "name": "ground",
-        "image": "https://leekduck.com/assets/img/types/ground.png"
+        "name": "steel",
+        "image": "https://leekduck.com/assets/img/types/steel.png"
+      },
+      {
+        "name": "ghost",
+        "image": "https://leekduck.com/assets/img/types/ghost.png"
       }
     ],
     "combatPower": {
       "normal": {
-        "min": 536,
-        "max": 582
+        "min": 742,
+        "max": 794
       },
       "boosted": {
-        "min": 671,
-        "max": 728
+        "min": 927,
+        "max": 993
       }
     },
     "boostedWeather": [
       {
-        "name": "sunny",
-        "image": "https://leekduck.com/assets/img/weather/sunny.png"
-      }
-    ],
-    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm104.icon.png"
-  },
-  {
-    "name": "Dratini",
-    "tier": "1-Star Raids",
-    "canBeShiny": true,
-    "types": [
-      {
-        "name": "dragon",
-        "image": "https://leekduck.com/assets/img/types/dragon.png"
-      }
-    ],
-    "combatPower": {
-      "normal": {
-        "min": 529,
-        "max": 574
+        "name": "snow",
+        "image": "https://leekduck.com/assets/img/weather/snowy.png"
       },
-      "boosted": {
-        "min": 661,
-        "max": 717
-      }
-    },
-    "boostedWeather": [
-      {
-        "name": "windy",
-        "image": "https://leekduck.com/assets/img/weather/windy.png"
-      }
-    ],
-    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm147.icon.png"
-  },
-  {
-    "name": "Hisuian Qwilfish",
-    "tier": "1-Star Raids",
-    "canBeShiny": true,
-    "types": [
-      {
-        "name": "dark",
-        "image": "https://leekduck.com/assets/img/types/dark.png"
-      },
-      {
-        "name": "poison",
-        "image": "https://leekduck.com/assets/img/types/poison.png"
-      }
-    ],
-    "combatPower": {
-      "normal": {
-        "min": 1155,
-        "max": 1220
-      },
-      "boosted": {
-        "min": 1444,
-        "max": 1526
-      }
-    },
-    "boostedWeather": [
       {
         "name": "fog",
         "image": "https://leekduck.com/assets/img/weather/foggy.png"
-      },
-      {
-        "name": "cloudy",
-        "image": "https://leekduck.com/assets/img/weather/cloudy.png"
       }
     ],
-    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm211.fHISUIAN.icon.png"
+    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm679.icon.png"
   },
   {
-    "name": "Meditite",
+    "name": "Shieldon",
     "tier": "1-Star Raids",
     "canBeShiny": true,
     "types": [
       {
-        "name": "fighting",
-        "image": "https://leekduck.com/assets/img/types/fighting.png"
+        "name": "rock",
+        "image": "https://leekduck.com/assets/img/types/rock.png"
+      },
+      {
+        "name": "steel",
+        "image": "https://leekduck.com/assets/img/types/steel.png"
+      }
+    ],
+    "combatPower": {
+      "normal": {
+        "min": 465,
+        "max": 509
+      },
+      "boosted": {
+        "min": 581,
+        "max": 636
+      }
+    },
+    "boostedWeather": [
+      {
+        "name": "partly cloudy",
+        "image": "https://leekduck.com/assets/img/weather/partlycloudy.png"
+      },
+      {
+        "name": "snow",
+        "image": "https://leekduck.com/assets/img/weather/snowy.png"
+      }
+    ],
+    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm410.icon.png"
+  },
+  {
+    "name": "Beldum",
+    "tier": "1-Star Raids",
+    "canBeShiny": true,
+    "types": [
+      {
+        "name": "steel",
+        "image": "https://leekduck.com/assets/img/types/steel.png"
       },
       {
         "name": "psychic",
@@ -107,84 +87,12 @@
     ],
     "combatPower": {
       "normal": {
-        "min": 359,
-        "max": 396
+        "min": 513,
+        "max": 558
       },
       "boosted": {
-        "min": 449,
-        "max": 495
-      }
-    },
-    "boostedWeather": [
-      {
-        "name": "cloudy",
-        "image": "https://leekduck.com/assets/img/weather/cloudy.png"
-      },
-      {
-        "name": "windy",
-        "image": "https://leekduck.com/assets/img/weather/windy.png"
-      }
-    ],
-    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm307.icon.png"
-  },
-  {
-    "name": "Nidoking",
-    "tier": "3-Star Raids",
-    "canBeShiny": true,
-    "types": [
-      {
-        "name": "poison",
-        "image": "https://leekduck.com/assets/img/types/poison.png"
-      },
-      {
-        "name": "ground",
-        "image": "https://leekduck.com/assets/img/types/ground.png"
-      }
-    ],
-    "combatPower": {
-      "normal": {
-        "min": 1395,
-        "max": 1466
-      },
-      "boosted": {
-        "min": 1743,
-        "max": 1833
-      }
-    },
-    "boostedWeather": [
-      {
-        "name": "cloudy",
-        "image": "https://leekduck.com/assets/img/weather/cloudy.png"
-      },
-      {
-        "name": "sunny",
-        "image": "https://leekduck.com/assets/img/weather/sunny.png"
-      }
-    ],
-    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm34.icon.png"
-  },
-  {
-    "name": "Skarmory",
-    "tier": "3-Star Raids",
-    "canBeShiny": true,
-    "types": [
-      {
-        "name": "steel",
-        "image": "https://leekduck.com/assets/img/types/steel.png"
-      },
-      {
-        "name": "flying",
-        "image": "https://leekduck.com/assets/img/types/flying.png"
-      }
-    ],
-    "combatPower": {
-      "normal": {
-        "min": 1139,
-        "max": 1204
-      },
-      "boosted": {
-        "min": 1424,
-        "max": 1506
+        "min": 642,
+        "max": 697
       }
     },
     "boostedWeather": [
@@ -197,43 +105,35 @@
         "image": "https://leekduck.com/assets/img/weather/windy.png"
       }
     ],
-    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm227.icon.png"
+    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm374.icon.png"
   },
   {
-    "name": "Drampa",
+    "name": "Orthworm",
     "tier": "3-Star Raids",
-    "canBeShiny": true,
+    "canBeShiny": false,
     "types": [
       {
-        "name": "normal",
-        "image": "https://leekduck.com/assets/img/types/normal.png"
-      },
-      {
-        "name": "dragon",
-        "image": "https://leekduck.com/assets/img/types/dragon.png"
+        "name": "steel",
+        "image": "https://leekduck.com/assets/img/types/steel.png"
       }
     ],
     "combatPower": {
       "normal": {
-        "min": 1588,
-        "max": 1665
+        "min": 1245,
+        "max": 1313
       },
       "boosted": {
-        "min": 1985,
-        "max": 2081
+        "min": 1557,
+        "max": 1642
       }
     },
     "boostedWeather": [
       {
-        "name": "partly cloudy",
-        "image": "https://leekduck.com/assets/img/weather/partlycloudy.png"
-      },
-      {
-        "name": "windy",
-        "image": "https://leekduck.com/assets/img/weather/windy.png"
+        "name": "snow",
+        "image": "https://leekduck.com/assets/img/weather/snowy.png"
       }
     ],
-    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm780.icon.png"
+    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm968.icon.png"
   },
   {
     "name": "Tapu Koko",
