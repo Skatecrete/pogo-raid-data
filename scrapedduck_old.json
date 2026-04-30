@@ -136,13 +136,13 @@
     "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm968.icon.png"
   },
   {
-    "name": "Tapu Koko",
+    "name": "Tapu Lele",
     "tier": "5-Star Raids",
     "canBeShiny": true,
     "types": [
       {
-        "name": "electric",
-        "image": "https://leekduck.com/assets/img/types/electric.png"
+        "name": "psychic",
+        "image": "https://leekduck.com/assets/img/types/psychic.png"
       },
       {
         "name": "fairy",
@@ -151,25 +151,53 @@
     ],
     "combatPower": {
       "normal": {
-        "min": 1730,
-        "max": 1810
+        "min": 1912,
+        "max": 1996
       },
       "boosted": {
-        "min": 2162,
-        "max": 2263
+        "min": 2390,
+        "max": 2496
       }
     },
     "boostedWeather": [
       {
-        "name": "rainy",
-        "image": "https://leekduck.com/assets/img/weather/rainy.png"
+        "name": "windy",
+        "image": "https://leekduck.com/assets/img/weather/windy.png"
       },
       {
         "name": "cloudy",
         "image": "https://leekduck.com/assets/img/weather/cloudy.png"
       }
     ],
-    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm785.icon.png"
+    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm786.icon.png"
+  },
+  {
+    "name": "Mega Banette",
+    "tier": "Mega Raids",
+    "canBeShiny": true,
+    "types": [
+      {
+        "name": "ghost",
+        "image": "https://leekduck.com/assets/img/types/ghost.png"
+      }
+    ],
+    "combatPower": {
+      "normal": {
+        "min": 1244,
+        "max": 1313
+      },
+      "boosted": {
+        "min": 1555,
+        "max": 1642
+      }
+    },
+    "boostedWeather": [
+      {
+        "name": "fog",
+        "image": "https://leekduck.com/assets/img/weather/foggy.png"
+      }
+    ],
+    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm354.fMEGA.icon.png"
   },
   {
     "name": "Shadow Dratini",
