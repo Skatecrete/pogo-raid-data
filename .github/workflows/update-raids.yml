@@ -50,44 +50,46 @@ jobs:
     - name: Compare and generate raid changes
       id: changes
       run: |
-        python compare_raids.py
-        
-    - name: Check if changes exist
-      id: has_changes
+        # Run the compare script and capture its output (true/false)
+        OUTPUT=$(python compare_raids.py)
+        echo "has_changes=$OUTPUT" >> $GITHUB_OUTPUT
+    
+    - name: Check if changes exist (verify file has content)
+      id: verify_changes
       run: |
         CHANGES=$(cat raid_changes.txt)
-        if [ "$CHANGES" != "No changes detected" ]; then
-          echo "has_changes=true" >> $GITHUB_OUTPUT
+        if [ "$CHANGES" = "No changes detected" ]; then
+          echo "verified=false" >> $GITHUB_OUTPUT
         else
-          echo "has_changes=false" >> $GITHUB_OUTPUT
+          echo "verified=true" >> $GITHUB_OUTPUT
         fi
-        
+    
     - name: Commit and push if changes
       id: commit
-      if: steps.has_changes.outputs.has_changes == 'true'
+      if: steps.changes.outputs.has_changes == 'true' && steps.verify_changes.outputs.verified == 'true'
       run: |
         git config --global user.name 'github-actions'
         git config --global user.email 'github-actions@github.com'
-        
+    
         git pull origin main --rebase || true
-        
+    
         git add scrapedduck_old.json
         git add current_raids.json
         git add shadow_images/ || true
         git add shadow_images.json || true
-        
+    
         if ! git diff --cached --quiet; then
           git commit -m "Update raids and shadow images - $(date +'%Y-%m-%d %H:%M:%S')"
           git push origin main
           echo "committed=true" >> $GITHUB_OUTPUT
         fi
-        
+    
     - name: Send Discord notification with raid changes
-      if: steps.has_changes.outputs.has_changes == 'true'
+      if: steps.verify_changes.outputs.verified == 'true'
       run: |
         CHANGES=$(cat raid_changes.txt)
         ESCAPED_CHANGES=$(python -c 'import json,sys; print(json.dumps(sys.stdin.read()))' <<< "$CHANGES")
-        
+    
         curl -X POST \
           -H "Content-Type: application/json" \
           -d "{
