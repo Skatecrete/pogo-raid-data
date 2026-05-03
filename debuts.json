@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-05-03 13:02:22",
+  "last_updated": "2026-05-03 18:55:18",
   "debuts": [
     {
       "event_name": "Spring Marathon",
@@ -35,7 +35,14 @@
       "event_name": "GO Fest 2026 Copenhagen",
       "event_date": "June 12th - 14th 2026",
       "new_pokemon": [
-        "Zeraora"
+        "Zeraora",
+        "Caterpie (Cap)",
+        "Ivysaur (Pikachu Visor)",
+        "Venusaur (Pikachu Visor)",
+        "Charmeleon (Pikachu Visor)",
+        "Charizard (Pikachu Visor)",
+        "Wartortle (Pikachu Visor)",
+        "Blastoise (Pikachu Visor)"
       ],
       "new_shiny": [
         "Tauros (Paldean Form - Combat Breed)",
@@ -43,6 +50,13 @@
       ],
       "pokemon_images": {
         "Zeraora": "https://www.serebii.net/pokemongo/pokemon/807.png",
+        "Caterpie (Cap)": "https://www.serebii.net/pokemongo/pokemon/010-cap.png",
+        "Ivysaur (Pikachu Visor)": "https://www.serebii.net/pokemongo/pokemon/002-pikachuvisor.png",
+        "Venusaur (Pikachu Visor)": "https://www.serebii.net/pokemongo/pokemon/003-pikachuvisor.png",
+        "Charmeleon (Pikachu Visor)": "https://www.serebii.net/pokemongo/pokemon/005-pikachuvisor.png",
+        "Charizard (Pikachu Visor)": "https://www.serebii.net/pokemongo/pokemon/006-pikachuvisor.png",
+        "Wartortle (Pikachu Visor)": "https://www.serebii.net/pokemongo/pokemon/008-pikachuvisor.png",
+        "Blastoise (Pikachu Visor)": "https://www.serebii.net/pokemongo/pokemon/009-pikachuvisor.png",
         "Tauros (Paldean Form - Combat Breed)": "https://www.serebii.net/pokemongo/pokemon/shiny/128-p.png",
         "Rotom (Wash Rotom)": "https://www.serebii.net/pokemongo/pokemon/shiny/479-w.png"
       },
@@ -52,7 +66,14 @@
       "event_name": "GO Fest 2026 Chicago",
       "event_date": "June 5th - 7th 2026",
       "new_pokemon": [
-        "Zeraora"
+        "Zeraora",
+        "Caterpie (Cap)",
+        "Ivysaur (Pikachu Visor)",
+        "Venusaur (Pikachu Visor)",
+        "Charmeleon (Pikachu Visor)",
+        "Charizard (Pikachu Visor)",
+        "Wartortle (Pikachu Visor)",
+        "Blastoise (Pikachu Visor)"
       ],
       "new_shiny": [
         "Tauros (Paldean Form - Blaze Breed)",
@@ -60,6 +81,13 @@
       ],
       "pokemon_images": {
         "Zeraora": "https://www.serebii.net/pokemongo/pokemon/807.png",
+        "Caterpie (Cap)": "https://www.serebii.net/pokemongo/pokemon/010-cap.png",
+        "Ivysaur (Pikachu Visor)": "https://www.serebii.net/pokemongo/pokemon/002-pikachuvisor.png",
+        "Venusaur (Pikachu Visor)": "https://www.serebii.net/pokemongo/pokemon/003-pikachuvisor.png",
+        "Charmeleon (Pikachu Visor)": "https://www.serebii.net/pokemongo/pokemon/005-pikachuvisor.png",
+        "Charizard (Pikachu Visor)": "https://www.serebii.net/pokemongo/pokemon/006-pikachuvisor.png",
+        "Wartortle (Pikachu Visor)": "https://www.serebii.net/pokemongo/pokemon/008-pikachuvisor.png",
+        "Blastoise (Pikachu Visor)": "https://www.serebii.net/pokemongo/pokemon/009-pikachuvisor.png",
         "Tauros (Paldean Form - Blaze Breed)": "https://www.serebii.net/pokemongo/pokemon/shiny/128-b.png",
         "Rotom (Wash Rotom)": "https://www.serebii.net/pokemongo/pokemon/shiny/479-w.png"
       },
@@ -69,7 +97,14 @@
       "event_name": "GO Fest 2026 Tokyo",
       "event_date": "May 29th - June 1st 2026",
       "new_pokemon": [
-        "Zeraora"
+        "Zeraora",
+        "Caterpie (Cap)",
+        "Ivysaur (Pikachu Visor)",
+        "Venusaur (Pikachu Visor)",
+        "Charmeleon (Pikachu Visor)",
+        "Charizard (Pikachu Visor)",
+        "Wartortle (Pikachu Visor)",
+        "Blastoise (Pikachu Visor)"
       ],
       "new_shiny": [
         "Tauros (Paldean Form - Aqua Breed)",
@@ -77,6 +112,13 @@
       ],
       "pokemon_images": {
         "Zeraora": "https://www.serebii.net/pokemongo/pokemon/807.png",
+        "Caterpie (Cap)": "https://www.serebii.net/pokemongo/pokemon/010-cap.png",
+        "Ivysaur (Pikachu Visor)": "https://www.serebii.net/pokemongo/pokemon/002-pikachuvisor.png",
+        "Venusaur (Pikachu Visor)": "https://www.serebii.net/pokemongo/pokemon/003-pikachuvisor.png",
+        "Charmeleon (Pikachu Visor)": "https://www.serebii.net/pokemongo/pokemon/005-pikachuvisor.png",
+        "Charizard (Pikachu Visor)": "https://www.serebii.net/pokemongo/pokemon/006-pikachuvisor.png",
+        "Wartortle (Pikachu Visor)": "https://www.serebii.net/pokemongo/pokemon/008-pikachuvisor.png",
+        "Blastoise (Pikachu Visor)": "https://www.serebii.net/pokemongo/pokemon/009-pikachuvisor.png",
         "Tauros (Paldean Form - Aqua Breed)": "https://www.serebii.net/pokemongo/pokemon/shiny/128-a.png",
         "Rotom (Wash Rotom)": "https://www.serebii.net/pokemongo/pokemon/shiny/479-w.png"
       },
