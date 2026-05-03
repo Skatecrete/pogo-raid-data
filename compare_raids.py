@@ -4,7 +4,6 @@ import os
 from datetime import datetime
 
 # Configuration - number of consecutive scans required before sending notification
-# Set to 2 for 1 hour (runs every 30 min), change as needed
 CONFIRMATION_COUNT = 2
 TRACKER_FILE = 'pending_removals.json'
 
@@ -23,9 +22,12 @@ def fetch_scrapedduck_raids():
         return []
 
 def get_raid_key(raid):
-    """Create a unique key for a raid"""
-    name = raid.get('name', '').strip()
-    tier = raid.get('tier', '').strip()
+    """Create a unique key for a raid with normalization"""
+    name = raid.get('name', '').strip().lower()
+    # Normalize common prefixes and whitespace
+    name = name.replace('d-max ', '').replace('dynamax ', '').replace('g-max ', '')
+    name = name.strip()
+    tier = raid.get('tier', '').strip().lower()
     return f"{name}|{tier}"
 
 def extract_name_from_raid_obj(raid_obj):
@@ -54,7 +56,6 @@ def get_confirmed_removals(removed_set, tracker):
     
     for raid in removed_set:
         if raid in tracker:
-            # Already in tracker, increment count
             count = tracker[raid]['count'] + 1
             if count >= CONFIRMATION_COUNT:
                 confirmed.add(raid)
@@ -63,7 +64,6 @@ def get_confirmed_removals(removed_set, tracker):
                 'count': count
             }
         else:
-            # Newly removed, add to tracker
             new_tracker[raid] = {
                 'first_seen': now,
                 'count': 1
@@ -72,6 +72,10 @@ def get_confirmed_removals(removed_set, tracker):
     return confirmed, new_tracker
 
 def main():
+    print("=" * 60)
+    print("COMPARE_RAIDS.PY - DEBUG MODE")
+    print("=" * 60)
+    
     # Load removal tracker
     tracker = load_removal_tracker()
     
@@ -79,22 +83,58 @@ def main():
     try:
         with open('current_raids_old.json', 'r') as f:
             old_snacknap = json.load(f)
+        print("✅ Loaded current_raids_old.json")
     except:
         old_snacknap = {"last_updated": "", "tier1": [], "tier3": [], "tier5": [], "mega": [], "dynamax_tier1": [], "dynamax_tier2": [], "dynamax_tier3": [], "dynamax_tier5": [], "gigantamax": []}
+        print("⚠️ Created new old_snacknap")
     
     # Load new SnackNap data
     with open('current_raids.json', 'r') as f:
         new_snacknap = json.load(f)
+    print("✅ Loaded current_raids.json")
+    
+    # ===== DEBUG: Check Cottonee specifically =====
+    print("\n" + "=" * 60)
+    print("DEBUG: CHECKING COTTONEE")
+    print("=" * 60)
+    
+    categories_to_check = ['dynamax_tier1', 'tier1', 'tier3']
+    
+    for category in categories_to_check:
+        old_list = old_snacknap.get(category, [])
+        new_list = new_snacknap.get(category, [])
+        
+        # Extract names
+        old_names = [extract_name_from_raid_obj(r) for r in old_list]
+        new_names = [extract_name_from_raid_obj(r) for r in new_list]
+        
+        # Find Cottonee entries
+        old_cottonee = [n for n in old_names if 'cottonee' in n.lower()]
+        new_cottonee = [n for n in new_names if 'cottonee' in n.lower()]
+        
+        if old_cottonee or new_cottonee:
+            print(f"\n📋 Category: {category}")
+            print(f"   Old Cottonee: {old_cottonee}")
+            print(f"   New Cottonee: {new_cottonee}")
+            
+            # Show raw representation to catch hidden characters
+            for c in old_cottonee:
+                print(f"   Old repr: {repr(c)}")
+            for c in new_cottonee:
+                print(f"   New repr: {repr(c)}")
     
     # Load old ScrapedDuck data if exists
     try:
         with open('scrapedduck_old.json', 'r') as f:
             old_scrapedduck_data = json.load(f)
+        print("\n✅ Loaded scrapedduck_old.json")
     except:
         old_scrapedduck_data = []
+        print("⚠️ Created new scrapedduck_old.json")
     
     # Fetch current ScrapedDuck raids
     current_scrapedduck = fetch_scrapedduck_raids()
+    print(f"✅ Fetched {len(current_scrapedduck)} ScrapedDuck raids")
     
     # Build sets for comparison
     old_scrapedduck_set = set()
@@ -109,10 +149,18 @@ def main():
     scrapedduck_added = new_scrapedduck_set - old_scrapedduck_set
     scrapedduck_removed = old_scrapedduck_set - new_scrapedduck_set
     
+    # Check if Cottonee appears in ScrapedDuck changes
+    for added in scrapedduck_added:
+        if 'cottonee' in added.lower():
+            print(f"\n🔴 COTTONEE ADDED in ScrapedDuck: {added}")
+    for removed in scrapedduck_removed:
+        if 'cottonee' in removed.lower():
+            print(f"\n🟢 COTTONEE REMOVED in ScrapedDuck: {removed}")
+    
     # Apply confirmation logic to removals
     confirmed_removals, updated_tracker = get_confirmed_removals(scrapedduck_removed, tracker)
     
-    # Clean up tracker (remove raids that are no longer removed)
+    # Clean up tracker
     for raid in list(updated_tracker.keys()):
         if raid not in scrapedduck_removed:
             del updated_tracker[raid]
@@ -150,12 +198,22 @@ def main():
         added = new_names - old_names
         removed = old_names - new_names
         
+        # Special debug for dynamax_tier1 Cottonee
+        if category == 'dynamax_tier1':
+            if added:
+                for a in added:
+                    if 'cottonee' in a.lower():
+                        print(f"\n⚠️ COTTONEE ADDED in dynamax_tier1: '{a}' (repr: {repr(a)})")
+            if removed:
+                for r in removed:
+                    if 'cottonee' in r.lower():
+                        print(f"\n⚠️ COTTONEE REMOVED in dynamax_tier1: '{r}' (repr: {repr(r)})")
+        
         if added or removed:
             changes.append(f"\n**{display_names[category]}:**")
             if added:
                 changes.append(f"  ✅ Added: {', '.join(sorted(added))}")
             if removed:
-                # Only include removals that have been confirmed
                 confirmed_removed_names = [r for r in removed if r in confirmed_removals]
                 if confirmed_removed_names:
                     changes.append(f"  ❌ Removed: {', '.join(sorted(confirmed_removed_names))}")
@@ -219,9 +277,16 @@ def main():
     with open('raid_changes.txt', 'w') as f:
         if changes:
             f.write('\n'.join(changes))
+            print("\n" + "=" * 60)
+            print("CHANGES DETECTED - WILL SEND NOTIFICATION")
+            print("=" * 60)
+            print('\n'.join(changes))
             print("changes=true")
         else:
             f.write("No changes detected")
+            print("\n" + "=" * 60)
+            print("NO CHANGES DETECTED")
+            print("=" * 60)
             print("changes=false")
 
 if __name__ == "__main__":
