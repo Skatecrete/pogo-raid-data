@@ -61,5 +61,22 @@
   ],
   "dynamax_tier5": [],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-05-03 23:20:18"
+  "gigantamax_last_updated": "2026-05-03 23:20:18",
+  "scrapedduck_raids": [
+    "honedge|1-star raids",
+    "shieldon|1-star raids",
+    "beldum|1-star raids",
+    "orthworm|3-star raids",
+    "tapu lele|5-star raids",
+    "mega banette|mega raids",
+    "shadow dratini|1-star raids",
+    "shadow gligar|1-star raids",
+    "shadow cacnea|1-star raids",
+    "shadow joltik|1-star raids",
+    "shadow alolan marowak|3-star raids",
+    "shadow lapras|3-star raids",
+    "shadow stantler|3-star raids",
+    "shadow latios|5-star raids"
+  ],
+  "last_sent_time": "2026-05-03T23:20:19.061016"
 }
