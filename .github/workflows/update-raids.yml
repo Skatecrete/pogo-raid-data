@@ -28,19 +28,6 @@ jobs:
         pip install requests==2.31.0
         pip install beautifulsoup4==4.12.2
         
-    - name: Create old files if not exist
-      run: |
-        if [ ! -f current_raids_old.json ]; then
-          echo '{"last_updated": "", "tier1": [], "tier3": [], "tier5": [], "mega": [], "dynamax_tier1": [], "dynamax_tier2": [], "dynamax_tier3": [], "dynamax_tier5": [], "gigantamax": []}' > current_raids_old.json
-        fi
-        if [ ! -f scrapedduck_old.json ]; then
-          echo '[]' > scrapedduck_old.json
-        fi
-      
-    - name: Save current raids.json for comparison
-      run: |
-        cp current_raids.json current_raids_old.json
-        
     - name: Run SnackNap scraper
       run: python scrape_snacknap.py
     
@@ -50,11 +37,10 @@ jobs:
     - name: Compare and generate raid changes
       id: changes
       run: |
-        # Run the compare script and capture its output (true/false)
         OUTPUT=$(python compare_raids.py)
         echo "has_changes=$OUTPUT" >> $GITHUB_OUTPUT
-    
-    - name: Check if changes exist (verify file has content)
+        
+    - name: Check if changes file has content
       id: verify_changes
       run: |
         CHANGES=$(cat raid_changes.txt)
@@ -63,33 +49,30 @@ jobs:
         else
           echo "verified=true" >> $GITHUB_OUTPUT
         fi
-    
+        
     - name: Commit and push if changes
       id: commit
       if: steps.changes.outputs.has_changes == 'true' && steps.verify_changes.outputs.verified == 'true'
       run: |
         git config --global user.name 'github-actions'
         git config --global user.email 'github-actions@github.com'
-    
+        
         git pull origin main --rebase || true
-    
-        git add scrapedduck_old.json
-        git add current_raids.json
-        git add shadow_images/ || true
-        git add shadow_images.json || true
-    
+        
+        git add scrapedduck_old.json current_raids.json current_raids_last_sent.json pending_removals.json
+        
         if ! git diff --cached --quiet; then
           git commit -m "Update raids and shadow images - $(date +'%Y-%m-%d %H:%M:%S')"
           git push origin main
           echo "committed=true" >> $GITHUB_OUTPUT
         fi
-    
+        
     - name: Send Discord notification with raid changes
       if: steps.verify_changes.outputs.verified == 'true'
       run: |
         CHANGES=$(cat raid_changes.txt)
         ESCAPED_CHANGES=$(python -c 'import json,sys; print(json.dumps(sys.stdin.read()))' <<< "$CHANGES")
-    
+        
         curl -X POST \
           -H "Content-Type: application/json" \
           -d "{
