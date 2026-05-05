@@ -1,137 +1,107 @@
-name: Update Raids
+name: update-raids
 
 on:
   schedule:
     - cron: '*/30 * * * *'
   workflow_dispatch:
 
-# Show retry attempt number in UI
-run-name: Update Raids (Attempt ${{ github.run_attempt }})
+permissions:
+  contents: write
 
 jobs:
   update-raids:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    # Simple retry: if runner fails, try again up to 2 more times
+    strategy:
+      max-parallel: 1
+      fail-fast: false
+      matrix:
+        attempt: [1, 2, 3]
+    # Continue to next attempt even if this one fails
+    continue-on-error: ${{ matrix.attempt < 3 }}
     
-    permissions:
-      contents: write
-      
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-          
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.x'
-          
-      - name: Install dependencies
-        run: |
-          pip install requests==2.31.0
-          pip install beautifulsoup4==4.12.2
-          
-      - name: Create old files if not exist
-        run: |
-          if [ ! -f current_raids_old.json ]; then
-            echo '{"last_updated": "", "tier1": [], "tier3": [], "tier5": [], "mega": [], "dynamax_tier1": [], "dynamax_tier2": [], "dynamax_tier3": [], "dynamax_tier5": [], "gigantamax": []}' > current_raids_old.json
-          fi
-          if [ ! -f scrapedduck_old.json ]; then
-            echo '[]' > scrapedduck_old.json
-          fi
-          
-      - name: Save current raids.json for comparison
-        run: |
-          cp current_raids.json current_raids_old.json
-          
-      # ========== SCRAPER WITH RETRY LOOP ==========
-      - name: Run SnackNap scraper (with retry)
-        id: snacknap
-        run: |
-          for i in 1 2 3; do
-            echo "Attempt $i of 3 for SnackNap scraper..."
-            if python scrape_snacknap.py; then
-              echo "SnackNap scraper succeeded on attempt $i"
-              exit 0
-            fi
-            echo "SnackNap scraper failed on attempt $i"
-            if [ $i -lt 3 ]; then
-              echo "Waiting 30 seconds before retry..."
-              sleep 30
-            fi
-          done
-          echo "SnackNap scraper failed after 3 attempts"
-          exit 1
-          
-      - name: Run Gigantamax Event scraper (with retry)
-        id: gigantamax
-        run: |
-          for i in 1 2 3; do
-            echo "Attempt $i of 3 for Gigantamax scraper..."
-            if python scrape_gigantamax_events.py; then
-              echo "Gigantamax scraper succeeded on attempt $i"
-              exit 0
-            fi
-            echo "Gigantamax scraper failed on attempt $i"
-            if [ $i -lt 3 ]; then
-              echo "Waiting 30 seconds before retry..."
-              sleep 30
-            fi
-          done
-          echo "Gigantamax scraper failed after 3 attempts"
-          exit 1
-          
-      - name: Compare and generate raid changes
-        id: changes
-        run: |
-          OUTPUT=$(python compare_raids.py)
-          echo "has_changes=$OUTPUT" >> $GITHUB_OUTPUT
-          
-      - name: Check if changes file has content (prevent empty notifications)
-        id: verify_changes
-        run: |
-          CHANGES=$(cat raid_changes.txt)
-          if [ "$CHANGES" = "No changes detected" ]; then
-            echo "verified=false" >> $GITHUB_OUTPUT
-            echo "No changes detected - will not send notification"
-          else
-            echo "verified=true" >> $GITHUB_OUTPUT
-            echo "Changes detected - will send notification"
-          fi
-          
-      - name: Commit and push if changes
-        id: commit
-        if: steps.changes.outputs.has_changes == 'true' && steps.verify_changes.outputs.verified == 'true'
-        run: |
-          git config --global user.name 'github-actions'
-          git config --global user.email 'github-actions@github.com'
-          
-          git pull origin main --rebase || true
-          
-          git add scrapedduck_old.json current_raids.json current_raids_last_sent.json pending_removals.json
-          
-          if ! git diff --cached --quiet; then
-            git commit -m "Update raids and shadow images - $(date +'%Y-%m-%d %H:%M:%S')"
-            git push origin main
-            echo "committed=true" >> $GITHUB_OUTPUT
-          fi
-          
-      - name: Send Discord notification with raid changes
-        if: steps.verify_changes.outputs.verified == 'true'
-        run: |
-          CHANGES=$(cat raid_changes.txt)
-          ESCAPED_CHANGES=$(python -c 'import json,sys; print(json.dumps(sys.stdin.read()))' <<< "$CHANGES")
-          
-          curl -X POST \
-            -H "Content-Type: application/json" \
-            -d "{
-              \"content\": \"🔁 **RAID ROTATION UPDATE** 🔁\",
-              \"embeds\": [{
-                \"title\": \"📅 $(date +'%B %d, %Y')\",
-                \"description\": $ESCAPED_CHANGES,
-                \"color\": 16753920,
-                \"footer\": {\"text\": \"PokeSpawn Raid Tracker\"}
-              }]
-            }" \
-            "https://discord.com/api/webhooks/1489355050689232986/DCRk5aPaslfBAytB1_Wkel5B9uvIC5uxfLWNfJ1CpnncZOJsPdo4KyAcEttFiQrIvXcW"
+    - name: Wait before retry (only for attempts 2 and 3)
+      if: matrix.attempt > 1
+      run: |
+        echo "Retry attempt #${{ matrix.attempt }} after runner failure"
+        sleep 30
+      
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+        
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.x'
+        
+    - name: Install dependencies
+      run: |
+        pip install requests==2.31.0
+        pip install beautifulsoup4==4.12.2
+        
+    - name: Create old files if not exist
+      run: |
+        if [ ! -f current_raids_old.json ]; then
+          echo '{"last_updated": "", "tier1": [], "tier3": [], "tier5": [], "mega": [], "dynamax_tier1": [], "dynamax_tier2": [], "dynamax_tier3": [], "dynamax_tier5": [], "gigantamax": []}' > current_raids_old.json
+        fi
+        if [ ! -f scrapedduck_old.json ]; then
+          echo '[]' > scrapedduck_old.json
+        fi
+      
+    - name: Save current raids.json for comparison
+      run: |
+        cp current_raids.json current_raids_old.json
+        
+    - name: Run SnackNap scraper
+      run: python scrape_snacknap.py
+    
+    - name: Run Gigantamax Event scraper
+      run: python scrape_gigantamax_events.py
+      
+    - name: Compare and generate raid changes
+      id: changes
+      run: |
+        OUTPUT=$(python compare_raids.py)
+        echo "has_changes=$OUTPUT" >> $GITHUB_OUTPUT
+        
+    - name: Commit and push if changes
+      id: commit
+      if: steps.changes.outputs.has_changes == 'true'
+      run: |
+        git config --global user.name 'github-actions'
+        git config --global user.email 'github-actions@github.com'
+        
+        git pull origin main --rebase || true
+        
+        git add scrapedduck_old.json
+        git add current_raids.json
+        git add shadow_images/ || true
+        git add shadow_images.json || true
+        
+        if ! git diff --cached --quiet; then
+          git commit -m "Update raids and shadow images - $(date +'%Y-%m-%d %H:%M:%S')"
+          git push origin main
+          echo "committed=true" >> $GITHUB_OUTPUT
+        fi
+        
+    - name: Send Discord notification with raid changes
+      if: steps.changes.outputs.has_changes == 'true'
+      run: |
+        CHANGES=$(cat raid_changes.txt)
+        ESCAPED_CHANGES=$(python -c 'import json,sys; print(json.dumps(sys.stdin.read()))' <<< "$CHANGES")
+        
+        curl -X POST \
+          -H "Content-Type: application/json" \
+          -d "{
+            \"content\": \"🔁 **RAID ROTATION UPDATE** 🔁\",
+            \"embeds\": [{
+              \"title\": \"📅 $(date +'%B %d, %Y')\",
+              \"description\": $ESCAPED_CHANGES,
+              \"color\": 16753920,
+              \"footer\": {\"text\": \"PokeSpawn Raid Tracker\"}
+            }]
+          }" \
+          "https://discord.com/api/webhooks/1489355050689232986/DCRk5aPaslfBAytB1_Wkel5B9uvIC5uxfLWNfJ1CpnncZOJsPdo4KyAcEttFiQrIvXcW"
