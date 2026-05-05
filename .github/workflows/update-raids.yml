@@ -11,7 +11,7 @@ run-name: Update Raids (Attempt ${{ github.run_attempt }})
 jobs:
   update-raids:
     runs-on: ubuntu-latest
-    timeout-minutes: 15  # Prevents hanging forever on runner issues
+    timeout-minutes: 15
     
     permissions:
       contents: write
@@ -88,14 +88,16 @@ jobs:
           OUTPUT=$(python compare_raids.py)
           echo "has_changes=$OUTPUT" >> $GITHUB_OUTPUT
           
-      - name: Check if changes file has content
+      - name: Check if changes file has content (prevent empty notifications)
         id: verify_changes
         run: |
           CHANGES=$(cat raid_changes.txt)
           if [ "$CHANGES" = "No changes detected" ]; then
             echo "verified=false" >> $GITHUB_OUTPUT
+            echo "No changes detected - will not send notification"
           else
             echo "verified=true" >> $GITHUB_OUTPUT
+            echo "Changes detected - will send notification"
           fi
           
       - name: Commit and push if changes
