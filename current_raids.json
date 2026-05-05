@@ -1,21 +1,28 @@
 {
-  "last_updated": "2026-05-04",
+  "last_updated": "2026-05-05",
   "tier1": [
-    "Rockruff",
-    "Bronzor",
-    "Galarian Meowth",
-    "Beldum",
-    "Klink",
+    "Bagon",
     "Honedge",
-    "Shieldon"
+    "Klink",
+    "Bronzor",
+    "Espurr",
+    "Shieldon",
+    "Rockruff",
+    "Beldum",
+    "Hisuian Voltorb",
+    "Galarian Meowth"
   ],
   "tier3": [
-    "Orthworm",
-    "Skarmory",
     "Duraludon",
-    "Aggron"
+    "Aggron",
+    "Starmie",
+    "Skarmory",
+    "Nidoqueen",
+    "Orthworm",
+    "Druddigon"
   ],
   "mega": [
+    "Camerupt",
     "Banette"
   ],
   "dynamax_tier1": [
@@ -67,5 +74,5 @@
   ],
   "dynamax_tier5": [],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-05-04 20:46:32"
+  "gigantamax_last_updated": "2026-05-05 19:28:16"
 }
