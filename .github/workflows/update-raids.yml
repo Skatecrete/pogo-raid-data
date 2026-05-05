@@ -8,9 +8,14 @@ on:
 permissions:
   contents: write
 
+# Add retry attempt tracking
+run-name: Update Raids (Attempt ${{ github.run_attempt }})
+
 jobs:
   update-raids:
     runs-on: ubuntu-latest
+    # Add timeout to prevent indefinite waiting on runner acquisition
+    timeout-minutes: 15
     
     steps:
     - name: Checkout repository
@@ -28,47 +33,67 @@ jobs:
         pip install requests==2.31.0
         pip install beautifulsoup4==4.12.2
         
-    - name: Run SnackNap scraper
-      run: python scrape_snacknap.py
+    - name: Run SnackNap scraper with retry
+      run: |
+        for i in 1 2 3; do
+          echo "SnackNap scraper attempt $i/3..."
+          if python scrape_snacknap.py; then
+            echo "SnackNap scraper success!"
+            break
+          fi
+          if [ $i -eq 3 ]; then
+            echo "SnackNap scraper failed after 3 attempts"
+            exit 1
+          fi
+          echo "Attempt $i failed, waiting 30 seconds..."
+          sleep 30
+        done
     
-    - name: Run Gigantamax Event scraper
-      run: python scrape_gigantamax_events.py
+    - name: Run Gigantamax Event scraper with retry
+      run: |
+        for i in 1 2 3; do
+          echo "Gigantamax scraper attempt $i/3..."
+          if python scrape_gigantamax_events.py; then
+            echo "Gigantamax scraper success!"
+            break
+          fi
+          if [ $i -eq 3 ]; then
+            echo "Gigantamax scraper failed after 3 attempts"
+            exit 1
+          fi
+          echo "Attempt $i failed, waiting 30 seconds..."
+          sleep 30
+        done
       
     - name: Compare and generate raid changes
       id: changes
       run: |
-        OUTPUT=$(python compare_raids.py)
-        echo "has_changes=$OUTPUT" >> $GITHUB_OUTPUT
-        
-    - name: Check if changes file has content
-      id: verify_changes
-      run: |
+        python compare_raids.py
         CHANGES=$(cat raid_changes.txt)
         if [ "$CHANGES" = "No changes detected" ]; then
-          echo "verified=false" >> $GITHUB_OUTPUT
+          echo "has_changes=false" >> $GITHUB_OUTPUT
         else
-          echo "verified=true" >> $GITHUB_OUTPUT
+          echo "has_changes=true" >> $GITHUB_OUTPUT
         fi
         
     - name: Commit and push if changes
-      id: commit
-      if: steps.changes.outputs.has_changes == 'true' && steps.verify_changes.outputs.verified == 'true'
+      if: steps.changes.outputs.has_changes == 'true'
       run: |
         git config --global user.name 'github-actions'
         git config --global user.email 'github-actions@github.com'
         
         git pull origin main --rebase || true
         
-        git add scrapedduck_old.json current_raids.json current_raids_last_sent.json pending_removals.json
+        git add scrapedduck_old.json current_raids.json
         
         if ! git diff --cached --quiet; then
-          git commit -m "Update raids and shadow images - $(date +'%Y-%m-%d %H:%M:%S')"
+          git commit -m "Update raids - $(date +'%Y-%m-%d %H:%M:%S')"
           git push origin main
           echo "committed=true" >> $GITHUB_OUTPUT
         fi
         
     - name: Send Discord notification with raid changes
-      if: steps.verify_changes.outputs.verified == 'true'
+      if: steps.changes.outputs.has_changes == 'true'
       run: |
         CHANGES=$(cat raid_changes.txt)
         ESCAPED_CHANGES=$(python -c 'import json,sys; print(json.dumps(sys.stdin.read()))' <<< "$CHANGES")
