@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-05-04 19:24:21",
+  "last_updated": "2026-05-05 02:28:46",
   "debuts": [
     {
       "event_name": "Spring Marathon",
@@ -14,20 +14,6 @@
         "Flittle": "https://www.serebii.net/pokemongo/pokemon/955.png",
         "Espathra": "https://www.serebii.net/pokemongo/pokemon/956.png",
         "Pikachu (Marathon Visor)": "https://www.serebii.net/pokemongo/pokemon/025-marathon.png"
-      },
-      "event_type": "global"
-    },
-    {
-      "event_name": "Steeled Resolve 2026",
-      "event_date": "April 28th - May 4th 2026",
-      "new_pokemon": [
-        "Orthworm"
-      ],
-      "new_shiny": [
-        "Orthworm"
-      ],
-      "pokemon_images": {
-        "Orthworm": "https://www.serebii.net/pokemongo/pokemon/shiny/968.png"
       },
       "event_type": "global"
     },
