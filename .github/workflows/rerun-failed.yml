@@ -1,0 +1,27 @@
+name: Auto Rerun Failed Workflows
+
+on:
+  workflow_run:
+    workflows: ["update-raids"]
+    types:
+      - completed
+
+jobs:
+  rerun:
+    runs-on: ubuntu-latest
+    # Only run if the workflow failed
+    if: ${{ github.event.workflow_run.conclusion == 'failure' }}
+    steps:
+      - name: Get failed run ID
+        id: get_run_id
+        run: |
+          RUN_ID=${{ github.event.workflow_run.id }}
+          echo "run_id=$RUN_ID" >> $GITHUB_OUTPUT
+          echo "Failed run ID: $RUN_ID"
+          
+      - name: Rerun failed workflow
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh run rerun ${{ steps.get_run_id.outputs.run_id }}
+          echo "Rerun triggered for workflow run ${{ steps.get_run_id.outputs.run_id }}"
