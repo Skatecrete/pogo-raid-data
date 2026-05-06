@@ -68,38 +68,37 @@ jobs:
         echo "has_changes=$OUTPUT" >> $GITHUB_OUTPUT
         
     - name: Commit and push if changes
-  id: commit
-  if: steps.changes.outputs.has_changes == 'true'
-  run: |
-    git config --global user.name 'github-actions'
-    git config --global user.email 'github-actions@github.com'
-    
-    # Abort any in-progress rebase/merge
-    git rebase --abort 2>/dev/null || true
-    git merge --abort 2>/dev/null || true
-    
-    # Fetch and reset to remote
-    git fetch origin main
-    git reset --hard origin/main
-    
-    # Add files
-    git add scrapedduck_old.json
-    git add current_raids.json
-    git add current_raids_last_sent.json
-    git add pending_removals.json
-    git add raid_changes.txt
-    
-    if ! git diff --cached --quiet; then
-      git commit -m "Update raids - $(date +'%Y-%m-%d %H:%M:%S')"
-      git push origin main
-    fi
+      id: commit
+      if: steps.changes.outputs.has_changes == 'true'
+      run: |
+        git config --global user.name 'github-actions'
+        git config --global user.email 'github-actions@github.com'
+        
+        # Abort any in-progress rebase/merge
+        git rebase --abort 2>/dev/null || true
+        git merge --abort 2>/dev/null || true
+        
+        # Fetch and reset to remote to avoid conflicts
+        git fetch origin main
+        git reset --hard origin/main
+        
+        # Add files (ignore if they don't exist)
+        git add scrapedduck_old.json
+        git add current_raids.json
+        git add current_raids_last_sent.json
+        git add pending_removals.json
+        git add raid_changes.txt
+        git add shadow_images/ 2>/dev/null || true
+        git add shadow_images.json 2>/dev/null || true
+        
+        # Check if there are actual changes to commit
+        if git diff --cached --quiet; then
+          echo "No changes to commit"
+          exit 0
+        fi
         
         # Commit and push
         git commit -m "Update raids and shadow images - $(date +'%Y-%m-%d %H:%M:%S')"
-        
-        # Pull with rebase before push to avoid conflicts
-        git pull origin main --rebase
-        
         git push origin main
         echo "committed=true" >> $GITHUB_OUTPUT
         
