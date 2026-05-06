@@ -1,5 +1,23 @@
 
 **⭐ 1-Star Raids:**
+  ✅ Added: bagon, beldum, bronzor, espurr, galarian meowth, hisuian voltorb, klink, shieldon
+
+**⭐⭐⭐ 3-Star Raids:**
+  ✅ Added: aggron, druddigon, duraludon, nidoqueen, skarmory, starmie
+
+**🔴 Mega Raids:**
+  ✅ Added: banette, camerupt
+
+**⚡ Dynamax Tier 1:**
+  ✅ Added: abra, bounsweet, bulbasaur, caterpie, charmander, cottonee, drilbur, gastly, grookey, growlithe, hatenna, inkay, kabuto, krabby, omanyte, pidove, ralts, roggenrola, rookidee, scorbunny, skwovet, sobble, spheal, squirtle, trubbish, woobat, wooloo
+
+**⚡⚡ Dynamax Tier 2:**
+  ✅ Added: darumaka, eevee, machop, shuckle, wailmer
+
+**⚡⚡⚡ Dynamax Tier 3:**
+  ✅ Added: beldum, chansey, cryogonal, drampa, falinks, hitmonchan, hitmonlee, passimian, sableye
+
+**⭐ 1-Star Raids:**
   ✅ Added: bagon, espurr, hisuian voltorb, shieldon
 
 **⭐⭐⭐ 3-Star Raids:**
