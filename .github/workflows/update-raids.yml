@@ -11,13 +11,11 @@ permissions:
 jobs:
   update-raids:
     runs-on: ubuntu-latest
-    # Simple retry: if runner fails, try again up to 2 more times
     strategy:
       max-parallel: 1
       fail-fast: false
       matrix:
         attempt: [1, 2, 3]
-    # Continue to next attempt even if this one fails
     continue-on-error: ${{ matrix.attempt < 3 }}
 
     steps:
@@ -74,15 +72,7 @@ jobs:
         git config --global user.name 'github-actions'
         git config --global user.email 'github-actions@github.com'
         
-        # Abort any in-progress rebase/merge
-        git rebase --abort 2>/dev/null || true
-        git merge --abort 2>/dev/null || true
-        
-        # Fetch and reset to remote to avoid conflicts
-        git fetch origin main
-        git reset --hard origin/main
-        
-        # Add files (ignore if they don't exist)
+        # Add all tracking files
         git add scrapedduck_old.json
         git add current_raids.json
         git add current_raids_last_sent.json
@@ -97,9 +87,11 @@ jobs:
           exit 0
         fi
         
-        # Commit and push
+        # Commit
         git commit -m "Update raids and shadow images - $(date +'%Y-%m-%d %H:%M:%S')"
-        git push origin main
+        
+        # Force push with lease (safe - only works if remote hasn't changed unexpectedly)
+        git push --force-with-lease origin main
         echo "committed=true" >> $GITHUB_OUTPUT
         
     - name: Send Discord notification with raid changes
