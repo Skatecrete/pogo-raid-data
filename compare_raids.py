@@ -10,6 +10,7 @@ TRACKER_FILE = 'pending_removals.json'
 LAST_SENT_FILE = 'current_raids_last_sent.json'
 
 def fetch_scrapedduck_raids():
+    """Fetch current raids from ScrapedDuck API"""
     try:
         url = "https://raw.githubusercontent.com/bigfoott/ScrapedDuck/data/raids.min.json"
         response = requests.get(url, timeout=10)
@@ -23,6 +24,7 @@ def fetch_scrapedduck_raids():
         return []
 
 def get_raid_key(raid):
+    """Create a unique key for a raid with normalization"""
     name = raid.get('name', '').strip().lower()
     name = name.replace('d-max ', '').replace('dynamax ', '').replace('g-max ', '')
     name = name.strip()
@@ -30,30 +32,44 @@ def get_raid_key(raid):
     return f"{name}|{tier}"
 
 def extract_name_from_raid_obj(raid_obj):
+    """Extract name from raid object"""
     if isinstance(raid_obj, dict):
         return raid_obj.get('name', '')
     return str(raid_obj)
 
 def normalize_raid_name(name):
+    """Normalize raid name for comparison"""
     name = str(name).strip().lower()
     name = name.replace('d-max ', '').replace('dynamax ', '').replace('g-max ', '')
     name = name.replace('mega ', '')
     return name.strip()
 
 def load_removal_tracker():
+    """Load the tracking file for pending removals"""
     if os.path.exists(TRACKER_FILE):
-        with open(TRACKER_FILE, 'r') as f:
-            return json.load(f)
+        try:
+            with open(TRACKER_FILE, 'r') as f:
+                return json.load(f)
+        except json.JSONDecodeError:
+            print(f"Warning: {TRACKER_FILE} is corrupted. Creating new file.", file=sys.stderr)
+            return {}
     return {}
 
 def save_removal_tracker(tracker):
+    """Save the tracking file"""
     with open(TRACKER_FILE, 'w') as f:
         json.dump(tracker, f, indent=2)
 
 def load_last_sent():
+    """Load the last state that was successfully sent as notification"""
     if os.path.exists(LAST_SENT_FILE):
-        with open(LAST_SENT_FILE, 'r') as f:
-            return json.load(f)
+        try:
+            with open(LAST_SENT_FILE, 'r') as f:
+                return json.load(f)
+        except json.JSONDecodeError:
+            print(f"Warning: {LAST_SENT_FILE} is corrupted. Creating new file.", file=sys.stderr)
+            return {}
+    # Return empty structure if no last sent file
     return {
         "last_updated": "",
         "tier1": [],
@@ -69,6 +85,7 @@ def load_last_sent():
     }
 
 def save_last_sent(snacknap_data, scrapedduck_data):
+    """Save the current state as last sent"""
     data = snacknap_data.copy()
     data['scrapedduck_raids'] = [get_raid_key(r) for r in scrapedduck_data]
     data['last_sent_time'] = datetime.now().isoformat()
@@ -76,6 +93,7 @@ def save_last_sent(snacknap_data, scrapedduck_data):
         json.dump(data, f, indent=2)
 
 def get_confirmed_removals(removed_set, tracker):
+    """Return raids that have been removed for CONFIRMATION_COUNT consecutive scans"""
     now = datetime.now().isoformat()
     new_tracker = {}
     confirmed = set()
@@ -98,6 +116,7 @@ def get_confirmed_removals(removed_set, tracker):
     return confirmed, new_tracker
 
 def normalize_raid_list(raid_list):
+    """Normalize a list of raid names for comparison"""
     normalized = set()
     for r in raid_list:
         name = normalize_raid_name(extract_name_from_raid_obj(r))
@@ -110,7 +129,6 @@ def get_tier_display(tier, name):
     tier_lower = tier.lower()
     name_lower = name.lower()
     
-    # Shadow raids
     if 'shadow' in name_lower or 'shadow' in tier_lower:
         if '5-star' in tier_lower or 'legendary' in tier_lower:
             return '🌑 Shadow Legendary'
@@ -121,11 +139,9 @@ def get_tier_display(tier, name):
         else:
             return '🌑 Shadow'
     
-    # Mega raids
     if 'mega' in tier_lower or 'mega' in name_lower:
         return '🔴 Mega'
     
-    # Dynamax raids
     if 'dynamax' in tier_lower:
         if 'tier 5' in tier_lower:
             return '⚡⚡⚡⚡⚡ Dynamax Tier 5'
@@ -140,11 +156,9 @@ def get_tier_display(tier, name):
         else:
             return '⚡ Dynamax'
     
-    # Gigantamax
     if 'gigantamax' in tier_lower or 'gigantamax' in name_lower:
         return '💥 Gigantamax'
     
-    # Standard tiers
     if '5-star' in tier_lower:
         return '⭐⭐⭐⭐⭐ 5-Star Raids'
     if '4-star' in tier_lower:
@@ -156,7 +170,7 @@ def get_tier_display(tier, name):
     if '1-star' in tier_lower:
         return '⭐ 1-Star Raids'
     
-    return None  # Uncategorized - will go to OTHER RAIDS
+    return None
 
 def main():
     print("compare_raids.py running...", file=sys.stderr)
@@ -171,7 +185,6 @@ def main():
     current_scrapedduck_keys = set(get_raid_key(r) for r in current_scrapedduck)
     last_scrapedduck_keys = set(last_sent.get('scrapedduck_raids', []))
     
-    # Standard categories from SnackNap (in display order)
     categories = ['tier1', 'tier3', 'tier5', 'mega', 'dynamax_tier1', 'dynamax_tier2', 'dynamax_tier3', 'dynamax_tier5', 'gigantamax']
     display_names = {
         'tier1': '⭐ 1-Star Raids',
@@ -188,7 +201,6 @@ def main():
     changes = []
     should_send = False
     
-    # Process SnackNap categories - ONLY show if there are visible changes
     for category in categories:
         new_list = new_snacknap.get(category, [])
         last_list = last_sent.get(category, [])
@@ -218,13 +230,11 @@ def main():
             changes.append(f"\n**{display_names[category]}:**")
             changes.extend(category_lines)
     
-    # Process ScrapedDuck raids (categorize them properly)
     scrapedduck_added = current_scrapedduck_keys - last_scrapedduck_keys
     scrapedduck_removed = last_scrapedduck_keys - current_scrapedduck_keys
     
     confirmed_scrapedduck_removals, removal_tracker = get_confirmed_removals(scrapedduck_removed, removal_tracker)
     
-    # Group by display tier
     added_by_tier = {}
     removed_by_tier = {}
     uncategorized_added = []
@@ -256,19 +266,16 @@ def main():
             uncategorized_removed.append(f"{name} ({tier})")
             should_send = True
     
-    # Add categorized ScrapedDuck changes
     for tier, names in sorted(added_by_tier.items()):
         changes.append(f"\n**{tier}:**")
         changes.append(f"  ✅ Added: {', '.join(sorted(names))}")
     
     for tier, names in sorted(removed_by_tier.items()):
-        # Check if this tier header already exists (from added)
         tier_exists = any(tier in str(c) for c in changes)
         if not tier_exists:
             changes.append(f"\n**{tier}:**")
         changes.append(f"  ❌ Removed: {', '.join(sorted(names))}")
     
-    # Add uncategorized as OTHER RAIDS (fallback only)
     if uncategorized_added or uncategorized_removed:
         changes.append(f"\n**⚠️ OTHER RAIDS (Uncategorized):**")
         if uncategorized_added:
@@ -276,7 +283,6 @@ def main():
         if uncategorized_removed:
             changes.append(f"  ❌ Removed: {', '.join(sorted(uncategorized_removed))}")
     
-    # Clean up removal tracker
     for raid in list(removal_tracker.keys()):
         if raid not in scrapedduck_removed:
             del removal_tracker[raid]
