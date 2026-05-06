@@ -72,9 +72,13 @@
   "dynamax_tier5": [],
   "gigantamax": [],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   "gigantamax_last_updated": "2026-05-06 12:54:02",
 =======
   "gigantamax_last_updated": "2026-05-06 12:54:55",
+>>>>>>> Stashed changes
+=======
+  "gigantamax_last_updated": "2026-05-06 12:55:50",
 >>>>>>> Stashed changes
   "scrapedduck_raids": [
     "hisuian voltorb|1-star raids",
@@ -95,8 +99,12 @@
     "shadow cresselia|5-star raids"
   ],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   "last_sent_time": "2026-05-06T12:54:03.300404"
 =======
   "last_sent_time": "2026-05-06T12:54:56.021709"
+>>>>>>> Stashed changes
+=======
+  "last_sent_time": "2026-05-06T12:55:50.807003"
 >>>>>>> Stashed changes
 }
