@@ -1,25 +1,22 @@
 {
-  "last_updated": "2026-05-05",
+  "last_updated": "2026-05-06",
   "tier1": [
     "Bagon",
-    "Honedge",
     "Klink",
     "Bronzor",
     "Espurr",
     "Shieldon",
-    "Rockruff",
-    "Beldum",
     "Hisuian Voltorb",
+    "Beldum",
     "Galarian Meowth"
   ],
   "tier3": [
-    "Duraludon",
-    "Aggron",
-    "Starmie",
-    "Skarmory",
     "Nidoqueen",
-    "Orthworm",
-    "Druddigon"
+    "Skarmory",
+    "Duraludon",
+    "Druddigon",
+    "Aggron",
+    "Starmie"
   ],
   "mega": [
     "Camerupt",
@@ -74,18 +71,24 @@
   ],
   "dynamax_tier5": [],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-05-05 19:28:16",
+  "gigantamax_last_updated": "2026-05-06 12:54:02",
   "scrapedduck_raids": [
-    "tapu lele|5-star raids",
-    "mega banette|mega raids",
-    "shadow dratini|1-star raids",
-    "shadow gligar|1-star raids",
-    "shadow cacnea|1-star raids",
-    "shadow joltik|1-star raids",
-    "shadow alolan marowak|3-star raids",
-    "shadow lapras|3-star raids",
-    "shadow stantler|3-star raids",
-    "shadow latios|5-star raids"
+    "hisuian voltorb|1-star raids",
+    "bagon|1-star raids",
+    "shieldon|1-star raids",
+    "espurr|1-star raids",
+    "nidoqueen|3-star raids",
+    "starmie|3-star raids",
+    "druddigon|3-star raids",
+    "nihilego|5-star raids",
+    "shadow larvitar|1-star raids",
+    "shadow sableye|1-star raids",
+    "shadow spheal|1-star raids",
+    "shadow inkay|1-star raids",
+    "shadow ninetales|3-star raids",
+    "shadow primeape|3-star raids",
+    "shadow onix|3-star raids",
+    "shadow cresselia|5-star raids"
   ],
-  "last_sent_time": "2026-05-05T19:28:16.458661"
+  "last_sent_time": "2026-05-06T12:54:03.300404"
 }
