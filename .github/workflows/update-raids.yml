@@ -19,7 +19,7 @@ jobs:
         attempt: [1, 2, 3]
     # Continue to next attempt even if this one fails
     continue-on-error: ${{ matrix.attempt < 3 }}
-    
+
     steps:
     - name: Wait before retry (only for attempts 2 and 3)
       if: matrix.attempt > 1
@@ -31,12 +31,12 @@ jobs:
       uses: actions/checkout@v4
       with:
         fetch-depth: 0
-        
+
     - name: Set up Python
       uses: actions/setup-python@v5
       with:
         python-version: '3.x'
-        
+
     - name: Install dependencies
       run: |
         pip install requests==2.31.0
@@ -57,10 +57,10 @@ jobs:
         
     - name: Run SnackNap scraper
       run: python scrape_snacknap.py
-    
+
     - name: Run Gigantamax Event scraper
       run: python scrape_gigantamax_events.py
-      
+
     - name: Compare and generate raid changes
       id: changes
       run: |
@@ -74,18 +74,41 @@ jobs:
         git config --global user.name 'github-actions'
         git config --global user.email 'github-actions@github.com'
         
-        git pull origin main --rebase || true
+        # Fetch latest changes first
+        git fetch origin main
         
+        # Stash any local changes
+        git stash || true
+        
+        # Reset to latest remote state
+        git reset --hard origin/main
+        
+        # Apply stashed changes (our new files)
+        git stash pop || true
+        
+        # Add files (ignore if they don't exist)
         git add scrapedduck_old.json
         git add current_raids.json
-        git add shadow_images/ || true
-        git add shadow_images.json || true
+        git add current_raids_last_sent.json
+        git add pending_removals.json
+        git add raid_changes.txt
+        git add shadow_images/ 2>/dev/null || true
+        git add shadow_images.json 2>/dev/null || true
         
-        if ! git diff --cached --quiet; then
-          git commit -m "Update raids and shadow images - $(date +'%Y-%m-%d %H:%M:%S')"
-          git push origin main
-          echo "committed=true" >> $GITHUB_OUTPUT
+        # Check if there are actual changes to commit
+        if git diff --cached --quiet; then
+          echo "No changes to commit"
+          exit 0
         fi
+        
+        # Commit and push
+        git commit -m "Update raids and shadow images - $(date +'%Y-%m-%d %H:%M:%S')"
+        
+        # Pull with rebase before push to avoid conflicts
+        git pull origin main --rebase
+        
+        git push origin main
+        echo "committed=true" >> $GITHUB_OUTPUT
         
     - name: Send Discord notification with raid changes
       if: steps.changes.outputs.has_changes == 'true'
