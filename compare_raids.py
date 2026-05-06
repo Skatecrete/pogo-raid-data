@@ -9,6 +9,21 @@ CONFIRMATION_COUNT = 2
 TRACKER_FILE = 'pending_removals.json'
 LAST_SENT_FILE = 'current_raids_last_sent.json'
 
+def safe_json_save(data, filepath):
+    """Safely save JSON data, ensuring it's valid"""
+    try:
+        # First validate by serializing to string
+        json_str = json.dumps(data, indent=2)
+        # Then parse back to verify it's valid
+        json.loads(json_str)
+        # If both succeed, write to file
+        with open(filepath, 'w') as f:
+            f.write(json_str)
+        return True
+    except Exception as e:
+        print(f"Error saving {filepath}: {e}", file=sys.stderr)
+        return False
+
 def fetch_scrapedduck_raids():
     """Fetch current raids from ScrapedDuck API"""
     try:
@@ -57,8 +72,7 @@ def load_removal_tracker():
 
 def save_removal_tracker(tracker):
     """Save the tracking file"""
-    with open(TRACKER_FILE, 'w') as f:
-        json.dump(tracker, f, indent=2)
+    safe_json_save(tracker, TRACKER_FILE)
 
 def load_last_sent():
     """Load the last state that was successfully sent as notification"""
@@ -89,8 +103,7 @@ def save_last_sent(snacknap_data, scrapedduck_data):
     data = snacknap_data.copy()
     data['scrapedduck_raids'] = [get_raid_key(r) for r in scrapedduck_data]
     data['last_sent_time'] = datetime.now().isoformat()
-    with open(LAST_SENT_FILE, 'w') as f:
-        json.dump(data, f, indent=2)
+    safe_json_save(data, LAST_SENT_FILE)
 
 def get_confirmed_removals(removed_set, tracker):
     """Return raids that have been removed for CONFIRMATION_COUNT consecutive scans"""
