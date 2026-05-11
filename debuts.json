@@ -1,6 +1,42 @@
 {
-  "last_updated": "2026-05-10 18:57:47",
+  "last_updated": "2026-05-11 02:48:36",
   "debuts": [
+    {
+      "event_name": "GO Fest 2026 Global",
+      "event_date": "July 11th - 12th 2026",
+      "new_pokemon": [
+        "Zeraora",
+        "Mega \t\tMewtwo  X",
+        "Mega \t\tMewtwo  Y",
+        "Caterpie (Cap)",
+        "Ivysaur (Pikachu Visor)",
+        "Venusaur (Pikachu Visor)",
+        "Charmeleon (Pikachu Visor)",
+        "Charizard (Pikachu Visor)",
+        "Wartortle (Pikachu Visor)",
+        "Blastoise (Pikachu Visor)",
+        "Pikachu (Team Instinct Cap)",
+        "Pikachu (Team Mystic Cap)",
+        "Pikachu (Team Valor Cap)"
+      ],
+      "new_shiny": [],
+      "pokemon_images": {
+        "Zeraora": "https://www.serebii.net/pokemongo/pokemon/807.png",
+        "Mega \t\tMewtwo  X": "https://www.serebii.net/pokemongo/pokemon/150-mx.png",
+        "Mega \t\tMewtwo  Y": "https://www.serebii.net/pokemongo/pokemon/150-my.png",
+        "Caterpie (Cap)": "https://www.serebii.net/pokemongo/pokemon/010-cap.png",
+        "Ivysaur (Pikachu Visor)": "https://www.serebii.net/pokemongo/pokemon/002-pikachuvisor.png",
+        "Venusaur (Pikachu Visor)": "https://www.serebii.net/pokemongo/pokemon/003-pikachuvisor.png",
+        "Charmeleon (Pikachu Visor)": "https://www.serebii.net/pokemongo/pokemon/005-pikachuvisor.png",
+        "Charizard (Pikachu Visor)": "https://www.serebii.net/pokemongo/pokemon/006-pikachuvisor.png",
+        "Wartortle (Pikachu Visor)": "https://www.serebii.net/pokemongo/pokemon/008-pikachuvisor.png",
+        "Blastoise (Pikachu Visor)": "https://www.serebii.net/pokemongo/pokemon/009-pikachuvisor.png",
+        "Pikachu (Team Instinct Cap)": "https://www.serebii.net/pokemongo/pokemon/025-instinct.png",
+        "Pikachu (Team Mystic Cap)": "https://www.serebii.net/pokemongo/pokemon/025-mystic.png",
+        "Pikachu (Team Valor Cap)": "https://www.serebii.net/pokemongo/pokemon/025-valor.png"
+      },
+      "event_type": "global"
+    },
     {
       "event_name": "Spring Marathon",
       "event_date": "May 12th - May 18th 2026",
