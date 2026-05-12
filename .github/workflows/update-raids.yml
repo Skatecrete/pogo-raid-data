@@ -72,6 +72,12 @@ jobs:
         git config --global user.name 'github-actions'
         git config --global user.email 'github-actions@github.com'
         
+        # Fetch latest changes from remote first
+        git fetch origin main
+        
+        # Rebase local changes on top of remote
+        git rebase origin/main || true
+        
         # Add all tracking files
         git add scrapedduck_old.json
         git add current_raids.json
@@ -90,8 +96,8 @@ jobs:
         # Commit
         git commit -m "Update raids and shadow images - $(date +'%Y-%m-%d %H:%M:%S')"
         
-        # Force push with lease (safe - only works if remote hasn't changed unexpectedly)
-        git push --force-with-lease origin main
+        # Push (without force)
+        git push origin main
         echo "committed=true" >> $GITHUB_OUTPUT
         
     - name: Send Discord notification with raid changes
