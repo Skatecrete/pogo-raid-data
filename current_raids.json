@@ -2,23 +2,25 @@
   "last_updated": "2026-05-12",
   "tier1": [
     "Bagon",
+    "Doduo",
     "Espurr",
     "Shieldon",
     "Hisuian Voltorb",
     "Machop",
-    "Rockruff",
     "Galarian Ponyta",
-    "Doduo"
+    "Rockruff"
   ],
   "tier3": [
     "Starmie",
-    "Rapidash",
+    "Nidoqueen",
     "Druddigon",
-    "Nidoqueen"
+    "Zebstrika",
+    "Rapidash",
+    "Scolipede"
   ],
   "mega": [
-    "Camerupt",
-    "Glalie"
+    "Glalie",
+    "Camerupt"
   ],
   "dynamax_tier1": [
     "Abra",
@@ -68,5 +70,5 @@
   ],
   "dynamax_tier5": [],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-05-12 18:55:21"
+  "gigantamax_last_updated": "2026-05-12 20:28:38"
 }
