@@ -18,7 +18,8 @@ def scrape_snacknap_raids():
         raid_data = {
             "tier1": [],   # 1-Star Raids
             "tier3": [],   # 3-Star Raids
-            "mega": []     # Mega Raids
+            "mega": [],     # Mega Raids
+            "ultra_beasts": []    # Ultra Beast Raids
         }
         
         main_container = soup.find('div', id='pokemon')
@@ -37,6 +38,8 @@ def scrape_snacknap_raids():
                 current_tier = "tier3"
             elif "Mega" in tier_title:
                 current_tier = "mega"
+            elif "Ultra Beast" in tier_title:
+                current_tier = "ultra_beasts"
             else:
                 continue
             
@@ -168,6 +171,7 @@ def main():
         "tier1": raids.get("tier1", []),
         "tier3": raids.get("tier3", []),
         "mega": raids.get("mega", []),
+        "ultra_beasts": raids.get("ultra_beasts", []),
         "dynamax_tier1": max_battles.get("dynamax_tier1", []),
         "dynamax_tier2": max_battles.get("dynamax_tier2", []),
         "dynamax_tier3": max_battles.get("dynamax_tier3", []),
