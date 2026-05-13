@@ -90,6 +90,7 @@ def load_last_sent():
         "tier3": [],
         "tier5": [],
         "mega": [],
+        "ultra_beasts": [],
         "dynamax_tier1": [],
         "dynamax_tier2": [],
         "dynamax_tier3": [],
@@ -152,6 +153,9 @@ def get_tier_display(tier, name):
         else:
             return '🌑 Shadow'
     
+    if 'ultra beast' in tier_lower or 'ultra beast' in name_lower:
+        return '🌀 Ultra Beast'
+    
     if 'mega' in tier_lower or 'mega' in name_lower:
         return '🔴 Mega'
     
@@ -198,12 +202,13 @@ def main():
     current_scrapedduck_keys = set(get_raid_key(r) for r in current_scrapedduck)
     last_scrapedduck_keys = set(last_sent.get('scrapedduck_raids', []))
     
-    categories = ['tier1', 'tier3', 'tier5', 'mega', 'dynamax_tier1', 'dynamax_tier2', 'dynamax_tier3', 'dynamax_tier5', 'gigantamax']
+    categories = ['tier1', 'tier3', 'tier5', 'mega', 'ultra_beasts', 'dynamax_tier1', 'dynamax_tier2', 'dynamax_tier3', 'dynamax_tier5', 'gigantamax']
     display_names = {
         'tier1': '⭐ 1-Star Raids',
         'tier3': '⭐⭐⭐ 3-Star Raids',
         'tier5': '⭐⭐⭐⭐⭐ 5-Star Raids',
         'mega': '🔴 Mega Raids',
+        'ultra_beasts': '🌀 Ultra Beasts',
         'dynamax_tier1': '⚡ Dynamax Tier 1',
         'dynamax_tier2': '⚡⚡ Dynamax Tier 2',
         'dynamax_tier3': '⚡⚡⚡ Dynamax Tier 3',
