@@ -71,13 +71,17 @@ jobs:
       run: |
         git config --global user.name 'github-actions'
         git config --global user.email 'github-actions@github.com'
-        
-        # Fetch latest changes from remote first
+    
+        # Stash all local changes first
+        git stash push --include-untracked -m "workflow_changes" || true
+    
+        # Fetch and reset to latest remote
         git fetch origin main
-        
-        # Rebase local changes on top of remote
-        git rebase origin/main || true
-        
+        git reset --hard origin/main
+    
+        # Apply stashed changes
+        git stash pop || true
+    
         # Add all tracking files
         git add scrapedduck_old.json
         git add current_raids.json
@@ -86,17 +90,21 @@ jobs:
         git add raid_changes.txt
         git add shadow_images/ 2>/dev/null || true
         git add shadow_images.json 2>/dev/null || true
-        
+    
         # Check if there are actual changes to commit
         if git diff --cached --quiet; then
           echo "No changes to commit"
           exit 0
         fi
-        
+    
         # Commit
         git commit -m "Update raids and shadow images - $(date +'%Y-%m-%d %H:%M:%S')"
-        
-        # Push (without force)
+    
+        # Rebase on latest remote (clean working directory now)
+        git fetch origin main
+        git rebase origin/main || true
+    
+        # Push
         git push origin main
         echo "committed=true" >> $GITHUB_OUTPUT
         
