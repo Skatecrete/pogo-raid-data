@@ -308,7 +308,7 @@ def fix_raid_image_urls():
     form_raid_count = 0
     
     # Process each raid tier
-    tiers_to_process = ['tier1', 'tier3', 'dynamax_tier1', 'dynamax_tier2', 'dynamax_tier3', 'gigantamax', 'mega']
+    tiers_to_process = ['tier1', 'tier3', 'ultra_beasts', 'dynamax_tier1', 'dynamax_tier2', 'dynamax_tier3', 'gigantamax', 'mega']
     
     for tier in tiers_to_process:
         if tier not in raids_data:
