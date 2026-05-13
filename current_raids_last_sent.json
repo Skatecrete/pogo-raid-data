@@ -1,26 +1,22 @@
 {
-  "last_updated": "2026-05-12",
+  "last_updated": "2026-05-13",
   "tier1": [
-    "Bagon",
-    "Doduo",
-    "Espurr",
-    "Shieldon",
-    "Hisuian Voltorb",
-    "Machop",
     "Galarian Ponyta",
-    "Rockruff"
+    "Rockruff",
+    "Machop",
+    "Doduo"
   ],
   "tier3": [
-    "Starmie",
-    "Nidoqueen",
-    "Druddigon",
     "Zebstrika",
-    "Rapidash",
-    "Scolipede"
+    "Scolipede",
+    "Rapidash"
   ],
   "mega": [
-    "Glalie",
-    "Camerupt"
+    "Glalie"
+  ],
+  "ultra_beasts": [
+    "Buzzwole",
+    "Xurkitree"
   ],
   "dynamax_tier1": [
     "Abra",
@@ -70,7 +66,7 @@
   ],
   "dynamax_tier5": [],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-05-12 20:28:38",
+  "gigantamax_last_updated": "2026-05-13 22:55:52",
   "scrapedduck_raids": [
     "hisuian voltorb|1-star raids",
     "bagon|1-star raids",
@@ -89,5 +85,5 @@
     "shadow onix|3-star raids",
     "shadow cresselia|5-star raids"
   ],
-  "last_sent_time": "2026-05-12T20:28:39.196001"
+  "last_sent_time": "2026-05-13T22:55:52.536895"
 }
