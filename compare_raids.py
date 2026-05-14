@@ -308,9 +308,10 @@ def main():
     save_removal_tracker(removal_tracker)
     
     if should_send:
+    # Save last sent FIRST - this prevents duplicate notifications on retry
         save_last_sent(new_snacknap, current_scrapedduck)
         print("Updated last_sent file", file=sys.stderr)
-    
+
     with open('raid_changes.txt', 'w') as f:
         if changes:
             f.write('\n'.join(changes))
