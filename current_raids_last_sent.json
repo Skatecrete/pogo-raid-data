@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-05-13",
+  "last_updated": "2026-05-14",
   "tier1": [
     "Galarian Ponyta",
     "Rockruff",
@@ -15,8 +15,9 @@
     "Glalie"
   ],
   "ultra_beasts": [
-    "Buzzwole",
-    "Xurkitree"
+    "Pheromosa",
+    "Xurkitree",
+    "Buzzwole"
   ],
   "dynamax_tier1": [
     "Abra",
@@ -66,7 +67,7 @@
   ],
   "dynamax_tier5": [],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-05-13 22:55:52",
+  "gigantamax_last_updated": "2026-05-14 05:06:38",
   "scrapedduck_raids": [
     "hisuian voltorb|1-star raids",
     "bagon|1-star raids",
@@ -85,5 +86,5 @@
     "shadow onix|3-star raids",
     "shadow cresselia|5-star raids"
   ],
-  "last_sent_time": "2026-05-13T22:55:52.536895"
+  "last_sent_time": "2026-05-14T05:06:38.498621"
 }
