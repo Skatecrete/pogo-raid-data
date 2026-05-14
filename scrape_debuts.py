@@ -5,67 +5,6 @@ from datetime import datetime, timedelta
 import re
 import time
 
-# ========== COSTUME POKEMON MAPPING ==========
-# Maps evolved costume forms to their base costume form
-# Only evolved forms are mapped - base costume forms (Pikachu with hat) show as-is
-COSTUME_BASE_MAP = {
-    # Raichu costumes → Pikachu costumes (evolved form → base form)
-    "Raichu (Marathon Visor)": "Pikachu (Marathon Visor)",
-    "Raichu (Detective Hat)": "Pikachu (Detective Hat)",
-    "Raichu (Ash Hat)": "Pikachu (Ash Hat)",
-    "Raichu (Party Hat)": "Pikachu (Party Hat)",
-    "Raichu (Santa Hat)": "Pikachu (Santa Hat)",
-    "Raichu (Witch Hat)": "Pikachu (Witch Hat)",
-    "Raichu (Flower Crown)": "Pikachu (Flower Crown)",
-    "Raichu (Summer Hat)": "Pikachu (Summer Hat)",
-    "Raichu (Lucario Hat)": "Pikachu (Lucario Hat)",
-    "Raichu (Rayquaza Hat)": "Pikachu (Rayquaza Hat)",
-    
-    # Pichu costumes → Pikachu costumes (baby form → base form)
-    "Pichu (Party Hat)": "Pikachu (Party Hat)",
-    "Pichu (Santa Hat)": "Pikachu (Santa Hat)",
-    "Pichu (Flower Crown)": "Pikachu (Flower Crown)",
-    
-    # Eeveelution costumes → Eevee costume
-    "Vaporeon (Flower Crown)": "Eevee (Flower Crown)",
-    "Jolteon (Flower Crown)": "Eevee (Flower Crown)",
-    "Flareon (Flower Crown)": "Eevee (Flower Crown)",
-    "Espeon (Flower Crown)": "Eevee (Flower Crown)",
-    "Umbreon (Flower Crown)": "Eevee (Flower Crown)",
-    "Leafeon (Flower Crown)": "Eevee (Flower Crown)",
-    "Glaceon (Flower Crown)": "Eevee (Flower Crown)",
-    "Sylveon (Flower Crown)": "Eevee (Flower Crown)",
-}
-
-def is_costume_pokemon(name):
-    """Check if a Pokémon name indicates a costume/special form"""
-    costume_indicators = [
-        '(', ')', 'Hat', 'Visor', 'Crown', 'Costume', 
-        'Style', 'Form', 'Glasses', 'Scarf', 'Bow', 
-        'Flower', 'Sunglasses', 'Mask', 'Wings',
-        'Pika', 'Fragment', 'Luffy'
-    ]
-    name_lower = name.lower()
-    for indicator in costume_indicators:
-        if indicator.lower() in name_lower:
-            return True
-    return False
-
-def get_base_form(pokemon_name):
-    """
-    Return the base form for costume Pokémon only.
-    For standard Pokémon (no costume), return the original name unchanged.
-    """
-    if is_costume_pokemon(pokemon_name):
-        # Check if it's an evolved costume form that needs mapping
-        if pokemon_name in COSTUME_BASE_MAP:
-            return COSTUME_BASE_MAP[pokemon_name]
-        # Base costume form (Pikachu with hat) - return as-is
-        return pokemon_name
-    
-    # Standard Pokémon - return as-is (show all evolutions)
-    return pokemon_name
-
 def scrape_global_events():
     """Scrape ONLY CURRENT global events from /pokemongo/events.shtml"""
     print("\n🌍 Scraping Global Events...")
@@ -258,16 +197,11 @@ def scrape_event_details(event, headers):
                                     else:
                                         img_url = img_src
                             
-                            if is_valid_pokemon_name(poke_name):
-                                base_name = get_base_form(poke_name)
-                                if base_name not in new_pokemon:
-                                    new_pokemon.append(base_name)
-                                    if img_url and base_name not in pokemon_images:
-                                        pokemon_images[base_name] = img_url
-                                    if base_name != poke_name:
-                                        print(f"      New Pokémon: {poke_name} -> compressed to: {base_name}")
-                                    else:
-                                        print(f"      New Pokémon: {poke_name}")
+                            if is_valid_pokemon_name(poke_name) and poke_name not in new_pokemon:
+                                new_pokemon.append(poke_name)
+                                if img_url:
+                                    pokemon_images[poke_name] = img_url
+                                print(f"      New Pokémon: {poke_name}")
             
             if 'New Shiny' in header_text:
                 print(f"    Found 'New Shiny' section")
@@ -291,16 +225,11 @@ def scrape_event_details(event, headers):
                                     else:
                                         img_url = img_src
                             
-                            if is_valid_pokemon_name(poke_name):
-                                base_name = get_base_form(poke_name)
-                                if base_name not in new_shiny:
-                                    new_shiny.append(base_name)
-                                    if img_url and base_name not in pokemon_images:
-                                        pokemon_images[base_name] = img_url
-                                    if base_name != poke_name:
-                                        print(f"      New Shiny: {poke_name} -> compressed to: {base_name}")
-                                    else:
-                                        print(f"      New Shiny: {poke_name}")
+                            if is_valid_pokemon_name(poke_name) and poke_name not in new_shiny:
+                                new_shiny.append(poke_name)
+                                if img_url:
+                                    pokemon_images[poke_name] = img_url
+                                print(f"      New Shiny: {poke_name}")
         
         return new_pokemon, new_shiny, pokemon_images
         
