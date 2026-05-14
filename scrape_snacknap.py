@@ -68,6 +68,7 @@ def scrape_snacknap_raids():
         print(f"    1-Star: {len(raid_data['tier1'])} - {raid_data['tier1']}")
         print(f"    3-Star: {len(raid_data['tier3'])} - {raid_data['tier3']}")
         print(f"    Mega: {len(raid_data['mega'])} - {raid_data['mega']}")
+        print(f"    Ultra Beasts: {len(raid_data['ultra_beasts'])} - {raid_data['ultra_beasts']}")
         
         return raid_data
     except Exception as e:
