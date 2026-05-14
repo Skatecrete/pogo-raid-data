@@ -72,15 +72,11 @@ jobs:
         git config --global user.name 'github-actions'
         git config --global user.email 'github-actions@github.com'
     
-        # Stash all local changes first
-        git stash push --include-untracked -m "workflow_changes" || true
-    
-        # Fetch and reset to latest remote
+        # Fetch latest
         git fetch origin main
-        git reset --hard origin/main
     
-        # Apply stashed changes
-        git stash pop || true
+        # Hard reset to remote (discard local conflicts)
+        git reset --hard origin/main
     
         # Add all tracking files
         git add scrapedduck_old.json
@@ -99,10 +95,6 @@ jobs:
     
         # Commit
         git commit -m "Update raids and shadow images - $(date +'%Y-%m-%d %H:%M:%S')"
-    
-        # Rebase on latest remote (clean working directory now)
-        git fetch origin main
-        git rebase origin/main || true
     
         # Push
         git push origin main
