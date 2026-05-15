@@ -12,11 +12,8 @@ LAST_SENT_FILE = 'current_raids_last_sent.json'
 def safe_json_save(data, filepath):
     """Safely save JSON data, ensuring it's valid"""
     try:
-        # First validate by serializing to string
         json_str = json.dumps(data, indent=2)
-        # Then parse back to verify it's valid
         json.loads(json_str)
-        # If both succeed, write to file
         with open(filepath, 'w') as f:
             f.write(json_str)
         return True
@@ -76,15 +73,8 @@ def save_removal_tracker(tracker):
 
 def load_last_sent():
     """Load the last state that was successfully sent as notification"""
-    if os.path.exists(LAST_SENT_FILE):
-        try:
-            with open(LAST_SENT_FILE, 'r') as f:
-                return json.load(f)
-        except json.JSONDecodeError:
-            print(f"Warning: {LAST_SENT_FILE} is corrupted. Creating new file.", file=sys.stderr)
-            return {}
-    # Return empty structure if no last sent file
-    return {
+    # Default empty structure with all required categories
+    empty_structure = {
         "last_updated": "",
         "tier1": [],
         "tier3": [],
@@ -98,6 +88,20 @@ def load_last_sent():
         "gigantamax": [],
         "scrapedduck_raids": []
     }
+    
+    if os.path.exists(LAST_SENT_FILE):
+        try:
+            with open(LAST_SENT_FILE, 'r') as f:
+                data = json.load(f)
+                # Ensure all categories exist (fill missing ones)
+                for key in empty_structure:
+                    if key not in data:
+                        data[key] = empty_structure[key]
+                return data
+        except json.JSONDecodeError:
+            print(f"Warning: {LAST_SENT_FILE} is corrupted. Creating new file.", file=sys.stderr)
+            return empty_structure
+    return empty_structure
 
 def save_last_sent(snacknap_data, scrapedduck_data):
     """Save the current state as last sent"""
@@ -111,7 +115,7 @@ def get_confirmed_removals(removed_set, tracker):
     now = datetime.now().isoformat()
     new_tracker = {}
     confirmed = set()
-    
+
     for raid in removed_set:
         if raid in tracker:
             count = tracker[raid]['count'] + 1
@@ -126,7 +130,7 @@ def get_confirmed_removals(removed_set, tracker):
                 'first_seen': now,
                 'count': 1
             }
-    
+
     return confirmed, new_tracker
 
 def normalize_raid_list(raid_list):
@@ -142,7 +146,7 @@ def get_tier_display(tier, name):
     """Convert tier string to display format with emoji"""
     tier_lower = tier.lower()
     name_lower = name.lower()
-    
+
     if 'shadow' in name_lower or 'shadow' in tier_lower:
         if '5-star' in tier_lower or 'legendary' in tier_lower:
             return '🌑 Shadow Legendary'
@@ -152,13 +156,13 @@ def get_tier_display(tier, name):
             return '🌑 Shadow 1-Star'
         else:
             return '🌑 Shadow'
-    
+
     if 'ultra beast' in tier_lower or 'ultra beast' in name_lower:
         return '🌀 Ultra Beast'
-    
+
     if 'mega' in tier_lower or 'mega' in name_lower:
         return '🔴 Mega'
-    
+
     if 'dynamax' in tier_lower:
         if 'tier 5' in tier_lower:
             return '⚡⚡⚡⚡⚡ Dynamax Tier 5'
@@ -172,10 +176,10 @@ def get_tier_display(tier, name):
             return '⚡ Dynamax Tier 1'
         else:
             return '⚡ Dynamax'
-    
+
     if 'gigantamax' in tier_lower or 'gigantamax' in name_lower:
         return '💥 Gigantamax'
-    
+
     if '5-star' in tier_lower:
         return '⭐⭐⭐⭐⭐ 5-Star Raids'
     if '4-star' in tier_lower:
@@ -186,22 +190,34 @@ def get_tier_display(tier, name):
         return '⭐⭐ 2-Star Raids'
     if '1-star' in tier_lower:
         return '⭐ 1-Star Raids'
-    
+
     return None
 
 def main():
     print("compare_raids.py running...", file=sys.stderr)
-    
+
     removal_tracker = load_removal_tracker()
     last_sent = load_last_sent()
-    
+
+    # Check if this is first run (no previous data)
+    is_first_run = last_sent.get('last_updated') == "" or len(last_sent.get('tier1', [])) == 0
+
     with open('current_raids.json', 'r') as f:
         new_snacknap = json.load(f)
-    
+
     current_scrapedduck = fetch_scrapedduck_raids()
     current_scrapedduck_keys = set(get_raid_key(r) for r in current_scrapedduck)
     last_scrapedduck_keys = set(last_sent.get('scrapedduck_raids', []))
-    
+
+    # If first run, save baseline and exit WITHOUT sending notification
+    if is_first_run:
+        print("First run - saving baseline, no notification", file=sys.stderr)
+        save_last_sent(new_snacknap, current_scrapedduck)
+        with open('raid_changes.txt', 'w') as f:
+            f.write("No changes detected")
+            print("false")
+        return
+
     categories = ['tier1', 'tier3', 'tier5', 'mega', 'ultra_beasts', 'dynamax_tier1', 'dynamax_tier2', 'dynamax_tier3', 'dynamax_tier5', 'gigantamax']
     display_names = {
         'tier1': '⭐ 1-Star Raids',
@@ -215,53 +231,53 @@ def main():
         'dynamax_tier5': '⚡⚡⚡⚡⚡ Dynamax Tier 5',
         'gigantamax': '💥 Gigantamax'
     }
-    
+
     changes = []
     should_send = False
-    
+
     for category in categories:
         new_list = new_snacknap.get(category, [])
         last_list = last_sent.get(category, [])
-        
+
         new_names = normalize_raid_list(new_list)
         last_names = normalize_raid_list(last_list)
-        
+
         added = new_names - last_names
         removed = last_names - new_names
-        
+
         category_lines = []
         has_visible = False
-        
+
         if added:
             category_lines.append(f"  ✅ Added: {', '.join(sorted(added))}")
             should_send = True
             has_visible = True
-        
+
         if removed:
             confirmed_removals, removal_tracker = get_confirmed_removals(removed, removal_tracker)
             if confirmed_removals:
                 category_lines.append(f"  ❌ Removed: {', '.join(sorted(confirmed_removals))}")
                 should_send = True
                 has_visible = True
-        
+
         if has_visible:
             changes.append(f"\n**{display_names[category]}:**")
             changes.extend(category_lines)
-    
+
     scrapedduck_added = current_scrapedduck_keys - last_scrapedduck_keys
     scrapedduck_removed = last_scrapedduck_keys - current_scrapedduck_keys
-    
+
     confirmed_scrapedduck_removals, removal_tracker = get_confirmed_removals(scrapedduck_removed, removal_tracker)
-    
+
     added_by_tier = {}
     removed_by_tier = {}
     uncategorized_added = []
     uncategorized_removed = []
-    
+
     for key in scrapedduck_added:
         name, tier = key.rsplit('|', 1)
         display_tier = get_tier_display(tier, name)
-        
+
         if display_tier:
             if display_tier not in added_by_tier:
                 added_by_tier[display_tier] = []
@@ -270,11 +286,11 @@ def main():
         else:
             uncategorized_added.append(f"{name} ({tier})")
             should_send = True
-    
+
     for key in confirmed_scrapedduck_removals:
         name, tier = key.rsplit('|', 1)
         display_tier = get_tier_display(tier, name)
-        
+
         if display_tier:
             if display_tier not in removed_by_tier:
                 removed_by_tier[display_tier] = []
@@ -283,32 +299,32 @@ def main():
         else:
             uncategorized_removed.append(f"{name} ({tier})")
             should_send = True
-    
+
     for tier, names in sorted(added_by_tier.items()):
         changes.append(f"\n**{tier}:**")
         changes.append(f"  ✅ Added: {', '.join(sorted(names))}")
-    
+
     for tier, names in sorted(removed_by_tier.items()):
         tier_exists = any(tier in str(c) for c in changes)
         if not tier_exists:
             changes.append(f"\n**{tier}:**")
         changes.append(f"  ❌ Removed: {', '.join(sorted(names))}")
-    
+
     if uncategorized_added or uncategorized_removed:
         changes.append(f"\n**⚠️ OTHER RAIDS (Uncategorized):**")
         if uncategorized_added:
             changes.append(f"  ✅ Added: {', '.join(sorted(uncategorized_added))}")
         if uncategorized_removed:
             changes.append(f"  ❌ Removed: {', '.join(sorted(uncategorized_removed))}")
-    
+
     for raid in list(removal_tracker.keys()):
         if raid not in scrapedduck_removed:
             del removal_tracker[raid]
-    
+
     save_removal_tracker(removal_tracker)
-    
+
+    # Save last sent FIRST if there are changes, then output
     if should_send:
-    # Save last sent FIRST - this prevents duplicate notifications on retry
         save_last_sent(new_snacknap, current_scrapedduck)
         print("Updated last_sent file", file=sys.stderr)
 
