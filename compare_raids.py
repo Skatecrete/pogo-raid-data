@@ -73,7 +73,6 @@ def save_removal_tracker(tracker):
 
 def load_last_sent():
     """Load the last state that was successfully sent as notification"""
-    # Default empty structure with all required categories
     empty_structure = {
         "last_updated": "",
         "tier1": [],
@@ -93,7 +92,6 @@ def load_last_sent():
         try:
             with open(LAST_SENT_FILE, 'r') as f:
                 data = json.load(f)
-                # Ensure all categories exist (fill missing ones)
                 for key in empty_structure:
                     if key not in data:
                         data[key] = empty_structure[key]
@@ -199,11 +197,28 @@ def main():
     removal_tracker = load_removal_tracker()
     last_sent = load_last_sent()
 
-    # Check if this is first run (no previous data)
+    # ========== DEBUG: Print last_sent contents ==========
+    print(f"DEBUG: last_sent keys: {list(last_sent.keys())}", file=sys.stderr)
+    print(f"DEBUG: last_sent['last_updated'] = '{last_sent.get('last_updated', 'MISSING')}'", file=sys.stderr)
+    print(f"DEBUG: last_sent tier1 count = {len(last_sent.get('tier1', []))}", file=sys.stderr)
+    print(f"DEBUG: last_sent ultra_beasts count = {len(last_sent.get('ultra_beasts', []))}", file=sys.stderr)
+    print(f"DEBUG: last_sent scrapedduck_raids count = {len(last_sent.get('scrapedduck_raids', []))}", file=sys.stderr)
+    print(f"DEBUG: last_sent tier1 sample = {last_sent.get('tier1', [])[:5]}", file=sys.stderr)
+    # ========== END DEBUG ==========
+
+    # Check if this is first run
     is_first_run = last_sent.get('last_updated') == "" or len(last_sent.get('tier1', [])) == 0
+    print(f"DEBUG: is_first_run = {is_first_run}", file=sys.stderr)
 
     with open('current_raids.json', 'r') as f:
         new_snacknap = json.load(f)
+
+    # ========== DEBUG: Print new_snacknap summary ==========
+    print(f"DEBUG: new_snacknap keys: {list(new_snacknap.keys())}", file=sys.stderr)
+    print(f"DEBUG: new_snacknap tier1 count = {len(new_snacknap.get('tier1', []))}", file=sys.stderr)
+    print(f"DEBUG: new_snacknap ultra_beasts count = {len(new_snacknap.get('ultra_beasts', []))}", file=sys.stderr)
+    print(f"DEBUG: new_snacknap tier1 sample = {new_snacknap.get('tier1', [])[:5]}", file=sys.stderr)
+    # ========== END DEBUG ==========
 
     current_scrapedduck = fetch_scrapedduck_raids()
     current_scrapedduck_keys = set(get_raid_key(r) for r in current_scrapedduck)
@@ -242,6 +257,14 @@ def main():
         new_names = normalize_raid_list(new_list)
         last_names = normalize_raid_list(last_list)
 
+        # ========== DEBUG for tier1 ==========
+        if category == 'tier1':
+            print(f"DEBUG tier1: new_names = {new_names}", file=sys.stderr)
+            print(f"DEBUG tier1: last_names = {last_names}", file=sys.stderr)
+            print(f"DEBUG tier1: added = {new_names - last_names}", file=sys.stderr)
+            print(f"DEBUG tier1: removed = {last_names - new_names}", file=sys.stderr)
+        # ========== END DEBUG ==========
+
         added = new_names - last_names
         removed = last_names - new_names
 
@@ -266,6 +289,13 @@ def main():
 
     scrapedduck_added = current_scrapedduck_keys - last_scrapedduck_keys
     scrapedduck_removed = last_scrapedduck_keys - current_scrapedduck_keys
+
+    # ========== DEBUG for ScrapedDuck ==========
+    print(f"DEBUG: scrapedduck_added count = {len(scrapedduck_added)}", file=sys.stderr)
+    print(f"DEBUG: scrapedduck_removed count = {len(scrapedduck_removed)}", file=sys.stderr)
+    if scrapedduck_added:
+        print(f"DEBUG: scrapedduck_added sample = {list(scrapedduck_added)[:3]}", file=sys.stderr)
+    # ========== END DEBUG ==========
 
     confirmed_scrapedduck_removals, removal_tracker = get_confirmed_removals(scrapedduck_removed, removal_tracker)
 
@@ -322,6 +352,11 @@ def main():
             del removal_tracker[raid]
 
     save_removal_tracker(removal_tracker)
+
+    # ========== DEBUG: Final decision ==========
+    print(f"DEBUG: should_send = {should_send}", file=sys.stderr)
+    print(f"DEBUG: changes count = {len(changes)}", file=sys.stderr)
+    # ========== END DEBUG ==========
 
     # Save last sent FIRST if there are changes, then output
     if should_send:
