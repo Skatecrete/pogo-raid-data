@@ -11,20 +11,9 @@ permissions:
 jobs:
   update-raids:
     runs-on: ubuntu-latest
-    strategy:
-      max-parallel: 1
-      fail-fast: false
-      matrix:
-        attempt: [1, 2, 3]
-    continue-on-error: ${{ matrix.attempt < 3 }}
-
+    # REMOVE the strategy/matrix section entirely
+    
     steps:
-    - name: Wait before retry (only for attempts 2 and 3)
-      if: matrix.attempt > 1
-      run: |
-        echo "Retry attempt #${{ matrix.attempt }} after runner failure"
-        sleep 30
-      
     - name: Checkout repository
       uses: actions/checkout@v4
       with:
@@ -71,13 +60,10 @@ jobs:
       run: |
         git config --global user.name 'github-actions'
         git config --global user.email 'github-actions@github.com'
-    
-        # Fetch latest
-        git fetch origin main
-    
-        # Hard reset to remote (discard local conflicts)
-        git reset --hard origin/main
-    
+        
+        # Pull latest changes first (to avoid race condition)
+        git pull origin main --rebase
+        
         # Add all tracking files
         git add scrapedduck_old.json
         git add current_raids.json
@@ -86,22 +72,22 @@ jobs:
         git add raid_changes.txt
         git add shadow_images/ 2>/dev/null || true
         git add shadow_images.json 2>/dev/null || true
-    
+        
         # Check if there are actual changes to commit
         if git diff --cached --quiet; then
           echo "No changes to commit"
           exit 0
         fi
-    
+        
         # Commit
         git commit -m "Update raids and shadow images - $(date +'%Y-%m-%d %H:%M:%S')"
-    
+        
         # Push
         git push origin main
         echo "committed=true" >> $GITHUB_OUTPUT
         
     - name: Send Discord notification with raid changes
-      if: steps.changes.outputs.has_changes == 'true'
+      if: steps.changes.outputs.has_changes == 'true' && steps.commit.outputs.committed == 'true'
       run: |
         CHANGES=$(cat raid_changes.txt)
         ESCAPED_CHANGES=$(python -c 'import json,sys; print(json.dumps(sys.stdin.read()))' <<< "$CHANGES")
