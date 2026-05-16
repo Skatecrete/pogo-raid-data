@@ -11,8 +11,7 @@ permissions:
 jobs:
   update-raids:
     runs-on: ubuntu-latest
-    # REMOVE the strategy/matrix section entirely
-    
+
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
@@ -61,8 +60,9 @@ jobs:
         git config --global user.name 'github-actions'
         git config --global user.email 'github-actions@github.com'
         
-        # Pull latest changes first (to avoid race condition)
-        git pull origin main --rebase
+        # Fetch latest and reset to remote (clean slate)
+        git fetch origin main
+        git reset --hard origin/main
         
         # Add all tracking files
         git add scrapedduck_old.json
