@@ -11,6 +11,7 @@ permissions:
 jobs:
   update-raids:
     runs-on: ubuntu-latest
+    # REMOVE the strategy/matrix section entirely
 
     steps:
     - name: Checkout repository
