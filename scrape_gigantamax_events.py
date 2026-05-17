@@ -85,9 +85,10 @@ def main():
     with open('current_raids.json', 'r') as f:
         data = json.load(f)
     
-    # Set gigantamax field
+    # Set gigantamax field - PRESERVE all other fields including last_updated
     data['gigantamax'] = all_gigantamax
     data['gigantamax_last_updated'] = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    # DO NOT modify data['last_updated'] - keep it from SnackNap scraper
     
     with open('current_raids.json', 'w') as f:
         json.dump(data, f, indent=2)
