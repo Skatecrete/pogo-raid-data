@@ -9,11 +9,12 @@ CONFIRMATION_COUNT = 2
 TRACKER_FILE = 'pending_removals.json'
 LAST_SENT_FILE = 'current_raids_last_sent.json'
 
-# Ultra Beast names to filter out of ScrapedDuck notifications
+# Ultra Beast IDs and names for filtering
+ULTRA_BEAST_IDS = [793, 794, 795, 796, 797, 798, 799, 803, 804, 805, 806]
 ULTRA_BEAST_NAMES = ['nihilego', 'buzzwole', 'pheromosa', 'xurkitree', 'celesteela', 
                      'kartana', 'guzzlord', 'poipole', 'naganadel', 'stakataka', 'blacephalon']
 
-def is_ultra_beast(name):
+def is_ultra_beast_by_name(name):
     """Check if a raid name is an Ultra Beast"""
     return name.lower() in ULTRA_BEAST_NAMES
 
@@ -207,7 +208,6 @@ def main():
 
     # Check if this is first run
     is_first_run = last_sent.get('last_updated') == "" or len(last_sent.get('tier1', [])) == 0
-    print(f"DEBUG: is_first_run = {is_first_run}", file=sys.stderr)
 
     with open('current_raids.json', 'r') as f:
         new_snacknap = json.load(f)
@@ -242,6 +242,7 @@ def main():
     changes = []
     should_send = False
 
+    # Process SnackNap categories (these are the primary source)
     for category in categories:
         new_list = new_snacknap.get(category, [])
         last_list = last_sent.get(category, [])
@@ -271,6 +272,7 @@ def main():
             changes.append(f"\n**{display_names[category]}:**")
             changes.extend(category_lines)
 
+    # Process ScrapedDuck - BUT ONLY FOR NON-ULTRA-BEAST 5-STAR RAIDS
     scrapedduck_added = current_scrapedduck_keys - last_scrapedduck_keys
     scrapedduck_removed = last_scrapedduck_keys - current_scrapedduck_keys
 
@@ -281,13 +283,11 @@ def main():
     uncategorized_added = []
     uncategorized_removed = []
 
-    # Process ScrapedDuck additions - SKIP ULTRA BEASTS
     for key in scrapedduck_added:
         name, tier = key.rsplit('|', 1)
         
-        # Skip Ultra Beasts - they come from SnackNap's ultra_beasts array
-        if is_ultra_beast(name):
-            print(f"DEBUG: Skipping Ultra Beast from ScrapedDuck: {name}", file=sys.stderr)
+        # SKIP ULTRA BEASTS - they are already tracked in ultra_beasts category
+        if is_ultra_beast_by_name(name):
             continue
             
         display_tier = get_tier_display(tier, name)
@@ -301,12 +301,11 @@ def main():
             uncategorized_added.append(f"{name} ({tier})")
             should_send = True
 
-    # Process ScrapedDuck removals - SKIP ULTRA BEASTS
     for key in confirmed_scrapedduck_removals:
         name, tier = key.rsplit('|', 1)
         
-        # Skip Ultra Beasts
-        if is_ultra_beast(name):
+        # SKIP ULTRA BEASTS
+        if is_ultra_beast_by_name(name):
             continue
             
         display_tier = get_tier_display(tier, name)
@@ -343,7 +342,7 @@ def main():
 
     save_removal_tracker(removal_tracker)
 
-    # Only save last_sent if there are actual changes
+    # Only send notification if there are actual changes
     if changes:
         save_last_sent(new_snacknap, current_scrapedduck)
         print("Updated last_sent file", file=sys.stderr)
