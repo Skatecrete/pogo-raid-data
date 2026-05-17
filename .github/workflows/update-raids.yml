@@ -60,11 +60,10 @@ jobs:
       run: |
         git config --global user.name 'github-actions'
         git config --global user.email 'github-actions@github.com'
-        
-        # Fetch latest and reset to remote (clean slate)
+    
+        # Fetch latest but DON'T reset hard
         git fetch origin main
-        git reset --hard origin/main
-        
+    
         # Add all tracking files
         git add scrapedduck_old.json
         git add current_raids.json
@@ -79,10 +78,13 @@ jobs:
           echo "No changes to commit"
           exit 0
         fi
-        
+    
         # Commit
         git commit -m "Update raids and shadow images - $(date +'%Y-%m-%d %H:%M:%S')"
-        
+    
+        # Pull with rebase before pushing
+        git pull --rebase origin main || true
+    
         # Push
         git push origin main
         echo "committed=true" >> $GITHUB_OUTPUT
