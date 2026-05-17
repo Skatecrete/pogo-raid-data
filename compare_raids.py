@@ -9,14 +9,30 @@ CONFIRMATION_COUNT = 2
 TRACKER_FILE = 'pending_removals.json'
 LAST_SENT_FILE = 'current_raids_last_sent.json'
 
-# Ultra Beast IDs and names for filtering
-ULTRA_BEAST_IDS = [793, 794, 795, 796, 797, 798, 799, 803, 804, 805, 806]
-ULTRA_BEAST_NAMES = ['nihilego', 'buzzwole', 'pheromosa', 'xurkitree', 'celesteela', 
-                     'kartana', 'guzzlord', 'poipole', 'naganadel', 'stakataka', 'blacephalon']
+# Pokémon ID mapping for common raid Pokémon
+POKEMON_ID_MAP = {
+    # Ultra Beasts
+    'nihilego': 793, 'buzzwole': 794, 'pheromosa': 795, 'xurkitree': 796,
+    'celesteela': 797, 'kartana': 798, 'guzzlord': 799, 'poipole': 803,
+    'naganadel': 804, 'stakataka': 805, 'blacephalon': 806,
+    # Legendaries
+    'tapu lele': 786, 'tapu koko': 785, 'tapu bulu': 787, 'tapu fini': 788,
+    'latias': 380, 'latios': 381, 'kyogre': 382, 'groudon': 383,
+    'rayquaza': 384, 'dialga': 483, 'palkia': 484, 'giratina': 487,
+    'mewtwo': 150, 'lugia': 249, 'ho-oh': 250, 'celebi': 251,
+    'regirock': 377, 'regice': 378, 'registeel': 379,
+    'regieleki': 894, 'regidrago': 895,
+    # Add more as needed
+}
 
-def is_ultra_beast_by_name(name):
-    """Check if a raid name is an Ultra Beast"""
-    return name.lower() in ULTRA_BEAST_NAMES
+def get_pokemon_id(name):
+    """Get Pokémon ID from name, case-insensitive"""
+    name_lower = name.lower().strip()
+    # Remove common prefixes
+    for prefix in ['shadow ', 'mega ', 'd-max ', 'g-max ']:
+        if name_lower.startswith(prefix):
+            name_lower = name_lower[len(prefix):]
+    return POKEMON_ID_MAP.get(name_lower)
 
 def safe_json_save(data, filepath):
     """Safely save JSON data, ensuring it's valid"""
@@ -51,6 +67,17 @@ def get_raid_key(raid):
     name = name.strip()
     tier = raid.get('tier', '').strip().lower()
     return f"{name}|{tier}"
+
+def get_normalized_raid_key(raid):
+    """Create a normalized key using Pokémon ID when possible"""
+    name = raid.get('name', '').strip()
+    tier = raid.get('tier', '').strip().lower()
+    
+    # Try to get ID for deduplication
+    pokemon_id = get_pokemon_id(name)
+    if pokemon_id:
+        return f"id:{pokemon_id}|{tier}"
+    return f"name:{name.lower()}|{tier}"
 
 def extract_name_from_raid_obj(raid_obj):
     """Extract name from raid object"""
@@ -94,7 +121,8 @@ def load_last_sent():
         "dynamax_tier3": [],
         "dynamax_tier5": [],
         "gigantamax": [],
-        "scrapedduck_raids": []
+        "scrapedduck_raids": [],
+        "scrapedduck_normalized": []
     }
     
     if os.path.exists(LAST_SENT_FILE):
@@ -114,6 +142,7 @@ def save_last_sent(snacknap_data, scrapedduck_data):
     """Save the current state as last sent"""
     data = snacknap_data.copy()
     data['scrapedduck_raids'] = [get_raid_key(r) for r in scrapedduck_data]
+    data['scrapedduck_normalized'] = [get_normalized_raid_key(r) for r in scrapedduck_data]
     data['last_sent_time'] = datetime.now().isoformat()
     safe_json_save(data, LAST_SENT_FILE)
 
@@ -213,8 +242,10 @@ def main():
         new_snacknap = json.load(f)
 
     current_scrapedduck = fetch_scrapedduck_raids()
-    current_scrapedduck_keys = set(get_raid_key(r) for r in current_scrapedduck)
-    last_scrapedduck_keys = set(last_sent.get('scrapedduck_raids', []))
+    
+    # Use normalized keys for deduplication (ID-based when possible)
+    current_scrapedduck_normalized = set(get_normalized_raid_key(r) for r in current_scrapedduck)
+    last_scrapedduck_normalized = set(last_sent.get('scrapedduck_normalized', []))
 
     # If first run, save baseline and exit WITHOUT sending notification
     if is_first_run:
@@ -242,7 +273,7 @@ def main():
     changes = []
     should_send = False
 
-    # Process SnackNap categories (these are the primary source)
+    # Process SnackNap categories
     for category in categories:
         new_list = new_snacknap.get(category, [])
         last_list = last_sent.get(category, [])
@@ -272,52 +303,51 @@ def main():
             changes.append(f"\n**{display_names[category]}:**")
             changes.extend(category_lines)
 
-    # Process ScrapedDuck - BUT ONLY FOR NON-ULTRA-BEAST 5-STAR RAIDS
-    scrapedduck_added = current_scrapedduck_keys - last_scrapedduck_keys
-    scrapedduck_removed = last_scrapedduck_keys - current_scrapedduck_keys
+    # Process ScrapedDuck using normalized keys (deduplicated by ID)
+    scrapedduck_added_normalized = current_scrapedduck_normalized - last_scrapedduck_normalized
+    scrapedduck_removed_normalized = last_scrapedduck_normalized - current_scrapedduck_normalized
 
-    confirmed_scrapedduck_removals, removal_tracker = get_confirmed_removals(scrapedduck_removed, removal_tracker)
+    confirmed_scrapedduck_removals, removal_tracker = get_confirmed_removals(scrapedduck_removed_normalized, removal_tracker)
 
     added_by_tier = {}
     removed_by_tier = {}
     uncategorized_added = []
     uncategorized_removed = []
 
-    for key in scrapedduck_added:
-        name, tier = key.rsplit('|', 1)
-        
-        # SKIP ULTRA BEASTS - they are already tracked in ultra_beasts category
-        if is_ultra_beast_by_name(name):
-            continue
-            
-        display_tier = get_tier_display(tier, name)
+    # Map normalized keys back to display names
+    for raid in current_scrapedduck:
+        norm_key = get_normalized_raid_key(raid)
+        if norm_key in scrapedduck_added_normalized:
+            name = raid.get('name', '')
+            tier = raid.get('tier', '')
+            display_tier = get_tier_display(tier, name)
 
-        if display_tier:
-            if display_tier not in added_by_tier:
-                added_by_tier[display_tier] = []
-            added_by_tier[display_tier].append(name)
-            should_send = True
-        else:
-            uncategorized_added.append(f"{name} ({tier})")
-            should_send = True
+            if display_tier:
+                if display_tier not in added_by_tier:
+                    added_by_tier[display_tier] = []
+                added_by_tier[display_tier].append(name)
+                should_send = True
+            else:
+                uncategorized_added.append(f"{name} ({tier})")
+                should_send = True
 
     for key in confirmed_scrapedduck_removals:
-        name, tier = key.rsplit('|', 1)
-        
-        # SKIP ULTRA BEASTS
-        if is_ultra_beast_by_name(name):
-            continue
-            
-        display_tier = get_tier_display(tier, name)
+        # Find the original raid to get name/tier
+        for raid in last_sent.get('scrapedduck_raids_objects', []):
+            if get_normalized_raid_key(raid) == key:
+                name = raid.get('name', '')
+                tier = raid.get('tier', '')
+                display_tier = get_tier_display(tier, name)
 
-        if display_tier:
-            if display_tier not in removed_by_tier:
-                removed_by_tier[display_tier] = []
-            removed_by_tier[display_tier].append(name)
-            should_send = True
-        else:
-            uncategorized_removed.append(f"{name} ({tier})")
-            should_send = True
+                if display_tier:
+                    if display_tier not in removed_by_tier:
+                        removed_by_tier[display_tier] = []
+                    removed_by_tier[display_tier].append(name)
+                    should_send = True
+                else:
+                    uncategorized_removed.append(f"{name} ({tier})")
+                    should_send = True
+                break
 
     for tier, names in sorted(added_by_tier.items()):
         changes.append(f"\n**{tier}:**")
@@ -337,7 +367,7 @@ def main():
             changes.append(f"  ❌ Removed: {', '.join(sorted(uncategorized_removed))}")
 
     for raid in list(removal_tracker.keys()):
-        if raid not in scrapedduck_removed:
+        if raid not in scrapedduck_removed_normalized:
             del removal_tracker[raid]
 
     save_removal_tracker(removal_tracker)
