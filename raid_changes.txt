@@ -1,39 +1,24 @@
 
-**⭐ 1-Star Raids:**
-  ✅ Added: doduo, galarian ponyta, machop, rockruff
-
-**⭐⭐⭐ 3-Star Raids:**
-  ✅ Added: rapidash, scolipede, zebstrika
-
-**🔴 Mega Raids:**
-  ✅ Added: glalie
-
-**🌀 Ultra Beasts:**
-  ✅ Added: buzzwole, pheromosa, xurkitree
-
-**⚡ Dynamax Tier 1:**
-  ✅ Added: abra, bounsweet, bulbasaur, caterpie, charmander, drilbur, gastly, grookey, growlithe, hatenna, inkay, kabuto, krabby, omanyte, pidove, ralts, roggenrola, rookidee, scorbunny, skwovet, sobble, spheal, squirtle, trubbish, woobat, wooloo
-
-**⚡⚡ Dynamax Tier 2:**
-  ✅ Added: darumaka, eevee, machop, shuckle, wailmer
-
-**⚡⚡⚡ Dynamax Tier 3:**
-  ✅ Added: beldum, chansey, cryogonal, drampa, falinks, hitmonchan, hitmonlee, passimian, sableye
+**⚡⚡⚡⚡⚡ Dynamax Tier 5:**
+  ✅ Added: registeel
 
 **⭐ 1-Star Raids:**
-  ✅ Added: bagon, espurr, hisuian voltorb, shieldon
+  ✅ Added: Doduo, Machop, Rockruff
 
 **⭐⭐⭐ 3-Star Raids:**
-  ✅ Added: druddigon, nidoqueen, starmie
+  ✅ Added: Rapidash, Scolipede, Zebstrika
 
 **⭐⭐⭐⭐⭐ 5-Star Raids:**
-  ✅ Added: nihilego
+  ✅ Added: Buzzwole, Pheromosa, Xurkitree
 
 **🌑 Shadow 1-Star:**
-  ✅ Added: shadow inkay, shadow larvitar, shadow sableye, shadow spheal
+  ✅ Added: Shadow Inkay, Shadow Larvitar, Shadow Sableye, Shadow Spheal
 
 **🌑 Shadow 3-Star:**
-  ✅ Added: shadow ninetales, shadow onix, shadow primeape
+  ✅ Added: Shadow Ninetales, Shadow Onix, Shadow Primeape
 
 **🌑 Shadow Legendary:**
-  ✅ Added: shadow cresselia
+  ✅ Added: Shadow Cresselia
+
+**🔴 Mega:**
+  ✅ Added: Mega Glalie

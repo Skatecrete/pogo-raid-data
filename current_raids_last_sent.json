@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-05-14",
+  "last_updated": "2026-05-17",
   "tier1": [
     "Galarian Ponyta",
     "Rockruff",
@@ -60,23 +60,25 @@
     "Cryogonal",
     "Drampa",
     "Falinks",
-    "Hitmonchan",
-    "Hitmonlee",
     "Passimian",
     "Sableye"
   ],
-  "dynamax_tier5": [],
+  "dynamax_tier5": [
+    "Registeel"
+  ],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-05-14 08:39:48",
+  "gigantamax_last_updated": "2026-05-17 21:02:12",
   "scrapedduck_raids": [
-    "hisuian voltorb|1-star raids",
-    "bagon|1-star raids",
-    "shieldon|1-star raids",
-    "espurr|1-star raids",
-    "nidoqueen|3-star raids",
-    "starmie|3-star raids",
-    "druddigon|3-star raids",
-    "nihilego|5-star raids",
+    "machop|1-star raids",
+    "doduo|1-star raids",
+    "rockruff|1-star raids",
+    "rapidash|3-star raids",
+    "zebstrika|3-star raids",
+    "scolipede|3-star raids",
+    "buzzwole|5-star raids",
+    "pheromosa|5-star raids",
+    "xurkitree|5-star raids",
+    "mega glalie|mega raids",
     "shadow larvitar|1-star raids",
     "shadow sableye|1-star raids",
     "shadow spheal|1-star raids",
@@ -86,5 +88,25 @@
     "shadow onix|3-star raids",
     "shadow cresselia|5-star raids"
   ],
-  "last_sent_time": "2026-05-14T08:39:48.935808"
+  "scrapedduck_normalized": [
+    "name:machop|1-star raids",
+    "name:doduo|1-star raids",
+    "name:rockruff|1-star raids",
+    "name:rapidash|3-star raids",
+    "name:zebstrika|3-star raids",
+    "name:scolipede|3-star raids",
+    "id:794|5-star raids",
+    "id:795|5-star raids",
+    "id:796|5-star raids",
+    "name:mega glalie|mega raids",
+    "name:shadow larvitar|1-star raids",
+    "name:shadow sableye|1-star raids",
+    "name:shadow spheal|1-star raids",
+    "name:shadow inkay|1-star raids",
+    "name:shadow ninetales|3-star raids",
+    "name:shadow primeape|3-star raids",
+    "name:shadow onix|3-star raids",
+    "name:shadow cresselia|5-star raids"
+  ],
+  "last_sent_time": "2026-05-17T21:02:13.242106"
 }
