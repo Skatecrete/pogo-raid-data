@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-05-18 19:41:17",
+  "last_updated": "2026-05-19 02:52:50",
   "debuts": [
     {
       "event_name": "GO Fest 2026 Global",
@@ -34,22 +34,6 @@
         "Pikachu (Team Instinct Cap)": "https://www.serebii.net/pokemongo/pokemon/025-instinct.png",
         "Pikachu (Team Mystic Cap)": "https://www.serebii.net/pokemongo/pokemon/025-mystic.png",
         "Pikachu (Team Valor Cap)": "https://www.serebii.net/pokemongo/pokemon/025-valor.png"
-      },
-      "event_type": "global"
-    },
-    {
-      "event_name": "Spring Marathon",
-      "event_date": "May 12th - May 18th 2026",
-      "new_pokemon": [
-        "Flittle",
-        "Espathra",
-        "Pikachu (Marathon Visor)"
-      ],
-      "new_shiny": [],
-      "pokemon_images": {
-        "Flittle": "https://www.serebii.net/pokemongo/pokemon/955.png",
-        "Espathra": "https://www.serebii.net/pokemongo/pokemon/956.png",
-        "Pikachu (Marathon Visor)": "https://www.serebii.net/pokemongo/pokemon/025-marathon.png"
       },
       "event_type": "global"
     },
