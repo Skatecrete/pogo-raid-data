@@ -1,23 +1,30 @@
 {
-  "last_updated": "2026-05-17",
+  "last_updated": "2026-05-19",
   "tier1": [
+    "Wimpod",
     "Galarian Ponyta",
+    "Gible",
     "Rockruff",
     "Machop",
+    "Clefairy",
     "Doduo"
   ],
   "tier3": [
+    "Piloswine",
     "Zebstrika",
-    "Scolipede",
-    "Rapidash"
+    "Klawf",
+    "Turtonator",
+    "Rapidash",
+    "Scolipede"
   ],
   "mega": [
-    "Glalie"
+    "Glalie",
+    "Altaria"
   ],
   "ultra_beasts": [
-    "Pheromosa",
     "Xurkitree",
-    "Buzzwole"
+    "Buzzwole",
+    "Pheromosa"
   ],
   "dynamax_tier1": [
     "Abra",
@@ -67,5 +74,5 @@
     "Registeel"
   ],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-05-17 21:02:12"
+  "gigantamax_last_updated": "2026-05-19 18:21:08"
 }

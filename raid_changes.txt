@@ -1,24 +1,9 @@
 
-**⚡⚡⚡⚡⚡ Dynamax Tier 5:**
-  ✅ Added: registeel
-
 **⭐ 1-Star Raids:**
-  ✅ Added: Doduo, Machop, Rockruff
+  ✅ Added: clefairy, gible, wimpod
 
 **⭐⭐⭐ 3-Star Raids:**
-  ✅ Added: Rapidash, Scolipede, Zebstrika
+  ✅ Added: klawf, piloswine, turtonator
 
-**⭐⭐⭐⭐⭐ 5-Star Raids:**
-  ✅ Added: Buzzwole, Pheromosa, Xurkitree
-
-**🌑 Shadow 1-Star:**
-  ✅ Added: Shadow Inkay, Shadow Larvitar, Shadow Sableye, Shadow Spheal
-
-**🌑 Shadow 3-Star:**
-  ✅ Added: Shadow Ninetales, Shadow Onix, Shadow Primeape
-
-**🌑 Shadow Legendary:**
-  ✅ Added: Shadow Cresselia
-
-**🔴 Mega:**
-  ✅ Added: Mega Glalie
+**🔴 Mega Raids:**
+  ✅ Added: altaria
