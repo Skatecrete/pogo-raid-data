@@ -1,30 +1,31 @@
 {
   "last_updated": "2026-05-19",
   "tier1": [
-    "Wimpod",
-    "Galarian Ponyta",
-    "Gible",
-    "Rockruff",
-    "Machop",
+    "Alolan Grimer",
     "Clefairy",
-    "Doduo"
+    "Doduo",
+    "Wimpod",
+    "Machop",
+    "Rockruff",
+    "Gible",
+    "Galarian Ponyta"
   ],
   "tier3": [
-    "Piloswine",
-    "Zebstrika",
-    "Klawf",
-    "Turtonator",
+    "Scolipede",
     "Rapidash",
-    "Scolipede"
+    "Turtonator",
+    "Klawf",
+    "Zebstrika",
+    "Piloswine"
   ],
   "mega": [
-    "Glalie",
-    "Altaria"
+    "Altaria",
+    "Glalie"
   ],
   "ultra_beasts": [
     "Xurkitree",
-    "Buzzwole",
-    "Pheromosa"
+    "Pheromosa",
+    "Buzzwole"
   ],
   "dynamax_tier1": [
     "Abra",
@@ -74,7 +75,7 @@
     "Registeel"
   ],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-05-19 18:21:08",
+  "gigantamax_last_updated": "2026-05-19 20:13:36",
   "scrapedduck_raids": [
     "machop|1-star raids",
     "doduo|1-star raids",
@@ -115,5 +116,5 @@
     "name:shadow onix|3-star raids",
     "name:shadow cresselia|5-star raids"
   ],
-  "last_sent_time": "2026-05-19T18:21:08.471261"
+  "last_sent_time": "2026-05-19T20:13:36.629941"
 }
