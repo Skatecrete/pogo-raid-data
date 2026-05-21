@@ -1,32 +1,20 @@
 {
-  "last_updated": "2026-05-19",
+  "last_updated": "2026-05-21",
   "tier1": [
     "Alolan Grimer",
     "Clefairy",
-    "Doduo",
     "Wimpod",
-    "Machop",
-    "Rockruff",
-    "Gible",
-    "Galarian Ponyta"
+    "Gible"
   ],
   "tier3": [
-    "Scolipede",
-    "Rapidash",
-    "Turtonator",
     "Klawf",
-    "Zebstrika",
+    "Turtonator",
     "Piloswine"
   ],
   "mega": [
-    "Altaria",
-    "Glalie"
+    "Altaria"
   ],
-  "ultra_beasts": [
-    "Xurkitree",
-    "Pheromosa",
-    "Buzzwole"
-  ],
+  "ultra_beasts": [],
   "dynamax_tier1": [
     "Abra",
     "Bounsweet",
@@ -75,18 +63,17 @@
     "Registeel"
   ],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-05-19 20:13:36",
+  "gigantamax_last_updated": "2026-05-21 03:36:12",
   "scrapedduck_raids": [
-    "machop|1-star raids",
-    "doduo|1-star raids",
-    "rockruff|1-star raids",
-    "rapidash|3-star raids",
-    "zebstrika|3-star raids",
-    "scolipede|3-star raids",
-    "buzzwole|5-star raids",
-    "pheromosa|5-star raids",
-    "xurkitree|5-star raids",
-    "mega glalie|mega raids",
+    "clefairy|1-star raids",
+    "alolan grimer|1-star raids",
+    "gible|1-star raids",
+    "wimpod|1-star raids",
+    "piloswine|3-star raids",
+    "turtonator|3-star raids",
+    "klawf|3-star raids",
+    "tapu bulu|5-star raids",
+    "mega altaria|mega raids",
     "shadow larvitar|1-star raids",
     "shadow sableye|1-star raids",
     "shadow spheal|1-star raids",
@@ -97,16 +84,15 @@
     "shadow cresselia|5-star raids"
   ],
   "scrapedduck_normalized": [
-    "name:machop|1-star raids",
-    "name:doduo|1-star raids",
-    "name:rockruff|1-star raids",
-    "name:rapidash|3-star raids",
-    "name:zebstrika|3-star raids",
-    "name:scolipede|3-star raids",
-    "id:794|5-star raids",
-    "id:795|5-star raids",
-    "id:796|5-star raids",
-    "name:mega glalie|mega raids",
+    "name:clefairy|1-star raids",
+    "name:alolan grimer|1-star raids",
+    "name:gible|1-star raids",
+    "name:wimpod|1-star raids",
+    "name:piloswine|3-star raids",
+    "name:turtonator|3-star raids",
+    "name:klawf|3-star raids",
+    "id:787|5-star raids",
+    "name:mega altaria|mega raids",
     "name:shadow larvitar|1-star raids",
     "name:shadow sableye|1-star raids",
     "name:shadow spheal|1-star raids",
@@ -116,5 +102,5 @@
     "name:shadow onix|3-star raids",
     "name:shadow cresselia|5-star raids"
   ],
-  "last_sent_time": "2026-05-19T20:13:36.629941"
+  "last_sent_time": "2026-05-21T03:36:12.334205"
 }
