@@ -1,18 +1,19 @@
 {
-  "last_updated": "2026-05-21",
+  "last_updated": "2026-05-23",
   "tier1": [
     "Alolan Grimer",
     "Clefairy",
-    "Wimpod",
-    "Gible"
+    "Gible",
+    "Wimpod"
   ],
   "tier3": [
-    "Klawf",
     "Turtonator",
+    "Klawf",
     "Piloswine"
   ],
   "mega": [
-    "Altaria"
+    "Altaria",
+    "Falinks"
   ],
   "ultra_beasts": [],
   "dynamax_tier1": [
@@ -63,5 +64,5 @@
     "Registeel"
   ],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-05-21 03:36:12"
+  "gigantamax_last_updated": "2026-05-23 04:24:28"
 }
