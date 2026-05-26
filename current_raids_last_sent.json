@@ -2,21 +2,22 @@
   "last_updated": "2026-05-26",
   "tier1": [
     "Meowth",
-    "Ponyta",
-    "Electabuzz",
     "Clefairy",
+    "Electabuzz",
+    "Ponyta",
     "Gible",
-    "Wimpod",
     "Alolan Grimer",
-    "Larvitar"
+    "Larvitar",
+    "Wimpod"
   ],
   "tier3": [
     "Tauros (Aqua)",
     "Turtonator",
-    "Scyther",
-    "Houndoom",
+    "Lapras",
     "Klawf",
-    "Piloswine"
+    "Piloswine",
+    "Houndoom",
+    "Scyther"
   ],
   "mega": [
     "Altaria",
@@ -70,7 +71,7 @@
   ],
   "dynamax_tier5": [],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-05-26 19:34:23",
+  "gigantamax_last_updated": "2026-05-26 21:44:41",
   "scrapedduck_raids": [
     "clefairy|1-star raids",
     "alolan grimer|1-star raids",
@@ -109,5 +110,5 @@
     "name:shadow onix|3-star raids",
     "name:shadow cresselia|5-star raids"
   ],
-  "last_sent_time": "2026-05-26T19:34:23.504206"
+  "last_sent_time": "2026-05-26T21:44:41.504250"
 }

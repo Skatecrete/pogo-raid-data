@@ -1,6 +1,3 @@
 
-**⭐ 1-Star Raids:**
-  ✅ Added: electabuzz, larvitar, meowth, ponyta
-
 **⭐⭐⭐ 3-Star Raids:**
-  ✅ Added: houndoom, scyther
+  ✅ Added: lapras
