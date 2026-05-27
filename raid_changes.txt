@@ -1,6 +1,12 @@
 
-**⚡ Dynamax Tier 1:**
-  ✅ Added: cottonee, pikachu, trapinch
+**⭐ 1-Star Raids:**
+  ✅ Added: Electabuzz, Larvitar, Meowth, Ponyta
 
-**⚡⚡⚡ Dynamax Tier 3:**
-  ✅ Added: hitmonchan, hitmonlee
+**⭐⭐⭐ 3-Star Raids:**
+  ✅ Added: Houndoom, Lapras, Scyther
+
+**⭐⭐⭐⭐⭐ 5-Star Raids:**
+  ✅ Added: Tapu Fini
+
+**🔴 Mega:**
+  ✅ Added: Mega Medicham

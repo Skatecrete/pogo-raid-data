@@ -1,1 +1,38 @@
-{}
+{
+  "name:gible|1-star raids": {
+    "first_seen": "2026-05-27T20:14:19.671941",
+    "count": 1
+  },
+  "name:turtonator|3-star raids": {
+    "first_seen": "2026-05-27T20:14:19.671941",
+    "count": 1
+  },
+  "name:klawf|3-star raids": {
+    "first_seen": "2026-05-27T20:14:19.671941",
+    "count": 1
+  },
+  "name:mega altaria|mega raids": {
+    "first_seen": "2026-05-27T20:14:19.671941",
+    "count": 1
+  },
+  "name:alolan grimer|1-star raids": {
+    "first_seen": "2026-05-27T20:14:19.671941",
+    "count": 1
+  },
+  "name:piloswine|3-star raids": {
+    "first_seen": "2026-05-27T20:14:19.671941",
+    "count": 1
+  },
+  "name:wimpod|1-star raids": {
+    "first_seen": "2026-05-27T20:14:19.671941",
+    "count": 1
+  },
+  "name:clefairy|1-star raids": {
+    "first_seen": "2026-05-27T20:14:19.671941",
+    "count": 1
+  },
+  "id:787|5-star raids": {
+    "first_seen": "2026-05-27T20:14:19.671941",
+    "count": 1
+  }
+}
