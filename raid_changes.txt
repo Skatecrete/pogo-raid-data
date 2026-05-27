@@ -1,3 +1,6 @@
 
-**⭐⭐⭐ 3-Star Raids:**
-  ✅ Added: lapras
+**⚡ Dynamax Tier 1:**
+  ✅ Added: cottonee, pikachu, trapinch
+
+**⚡⚡⚡ Dynamax Tier 3:**
+  ✅ Added: hitmonchan, hitmonlee

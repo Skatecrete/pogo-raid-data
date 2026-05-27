@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-05-26",
+  "last_updated": "2026-05-27",
   "tier1": [
     "Meowth",
     "Clefairy",
@@ -31,6 +31,7 @@
     "Caterpie",
     "Charmander",
     "Combee",
+    "Cottonee",
     "Drilbur",
     "Gastly",
     "Grookey",
@@ -41,6 +42,7 @@
     "Krabby",
     "Omanyte",
     "Pidove",
+    "Pikachu",
     "Ralts",
     "Roggenrola",
     "Rookidee",
@@ -49,6 +51,7 @@
     "Sobble",
     "Spheal",
     "Squirtle",
+    "Trapinch",
     "Trubbish",
     "Woobat",
     "Wooloo"
@@ -66,12 +69,14 @@
     "Cryogonal",
     "Drampa",
     "Falinks",
+    "Hitmonchan",
+    "Hitmonlee",
     "Passimian",
     "Sableye"
   ],
   "dynamax_tier5": [],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-05-26 21:44:41",
+  "gigantamax_last_updated": "2026-05-27 06:20:27",
   "scrapedduck_raids": [
     "clefairy|1-star raids",
     "alolan grimer|1-star raids",
@@ -110,5 +115,5 @@
     "name:shadow onix|3-star raids",
     "name:shadow cresselia|5-star raids"
   ],
-  "last_sent_time": "2026-05-26T21:44:41.504250"
+  "last_sent_time": "2026-05-27T06:20:27.842380"
 }
