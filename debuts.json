@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-05-28 20:14:30",
+  "last_updated": "2026-05-29 02:52:07",
   "debuts": [
     {
       "event_name": "GO Fest 2026 Global",
@@ -139,18 +139,6 @@
         "Blastoise (Pikachu Visor)": "https://www.serebii.net/pokemongo/pokemon/009-pikachuvisor.png",
         "Tauros (Paldean Form - Aqua Breed)": "https://www.serebii.net/pokemongo/pokemon/shiny/128-a.png",
         "Rotom (Wash Rotom)": "https://www.serebii.net/pokemongo/pokemon/shiny/479-w.png"
-      },
-      "event_type": "reallife"
-    },
-    {
-      "event_name": "Pokemon Fossil Museum 2026",
-      "event_date": "May 22nd 2026 - April 11th 2027",
-      "new_pokemon": [
-        "Pikachu (Fossil Museum)"
-      ],
-      "new_shiny": [],
-      "pokemon_images": {
-        "Pikachu (Fossil Museum)": "https://www.serebii.net/pokemongo/pokemon/025-fossil.png"
       },
       "event_type": "reallife"
     }
