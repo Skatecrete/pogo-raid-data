@@ -1,26 +1,24 @@
 {
-  "last_updated": "2026-05-27",
+  "last_updated": "2026-06-02",
   "tier1": [
     "Meowth",
-    "Clefairy",
-    "Electabuzz",
+    "Hatenna",
+    "Chimecho",
     "Ponyta",
-    "Gible",
-    "Alolan Grimer",
-    "Larvitar",
-    "Wimpod"
+    "Electabuzz",
+    "Galarian Stunfisk",
+    "Larvitar"
   ],
   "tier3": [
-    "Tauros (Aqua)",
-    "Turtonator",
     "Lapras",
-    "Klawf",
-    "Piloswine",
+    "Galarian Weezing",
     "Houndoom",
+    "Togetic",
+    "Toxtricity (Amped)",
     "Scyther"
   ],
   "mega": [
-    "Altaria",
+    "Audino",
     "Medicham"
   ],
   "ultra_beasts": [],
@@ -76,7 +74,7 @@
   ],
   "dynamax_tier5": [],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-05-27 20:14:19",
+  "gigantamax_last_updated": "2026-06-02 18:14:14",
   "scrapedduck_raids": [
     "meowth|1-star raids",
     "ponyta|1-star raids",
@@ -87,14 +85,14 @@
     "houndoom|3-star raids",
     "tapu fini|5-star raids",
     "mega medicham|mega raids",
-    "shadow larvitar|1-star raids",
-    "shadow sableye|1-star raids",
-    "shadow spheal|1-star raids",
-    "shadow inkay|1-star raids",
-    "shadow ninetales|3-star raids",
-    "shadow primeape|3-star raids",
-    "shadow onix|3-star raids",
-    "shadow cresselia|5-star raids"
+    "shadow horsea|1-star raids",
+    "shadow porygon|1-star raids",
+    "shadow beldum|1-star raids",
+    "shadow golett|1-star raids",
+    "shadow alolan marowak|3-star raids",
+    "shadow hitmonlee|3-star raids",
+    "shadow gligar|3-star raids",
+    "shadow dialga|5-star raids"
   ],
   "scrapedduck_normalized": [
     "name:meowth|1-star raids",
@@ -106,14 +104,14 @@
     "name:houndoom|3-star raids",
     "id:788|5-star raids",
     "name:mega medicham|mega raids",
-    "name:shadow larvitar|1-star raids",
-    "name:shadow sableye|1-star raids",
-    "name:shadow spheal|1-star raids",
-    "name:shadow inkay|1-star raids",
-    "name:shadow ninetales|3-star raids",
-    "name:shadow primeape|3-star raids",
-    "name:shadow onix|3-star raids",
-    "name:shadow cresselia|5-star raids"
+    "name:shadow horsea|1-star raids",
+    "name:shadow porygon|1-star raids",
+    "name:shadow beldum|1-star raids",
+    "name:shadow golett|1-star raids",
+    "name:shadow alolan marowak|3-star raids",
+    "name:shadow hitmonlee|3-star raids",
+    "name:shadow gligar|3-star raids",
+    "id:483|5-star raids"
   ],
-  "last_sent_time": "2026-05-27T20:14:19.672249"
+  "last_sent_time": "2026-06-02T18:14:14.800867"
 }

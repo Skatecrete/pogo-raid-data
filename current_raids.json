@@ -1,26 +1,24 @@
 {
-  "last_updated": "2026-05-27",
+  "last_updated": "2026-06-02",
   "tier1": [
     "Meowth",
-    "Clefairy",
-    "Electabuzz",
+    "Hatenna",
+    "Chimecho",
     "Ponyta",
-    "Gible",
-    "Alolan Grimer",
-    "Larvitar",
-    "Wimpod"
+    "Electabuzz",
+    "Galarian Stunfisk",
+    "Larvitar"
   ],
   "tier3": [
-    "Tauros (Aqua)",
-    "Turtonator",
     "Lapras",
-    "Klawf",
-    "Piloswine",
+    "Galarian Weezing",
     "Houndoom",
+    "Togetic",
+    "Toxtricity (Amped)",
     "Scyther"
   ],
   "mega": [
-    "Altaria",
+    "Audino",
     "Medicham"
   ],
   "ultra_beasts": [],
@@ -76,5 +74,5 @@
   ],
   "dynamax_tier5": [],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-05-27 20:14:19"
+  "gigantamax_last_updated": "2026-06-02 18:14:14"
 }

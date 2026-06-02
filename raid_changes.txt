@@ -1,12 +1,18 @@
 
 **⭐ 1-Star Raids:**
-  ✅ Added: Electabuzz, Larvitar, Meowth, Ponyta
+  ✅ Added: chimecho, galarian stunfisk, hatenna
 
 **⭐⭐⭐ 3-Star Raids:**
-  ✅ Added: Houndoom, Lapras, Scyther
+  ✅ Added: galarian weezing, togetic, toxtricity (amped)
 
-**⭐⭐⭐⭐⭐ 5-Star Raids:**
-  ✅ Added: Tapu Fini
+**🔴 Mega Raids:**
+  ✅ Added: audino
 
-**🔴 Mega:**
-  ✅ Added: Mega Medicham
+**🌑 Shadow 1-Star:**
+  ✅ Added: Shadow Beldum, Shadow Golett, Shadow Horsea, Shadow Porygon
+
+**🌑 Shadow 3-Star:**
+  ✅ Added: Shadow Alolan Marowak, Shadow Gligar, Shadow Hitmonlee
+
+**🌑 Shadow Legendary:**
+  ✅ Added: Shadow Dialga
