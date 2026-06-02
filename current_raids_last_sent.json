@@ -2,24 +2,26 @@
   "last_updated": "2026-06-02",
   "tier1": [
     "Meowth",
-    "Hatenna",
     "Chimecho",
+    "Larvitar",
     "Ponyta",
-    "Electabuzz",
     "Galarian Stunfisk",
-    "Larvitar"
+    "Electabuzz",
+    "Hatenna",
+    "Galarian Meowth"
   ],
   "tier3": [
+    "Toxtricity (Amped)",
+    "Togetic",
+    "Toxtricity (Low Key)",
     "Lapras",
     "Galarian Weezing",
-    "Houndoom",
-    "Togetic",
-    "Toxtricity (Amped)",
-    "Scyther"
+    "Scyther",
+    "Houndoom"
   ],
   "mega": [
-    "Audino",
-    "Medicham"
+    "Medicham",
+    "Audino"
   ],
   "ultra_beasts": [],
   "dynamax_tier1": [
@@ -74,7 +76,7 @@
   ],
   "dynamax_tier5": [],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-06-02 18:14:14",
+  "gigantamax_last_updated": "2026-06-02 21:31:22",
   "scrapedduck_raids": [
     "meowth|1-star raids",
     "ponyta|1-star raids",
@@ -113,5 +115,5 @@
     "name:shadow gligar|3-star raids",
     "id:483|5-star raids"
   ],
-  "last_sent_time": "2026-06-02T18:14:14.800867"
+  "last_sent_time": "2026-06-02T21:31:22.716761"
 }
