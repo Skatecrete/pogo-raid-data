@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-02",
+  "last_updated": "2026-06-03",
   "tier1": [
     "Meowth",
     "Chimecho",
@@ -14,14 +14,14 @@
     "Toxtricity (Amped)",
     "Togetic",
     "Toxtricity (Low Key)",
-    "Lapras",
-    "Galarian Weezing",
     "Scyther",
-    "Houndoom"
+    "Galarian Weezing",
+    "Houndoom",
+    "Lapras"
   ],
   "mega": [
-    "Medicham",
-    "Audino"
+    "Audino",
+    "Medicham"
   ],
   "ultra_beasts": [],
   "dynamax_tier1": [
@@ -76,17 +76,16 @@
   ],
   "dynamax_tier5": [],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-06-02 21:31:22",
+  "gigantamax_last_updated": "2026-06-03 09:01:20",
   "scrapedduck_raids": [
-    "meowth|1-star raids",
-    "ponyta|1-star raids",
-    "electabuzz|1-star raids",
-    "larvitar|1-star raids",
-    "scyther|3-star raids",
-    "lapras|3-star raids",
-    "houndoom|3-star raids",
-    "tapu fini|5-star raids",
-    "mega medicham|mega raids",
+    "galarian meowth|1-star raids",
+    "chimecho|1-star raids",
+    "galarian stunfisk|1-star raids",
+    "hatenna|1-star raids",
+    "galarian weezing|3-star raids",
+    "togetic|3-star raids",
+    "reshiram|5-star raids",
+    "mega audino|mega raids",
     "shadow horsea|1-star raids",
     "shadow porygon|1-star raids",
     "shadow beldum|1-star raids",
@@ -97,15 +96,14 @@
     "shadow dialga|5-star raids"
   ],
   "scrapedduck_normalized": [
-    "name:meowth|1-star raids",
-    "name:ponyta|1-star raids",
-    "name:electabuzz|1-star raids",
-    "name:larvitar|1-star raids",
-    "name:scyther|3-star raids",
-    "name:lapras|3-star raids",
-    "name:houndoom|3-star raids",
-    "id:788|5-star raids",
-    "name:mega medicham|mega raids",
+    "name:galarian meowth|1-star raids",
+    "name:chimecho|1-star raids",
+    "name:galarian stunfisk|1-star raids",
+    "name:hatenna|1-star raids",
+    "name:galarian weezing|3-star raids",
+    "name:togetic|3-star raids",
+    "name:reshiram|5-star raids",
+    "name:mega audino|mega raids",
     "name:shadow horsea|1-star raids",
     "name:shadow porygon|1-star raids",
     "name:shadow beldum|1-star raids",
@@ -115,5 +113,5 @@
     "name:shadow gligar|3-star raids",
     "id:483|5-star raids"
   ],
-  "last_sent_time": "2026-06-02T21:31:22.716761"
+  "last_sent_time": "2026-06-03T09:01:21.224848"
 }
