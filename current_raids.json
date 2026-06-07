@@ -1,27 +1,19 @@
 {
-  "last_updated": "2026-06-03",
+  "last_updated": "2026-06-07",
   "tier1": [
-    "Meowth",
-    "Chimecho",
-    "Larvitar",
-    "Ponyta",
     "Galarian Stunfisk",
-    "Electabuzz",
-    "Hatenna",
-    "Galarian Meowth"
+    "Chimecho",
+    "Galarian Meowth",
+    "Hatenna"
   ],
   "tier3": [
-    "Toxtricity (Amped)",
     "Togetic",
+    "Toxtricity (Amped)",
     "Toxtricity (Low Key)",
-    "Scyther",
-    "Galarian Weezing",
-    "Houndoom",
-    "Lapras"
+    "Galarian Weezing"
   ],
   "mega": [
-    "Audino",
-    "Medicham"
+    "Audino"
   ],
   "ultra_beasts": [],
   "dynamax_tier1": [
@@ -68,6 +60,7 @@
     "Chansey",
     "Cryogonal",
     "Drampa",
+    "Electabuzz",
     "Falinks",
     "Hitmonchan",
     "Hitmonlee",
@@ -76,5 +69,5 @@
   ],
   "dynamax_tier5": [],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-06-03 09:01:20"
+  "gigantamax_last_updated": "2026-06-07 13:50:08"
 }

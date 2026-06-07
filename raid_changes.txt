@@ -1,12 +1,3 @@
 
-**⭐ 1-Star Raids:**
-  ✅ Added: Chimecho, Galarian Meowth, Galarian Stunfisk, Hatenna
-
-**⭐⭐⭐ 3-Star Raids:**
-  ✅ Added: Galarian Weezing, Togetic
-
-**⭐⭐⭐⭐⭐ 5-Star Raids:**
-  ✅ Added: Reshiram
-
-**🔴 Mega:**
-  ✅ Added: Mega Audino
+**⚡⚡⚡ Dynamax Tier 3:**
+  ✅ Added: electabuzz
