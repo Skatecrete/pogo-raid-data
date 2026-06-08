@@ -1,16 +1,23 @@
 {
-  "last_updated": "2026-06-07",
+  "last_updated": "2026-06-08",
   "tier1": [
     "Galarian Stunfisk",
     "Chimecho",
+    "Hatenna",
+    "Honedge",
+    "Scraggy",
+    "Rockruff",
     "Galarian Meowth",
-    "Hatenna"
+    "Hisuian Growlithe"
   ],
   "tier3": [
-    "Togetic",
     "Toxtricity (Amped)",
-    "Toxtricity (Low Key)",
-    "Galarian Weezing"
+    "Togetic",
+    "Machamp",
+    "Galarian Weezing",
+    "Magcargo",
+    "Scizor",
+    "Toxtricity (Low Key)"
   ],
   "mega": [
     "Audino"
@@ -69,7 +76,7 @@
   ],
   "dynamax_tier5": [],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-06-07 13:50:08",
+  "gigantamax_last_updated": "2026-06-08 23:45:59",
   "scrapedduck_raids": [
     "galarian meowth|1-star raids",
     "chimecho|1-star raids",
@@ -106,5 +113,5 @@
     "name:shadow gligar|3-star raids",
     "id:483|5-star raids"
   ],
-  "last_sent_time": "2026-06-07T13:50:08.733538"
+  "last_sent_time": "2026-06-08T23:45:59.311257"
 }
