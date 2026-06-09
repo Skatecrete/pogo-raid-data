@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-09 14:41:47",
+  "last_updated": "2026-06-09 20:03:38",
   "debuts": [
     {
       "event_name": "GO Fest 2026 Global",
@@ -34,6 +34,18 @@
         "Pikachu (Team Instinct Cap)": "https://www.serebii.net/pokemongo/pokemon/025-instinct.png",
         "Pikachu (Team Mystic Cap)": "https://www.serebii.net/pokemongo/pokemon/025-mystic.png",
         "Pikachu (Team Valor Cap)": "https://www.serebii.net/pokemongo/pokemon/025-valor.png"
+      },
+      "event_type": "global"
+    },
+    {
+      "event_name": "Flying Taxi",
+      "event_date": "June 23rd - June 29th 2026",
+      "new_pokemon": [
+        "Squawkabilly ()"
+      ],
+      "new_shiny": [],
+      "pokemon_images": {
+        "Squawkabilly ()": "https://www.serebii.net/pokemongo/pokemon/931.png"
       },
       "event_type": "global"
     },
