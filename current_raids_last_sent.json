@@ -1,27 +1,19 @@
 {
-  "last_updated": "2026-06-09",
+  "last_updated": "2026-06-10",
   "tier1": [
-    "Galarian Stunfisk",
-    "Chimecho",
-    "Hatenna",
-    "Honedge",
-    "Scraggy",
-    "Rockruff",
     "Hisuian Growlithe",
-    "Galarian Meowth"
+    "Honedge",
+    "Rockruff",
+    "Scraggy"
   ],
   "tier3": [
-    "Toxtricity (Amped)",
-    "Magcargo",
-    "Scizor",
-    "Toxtricity (Low Key)",
-    "Togetic",
     "Machamp",
-    "Galarian Weezing"
+    "Magcargo",
+    "Scizor"
   ],
   "mega": [
-    "Audino",
-    "Lopunny"
+    "Lopunny",
+    "Audino"
   ],
   "ultra_beasts": [],
   "dynamax_tier1": [
@@ -77,14 +69,15 @@
   ],
   "dynamax_tier5": [],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-06-09 19:12:34",
+  "gigantamax_last_updated": "2026-06-10 04:56:59",
   "scrapedduck_raids": [
-    "galarian meowth|1-star raids",
-    "chimecho|1-star raids",
-    "galarian stunfisk|1-star raids",
-    "hatenna|1-star raids",
-    "galarian weezing|3-star raids",
-    "togetic|3-star raids",
+    "rockruff|1-star raids",
+    "scraggy|1-star raids",
+    "honedge|1-star raids",
+    "hisuian growlithe|1-star raids",
+    "machamp|3-star raids",
+    "scizor|3-star raids",
+    "magcargo|3-star raids",
     "reshiram|5-star raids",
     "mega audino|mega raids",
     "shadow horsea|1-star raids",
@@ -97,12 +90,13 @@
     "shadow dialga|5-star raids"
   ],
   "scrapedduck_normalized": [
-    "name:galarian meowth|1-star raids",
-    "name:chimecho|1-star raids",
-    "name:galarian stunfisk|1-star raids",
-    "name:hatenna|1-star raids",
-    "name:galarian weezing|3-star raids",
-    "name:togetic|3-star raids",
+    "name:rockruff|1-star raids",
+    "name:scraggy|1-star raids",
+    "name:honedge|1-star raids",
+    "name:hisuian growlithe|1-star raids",
+    "name:machamp|3-star raids",
+    "name:scizor|3-star raids",
+    "name:magcargo|3-star raids",
     "name:reshiram|5-star raids",
     "name:mega audino|mega raids",
     "name:shadow horsea|1-star raids",
@@ -114,5 +108,5 @@
     "name:shadow gligar|3-star raids",
     "id:483|5-star raids"
   ],
-  "last_sent_time": "2026-06-09T19:12:34.517182"
+  "last_sent_time": "2026-06-10T04:57:00.097163"
 }

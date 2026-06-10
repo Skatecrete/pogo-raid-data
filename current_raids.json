@@ -1,27 +1,19 @@
 {
-  "last_updated": "2026-06-09",
+  "last_updated": "2026-06-10",
   "tier1": [
-    "Galarian Stunfisk",
-    "Chimecho",
-    "Hatenna",
-    "Honedge",
-    "Scraggy",
-    "Rockruff",
     "Hisuian Growlithe",
-    "Galarian Meowth"
+    "Honedge",
+    "Rockruff",
+    "Scraggy"
   ],
   "tier3": [
-    "Toxtricity (Amped)",
-    "Magcargo",
-    "Scizor",
-    "Toxtricity (Low Key)",
-    "Togetic",
     "Machamp",
-    "Galarian Weezing"
+    "Magcargo",
+    "Scizor"
   ],
   "mega": [
-    "Audino",
-    "Lopunny"
+    "Lopunny",
+    "Audino"
   ],
   "ultra_beasts": [],
   "dynamax_tier1": [
@@ -77,5 +69,5 @@
   ],
   "dynamax_tier5": [],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-06-09 19:12:34"
+  "gigantamax_last_updated": "2026-06-10 04:56:59"
 }
