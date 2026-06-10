@@ -1,20 +1,8 @@
 {
   "last_updated": "2026-06-10",
-  "tier1": [
-    "Hisuian Growlithe",
-    "Honedge",
-    "Rockruff",
-    "Scraggy"
-  ],
-  "tier3": [
-    "Machamp",
-    "Magcargo",
-    "Scizor"
-  ],
-  "mega": [
-    "Lopunny",
-    "Audino"
-  ],
+  "tier1": [],
+  "tier3": [],
+  "mega": [],
   "ultra_beasts": [],
   "dynamax_tier1": [
     "Abra",
@@ -39,6 +27,7 @@
     "Roggenrola",
     "Rookidee",
     "Scorbunny",
+    "Search",
     "Skwovet",
     "Sobble",
     "Spheal",
@@ -69,5 +58,5 @@
   ],
   "dynamax_tier5": [],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-06-10 04:56:59"
+  "gigantamax_last_updated": "2026-06-10 19:10:00"
 }
