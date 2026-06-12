@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-11 20:16:01",
+  "last_updated": "2026-06-12 03:35:30",
   "debuts": [
     {
       "event_name": "GO Fest 2026 Global",
@@ -92,41 +92,6 @@
         "Wartortle (Pikachu Visor)": "https://www.serebii.net/pokemongo/pokemon/008-pikachuvisor.png",
         "Blastoise (Pikachu Visor)": "https://www.serebii.net/pokemongo/pokemon/009-pikachuvisor.png",
         "Tauros (Paldean Form - Combat Breed)": "https://www.serebii.net/pokemongo/pokemon/shiny/128-p.png",
-        "Rotom (Wash Rotom)": "https://www.serebii.net/pokemongo/pokemon/shiny/479-w.png"
-      },
-      "event_type": "reallife"
-    },
-    {
-      "event_name": "GO Fest 2026 Chicago",
-      "event_date": "June 5th - 7th 2026",
-      "new_pokemon": [
-        "Zeraora",
-        "Mewtwo  X",
-        "Mewtwo  Y",
-        "Caterpie (Cap)",
-        "Ivysaur (Pikachu Visor)",
-        "Venusaur (Pikachu Visor)",
-        "Charmeleon (Pikachu Visor)",
-        "Charizard (Pikachu Visor)",
-        "Wartortle (Pikachu Visor)",
-        "Blastoise (Pikachu Visor)"
-      ],
-      "new_shiny": [
-        "Tauros (Paldean Form - Blaze Breed)",
-        "Rotom (Wash Rotom)"
-      ],
-      "pokemon_images": {
-        "Zeraora": "https://www.serebii.net/pokemongo/pokemon/807.png",
-        "Mewtwo  X": "https://www.serebii.net/pokemongo/pokemon/150-mx.png",
-        "Mewtwo  Y": "https://www.serebii.net/pokemongo/pokemon/150-my.png",
-        "Caterpie (Cap)": "https://www.serebii.net/pokemongo/pokemon/010-cap.png",
-        "Ivysaur (Pikachu Visor)": "https://www.serebii.net/pokemongo/pokemon/002-pikachuvisor.png",
-        "Venusaur (Pikachu Visor)": "https://www.serebii.net/pokemongo/pokemon/003-pikachuvisor.png",
-        "Charmeleon (Pikachu Visor)": "https://www.serebii.net/pokemongo/pokemon/005-pikachuvisor.png",
-        "Charizard (Pikachu Visor)": "https://www.serebii.net/pokemongo/pokemon/006-pikachuvisor.png",
-        "Wartortle (Pikachu Visor)": "https://www.serebii.net/pokemongo/pokemon/008-pikachuvisor.png",
-        "Blastoise (Pikachu Visor)": "https://www.serebii.net/pokemongo/pokemon/009-pikachuvisor.png",
-        "Tauros (Paldean Form - Blaze Breed)": "https://www.serebii.net/pokemongo/pokemon/shiny/128-b.png",
         "Rotom (Wash Rotom)": "https://www.serebii.net/pokemongo/pokemon/shiny/479-w.png"
       },
       "event_type": "reallife"
