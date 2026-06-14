@@ -1,3 +1,24 @@
 
 **⚡ Dynamax Tier 1:**
   ✅ Added: search
+
+**⭐ 1-Star Raids:**
+  ✅ Added: Hisuian Growlithe, Honedge, Rockruff, Scraggy
+
+**⭐⭐⭐ 3-Star Raids:**
+  ✅ Added: Machamp, Magcargo, Scizor
+
+**⭐⭐⭐⭐⭐ 5-Star Raids:**
+  ✅ Added: Zekrom
+
+**🌑 Shadow 1-Star:**
+  ✅ Added: Shadow Beldum, Shadow Golett, Shadow Horsea, Shadow Porygon
+
+**🌑 Shadow 3-Star:**
+  ✅ Added: Shadow Alolan Marowak, Shadow Gligar, Shadow Hitmonlee
+
+**🌑 Shadow Legendary:**
+  ✅ Added: Shadow Dialga
+
+**🔴 Mega:**
+  ✅ Added: Mega Lopunny
