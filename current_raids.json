@@ -1,0 +1,84 @@
+{
+  "last_updated": "2026-06-14",
+  "tier1": [
+    "Honedge",
+    "Hisuian Growlithe",
+    "Scraggy",
+    "Rockruff"
+  ],
+  "tier3": [
+    "Tauros (Combat)",
+    "Machamp",
+    "Magcargo",
+    "Scizor"
+  ],
+  "tier5": [
+    "Zekrom",
+    "Mewtwo",
+    "Moltres",
+    "Entei"
+  ],
+  "mega": [
+    "Lopunny"
+  ],
+  "primal": [
+    "Primal Kyogre",
+    "Primal Groudon"
+  ],
+  "ultra_beasts": [],
+  "super_mega": [],
+  "dynamax_tier1": [
+    "Abra",
+    "Bounsweet",
+    "Bulbasaur",
+    "Caterpie",
+    "Charmander",
+    "Combee",
+    "Cottonee",
+    "Drilbur",
+    "Gastly",
+    "Grookey",
+    "Growlithe",
+    "Hatenna",
+    "Inkay",
+    "Kabuto",
+    "Krabby",
+    "Omanyte",
+    "Pidove",
+    "Pikachu",
+    "Ralts",
+    "Roggenrola",
+    "Rookidee",
+    "Scorbunny",
+    "Skwovet",
+    "Sobble",
+    "Spheal",
+    "Squirtle",
+    "Trapinch",
+    "Trubbish",
+    "Woobat",
+    "Wooloo"
+  ],
+  "dynamax_tier2": [
+    "Darumaka",
+    "Eevee",
+    "Machop",
+    "Shuckle",
+    "Wailmer"
+  ],
+  "dynamax_tier3": [
+    "Beldum",
+    "Chansey",
+    "Cryogonal",
+    "Drampa",
+    "Electabuzz",
+    "Falinks",
+    "Hitmonchan",
+    "Hitmonlee",
+    "Passimian",
+    "Sableye"
+  ],
+  "dynamax_tier5": [],
+  "gigantamax": [],
+  "gigantamax_last_updated": ""
+}
