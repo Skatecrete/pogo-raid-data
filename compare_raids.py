@@ -22,13 +22,11 @@ POKEMON_ID_MAP = {
     'mewtwo': 150, 'lugia': 249, 'ho-oh': 250, 'celebi': 251,
     'regirock': 377, 'regice': 378, 'registeel': 379,
     'regieleki': 894, 'regidrago': 895,
-    # Add more as needed
 }
 
 def get_pokemon_id(name):
     """Get Pokémon ID from name, case-insensitive"""
     name_lower = name.lower().strip()
-    # Remove common prefixes
     for prefix in ['shadow ', 'mega ', 'd-max ', 'g-max ']:
         if name_lower.startswith(prefix):
             name_lower = name_lower[len(prefix):]
@@ -73,7 +71,6 @@ def get_normalized_raid_key(raid):
     name = raid.get('name', '').strip()
     tier = raid.get('tier', '').strip().lower()
     
-    # Try to get ID for deduplication
     pokemon_id = get_pokemon_id(name)
     if pokemon_id:
         return f"id:{pokemon_id}|{tier}"
@@ -115,7 +112,9 @@ def load_last_sent():
         "tier3": [],
         "tier5": [],
         "mega": [],
+        "primal": [],
         "ultra_beasts": [],
+        "super_mega": [],
         "dynamax_tier1": [],
         "dynamax_tier2": [],
         "dynamax_tier3": [],
@@ -143,6 +142,7 @@ def save_last_sent(snacknap_data, scrapedduck_data):
     data = snacknap_data.copy()
     data['scrapedduck_raids'] = [get_raid_key(r) for r in scrapedduck_data]
     data['scrapedduck_normalized'] = [get_normalized_raid_key(r) for r in scrapedduck_data]
+    data['scrapedduck_raids_objects'] = scrapedduck_data
     data['last_sent_time'] = datetime.now().isoformat()
     safe_json_save(data, LAST_SENT_FILE)
 
@@ -196,6 +196,12 @@ def get_tier_display(tier, name):
     if 'ultra beast' in tier_lower or 'ultra beast' in name_lower:
         return '🌀 Ultra Beast'
 
+    if 'primal' in tier_lower or 'primal' in name_lower:
+        return '🌊 Primal Raid'
+
+    if 'super mega' in tier_lower or 'super mega' in name_lower:
+        return '💫 Super Mega Raid'
+
     if 'mega' in tier_lower or 'mega' in name_lower:
         return '🔴 Mega'
 
@@ -235,7 +241,6 @@ def main():
     removal_tracker = load_removal_tracker()
     last_sent = load_last_sent()
 
-    # Check if this is first run
     is_first_run = last_sent.get('last_updated') == "" or len(last_sent.get('tier1', [])) == 0
 
     with open('current_raids.json', 'r') as f:
@@ -243,11 +248,9 @@ def main():
 
     current_scrapedduck = fetch_scrapedduck_raids()
     
-    # Use normalized keys for deduplication (ID-based when possible)
     current_scrapedduck_normalized = set(get_normalized_raid_key(r) for r in current_scrapedduck)
     last_scrapedduck_normalized = set(last_sent.get('scrapedduck_normalized', []))
 
-    # If first run, save baseline and exit WITHOUT sending notification
     if is_first_run:
         print("First run - saving baseline, no notification", file=sys.stderr)
         save_last_sent(new_snacknap, current_scrapedduck)
@@ -256,13 +259,15 @@ def main():
             print("false")
         return
 
-    categories = ['tier1', 'tier3', 'tier5', 'mega', 'ultra_beasts', 'dynamax_tier1', 'dynamax_tier2', 'dynamax_tier3', 'dynamax_tier5', 'gigantamax']
+    categories = ['tier1', 'tier3', 'tier5', 'mega', 'primal', 'ultra_beasts', 'super_mega', 'dynamax_tier1', 'dynamax_tier2', 'dynamax_tier3', 'dynamax_tier5', 'gigantamax']
     display_names = {
         'tier1': '⭐ 1-Star Raids',
         'tier3': '⭐⭐⭐ 3-Star Raids',
         'tier5': '⭐⭐⭐⭐⭐ 5-Star Raids',
         'mega': '🔴 Mega Raids',
+        'primal': '🌊 PRIMAL RAIDS',
         'ultra_beasts': '🌀 Ultra Beasts',
+        'super_mega': '💫 SUPER MEGA RAIDS',
         'dynamax_tier1': '⚡ Dynamax Tier 1',
         'dynamax_tier2': '⚡⚡ Dynamax Tier 2',
         'dynamax_tier3': '⚡⚡⚡ Dynamax Tier 3',
@@ -273,7 +278,6 @@ def main():
     changes = []
     should_send = False
 
-    # Process SnackNap categories
     for category in categories:
         new_list = new_snacknap.get(category, [])
         last_list = last_sent.get(category, [])
@@ -303,7 +307,6 @@ def main():
             changes.append(f"\n**{display_names[category]}:**")
             changes.extend(category_lines)
 
-    # Process ScrapedDuck using normalized keys (deduplicated by ID)
     scrapedduck_added_normalized = current_scrapedduck_normalized - last_scrapedduck_normalized
     scrapedduck_removed_normalized = last_scrapedduck_normalized - current_scrapedduck_normalized
 
@@ -314,7 +317,6 @@ def main():
     uncategorized_added = []
     uncategorized_removed = []
 
-    # Map normalized keys back to display names
     for raid in current_scrapedduck:
         norm_key = get_normalized_raid_key(raid)
         if norm_key in scrapedduck_added_normalized:
@@ -332,7 +334,6 @@ def main():
                 should_send = True
 
     for key in confirmed_scrapedduck_removals:
-        # Find the original raid to get name/tier
         for raid in last_sent.get('scrapedduck_raids_objects', []):
             if get_normalized_raid_key(raid) == key:
                 name = raid.get('name', '')
@@ -372,7 +373,6 @@ def main():
 
     save_removal_tracker(removal_tracker)
 
-    # Only send notification if there are actual changes
     if changes:
         save_last_sent(new_snacknap, current_scrapedduck)
         print("Updated last_sent file", file=sys.stderr)
