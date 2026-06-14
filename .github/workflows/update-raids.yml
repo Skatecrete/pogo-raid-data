@@ -39,7 +39,11 @@ jobs:
       
     - name: Save current raids.json for comparison
       run: |
-        cp current_raids.json current_raids_old.json
+        if [ -f current_raids.json ]; then
+          cp current_raids.json current_raids_old.json
+        else
+          echo "current_raids.json not found, will create new file"
+        fi
         
     - name: Run SnackNap scraper
       run: python scrape_snacknap.py
