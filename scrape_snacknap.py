@@ -5,7 +5,7 @@ from datetime import datetime
 import re
 
 def scrape_snacknap_raids():
-    """Scrape 1-Star, 3-Star, 5-Star, Mega, Primal, Super Mega, and Ultra Beast raids from snacknap.com/raids"""
+    """Scrape 1-Star, 3-Star, 5-Star, Mega, Primal, and Ultra Beast raids from snacknap.com/raids"""
     print("  📡 Fetching all raid tiers from SnackNap...")
     url = "https://snacknap.com/raids"
     headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'}
@@ -29,46 +29,37 @@ def scrape_snacknap_raids():
         tier_cards = soup.find_all('div', class_='to-card')
         
         for card in tier_cards:
-            # Get tier from data-tier attribute
             data_tier = card.get('data-tier', '')
-            title_elem = card.find('div', class_='to-card-title')
-            title = title_elem.get_text().strip().lower() if title_elem else ""
             
-            # Map to raid_data keys
             current_tier = None
-            if data_tier == 't1' or title == 'tier 1':
+            if data_tier == 't1':
                 current_tier = "tier1"
-            elif data_tier == 't3' or title == 'tier 3':
+            elif data_tier == 't3':
                 current_tier = "tier3"
-            elif data_tier == 't5' or title == 'tier 5':
+            elif data_tier == 't5':
                 current_tier = "tier5"
-            elif 'mega' in title:
+            elif data_tier == 't6':
                 current_tier = "mega"
-            elif 'primal' in title:
+            elif data_tier == 't10':
                 current_tier = "primal"
-            elif 'ultra beast' in title:
-                current_tier = "ultra_beasts"
-            elif 'super mega' in title:
-                current_tier = "super_mega"
             else:
                 continue
             
-            # Find the card body that contains the Pokémon
-            card_body = card.find_next_sibling('div', class_='to-card-body')
+            card_body = card.find('div', class_='to-card-body')
             if not card_body:
                 continue
             
-            # Find the grid container
             grid = card_body.find('div', class_='to-grid')
             if not grid:
                 continue
             
-            # Find all Pokémon in the grid
-            for item in grid.find_all('div', class_='snk-title'):
-                link = item.find('a')
+            for tile in grid.find_all('div', class_='snk-tile'):
+                link = tile.find('a')
                 if link:
                     pokemon_name = link.get('title', '')
                     if pokemon_name and pokemon_name not in raid_data[current_tier]:
+                        if current_tier == "mega":
+                            pokemon_name = pokemon_name.replace('Mega ', '')
                         raid_data[current_tier].append(pokemon_name)
                         print(f"      Added to {current_tier}: {pokemon_name}")
         
@@ -147,7 +138,6 @@ def scrape_snacknap_maxbattles():
                         if clean_name.lower() in type_words:
                             continue
                         
-                        # Skip G-Max entries (they will be handled by gigantamax scraper)
                         if 'G-Max' in clean_name or 'Gigantamax' in clean_name:
                             continue
                         
