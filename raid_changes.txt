@@ -1,12 +1,6 @@
 
 **⭐ 1-Star Raids:**
-  ✅ Added: beldum, kabuto, omanyte
+  ✅ Added: Espurr, Fidough, Rhyhorn, Skiddo
 
 **⭐⭐⭐ 3-Star Raids:**
-  ✅ Added: aerodactyl, druddigon, hisuian decidueye
-
-**⭐⭐⭐⭐⭐ 5-Star Raids:**
-  ✅ Added: necrozma
-
-**🔴 Mega Raids:**
-  ✅ Added: scizor
+  ✅ Added: Alolan Raichu, Flygon, Magcargo
