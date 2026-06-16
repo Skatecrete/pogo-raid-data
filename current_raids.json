@@ -1,26 +1,34 @@
 {
-  "last_updated": "2026-06-15",
+  "last_updated": "2026-06-16",
   "tier1": [
     "Fidough",
     "Rockruff",
+    "Scraggy",
     "Honedge",
-    "Skiddo",
     "Hisuian Growlithe",
+    "Skiddo",
+    "Kabuto",
+    "Beldum",
     "Espurr",
-    "Rhyhorn",
-    "Scraggy"
+    "Omanyte",
+    "Rhyhorn"
   ],
   "tier3": [
+    "Druddigon",
     "Magcargo",
     "Alolan Raichu",
     "Scizor",
+    "Hisuian Decidueye",
     "Machamp",
-    "Flygon"
+    "Flygon",
+    "Aerodactyl"
   ],
   "tier5": [
-    "Zekrom"
+    "Zekrom",
+    "Necrozma"
   ],
   "mega": [
+    "Scizor",
     "Lopunny"
   ],
   "primal": [],
@@ -79,5 +87,5 @@
   ],
   "dynamax_tier5": [],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-06-15 20:38:28"
+  "gigantamax_last_updated": "2026-06-16 18:15:01"
 }

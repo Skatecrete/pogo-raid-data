@@ -1,1 +1,30 @@
-{}
+{
+  "name:rockruff|1-star raids": {
+    "first_seen": "2026-06-16T18:15:02.071045",
+    "count": 1
+  },
+  "name:scraggy|1-star raids": {
+    "first_seen": "2026-06-16T18:15:02.071045",
+    "count": 1
+  },
+  "name:honedge|1-star raids": {
+    "first_seen": "2026-06-16T18:15:02.071045",
+    "count": 1
+  },
+  "name:scizor|3-star raids": {
+    "first_seen": "2026-06-16T18:15:02.071045",
+    "count": 1
+  },
+  "name:hisuian growlithe|1-star raids": {
+    "first_seen": "2026-06-16T18:15:02.071045",
+    "count": 1
+  },
+  "name:magcargo|3-star raids": {
+    "first_seen": "2026-06-16T18:15:02.071045",
+    "count": 1
+  },
+  "name:machamp|3-star raids": {
+    "first_seen": "2026-06-16T18:15:02.071045",
+    "count": 1
+  }
+}
