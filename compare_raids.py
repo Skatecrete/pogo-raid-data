@@ -241,8 +241,6 @@ def main():
     removal_tracker = load_removal_tracker()
     last_sent = load_last_sent()
 
-    is_first_run = last_sent.get('last_updated') == "" or len(last_sent.get('tier1', [])) == 0
-
     with open('current_raids.json', 'r') as f:
         new_snacknap = json.load(f)
 
@@ -250,6 +248,8 @@ def main():
     
     current_scrapedduck_normalized = set(get_normalized_raid_key(r) for r in current_scrapedduck)
     last_scrapedduck_normalized = set(last_sent.get('scrapedduck_normalized', []))
+
+    is_first_run = last_sent.get('last_updated') == "" or len(last_sent.get('tier1', [])) == 0
 
     if is_first_run:
         print("First run - saving baseline, no notification", file=sys.stderr)
