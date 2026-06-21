@@ -307,23 +307,27 @@ def main():
             changes.append(f"\n**{display_names[category]}:**")
             changes.extend(category_lines)
 
-    scrapedduck_added_normalized = current_scrapedduck_normalized - last_scrapedduck_normalized
-    scrapedduck_removed_normalized = last_scrapedduck_normalized - current_scrapedduck_normalized
+    # Process ScrapedDuck - ONLY FOR SHADOW RAIDS
+scrapedduck_added_normalized = current_scrapedduck_normalized - last_scrapedduck_normalized
+scrapedduck_removed_normalized = last_scrapedduck_normalized - current_scrapedduck_normalized
 
-    confirmed_scrapedduck_removals, removal_tracker = get_confirmed_removals(scrapedduck_removed_normalized, removal_tracker)
+confirmed_scrapedduck_removals, removal_tracker = get_confirmed_removals(scrapedduck_removed_normalized, removal_tracker)
 
-    added_by_tier = {}
-    removed_by_tier = {}
-    uncategorized_added = []
-    uncategorized_removed = []
+added_by_tier = {}
+removed_by_tier = {}
+uncategorized_added = []
+uncategorized_removed = []
 
-    for raid in current_scrapedduck:
-        norm_key = get_normalized_raid_key(raid)
-        if norm_key in scrapedduck_added_normalized:
-            name = raid.get('name', '')
-            tier = raid.get('tier', '')
+# ONLY process Shadow raids from ScrapedDuck
+for raid in current_scrapedduck:
+    norm_key = get_normalized_raid_key(raid)
+    if norm_key in scrapedduck_added_normalized:
+        name = raid.get('name', '')
+        tier = raid.get('tier', '')
+        
+        # ONLY include Shadow raids
+        if 'shadow' in name.lower() or 'shadow' in tier.lower():
             display_tier = get_tier_display(tier, name)
-
             if display_tier:
                 if display_tier not in added_by_tier:
                     added_by_tier[display_tier] = []
@@ -333,13 +337,15 @@ def main():
                 uncategorized_added.append(f"{name} ({tier})")
                 should_send = True
 
-    for key in confirmed_scrapedduck_removals:
-        for raid in last_sent.get('scrapedduck_raids_objects', []):
-            if get_normalized_raid_key(raid) == key:
-                name = raid.get('name', '')
-                tier = raid.get('tier', '')
+for key in confirmed_scrapedduck_removals:
+    for raid in last_sent.get('scrapedduck_raids_objects', []):
+        if get_normalized_raid_key(raid) == key:
+            name = raid.get('name', '')
+            tier = raid.get('tier', '')
+            
+            # ONLY include Shadow raids
+            if 'shadow' in name.lower() or 'shadow' in tier.lower():
                 display_tier = get_tier_display(tier, name)
-
                 if display_tier:
                     if display_tier not in removed_by_tier:
                         removed_by_tier[display_tier] = []
@@ -348,7 +354,7 @@ def main():
                 else:
                     uncategorized_removed.append(f"{name} ({tier})")
                     should_send = True
-                break
+            break
 
     for tier, names in sorted(added_by_tier.items()):
         changes.append(f"\n**{tier}:**")
