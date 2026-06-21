@@ -1,29 +1,18 @@
 {
-  "last_updated": "2026-06-17",
+  "last_updated": "2026-06-21",
   "tier1": [
-    "Fidough",
-    "Skiddo",
-    "Kabuto",
-    "Beldum",
-    "Espurr",
     "Omanyte",
-    "Rhyhorn",
+    "Beldum",
+    "Kabuto",
     "Rockruff"
   ],
   "tier3": [
-    "Magcargo",
     "Druddigon",
-    "Alolan Raichu",
     "Hisuian Decidueye",
-    "Flygon",
     "Aerodactyl"
   ],
-  "tier5": [
-    "Necrozma",
-    "Zekrom"
-  ],
+  "tier5": [],
   "mega": [
-    "Lopunny",
     "Scizor"
   ],
   "primal": [],
@@ -42,6 +31,7 @@
     "Grookey",
     "Growlithe",
     "Hatenna",
+    "Hoothoot",
     "Inkay",
     "Kabuto",
     "Krabby",
@@ -82,7 +72,7 @@
   ],
   "dynamax_tier5": [],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-06-17 18:41:09",
+  "gigantamax_last_updated": "2026-06-21 14:08:35",
   "scrapedduck_raids": [
     "omanyte|1-star raids",
     "kabuto|1-star raids",
@@ -687,5 +677,5 @@
       "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm483.icon.png"
     }
   ],
-  "last_sent_time": "2026-06-17T18:41:09.628815"
+  "last_sent_time": "2026-06-21T14:08:35.559299"
 }
