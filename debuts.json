@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-22 16:49:04",
+  "last_updated": "2026-06-22 20:41:06",
   "debuts": [
     {
       "event_name": "GO Fest 2026 Global",
@@ -53,11 +53,17 @@
       "event_name": "Flying Taxi",
       "event_date": "June 23rd - June 29th 2026",
       "new_pokemon": [
-        "Squawkabilly ()"
+        "Squawkabilly (Green Plumage)",
+        "Squawkabilly (Blue Plumage)",
+        "Squawkabilly (Yellow Plumage)",
+        "Squawkabilly (White Plumage)"
       ],
       "new_shiny": [],
       "pokemon_images": {
-        "Squawkabilly ()": "https://www.serebii.net/pokemongo/pokemon/931.png"
+        "Squawkabilly (Green Plumage)": "https://www.serebii.net/pokemongo/pokemon/931.png",
+        "Squawkabilly (Blue Plumage)": "https://www.serebii.net/pokemongo/pokemon/931-b.png",
+        "Squawkabilly (Yellow Plumage)": "https://www.serebii.net/pokemongo/pokemon/931-y.png",
+        "Squawkabilly (White Plumage)": "https://www.serebii.net/pokemongo/pokemon/931-w.png"
       },
       "event_type": "global"
     }
