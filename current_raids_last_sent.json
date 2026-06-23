@@ -6,20 +6,21 @@
     "Swablu",
     "Rockruff",
     "Starly",
-    "Kabuto",
-    "Beldum"
+    "Beldum",
+    "Kabuto"
   ],
   "tier3": [
     "Hisuian Braviary",
-    "Corvisquire",
-    "Aerodactyl",
-    "Druddigon",
     "Bombirdier",
-    "Hisuian Decidueye"
+    "Druddigon",
+    "Hisuian Decidueye",
+    "Aerodactyl",
+    "Corvisquire"
   ],
   "tier5": [],
   "mega": [
-    "Scizor"
+    "Scizor",
+    "Pidgeot"
   ],
   "primal": [],
   "ultra_beasts": [],
@@ -78,7 +79,7 @@
   ],
   "dynamax_tier5": [],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-06-23 01:29:59",
+  "gigantamax_last_updated": "2026-06-23 20:02:30",
   "scrapedduck_raids": [
     "omanyte|1-star raids",
     "kabuto|1-star raids",
@@ -683,5 +684,5 @@
       "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm483.icon.png"
     }
   ],
-  "last_sent_time": "2026-06-23T01:29:59.334972"
+  "last_sent_time": "2026-06-23T20:02:31.055070"
 }

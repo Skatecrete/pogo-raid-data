@@ -6,20 +6,21 @@
     "Swablu",
     "Rockruff",
     "Starly",
-    "Kabuto",
-    "Beldum"
+    "Beldum",
+    "Kabuto"
   ],
   "tier3": [
     "Hisuian Braviary",
-    "Corvisquire",
-    "Aerodactyl",
-    "Druddigon",
     "Bombirdier",
-    "Hisuian Decidueye"
+    "Druddigon",
+    "Hisuian Decidueye",
+    "Aerodactyl",
+    "Corvisquire"
   ],
   "tier5": [],
   "mega": [
-    "Scizor"
+    "Scizor",
+    "Pidgeot"
   ],
   "primal": [],
   "ultra_beasts": [],
@@ -78,5 +79,5 @@
   ],
   "dynamax_tier5": [],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-06-23 01:29:59"
+  "gigantamax_last_updated": "2026-06-23 20:02:30"
 }
