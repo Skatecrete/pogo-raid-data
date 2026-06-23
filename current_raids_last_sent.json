@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-22",
+  "last_updated": "2026-06-23",
   "tier1": [
     "Omanyte",
     "Vullaby",
@@ -14,6 +14,7 @@
     "Corvisquire",
     "Aerodactyl",
     "Druddigon",
+    "Bombirdier",
     "Hisuian Decidueye"
   ],
   "tier5": [],
@@ -77,7 +78,7 @@
   ],
   "dynamax_tier5": [],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-06-22 23:18:06",
+  "gigantamax_last_updated": "2026-06-23 01:29:59",
   "scrapedduck_raids": [
     "omanyte|1-star raids",
     "kabuto|1-star raids",
@@ -682,5 +683,5 @@
       "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm483.icon.png"
     }
   ],
-  "last_sent_time": "2026-06-22T23:18:07.181767"
+  "last_sent_time": "2026-06-23T01:29:59.334972"
 }
