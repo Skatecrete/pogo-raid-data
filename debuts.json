@@ -1,6 +1,18 @@
 {
-  "last_updated": "2026-06-26 08:58:01",
+  "last_updated": "2026-06-26 14:16:34",
   "debuts": [
+    {
+      "event_name": "Willow's Birthday Research",
+      "event_date": "July 21st 2026",
+      "new_pokemon": [
+        "Pikachu (Professor Willow's Assistant)"
+      ],
+      "new_shiny": [],
+      "pokemon_images": {
+        "Pikachu (Professor Willow's Assistant)": "https://www.serebii.net/pokemongo/pokemon/025-willow.png"
+      },
+      "event_type": "global"
+    },
     {
       "event_name": "GO Fest 2026 Global",
       "event_date": "July 11th - 12th 2026",
