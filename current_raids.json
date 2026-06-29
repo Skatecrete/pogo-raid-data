@@ -1,25 +1,21 @@
 {
-  "last_updated": "2026-06-23",
+  "last_updated": "2026-06-29",
   "tier1": [
-    "Omanyte",
-    "Vullaby",
-    "Swablu",
-    "Rockruff",
+    "Gligar",
     "Starly",
-    "Beldum",
-    "Kabuto"
+    "Swablu",
+    "Vullaby",
+    "Rookidee"
   ],
   "tier3": [
-    "Hisuian Braviary",
+    "Corvisquire",
+    "Noctowl",
     "Bombirdier",
-    "Druddigon",
-    "Hisuian Decidueye",
-    "Aerodactyl",
-    "Corvisquire"
+    "Hisuian Braviary",
+    "Staraptor"
   ],
   "tier5": [],
   "mega": [
-    "Scizor",
     "Pidgeot"
   ],
   "primal": [],
@@ -37,8 +33,6 @@
     "Gastly",
     "Grookey",
     "Growlithe",
-    "Hatenna",
-    "Hoothoot",
     "Inkay",
     "Kabuto",
     "Krabby",
@@ -46,13 +40,11 @@
     "Pidove",
     "Pikachu",
     "Ralts",
-    "Roggenrola",
     "Rookidee",
     "Scorbunny",
     "Search",
     "Skwovet",
     "Sobble",
-    "Spheal",
     "Squirtle",
     "Trapinch",
     "Trubbish",
@@ -79,5 +71,5 @@
   ],
   "dynamax_tier5": [],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-06-23 20:02:30"
+  "gigantamax_last_updated": "2026-06-29 18:10:45"
 }
