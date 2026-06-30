@@ -1,6 +1,9 @@
 
 **⭐ 1-Star Raids:**
-  ✅ Added: gligar, rookidee
+  ✅ Added: alolan vulpix, gastly, rufflet, vulpix
 
-**⭐⭐⭐ 3-Star Raids:**
-  ✅ Added: noctowl, staraptor
+**⭐⭐⭐⭐⭐ 5-Star Raids:**
+  ✅ Added: moltres
+
+**🔴 Mega Raids:**
+  ✅ Added: lucario

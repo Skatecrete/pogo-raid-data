@@ -1,75 +1,43 @@
 {
-  "last_updated": "2026-06-29",
+  "last_updated": "2026-06-30",
   "tier1": [
-    "Gligar",
-    "Starly",
+    "Alolan Vulpix",
+    "Gastly",
     "Swablu",
     "Vullaby",
-    "Rookidee"
+    "Rookidee",
+    "Rufflet",
+    "Vulpix",
+    "Starly",
+    "Gligar"
   ],
   "tier3": [
+    "Staraptor",
     "Corvisquire",
-    "Noctowl",
-    "Bombirdier",
     "Hisuian Braviary",
-    "Staraptor"
+    "Bombirdier",
+    "Noctowl"
   ],
-  "tier5": [],
+  "tier5": [
+    "Moltres"
+  ],
   "mega": [
-    "Pidgeot"
+    "Pidgeot",
+    "Lucario"
   ],
   "primal": [],
   "ultra_beasts": [],
   "super_mega": [],
   "dynamax_tier1": [
-    "Abra",
-    "Bounsweet",
-    "Bulbasaur",
-    "Caterpie",
-    "Charmander",
-    "Combee",
-    "Cottonee",
-    "Drilbur",
-    "Gastly",
-    "Grookey",
-    "Growlithe",
-    "Inkay",
-    "Kabuto",
-    "Krabby",
-    "Omanyte",
-    "Pidove",
-    "Pikachu",
-    "Ralts",
     "Rookidee",
-    "Scorbunny",
-    "Search",
-    "Skwovet",
-    "Sobble",
-    "Squirtle",
-    "Trapinch",
-    "Trubbish",
-    "Woobat",
-    "Wooloo"
+    "Search"
   ],
   "dynamax_tier2": [
-    "Darumaka",
-    "Eevee",
     "Machop",
-    "Shuckle",
-    "Wailmer"
+    "Shuckle"
   ],
-  "dynamax_tier3": [
-    "Beldum",
-    "Chansey",
-    "Cryogonal",
-    "Drampa",
-    "Falinks",
-    "Hitmonchan",
-    "Hitmonlee",
-    "Passimian",
-    "Sableye"
-  ],
+  "dynamax_tier3": [],
   "dynamax_tier5": [],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-06-29 18:10:45"
+  "gigantamax_last_updated": "2026-06-30 18:18:54"
 }

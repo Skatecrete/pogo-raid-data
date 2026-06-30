@@ -1,84 +1,46 @@
 {
-  "last_updated": "2026-06-29",
+  "last_updated": "2026-06-30",
   "tier1": [
-    "Gligar",
-    "Starly",
+    "Alolan Vulpix",
+    "Gastly",
     "Swablu",
     "Vullaby",
-    "Rookidee"
+    "Rookidee",
+    "Rufflet",
+    "Vulpix",
+    "Starly",
+    "Gligar"
   ],
   "tier3": [
+    "Staraptor",
     "Corvisquire",
-    "Noctowl",
-    "Bombirdier",
     "Hisuian Braviary",
-    "Staraptor"
+    "Bombirdier",
+    "Noctowl"
   ],
-  "tier5": [],
+  "tier5": [
+    "Moltres"
+  ],
   "mega": [
-    "Pidgeot"
+    "Pidgeot",
+    "Lucario"
   ],
   "primal": [],
   "ultra_beasts": [],
   "super_mega": [],
   "dynamax_tier1": [
-    "Abra",
-    "Bounsweet",
-    "Bulbasaur",
-    "Caterpie",
-    "Charmander",
-    "Combee",
-    "Cottonee",
-    "Drilbur",
-    "Gastly",
-    "Grookey",
-    "Growlithe",
-    "Inkay",
-    "Kabuto",
-    "Krabby",
-    "Omanyte",
-    "Pidove",
-    "Pikachu",
-    "Ralts",
     "Rookidee",
-    "Scorbunny",
-    "Search",
-    "Skwovet",
-    "Sobble",
-    "Squirtle",
-    "Trapinch",
-    "Trubbish",
-    "Woobat",
-    "Wooloo"
+    "Search"
   ],
   "dynamax_tier2": [
-    "Darumaka",
-    "Eevee",
     "Machop",
-    "Shuckle",
-    "Wailmer"
+    "Shuckle"
   ],
-  "dynamax_tier3": [
-    "Beldum",
-    "Chansey",
-    "Cryogonal",
-    "Drampa",
-    "Falinks",
-    "Hitmonchan",
-    "Hitmonlee",
-    "Passimian",
-    "Sableye"
-  ],
+  "dynamax_tier3": [],
   "dynamax_tier5": [],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-06-29 18:10:45",
+  "gigantamax_last_updated": "2026-06-30 18:18:54",
   "scrapedduck_raids": [
-    "swablu|1-star raids",
-    "starly|1-star raids",
-    "vullaby|1-star raids",
-    "hisuian braviary|3-star raids",
-    "corvisquire|3-star raids",
-    "bombirdier|3-star raids",
     "celesteela|5-star raids",
     "kartana|5-star raids",
     "mega pidgeot|mega raids",
@@ -92,12 +54,6 @@
     "shadow dialga|5-star raids"
   ],
   "scrapedduck_normalized": [
-    "name:swablu|1-star raids",
-    "name:starly|1-star raids",
-    "name:vullaby|1-star raids",
-    "name:hisuian braviary|3-star raids",
-    "name:corvisquire|3-star raids",
-    "name:bombirdier|3-star raids",
     "id:797|5-star raids",
     "id:798|5-star raids",
     "name:mega pidgeot|mega raids",
@@ -111,210 +67,6 @@
     "id:483|5-star raids"
   ],
   "scrapedduck_raids_objects": [
-    {
-      "name": "Swablu",
-      "tier": "1-Star Raids",
-      "canBeShiny": true,
-      "types": [
-        {
-          "name": "normal",
-          "image": "https://leekduck.com/assets/img/types/normal.png"
-        },
-        {
-          "name": "flying",
-          "image": "https://leekduck.com/assets/img/types/flying.png"
-        }
-      ],
-      "combatPower": {
-        "normal": {
-          "min": 429,
-          "max": 470
-        },
-        "boosted": {
-          "min": 537,
-          "max": 588
-        }
-      },
-      "boostedWeather": [
-        {
-          "name": "partly cloudy",
-          "image": "https://leekduck.com/assets/img/weather/partlycloudy.png"
-        },
-        {
-          "name": "windy",
-          "image": "https://leekduck.com/assets/img/weather/windy.png"
-        }
-      ],
-      "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm333.icon.png"
-    },
-    {
-      "name": "Starly",
-      "tier": "1-Star Raids",
-      "canBeShiny": true,
-      "types": [
-        {
-          "name": "normal",
-          "image": "https://leekduck.com/assets/img/types/normal.png"
-        },
-        {
-          "name": "flying",
-          "image": "https://leekduck.com/assets/img/types/flying.png"
-        }
-      ],
-      "combatPower": {
-        "normal": {
-          "min": 372,
-          "max": 410
-        },
-        "boosted": {
-          "min": 465,
-          "max": 513
-        }
-      },
-      "boostedWeather": [
-        {
-          "name": "partly cloudy",
-          "image": "https://leekduck.com/assets/img/weather/partlycloudy.png"
-        },
-        {
-          "name": "windy",
-          "image": "https://leekduck.com/assets/img/weather/windy.png"
-        }
-      ],
-      "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm396.icon.png"
-    },
-    {
-      "name": "Vullaby",
-      "tier": "1-Star Raids",
-      "canBeShiny": true,
-      "types": [
-        {
-          "name": "dark",
-          "image": "https://leekduck.com/assets/img/types/dark.png"
-        },
-        {
-          "name": "flying",
-          "image": "https://leekduck.com/assets/img/types/flying.png"
-        }
-      ],
-      "combatPower": {
-        "normal": {
-          "min": 675,
-          "max": 726
-        },
-        "boosted": {
-          "min": 844,
-          "max": 908
-        }
-      },
-      "boostedWeather": [
-        {
-          "name": "fog",
-          "image": "https://leekduck.com/assets/img/weather/foggy.png"
-        },
-        {
-          "name": "windy",
-          "image": "https://leekduck.com/assets/img/weather/windy.png"
-        }
-      ],
-      "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm629.icon.png"
-    },
-    {
-      "name": "Hisuian Braviary",
-      "tier": "3-Star Raids",
-      "canBeShiny": true,
-      "types": [
-        {
-          "name": "psychic",
-          "image": "https://leekduck.com/assets/img/types/psychic.png"
-        },
-        {
-          "name": "flying",
-          "image": "https://leekduck.com/assets/img/types/flying.png"
-        }
-      ],
-      "combatPower": {
-        "normal": {
-          "min": 1531,
-          "max": 1608
-        },
-        "boosted": {
-          "min": 1914,
-          "max": 2010
-        }
-      },
-      "boostedWeather": [
-        {
-          "name": "windy",
-          "image": "https://leekduck.com/assets/img/weather/windy.png"
-        }
-      ],
-      "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm628.fHISUIAN.icon.png"
-    },
-    {
-      "name": "Corvisquire",
-      "tier": "3-Star Raids",
-      "canBeShiny": true,
-      "types": [
-        {
-          "name": "flying",
-          "image": "https://leekduck.com/assets/img/types/flying.png"
-        }
-      ],
-      "combatPower": {
-        "normal": {
-          "min": 727,
-          "max": 779
-        },
-        "boosted": {
-          "min": 908,
-          "max": 974
-        }
-      },
-      "boostedWeather": [
-        {
-          "name": "windy",
-          "image": "https://leekduck.com/assets/img/weather/windy.png"
-        }
-      ],
-      "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm822.icon.png"
-    },
-    {
-      "name": "Bombirdier",
-      "tier": "3-Star Raids",
-      "canBeShiny": true,
-      "types": [
-        {
-          "name": "flying",
-          "image": "https://leekduck.com/assets/img/types/flying.png"
-        },
-        {
-          "name": "dark",
-          "image": "https://leekduck.com/assets/img/types/dark.png"
-        }
-      ],
-      "combatPower": {
-        "normal": {
-          "min": 1351,
-          "max": 1421
-        },
-        "boosted": {
-          "min": 1688,
-          "max": 1777
-        }
-      },
-      "boostedWeather": [
-        {
-          "name": "windy",
-          "image": "https://leekduck.com/assets/img/weather/windy.png"
-        },
-        {
-          "name": "fog",
-          "image": "https://leekduck.com/assets/img/weather/foggy.png"
-        }
-      ],
-      "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm962.icon.png"
-    },
     {
       "name": "Celesteela",
       "tier": "5-Star Raids",
@@ -688,5 +440,5 @@
       "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm483.icon.png"
     }
   ],
-  "last_sent_time": "2026-06-29T18:10:45.999146"
+  "last_sent_time": "2026-06-30T18:18:55.095125"
 }

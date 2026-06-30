@@ -1,38 +1,26 @@
 {
-  "name:omanyte|1-star raids": {
-    "first_seen": "2026-06-29T18:10:45.998920",
+  "name:vullaby|1-star raids": {
+    "first_seen": "2026-06-30T18:18:55.094878",
     "count": 1
   },
-  "name:aerodactyl|3-star raids": {
-    "first_seen": "2026-06-29T18:10:45.998920",
+  "name:hisuian braviary|3-star raids": {
+    "first_seen": "2026-06-30T18:18:55.094878",
     "count": 1
   },
-  "name:hisuian decidueye|3-star raids": {
-    "first_seen": "2026-06-29T18:10:45.998920",
+  "name:starly|1-star raids": {
+    "first_seen": "2026-06-30T18:18:55.094878",
     "count": 1
   },
-  "name:mega scizor|mega raids": {
-    "first_seen": "2026-06-29T18:10:45.998920",
+  "name:corvisquire|3-star raids": {
+    "first_seen": "2026-06-30T18:18:55.094878",
     "count": 1
   },
-  "name:druddigon|3-star raids": {
-    "first_seen": "2026-06-29T18:10:45.998920",
+  "name:bombirdier|3-star raids": {
+    "first_seen": "2026-06-30T18:18:55.094878",
     "count": 1
   },
-  "name:rockruff|1-star raids": {
-    "first_seen": "2026-06-29T18:10:45.998920",
-    "count": 1
-  },
-  "name:kabuto|1-star raids": {
-    "first_seen": "2026-06-29T18:10:45.998920",
-    "count": 1
-  },
-  "name:beldum|1-star raids": {
-    "first_seen": "2026-06-29T18:10:45.998920",
-    "count": 1
-  },
-  "name:necrozma|5-star raids": {
-    "first_seen": "2026-06-29T18:10:45.998920",
+  "name:swablu|1-star raids": {
+    "first_seen": "2026-06-30T18:18:55.094878",
     "count": 1
   }
 }
