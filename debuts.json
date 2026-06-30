@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-29 19:51:40",
+  "last_updated": "2026-06-30 02:56:52",
   "debuts": [
     {
       "event_name": "Willow's Birthday Research",
@@ -58,24 +58,6 @@
       "new_shiny": [],
       "pokemon_images": {
         "Gimmighoul (Roaming Form (10th Anniversary Coin))": "https://www.serebii.net/pokemongo/pokemon/999-r.png"
-      },
-      "event_type": "global"
-    },
-    {
-      "event_name": "Flying Taxi",
-      "event_date": "June 23rd - June 29th 2026",
-      "new_pokemon": [
-        "Squawkabilly (Green Plumage)",
-        "Squawkabilly (Blue Plumage)",
-        "Squawkabilly (Yellow Plumage)",
-        "Squawkabilly (White Plumage)"
-      ],
-      "new_shiny": [],
-      "pokemon_images": {
-        "Squawkabilly (Green Plumage)": "https://www.serebii.net/pokemongo/pokemon/931.png",
-        "Squawkabilly (Blue Plumage)": "https://www.serebii.net/pokemongo/pokemon/931-b.png",
-        "Squawkabilly (Yellow Plumage)": "https://www.serebii.net/pokemongo/pokemon/931-y.png",
-        "Squawkabilly (White Plumage)": "https://www.serebii.net/pokemongo/pokemon/931-w.png"
       },
       "event_type": "global"
     }
