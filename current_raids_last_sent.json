@@ -1,29 +1,34 @@
 {
   "last_updated": "2026-06-30",
   "tier1": [
-    "Alolan Vulpix",
-    "Gastly",
-    "Swablu",
     "Vullaby",
-    "Rookidee",
-    "Rufflet",
-    "Vulpix",
     "Starly",
-    "Gligar"
+    "Swablu",
+    "Rookidee",
+    "Gastly",
+    "Rufflet",
+    "Gligar",
+    "Vulpix",
+    "Alolan Vulpix"
   ],
   "tier3": [
-    "Staraptor",
+    "Scyther",
     "Corvisquire",
-    "Hisuian Braviary",
+    "Noctowl",
     "Bombirdier",
-    "Noctowl"
+    "Gyarados",
+    "Hisuian Braviary",
+    "Snorlax",
+    "Staraptor"
   ],
   "tier5": [
+    "Articuno",
+    "Zapdos",
     "Moltres"
   ],
   "mega": [
-    "Pidgeot",
-    "Lucario"
+    "Lucario",
+    "Pidgeot"
   ],
   "primal": [],
   "ultra_beasts": [],
@@ -39,7 +44,7 @@
   "dynamax_tier3": [],
   "dynamax_tier5": [],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-06-30 18:18:54",
+  "gigantamax_last_updated": "2026-06-30 20:29:20",
   "scrapedduck_raids": [
     "celesteela|5-star raids",
     "kartana|5-star raids",
@@ -440,5 +445,5 @@
       "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm483.icon.png"
     }
   ],
-  "last_sent_time": "2026-06-30T18:18:55.095125"
+  "last_sent_time": "2026-06-30T20:29:21.035618"
 }

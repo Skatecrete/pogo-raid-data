@@ -1,9 +1,6 @@
 
-**⭐ 1-Star Raids:**
-  ✅ Added: alolan vulpix, gastly, rufflet, vulpix
+**⭐⭐⭐ 3-Star Raids:**
+  ✅ Added: gyarados, scyther, snorlax
 
 **⭐⭐⭐⭐⭐ 5-Star Raids:**
-  ✅ Added: moltres
-
-**🔴 Mega Raids:**
-  ✅ Added: lucario
+  ✅ Added: articuno, zapdos
