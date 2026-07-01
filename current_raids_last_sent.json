@@ -1,30 +1,27 @@
 {
-  "last_updated": "2026-06-30",
+  "last_updated": "2026-07-01",
   "tier1": [
-    "Vullaby",
-    "Starly",
-    "Swablu",
     "Rookidee",
     "Gastly",
-    "Rufflet",
+    "Swablu",
+    "Vullaby",
     "Gligar",
     "Vulpix",
-    "Alolan Vulpix"
+    "Alolan Vulpix",
+    "Rufflet"
   ],
   "tier3": [
-    "Scyther",
-    "Corvisquire",
     "Noctowl",
-    "Bombirdier",
     "Gyarados",
+    "Staraptor",
     "Hisuian Braviary",
     "Snorlax",
-    "Staraptor"
+    "Scyther"
   ],
   "tier5": [
-    "Articuno",
+    "Moltres",
     "Zapdos",
-    "Moltres"
+    "Articuno"
   ],
   "mega": [
     "Lucario",
@@ -44,11 +41,12 @@
   "dynamax_tier3": [],
   "dynamax_tier5": [],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-06-30 20:29:20",
+  "gigantamax_last_updated": "2026-07-01 18:24:33",
   "scrapedduck_raids": [
-    "celesteela|5-star raids",
-    "kartana|5-star raids",
-    "mega pidgeot|mega raids",
+    "articuno|5-star raids",
+    "zapdos|5-star raids",
+    "moltres|5-star raids",
+    "mega lucario|mega raids",
     "shadow horsea|1-star raids",
     "shadow porygon|1-star raids",
     "shadow beldum|1-star raids",
@@ -56,12 +54,13 @@
     "shadow alolan marowak|3-star raids",
     "shadow hitmonlee|3-star raids",
     "shadow gligar|3-star raids",
-    "shadow dialga|5-star raids"
+    "shadow palkia|5-star raids"
   ],
   "scrapedduck_normalized": [
-    "id:797|5-star raids",
-    "id:798|5-star raids",
-    "name:mega pidgeot|mega raids",
+    "name:articuno|5-star raids",
+    "name:zapdos|5-star raids",
+    "name:moltres|5-star raids",
+    "name:mega lucario|mega raids",
     "name:shadow horsea|1-star raids",
     "name:shadow porygon|1-star raids",
     "name:shadow beldum|1-star raids",
@@ -69,17 +68,17 @@
     "name:shadow alolan marowak|3-star raids",
     "name:shadow hitmonlee|3-star raids",
     "name:shadow gligar|3-star raids",
-    "id:483|5-star raids"
+    "id:484|5-star raids"
   ],
   "scrapedduck_raids_objects": [
     {
-      "name": "Celesteela",
+      "name": "Articuno",
       "tier": "5-Star Raids",
       "canBeShiny": true,
       "types": [
         {
-          "name": "steel",
-          "image": "https://leekduck.com/assets/img/types/steel.png"
+          "name": "ice",
+          "image": "https://leekduck.com/assets/img/types/ice.png"
         },
         {
           "name": "flying",
@@ -88,12 +87,12 @@
       ],
       "combatPower": {
         "normal": {
-          "min": 1694,
-          "max": 1772
+          "min": 1665,
+          "max": 1743
         },
         "boosted": {
-          "min": 2117,
-          "max": 2216
+          "min": 2082,
+          "max": 2179
         }
       },
       "boostedWeather": [
@@ -106,30 +105,66 @@
           "image": "https://leekduck.com/assets/img/weather/windy.png"
         }
       ],
-      "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm797.icon.png"
+      "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm144.icon.png"
     },
     {
-      "name": "Kartana",
+      "name": "Zapdos",
       "tier": "5-Star Raids",
       "canBeShiny": true,
       "types": [
         {
-          "name": "grass",
-          "image": "https://leekduck.com/assets/img/types/grass.png"
+          "name": "electric",
+          "image": "https://leekduck.com/assets/img/types/electric.png"
         },
         {
-          "name": "steel",
-          "image": "https://leekduck.com/assets/img/types/steel.png"
+          "name": "flying",
+          "image": "https://leekduck.com/assets/img/types/flying.png"
         }
       ],
       "combatPower": {
         "normal": {
-          "min": 2010,
-          "max": 2101
+          "min": 1930,
+          "max": 2015
         },
         "boosted": {
-          "min": 2512,
-          "max": 2626
+          "min": 2413,
+          "max": 2519
+        }
+      },
+      "boostedWeather": [
+        {
+          "name": "rainy",
+          "image": "https://leekduck.com/assets/img/weather/rainy.png"
+        },
+        {
+          "name": "windy",
+          "image": "https://leekduck.com/assets/img/weather/windy.png"
+        }
+      ],
+      "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm145.icon.png"
+    },
+    {
+      "name": "Moltres",
+      "tier": "5-Star Raids",
+      "canBeShiny": true,
+      "types": [
+        {
+          "name": "fire",
+          "image": "https://leekduck.com/assets/img/types/fire.png"
+        },
+        {
+          "name": "flying",
+          "image": "https://leekduck.com/assets/img/types/flying.png"
+        }
+      ],
+      "combatPower": {
+        "normal": {
+          "min": 1896,
+          "max": 1980
+        },
+        "boosted": {
+          "min": 2370,
+          "max": 2475
         }
       },
       "boostedWeather": [
@@ -138,47 +173,47 @@
           "image": "https://leekduck.com/assets/img/weather/sunny.png"
         },
         {
-          "name": "snow",
-          "image": "https://leekduck.com/assets/img/weather/snowy.png"
-        }
-      ],
-      "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm798.icon.png"
-    },
-    {
-      "name": "Mega Pidgeot",
-      "tier": "Mega Raids",
-      "canBeShiny": true,
-      "types": [
-        {
-          "name": "normal",
-          "image": "https://leekduck.com/assets/img/types/normal.png"
-        },
-        {
-          "name": "flying",
-          "image": "https://leekduck.com/assets/img/types/flying.png"
-        }
-      ],
-      "combatPower": {
-        "normal": {
-          "min": 1151,
-          "max": 1216
-        },
-        "boosted": {
-          "min": 1439,
-          "max": 1521
-        }
-      },
-      "boostedWeather": [
-        {
-          "name": "partly cloudy",
-          "image": "https://leekduck.com/assets/img/weather/partlycloudy.png"
-        },
-        {
           "name": "windy",
           "image": "https://leekduck.com/assets/img/weather/windy.png"
         }
       ],
-      "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm18.fMEGA.icon.png"
+      "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm146.icon.png"
+    },
+    {
+      "name": "Mega Lucario",
+      "tier": "Mega Raids",
+      "canBeShiny": true,
+      "types": [
+        {
+          "name": "fighting",
+          "image": "https://leekduck.com/assets/img/types/fighting.png"
+        },
+        {
+          "name": "steel",
+          "image": "https://leekduck.com/assets/img/types/steel.png"
+        }
+      ],
+      "combatPower": {
+        "normal": {
+          "min": 1469,
+          "max": 1544
+        },
+        "boosted": {
+          "min": 1837,
+          "max": 1930
+        }
+      },
+      "boostedWeather": [
+        {
+          "name": "cloudy",
+          "image": "https://leekduck.com/assets/img/weather/cloudy.png"
+        },
+        {
+          "name": "snow",
+          "image": "https://leekduck.com/assets/img/weather/snowy.png"
+        }
+      ],
+      "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm448.fMEGA.icon.png"
     },
     {
       "name": "Shadow Horsea",
@@ -409,13 +444,13 @@
       "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm207.icon.png"
     },
     {
-      "name": "Shadow Dialga",
+      "name": "Shadow Palkia",
       "tier": "5-Star Raids",
       "canBeShiny": true,
       "types": [
         {
-          "name": "steel",
-          "image": "https://leekduck.com/assets/img/types/steel.png"
+          "name": "water",
+          "image": "https://leekduck.com/assets/img/types/water.png"
         },
         {
           "name": "dragon",
@@ -424,26 +459,26 @@
       ],
       "combatPower": {
         "normal": {
-          "min": 2145,
-          "max": 2307
+          "min": 2118,
+          "max": 2280
         },
         "boosted": {
-          "min": 2682,
-          "max": 2884
+          "min": 2648,
+          "max": 2850
         }
       },
       "boostedWeather": [
         {
-          "name": "snow",
-          "image": "https://leekduck.com/assets/img/weather/snowy.png"
+          "name": "rainy",
+          "image": "https://leekduck.com/assets/img/weather/rainy.png"
         },
         {
           "name": "windy",
           "image": "https://leekduck.com/assets/img/weather/windy.png"
         }
       ],
-      "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm483.icon.png"
+      "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm484.icon.png"
     }
   ],
-  "last_sent_time": "2026-06-30T20:29:21.035618"
+  "last_sent_time": "2026-07-01T18:24:33.285996"
 }

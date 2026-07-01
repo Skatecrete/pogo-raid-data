@@ -1,30 +1,27 @@
 {
-  "last_updated": "2026-06-30",
+  "last_updated": "2026-07-01",
   "tier1": [
-    "Vullaby",
-    "Starly",
-    "Swablu",
     "Rookidee",
     "Gastly",
-    "Rufflet",
+    "Swablu",
+    "Vullaby",
     "Gligar",
     "Vulpix",
-    "Alolan Vulpix"
+    "Alolan Vulpix",
+    "Rufflet"
   ],
   "tier3": [
-    "Scyther",
-    "Corvisquire",
     "Noctowl",
-    "Bombirdier",
     "Gyarados",
+    "Staraptor",
     "Hisuian Braviary",
     "Snorlax",
-    "Staraptor"
+    "Scyther"
   ],
   "tier5": [
-    "Articuno",
+    "Moltres",
     "Zapdos",
-    "Moltres"
+    "Articuno"
   ],
   "mega": [
     "Lucario",
@@ -44,5 +41,5 @@
   "dynamax_tier3": [],
   "dynamax_tier5": [],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-06-30 20:29:20"
+  "gigantamax_last_updated": "2026-07-01 18:24:33"
 }
