@@ -1,18 +1,30 @@
 {
-  "id:797|5-star raids": {
-    "first_seen": "2026-07-01T18:24:33.285564",
+  "name:shadow horsea|1-star raids": {
+    "first_seen": "2026-07-01T23:51:11.832344",
     "count": 1
   },
-  "id:483|5-star raids": {
-    "first_seen": "2026-07-01T18:24:33.285564",
+  "name:shadow hitmonlee|3-star raids": {
+    "first_seen": "2026-07-01T23:51:11.832344",
     "count": 1
   },
-  "id:798|5-star raids": {
-    "first_seen": "2026-07-01T18:24:33.285564",
+  "name:shadow beldum|1-star raids": {
+    "first_seen": "2026-07-01T23:51:11.832344",
     "count": 1
   },
-  "name:mega pidgeot|mega raids": {
-    "first_seen": "2026-07-01T18:24:33.285564",
+  "name:shadow alolan marowak|3-star raids": {
+    "first_seen": "2026-07-01T23:51:11.832344",
+    "count": 1
+  },
+  "name:shadow porygon|1-star raids": {
+    "first_seen": "2026-07-01T23:51:11.832344",
+    "count": 1
+  },
+  "name:shadow golett|1-star raids": {
+    "first_seen": "2026-07-01T23:51:11.832344",
+    "count": 1
+  },
+  "name:shadow gligar|3-star raids": {
+    "first_seen": "2026-07-01T23:51:11.832344",
     "count": 1
   }
 }

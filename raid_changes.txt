@@ -1,3 +1,6 @@
 
-**🌑 Shadow Legendary:**
-  ✅ Added: Shadow Palkia
+**🌑 Shadow 1-Star:**
+  ✅ Added: Shadow Darumaka, Shadow Mankey, Shadow Phanpy, Shadow Ralts
+
+**🌑 Shadow 3-Star:**
+  ✅ Added: Shadow Graveler, Shadow Hitmonchan, Shadow Scyther
