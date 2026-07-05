@@ -1,10 +1,10 @@
 {
-  "last_updated": "2026-07-02",
+  "last_updated": "2026-07-05",
   "tier1": [
-    "Alolan Vulpix",
     "Vulpix",
-    "Rufflet",
-    "Gastly"
+    "Gastly",
+    "Alolan Vulpix",
+    "Rufflet"
   ],
   "tier3": [
     "Scyther",
@@ -12,11 +12,69 @@
     "Snorlax"
   ],
   "tier5": [
+    "Reshiram",
+    "Cobalion",
+    "Terrakion",
+    "Enamorus (Therian)",
+    "Virizion",
+    "Heatran",
+    "Tapu Bulu",
+    "Tapu Fini",
+    "Tapu Lele",
+    "Tapu Koko",
+    "Regice",
+    "Enamorus (Incarnate)",
+    "Solgaleo",
+    "Lunala",
+    "Yveltal",
+    "Regirock",
+    "Rayquaza",
+    "Regigigas",
+    "Registeel",
+    "Uxie",
+    "Latias",
+    "Latios",
+    "Cresselia",
+    "Groudon",
+    "Kyogre",
+    "Regidrago",
+    "Regieleki",
+    "Darkrai",
+    "Palkia (Origin)",
+    "Dialga (Origin)",
+    "Deoxys  (Defense)",
+    "Entei",
+    "Genesect (Burn Drive)",
+    "Genesect",
     "Moltres",
     "Zapdos",
-    "Articuno"
+    "Articuno",
+    "Giratina (Origin)",
+    "Kyurem",
+    "Tornadus (Incarnate)",
+    "Giratina (Altered)",
+    "Landorus (Incarnate)",
+    "Thundurus (Incarnate)",
+    "Deoxys  (Speed)",
+    "Deoxys ",
+    "Deoxys  (Attack)",
+    "Raikou",
+    "Suicune",
+    "Genesect (Chill Drive)",
+    "Lugia",
+    "Dialga",
+    "Palkia",
+    "Genesect (Shock Drive)",
+    "Genesect (Douse Drive)",
+    "Zekrom",
+    "Zamazenta (Hero)",
+    "Ho-Oh",
+    "Landorus (Therian)",
+    "Thundurus (Therian)",
+    "Tornadus (Therian)"
   ],
   "mega": [
+    "Salamence",
     "Lucario"
   ],
   "primal": [],
@@ -75,7 +133,7 @@
   ],
   "dynamax_tier5": [],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-07-02 06:55:19",
+  "gigantamax_last_updated": "2026-07-05 17:35:48",
   "scrapedduck_raids": [
     "gastly|1-star raids",
     "vulpix|1-star raids",
@@ -748,5 +806,5 @@
       "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm484.icon.png"
     }
   ],
-  "last_sent_time": "2026-07-02T06:55:20.061922"
+  "last_sent_time": "2026-07-05T17:35:49.240954"
 }

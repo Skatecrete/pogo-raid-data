@@ -1,9 +1,6 @@
 
-**⚡ Dynamax Tier 1:**
-  ✅ Added: abra, bounsweet, bulbasaur, caterpie, charmander, combee, cottonee, drilbur, gastly, grookey, growlithe, hatenna, inkay, kabuto, krabby, omanyte, pidove, pikachu, ralts, roggenrola, scorbunny, skwovet, sobble, spheal, squirtle, trapinch, trubbish, woobat, wooloo
+**⭐⭐⭐⭐⭐ 5-Star Raids:**
+  ✅ Added: cobalion, cresselia, darkrai, deoxys, deoxys  (attack), deoxys  (defense), deoxys  (speed), dialga, dialga (origin), enamorus (incarnate), enamorus (therian), entei, genesect, genesect (burn drive), genesect (chill drive), genesect (douse drive), genesect (shock drive), giratina (altered), giratina (origin), groudon, heatran, ho-oh, kyogre, kyurem, landorus (incarnate), landorus (therian), latias, latios, lugia, lunala, palkia, palkia (origin), raikou, rayquaza, regice, regidrago, regieleki, regigigas, regirock, registeel, reshiram, solgaleo, suicune, tapu bulu, tapu fini, tapu koko, tapu lele, terrakion, thundurus (incarnate), thundurus (therian), tornadus (incarnate), tornadus (therian), uxie, virizion, yveltal, zamazenta (hero), zekrom
 
-**⚡⚡ Dynamax Tier 2:**
-  ✅ Added: darumaka, eevee, wailmer
-
-**⚡⚡⚡ Dynamax Tier 3:**
-  ✅ Added: beldum, chansey, cryogonal, drampa, falinks, hitmonchan, hitmonlee, passimian, sableye
+**🔴 Mega Raids:**
+  ✅ Added: salamence
