@@ -2,21 +2,22 @@
   "last_updated": "2026-07-05",
   "tier1": [
     "Vulpix",
-    "Gastly",
+    "Rufflet",
     "Alolan Vulpix",
-    "Rufflet"
+    "Gastly"
   ],
   "tier3": [
+    "Snorlax",
     "Scyther",
-    "Gyarados",
-    "Snorlax"
+    "Gyarados"
   ],
   "tier5": [
-    "Reshiram",
-    "Cobalion",
-    "Terrakion",
-    "Enamorus (Therian)",
     "Virizion",
+    "Cobalion",
+    "Enamorus (Therian)",
+    "Terrakion",
+    "Solgaleo",
+    "Reshiram",
     "Heatran",
     "Tapu Bulu",
     "Tapu Fini",
@@ -24,9 +25,8 @@
     "Tapu Koko",
     "Regice",
     "Enamorus (Incarnate)",
-    "Solgaleo",
     "Lunala",
-    "Yveltal",
+    "Xerneas",
     "Regirock",
     "Rayquaza",
     "Regigigas",
@@ -40,15 +40,16 @@
     "Regidrago",
     "Regieleki",
     "Darkrai",
+    "Yveltal",
     "Palkia (Origin)",
     "Dialga (Origin)",
     "Deoxys  (Defense)",
     "Entei",
     "Genesect (Burn Drive)",
-    "Genesect",
     "Moltres",
     "Zapdos",
     "Articuno",
+    "Genesect",
     "Giratina (Origin)",
     "Kyurem",
     "Tornadus (Incarnate)",
@@ -60,18 +61,19 @@
     "Deoxys  (Attack)",
     "Raikou",
     "Suicune",
+    "Thundurus (Therian)",
     "Genesect (Chill Drive)",
     "Lugia",
     "Dialga",
     "Palkia",
     "Genesect (Shock Drive)",
     "Genesect (Douse Drive)",
-    "Zekrom",
     "Zamazenta (Hero)",
+    "Zacian (Hero)",
     "Ho-Oh",
     "Landorus (Therian)",
-    "Thundurus (Therian)",
-    "Tornadus (Therian)"
+    "Tornadus (Therian)",
+    "Zekrom"
   ],
   "mega": [
     "Salamence",
@@ -133,5 +135,5 @@
   ],
   "dynamax_tier5": [],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-07-05 17:35:48"
+  "gigantamax_last_updated": "2026-07-05 19:16:02"
 }
