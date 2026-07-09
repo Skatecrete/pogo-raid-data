@@ -1,17 +1,18 @@
 {
-  "last_updated": "2026-07-08",
+  "last_updated": "2026-07-09",
   "tier1": [
-    "Rufflet",
+    "Gastly",
     "Alolan Vulpix",
     "Vulpix",
-    "Gastly"
+    "Rufflet"
   ],
   "tier3": [
-    "Scyther",
     "Gyarados",
-    "Snorlax"
+    "Snorlax",
+    "Scyther"
   ],
   "tier5": [
+    "Articuno",
     "Kyurem (Black)",
     "Zamazenta (Crowned Shield)",
     "Zacian (Crowned Sword)",
@@ -78,5 +79,5 @@
   ],
   "dynamax_tier5": [],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-07-08 23:05:41"
+  "gigantamax_last_updated": "2026-07-09 05:42:12"
 }
