@@ -1,27 +1,28 @@
 {
   "last_updated": "2026-07-09",
   "tier1": [
+    "Gastly",
     "Alolan Vulpix",
     "Vulpix",
-    "Rufflet",
-    "Gastly"
+    "Rufflet"
   ],
   "tier3": [
-    "Scyther",
     "Gyarados",
+    "Scyther",
     "Snorlax"
   ],
   "tier5": [
-    "Zacian (Crowned Sword)",
-    "Articuno",
     "Moltres",
+    "Zapdos",
+    "Articuno",
     "Kyurem (Black)",
     "Zamazenta (Crowned Shield)",
+    "Zacian (Crowned Sword)",
     "Reshiram"
   ],
   "mega": [
-    "Gardevoir",
-    "Gengar"
+    "Gengar",
+    "Gardevoir"
   ],
   "primal": [],
   "ultra_beasts": [],
@@ -80,12 +81,11 @@
   ],
   "dynamax_tier5": [],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-07-09 09:36:51",
+  "gigantamax_last_updated": "2026-07-09 12:36:45",
   "scrapedduck_raids": [
-    "kyurem (black)|5-star raids",
-    "reshiram|5-star raids",
-    "necrozma (dusk mane)|5-star raids",
-    "mega gardevoir|mega raids",
+    "zacian (crowned sword)|5-star raids",
+    "zamazenta (crowned shield)|5-star raids",
+    "mega gengar|mega raids",
     "shadow phanpy|1-star raids",
     "shadow ralts|1-star raids",
     "shadow darumaka|1-star raids",
@@ -96,10 +96,9 @@
     "shadow palkia|5-star raids"
   ],
   "scrapedduck_normalized": [
-    "name:kyurem (black)|5-star raids",
-    "name:reshiram|5-star raids",
-    "name:necrozma (dusk mane)|5-star raids",
-    "name:mega gardevoir|mega raids",
+    "name:zacian (crowned sword)|5-star raids",
+    "name:zamazenta (crowned shield)|5-star raids",
+    "name:mega gengar|mega raids",
     "name:shadow phanpy|1-star raids",
     "name:shadow ralts|1-star raids",
     "name:shadow darumaka|1-star raids",
@@ -111,85 +110,13 @@
   ],
   "scrapedduck_raids_objects": [
     {
-      "name": "Kyurem (Black)",
+      "name": "Zacian (Crowned Sword)",
       "tier": "5-Star Raids",
       "canBeShiny": true,
       "types": [
         {
-          "name": "dragon",
-          "image": "https://leekduck.com/assets/img/types/dragon.png"
-        },
-        {
-          "name": "ice",
-          "image": "https://leekduck.com/assets/img/types/ice.png"
-        }
-      ],
-      "combatPower": {
-        "normal": {
-          "min": 1957,
-          "max": 2042
-        },
-        "boosted": {
-          "min": 2446,
-          "max": 2553
-        }
-      },
-      "boostedWeather": [
-        {
-          "name": "windy",
-          "image": "https://leekduck.com/assets/img/weather/windy.png"
-        },
-        {
-          "name": "snow",
-          "image": "https://leekduck.com/assets/img/weather/snowy.png"
-        }
-      ],
-      "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm646.fBLACK.icon.png"
-    },
-    {
-      "name": "Reshiram",
-      "tier": "5-Star Raids",
-      "canBeShiny": true,
-      "types": [
-        {
-          "name": "dragon",
-          "image": "https://leekduck.com/assets/img/types/dragon.png"
-        },
-        {
-          "name": "fire",
-          "image": "https://leekduck.com/assets/img/types/fire.png"
-        }
-      ],
-      "combatPower": {
-        "normal": {
-          "min": 2217,
-          "max": 2307
-        },
-        "boosted": {
-          "min": 2771,
-          "max": 2884
-        }
-      },
-      "boostedWeather": [
-        {
-          "name": "windy",
-          "image": "https://leekduck.com/assets/img/weather/windy.png"
-        },
-        {
-          "name": "sunny",
-          "image": "https://leekduck.com/assets/img/weather/sunny.png"
-        }
-      ],
-      "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm643.icon.png"
-    },
-    {
-      "name": "Necrozma (Dusk Mane)",
-      "tier": "5-Star Raids",
-      "canBeShiny": true,
-      "types": [
-        {
-          "name": "psychic",
-          "image": "https://leekduck.com/assets/img/types/psychic.png"
+          "name": "fairy",
+          "image": "https://leekduck.com/assets/img/types/fairy.png"
         },
         {
           "name": "steel",
@@ -198,57 +125,97 @@
       ],
       "combatPower": {
         "normal": {
-          "min": 2018,
-          "max": 2104
+          "min": 2100,
+          "max": 2188
         },
         "boosted": {
-          "min": 2522,
-          "max": 2630
+          "min": 2625,
+          "max": 2735
         }
       },
       "boostedWeather": [
         {
-          "name": "windy",
-          "image": "https://leekduck.com/assets/img/weather/windy.png"
+          "name": "cloudy",
+          "image": "https://leekduck.com/assets/img/weather/cloudy.png"
+        },
+        {
+          "name": "snow",
+          "image": "https://leekduck.com/assets/img/weather/snowy.png"
         }
       ],
-      "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm800.fDUSK_MANE.icon.png"
+      "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm888.fCROWNED_SWORD.icon.png"
     },
     {
-      "name": "Mega Gardevoir",
-      "tier": "Mega Raids",
+      "name": "Zamazenta (Crowned Shield)",
+      "tier": "5-Star Raids",
       "canBeShiny": true,
       "types": [
         {
-          "name": "psychic",
-          "image": "https://leekduck.com/assets/img/types/psychic.png"
+          "name": "fighting",
+          "image": "https://leekduck.com/assets/img/types/fighting.png"
         },
         {
-          "name": "fairy",
-          "image": "https://leekduck.com/assets/img/types/fairy.png"
+          "name": "steel",
+          "image": "https://leekduck.com/assets/img/types/steel.png"
         }
       ],
       "combatPower": {
         "normal": {
-          "min": 1688,
-          "max": 1767
+          "min": 2100,
+          "max": 2188
         },
         "boosted": {
-          "min": 2110,
-          "max": 2209
+          "min": 2625,
+          "max": 2735
         }
       },
       "boostedWeather": [
         {
-          "name": "windy",
-          "image": "https://leekduck.com/assets/img/weather/windy.png"
+          "name": "cloudy",
+          "image": "https://leekduck.com/assets/img/weather/cloudy.png"
+        },
+        {
+          "name": "snow",
+          "image": "https://leekduck.com/assets/img/weather/snowy.png"
+        }
+      ],
+      "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm889.fCROWNED_SHIELD.icon.png"
+    },
+    {
+      "name": "Mega Gengar",
+      "tier": "Mega Raids",
+      "canBeShiny": true,
+      "types": [
+        {
+          "name": "ghost",
+          "image": "https://leekduck.com/assets/img/types/ghost.png"
+        },
+        {
+          "name": "poison",
+          "image": "https://leekduck.com/assets/img/types/poison.png"
+        }
+      ],
+      "combatPower": {
+        "normal": {
+          "min": 1566,
+          "max": 1644
+        },
+        "boosted": {
+          "min": 1958,
+          "max": 2055
+        }
+      },
+      "boostedWeather": [
+        {
+          "name": "fog",
+          "image": "https://leekduck.com/assets/img/weather/foggy.png"
         },
         {
           "name": "cloudy",
           "image": "https://leekduck.com/assets/img/weather/cloudy.png"
         }
       ],
-      "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm282.fMEGA.icon.png"
+      "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm94.fMEGA.icon.png"
     },
     {
       "name": "Shadow Phanpy",
@@ -507,5 +474,5 @@
       "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm484.icon.png"
     }
   ],
-  "last_sent_time": "2026-07-09T09:36:51.524608"
+  "last_sent_time": "2026-07-09T12:36:45.875861"
 }

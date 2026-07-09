@@ -1,27 +1,28 @@
 {
   "last_updated": "2026-07-09",
   "tier1": [
+    "Gastly",
     "Alolan Vulpix",
     "Vulpix",
-    "Rufflet",
-    "Gastly"
+    "Rufflet"
   ],
   "tier3": [
-    "Scyther",
     "Gyarados",
+    "Scyther",
     "Snorlax"
   ],
   "tier5": [
-    "Zacian (Crowned Sword)",
-    "Articuno",
     "Moltres",
+    "Zapdos",
+    "Articuno",
     "Kyurem (Black)",
     "Zamazenta (Crowned Shield)",
+    "Zacian (Crowned Sword)",
     "Reshiram"
   ],
   "mega": [
-    "Gardevoir",
-    "Gengar"
+    "Gengar",
+    "Gardevoir"
   ],
   "primal": [],
   "ultra_beasts": [],
@@ -80,5 +81,5 @@
   ],
   "dynamax_tier5": [],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-07-09 09:36:51"
+  "gigantamax_last_updated": "2026-07-09 12:36:45"
 }
