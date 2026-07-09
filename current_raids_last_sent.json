@@ -1,21 +1,22 @@
 {
   "last_updated": "2026-07-09",
   "tier1": [
-    "Gastly",
     "Alolan Vulpix",
     "Vulpix",
-    "Rufflet"
+    "Rufflet",
+    "Gastly"
   ],
   "tier3": [
+    "Scyther",
     "Gyarados",
-    "Snorlax",
-    "Scyther"
+    "Snorlax"
   ],
   "tier5": [
+    "Zacian (Crowned Sword)",
     "Articuno",
+    "Moltres",
     "Kyurem (Black)",
     "Zamazenta (Crowned Shield)",
-    "Zacian (Crowned Sword)",
     "Reshiram"
   ],
   "mega": [
@@ -79,7 +80,7 @@
   ],
   "dynamax_tier5": [],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-07-09 05:42:12",
+  "gigantamax_last_updated": "2026-07-09 09:36:51",
   "scrapedduck_raids": [
     "kyurem (black)|5-star raids",
     "reshiram|5-star raids",
@@ -506,5 +507,5 @@
       "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm484.icon.png"
     }
   ],
-  "last_sent_time": "2026-07-09T05:42:15.596522"
+  "last_sent_time": "2026-07-09T09:36:51.524608"
 }
