@@ -8,23 +8,28 @@
   ],
   "tier3": [
     "Gyarados",
-    "Scyther",
-    "Snorlax"
+    "Snorlax",
+    "Scyther"
   ],
   "tier5": [
-    "Moltres",
-    "Zapdos",
-    "Articuno",
-    "Kyurem (Black)",
-    "Zamazenta (Crowned Shield)",
+    "Reshiram",
     "Zacian (Crowned Sword)",
-    "Reshiram"
+    "Zamazenta (Crowned Shield)",
+    "Kyurem (Black)",
+    "Articuno",
+    "Palkia (Origin)",
+    "Dialga (Origin)",
+    "Zapdos",
+    "Moltres"
   ],
   "mega": [
-    "Gengar",
-    "Gardevoir"
+    "Gardevoir",
+    "Gengar"
   ],
-  "primal": [],
+  "primal": [
+    "Primal Kyogre",
+    "Primal Groudon"
+  ],
   "ultra_beasts": [],
   "super_mega": [],
   "dynamax_tier1": [
@@ -81,5 +86,5 @@
   ],
   "dynamax_tier5": [],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-07-09 12:36:45"
+  "gigantamax_last_updated": "2026-07-09 17:54:26"
 }
