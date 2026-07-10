@@ -1,3 +1,15 @@
 
+**⭐ 1-Star Raids:**
+  ✅ Added: alolan vulpix, gastly, rufflet, vulpix
+
+**⭐⭐⭐ 3-Star Raids:**
+  ✅ Added: gyarados, scyther, snorlax
+
+**⭐⭐⭐⭐⭐ 5-Star Raids:**
+  ✅ Added: cobalion, deoxys  (attack), deoxys  (defense), genesect (burn drive), genesect (douse drive), genesect (shock drive), landorus (incarnate), landorus (therian), regice, regigigas, regirock, registeel, tapu bulu, terrakion, thundurus (incarnate), thundurus (therian), yveltal
+
 **🔴 Mega Raids:**
-  ✅ Added: abomasnow
+  ✅ Added: ampharos, blaziken
+
+**🌊 PRIMAL RAIDS:**
+  ✅ Added: primal groudon, primal kyogre
