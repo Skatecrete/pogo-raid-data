@@ -1,3 +1,6 @@
 
-**🔴 Mega Raids:**
-  ✅ Added: lucario
+**⭐ 1-Star Raids:**
+  ✅ Added: pikachu (instinct cap), pikachu (mystic cap), pikachu (valor cap)
+
+**⭐⭐⭐⭐⭐ 5-Star Raids:**
+  ✅ Added: cobalion, cresselia, deoxys  (attack), deoxys  (speed), dialga, enamorus (therian), entei, genesect, genesect (douse drive), giratina (altered), giratina (origin), groudon, heatran, ho-oh, kyogre, landorus (therian), latias, lugia, lunala, palkia, rayquaza, regidrago, regieleki, reshiram, solgaleo, tapu bulu, tapu fini, tapu koko, tapu lele, xerneas, zacian (hero), zamazenta (hero), zekrom

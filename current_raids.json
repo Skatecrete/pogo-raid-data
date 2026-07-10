@@ -1,32 +1,68 @@
 {
   "last_updated": "2026-07-10",
   "tier1": [
+    "Pikachu (Mystic Cap)",
+    "Pikachu (Instinct Cap)",
+    "Gastly",
     "Rufflet",
-    "Alolan Vulpix",
     "Vulpix",
-    "Gastly"
+    "Alolan Vulpix",
+    "Pikachu (Valor Cap)"
   ],
   "tier3": [
-    "Scyther",
     "Gyarados",
+    "Scyther",
     "Snorlax"
   ],
   "tier5": [
-    "Dialga (Origin)",
+    "Zekrom",
+    "Reshiram",
+    "Cobalion",
+    "Heatran",
+    "Tapu Lele",
+    "Tapu Bulu",
+    "Tapu Fini",
+    "Enamorus (Therian)",
+    "Solgaleo",
+    "Lunala",
+    "Rayquaza",
+    "Latias",
+    "Cresselia",
+    "Groudon",
+    "Kyogre",
+    "Regidrago",
+    "Regieleki",
+    "Xerneas",
+    "Tapu Koko",
     "Articuno",
+    "Deoxys  (Speed)",
+    "Giratina (Origin)",
+    "Zacian (Hero)",
+    "Genesect",
+    "Ho-Oh",
+    "Landorus (Therian)",
+    "Entei",
+    "Moltres",
+    "Zapdos",
+    "Zamazenta (Hero)",
+    "Genesect (Douse Drive)",
     "Zacian (Crowned Sword)",
     "Zamazenta (Crowned Shield)",
+    "Giratina (Altered)",
+    "Deoxys  (Attack)",
     "Palkia (Origin)",
-    "Zapdos",
-    "Moltres"
+    "Dialga (Origin)",
+    "Palkia",
+    "Dialga",
+    "Lugia"
   ],
   "mega": [
-    "Lucario",
-    "Gengar"
+    "Gengar",
+    "Lucario"
   ],
   "primal": [
-    "Primal Groudon",
-    "Primal Kyogre"
+    "Primal Kyogre",
+    "Primal Groudon"
   ],
   "ultra_beasts": [],
   "super_mega": [],
@@ -84,5 +120,5 @@
   ],
   "dynamax_tier5": [],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-07-10 08:21:12"
+  "gigantamax_last_updated": "2026-07-10 17:46:57"
 }
