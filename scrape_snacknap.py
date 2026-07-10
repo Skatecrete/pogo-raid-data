@@ -5,7 +5,7 @@ from datetime import datetime
 import re
 
 def scrape_snacknap_raids():
-    """Scrape 1-Star, 3-Star, 5-Star, Mega, Primal, and Ultra Beast raids from snacknap.com/raids"""
+    """Scrape all raid tiers from snacknap.com/raids"""
     print("  📡 Fetching all raid tiers from SnackNap...")
     url = "https://snacknap.com/raids"
     headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'}
@@ -25,59 +25,93 @@ def scrape_snacknap_raids():
             "super_mega": []
         }
         
-        # Find all tier cards
+        # ========== UPDATED TIER MAPPING ==========
+        # t1 = 1-Star, t3 = 3-Star, t5 = 5-Star
+        # t6 = Mega, t10 = Primal, t11 = Ultra Beasts, t12 = Super Mega
+        tier_map = {
+            't1': 'tier1',
+            't3': 'tier3',
+            't5': 'tier5',
+            't6': 'mega',
+            't10': 'primal',
+            't11': 'ultra_beasts',
+            't12': 'super_mega'
+        }
+        # ========================================
+        
+        # Find all tier cards - try multiple class patterns
         tier_cards = soup.find_all('div', class_='to-card')
+        
+        # If no cards found, try alternative class names
+        if not tier_cards:
+            tier_cards = soup.find_all('div', class_=re.compile(r'card|tier|raid', re.I))
         
         for card in tier_cards:
             data_tier = card.get('data-tier', '')
             
-            current_tier = None
-            if data_tier == 't1':
-                current_tier = "tier1"
-            elif data_tier == 't3':
-                current_tier = "tier3"
-            elif data_tier == 't5':
-                current_tier = "tier5"
-            elif data_tier == 't6':
-                current_tier = "mega"
-            elif data_tier == 't10':
-                current_tier = "primal"
-            else:
+            # Try to get tier from class if data-tier is missing
+            if not data_tier:
+                for class_name in card.get('class', []):
+                    if class_name.startswith('t'):
+                        data_tier = class_name
+                        break
+            
+            current_tier = tier_map.get(data_tier)
+            if not current_tier:
                 continue
             
-            card_body = card.find('div', class_='to-card-body')
-            if not card_body:
-                continue
+            # Try multiple ways to find Pokémon names
+            pokemon_names = []
             
-            grid = card_body.find('div', class_='to-grid')
-            if not grid:
-                continue
-            
-            for tile in grid.find_all('div', class_='snk-tile'):
+            # Method 1: snk-tile with a/p
+            for tile in card.find_all('div', class_='snk-tile'):
                 link = tile.find('a')
                 if link:
-                    pokemon_name = link.get('title', '')
-                    if pokemon_name and pokemon_name not in raid_data[current_tier]:
-                        if current_tier == "mega":
-                            pokemon_name = pokemon_name.replace('Mega ', '')
-                        raid_data[current_tier].append(pokemon_name)
-                        print(f"      Added to {current_tier}: {pokemon_name}")
+                    name = link.get('title', '') or link.get_text().strip()
+                    if name:
+                        pokemon_names.append(name)
+            
+            # Method 2: direct a/p tags (fallback)
+            if not pokemon_names:
+                for p in card.find_all('p'):
+                    text = p.get_text().strip()
+                    if text and len(text) > 2 and not text.startswith('Tier'):
+                        # Check if this is a Pokémon name (not a label)
+                        if not any(word in text.lower() for word in ['tier', 'star', 'mega', 'primal', 'ultra']):
+                            pokemon_names.append(text)
+            
+            # Method 3: any link with title
+            if not pokemon_names:
+                for a in card.find_all('a'):
+                    title = a.get('title', '')
+                    if title and len(title) > 2:
+                        pokemon_names.append(title)
+            
+            # Add unique names to raid_data
+            for name in pokemon_names:
+                if name and name not in raid_data[current_tier]:
+                    # For Mega raids, KEEP the "Mega " prefix
+                    # For others, keep as-is
+                    raid_data[current_tier].append(name)
+                    print(f"      Added to {current_tier}: {name}")
         
         print(f"\n  📊 SNACKNAP RAID SUMMARY:")
-        print(f"    Tier 1: {len(raid_data['tier1'])} - {raid_data['tier1']}")
-        print(f"    Tier 3: {len(raid_data['tier3'])} - {raid_data['tier3']}")
-        print(f"    Tier 5: {len(raid_data['tier5'])} - {raid_data['tier5']}")
-        print(f"    Mega: {len(raid_data['mega'])} - {raid_data['mega']}")
-        print(f"    Primal: {len(raid_data['primal'])} - {raid_data['primal']}")
-        print(f"    Ultra Beasts: {len(raid_data['ultra_beasts'])} - {raid_data['ultra_beasts']}")
-        print(f"    Super Mega: {len(raid_data['super_mega'])} - {raid_data['super_mega']}")
+        print(f"    Tier 1: {len(raid_data['tier1'])}")
+        print(f"    Tier 3: {len(raid_data['tier3'])}")
+        print(f"    Tier 5: {len(raid_data['tier5'])}")
+        print(f"    Mega: {len(raid_data['mega'])}")
+        print(f"    Primal: {len(raid_data['primal'])}")
+        print(f"    Ultra Beasts: {len(raid_data['ultra_beasts'])}")
+        print(f"    Super Mega: {len(raid_data['super_mega'])}")
         
         return raid_data
+        
     except Exception as e:
         print(f"    ❌ Error scraping raids: {e}")
         import traceback
         traceback.print_exc()
         return {"tier1": [], "tier3": [], "tier5": [], "mega": [], "primal": [], "ultra_beasts": [], "super_mega": []}
+
 
 def scrape_snacknap_maxbattles():
     """Scrape Dynamax Tier 1,2,3,5 from snacknap.com/max-battles (NO GIGANTAMAX)"""
@@ -97,7 +131,7 @@ def scrape_snacknap_maxbattles():
             "dynamax_tier5": []
         }
         
-        invalid_names = ['Telegram', 'Facebook', 'Instagram', 'Threads', 'Bluesky', 'X', 'Twitter', 'Discord', 'Patreon', 'YouTube', 'Twitch', 'Search...']
+        invalid_names = ['Telegram', 'Facebook', 'Instagram', 'Threads', 'Bluesky', 'X', 'Twitter', 'Discord', 'Patreon', 'YouTube', 'Twitch', 'Search...', 'Snacknap']
         type_words = ['fire', 'water', 'grass', 'electric', 'bug', 'ground', 'flying', 'ghost', 
                      'ice', 'psychic', 'dragon', 'dark', 'steel', 'fairy', 'rock', 'fighting', 
                      'poison', 'normal', 'shiny']
@@ -161,6 +195,7 @@ def scrape_snacknap_maxbattles():
         traceback.print_exc()
         return None
 
+
 def main():
     print("🚀 Starting Snack Nap scraper...")
     print(f"Time: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
@@ -188,6 +223,7 @@ def main():
     
     print("\n💾 Saved to current_raids.json")
     print(json.dumps(new_data, indent=2))
+
 
 if __name__ == "__main__":
     main()
