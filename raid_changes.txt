@@ -1,6 +1,3 @@
 
-**⭐⭐⭐⭐⭐ 5-Star Raids:**
-  ✅ Added: dialga (origin), palkia (origin)
-
-**🌊 PRIMAL RAIDS:**
-  ✅ Added: primal groudon, primal kyogre
+**🔴 Mega Raids:**
+  ✅ Added: lucario

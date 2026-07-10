@@ -1,34 +1,32 @@
 {
-  "last_updated": "2026-07-09",
+  "last_updated": "2026-07-10",
   "tier1": [
-    "Gastly",
+    "Rufflet",
     "Alolan Vulpix",
     "Vulpix",
-    "Rufflet"
+    "Gastly"
   ],
   "tier3": [
+    "Scyther",
     "Gyarados",
-    "Snorlax",
-    "Scyther"
+    "Snorlax"
   ],
   "tier5": [
-    "Reshiram",
+    "Dialga (Origin)",
+    "Articuno",
     "Zacian (Crowned Sword)",
     "Zamazenta (Crowned Shield)",
-    "Kyurem (Black)",
-    "Articuno",
     "Palkia (Origin)",
-    "Dialga (Origin)",
     "Zapdos",
     "Moltres"
   ],
   "mega": [
-    "Gardevoir",
+    "Lucario",
     "Gengar"
   ],
   "primal": [
-    "Primal Kyogre",
-    "Primal Groudon"
+    "Primal Groudon",
+    "Primal Kyogre"
   ],
   "ultra_beasts": [],
   "super_mega": [],
@@ -86,7 +84,7 @@
   ],
   "dynamax_tier5": [],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-07-09 17:54:26",
+  "gigantamax_last_updated": "2026-07-10 08:21:12",
   "scrapedduck_raids": [
     "zacian (crowned sword)|5-star raids",
     "zamazenta (crowned shield)|5-star raids",
@@ -479,5 +477,5 @@
       "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm484.icon.png"
     }
   ],
-  "last_sent_time": "2026-07-09T17:54:27.190114"
+  "last_sent_time": "2026-07-10T08:21:12.560666"
 }
