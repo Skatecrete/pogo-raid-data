@@ -1,12 +1,12 @@
 {
-  "last_updated": "2026-07-11 18:30:06",
+  "last_updated": "2026-07-11 19:18:07",
   "error": false,
   "total": 12,
   "boxes": [
     {
       "box_name": "GO Pass Deluxe: July + 10 Ranks",
       "in_store_price": 9.99,
-      "box_image": "https://storage.googleapis.com/platform-webstore-rel-assets/pgo/sku_assets/badge__web_only.png",
+      "box_image": "https://storage.googleapis.com/platform-webstore-rel-assets/pgo/sku_assets/bundle1.sprite.a.png",
       "items": [
         {
           "name": "GO Pass Deluxe: July",
@@ -44,7 +44,7 @@
     {
       "box_name": "GO Pass Deluxe: July Ultra Box",
       "in_store_price": 14.99,
-      "box_image": "https://storage.googleapis.com/platform-webstore-rel-assets/pgo/sku_assets/badge__web_only.png",
+      "box_image": "https://storage.googleapis.com/platform-webstore-rel-assets/pgo/sku_assets/bundle1.sprite.b.png",
       "items": [
         {
           "name": "GO Pass Deluxe: July",
@@ -92,7 +92,7 @@
     {
       "box_name": "GO Pass Deluxe: July",
       "in_store_price": 7.99,
-      "box_image": "https://storage.googleapis.com/platform-webstore-rel-assets/pgo/sku_assets/badge__web_only.png",
+      "box_image": "https://storage.googleapis.com/platform-webstore-rel-assets/pgo/sku_assets/bundle.xmas.small.1.png",
       "items": [
         {
           "name": "GO Pass Deluxe: July",
@@ -158,7 +158,7 @@
     {
       "box_name": "Ultra Hatch Box",
       "in_store_price": 39.99,
-      "box_image": "https://storage.googleapis.com/platform-webstore-rel-assets/pgo/sku_assets/badge__web_only.png",
+      "box_image": "https://storage.googleapis.com/platform-webstore-rel-assets/pgo/sku_assets/genericbox_c3.png",
       "items": [
         {
           "name": "Egg Incubator",
@@ -181,7 +181,7 @@
     {
       "box_name": "GO Pass Deluxe: Pikachu Celebration Ultra Box",
       "in_store_price": 8.99,
-      "box_image": "https://storage.googleapis.com/platform-webstore-rel-assets/pgo/sku_assets/badge__web_only.png",
+      "box_image": "https://storage.googleapis.com/platform-webstore-rel-assets/pgo/sku_assets/bundle.xmas.large.1.png",
       "items": [
         {
           "name": "GO Pass Deluxe: Pikachu Celebration",
@@ -219,7 +219,7 @@
     {
       "box_name": "Ultra Storage Box",
       "in_store_price": 4.99,
-      "box_image": "https://storage.googleapis.com/platform-webstore-rel-assets/pgo/sku_assets/badge__web_only.png",
+      "box_image": "https://storage.googleapis.com/platform-webstore-rel-assets/pgo/sku_assets/genericbox_c1.png",
       "items": [
         {
           "name": "Item Bag",
@@ -318,7 +318,7 @@
     {
       "box_name": "GO Pass Deluxe: Pikachu Celebration",
       "in_store_price": 4.99,
-      "box_image": "https://storage.googleapis.com/platform-webstore-rel-assets/pgo/sku_assets/badge__web_only.png",
+      "box_image": "https://storage.googleapis.com/platform-webstore-rel-assets/pgo/sku_assets/bundle.general1.tiny.png",
       "items": [
         {
           "name": "GO Pass Deluxe: Pikachu Celebration",
@@ -351,7 +351,7 @@
     {
       "box_name": "GO Pass Deluxe: Pikachu Celebration + 6 Ranks",
       "in_store_price": 6.99,
-      "box_image": "https://storage.googleapis.com/platform-webstore-rel-assets/pgo/sku_assets/badge__web_only.png",
+      "box_image": "https://storage.googleapis.com/platform-webstore-rel-assets/pgo/sku_assets/bundle.general1.large.1.png",
       "items": [
         {
           "name": "GO Pass Deluxe: Pikachu Celebration",
@@ -389,7 +389,7 @@
     {
       "box_name": "Master Raid Box",
       "in_store_price": 9.99,
-      "box_image": "https://storage.googleapis.com/platform-webstore-rel-assets/pgo/sku_assets/badge__web_only.png",
+      "box_image": "https://storage.googleapis.com/platform-webstore-rel-assets/pgo/sku_assets/genericbox_c2.png",
       "items": [
         {
           "name": "Premium Battle Pass",
