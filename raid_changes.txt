@@ -1,12 +1,3 @@
 
-**⭐ 1-Star Raids:**
-  ✅ Added: instinct cap, mystic cap, pikachu, valor cap
-
-**⭐⭐⭐⭐⭐ 5-Star Raids:**
-  ✅ Added: altered, attack, burn drive, chill drive, defense, douse drive, enamorus, giratina, hero, incarnate, landorus, origin, shock drive, speed, therian, thundurus, tornadus, zacian, zamazenta
-
-**🌀 Ultra Beasts:**
-  ✅ Added: guzzlord, necrozma, nihilego
-
 **💫 SUPER MEGA RAIDS:**
-  ✅ Added: super mewtwo
+  ✅ Added: super mewtwo x
