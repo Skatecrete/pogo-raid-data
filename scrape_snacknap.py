@@ -46,36 +46,21 @@ def scrape_snacknap_raids():
             
             pokemon_names = []
             
-            # ========== METHOD 1: snk-tile with a tag ==========
+            # ========== ONLY USE TITLE ATTRIBUTE ==========
             for tile in card.find_all('div', class_='snk-tile'):
                 link = tile.find('a')
                 if link:
-                    name = link.get('title', '') or link.get_text().strip()
-                    if name and len(name) > 2 and name != 'Search...':
+                    name = link.get('title', '')
+                    if name and len(name) > 2:
                         pokemon_names.append(name)
+            # =============================================
             
-            # ========== METHOD 2: a tags directly ==========
-            if not pokemon_names:
-                for a in card.find_all('a'):
-                    title = a.get('title', '')
-                    text = a.get_text().strip()
-                    name = title or text
-                    if name and len(name) > 2 and not name.startswith('Tier') and name != 'Search...':
-                        pokemon_names.append(name)
-            
-            # ========== METHOD 3: img alt text ==========
-            if not pokemon_names:
-                for img in card.find_all('img'):
-                    alt = img.get('alt', '')
-                    if alt and len(alt) > 2 and alt != 'Search...':
-                        pokemon_names.append(alt)
-            
-            # ========== FILTER NAMES ==========
+            # ========== FILTER OUT INVALID NAMES ==========
             invalid_terms = ['search', 'tier', 'star', 'mega', 'primal', 'ultra', 'shadow', 'legendary', 'snacknap', 'cp']
             invalid_type_words = ['fire', 'water', 'grass', 'electric', 'bug', 'ground', 'flying', 'ghost', 
                                  'ice', 'psychic', 'dragon', 'dark', 'steel', 'fairy', 'rock', 'fighting', 
                                  'poison', 'normal', 'shiny', 'search...']
-
+            
             filtered_names = []
             for name in pokemon_names:
                 name_lower = name.lower().strip()
@@ -93,8 +78,7 @@ def scrape_snacknap_raids():
                 if skip:
                     continue
                 
-                if is_valid_pokemon_name(name):
-                    filtered_names.append(name)
+                filtered_names.append(name)
             
             pokemon_names = list(set(filtered_names))
             
@@ -136,6 +120,7 @@ def scrape_snacknap_raids():
         import traceback
         traceback.print_exc()
         return {"tier1": [], "tier3": [], "tier5": [], "mega": [], "primal": [], "ultra_beasts": [], "super_mega": []}
+
 
 def scrape_snacknap_maxbattles():
     """Scrape Dynamax tiers from snacknap.com/max-battles"""
