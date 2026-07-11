@@ -26,8 +26,6 @@ def scrape_snacknap_raids():
         }
         
         # ========== UPDATED TIER MAPPING ==========
-        # t1 = 1-Star, t3 = 3-Star, t5 = 5-Star
-        # t6 = Mega, t10 = Primal, t11 = Ultra Beasts, t12 = Super Mega
         tier_map = {
             't1': 'tier1',
             't3': 'tier3',
@@ -39,70 +37,92 @@ def scrape_snacknap_raids():
         }
         # ========================================
         
-        # Find all tier cards - try multiple class patterns
+        # Find all tier cards - use the exact structure from SnackNap
         tier_cards = soup.find_all('div', class_='to-card')
         
-        # If no cards found, try alternative class names
-        if not tier_cards:
-            tier_cards = soup.find_all('div', class_=re.compile(r'card|tier|raid', re.I))
+        print(f"  Found {len(tier_cards)} tier cards")
+        
+        # ========== DEBUG: Log all data-tier values found ==========
+        for card in tier_cards:
+            data_tier = card.get('data-tier', '')
+            print(f"    Card data-tier: {data_tier}")
         
         for card in tier_cards:
             data_tier = card.get('data-tier', '')
-            
-            # Try to get tier from class if data-tier is missing
-            if not data_tier:
-                for class_name in card.get('class', []):
-                    if class_name.startswith('t'):
-                        data_tier = class_name
-                        break
             
             current_tier = tier_map.get(data_tier)
             if not current_tier:
                 continue
             
-            # Try multiple ways to find Pokémon names
             pokemon_names = []
             
-            # Method 1: snk-tile with a/p
+            # ========== METHOD 1: Look for snk-tile with a tag ==========
             for tile in card.find_all('div', class_='snk-tile'):
                 link = tile.find('a')
                 if link:
                     name = link.get('title', '') or link.get_text().strip()
-                    if name:
+                    if name and len(name) > 2:
                         pokemon_names.append(name)
             
-            # Method 2: direct a/p tags (fallback)
-            if not pokemon_names:
-                for p in card.find_all('p'):
-                    text = p.get_text().strip()
-                    if text and len(text) > 2 and not text.startswith('Tier'):
-                        # Check if this is a Pokémon name (not a label)
-                        if not any(word in text.lower() for word in ['tier', 'star', 'mega', 'primal', 'ultra']):
-                            pokemon_names.append(text)
-            
-            # Method 3: any link with title
+            # ========== METHOD 2: Look for a tags directly ==========
             if not pokemon_names:
                 for a in card.find_all('a'):
                     title = a.get('title', '')
-                    if title and len(title) > 2:
-                        pokemon_names.append(title)
+                    text = a.get_text().strip()
+                    name = title or text
+                    if name and len(name) > 2 and not name.startswith('Tier'):
+                        pokemon_names.append(name)
+            
+            # ========== METHOD 3: Look for images with alt text ==========
+            if not pokemon_names:
+                for img in card.find_all('img'):
+                    alt = img.get('alt', '')
+                    if alt and len(alt) > 2:
+                        pokemon_names.append(alt)
+            
+            # ========== FILTER OUT INVALID NAMES ==========
+            invalid_terms = ['search', 'tier', 'star', 'mega', 'primal', 'ultra', 'shadow', 'legendary', 'snacknap']
+            filtered_names = []
+            for name in pokemon_names:
+                name_lower = name.lower().strip()
+                if len(name) > 2:
+                    # Skip if it's just a type word or invalid term
+                    if name_lower in ['fire', 'water', 'grass', 'electric', 'bug', 'ground', 'flying', 'ghost', 
+                                     'ice', 'psychic', 'dragon', 'dark', 'steel', 'fairy', 'rock', 'fighting', 
+                                     'poison', 'normal', 'shiny', 'search...']:
+                        continue
+                    # Skip if it contains invalid terms (for the whole phrase)
+                    skip = False
+                    for term in invalid_terms:
+                        if term in name_lower:
+                            skip = True
+                            break
+                    if not skip:
+                        filtered_names.append(name)
+            pokemon_names = filtered_names
+            
+            # ========== SPECIAL HANDLING FOR ULTRA BEASTS ==========
+            # Ensure we're not accidentally putting Shadow 1-Star Pokémon into Ultra Beasts
+            if current_tier == 'ultra_beasts':
+                # Only keep known Ultra Beasts
+                known_ultra_beasts = ['nihilego', 'buzzwole', 'pheromosa', 'xurkitree', 'celesteela', 
+                                     'kartana', 'guzzlord', 'poipole', 'naganadel', 'stakataka', 'blacephalon']
+                pokemon_names = [name for name in pokemon_names if name.lower() in known_ultra_beasts]
             
             # Add unique names to raid_data
             for name in pokemon_names:
                 if name and name not in raid_data[current_tier]:
-                    # For Mega raids, KEEP the "Mega " prefix
-                    # For others, keep as-is
                     raid_data[current_tier].append(name)
                     print(f"      Added to {current_tier}: {name}")
         
         print(f"\n  📊 SNACKNAP RAID SUMMARY:")
-        print(f"    Tier 1: {len(raid_data['tier1'])}")
-        print(f"    Tier 3: {len(raid_data['tier3'])}")
-        print(f"    Tier 5: {len(raid_data['tier5'])}")
-        print(f"    Mega: {len(raid_data['mega'])}")
-        print(f"    Primal: {len(raid_data['primal'])}")
-        print(f"    Ultra Beasts: {len(raid_data['ultra_beasts'])}")
-        print(f"    Super Mega: {len(raid_data['super_mega'])}")
+        print(f"    Tier 1: {len(raid_data['tier1'])} - {raid_data['tier1']}")
+        print(f"    Tier 3: {len(raid_data['tier3'])} - {raid_data['tier3']}")
+        print(f"    Tier 5: {len(raid_data['tier5'])} - {raid_data['tier5']}")
+        print(f"    Mega: {len(raid_data['mega'])} - {raid_data['mega']}")
+        print(f"    Primal: {len(raid_data['primal'])} - {raid_data['primal']}")
+        print(f"    Ultra Beasts: {len(raid_data['ultra_beasts'])} - {raid_data['ultra_beasts']}")
+        print(f"    Super Mega: {len(raid_data['super_mega'])} - {raid_data['super_mega']}")
         
         return raid_data
         
@@ -111,8 +131,7 @@ def scrape_snacknap_raids():
         import traceback
         traceback.print_exc()
         return {"tier1": [], "tier3": [], "tier5": [], "mega": [], "primal": [], "ultra_beasts": [], "super_mega": []}
-
-
+        
 def scrape_snacknap_maxbattles():
     """Scrape Dynamax Tier 1,2,3,5 from snacknap.com/max-battles (NO GIGANTAMAX)"""
     print("  📡 Fetching Dynamax battles...")
