@@ -46,43 +46,14 @@ def scrape_snacknap_raids():
             
             pokemon_names = []
             
-            # ========== FIND ALL A TAGS WITH P INSIDE ==========
-            # This is the most reliable way — looks for a > p
+            # ========== ONLY USE TITLE ATTRIBUTE ==========
             for a in card.find_all('a'):
-                p = a.find('p')
-                if p:
-                    name = p.get_text().strip()
-                    # Also try title attribute if text is empty
-                    if not name:
-                        name = a.get('title', '')
-                    if name and len(name) > 2:
-                        pokemon_names.append(name)
+                title = a.get('title', '')
+                if title and len(title) > 3:
+                    pokemon_names.append(title)
+            # =============================================
             
-            # ========== FILTER ==========
-            invalid_terms = ['search', 'tier', 'star', 'mega', 'primal', 'ultra', 'shadow', 'legendary', 'snacknap', 'cp', 'search...']
-            
-            filtered_names = []
-            for name in pokemon_names:
-                name_lower = name.lower().strip()
-                
-                if len(name) < 3:
-                    continue
-                if name_lower in ['fire', 'water', 'grass', 'electric', 'bug', 'ground', 'flying', 'ghost', 
-                                 'ice', 'psychic', 'dragon', 'dark', 'steel', 'fairy', 'rock', 'fighting', 
-                                 'poison', 'normal', 'shiny', 'search...']:
-                    continue
-                
-                skip = False
-                for term in invalid_terms:
-                    if term in name_lower:
-                        skip = True
-                        break
-                if skip:
-                    continue
-                
-                filtered_names.append(name)
-            
-            pokemon_names = list(set(filtered_names))
+            pokemon_names = list(set(pokemon_names))
             
             # ========== SPECIAL HANDLING ==========
             if current_tier == 'ultra_beasts':
@@ -111,6 +82,7 @@ def scrape_snacknap_raids():
         print(f"\n  📊 FINAL RESULTS:")
         print(f"    Ultra Beasts: {len(raid_data['ultra_beasts'])} - {raid_data['ultra_beasts']}")
         print(f"    Primal: {len(raid_data['primal'])} - {raid_data['primal']}")
+        print(f"    Super Mega: {len(raid_data['super_mega'])} - {raid_data['super_mega']}")
         
         return raid_data
         
@@ -119,6 +91,7 @@ def scrape_snacknap_raids():
         import traceback
         traceback.print_exc()
         return {"tier1": [], "tier3": [], "tier5": [], "mega": [], "primal": [], "ultra_beasts": [], "super_mega": []}
+
 
 def scrape_snacknap_maxbattles():
     """Scrape Dynamax tiers from snacknap.com/max-battles"""
