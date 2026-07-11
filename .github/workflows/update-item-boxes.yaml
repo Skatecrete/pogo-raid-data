@@ -1,0 +1,63 @@
+name: update-item-boxes
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'  # Every 6 hours
+  workflow_dispatch:        # Manual trigger
+
+permissions:
+  contents: write
+
+jobs:
+  update-item-boxes:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.x'
+
+    - name: Install dependencies
+      run: |
+        pip install requests==2.31.0
+        pip install beautifulsoup4==4.12.2
+
+    - name: Run item box scraper
+      run: python scrape_item_boxes.py
+
+    - name: Commit and push if changed
+      run: |
+        git config --global user.name 'github-actions'
+        git config --global user.email 'github-actions@github.com'
+        
+        # Fetch latest changes
+        git fetch origin main
+        
+        # Stash any local changes
+        git stash || true
+        
+        # Reset to latest remote state
+        git reset --hard origin/main
+        
+        # Apply stashed changes (our new store_boxes.json)
+        git stash pop || true
+        
+        # Check if store_boxes.json changed
+        if git diff --quiet store_boxes.json; then
+          echo "No changes to commit"
+        else
+          git add store_boxes.json
+          git commit -m "Update store boxes - $(date +'%Y-%m-%d %H:%M:%S')"
+          
+          # Push with retry
+          for i in 1 2 3; do
+            git push origin main && break
+            echo "Push attempt $i failed, pulling latest changes..."
+            git pull origin main --rebase
+            sleep 5
+          done
+        fi
