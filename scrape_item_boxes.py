@@ -12,7 +12,6 @@ def decode_image_url(srcset_or_src):
     
     # If it's a srcset, get the first/largest URL
     if srcset_or_src and ',' in srcset_or_src:
-        # Get the last one (largest) or first
         parts = srcset_or_src.split(',')
         last_part = parts[-1].strip().split(' ')
         src_value = last_part[0] if last_part else srcset_or_src.split(' ')[0]
@@ -20,15 +19,12 @@ def decode_image_url(srcset_or_src):
         src_value = srcset_or_src
     
     # Extract the encoded URL from the src pattern
-    # Pattern: /_next/image?url=ENCODED_URL&w=...
     match = re.search(r'url=([^&]+)', src_value)
     if match:
         encoded = match.group(1)
-        # Decode the URL
         decoded = unquote(encoded)
         return decoded
     
-    # If it's a direct URL already (fallback)
     if src_value.startswith('http'):
         return src_value
     
@@ -49,13 +45,11 @@ def scrape_item_boxes():
         response.raise_for_status()
         soup = BeautifulSoup(response.text, 'html.parser')
         
-        # Find the BUNDLE section
         bundle_section = soup.find('div', id='BUNDLE')
         if not bundle_section:
             print("❌ Could not find #BUNDLE section")
             return []
         
-        # Find all box buttons within the bundle section
         box_buttons = bundle_section.find_all('button')
         print(f"📦 Found {len(box_buttons)} boxes")
         
@@ -81,20 +75,37 @@ def scrape_item_boxes():
                 else:
                     continue
                 
-                # Extract box image
-                box_image_elem = button.find('img')
+                # ========== FIX: Extract box image (skip badge) ==========
                 box_image = None
-                if box_image_elem:
-                    srcset = box_image_elem.get('srcset', '')
-                    src = box_image_elem.get('src', '')
-                    box_image = decode_image_url(srcset) or decode_image_url(src)
+                
+                # Method 1: Look for media-main-container
+                media_container = button.find('div', {'data-testid': 'sku-card.media-main-container'})
+                if media_container:
+                    img = media_container.find('img')
+                    if img:
+                        srcset = img.get('srcset', '')
+                        src = img.get('src', '')
+                        box_image = decode_image_url(srcset) or decode_image_url(src)
+                
+                # Method 2: Fallback - get any img that's NOT a badge
+                if not box_image:
+                    for img in button.find_all('img'):
+                        alt = img.get('alt', '').lower()
+                        # Skip badge images
+                        if 'badge' in alt or 'web only' in alt:
+                            continue
+                        srcset = img.get('srcset', '')
+                        src = img.get('src', '')
+                        box_image = decode_image_url(srcset) or decode_image_url(src)
+                        if box_image:
+                            break
+                # =========================================================
                 
                 # Extract items and counts
                 items = []
                 item_list = button.find('ul')
                 if item_list:
                     for li in item_list.find_all('li'):
-                        # Get item image
                         img = li.find('img')
                         if not img:
                             continue
@@ -102,7 +113,6 @@ def scrape_item_boxes():
                         item_name = img.get('alt', '').strip()
                         item_image = decode_image_url(img.get('srcset', '')) or decode_image_url(img.get('src', ''))
                         
-                        # Get item count
                         count_elem = li.find('p')
                         item_count = 1
                         if count_elem:
@@ -140,11 +150,10 @@ def scrape_item_boxes():
 def calculate_silphco_price(price):
     """Calculate SilphCo price with discount and rounding."""
     if price < 20:
-        discounted = price * 0.6  # 40% off
+        discounted = price * 0.6
     else:
-        discounted = price * 0.5  # 50% off
+        discounted = price * 0.5
     
-    # Round up to nearest $0.50
     rounded = (discounted + 0.49) // 0.5 * 0.5
     return round(rounded, 2)
 
@@ -157,8 +166,6 @@ def main():
     boxes = scrape_item_boxes()
     
     if not boxes:
-        print("❌ No boxes found. Using fallback data.")
-        # Fallback empty data with error flag
         output = {
             "last_updated": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
             "error": True,
@@ -170,7 +177,6 @@ def main():
         print("💾 Saved store_boxes.json with error state")
         return
     
-    # Calculate SilphCo prices for each box
     for box in boxes:
         box['silphco_price'] = calculate_silphco_price(box['in_store_price'])
     
