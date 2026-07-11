@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-10 19:22:02",
+  "last_updated": "2026-07-11 02:14:04",
   "debuts": [
     {
       "event_name": "Willow's Birthday Research",
@@ -46,18 +46,6 @@
         "Pikachu (Team Instinct Cap)": "https://www.serebii.net/pokemongo/pokemon/025-instinct.png",
         "Pikachu (Team Mystic Cap)": "https://www.serebii.net/pokemongo/pokemon/025-mystic.png",
         "Pikachu (Team Valor Cap)": "https://www.serebii.net/pokemongo/pokemon/025-valor.png"
-      },
-      "event_type": "global"
-    },
-    {
-      "event_name": "10th Anniversary Party",
-      "event_date": "July 4th - July 6th 2026",
-      "new_pokemon": [
-        "Gimmighoul (Roaming Form (10th Anniversary Coin))"
-      ],
-      "new_shiny": [],
-      "pokemon_images": {
-        "Gimmighoul (Roaming Form (10th Anniversary Coin))": "https://www.serebii.net/pokemongo/pokemon/999-r.png"
       },
       "event_type": "global"
     }
