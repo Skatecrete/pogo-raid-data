@@ -46,66 +46,87 @@ def scrape_snacknap_raids():
             
             pokemon_names = []
             
-            # Method 1: snk-tile
+            # ========== METHOD 1: snk-tile with a tag (MOST RELIABLE) ==========
             for tile in card.find_all('div', class_='snk-tile'):
                 link = tile.find('a')
                 if link:
-                    name = link.get('title', '') or link.get_text().strip()
+                    # PRIMARY: Use the title attribute (contains full Pokémon name)
+                    name = link.get('title', '')
                     if name and len(name) > 2:
                         pokemon_names.append(name)
+                        continue
+                    
+                    # SECONDARY: Use the text content (fallback)
+                    text = link.get_text().strip()
+                    if text and len(text) > 2 and text != 'Search...':
+                        pokemon_names.append(text)
             
-            # Method 2: a tags
-            for a in card.find_all('a'):
-                title = a.get('title', '')
-                text = a.get_text().strip()
-                name = title or text
-                if name and len(name) > 2 and not name.startswith('Tier'):
-                    pokemon_names.append(name)
-            
-            # Method 3: img alt
-            for img in card.find_all('img'):
-                alt = img.get('alt', '')
-                if alt and len(alt) > 2:
-                    pokemon_names.append(alt)
-            
-            # Method 4: body text with regex (for Primal and Super Mega)
-            body = card.find('div', class_='to-card-body')
-            if body:
-                text = body.get_text()
-                potential_names = re.findall(r'\b[A-Z][a-z]+(?: [A-Z][a-z]+)*\b', text)
-                for name in potential_names:
-                    if len(name) > 2 and not name.lower() in ['Tier', 'Star', 'Mega', 'Primal', 'Ultra', 'Super', 'Legendary']:
+            # ========== METHOD 2: a tags directly (FALLBACK) ==========
+            if not pokemon_names:
+                for a in card.find_all('a'):
+                    title = a.get('title', '')
+                    text = a.get_text().strip()
+                    name = title or text
+                    if name and len(name) > 2 and not name.startswith('Tier') and name != 'Search...':
                         pokemon_names.append(name)
             
-            # Method 5: to-grid (fallback)
-            for grid_item in card.find_all('div', class_='to-grid'):
-                for tile in grid_item.find_all('div', class_='snk-tile'):
-                    link = tile.find('a')
-                    if link:
-                        name = link.get('title', '') or link.get_text().strip()
-                        if name and len(name) > 2:
-                            pokemon_names.append(name)
+            # ========== METHOD 3: img alt text (LAST RESORT) ==========
+            if not pokemon_names:
+                for img in card.find_all('img'):
+                    alt = img.get('alt', '')
+                    if alt and len(alt) > 2 and alt != 'Search...':
+                        pokemon_names.append(alt)
             
-            # Filter invalid names
+            # ========== FILTER OUT INVALID NAMES ==========
             invalid_terms = ['search', 'tier', 'star', 'mega', 'primal', 'ultra', 'shadow', 'legendary', 'snacknap', 'cp']
             invalid_type_words = ['fire', 'water', 'grass', 'electric', 'bug', 'ground', 'flying', 'ghost', 
                                  'ice', 'psychic', 'dragon', 'dark', 'steel', 'fairy', 'rock', 'fighting', 
                                  'poison', 'normal', 'shiny', 'search...']
             
+            # ========== BLOCK: Single words that are just form names ==========
+            form_name_blacklist = ['incarnate', 'therian', 'origin', 'altered', 'attack', 'defense', 'speed', 
+                                  'hero', 'burn drive', 'shock drive', 'douse drive', 'chill drive']
+            
             filtered_names = []
             for name in pokemon_names:
                 name_lower = name.lower().strip()
-                if len(name) > 2 and name_lower not in invalid_type_words:
-                    skip = False
-                    for term in invalid_terms:
-                        if term in name_lower:
-                            skip = True
-                            break
-                    if not skip:
-                        filtered_names.append(name)
-            pokemon_names = list(set(filtered_names))
+                
+                # Skip if too short or invalid type word
+                if len(name) < 3 or name_lower in invalid_type_words:
+                    continue
+                
+                # Skip if it's a form name alone
+                if name_lower in form_name_blacklist:
+                    continue
+                
+                # Skip if it contains invalid terms
+                skip = False
+                for term in invalid_terms:
+                    if term in name_lower:
+                        skip = True
+                        break
+                if skip:
+                    continue
+                
+                # Skip if it's just a form name without a known Pokémon
+                known_pokemon_base = ['pikachu', 'enamorus', 'thundurus', 'tornadus', 'landorus', 
+                                     'genesect', 'dialga', 'palkia', 'giratina', 'deoxys', 
+                                     'zacian', 'zamazenta', 'regieleki', 'regidrago', 'kyogre', 'groudon']
+                
+                has_pokemon = False
+                for base in known_pokemon_base:
+                    if base in name_lower:
+                        has_pokemon = True
+                        break
+                
+                if not has_pokemon and name_lower in form_name_blacklist:
+                    continue
+                
+                filtered_names.append(name)
             
-            # ========== SPECIAL HANDLING: ULTRA BEASTS ==========
+            pokemon_names = list(set(filtered_names))  # Deduplicate
+            
+            # ========== SPECIAL HANDLING FOR ULTRA BEASTS ==========
             if current_tier == 'ultra_beasts':
                 print(f"  🔍 Ultra Beast raw: {pokemon_names}")
                 known = ['nihilego', 'buzzwole', 'pheromosa', 'xurkitree', 'celesteela', 
@@ -114,19 +135,16 @@ def scrape_snacknap_raids():
                 pokemon_names = [n for n in pokemon_names if n.lower() in known]
                 print(f"  🔍 Ultra Beast final: {pokemon_names}")
             
-            # ========== SPECIAL HANDLING: PRIMAL ==========
+            # ========== SPECIAL HANDLING FOR PRIMAL ==========
             if current_tier == 'primal':
                 print(f"  🔍 Primal raw: {pokemon_names}")
-                # Add "Primal " prefix to each name
-                pokemon_names = [f"Primal {name}" for name in pokemon_names if name]
+                pokemon_names = [f"Primal {n}" for n in pokemon_names if n and 'primal' not in n.lower()]
                 print(f"  🔍 Primal final: {pokemon_names}")
             
-            # ========== SPECIAL HANDLING: SUPER MEGA ==========
+            # ========== SPECIAL HANDLING FOR SUPER MEGA ==========
             if current_tier == 'super_mega':
                 print(f"  🔍 Super Mega raw: {pokemon_names}")
-                # Add "Super Mega " prefix if needed
-                if pokemon_names:
-                    pokemon_names = [f"Super Mega {name}" for name in pokemon_names if name]
+                pokemon_names = [f"Super Mega {n}" for n in pokemon_names if n and 'super mega' not in n.lower()]
                 print(f"  🔍 Super Mega final: {pokemon_names}")
             
             for name in pokemon_names:
