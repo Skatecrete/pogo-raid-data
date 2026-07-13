@@ -1,3 +1,6 @@
 
-**⭐ 1-Star Raids:**
-  ✅ Added: pikachu, pikachu (go fest 2023 (e)), pikachu (go fest 2025 (monocle blue)), pikachu (go fest 2025 (monocle red)), pikachu (go fest 2025 (monocle yellow)), pikachu (world championships (2022)), pikachu (world championships (2023)), pikachu (world championships (2024)), pikachu (world championships (2025))
+**⭐⭐⭐⭐⭐ 5-Star Raids:**
+  ✅ Added: dialga, dialga (origin), enamorus (incarnate), enamorus (therian), entei, giratina (altered), giratina (origin), groudon, heatran, ho-oh, kyogre, kyurem, landorus (incarnate), lugia, lunala, palkia, palkia (origin), raikou, rayquaza, regidrago, regieleki, regirock, reshiram, solgaleo, suicune, thundurus (incarnate), xerneas, yveltal, zekrom
+
+**🔴 Mega Raids:**
+  ✅ Added: abomasnow, alakazam, ampharos, audino, blaziken, garchomp, gengar, metagross, pidgeot, salamence, swampert
