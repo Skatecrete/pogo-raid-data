@@ -1,6 +1,6 @@
 
 **⭐⭐⭐⭐⭐ 5-Star Raids:**
-  ✅ Added: dialga, dialga (origin), enamorus (incarnate), enamorus (therian), entei, giratina (altered), giratina (origin), groudon, heatran, ho-oh, kyogre, kyurem, landorus (incarnate), lugia, lunala, palkia, palkia (origin), raikou, rayquaza, regidrago, regieleki, regirock, reshiram, solgaleo, suicune, thundurus (incarnate), xerneas, yveltal, zekrom
+  ✅ Added: regice, registeel, thundurus (therian), tornadus (incarnate), tornadus (therian)
 
 **🔴 Mega Raids:**
-  ✅ Added: abomasnow, alakazam, ampharos, audino, blaziken, garchomp, gengar, metagross, pidgeot, salamence, swampert
+  ✅ Added: aerodactyl
