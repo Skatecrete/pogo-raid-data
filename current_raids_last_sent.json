@@ -1,121 +1,37 @@
 {
-  "last_updated": "2026-07-13",
+  "last_updated": "2026-07-14",
   "tier1": [
-    "Pikachu (GO Fest 2025 (Monocle Blue))",
-    "Pikachu (World Championships (2022))",
-    "Pikachu (World Championships (2024))",
     "Pikachu (GO Fest 2023 (E))",
-    "Pikachu (Valor Cap)",
-    "Rufflet",
-    "Pikachu (World Championships (2023))",
-    "Pikachu (Safari 2020)",
-    "Gastly",
-    "Pikachu (Instinct Cap)",
-    "Vulpix",
-    "Pikachu (GO Fest 2025 (Monocle Yellow))",
     "Pikachu (GO Fest 2025 (Monocle Red))",
+    "Pikachu (GO Fest 2025 (Monocle Yellow))",
+    "Pikachu (World Championships (2024))",
+    "Pikachu (World Championships (2023))",
     "Pikachu (World Championships (2025))",
-    "Pikachu (Mystic Cap)",
-    "Alolan Vulpix"
+    "Pikachu (World Championships (2022))",
+    "Pikachu (GO Fest 2025 (Monocle Blue))",
+    "Pikachu (Safari 2020)"
   ],
   "tier3": [
-    "Snorlax",
+    "Hisuian Typhlosion",
+    "Gyarados",
+    "Duraludon",
+    "Alolan Raichu",
     "Scyther",
-    "Gyarados"
+    "Snorlax"
   ],
   "tier5": [
-    "Tapu Lele",
-    "Kyurem",
-    "Regice",
-    "Moltres",
-    "Raikou",
-    "Deoxys  (Defense)",
-    "Rayquaza",
     "Kyogre",
-    "Xerneas",
-    "Dialga",
-    "Ho-Oh",
-    "Genesect (Chill Drive)",
-    "Tornadus (Therian)",
-    "Zacian (Hero)",
-    "Thundurus (Incarnate)",
-    "Groudon",
-    "Terrakion",
-    "Latios",
-    "Genesect (Shock Drive)",
-    "Deoxys  (Attack)",
-    "Lugia",
-    "Regirock",
-    "Reshiram",
-    "Darkrai",
+    "Moltres",
     "Zapdos",
-    "Tapu Bulu",
-    "Genesect",
-    "Regidrago",
-    "Deoxys  (Speed)",
-    "Latias",
-    "Palkia (Origin)",
-    "Tapu Koko",
-    "Yveltal",
-    "Thundurus (Therian)",
-    "Virizion",
-    "Registeel",
-    "Zamazenta (Hero)",
-    "Zekrom",
-    "Cresselia",
-    "Solgaleo",
-    "Enamorus (Incarnate)",
-    "Tornadus (Incarnate)",
-    "Entei",
-    "Genesect (Burn Drive)",
-    "Tapu Fini",
-    "Palkia",
-    "Lunala",
-    "Enamorus (Therian)",
-    "Regieleki",
-    "Suicune",
-    "Deoxys ",
-    "Dialga (Origin)",
-    "Giratina (Altered)",
-    "Giratina (Origin)",
-    "Genesect (Douse Drive)",
-    "Heatran",
-    "Landorus (Incarnate)",
-    "Cobalion",
     "Articuno"
   ],
   "mega": [
-    "Mega Metagross",
-    "Mega Salamence",
-    "Mega Alakazam",
-    "Mega Abomasnow",
-    "Mega Pinsir",
-    "Mega Gardevoir",
-    "Mega Garchomp",
-    "Mega Pidgeot",
     "Mega Lucario",
-    "Mega Gengar",
-    "Mega Swampert",
-    "Mega Audino",
-    "Mega Tyranitar",
-    "Mega Aerodactyl",
-    "Mega Sceptile",
-    "Mega Blaziken",
-    "Mega Ampharos",
-    "Mega Beedrill"
+    "Mega Sceptile"
   ],
   "primal": [],
-  "ultra_beasts": [
-    "Necrozma",
-    "Guzzlord",
-    "Nihilego",
-    "Kartana",
-    "Blacephalon",
-    "Buzzwole"
-  ],
-  "super_mega": [
-    "Super Mega Mega Mewtwo Y"
-  ],
+  "ultra_beasts": [],
+  "super_mega": [],
   "dynamax_tier1": [
     "Abra",
     "Bounsweet",
@@ -170,11 +86,11 @@
   ],
   "dynamax_tier5": [],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-07-13 09:53:13",
+  "gigantamax_last_updated": "2026-07-14 19:17:28",
   "scrapedduck_raids": [
-    "dapper pikachu with red accents|1-star raids",
-    "dapper pikachu with yellow accents|1-star raids",
-    "dapper pikachu with blue accents|1-star raids",
+    "formal pikachu with red accents|1-star raids",
+    "formal pikachu with yellow accents|1-star raids",
+    "formal pikachu with blue accents|1-star raids",
     "pikachu wearing a safari hat|1-star raids",
     "pikachu wearing a varsity jacket|1-star raids",
     "amethyst crown pikachu|1-star raids",
@@ -195,9 +111,9 @@
     "shadow palkia|5-star raids"
   ],
   "scrapedduck_normalized": [
-    "name:dapper pikachu with red accents|1-star raids",
-    "name:dapper pikachu with yellow accents|1-star raids",
-    "name:dapper pikachu with blue accents|1-star raids",
+    "name:formal pikachu with red accents|1-star raids",
+    "name:formal pikachu with yellow accents|1-star raids",
+    "name:formal pikachu with blue accents|1-star raids",
     "name:pikachu wearing a safari hat|1-star raids",
     "name:pikachu wearing a varsity jacket|1-star raids",
     "name:amethyst crown pikachu|1-star raids",
@@ -219,7 +135,7 @@
   ],
   "scrapedduck_raids_objects": [
     {
-      "name": "Dapper Pikachu with red accents",
+      "name": "Formal Pikachu with red accents",
       "tier": "1-Star Raids",
       "canBeShiny": true,
       "types": [
@@ -244,10 +160,10 @@
           "image": "https://leekduck.com/assets/img/weather/rainy.png"
         }
       ],
-      "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm25.fGOFEST_2025_GOGGLES_RED.icon.png"
+      "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm25.fGOFEST_2025_MONOCLE_RED.icon.png"
     },
     {
-      "name": "Dapper Pikachu with yellow accents",
+      "name": "Formal Pikachu with yellow accents",
       "tier": "1-Star Raids",
       "canBeShiny": true,
       "types": [
@@ -272,10 +188,10 @@
           "image": "https://leekduck.com/assets/img/weather/rainy.png"
         }
       ],
-      "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm25.fGOFEST_2025_GOGGLES_YELLOW.icon.png"
+      "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm25.fGOFEST_2025_MONOCLE_YELLOW.icon.png"
     },
     {
-      "name": "Dapper Pikachu with blue accents",
+      "name": "Formal Pikachu with blue accents",
       "tier": "1-Star Raids",
       "canBeShiny": true,
       "types": [
@@ -300,7 +216,7 @@
           "image": "https://leekduck.com/assets/img/weather/rainy.png"
         }
       ],
-      "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm25.fGOFEST_2025_GOGGLES_BLUE.icon.png"
+      "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm25.fGOFEST_2025_MONOCLE_BLUE.icon.png"
     },
     {
       "name": "Pikachu wearing a Safari Hat",
@@ -871,5 +787,5 @@
       "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm484.icon.png"
     }
   ],
-  "last_sent_time": "2026-07-13T09:53:14.256340"
+  "last_sent_time": "2026-07-14T19:17:28.863237"
 }
