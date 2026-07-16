@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-16 08:06:44",
+  "last_updated": "2026-07-16 13:41:50",
   "debuts": [
     {
       "event_name": "Water Festival 2026",
@@ -14,6 +14,20 @@
         "Cramorant": "https://www.serebii.net/pokemongo/pokemon/845.png",
         "Arrokuda": "https://www.serebii.net/pokemongo/pokemon/846.png",
         "Barraskewda": "https://www.serebii.net/pokemongo/pokemon/847.png"
+      },
+      "event_type": "global"
+    },
+    {
+      "event_name": "Summer Marathon Arctic Embers",
+      "event_date": "August 4th - August 10th 2026",
+      "new_pokemon": [],
+      "new_shiny": [
+        "Snom",
+        "Frosmoth"
+      ],
+      "pokemon_images": {
+        "Snom": "https://www.serebii.net/pokemongo/pokemon/shiny/872.png",
+        "Frosmoth": "https://www.serebii.net/pokemongo/pokemon/shiny/873.png"
       },
       "event_type": "global"
     },
