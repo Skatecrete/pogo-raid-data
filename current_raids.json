@@ -1,21 +1,25 @@
 {
   "last_updated": "2026-07-20",
   "tier1": [
-    "Pikachu (GO Fest 2025 (Monocle Blue))",
+    "Pikachu (World Championships (2022))",
     "Pikachu (World Championships (2024))",
-    "Pikachu (GO Fest 2025 (Monocle Red))",
-    "Pikachu (GO Fest 2023 (E))",
+    "Wobbuffet",
     "Pikachu (World Championships (2023))",
     "Pikachu (GO Fest 2025 (Monocle Yellow))",
+    "Pikachu (GO Fest 2025 (Monocle Blue))",
     "Pikachu (Safari 2020)",
-    "Pikachu (World Championships (2022))",
+    "Pikachu (GO Fest 2023 (E))",
+    "Pikachu (World Championships (2025))",
+    "Jangmo-o",
+    "Lileep",
     "Pikachu (Bb 2026)",
-    "Pikachu (World Championships (2025))"
+    "Pikachu (GO Fest 2025 (Monocle Red))",
+    "Anorith"
   ],
   "tier3": [
-    "Alolan Raichu",
     "Duraludon",
-    "Hisuian Typhlosion"
+    "Hisuian Typhlosion",
+    "Alolan Raichu"
   ],
   "tier5": [
     "Kyogre"
@@ -70,7 +74,6 @@
     "Beldum",
     "Chansey",
     "Cryogonal",
-    "Deino",
     "Drampa",
     "Falinks",
     "Hitmonchan",
@@ -80,5 +83,5 @@
   ],
   "dynamax_tier5": [],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-07-20 02:52:40"
+  "gigantamax_last_updated": "2026-07-20 18:28:27"
 }
