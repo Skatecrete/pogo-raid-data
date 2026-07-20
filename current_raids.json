@@ -1,32 +1,26 @@
 {
-  "last_updated": "2026-07-14",
+  "last_updated": "2026-07-20",
   "tier1": [
-    "Pikachu (GO Fest 2023 (E))",
-    "Pikachu (GO Fest 2025 (Monocle Red))",
-    "Pikachu (GO Fest 2025 (Monocle Yellow))",
-    "Pikachu (World Championships (2024))",
-    "Pikachu (World Championships (2023))",
-    "Pikachu (World Championships (2025))",
-    "Pikachu (World Championships (2022))",
     "Pikachu (GO Fest 2025 (Monocle Blue))",
-    "Pikachu (Safari 2020)"
+    "Pikachu (World Championships (2024))",
+    "Pikachu (GO Fest 2025 (Monocle Red))",
+    "Pikachu (GO Fest 2023 (E))",
+    "Pikachu (World Championships (2023))",
+    "Pikachu (GO Fest 2025 (Monocle Yellow))",
+    "Pikachu (Safari 2020)",
+    "Pikachu (World Championships (2022))",
+    "Pikachu (Bb 2026)",
+    "Pikachu (World Championships (2025))"
   ],
   "tier3": [
-    "Hisuian Typhlosion",
-    "Gyarados",
-    "Duraludon",
     "Alolan Raichu",
-    "Scyther",
-    "Snorlax"
+    "Duraludon",
+    "Hisuian Typhlosion"
   ],
   "tier5": [
-    "Kyogre",
-    "Moltres",
-    "Zapdos",
-    "Articuno"
+    "Kyogre"
   ],
   "mega": [
-    "Mega Lucario",
     "Mega Sceptile"
   ],
   "primal": [],
@@ -86,5 +80,5 @@
   ],
   "dynamax_tier5": [],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-07-14 19:17:28"
+  "gigantamax_last_updated": "2026-07-20 02:52:40"
 }

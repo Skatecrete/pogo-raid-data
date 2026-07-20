@@ -1,14 +1,18 @@
 {
-  "name:dapper pikachu with red accents|1-star raids": {
-    "first_seen": "2026-07-14T19:17:28.862996",
+  "name:articuno|5-star raids": {
+    "first_seen": "2026-07-20T02:52:41.200711",
     "count": 1
   },
-  "name:dapper pikachu with yellow accents|1-star raids": {
-    "first_seen": "2026-07-14T19:17:28.862996",
+  "name:moltres|5-star raids": {
+    "first_seen": "2026-07-20T02:52:41.200711",
     "count": 1
   },
-  "name:dapper pikachu with blue accents|1-star raids": {
-    "first_seen": "2026-07-14T19:17:28.862996",
+  "name:zapdos|5-star raids": {
+    "first_seen": "2026-07-20T02:52:41.200711",
+    "count": 1
+  },
+  "name:mega lucario|mega raids": {
+    "first_seen": "2026-07-20T02:52:41.200711",
     "count": 1
   }
 }
