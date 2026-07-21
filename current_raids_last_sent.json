@@ -1,26 +1,30 @@
 {
-  "last_updated": "2026-07-20",
+  "last_updated": "2026-07-21",
   "tier1": [
-    "Jangmo-o",
-    "Pikachu (Bb 2026)",
+    "Pikachu (Anniversary 2026)",
+    "Pikachu (World Championships (2022))",
+    "Pikachu (World Championships (2023))",
+    "Pikachu (World Championships (2025))",
     "Pikachu (GO Fest 2025 (Monocle Red))",
+    "Pikachu (GO Fest 2023 (E))",
+    "Wobbuffet (Jan 2020)",
+    "Pikachu (Safari 2020)",
+    "Pikachu (GO Fest 2025 (Monocle Blue))",
+    "Pikachu (GO Fest 2025 (Monocle Yellow))",
+    "Jangmo-o",
+    "Grimer (Anniversary 2024)",
     "Pikachu (World Championships (2024))",
     "Anorith",
-    "Pikachu (GO Fest 2025 (Monocle Blue))",
-    "Pikachu (World Championships (2022))",
-    "Pikachu (GO Fest 2023 (E))",
-    "Wobbuffet",
-    "Lileep",
-    "Pikachu (World Championships (2025))",
-    "Wobbuffet (Jan 2020)",
-    "Pikachu (World Championships (2023))",
-    "Pikachu (Safari 2020)",
-    "Pikachu (GO Fest 2025 (Monocle Yellow))"
+    "Lileep"
   ],
   "tier3": [
     "Alolan Raichu",
+    "Raticate (Jan 2020)",
+    "Nidorino (Jan 2020)",
+    "Duraludon",
     "Hisuian Typhlosion",
-    "Duraludon"
+    "Wobbuffet (Jan 2020)",
+    "Gengar (Jan 2020)"
   ],
   "tier5": [
     "Kyogre"
@@ -84,7 +88,7 @@
   ],
   "dynamax_tier5": [],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-07-20 21:42:17",
+  "gigantamax_last_updated": "2026-07-21 00:04:01",
   "scrapedduck_raids": [
     "formal pikachu with red accents|1-star raids",
     "formal pikachu with yellow accents|1-star raids",
@@ -811,5 +815,5 @@
       "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm484.icon.png"
     }
   ],
-  "last_sent_time": "2026-07-20T21:42:17.799437"
+  "last_sent_time": "2026-07-21T00:04:01.917316"
 }
