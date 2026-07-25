@@ -1,6 +1,12 @@
 
+**⭐ 1-Star Raids:**
+  ✅ Added: pikachu (instinct cap)
+
 **⭐⭐⭐⭐⭐ 5-Star Raids:**
-  ✅ Added: solgaleo
+  ✅ Added: dialga (origin), enamorus (incarnate), enamorus (therian), heatran, landorus (therian), palkia (origin), regidrago, regieleki, regigigas, regirock, registeel, tornadus (therian)
 
 **🔴 Mega Raids:**
-  ✅ Added: salamence
+  ✅ Added: garchomp
+
+**💫 SUPER MEGA RAIDS:**
+  ✅ Added: super mewtwo y

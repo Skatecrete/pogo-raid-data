@@ -1,43 +1,40 @@
 {
-  "last_updated": "2026-07-21",
+  "last_updated": "2026-07-25",
   "tier1": [
-    "Pikachu (World Championships (2023))",
-    "Pikachu (GO Fest 2023 (E))",
-    "Wobbuffet (Jan 2020)",
-    "Anorith",
-    "Jangmo-o",
-    "Pikachu (GO Fest 2025 (Monocle Red))",
+    "Pikachu (Instinct Cap)",
     "Pikachu (Anniversary 2026)",
-    "Lileep",
-    "Pikachu (Safari 2020)",
-    "Pikachu (World Championships (2022))",
-    "Pikachu (GO Fest 2025 (Monocle Yellow))",
-    "Pikachu (GO Fest 2025 (Monocle Blue))",
-    "Pikachu (World Championships (2025))",
-    "Pikachu (Bb 2026)",
-    "Pikachu (World Championships (2024))",
     "Grimer (Anniversary 2024)"
   ],
   "tier3": [
     "Wobbuffet (Jan 2020)",
-    "Alolan Raichu",
-    "Raticate (Jan 2020)",
     "Nidorino (Jan 2020)",
-    "Hisuian Typhlosion",
-    "Duraludon",
+    "Raticate (Jan 2020)",
     "Gengar (Jan 2020)"
   ],
   "tier5": [
-    "Kyogre",
-    "Solgaleo"
+    "Regigigas",
+    "Enamorus (Therian)",
+    "Landorus (Therian)",
+    "Heatran",
+    "Palkia (Origin)",
+    "Dialga (Origin)",
+    "Solgaleo",
+    "Tornadus (Therian)",
+    "Registeel",
+    "Enamorus (Incarnate)",
+    "Regieleki",
+    "Regirock",
+    "Regidrago"
   ],
   "mega": [
-    "Mega Sceptile",
-    "Mega Salamence"
+    "Mega Salamence",
+    "Mega Garchomp"
   ],
   "primal": [],
   "ultra_beasts": [],
-  "super_mega": [],
+  "super_mega": [
+    "Super Mega Mega Mewtwo Y"
+  ],
   "dynamax_tier1": [
     "Abra",
     "Bounsweet",
@@ -91,5 +88,5 @@
   ],
   "dynamax_tier5": [],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-07-21 18:15:16"
+  "gigantamax_last_updated": "2026-07-25 22:26:05"
 }
