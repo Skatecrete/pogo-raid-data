@@ -1,12 +1,9 @@
 
-**⭐ 1-Star Raids:**
-  ✅ Added: pikachu (valor cap)
-
 **⭐⭐⭐⭐⭐ 5-Star Raids:**
-  ✅ Added: deoxys, genesect (douse drive), tapu bulu, tapu fini, tapu koko, tapu lele, thundurus (incarnate), tornadus (incarnate)
+  ✅ Added: cobalion, cresselia, darkrai, deoxys  (attack), deoxys  (defense), deoxys  (speed), genesect, genesect (burn drive), genesect (chill drive), genesect (shock drive), latias, latios, terrakion, virizion, zacian (hero), zamazenta (hero)
 
 **🔴 Mega Raids:**
-  ✅ Added: metagross, pinsir, sceptile
+  ✅ Added: beedrill, gardevoir, lucario, tyranitar
 
 **🌀 Ultra Beasts:**
-  ✅ Added: celesteela, guzzlord, necrozma, stakataka, xurkitree
+  ✅ Added: kartana, nihilego
