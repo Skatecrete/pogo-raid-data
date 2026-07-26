@@ -1,9 +1,3 @@
 
-**⭐⭐⭐⭐⭐ 5-Star Raids:**
-  ✅ Added: cobalion, cresselia, darkrai, deoxys  (attack), deoxys  (defense), deoxys  (speed), genesect, genesect (burn drive), genesect (chill drive), genesect (shock drive), latias, latios, terrakion, virizion, zacian (hero), zamazenta (hero)
-
-**🔴 Mega Raids:**
-  ✅ Added: beedrill, gardevoir, lucario, tyranitar
-
 **🌀 Ultra Beasts:**
-  ✅ Added: kartana, nihilego
+  ✅ Added: pheromosa
