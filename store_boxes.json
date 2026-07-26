@@ -1,6 +1,126 @@
 {
-  "last_updated": "2026-07-26 03:42:48",
-  "error": true,
-  "message": "Failed to scrape store boxes. Please contact admin.",
-  "boxes": []
+  "last_updated": "2026-07-26 08:36:44",
+  "error": false,
+  "total": 3,
+  "boxes": [
+    {
+      "box_name": "GO Pass Deluxe: July + 10 Ranks",
+      "in_store_price": 9.99,
+      "box_image": "https://storage.googleapis.com/platform-webstore-rel-assets/pgo/sku_assets/bundle1.sprite.a.png",
+      "items": [
+        {
+          "name": "GO Pass Deluxe: July",
+          "count": 1,
+          "image": "https://storage.googleapis.com/platform-webstore-rel-assets/pgo/sku_assets/badge_event_0191.png"
+        },
+        {
+          "name": "+10 Ranks",
+          "count": 1,
+          "image": "https://storage.googleapis.com/platform-webstore-rel-assets/pgo/sku_assets/item_event_pass_point_monthly_02.png"
+        },
+        {
+          "name": "Ultra Ball",
+          "count": 10,
+          "image": "https://storage.googleapis.com/platform-webstore-rel-assets/pgo/sku_assets/item_ultra_ball.png"
+        },
+        {
+          "name": "Max Revive",
+          "count": 5,
+          "image": "https://storage.googleapis.com/platform-webstore-rel-assets/pgo/sku_assets/item_max_revive.png"
+        },
+        {
+          "name": "Premium Battle Pass",
+          "count": 1,
+          "image": "https://storage.googleapis.com/platform-webstore-rel-assets/pgo/sku_assets/item_paid_raid_ticket.png"
+        },
+        {
+          "name": "Max Potion",
+          "count": 5,
+          "image": "https://storage.googleapis.com/platform-webstore-rel-assets/pgo/sku_assets/item_max_potion.png"
+        }
+      ],
+      "silphco_price": 6.0
+    },
+    {
+      "box_name": "GO Pass Deluxe: July Ultra Box",
+      "in_store_price": 14.99,
+      "box_image": "https://storage.googleapis.com/platform-webstore-rel-assets/pgo/sku_assets/bundle1.sprite.b.png",
+      "items": [
+        {
+          "name": "GO Pass Deluxe: July",
+          "count": 1,
+          "image": "https://storage.googleapis.com/platform-webstore-rel-assets/pgo/sku_assets/badge_event_0191.png"
+        },
+        {
+          "name": "+10 Ranks",
+          "count": 1,
+          "image": "https://storage.googleapis.com/platform-webstore-rel-assets/pgo/sku_assets/item_event_pass_point_monthly_02.png"
+        },
+        {
+          "name": "Ultra Ball",
+          "count": 20,
+          "image": "https://storage.googleapis.com/platform-webstore-rel-assets/pgo/sku_assets/item_ultra_ball.png"
+        },
+        {
+          "name": "Max Revive",
+          "count": 10,
+          "image": "https://storage.googleapis.com/platform-webstore-rel-assets/pgo/sku_assets/item_max_revive.png"
+        },
+        {
+          "name": "Premium Battle Pass",
+          "count": 2,
+          "image": "https://storage.googleapis.com/platform-webstore-rel-assets/pgo/sku_assets/item_paid_raid_ticket.png"
+        },
+        {
+          "name": "Egg Incubator",
+          "count": 1,
+          "image": "https://storage.googleapis.com/platform-webstore-rel-assets/pgo/sku_assets/item_incubator_basic.png"
+        },
+        {
+          "name": "Super Incubator",
+          "count": 1,
+          "image": "https://storage.googleapis.com/platform-webstore-rel-assets/pgo/sku_assets/item_incubator_super.png"
+        },
+        {
+          "name": "Max Potion",
+          "count": 10,
+          "image": "https://storage.googleapis.com/platform-webstore-rel-assets/pgo/sku_assets/item_max_potion.png"
+        }
+      ],
+      "silphco_price": 9.0
+    },
+    {
+      "box_name": "GO Pass Deluxe: July",
+      "in_store_price": 7.99,
+      "box_image": "https://storage.googleapis.com/platform-webstore-rel-assets/pgo/sku_assets/bundle.xmas.small.1.png",
+      "items": [
+        {
+          "name": "GO Pass Deluxe: July",
+          "count": 1,
+          "image": "https://storage.googleapis.com/platform-webstore-rel-assets/pgo/sku_assets/badge_event_0191.png"
+        },
+        {
+          "name": "Ultra Ball",
+          "count": 10,
+          "image": "https://storage.googleapis.com/platform-webstore-rel-assets/pgo/sku_assets/item_ultra_ball.png"
+        },
+        {
+          "name": "Max Revive",
+          "count": 5,
+          "image": "https://storage.googleapis.com/platform-webstore-rel-assets/pgo/sku_assets/item_max_revive.png"
+        },
+        {
+          "name": "Premium Battle Pass",
+          "count": 1,
+          "image": "https://storage.googleapis.com/platform-webstore-rel-assets/pgo/sku_assets/item_paid_raid_ticket.png"
+        },
+        {
+          "name": "Max Potion",
+          "count": 5,
+          "image": "https://storage.googleapis.com/platform-webstore-rel-assets/pgo/sku_assets/item_max_potion.png"
+        }
+      ],
+      "silphco_price": 5.0
+    }
+  ]
 }
