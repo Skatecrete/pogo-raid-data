@@ -1,9 +1,12 @@
 
 **⭐ 1-Star Raids:**
-  ✅ Added: pikachu (mystic cap)
+  ✅ Added: pikachu (valor cap)
 
 **⭐⭐⭐⭐⭐ 5-Star Raids:**
-  ✅ Added: landorus (incarnate), regice, thundurus (therian)
+  ✅ Added: deoxys, genesect (douse drive), tapu bulu, tapu fini, tapu koko, tapu lele, thundurus (incarnate), tornadus (incarnate)
 
 **🔴 Mega Raids:**
-  ✅ Added: audino
+  ✅ Added: metagross, pinsir, sceptile
+
+**🌀 Ultra Beasts:**
+  ✅ Added: celesteela, guzzlord, necrozma, stakataka, xurkitree

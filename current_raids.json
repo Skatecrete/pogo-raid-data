@@ -1,42 +1,60 @@
 {
-  "last_updated": "2026-07-25",
+  "last_updated": "2026-07-26",
   "tier1": [
-    "Pikachu (Anniversary 2026)",
     "Pikachu (Mystic Cap)",
     "Pikachu (Instinct Cap)",
+    "Pikachu (Anniversary 2026)",
+    "Pikachu (Valor Cap)",
     "Grimer (Anniversary 2024)"
   ],
   "tier3": [
-    "Wobbuffet (Jan 2020)",
+    "Gengar (Jan 2020)",
     "Nidorino (Jan 2020)",
     "Raticate (Jan 2020)",
-    "Gengar (Jan 2020)"
+    "Wobbuffet (Jan 2020)"
   ],
   "tier5": [
+    "Dialga (Origin)",
+    "Tapu Bulu",
+    "Thundurus (Therian)",
+    "Regieleki",
     "Regice",
-    "Palkia (Origin)",
-    "Regigigas",
+    "Tapu Lele",
+    "Enamorus (Incarnate)",
+    "Regidrago",
+    "Tapu Koko",
+    "Tapu Fini",
+    "Registeel",
+    "Deoxys ",
+    "Solgaleo",
+    "Thundurus (Incarnate)",
+    "Tornadus (Incarnate)",
+    "Heatran",
+    "Landorus (Incarnate)",
     "Enamorus (Therian)",
     "Tornadus (Therian)",
-    "Landorus (Therian)",
-    "Landorus (Incarnate)",
-    "Dialga (Origin)",
-    "Regieleki",
-    "Thundurus (Therian)",
+    "Genesect (Douse Drive)",
     "Regirock",
-    "Solgaleo",
-    "Regidrago",
-    "Registeel",
-    "Heatran",
-    "Enamorus (Incarnate)"
+    "Landorus (Therian)",
+    "Regigigas",
+    "Palkia (Origin)"
   ],
   "mega": [
+    "Mega Metagross",
     "Mega Salamence",
+    "Mega Sceptile",
     "Mega Audino",
-    "Mega Garchomp"
+    "Mega Garchomp",
+    "Mega Pinsir"
   ],
   "primal": [],
-  "ultra_beasts": [],
+  "ultra_beasts": [
+    "Necrozma",
+    "Guzzlord",
+    "Xurkitree",
+    "Stakataka",
+    "Celesteela"
+  ],
   "super_mega": [
     "Super Mega Mega Mewtwo Y"
   ],
@@ -93,5 +111,5 @@
   ],
   "dynamax_tier5": [],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-07-25 23:30:02"
+  "gigantamax_last_updated": "2026-07-26 01:09:01"
 }
