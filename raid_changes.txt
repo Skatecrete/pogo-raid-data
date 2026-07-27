@@ -1,3 +1,6 @@
 
-**🌀 Ultra Beasts:**
-  ✅ Added: blacephalon, buzzwole
+**⭐ 1-Star Raids:**
+  ✅ Added: bulbasaur, charmander, pikachu, squirtle
+
+**⭐⭐⭐ 3-Star Raids:**
+  ✅ Added: dragonite, lapras, vaporeon
