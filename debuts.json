@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-27 19:21:14",
+  "last_updated": "2026-07-28 02:09:07",
   "debuts": [
     {
       "event_name": "Water Festival 2026",
@@ -28,30 +28,6 @@
       "pokemon_images": {
         "Snom": "https://www.serebii.net/pokemongo/pokemon/shiny/872.png",
         "Frosmoth": "https://www.serebii.net/pokemongo/pokemon/shiny/873.png"
-      },
-      "event_type": "global"
-    },
-    {
-      "event_name": "Ultra Unlock 10th Anniversary Edition",
-      "event_date": "July 21st - July 27th 2026",
-      "new_pokemon": [
-        "Pikachu (Professor Willow's Assistant)"
-      ],
-      "new_shiny": [],
-      "pokemon_images": {
-        "Pikachu (Professor Willow's Assistant)": "https://www.serebii.net/pokemongo/pokemon/025-willow.png"
-      },
-      "event_type": "global"
-    },
-    {
-      "event_name": "Willow's Birthday Research",
-      "event_date": "July 21st 2026",
-      "new_pokemon": [
-        "Pikachu (Professor Willow's Assistant)"
-      ],
-      "new_shiny": [],
-      "pokemon_images": {
-        "Pikachu (Professor Willow's Assistant)": "https://www.serebii.net/pokemongo/pokemon/025-willow.png"
       },
       "event_type": "global"
     }
