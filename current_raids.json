@@ -1,27 +1,36 @@
 {
   "last_updated": "2026-07-28",
   "tier1": [
-    "Pikachu (Anniversary 2026)",
-    "Pikachu (Bb 2026)",
-    "Grimer (Anniversary 2024)",
     "Pikachu",
-    "Charmander",
     "Squirtle",
-    "Bulbasaur"
+    "Grimer (Anniversary 2024)",
+    "Cranidos",
+    "Bulbasaur",
+    "Shieldon",
+    "Pikachu (Anniversary 2026)",
+    "Larvitar",
+    "Charmander",
+    "Sinistea (Phony)",
+    "Pikachu (Bb 2026)"
   ],
   "tier3": [
-    "Vaporeon",
     "Dragonite",
-    "Gengar (Jan 2020)",
+    "Excadrill",
+    "Hisuian Samurott",
     "Nidorino (Jan 2020)",
+    "Drampa",
+    "Gengar (Jan 2020)",
+    "Vaporeon",
     "Lapras",
-    "Raticate (Jan 2020)",
-    "Wobbuffet (Jan 2020)"
+    "Wobbuffet (Jan 2020)",
+    "Raticate (Jan 2020)"
   ],
   "tier5": [
+    "Kyurem",
     "Solgaleo"
   ],
   "mega": [
+    "Mega Aggron",
     "Mega Salamence"
   ],
   "primal": [],
@@ -81,5 +90,5 @@
   ],
   "dynamax_tier5": [],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-07-28 03:46:10"
+  "gigantamax_last_updated": "2026-07-28 19:21:00"
 }
