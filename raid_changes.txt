@@ -1,6 +1,3 @@
 
 **⭐ 1-Star Raids:**
-  ✅ Added: bulbasaur, charmander, pikachu, squirtle
-
-**⭐⭐⭐ 3-Star Raids:**
-  ✅ Added: dragonite, lapras, vaporeon
+  ✅ Added: pikachu (bb 2026)

@@ -1,71 +1,32 @@
 {
-  "last_updated": "2026-07-27",
+  "last_updated": "2026-07-28",
   "tier1": [
-    "Grimer (Anniversary 2024)",
-    "Bulbasaur",
-    "Pikachu (Valor Cap)",
     "Pikachu (Anniversary 2026)",
+    "Pikachu (Bb 2026)",
+    "Grimer (Anniversary 2024)",
     "Pikachu",
-    "Pikachu (Mystic Cap)",
+    "Charmander",
     "Squirtle",
-    "Pikachu (Instinct Cap)",
-    "Charmander"
+    "Bulbasaur"
   ],
   "tier3": [
-    "Wobbuffet (Jan 2020)",
-    "Gengar (Jan 2020)",
+    "Vaporeon",
     "Dragonite",
+    "Gengar (Jan 2020)",
     "Nidorino (Jan 2020)",
     "Lapras",
     "Raticate (Jan 2020)",
-    "Vaporeon"
+    "Wobbuffet (Jan 2020)"
   ],
   "tier5": [
-    "Genesect (Burn Drive)",
-    "Zacian (Hero)",
-    "Latios",
-    "Deoxys  (Speed)",
-    "Genesect (Shock Drive)",
-    "Latias",
-    "Deoxys  (Defense)",
-    "Genesect (Douse Drive)",
-    "Solgaleo",
-    "Virizion",
-    "Darkrai",
-    "Cresselia",
-    "Zamazenta (Hero)",
-    "Deoxys  (Attack)",
-    "Tapu Lele",
-    "Terrakion",
-    "Genesect",
-    "Deoxys ",
-    "Tapu Koko",
-    "Cobalion",
-    "Genesect (Chill Drive)",
-    "Tapu Fini",
-    "Tapu Bulu"
+    "Solgaleo"
   ],
   "mega": [
-    "Mega Salamence",
-    "Mega Beedrill",
-    "Mega Sceptile",
-    "Mega Gardevoir",
-    "Mega Tyranitar",
-    "Mega Lucario",
-    "Mega Pinsir"
+    "Mega Salamence"
   ],
   "primal": [],
-  "ultra_beasts": [
-    "Guzzlord",
-    "Necrozma",
-    "Buzzwole",
-    "Blacephalon",
-    "Kartana",
-    "Nihilego"
-  ],
-  "super_mega": [
-    "Super Mega Mega Mewtwo Y"
-  ],
+  "ultra_beasts": [],
+  "super_mega": [],
   "dynamax_tier1": [
     "Abra",
     "Bounsweet",
@@ -120,5 +81,5 @@
   ],
   "dynamax_tier5": [],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-07-27 18:55:36"
+  "gigantamax_last_updated": "2026-07-28 03:46:10"
 }
