@@ -1,11 +1,11 @@
 {
-  "last_updated": "2026-07-29 19:35:46",
+  "last_updated": "2026-07-30 03:13:07",
   "error": false,
   "total": 3,
   "boxes": [
     {
       "box_name": "GO Pass Deluxe: July + 10 Ranks",
-      "in_store_price": 4.0,
+      "in_store_price": 9.99,
       "box_image": "https://storage.googleapis.com/platform-webstore-rel-assets/pgo/sku_assets/bundle1.sprite.a.png",
       "items": [
         {
@@ -39,11 +39,11 @@
           "image": "https://storage.googleapis.com/platform-webstore-rel-assets/pgo/sku_assets/item_max_potion.png"
         }
       ],
-      "silphco_price": 2.5
+      "silphco_price": 6.0
     },
     {
       "box_name": "GO Pass Deluxe: July Ultra Box",
-      "in_store_price": 7.0,
+      "in_store_price": 14.99,
       "box_image": "https://storage.googleapis.com/platform-webstore-rel-assets/pgo/sku_assets/bundle1.sprite.b.png",
       "items": [
         {
@@ -87,11 +87,11 @@
           "image": "https://storage.googleapis.com/platform-webstore-rel-assets/pgo/sku_assets/item_max_potion.png"
         }
       ],
-      "silphco_price": 4.5
+      "silphco_price": 9.0
     },
     {
       "box_name": "GO Pass Deluxe: July",
-      "in_store_price": 3.0,
+      "in_store_price": 7.99,
       "box_image": "https://storage.googleapis.com/platform-webstore-rel-assets/pgo/sku_assets/bundle.xmas.small.1.png",
       "items": [
         {
@@ -120,7 +120,7 @@
           "image": "https://storage.googleapis.com/platform-webstore-rel-assets/pgo/sku_assets/item_max_potion.png"
         }
       ],
-      "silphco_price": 2.0
+      "silphco_price": 5.0
     }
   ]
 }
