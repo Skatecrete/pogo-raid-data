@@ -1,14 +1,14 @@
 {
-  "last_updated": "2026-07-31",
+  "last_updated": "2026-08-02",
   "tier1": [
-    "Cranidos",
-    "Shieldon",
+    "Sinistea (Phony)",
     "Larvitar",
-    "Sinistea (Phony)"
+    "Shieldon",
+    "Cranidos"
   ],
   "tier3": [
-    "Drampa",
     "Hisuian Samurott",
+    "Drampa",
     "Excadrill"
   ],
   "tier5": [
@@ -69,14 +69,13 @@
     "Falinks",
     "Hitmonchan",
     "Hitmonlee",
+    "Magmar",
     "Passimian",
     "Sableye"
   ],
   "dynamax_tier5": [],
-  "gigantamax": [
-    "Rillaboom"
-  ],
-  "gigantamax_last_updated": "2026-07-31 12:54:02",
+  "gigantamax": [],
+  "gigantamax_last_updated": "2026-08-02 13:17:14",
   "scrapedduck_raids": [
     "larvitar|1-star raids",
     "cranidos|1-star raids",
@@ -677,5 +676,5 @@
       "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm484.icon.png"
     }
   ],
-  "last_sent_time": "2026-07-31T12:54:03.109151"
+  "last_sent_time": "2026-08-02T13:17:14.499264"
 }
