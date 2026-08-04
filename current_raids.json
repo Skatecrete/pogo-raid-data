@@ -1,21 +1,30 @@
 {
-  "last_updated": "2026-08-02",
+  "last_updated": "2026-08-04",
   "tier1": [
+    "Darumaka",
+    "Cranidos",
     "Sinistea (Phony)",
-    "Larvitar",
+    "Galarian Darumaka",
     "Shieldon",
-    "Cranidos"
+    "Alolan Sandshrew",
+    "Hisuian Growlithe",
+    "Larvitar"
   ],
   "tier3": [
-    "Hisuian Samurott",
+    "Wyrdeer",
+    "Excadrill",
+    "Alolan Marowak",
     "Drampa",
-    "Excadrill"
+    "Hisuian Samurott",
+    "Hisuian Avalugg"
   ],
   "tier5": [
-    "Kyurem"
+    "Kyurem",
+    "Uxie"
   ],
   "mega": [
-    "Mega Aggron"
+    "Mega Aggron",
+    "Mega Blaziken"
   ],
   "primal": [],
   "ultra_beasts": [],
@@ -56,7 +65,6 @@
   "dynamax_tier2": [
     "Darumaka",
     "Eevee",
-    "Feebas",
     "Machop",
     "Shuckle",
     "Wailmer"
@@ -75,5 +83,5 @@
   ],
   "dynamax_tier5": [],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-08-02 13:17:14"
+  "gigantamax_last_updated": "2026-08-04 18:11:20"
 }
