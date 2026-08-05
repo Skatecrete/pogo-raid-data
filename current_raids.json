@@ -1,31 +1,32 @@
 {
   "last_updated": "2026-08-05",
   "tier1": [
-    "Hisuian Growlithe",
-    "Galarian Darumaka",
     "Cranidos",
-    "Darumaka",
-    "Larvitar",
     "Shieldon",
+    "Darumaka",
     "Alolan Sandshrew",
+    "Galarian Darumaka",
+    "Larvitar",
+    "Hisuian Growlithe",
     "Sinistea (Phony)"
   ],
   "tier3": [
     "Drampa",
+    "Wyrdeer",
     "Hisuian Samurott",
     "Excadrill",
     "Alolan Marowak",
-    "Wyrdeer",
     "Hisuian Avalugg"
   ],
   "tier5": [
-    "Mesprit",
     "Uxie",
+    "Mesprit",
+    "Azelf",
     "Kyurem"
   ],
   "mega": [
-    "Mega Blaziken",
-    "Mega Aggron"
+    "Mega Aggron",
+    "Mega Blaziken"
   ],
   "primal": [],
   "ultra_beasts": [],
@@ -84,5 +85,5 @@
   ],
   "dynamax_tier5": [],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-08-05 04:06:33"
+  "gigantamax_last_updated": "2026-08-05 14:54:12"
 }
