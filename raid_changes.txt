@@ -1,12 +1,3 @@
 
-**⭐ 1-Star Raids:**
-  ✅ Added: alolan sandshrew, darumaka, galarian darumaka, hisuian growlithe
-
-**⭐⭐⭐ 3-Star Raids:**
-  ✅ Added: alolan marowak, hisuian avalugg, wyrdeer
-
 **⭐⭐⭐⭐⭐ 5-Star Raids:**
-  ✅ Added: uxie
-
-**🔴 Mega Raids:**
-  ✅ Added: blaziken
+  ✅ Added: mesprit

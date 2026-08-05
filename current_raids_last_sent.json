@@ -1,30 +1,31 @@
 {
-  "last_updated": "2026-08-04",
+  "last_updated": "2026-08-05",
   "tier1": [
-    "Darumaka",
-    "Cranidos",
-    "Sinistea (Phony)",
+    "Hisuian Growlithe",
     "Galarian Darumaka",
+    "Cranidos",
+    "Darumaka",
+    "Larvitar",
     "Shieldon",
     "Alolan Sandshrew",
-    "Hisuian Growlithe",
-    "Larvitar"
+    "Sinistea (Phony)"
   ],
   "tier3": [
-    "Wyrdeer",
-    "Excadrill",
-    "Alolan Marowak",
     "Drampa",
     "Hisuian Samurott",
+    "Excadrill",
+    "Alolan Marowak",
+    "Wyrdeer",
     "Hisuian Avalugg"
   ],
   "tier5": [
-    "Kyurem",
-    "Uxie"
+    "Mesprit",
+    "Uxie",
+    "Kyurem"
   ],
   "mega": [
-    "Mega Aggron",
-    "Mega Blaziken"
+    "Mega Blaziken",
+    "Mega Aggron"
   ],
   "primal": [],
   "ultra_beasts": [],
@@ -83,7 +84,7 @@
   ],
   "dynamax_tier5": [],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-08-04 18:11:20",
+  "gigantamax_last_updated": "2026-08-05 04:06:33",
   "scrapedduck_raids": [
     "larvitar|1-star raids",
     "cranidos|1-star raids",
@@ -684,5 +685,5 @@
       "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm484.icon.png"
     }
   ],
-  "last_sent_time": "2026-08-04T18:11:20.316194"
+  "last_sent_time": "2026-08-05T04:06:33.490053"
 }
