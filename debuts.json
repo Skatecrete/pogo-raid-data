@@ -1,6 +1,20 @@
 {
-  "last_updated": "2026-08-09 06:49:51",
+  "last_updated": "2026-08-09 12:41:14",
   "debuts": [
+    {
+      "event_name": "Pokemon XP and 2026 World Championships Event",
+      "event_date": "August 25th - August 30th 2026",
+      "new_pokemon": [
+        "Pikachu (Cosmog Spacesuit)",
+        "Pikachu (World Championships 2026)"
+      ],
+      "new_shiny": [],
+      "pokemon_images": {
+        "Pikachu (Cosmog Spacesuit)": "https://www.serebii.net/pokemongo/pokemon/025-xp.png",
+        "Pikachu (World Championships 2026)": "https://www.serebii.net/pokemongo/pokemon/025-worlds26.png"
+      },
+      "event_type": "global"
+    },
     {
       "event_name": "Water Festival 2026",
       "event_date": "August 18th - August 24th 2026",
