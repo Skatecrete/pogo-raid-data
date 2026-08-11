@@ -1,6 +1,22 @@
 {
-  "last_updated": "2026-08-11 06:59:31",
+  "last_updated": "2026-08-11 12:54:48",
   "debuts": [
+    {
+      "event_name": "GO Fest 2026 Mega Finale",
+      "event_date": "September 5th - 6th 2026",
+      "new_pokemon": [
+        "Mega \t\tChesnaught",
+        "Mega \t\tDelphox",
+        "Mega \t\tGreninja"
+      ],
+      "new_shiny": [],
+      "pokemon_images": {
+        "Mega \t\tChesnaught": "https://www.serebii.net/pokemongo/pokemon/652-m.png",
+        "Mega \t\tDelphox": "https://www.serebii.net/pokemongo/pokemon/655-m.png",
+        "Mega \t\tGreninja": "https://www.serebii.net/pokemongo/pokemon/658-m.png"
+      },
+      "event_type": "global"
+    },
     {
       "event_name": "Pokemon XP and 2026 World Championships Event",
       "event_date": "August 25th - August 30th 2026",
