@@ -1,12 +1,12 @@
 
+**⭐ 1-Star Raids:**
+  ✅ Added: archen, axew, poltchageist (counterfeit), tirtouga
+
+**⭐⭐⭐ 3-Star Raids:**
+  ✅ Added: galarian mr mime, kleavor, turtonator
+
 **⭐⭐⭐⭐⭐ 5-Star Raids:**
-  ✅ Added: azelf
+  ✅ Added: groudon
 
-**🌑 Shadow 1-Star:**
-  ✅ Added: Shadow Aipom, Shadow Croagunk, Shadow Grubbin, Shadow Slowpoke
-
-**🌑 Shadow 3-Star:**
-  ✅ Added: Shadow Hitmontop, Shadow Lampent, Shadow Snorlax
-
-**🌑 Shadow Legendary:**
-  ✅ Added: Shadow Giratina (Altered)
+**🔴 Mega Raids:**
+  ✅ Added: garchomp
