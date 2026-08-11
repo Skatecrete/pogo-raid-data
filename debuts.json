@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-10 18:51:35",
+  "last_updated": "2026-08-11 01:21:10",
   "debuts": [
     {
       "event_name": "Pokemon XP and 2026 World Championships Event",
@@ -28,20 +28,6 @@
         "Cramorant": "https://www.serebii.net/pokemongo/pokemon/845.png",
         "Arrokuda": "https://www.serebii.net/pokemongo/pokemon/846.png",
         "Barraskewda": "https://www.serebii.net/pokemongo/pokemon/847.png"
-      },
-      "event_type": "global"
-    },
-    {
-      "event_name": "Summer Marathon Arctic Embers",
-      "event_date": "August 4th - August 10th 2026",
-      "new_pokemon": [],
-      "new_shiny": [
-        "Snom",
-        "Frosmoth"
-      ],
-      "pokemon_images": {
-        "Snom": "https://www.serebii.net/pokemongo/pokemon/shiny/872.png",
-        "Frosmoth": "https://www.serebii.net/pokemongo/pokemon/shiny/873.png"
       },
       "event_type": "global"
     }
