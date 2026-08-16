@@ -1,25 +1,6 @@
 {
-  "last_updated": "2026-08-16 12:53:43",
-  "error": false,
-  "total": 1,
-  "boxes": [
-    {
-      "box_name": "Nickit Community Day Ultra Box",
-      "in_store_price": 1.99,
-      "box_image": "https://storage.googleapis.com/platform-webstore-rel-assets/pgo/sku_assets/bundle.general1.small.2.png",
-      "items": [
-        {
-          "name": "Nickit Community Day Ticket",
-          "count": 1,
-          "image": "https://storage.googleapis.com/platform-webstore-rel-assets/pgo/sku_assets/item_event_ticket_s23_2026_10.png"
-        },
-        {
-          "name": "Ultra Ball",
-          "count": 5,
-          "image": "https://storage.googleapis.com/platform-webstore-rel-assets/pgo/sku_assets/item_ultra_ball.png"
-        }
-      ],
-      "silphco_price": 1.5
-    }
-  ]
+  "last_updated": "2026-08-16 18:38:56",
+  "error": true,
+  "message": "Failed to scrape store boxes. Please contact admin.",
+  "boxes": []
 }
