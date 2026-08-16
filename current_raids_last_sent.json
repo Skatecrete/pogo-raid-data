@@ -1,16 +1,16 @@
 {
   "last_updated": "2026-08-16",
   "tier1": [
-    "Axew",
     "Archen",
+    "Poltchageist (Counterfeit)",
     "Tirtouga",
-    "Poltchageist (Counterfeit)"
+    "Axew"
   ],
   "tier3": [
-    "Turtonator",
-    "Galarian Mr Mime",
     "Cinderace",
-    "Kleavor"
+    "Galarian Mr Mime",
+    "Kleavor",
+    "Turtonator"
   ],
   "tier5": [
     "Groudon"
@@ -66,6 +66,7 @@
     "Beldum",
     "Chansey",
     "Cryogonal",
+    "Debaty",
     "Drampa",
     "Falinks",
     "Hitmonchan",
@@ -75,7 +76,7 @@
   ],
   "dynamax_tier5": [],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-08-16 12:35:18",
+  "gigantamax_last_updated": "2026-08-16 20:19:24",
   "scrapedduck_raids": [
     "tirtouga|1-star raids",
     "archen|1-star raids",
@@ -676,5 +677,5 @@
       "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm487.fALTERED.icon.png"
     }
   ],
-  "last_sent_time": "2026-08-16T12:35:18.369090"
+  "last_sent_time": "2026-08-16T20:19:24.816695"
 }

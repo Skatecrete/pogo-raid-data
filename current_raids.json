@@ -1,16 +1,16 @@
 {
   "last_updated": "2026-08-16",
   "tier1": [
-    "Axew",
     "Archen",
+    "Poltchageist (Counterfeit)",
     "Tirtouga",
-    "Poltchageist (Counterfeit)"
+    "Axew"
   ],
   "tier3": [
-    "Turtonator",
-    "Galarian Mr Mime",
     "Cinderace",
-    "Kleavor"
+    "Galarian Mr Mime",
+    "Kleavor",
+    "Turtonator"
   ],
   "tier5": [
     "Groudon"
@@ -66,6 +66,7 @@
     "Beldum",
     "Chansey",
     "Cryogonal",
+    "Debaty",
     "Drampa",
     "Falinks",
     "Hitmonchan",
@@ -75,5 +76,5 @@
   ],
   "dynamax_tier5": [],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-08-16 12:35:18"
+  "gigantamax_last_updated": "2026-08-16 20:19:24"
 }
