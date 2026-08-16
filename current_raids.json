@@ -1,16 +1,16 @@
 {
-  "last_updated": "2026-08-14",
+  "last_updated": "2026-08-16",
   "tier1": [
-    "Poltchageist (Counterfeit)",
-    "Tirtouga",
+    "Axew",
     "Archen",
-    "Axew"
+    "Tirtouga",
+    "Poltchageist (Counterfeit)"
   ],
   "tier3": [
-    "Cinderace",
     "Turtonator",
-    "Kleavor",
-    "Galarian Mr Mime"
+    "Galarian Mr Mime",
+    "Cinderace",
+    "Kleavor"
   ],
   "tier5": [
     "Groudon"
@@ -37,6 +37,7 @@
     "Inkay",
     "Kabuto",
     "Krabby",
+    "Magikarp",
     "Omanyte",
     "Pidove",
     "Pikachu",
@@ -74,5 +75,5 @@
   ],
   "dynamax_tier5": [],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-08-14 05:55:03"
+  "gigantamax_last_updated": "2026-08-16 12:35:18"
 }
