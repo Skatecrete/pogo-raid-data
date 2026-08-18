@@ -1,26 +1,29 @@
 {
   "last_updated": "2026-08-18",
   "tier1": [
-    "Tirtouga",
-    "Tatsugiri (Stretchy)",
-    "Axew",
-    "Tatsugiri (Curly)",
-    "Archen",
+    "Poltchageist (Counterfeit)",
     "Psyduck (Swim 2025)",
-    "Poltchageist (Counterfeit)"
+    "Tirtouga",
+    "Archen",
+    "Tatsugiri (Droopy)",
+    "Tatsugiri (Stretchy)",
+    "Tatsugiri (Curly)",
+    "Axew"
   ],
   "tier3": [
-    "Lapras (Costume 2020)",
+    "Hisuian Samurott",
     "Kleavor",
     "Turtonator",
     "Dondozo",
-    "Hisuian Samurott",
+    "Lapras (Costume 2020)",
     "Galarian Mr Mime"
   ],
   "tier5": [
-    "Groudon"
+    "Groudon",
+    "Lunala"
   ],
   "mega": [
+    "Mega Swampert",
     "Mega Garchomp"
   ],
   "primal": [],
@@ -81,7 +84,7 @@
   ],
   "dynamax_tier5": [],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-08-18 09:30:53",
+  "gigantamax_last_updated": "2026-08-18 18:35:28",
   "scrapedduck_raids": [
     "tirtouga|1-star raids",
     "archen|1-star raids",
@@ -682,5 +685,5 @@
       "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm487.fALTERED.icon.png"
     }
   ],
-  "last_sent_time": "2026-08-18T09:30:54.287964"
+  "last_sent_time": "2026-08-18T18:35:28.982463"
 }
