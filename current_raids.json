@@ -1,30 +1,21 @@
 {
-  "last_updated": "2026-08-18",
+  "last_updated": "2026-08-21",
   "tier1": [
-    "Poltchageist (Counterfeit)",
-    "Psyduck (Swim 2025)",
-    "Tirtouga",
-    "Archen",
-    "Tatsugiri (Droopy)",
     "Tatsugiri (Stretchy)",
-    "Tatsugiri (Curly)",
-    "Axew"
+    "Psyduck (Swim 2025)",
+    "Tatsugiri (Droopy)"
   ],
   "tier3": [
-    "Hisuian Samurott",
-    "Kleavor",
-    "Turtonator",
     "Dondozo",
     "Lapras (Costume 2020)",
-    "Galarian Mr Mime"
+    "Hisuian Samurott",
+    "Cinderace"
   ],
   "tier5": [
-    "Groudon",
     "Lunala"
   ],
   "mega": [
-    "Mega Swampert",
-    "Mega Garchomp"
+    "Mega Swampert"
   ],
   "primal": [],
   "ultra_beasts": [],
@@ -84,5 +75,5 @@
   ],
   "dynamax_tier5": [],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-08-18 18:35:28"
+  "gigantamax_last_updated": "2026-08-21 01:11:34"
 }
