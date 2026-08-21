@@ -2,14 +2,15 @@
   "last_updated": "2026-08-21",
   "tier1": [
     "Tatsugiri (Stretchy)",
+    "Tatsugiri (Curly)",
     "Psyduck (Swim 2025)",
     "Tatsugiri (Droopy)"
   ],
   "tier3": [
+    "Cinderace",
     "Dondozo",
     "Lapras (Costume 2020)",
-    "Hisuian Samurott",
-    "Cinderace"
+    "Hisuian Samurott"
   ],
   "tier5": [
     "Lunala"
@@ -75,5 +76,5 @@
   ],
   "dynamax_tier5": [],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-08-21 01:11:34"
+  "gigantamax_last_updated": "2026-08-21 04:35:50"
 }

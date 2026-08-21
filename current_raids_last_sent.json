@@ -2,14 +2,15 @@
   "last_updated": "2026-08-21",
   "tier1": [
     "Tatsugiri (Stretchy)",
+    "Tatsugiri (Curly)",
     "Psyduck (Swim 2025)",
     "Tatsugiri (Droopy)"
   ],
   "tier3": [
+    "Cinderace",
     "Dondozo",
     "Lapras (Costume 2020)",
-    "Hisuian Samurott",
-    "Cinderace"
+    "Hisuian Samurott"
   ],
   "tier5": [
     "Lunala"
@@ -75,7 +76,7 @@
   ],
   "dynamax_tier5": [],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-08-21 01:11:34",
+  "gigantamax_last_updated": "2026-08-21 04:35:50",
   "scrapedduck_raids": [
     "tatsugiri (curly)|1-star raids",
     "tatsugiri (droopy)|1-star raids",
@@ -676,5 +677,5 @@
       "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm487.fALTERED.icon.png"
     }
   ],
-  "last_sent_time": "2026-08-21T01:11:35.163671"
+  "last_sent_time": "2026-08-21T04:35:51.241338"
 }
