@@ -1,21 +1,20 @@
 {
   "last_updated": "2026-08-24",
   "tier1": [
+    "Tatsugiri (Droopy)",
+    "Frillish (Normal)",
+    "Bruxish",
     "Hisuian Qwilfish",
     "Psyduck (Swim 2025)",
-    "Tatsugiri (Stretchy)",
-    "Tatsugiri (Curly)",
-    "Frillish (Normal)",
     "Feebas",
-    "Bruxish",
-    "Tatsugiri (Droopy)"
+    "Pikachu (Cosmog Spacesuit)"
   ],
   "tier3": [
     "Klawf",
+    "Lapras (Costume 2020)",
     "Hisuian Samurott",
-    "Dondozo",
     "Dhelmise",
-    "Lapras (Costume 2020)"
+    "Dondozo"
   ],
   "tier5": [
     "Lunala"
@@ -81,5 +80,5 @@
   ],
   "dynamax_tier5": [],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-08-24 21:53:49"
+  "gigantamax_last_updated": "2026-08-24 22:52:58"
 }
