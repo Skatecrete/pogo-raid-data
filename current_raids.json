@@ -2,19 +2,20 @@
   "last_updated": "2026-08-24",
   "tier1": [
     "Hisuian Qwilfish",
-    "Tatsugiri (Droopy)",
-    "Bruxish",
-    "Tatsugiri (Stretchy)",
     "Psyduck (Swim 2025)",
+    "Tatsugiri (Stretchy)",
+    "Tatsugiri (Curly)",
     "Frillish (Normal)",
     "Feebas",
-    "Tatsugiri (Curly)"
+    "Bruxish",
+    "Tatsugiri (Droopy)"
   ],
   "tier3": [
-    "Dondozo",
     "Klawf",
-    "Lapras (Costume 2020)",
-    "Hisuian Samurott"
+    "Hisuian Samurott",
+    "Dondozo",
+    "Dhelmise",
+    "Lapras (Costume 2020)"
   ],
   "tier5": [
     "Lunala"
@@ -80,5 +81,5 @@
   ],
   "dynamax_tier5": [],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-08-24 20:30:32"
+  "gigantamax_last_updated": "2026-08-24 21:53:49"
 }
