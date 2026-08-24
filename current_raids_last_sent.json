@@ -1,19 +1,20 @@
 {
   "last_updated": "2026-08-24",
   "tier1": [
-    "Tatsugiri (Droopy)",
-    "Frillish (Normal)",
     "Bruxish",
-    "Hisuian Qwilfish",
-    "Psyduck (Swim 2025)",
+    "Frillish (Normal)",
+    "Impidimp",
     "Feebas",
-    "Pikachu (Cosmog Spacesuit)"
+    "Pikachu (Cosmog Spacesuit)",
+    "Hisuian Qwilfish",
+    "Tatsugiri (Droopy)",
+    "Psyduck (Swim 2025)"
   ],
   "tier3": [
-    "Klawf",
-    "Lapras (Costume 2020)",
     "Hisuian Samurott",
     "Dhelmise",
+    "Lapras (Costume 2020)",
+    "Klawf",
     "Dondozo"
   ],
   "tier5": [
@@ -80,7 +81,7 @@
   ],
   "dynamax_tier5": [],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-08-24 22:52:58",
+  "gigantamax_last_updated": "2026-08-24 23:20:14",
   "scrapedduck_raids": [
     "tatsugiri (curly)|1-star raids",
     "tatsugiri (droopy)|1-star raids",
@@ -681,5 +682,5 @@
       "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm487.fALTERED.icon.png"
     }
   ],
-  "last_sent_time": "2026-08-24T22:52:59.111470"
+  "last_sent_time": "2026-08-24T23:20:15.004421"
 }
