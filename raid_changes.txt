@@ -1,15 +1,3 @@
 
 **⭐⭐⭐⭐⭐ 5-Star Raids:**
-  ✅ Added: regice, regirock
-
-**🔴 Mega Raids:**
-  ✅ Added: gyarados
-
-**⚡ Dynamax Tier 1:**
-  ✅ Added: hoothoot
-
-**⚡⚡ Dynamax Tier 2:**
-  ✅ Added: feebas
-
-**⚡⚡⚡ Dynamax Tier 3:**
-  ✅ Added: deino, electabuzz, magmar
+  ✅ Added: registeel

@@ -1,26 +1,27 @@
 {
   "last_updated": "2026-08-25",
   "tier1": [
-    "Frillish (Normal)",
     "Tatsugiri (Droopy)",
     "Bruxish",
-    "Impidimp",
     "Psyduck (Swim 2025)",
+    "Frillish (Normal)",
+    "Feebas",
     "Hisuian Qwilfish",
-    "Pikachu (Cosmog Spacesuit)",
-    "Feebas"
+    "Impidimp",
+    "Pikachu (Cosmog Spacesuit)"
   ],
   "tier3": [
+    "Klawf",
     "Hisuian Samurott",
     "Lapras (Costume 2020)",
-    "Klawf",
     "Dondozo",
     "Dhelmise"
   ],
   "tier5": [
-    "Regirock",
+    "Registeel",
+    "Regice",
     "Lunala",
-    "Regice"
+    "Regirock"
   ],
   "mega": [
     "Mega Swampert",
@@ -90,7 +91,7 @@
   ],
   "dynamax_tier5": [],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-08-25 18:50:41",
+  "gigantamax_last_updated": "2026-08-25 19:30:05",
   "scrapedduck_raids": [
     "hisuian qwilfish|1-star raids",
     "feebas|1-star raids",
@@ -645,5 +646,5 @@
       "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm487.fALTERED.icon.png"
     }
   ],
-  "last_sent_time": "2026-08-25T18:50:41.887407"
+  "last_sent_time": "2026-08-25T19:30:06.290495"
 }
