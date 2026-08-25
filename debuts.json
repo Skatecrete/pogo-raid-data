@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-24 18:34:06",
+  "last_updated": "2026-08-25 01:01:52",
   "debuts": [
     {
       "event_name": "GO Fest 2026 Mega Finale",
@@ -28,22 +28,6 @@
       "pokemon_images": {
         "Pikachu (Cosmog Spacesuit)": "https://www.serebii.net/pokemongo/pokemon/025-xp26.png",
         "Pikachu (World Championships 2026)": "https://www.serebii.net/pokemongo/pokemon/025-worlds26.png"
-      },
-      "event_type": "global"
-    },
-    {
-      "event_name": "Water Festival 2026",
-      "event_date": "August 18th - August 24th 2026",
-      "new_pokemon": [
-        "Cramorant",
-        "Arrokuda",
-        "Barraskewda"
-      ],
-      "new_shiny": [],
-      "pokemon_images": {
-        "Cramorant": "https://www.serebii.net/pokemongo/pokemon/845.png",
-        "Arrokuda": "https://www.serebii.net/pokemongo/pokemon/846.png",
-        "Barraskewda": "https://www.serebii.net/pokemongo/pokemon/847.png"
       },
       "event_type": "global"
     }
