@@ -1,19 +1,21 @@
 {
-  "last_updated": "2026-08-27",
+  "last_updated": "2026-08-28",
   "tier1": [
-    "Impidimp",
     "Pikachu (Cosmog Spacesuit)",
+    "Impidimp",
+    "Honedge",
+    "Pikachu (World Championships (2026))",
     "Pikachu"
   ],
   "tier3": [
-    "Hisuian Lilligant",
+    "Hisuian Sneasel",
     "Passimian",
-    "Hisuian Sneasel"
+    "Hisuian Lilligant"
   ],
   "tier5": [
     "Regice",
-    "Regirock",
-    "Registeel"
+    "Registeel",
+    "Regirock"
   ],
   "mega": [
     "Mega Gyarados"
@@ -82,7 +84,7 @@
   ],
   "dynamax_tier5": [],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-08-27 20:40:52",
+  "gigantamax_last_updated": "2026-08-28 05:06:52",
   "scrapedduck_raids": [
     "pikachu wearing a cosmog-themed spacesuit|1-star raids",
     "impidimp|1-star raids",
@@ -655,5 +657,5 @@
       "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm487.fALTERED.icon.png"
     }
   ],
-  "last_sent_time": "2026-08-27T20:40:52.708849"
+  "last_sent_time": "2026-08-28T05:06:52.441519"
 }
