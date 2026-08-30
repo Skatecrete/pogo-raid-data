@@ -1,9 +1,6 @@
 
 **⭐ 1-Star Raids:**
-  ✅ Added: fuecoco, zigzagoon
+  ✅ Added: amaura, dratini, tyrunt
 
-**⭐⭐⭐ 3-Star Raids:**
-  ✅ Added: alolan exeggutor, dewgong, duraludon, kingler
-
-**⭐⭐⭐⭐⭐ 5-Star Raids:**
-  ✅ Added: deoxys, deoxys  (attack), deoxys  (defense), deoxys  (speed), rayquaza
+**🔴 Mega Raids:**
+  ✅ Added: dragonite, malamar, victreebel

@@ -1,34 +1,37 @@
 {
-  "last_updated": "2026-08-28",
+  "last_updated": "2026-08-30",
   "tier1": [
-    "Impidimp",
-    "Honedge",
-    "Fuecoco",
-    "Pikachu",
-    "Pikachu (Cosmog Spacesuit)",
+    "Tyrunt",
+    "Amaura",
+    "Zigzagoon",
     "Pikachu (World Championships (2026))",
-    "Zigzagoon"
+    "Pikachu (Cosmog Spacesuit)",
+    "Fuecoco",
+    "Honedge",
+    "Dratini"
   ],
   "tier3": [
-    "Dewgong",
-    "Alolan Exeggutor",
-    "Duraludon",
     "Kingler",
+    "Duraludon",
+    "Alolan Exeggutor",
     "Hisuian Lilligant",
     "Hisuian Sneasel",
-    "Passimian"
+    "Passimian",
+    "Dewgong"
   ],
   "tier5": [
+    "Deoxys  (Attack)",
+    "Registeel",
+    "Deoxys  (Defense)",
     "Regice",
     "Deoxys  (Speed)",
-    "Rayquaza",
-    "Registeel",
-    "Deoxys ",
-    "Deoxys  (Attack)",
-    "Deoxys  (Defense)",
-    "Regirock"
+    "Regirock",
+    "Deoxys "
   ],
   "mega": [
+    "Mega Malamar",
+    "Mega Dragonite",
+    "Mega Victreebel",
     "Mega Gyarados"
   ],
   "primal": [],
@@ -95,5 +98,5 @@
   ],
   "dynamax_tier5": [],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-08-28 17:36:44"
+  "gigantamax_last_updated": "2026-08-30 17:40:34"
 }
