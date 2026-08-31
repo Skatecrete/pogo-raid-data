@@ -1,42 +1,61 @@
 {
-  "last_updated": "2026-08-30",
+  "last_updated": "2026-08-31",
   "tier1": [
     "Tyrunt",
-    "Amaura",
-    "Zigzagoon",
     "Pikachu (World Championships (2026))",
+    "Amaura",
     "Pikachu (Cosmog Spacesuit)",
-    "Fuecoco",
-    "Honedge",
-    "Dratini"
+    "Dratini",
+    "Honedge"
   ],
   "tier3": [
-    "Kingler",
-    "Duraludon",
-    "Alolan Exeggutor",
-    "Hisuian Lilligant",
-    "Hisuian Sneasel",
     "Passimian",
-    "Dewgong"
+    "Hisuian Lilligant",
+    "Hisuian Sneasel"
   ],
   "tier5": [
-    "Deoxys  (Attack)",
     "Registeel",
-    "Deoxys  (Defense)",
+    "Deoxys ",
     "Regice",
     "Deoxys  (Speed)",
+    "Deoxys  (Attack)",
     "Regirock",
-    "Deoxys "
+    "Deoxys  (Defense)"
   ],
   "mega": [
+    "Mega Slowbro",
     "Mega Malamar",
+    "Mega Altaria",
+    "Mega Lopunny",
+    "Mega Pinsir",
+    "Mega Aggron",
+    "Mega Sableye",
+    "Mega Aerodactyl",
+    "Mega Mawile",
+    "Mega Ampharos",
+    "Mega Beedrill",
+    "Mega Sharpedo",
+    "Mega Gengar",
     "Mega Dragonite",
+    "Mega Manectric",
+    "Mega Houndoom",
+    "Mega Alakazam",
+    "Mega Abomasnow",
     "Mega Victreebel",
-    "Mega Gyarados"
+    "Mega Camerupt",
+    "Mega Glalie",
+    "Mega Steelix",
+    "Mega Banette",
+    "Mega Audino",
+    "Mega Gyarados",
+    "Mega Medicham"
   ],
   "primal": [],
   "ultra_beasts": [],
-  "super_mega": [],
+  "super_mega": [
+    "Super Mega Mega Mewtwo X",
+    "Super Mega Mega Mewtwo Y"
+  ],
   "dynamax_tier1": [
     "Abra",
     "Bounsweet",
@@ -98,5 +117,5 @@
   ],
   "dynamax_tier5": [],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-08-30 17:40:34"
+  "gigantamax_last_updated": "2026-08-31 07:28:04"
 }

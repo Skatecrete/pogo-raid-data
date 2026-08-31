@@ -1,6 +1,6 @@
 
-**⭐ 1-Star Raids:**
-  ✅ Added: amaura, dratini, tyrunt
-
 **🔴 Mega Raids:**
-  ✅ Added: dragonite, malamar, victreebel
+  ✅ Added: abomasnow, aerodactyl, aggron, alakazam, altaria, ampharos, audino, banette, beedrill, camerupt, gengar, glalie, houndoom, lopunny, manectric, mawile, medicham, pinsir, sableye, sharpedo, slowbro, steelix
+
+**💫 SUPER MEGA RAIDS:**
+  ✅ Added: super mewtwo x, super mewtwo y

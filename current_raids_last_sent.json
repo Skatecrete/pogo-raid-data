@@ -1,42 +1,61 @@
 {
-  "last_updated": "2026-08-30",
+  "last_updated": "2026-08-31",
   "tier1": [
     "Tyrunt",
-    "Amaura",
-    "Zigzagoon",
     "Pikachu (World Championships (2026))",
+    "Amaura",
     "Pikachu (Cosmog Spacesuit)",
-    "Fuecoco",
-    "Honedge",
-    "Dratini"
+    "Dratini",
+    "Honedge"
   ],
   "tier3": [
-    "Kingler",
-    "Duraludon",
-    "Alolan Exeggutor",
-    "Hisuian Lilligant",
-    "Hisuian Sneasel",
     "Passimian",
-    "Dewgong"
+    "Hisuian Lilligant",
+    "Hisuian Sneasel"
   ],
   "tier5": [
-    "Deoxys  (Attack)",
     "Registeel",
-    "Deoxys  (Defense)",
+    "Deoxys ",
     "Regice",
     "Deoxys  (Speed)",
+    "Deoxys  (Attack)",
     "Regirock",
-    "Deoxys "
+    "Deoxys  (Defense)"
   ],
   "mega": [
+    "Mega Slowbro",
     "Mega Malamar",
+    "Mega Altaria",
+    "Mega Lopunny",
+    "Mega Pinsir",
+    "Mega Aggron",
+    "Mega Sableye",
+    "Mega Aerodactyl",
+    "Mega Mawile",
+    "Mega Ampharos",
+    "Mega Beedrill",
+    "Mega Sharpedo",
+    "Mega Gengar",
     "Mega Dragonite",
+    "Mega Manectric",
+    "Mega Houndoom",
+    "Mega Alakazam",
+    "Mega Abomasnow",
     "Mega Victreebel",
-    "Mega Gyarados"
+    "Mega Camerupt",
+    "Mega Glalie",
+    "Mega Steelix",
+    "Mega Banette",
+    "Mega Audino",
+    "Mega Gyarados",
+    "Mega Medicham"
   ],
   "primal": [],
   "ultra_beasts": [],
-  "super_mega": [],
+  "super_mega": [
+    "Super Mega Mega Mewtwo X",
+    "Super Mega Mega Mewtwo Y"
+  ],
   "dynamax_tier1": [
     "Abra",
     "Bounsweet",
@@ -98,11 +117,8 @@
   ],
   "dynamax_tier5": [],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-08-30 17:40:34",
+  "gigantamax_last_updated": "2026-08-31 07:28:04",
   "scrapedduck_raids": [
-    "pikachu wearing a cosmog-themed spacesuit|1-star raids",
-    "world championships 2026 pikachu|1-star raids",
-    "honedge|1-star raids",
     "regirock|5-star raids",
     "regice|5-star raids",
     "registeel|5-star raids",
@@ -117,9 +133,6 @@
     "shadow giratina (altered)|5-star raids"
   ],
   "scrapedduck_normalized": [
-    "name:pikachu wearing a cosmog-themed spacesuit|1-star raids",
-    "name:world championships 2026 pikachu|1-star raids",
-    "name:honedge|1-star raids",
     "id:377|5-star raids",
     "id:378|5-star raids",
     "id:379|5-star raids",
@@ -134,98 +147,6 @@
     "name:shadow giratina (altered)|5-star raids"
   ],
   "scrapedduck_raids_objects": [
-    {
-      "name": "Pikachu wearing a Cosmog-themed spacesuit",
-      "tier": "1-Star Raids",
-      "canBeShiny": true,
-      "types": [
-        {
-          "name": "electric",
-          "image": "https://leekduck.com/assets/img/types/electric.png"
-        }
-      ],
-      "combatPower": {
-        "normal": {
-          "min": 493,
-          "max": 536
-        },
-        "boosted": {
-          "min": 616,
-          "max": 670
-        }
-      },
-      "boostedWeather": [
-        {
-          "name": "rainy",
-          "image": "https://leekduck.com/assets/img/weather/rainy.png"
-        }
-      ],
-      "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm25.fPXP_2026.icon.png"
-    },
-    {
-      "name": "World Championships 2026 Pikachu",
-      "tier": "1-Star Raids",
-      "canBeShiny": true,
-      "types": [
-        {
-          "name": "electric",
-          "image": "https://leekduck.com/assets/img/types/electric.png"
-        }
-      ],
-      "combatPower": {
-        "normal": {
-          "min": 493,
-          "max": 536
-        },
-        "boosted": {
-          "min": 616,
-          "max": 670
-        }
-      },
-      "boostedWeather": [
-        {
-          "name": "rainy",
-          "image": "https://leekduck.com/assets/img/weather/rainy.png"
-        }
-      ],
-      "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm25.fWCS_2026.icon.png"
-    },
-    {
-      "name": "Honedge",
-      "tier": "1-Star Raids",
-      "canBeShiny": true,
-      "types": [
-        {
-          "name": "steel",
-          "image": "https://leekduck.com/assets/img/types/steel.png"
-        },
-        {
-          "name": "ghost",
-          "image": "https://leekduck.com/assets/img/types/ghost.png"
-        }
-      ],
-      "combatPower": {
-        "normal": {
-          "min": 742,
-          "max": 794
-        },
-        "boosted": {
-          "min": 927,
-          "max": 993
-        }
-      },
-      "boostedWeather": [
-        {
-          "name": "snow",
-          "image": "https://leekduck.com/assets/img/weather/snowy.png"
-        },
-        {
-          "name": "fog",
-          "image": "https://leekduck.com/assets/img/weather/foggy.png"
-        }
-      ],
-      "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm679.icon.png"
-    },
     {
       "name": "Regirock",
       "tier": "5-Star Raids",
@@ -599,5 +520,5 @@
       "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm487.fALTERED.icon.png"
     }
   ],
-  "last_sent_time": "2026-08-30T17:40:34.557389"
+  "last_sent_time": "2026-08-31T07:28:04.841311"
 }
