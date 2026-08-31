@@ -1,14 +1,18 @@
 {
-  "name:pikachu wearing a cosmog-themed spacesuit|1-star raids": {
-    "first_seen": "2026-08-31T07:28:04.841176",
+  "id:378|5-star raids": {
+    "first_seen": "2026-08-31T20:57:54.120545",
     "count": 1
   },
-  "name:honedge|1-star raids": {
-    "first_seen": "2026-08-31T07:28:04.841176",
+  "id:379|5-star raids": {
+    "first_seen": "2026-08-31T20:57:54.120545",
     "count": 1
   },
-  "name:world championships 2026 pikachu|1-star raids": {
-    "first_seen": "2026-08-31T07:28:04.841176",
+  "name:mega gyarados|mega raids": {
+    "first_seen": "2026-08-31T20:57:54.120545",
+    "count": 1
+  },
+  "id:377|5-star raids": {
+    "first_seen": "2026-08-31T20:57:54.120545",
     "count": 1
   }
 }
