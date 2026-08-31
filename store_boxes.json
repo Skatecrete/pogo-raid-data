@@ -1,6 +1,35 @@
 {
-  "last_updated": "2026-08-30 20:55:49",
-  "error": true,
-  "message": "Failed to scrape store boxes. Please contact admin.",
-  "boxes": []
+  "last_updated": "2026-08-31 05:16:04",
+  "error": false,
+  "total": 1,
+  "boxes": [
+    {
+      "box_name": "Master Raid Box",
+      "in_store_price": 9.99,
+      "box_image": "https://storage.googleapis.com/platform-webstore-rel-assets/pgo/sku_assets/bundle.general.premiumbox.small.1.png",
+      "items": [
+        {
+          "name": "Premium Battle Pass",
+          "count": 12,
+          "image": "https://storage.googleapis.com/platform-webstore-rel-assets/pgo/sku_assets/item_paid_raid_ticket.png"
+        },
+        {
+          "name": "Remote Raid Pass",
+          "count": 3,
+          "image": "https://storage.googleapis.com/platform-webstore-rel-assets/pgo/sku_assets/item_remote_raid_ticket.png"
+        },
+        {
+          "name": "Elite Charged TM",
+          "count": 1,
+          "image": "https://storage.googleapis.com/platform-webstore-rel-assets/pgo/sku_assets/item_move_reroll_elite_special_attack.png"
+        },
+        {
+          "name": "Silver Pinap Berry",
+          "count": 1,
+          "image": "https://storage.googleapis.com/platform-webstore-rel-assets/pgo/sku_assets/item_golden_pinap_berry.png"
+        }
+      ],
+      "silphco_price": 6.0
+    }
+  ]
 }
