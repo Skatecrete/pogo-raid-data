@@ -1,6 +1,20 @@
 {
-  "last_updated": "2026-08-31 22:22:16",
+  "last_updated": "2026-09-01 03:21:30",
   "debuts": [
+    {
+      "event_name": "Mega Swuads",
+      "event_date": "September 8th - 14th 2026",
+      "new_pokemon": [
+        "Maschiff",
+        "Mabosstiff"
+      ],
+      "new_shiny": [],
+      "pokemon_images": {
+        "Maschiff": "https://www.serebii.net/pokemongo/pokemon/942.png",
+        "Mabosstiff": "https://www.serebii.net/pokemongo/pokemon/943.png"
+      },
+      "event_type": "global"
+    },
     {
       "event_name": "GO Fest 2026 Mega Finale",
       "event_date": "September 5th - 6th 2026",
@@ -14,20 +28,6 @@
         "Mega \t\tChesnaught": "https://www.serebii.net/pokemongo/pokemon/652-m.png",
         "Mega \t\tDelphox": "https://www.serebii.net/pokemongo/pokemon/655-m.png",
         "Mega \t\tGreninja": "https://www.serebii.net/pokemongo/pokemon/658-m.png"
-      },
-      "event_type": "global"
-    },
-    {
-      "event_name": "Pokemon XP and 2026 World Championships Event",
-      "event_date": "August 25th - August 30th 2026",
-      "new_pokemon": [
-        "Pikachu (Cosmog Spacesuit)",
-        "Pikachu (World Championships 2026)"
-      ],
-      "new_shiny": [],
-      "pokemon_images": {
-        "Pikachu (Cosmog Spacesuit)": "https://www.serebii.net/pokemongo/pokemon/025-xp26.png",
-        "Pikachu (World Championships 2026)": "https://www.serebii.net/pokemongo/pokemon/025-worlds26.png"
       },
       "event_type": "global"
     }
