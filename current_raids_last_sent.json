@@ -1,62 +1,27 @@
 {
-  "last_updated": "2026-08-31",
+  "last_updated": "2026-09-01",
   "tier1": [
-    "Pikachu (World Championships (2026))",
-    "Pikachu (Cosmog Spacesuit)",
     "Honedge",
     "Tyrunt",
-    "Amaura",
-    "Dratini"
+    "Dratini",
+    "Amaura"
   ],
   "tier3": [
-    "Hisuian Lilligant",
     "Passimian",
+    "Hisuian Lilligant",
     "Hisuian Sneasel"
   ],
-  "tier5": [
-    "Deoxys  (Attack)",
-    "Registeel",
-    "Deoxys  (Defense)",
-    "Deoxys  (Speed)",
-    "Regice",
-    "Regirock",
-    "Deoxys "
-  ],
+  "tier5": [],
   "mega": [
-    "Mega Glalie",
-    "Mega Alakazam",
-    "Mega Banette",
     "Mega Victreebel",
     "Mega Dragonite",
-    "Mega Abomasnow",
-    "Mega Ampharos",
-    "Mega Mawile",
-    "Mega Lopunny",
-    "Mega Houndoom",
-    "Mega Gyarados",
-    "Mega Slowbro",
-    "Mega Beedrill",
     "Mega Falinks",
-    "Mega Sableye",
-    "Mega Pinsir",
-    "Mega Camerupt",
-    "Mega Altaria",
-    "Mega Medicham",
-    "Mega Steelix",
-    "Mega Gengar",
-    "Mega Aggron",
-    "Mega Audino",
-    "Mega Aerodactyl",
-    "Mega Sharpedo",
-    "Mega Manectric",
+    "Mega Skarmory",
     "Mega Malamar"
   ],
   "primal": [],
   "ultra_beasts": [],
-  "super_mega": [
-    "Super Mega Mega Mewtwo X",
-    "Super Mega Mega Mewtwo Y"
-  ],
+  "super_mega": [],
   "dynamax_tier1": [
     "Abra",
     "Bounsweet",
@@ -118,7 +83,7 @@
   ],
   "dynamax_tier5": [],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-08-31 20:57:53",
+  "gigantamax_last_updated": "2026-09-01 19:12:31",
   "scrapedduck_raids": [
     "dratini|1-star raids",
     "honedge|1-star raids",
@@ -127,9 +92,7 @@
     "hisuian sneasel|3-star raids",
     "hisuian lilligant|3-star raids",
     "passimian|3-star raids",
-    "mega victreebel|mega raids",
-    "mega dragonite|mega raids",
-    "mega malamar|mega raids",
+    "mega falinks|mega raids",
     "mega latias|mega raids",
     "mega latios|mega raids",
     "shadow slowpoke|1-star raids",
@@ -149,9 +112,7 @@
     "name:hisuian sneasel|3-star raids",
     "name:hisuian lilligant|3-star raids",
     "name:passimian|3-star raids",
-    "name:mega victreebel|mega raids",
-    "name:mega dragonite|mega raids",
-    "name:mega malamar|mega raids",
+    "name:mega falinks|mega raids",
     "id:380|mega raids",
     "id:381|mega raids",
     "name:shadow slowpoke|1-star raids",
@@ -397,108 +358,32 @@
       "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm766.icon.png"
     },
     {
-      "name": "Mega Victreebel",
+      "name": "Mega Falinks",
       "tier": "Mega Raids",
       "canBeShiny": true,
       "types": [
         {
-          "name": "grass",
-          "image": "https://leekduck.com/assets/img/types/grass.png"
-        },
-        {
-          "name": "poison",
-          "image": "https://leekduck.com/assets/img/types/poison.png"
+          "name": "fighting",
+          "image": "https://leekduck.com/assets/img/types/fighting.png"
         }
       ],
       "combatPower": {
         "normal": {
-          "min": 1318,
-          "max": 1389
+          "min": 1278,
+          "max": 1347
         },
         "boosted": {
-          "min": 1648,
-          "max": 1736
+          "min": 1598,
+          "max": 1683
         }
       },
       "boostedWeather": [
-        {
-          "name": "sunny",
-          "image": "https://leekduck.com/assets/img/weather/sunny.png"
-        },
         {
           "name": "cloudy",
           "image": "https://leekduck.com/assets/img/weather/cloudy.png"
         }
       ],
-      "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm71.fMEGA.icon.png"
-    },
-    {
-      "name": "Mega Dragonite",
-      "tier": "Mega Raids",
-      "canBeShiny": true,
-      "types": [
-        {
-          "name": "dragon",
-          "image": "https://leekduck.com/assets/img/types/dragon.png"
-        },
-        {
-          "name": "flying",
-          "image": "https://leekduck.com/assets/img/types/flying.png"
-        }
-      ],
-      "combatPower": {
-        "normal": {
-          "min": 2079,
-          "max": 2167
-        },
-        "boosted": {
-          "min": 2599,
-          "max": 2709
-        }
-      },
-      "boostedWeather": [
-        {
-          "name": "windy",
-          "image": "https://leekduck.com/assets/img/weather/windy.png"
-        }
-      ],
-      "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm149.fMEGA.icon.png"
-    },
-    {
-      "name": "Mega Malamar",
-      "tier": "Mega Raids",
-      "canBeShiny": true,
-      "types": [
-        {
-          "name": "dark",
-          "image": "https://leekduck.com/assets/img/types/dark.png"
-        },
-        {
-          "name": "psychic",
-          "image": "https://leekduck.com/assets/img/types/psychic.png"
-        }
-      ],
-      "combatPower": {
-        "normal": {
-          "min": 1279,
-          "max": 1347
-        },
-        "boosted": {
-          "min": 1599,
-          "max": 1685
-        }
-      },
-      "boostedWeather": [
-        {
-          "name": "fog",
-          "image": "https://leekduck.com/assets/img/weather/foggy.png"
-        },
-        {
-          "name": "windy",
-          "image": "https://leekduck.com/assets/img/weather/windy.png"
-        }
-      ],
-      "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm687.fMEGA.icon.png"
+      "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm870.fMEGA.icon.png"
     },
     {
       "name": "Mega Latias",
@@ -817,5 +702,5 @@
       "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm487.fALTERED.icon.png"
     }
   ],
-  "last_sent_time": "2026-08-31T20:57:54.120840"
+  "last_sent_time": "2026-09-01T19:12:31.560951"
 }

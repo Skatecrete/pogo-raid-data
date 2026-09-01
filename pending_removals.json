@@ -1,18 +1,14 @@
 {
-  "id:378|5-star raids": {
-    "first_seen": "2026-08-31T20:57:54.120545",
+  "name:mega malamar|mega raids": {
+    "first_seen": "2026-09-01T19:12:31.560672",
     "count": 1
   },
-  "id:379|5-star raids": {
-    "first_seen": "2026-08-31T20:57:54.120545",
+  "name:mega victreebel|mega raids": {
+    "first_seen": "2026-09-01T19:12:31.560672",
     "count": 1
   },
-  "name:mega gyarados|mega raids": {
-    "first_seen": "2026-08-31T20:57:54.120545",
-    "count": 1
-  },
-  "id:377|5-star raids": {
-    "first_seen": "2026-08-31T20:57:54.120545",
+  "name:mega dragonite|mega raids": {
+    "first_seen": "2026-09-01T19:12:31.560672",
     "count": 1
   }
 }
