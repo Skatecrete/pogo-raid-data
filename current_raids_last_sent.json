@@ -1,8 +1,8 @@
 {
-  "last_updated": "2026-09-01",
+  "last_updated": "2026-09-02",
   "tier1": [
-    "Honedge",
     "Tyrunt",
+    "Honedge",
     "Dratini",
     "Amaura"
   ],
@@ -13,11 +13,9 @@
   ],
   "tier5": [],
   "mega": [
-    "Mega Victreebel",
-    "Mega Dragonite",
-    "Mega Falinks",
     "Mega Skarmory",
-    "Mega Malamar"
+    "Mega Falinks",
+    "Mega Starmie"
   ],
   "primal": [],
   "ultra_beasts": [],
@@ -83,7 +81,7 @@
   ],
   "dynamax_tier5": [],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-09-01 19:12:31",
+  "gigantamax_last_updated": "2026-09-02 19:41:53",
   "scrapedduck_raids": [
     "dratini|1-star raids",
     "honedge|1-star raids",
@@ -92,7 +90,7 @@
     "hisuian sneasel|3-star raids",
     "hisuian lilligant|3-star raids",
     "passimian|3-star raids",
-    "mega falinks|mega raids",
+    "mega skarmory|mega raids",
     "mega latias|mega raids",
     "mega latios|mega raids",
     "shadow slowpoke|1-star raids",
@@ -112,7 +110,7 @@
     "name:hisuian sneasel|3-star raids",
     "name:hisuian lilligant|3-star raids",
     "name:passimian|3-star raids",
-    "name:mega falinks|mega raids",
+    "name:mega skarmory|mega raids",
     "id:380|mega raids",
     "id:381|mega raids",
     "name:shadow slowpoke|1-star raids",
@@ -358,32 +356,40 @@
       "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm766.icon.png"
     },
     {
-      "name": "Mega Falinks",
+      "name": "Mega Skarmory",
       "tier": "Mega Raids",
       "canBeShiny": true,
       "types": [
         {
-          "name": "fighting",
-          "image": "https://leekduck.com/assets/img/types/fighting.png"
+          "name": "steel",
+          "image": "https://leekduck.com/assets/img/types/steel.png"
+        },
+        {
+          "name": "flying",
+          "image": "https://leekduck.com/assets/img/types/flying.png"
         }
       ],
       "combatPower": {
         "normal": {
-          "min": 1278,
-          "max": 1347
+          "min": 1139,
+          "max": 1204
         },
         "boosted": {
-          "min": 1598,
-          "max": 1683
+          "min": 1424,
+          "max": 1506
         }
       },
       "boostedWeather": [
         {
-          "name": "cloudy",
-          "image": "https://leekduck.com/assets/img/weather/cloudy.png"
+          "name": "snow",
+          "image": "https://leekduck.com/assets/img/weather/snowy.png"
+        },
+        {
+          "name": "windy",
+          "image": "https://leekduck.com/assets/img/weather/windy.png"
         }
       ],
-      "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm870.fMEGA.icon.png"
+      "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm227.fMEGA.icon.png"
     },
     {
       "name": "Mega Latias",
@@ -702,5 +708,5 @@
       "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm487.fALTERED.icon.png"
     }
   ],
-  "last_sent_time": "2026-09-01T19:12:31.560951"
+  "last_sent_time": "2026-09-02T19:41:53.468609"
 }

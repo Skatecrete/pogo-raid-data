@@ -1,8 +1,8 @@
 {
-  "last_updated": "2026-09-01",
+  "last_updated": "2026-09-02",
   "tier1": [
-    "Honedge",
     "Tyrunt",
+    "Honedge",
     "Dratini",
     "Amaura"
   ],
@@ -13,11 +13,9 @@
   ],
   "tier5": [],
   "mega": [
-    "Mega Victreebel",
-    "Mega Dragonite",
-    "Mega Falinks",
     "Mega Skarmory",
-    "Mega Malamar"
+    "Mega Falinks",
+    "Mega Starmie"
   ],
   "primal": [],
   "ultra_beasts": [],
@@ -83,5 +81,5 @@
   ],
   "dynamax_tier5": [],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-09-01 19:12:31"
+  "gigantamax_last_updated": "2026-09-02 19:41:53"
 }
