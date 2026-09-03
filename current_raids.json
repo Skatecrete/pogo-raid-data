@@ -1,21 +1,22 @@
 {
-  "last_updated": "2026-09-02",
+  "last_updated": "2026-09-03",
   "tier1": [
-    "Tyrunt",
     "Honedge",
+    "Amaura",
     "Dratini",
-    "Amaura"
+    "Tyrunt"
   ],
   "tier3": [
+    "Hisuian Sneasel",
     "Passimian",
-    "Hisuian Lilligant",
-    "Hisuian Sneasel"
+    "Hisuian Lilligant"
   ],
   "tier5": [],
   "mega": [
+    "Mega Raichu Y",
+    "Mega Starmie",
     "Mega Skarmory",
-    "Mega Falinks",
-    "Mega Starmie"
+    "Mega Raichu X"
   ],
   "primal": [],
   "ultra_beasts": [],
@@ -81,5 +82,5 @@
   ],
   "dynamax_tier5": [],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-09-02 19:41:53"
+  "gigantamax_last_updated": "2026-09-03 17:31:46"
 }
