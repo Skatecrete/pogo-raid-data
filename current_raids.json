@@ -1,26 +1,42 @@
 {
-  "last_updated": "2026-09-03",
+  "last_updated": "2026-09-04",
   "tier1": [
     "Honedge",
-    "Amaura",
     "Dratini",
+    "Amaura",
     "Tyrunt"
   ],
   "tier3": [
-    "Hisuian Sneasel",
+    "Hisuian Lilligant",
     "Passimian",
-    "Hisuian Lilligant"
+    "Hisuian Sneasel"
   ],
-  "tier5": [],
+  "tier5": [
+    "Mewtwo (Armored)"
+  ],
   "mega": [
+    "Mega Raichu X",
     "Mega Raichu Y",
+    "Mega Victreebel",
+    "Mega Alakazam",
+    "Mega Abomasnow",
+    "Mega Malamar",
+    "Mega Beedrill",
+    "Mega Medicham",
+    "Mega Houndoom",
+    "Mega Pinsir",
+    "Mega Banette",
+    "Mega Slowbro",
     "Mega Starmie",
-    "Mega Skarmory",
-    "Mega Raichu X"
+    "Mega Manectric",
+    "Mega Ampharos",
+    "Mega Gengar"
   ],
   "primal": [],
   "ultra_beasts": [],
-  "super_mega": [],
+  "super_mega": [
+    "Super Mega Mega Mewtwo X"
+  ],
   "dynamax_tier1": [
     "Abra",
     "Bounsweet",
@@ -82,5 +98,5 @@
   ],
   "dynamax_tier5": [],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-09-03 17:31:46"
+  "gigantamax_last_updated": "2026-09-04 18:06:08"
 }

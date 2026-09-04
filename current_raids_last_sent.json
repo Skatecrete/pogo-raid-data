@@ -1,26 +1,42 @@
 {
-  "last_updated": "2026-09-03",
+  "last_updated": "2026-09-04",
   "tier1": [
     "Honedge",
-    "Amaura",
     "Dratini",
+    "Amaura",
     "Tyrunt"
   ],
   "tier3": [
-    "Hisuian Sneasel",
+    "Hisuian Lilligant",
     "Passimian",
-    "Hisuian Lilligant"
+    "Hisuian Sneasel"
   ],
-  "tier5": [],
+  "tier5": [
+    "Mewtwo (Armored)"
+  ],
   "mega": [
+    "Mega Raichu X",
     "Mega Raichu Y",
+    "Mega Victreebel",
+    "Mega Alakazam",
+    "Mega Abomasnow",
+    "Mega Malamar",
+    "Mega Beedrill",
+    "Mega Medicham",
+    "Mega Houndoom",
+    "Mega Pinsir",
+    "Mega Banette",
+    "Mega Slowbro",
     "Mega Starmie",
-    "Mega Skarmory",
-    "Mega Raichu X"
+    "Mega Manectric",
+    "Mega Ampharos",
+    "Mega Gengar"
   ],
   "primal": [],
   "ultra_beasts": [],
-  "super_mega": [],
+  "super_mega": [
+    "Super Mega Mega Mewtwo X"
+  ],
   "dynamax_tier1": [
     "Abra",
     "Bounsweet",
@@ -82,9 +98,10 @@
   ],
   "dynamax_tier5": [],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-09-03 17:31:46",
+  "gigantamax_last_updated": "2026-09-04 18:06:08",
   "scrapedduck_raids": [
-    "mega starmie|mega raids",
+    "mega raichu x|mega raids",
+    "mega raichu y|mega raids",
     "mega latias|mega raids",
     "mega latios|mega raids",
     "shadow slowpoke|1-star raids",
@@ -97,7 +114,8 @@
     "shadow giratina (altered)|5-star raids"
   ],
   "scrapedduck_normalized": [
-    "name:mega starmie|mega raids",
+    "name:mega raichu x|mega raids",
+    "name:mega raichu y|mega raids",
     "id:380|mega raids",
     "id:381|mega raids",
     "name:shadow slowpoke|1-star raids",
@@ -111,40 +129,60 @@
   ],
   "scrapedduck_raids_objects": [
     {
-      "name": "Mega Starmie",
+      "name": "Mega Raichu X",
       "tier": "Mega Raids",
       "canBeShiny": true,
       "types": [
         {
-          "name": "water",
-          "image": "https://leekduck.com/assets/img/types/water.png"
-        },
-        {
-          "name": "psychic",
-          "image": "https://leekduck.com/assets/img/types/psychic.png"
+          "name": "electric",
+          "image": "https://leekduck.com/assets/img/types/electric.png"
         }
       ],
       "combatPower": {
         "normal": {
-          "min": 1404,
-          "max": 1476
+          "min": 1180,
+          "max": 1247
         },
         "boosted": {
-          "min": 1756,
-          "max": 1846
+          "min": 1476,
+          "max": 1558
         }
       },
       "boostedWeather": [
         {
           "name": "rainy",
           "image": "https://leekduck.com/assets/img/weather/rainy.png"
-        },
-        {
-          "name": "windy",
-          "image": "https://leekduck.com/assets/img/weather/windy.png"
         }
       ],
-      "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/Mega%20Starmie.png"
+      "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm26.fMEGA_X.icon.png"
+    },
+    {
+      "name": "Mega Raichu Y",
+      "tier": "Mega Raids",
+      "canBeShiny": true,
+      "types": [
+        {
+          "name": "electric",
+          "image": "https://leekduck.com/assets/img/types/electric.png"
+        }
+      ],
+      "combatPower": {
+        "normal": {
+          "min": 1180,
+          "max": 1247
+        },
+        "boosted": {
+          "min": 1476,
+          "max": 1558
+        }
+      },
+      "boostedWeather": [
+        {
+          "name": "rainy",
+          "image": "https://leekduck.com/assets/img/weather/rainy.png"
+        }
+      ],
+      "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm26.fMEGA_Y.icon.png"
     },
     {
       "name": "Mega Latias",
@@ -463,5 +501,5 @@
       "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm487.fALTERED.icon.png"
     }
   ],
-  "last_sent_time": "2026-09-03T17:31:46.626335"
+  "last_sent_time": "2026-09-04T18:06:08.727379"
 }
