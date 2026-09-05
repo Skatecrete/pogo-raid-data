@@ -1,6 +1,18 @@
 {
-  "name:mega starmie|mega raids": {
-    "first_seen": "2026-09-04T18:06:08.727162",
+  "name:mega raichu y|mega raids": {
+    "first_seen": "2026-09-05T17:55:04.798127",
+    "count": 1
+  },
+  "id:380|mega raids": {
+    "first_seen": "2026-09-05T17:55:04.798127",
+    "count": 1
+  },
+  "name:mega raichu x|mega raids": {
+    "first_seen": "2026-09-05T17:55:04.798127",
+    "count": 1
+  },
+  "id:381|mega raids": {
+    "first_seen": "2026-09-05T17:55:04.798127",
     "count": 1
   }
 }
