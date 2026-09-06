@@ -1,18 +1,22 @@
 {
-  "name:mega raichu y|mega raids": {
-    "first_seen": "2026-09-05T17:55:04.798127",
+  "name:mega beedrill|mega raids": {
+    "first_seen": "2026-09-06T18:01:12.131120",
     "count": 1
   },
-  "id:380|mega raids": {
-    "first_seen": "2026-09-05T17:55:04.798127",
+  "name:mega abomasnow|mega raids": {
+    "first_seen": "2026-09-06T18:01:12.131120",
     "count": 1
   },
-  "name:mega raichu x|mega raids": {
-    "first_seen": "2026-09-05T17:55:04.798127",
+  "name:mega mewtwo x|super mega raids": {
+    "first_seen": "2026-09-06T18:01:12.131120",
     "count": 1
   },
-  "id:381|mega raids": {
-    "first_seen": "2026-09-05T17:55:04.798127",
+  "name:mega victreebel|mega raids": {
+    "first_seen": "2026-09-06T18:01:12.131120",
+    "count": 1
+  },
+  "name:mega pinsir|mega raids": {
+    "first_seen": "2026-09-06T18:01:12.131120",
     "count": 1
   }
 }

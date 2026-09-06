@@ -1,57 +1,55 @@
 {
-  "last_updated": "2026-09-05",
+  "last_updated": "2026-09-06",
   "tier1": [
+    "Amaura",
     "Honedge",
-    "Dratini",
-    "Tyrunt",
-    "Amaura"
+    "Dratini"
   ],
   "tier3": [
-    "Hisuian Lilligant",
-    "Hisuian Sneasel",
     "Passimian"
   ],
   "tier5": [
+    "Regice",
     "Mewtwo (Armored)"
   ],
   "mega": [
-    "Mega Falinks",
-    "Mega Slowbro",
+    "Mega Manectric",
+    "Mega Sharpedo",
     "Mega Aggron",
-    "Mega Dragonite",
-    "Mega Audino",
-    "Mega Ampharos",
-    "Mega Skarmory",
-    "Mega Gyarados",
+    "Mega Camerupt",
+    "Mega Houndoom",
+    "Mega Beedrill",
+    "Mega Raichu X",
     "Mega Steelix",
+    "Mega Gengar",
+    "Mega Abomasnow",
+    "Mega Slowbro",
+    "Mega Gyarados",
+    "Mega Medicham",
+    "Mega Raichu Y",
+    "Mega Audino",
+    "Mega Malamar",
+    "Mega Pinsir",
+    "Mega Aerodactyl",
+    "Mega Victreebel",
+    "Mega Falinks",
     "Mega Banette",
     "Mega Sableye",
     "Mega Glalie",
-    "Mega Altaria",
-    "Mega Gengar",
-    "Mega Sharpedo",
-    "Mega Malamar",
-    "Mega Raichu Y",
-    "Mega Camerupt",
-    "Mega Pinsir",
-    "Mega Victreebel",
-    "Mega Aerodactyl",
-    "Mega Raichu X",
-    "Mega Houndoom",
-    "Mega Mawile",
-    "Mega Manectric",
+    "Mega Dragonite",
+    "Mega Ampharos",
     "Mega Starmie",
-    "Mega Beedrill",
     "Mega Alakazam",
     "Mega Lopunny",
-    "Mega Abomasnow",
-    "Mega Medicham"
+    "Mega Altaria",
+    "Mega Mawile",
+    "Mega Skarmory"
   ],
   "primal": [],
   "ultra_beasts": [],
   "super_mega": [
-    "Super Mega Mega Mewtwo Y",
-    "Super Mega Mega Mewtwo X"
+    "Super Mega Mega Mewtwo X",
+    "Super Mega Mega Mewtwo Y"
   ],
   "dynamax_tier1": [
     "Abra",
@@ -114,5 +112,5 @@
   ],
   "dynamax_tier5": [],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-09-05 17:55:04"
+  "gigantamax_last_updated": "2026-09-06 18:01:11"
 }
