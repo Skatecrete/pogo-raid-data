@@ -1,6 +1,26 @@
 {
-  "last_updated": "2026-09-07 17:09:16",
+  "last_updated": "2026-09-07 21:03:26",
   "debuts": [
+    {
+      "event_name": "Harvest Festival 2026",
+      "event_date": "September 29th - October 5th 2026",
+      "new_pokemon": [],
+      "new_shiny": [
+        "Applin",
+        "Flapple",
+        "Appletun",
+        "Dipplin",
+        "Hydrapple"
+      ],
+      "pokemon_images": {
+        "Applin": "https://www.serebii.net/pokemongo/pokemon/shiny/840.png",
+        "Flapple": "https://www.serebii.net/pokemongo/pokemon/shiny/841.png",
+        "Appletun": "https://www.serebii.net/pokemongo/pokemon/shiny/842.png",
+        "Dipplin": "https://www.serebii.net/pokemongo/pokemon/shiny/1011.png",
+        "Hydrapple": "https://www.serebii.net/pokemongo/pokemon/shiny/1019.png"
+      },
+      "event_type": "global"
+    },
     {
       "event_name": "Pokemon Horizons Celebration Event 2026",
       "event_date": "September 16th - 22nd 2026",
