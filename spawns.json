@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-09-08 18:13:30",
-  "total": 375,
+  "last_updated": "2026-09-08 21:17:38",
+  "total": 374,
   "spawns": [
     {
       "id": 821,
@@ -12,37 +12,37 @@
     {
       "id": 661,
       "name": "Fletchling",
-      "rate": 10.68,
+      "rate": 10.69,
       "shiny": true,
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/661.png"
     },
     {
       "id": 16,
       "name": "Pidgey",
-      "rate": 10.01,
+      "rate": 10.06,
       "shiny": true,
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/16.png"
     },
     {
       "id": 13,
       "name": "Weedle",
-      "rate": 8.81,
+      "rate": 8.77,
       "shiny": true,
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/13.png"
     },
     {
-      "id": 973,
-      "name": "Flamigo",
-      "rate": 7.46,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/973.png"
-    },
-    {
       "id": 714,
       "name": "Noibat",
-      "rate": 7.45,
+      "rate": 7.54,
       "shiny": true,
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/714.png"
+    },
+    {
+      "id": 973,
+      "name": "Flamigo",
+      "rate": 7.49,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/973.png"
     },
     {
       "id": 587,
@@ -52,18 +52,18 @@
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/587.png"
     },
     {
-      "id": 506,
-      "name": "Lillipup",
-      "rate": 0.55,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/506.png"
-    },
-    {
       "id": 540,
       "name": "Sewaddle",
-      "rate": 0.53,
+      "rate": 0.55,
       "shiny": true,
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/540.png"
+    },
+    {
+      "id": 506,
+      "name": "Lillipup",
+      "rate": 0.54,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/506.png"
     },
     {
       "id": 10,
@@ -75,21 +75,21 @@
     {
       "id": 543,
       "name": "Venipede",
-      "rate": 0.48,
+      "rate": 0.47,
       "shiny": true,
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/543.png"
     },
     {
       "id": 915,
       "name": "Lechonk",
-      "rate": 0.47,
+      "rate": 0.46,
       "shiny": true,
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/915.png"
     },
     {
       "id": 177,
       "name": "Natu",
-      "rate": 0.46,
+      "rate": 0.45,
       "shiny": true,
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/177.png"
     },
@@ -103,23 +103,23 @@
     {
       "id": 261,
       "name": "Poochyena",
-      "rate": 0.42,
+      "rate": 0.4,
       "shiny": true,
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/261.png"
     },
     {
       "id": 19,
       "name": "Rattata Alola",
-      "rate": 0.4,
+      "rate": 0.39,
       "shiny": true,
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/19.png"
     },
     {
-      "id": 539,
-      "name": "Sawk",
+      "id": 422,
+      "name": "Shellos East Sea",
       "rate": 0.39,
       "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/539.png"
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/422.png"
     },
     {
       "id": 276,
@@ -129,25 +129,25 @@
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/276.png"
     },
     {
-      "id": 422,
-      "name": "Shellos East Sea",
+      "id": 539,
+      "name": "Sawk",
       "rate": 0.38,
       "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/422.png"
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/539.png"
     },
     {
-      "id": 179,
-      "name": "Mareep",
+      "id": 43,
+      "name": "Oddish",
       "rate": 0.38,
       "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/179.png"
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/43.png"
     },
     {
-      "id": 535,
-      "name": "Tympole",
+      "id": 631,
+      "name": "Heatmor",
       "rate": 0.38,
       "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/535.png"
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/631.png"
     },
     {
       "id": 931,
@@ -157,39 +157,32 @@
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/931.png"
     },
     {
-      "id": 43,
-      "name": "Oddish",
-      "rate": 0.37,
+      "id": 21,
+      "name": "Spearow",
+      "rate": 0.38,
       "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/43.png"
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/21.png"
     },
     {
-      "id": 338,
-      "name": "Solrock",
-      "rate": 0.37,
+      "id": 535,
+      "name": "Tympole",
+      "rate": 0.38,
       "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/338.png"
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/535.png"
     },
     {
-      "id": 631,
-      "name": "Heatmor",
-      "rate": 0.37,
+      "id": 179,
+      "name": "Mareep",
+      "rate": 0.38,
       "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/631.png"
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/179.png"
     },
     {
       "id": 399,
       "name": "Bidoof",
-      "rate": 0.37,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/399.png"
-    },
-    {
-      "id": 21,
-      "name": "Spearow",
       "rate": 0.36,
       "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/21.png"
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/399.png"
     },
     {
       "id": 725,
@@ -199,18 +192,32 @@
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/725.png"
     },
     {
+      "id": 338,
+      "name": "Solrock",
+      "rate": 0.36,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/338.png"
+    },
+    {
+      "id": 427,
+      "name": "Buneary",
+      "rate": 0.34,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/427.png"
+    },
+    {
       "id": 133,
       "name": "Eevee",
-      "rate": 0.35,
+      "rate": 0.34,
       "shiny": true,
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/133.png"
     },
     {
-      "id": 23,
-      "name": "Ekans",
+      "id": 296,
+      "name": "Makuhita",
       "rate": 0.34,
       "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/23.png"
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/296.png"
     },
     {
       "id": 919,
@@ -220,25 +227,18 @@
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/919.png"
     },
     {
-      "id": 296,
-      "name": "Makuhita",
-      "rate": 0.33,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/296.png"
-    },
-    {
       "id": 335,
       "name": "Zangoose",
-      "rate": 0.33,
+      "rate": 0.34,
       "shiny": true,
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/335.png"
     },
     {
-      "id": 427,
-      "name": "Buneary",
-      "rate": 0.33,
+      "id": 23,
+      "name": "Ekans",
+      "rate": 0.34,
       "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/427.png"
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/23.png"
     },
     {
       "id": 909,
@@ -248,11 +248,25 @@
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/909.png"
     },
     {
+      "id": 66,
+      "name": "Machop",
+      "rate": 0.32,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/66.png"
+    },
+    {
       "id": 155,
       "name": "Cyndaquil",
       "rate": 0.31,
       "shiny": true,
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/155.png"
+    },
+    {
+      "id": 313,
+      "name": "Volbeat",
+      "rate": 0.31,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/313.png"
     },
     {
       "id": 511,
@@ -262,34 +276,6 @@
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/511.png"
     },
     {
-      "id": 831,
-      "name": "Wooloo",
-      "rate": 0.3,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/831.png"
-    },
-    {
-      "id": 313,
-      "name": "Volbeat",
-      "rate": 0.3,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/313.png"
-    },
-    {
-      "id": 759,
-      "name": "Stufful",
-      "rate": 0.3,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/759.png"
-    },
-    {
-      "id": 66,
-      "name": "Machop",
-      "rate": 0.3,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/66.png"
-    },
-    {
       "id": 19,
       "name": "Rattata",
       "rate": 0.3,
@@ -297,11 +283,11 @@
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/19.png"
     },
     {
-      "id": 102,
-      "name": "Exeggcute",
+      "id": 831,
+      "name": "Wooloo",
       "rate": 0.29,
       "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/102.png"
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/831.png"
     },
     {
       "id": 431,
@@ -311,6 +297,20 @@
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/431.png"
     },
     {
+      "id": 102,
+      "name": "Exeggcute",
+      "rate": 0.29,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/102.png"
+    },
+    {
+      "id": 759,
+      "name": "Stufful",
+      "rate": 0.29,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/759.png"
+    },
+    {
       "id": 931,
       "name": "Squawkabilly Yellow Plumage",
       "rate": 0.28,
@@ -318,32 +318,18 @@
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/931.png"
     },
     {
+      "id": 333,
+      "name": "Swablu",
+      "rate": 0.28,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/333.png"
+    },
+    {
       "id": 519,
       "name": "Pidove",
       "rate": 0.28,
       "shiny": true,
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/519.png"
-    },
-    {
-      "id": 333,
-      "name": "Swablu",
-      "rate": 0.27,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/333.png"
-    },
-    {
-      "id": 198,
-      "name": "Murkrow",
-      "rate": 0.27,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/198.png"
-    },
-    {
-      "id": 396,
-      "name": "Starly",
-      "rate": 0.27,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/396.png"
     },
     {
       "id": 731,
@@ -360,6 +346,27 @@
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/501.png"
     },
     {
+      "id": 198,
+      "name": "Murkrow",
+      "rate": 0.27,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/198.png"
+    },
+    {
+      "id": 4,
+      "name": "Charmander",
+      "rate": 0.26,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/4.png"
+    },
+    {
+      "id": 396,
+      "name": "Starly",
+      "rate": 0.26,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/396.png"
+    },
+    {
       "id": 574,
       "name": "Gothita",
       "rate": 0.26,
@@ -374,60 +381,11 @@
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/316.png"
     },
     {
-      "id": 4,
-      "name": "Charmander",
-      "rate": 0.26,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/4.png"
-    },
-    {
-      "id": 835,
-      "name": "Yamper",
-      "rate": 0.25,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/835.png"
-    },
-    {
       "id": 39,
       "name": "Jigglypuff",
-      "rate": 0.24,
+      "rate": 0.25,
       "shiny": true,
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/39.png"
-    },
-    {
-      "id": 572,
-      "name": "Minccino",
-      "rate": 0.24,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/572.png"
-    },
-    {
-      "id": 104,
-      "name": "Cubone",
-      "rate": 0.24,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/104.png"
-    },
-    {
-      "id": 63,
-      "name": "Abra",
-      "rate": 0.24,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/63.png"
-    },
-    {
-      "id": 906,
-      "name": "Sprigatito",
-      "rate": 0.24,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/906.png"
-    },
-    {
-      "id": 263,
-      "name": "Zigzagoon Galarian",
-      "rate": 0.24,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/Skatecrete/pogo-raid-data/main/images/263_zigzagoon-galarian.webp"
     },
     {
       "id": 498,
@@ -437,6 +395,20 @@
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/498.png"
     },
     {
+      "id": 63,
+      "name": "Abra",
+      "rate": 0.24,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/63.png"
+    },
+    {
+      "id": 152,
+      "name": "Chikorita",
+      "rate": 0.24,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/152.png"
+    },
+    {
       "id": 928,
       "name": "Smoliv",
       "rate": 0.24,
@@ -444,25 +416,32 @@
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/928.png"
     },
     {
-      "id": 83,
-      "name": "Farfetch'd",
+      "id": 104,
+      "name": "Cubone",
       "rate": 0.24,
       "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/83.png"
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/104.png"
     },
     {
-      "id": 152,
-      "name": "Chikorita",
-      "rate": 0.23,
+      "id": 835,
+      "name": "Yamper",
+      "rate": 0.24,
       "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/152.png"
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/835.png"
     },
     {
-      "id": 819,
-      "name": "Skwovet",
-      "rate": 0.23,
+      "id": 906,
+      "name": "Sprigatito",
+      "rate": 0.24,
       "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/819.png"
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/906.png"
+    },
+    {
+      "id": 572,
+      "name": "Minccino",
+      "rate": 0.24,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/572.png"
     },
     {
       "id": 56,
@@ -472,11 +451,25 @@
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/56.png"
     },
     {
-      "id": 616,
-      "name": "Shelmet",
+      "id": 187,
+      "name": "Hoppip",
       "rate": 0.23,
       "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/616.png"
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/187.png"
+    },
+    {
+      "id": 46,
+      "name": "Paras",
+      "rate": 0.23,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/46.png"
+    },
+    {
+      "id": 819,
+      "name": "Skwovet",
+      "rate": 0.23,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/819.png"
     },
     {
       "id": 32,
@@ -486,53 +479,25 @@
       "image_url": "https://raw.githubusercontent.com/Skatecrete/pogo-raid-data/main/images/32_nidoran-m.webp"
     },
     {
-      "id": 322,
-      "name": "Numel",
+      "id": 83,
+      "name": "Farfetch'd",
       "rate": 0.23,
       "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/322.png"
-    },
-    {
-      "id": 29,
-      "name": "Nidoran\u2640",
-      "rate": 0.23,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/Skatecrete/pogo-raid-data/main/images/29_nidoran-f.webp"
-    },
-    {
-      "id": 58,
-      "name": "Growlithe",
-      "rate": 0.23,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/58.png"
-    },
-    {
-      "id": 309,
-      "name": "Electrike",
-      "rate": 0.23,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/309.png"
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/83.png"
     },
     {
       "id": 69,
       "name": "Bellsprout",
-      "rate": 0.23,
+      "rate": 0.22,
       "shiny": true,
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/69.png"
     },
     {
-      "id": 111,
-      "name": "Rhyhorn",
-      "rate": 0.23,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/111.png"
-    },
-    {
-      "id": 187,
-      "name": "Hoppip",
+      "id": 263,
+      "name": "Zigzagoon Galarian",
       "rate": 0.22,
       "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/187.png"
+      "image_url": "https://raw.githubusercontent.com/Skatecrete/pogo-raid-data/main/images/263_zigzagoon-galarian.webp"
     },
     {
       "id": 495,
@@ -542,39 +507,53 @@
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/495.png"
     },
     {
+      "id": 111,
+      "name": "Rhyhorn",
+      "rate": 0.22,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/111.png"
+    },
+    {
+      "id": 616,
+      "name": "Shelmet",
+      "rate": 0.22,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/616.png"
+    },
+    {
+      "id": 58,
+      "name": "Growlithe",
+      "rate": 0.22,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/58.png"
+    },
+    {
+      "id": 595,
+      "name": "Joltik",
+      "rate": 0.22,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/595.png"
+    },
+    {
+      "id": 309,
+      "name": "Electrike",
+      "rate": 0.22,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/309.png"
+    },
+    {
+      "id": 29,
+      "name": "Nidoran\u2640",
+      "rate": 0.22,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/Skatecrete/pogo-raid-data/main/images/29_nidoran-f.webp"
+    },
+    {
       "id": 7,
       "name": "Squirtle",
       "rate": 0.22,
       "shiny": true,
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/7.png"
-    },
-    {
-      "id": 46,
-      "name": "Paras",
-      "rate": 0.22,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/46.png"
-    },
-    {
-      "id": 595,
-      "name": "Joltik",
-      "rate": 0.21,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/595.png"
-    },
-    {
-      "id": 682,
-      "name": "Spritzee",
-      "rate": 0.21,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/682.png"
-    },
-    {
-      "id": 209,
-      "name": "Snubbull",
-      "rate": 0.21,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/209.png"
     },
     {
       "id": 48,
@@ -584,11 +563,32 @@
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/48.png"
     },
     {
+      "id": 322,
+      "name": "Numel",
+      "rate": 0.21,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/322.png"
+    },
+    {
+      "id": 682,
+      "name": "Spritzee",
+      "rate": 0.21,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/682.png"
+    },
+    {
       "id": 81,
       "name": "Magnemite",
       "rate": 0.21,
       "shiny": true,
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/81.png"
+    },
+    {
+      "id": 209,
+      "name": "Snubbull",
+      "rate": 0.2,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/209.png"
     },
     {
       "id": 669,
@@ -605,27 +605,6 @@
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/425.png"
     },
     {
-      "id": 193,
-      "name": "Yanma",
-      "rate": 0.2,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/193.png"
-    },
-    {
-      "id": 52,
-      "name": "Meowth",
-      "rate": 0.2,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/52.png"
-    },
-    {
-      "id": 96,
-      "name": "Drowzee",
-      "rate": 0.2,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/96.png"
-    },
-    {
       "id": 529,
       "name": "Drilbur",
       "rate": 0.2,
@@ -635,7 +614,7 @@
     {
       "id": 1,
       "name": "Bulbasaur",
-      "rate": 0.2,
+      "rate": 0.19,
       "shiny": true,
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/1.png"
     },
@@ -647,18 +626,18 @@
       "image_url": "https://raw.githubusercontent.com/Skatecrete/pogo-raid-data/main/images/741_oricorio-sensu-style.webp"
     },
     {
-      "id": 283,
-      "name": "Surskit",
+      "id": 96,
+      "name": "Drowzee",
       "rate": 0.19,
       "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/283.png"
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/96.png"
     },
     {
-      "id": 74,
-      "name": "Geodude Alola",
+      "id": 200,
+      "name": "Misdreavus",
       "rate": 0.19,
       "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/74.png"
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/200.png"
     },
     {
       "id": 434,
@@ -668,11 +647,32 @@
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/434.png"
     },
     {
-      "id": 200,
-      "name": "Misdreavus",
+      "id": 193,
+      "name": "Yanma",
+      "rate": 0.19,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/193.png"
+    },
+    {
+      "id": 74,
+      "name": "Geodude Alola",
+      "rate": 0.19,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/74.png"
+    },
+    {
+      "id": 52,
+      "name": "Meowth",
+      "rate": 0.19,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/52.png"
+    },
+    {
+      "id": 283,
+      "name": "Surskit",
       "rate": 0.18,
       "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/200.png"
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/283.png"
     },
     {
       "id": 921,
@@ -682,16 +682,37 @@
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/921.png"
     },
     {
+      "id": 60,
+      "name": "Poliwag",
+      "rate": 0.17,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/60.png"
+    },
+    {
+      "id": 280,
+      "name": "Ralts",
+      "rate": 0.17,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/280.png"
+    },
+    {
+      "id": 546,
+      "name": "Cottonee",
+      "rate": 0.17,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/546.png"
+    },
+    {
       "id": 25,
       "name": "Pikachu",
-      "rate": 0.18,
+      "rate": 0.17,
       "shiny": true,
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/25.png"
     },
     {
       "id": 827,
       "name": "Nickit",
-      "rate": 0.18,
+      "rate": 0.17,
       "shiny": true,
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/827.png"
     },
@@ -703,53 +724,11 @@
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/84.png"
     },
     {
-      "id": 546,
-      "name": "Cottonee",
-      "rate": 0.17,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/546.png"
-    },
-    {
-      "id": 280,
-      "name": "Ralts",
-      "rate": 0.17,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/280.png"
-    },
-    {
-      "id": 60,
-      "name": "Poliwag",
-      "rate": 0.17,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/60.png"
-    },
-    {
       "id": 50,
       "name": "Diglett",
       "rate": 0.17,
       "shiny": true,
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/50.png"
-    },
-    {
-      "id": 265,
-      "name": "Wurmple",
-      "rate": 0.16,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/265.png"
-    },
-    {
-      "id": 35,
-      "name": "Clefairy",
-      "rate": 0.16,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/35.png"
-    },
-    {
-      "id": 278,
-      "name": "Wingull",
-      "rate": 0.16,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/278.png"
     },
     {
       "id": 92,
@@ -759,39 +738,74 @@
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/92.png"
     },
     {
-      "id": 27,
-      "name": "Sandshrew",
-      "rate": 0.16,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/27.png"
-    },
-    {
-      "id": 504,
-      "name": "Patrat",
-      "rate": 0.15,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/504.png"
-    },
-    {
       "id": 736,
       "name": "Grubbin",
-      "rate": 0.15,
+      "rate": 0.16,
       "shiny": true,
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/736.png"
     },
     {
-      "id": 312,
-      "name": "Minun",
-      "rate": 0.15,
+      "id": 265,
+      "name": "Wurmple",
+      "rate": 0.16,
       "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/312.png"
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/265.png"
+    },
+    {
+      "id": 278,
+      "name": "Wingull",
+      "rate": 0.16,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/278.png"
     },
     {
       "id": 509,
       "name": "Purrloin",
-      "rate": 0.15,
+      "rate": 0.16,
       "shiny": true,
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/509.png"
+    },
+    {
+      "id": 504,
+      "name": "Patrat",
+      "rate": 0.16,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/504.png"
+    },
+    {
+      "id": 312,
+      "name": "Minun",
+      "rate": 0.16,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/312.png"
+    },
+    {
+      "id": 27,
+      "name": "Sandshrew",
+      "rate": 0.15,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/27.png"
+    },
+    {
+      "id": 931,
+      "name": "Squawkabilly White",
+      "rate": 0.15,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/931.png"
+    },
+    {
+      "id": 263,
+      "name": "Zigzagoon",
+      "rate": 0.15,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/263.png"
+    },
+    {
+      "id": 228,
+      "name": "Houndour",
+      "rate": 0.15,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/228.png"
     },
     {
       "id": 517,
@@ -808,13 +822,6 @@
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/926.png"
     },
     {
-      "id": 659,
-      "name": "Bunnelby",
-      "rate": 0.15,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/659.png"
-    },
-    {
       "id": 185,
       "name": "Sudowoodo",
       "rate": 0.15,
@@ -822,32 +829,18 @@
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/185.png"
     },
     {
-      "id": 931,
-      "name": "Squawkabilly White",
+      "id": 659,
+      "name": "Bunnelby",
       "rate": 0.15,
       "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/931.png"
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/659.png"
     },
     {
-      "id": 228,
-      "name": "Houndour",
-      "rate": 0.15,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/228.png"
-    },
-    {
-      "id": 311,
-      "name": "Plusle",
-      "rate": 0.15,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/311.png"
-    },
-    {
-      "id": 263,
-      "name": "Zigzagoon",
+      "id": 35,
+      "name": "Clefairy",
       "rate": 0.14,
       "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/263.png"
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/35.png"
     },
     {
       "id": 387,
@@ -857,11 +850,11 @@
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/387.png"
     },
     {
-      "id": 52,
-      "name": "Meowth Alola",
+      "id": 311,
+      "name": "Plusle",
       "rate": 0.14,
       "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/52.png"
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/311.png"
     },
     {
       "id": 325,
@@ -873,37 +866,23 @@
     {
       "id": 607,
       "name": "Litwick",
-      "rate": 0.13,
+      "rate": 0.14,
       "shiny": true,
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/607.png"
     },
     {
-      "id": 742,
-      "name": "Cutiefly",
-      "rate": 0.13,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/742.png"
-    },
-    {
       "id": 816,
       "name": "Sobble",
-      "rate": 0.13,
+      "rate": 0.14,
       "shiny": true,
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/816.png"
     },
     {
       "id": 52,
-      "name": "Meowth Galarian",
+      "name": "Meowth Alola",
       "rate": 0.13,
       "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/Skatecrete/pogo-raid-data/main/images/52_meowth-galarian.webp"
-    },
-    {
-      "id": 522,
-      "name": "Blitzle",
-      "rate": 0.13,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/522.png"
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/52.png"
     },
     {
       "id": 829,
@@ -913,18 +892,11 @@
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/829.png"
     },
     {
-      "id": 88,
-      "name": "Grimer",
+      "id": 52,
+      "name": "Meowth Galarian",
       "rate": 0.13,
       "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/88.png"
-    },
-    {
-      "id": 355,
-      "name": "Duskull",
-      "rate": 0.13,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/355.png"
+      "image_url": "https://raw.githubusercontent.com/Skatecrete/pogo-raid-data/main/images/52_meowth-galarian.webp"
     },
     {
       "id": 694,
@@ -934,11 +906,53 @@
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/694.png"
     },
     {
-      "id": 684,
-      "name": "Swirlix",
+      "id": 742,
+      "name": "Cutiefly",
       "rate": 0.13,
       "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/684.png"
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/742.png"
+    },
+    {
+      "id": 355,
+      "name": "Duskull",
+      "rate": 0.13,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/355.png"
+    },
+    {
+      "id": 54,
+      "name": "Psyduck",
+      "rate": 0.13,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/54.png"
+    },
+    {
+      "id": 88,
+      "name": "Grimer",
+      "rate": 0.12,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/88.png"
+    },
+    {
+      "id": 522,
+      "name": "Blitzle",
+      "rate": 0.12,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/522.png"
+    },
+    {
+      "id": 856,
+      "name": "Hatenna",
+      "rate": 0.12,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/856.png"
+    },
+    {
+      "id": 582,
+      "name": "Vanillite",
+      "rate": 0.12,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/582.png"
     },
     {
       "id": 74,
@@ -946,6 +960,13 @@
       "rate": 0.12,
       "shiny": true,
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/74.png"
+    },
+    {
+      "id": 194,
+      "name": "Wooper Paldea",
+      "rate": 0.12,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/194.png"
     },
     {
       "id": 769,
@@ -962,46 +983,11 @@
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/125.png"
     },
     {
-      "id": 54,
-      "name": "Psyduck",
-      "rate": 0.12,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/54.png"
-    },
-    {
-      "id": 582,
-      "name": "Vanillite",
-      "rate": 0.12,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/582.png"
-    },
-    {
       "id": 109,
       "name": "Koffing",
       "rate": 0.12,
       "shiny": true,
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/109.png"
-    },
-    {
-      "id": 856,
-      "name": "Hatenna",
-      "rate": 0.12,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/856.png"
-    },
-    {
-      "id": 557,
-      "name": "Dwebble",
-      "rate": 0.12,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/557.png"
-    },
-    {
-      "id": 194,
-      "name": "Wooper Paldea",
-      "rate": 0.12,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/194.png"
     },
     {
       "id": 667,
@@ -1011,11 +997,32 @@
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/667.png"
     },
     {
+      "id": 557,
+      "name": "Dwebble",
+      "rate": 0.11,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/557.png"
+    },
+    {
       "id": 850,
       "name": "Sizzlipede",
       "rate": 0.11,
       "shiny": true,
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/850.png"
+    },
+    {
+      "id": 107,
+      "name": "Hitmonchan",
+      "rate": 0.11,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/107.png"
+    },
+    {
+      "id": 684,
+      "name": "Swirlix",
+      "rate": 0.11,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/684.png"
     },
     {
       "id": 459,
@@ -1025,16 +1032,23 @@
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/459.png"
     },
     {
-      "id": 106,
-      "name": "Hitmonlee",
+      "id": 79,
+      "name": "Slowpoke",
       "rate": 0.11,
       "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/106.png"
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/79.png"
+    },
+    {
+      "id": 143,
+      "name": "Snorlax",
+      "rate": 0.11,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/143.png"
     },
     {
       "id": 206,
       "name": "Dunsparce",
-      "rate": 0.11,
+      "rate": 0.1,
       "shiny": true,
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/206.png"
     },
@@ -1046,60 +1060,11 @@
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/912.png"
     },
     {
-      "id": 107,
-      "name": "Hitmonchan",
-      "rate": 0.1,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/107.png"
-    },
-    {
-      "id": 79,
-      "name": "Slowpoke",
-      "rate": 0.1,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/79.png"
-    },
-    {
-      "id": 37,
-      "name": "Vulpix",
-      "rate": 0.1,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/37.png"
-    },
-    {
-      "id": 143,
-      "name": "Snorlax",
-      "rate": 0.1,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/143.png"
-    },
-    {
-      "id": 231,
-      "name": "Phanpy",
-      "rate": 0.1,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/231.png"
-    },
-    {
-      "id": 126,
-      "name": "Magmar",
-      "rate": 0.1,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/126.png"
-    },
-    {
       "id": 293,
       "name": "Whismur",
       "rate": 0.1,
       "shiny": true,
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/293.png"
-    },
-    {
-      "id": 88,
-      "name": "Grimer Alola",
-      "rate": 0.1,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/88.png"
     },
     {
       "id": 158,
@@ -1109,6 +1074,48 @@
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/158.png"
     },
     {
+      "id": 126,
+      "name": "Magmar",
+      "rate": 0.1,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/126.png"
+    },
+    {
+      "id": 106,
+      "name": "Hitmonlee",
+      "rate": 0.1,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/106.png"
+    },
+    {
+      "id": 37,
+      "name": "Vulpix",
+      "rate": 0.1,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/37.png"
+    },
+    {
+      "id": 415,
+      "name": "Combee",
+      "rate": 0.1,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/415.png"
+    },
+    {
+      "id": 231,
+      "name": "Phanpy",
+      "rate": 0.1,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/231.png"
+    },
+    {
+      "id": 88,
+      "name": "Grimer Alola",
+      "rate": 0.09,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/88.png"
+    },
+    {
       "id": 123,
       "name": "Scyther",
       "rate": 0.09,
@@ -1116,11 +1123,11 @@
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/123.png"
     },
     {
-      "id": 390,
-      "name": "Chimchar",
+      "id": 456,
+      "name": "Finneon",
       "rate": 0.09,
       "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/390.png"
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/456.png"
     },
     {
       "id": 418,
@@ -1130,11 +1137,25 @@
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/418.png"
     },
     {
-      "id": 415,
-      "name": "Combee",
+      "id": 390,
+      "name": "Chimchar",
       "rate": 0.09,
       "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/415.png"
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/390.png"
+    },
+    {
+      "id": 108,
+      "name": "Lickitung",
+      "rate": 0.09,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/108.png"
+    },
+    {
+      "id": 632,
+      "name": "Durant",
+      "rate": 0.09,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/632.png"
     },
     {
       "id": 237,
@@ -1144,67 +1165,11 @@
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/237.png"
     },
     {
-      "id": 422,
-      "name": "Shellos West Sea",
-      "rate": 0.09,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/422.png"
-    },
-    {
       "id": 931,
       "name": "Squawkabilly Blue Plumage",
-      "rate": 0.09,
+      "rate": 0.08,
       "shiny": true,
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/931.png"
-    },
-    {
-      "id": 108,
-      "name": "Lickitung",
-      "rate": 0.08,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/108.png"
-    },
-    {
-      "id": 554,
-      "name": "Darumaka",
-      "rate": 0.08,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/554.png"
-    },
-    {
-      "id": 456,
-      "name": "Finneon",
-      "rate": 0.08,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/456.png"
-    },
-    {
-      "id": 632,
-      "name": "Durant",
-      "rate": 0.08,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/632.png"
-    },
-    {
-      "id": 161,
-      "name": "Sentret",
-      "rate": 0.08,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/161.png"
-    },
-    {
-      "id": 273,
-      "name": "Seedot",
-      "rate": 0.08,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/273.png"
-    },
-    {
-      "id": 337,
-      "name": "Lunatone",
-      "rate": 0.08,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/337.png"
     },
     {
       "id": 538,
@@ -1221,18 +1186,32 @@
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/353.png"
     },
     {
-      "id": 761,
-      "name": "Bounsweet",
+      "id": 422,
+      "name": "Shellos West Sea",
       "rate": 0.08,
       "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/761.png"
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/422.png"
     },
     {
-      "id": 165,
-      "name": "Ledyba",
+      "id": 252,
+      "name": "Treecko",
       "rate": 0.08,
       "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/165.png"
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/252.png"
+    },
+    {
+      "id": 161,
+      "name": "Sentret",
+      "rate": 0.08,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/161.png"
+    },
+    {
+      "id": 337,
+      "name": "Lunatone",
+      "rate": 0.08,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/337.png"
     },
     {
       "id": 515,
@@ -1242,25 +1221,11 @@
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/515.png"
     },
     {
-      "id": 513,
-      "name": "Pansear",
+      "id": 273,
+      "name": "Seedot",
       "rate": 0.08,
       "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/513.png"
-    },
-    {
-      "id": 258,
-      "name": "Mudkip",
-      "rate": 0.08,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/258.png"
-    },
-    {
-      "id": 100,
-      "name": "Voltorb",
-      "rate": 0.08,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/100.png"
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/273.png"
     },
     {
       "id": 559,
@@ -1270,25 +1235,25 @@
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/559.png"
     },
     {
-      "id": 588,
-      "name": "Karrablast",
+      "id": 554,
+      "name": "Darumaka",
       "rate": 0.08,
       "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/588.png"
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/554.png"
     },
     {
-      "id": 77,
-      "name": "Ponyta",
+      "id": 258,
+      "name": "Mudkip",
       "rate": 0.08,
       "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/77.png"
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/258.png"
     },
     {
-      "id": 252,
-      "name": "Treecko",
+      "id": 513,
+      "name": "Pansear",
       "rate": 0.08,
       "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/252.png"
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/513.png"
     },
     {
       "id": 336,
@@ -1305,60 +1270,39 @@
       "image_url": "https://raw.githubusercontent.com/Skatecrete/pogo-raid-data/main/images/585_deerling-autumn.webp"
     },
     {
-      "id": 619,
-      "name": "Mienfoo",
-      "rate": 0.07,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/619.png"
-    },
-    {
-      "id": 401,
-      "name": "Kricketot",
-      "rate": 0.07,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/401.png"
-    },
-    {
-      "id": 241,
-      "name": "Miltank",
-      "rate": 0.07,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/241.png"
-    },
-    {
-      "id": 527,
-      "name": "Woobat",
-      "rate": 0.07,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/527.png"
-    },
-    {
-      "id": 358,
-      "name": "Chimecho",
-      "rate": 0.07,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/358.png"
-    },
-    {
-      "id": 255,
-      "name": "Torchic",
-      "rate": 0.07,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/255.png"
-    },
-    {
       "id": 315,
       "name": "Roselia",
-      "rate": 0.07,
+      "rate": 0.08,
       "shiny": true,
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/315.png"
     },
     {
+      "id": 77,
+      "name": "Ponyta",
+      "rate": 0.08,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/77.png"
+    },
+    {
       "id": 453,
       "name": "Croagunk",
-      "rate": 0.07,
+      "rate": 0.08,
       "shiny": true,
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/453.png"
+    },
+    {
+      "id": 100,
+      "name": "Voltorb",
+      "rate": 0.07,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/100.png"
+    },
+    {
+      "id": 588,
+      "name": "Karrablast",
+      "rate": 0.07,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/588.png"
     },
     {
       "id": 203,
@@ -1368,11 +1312,11 @@
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/203.png"
     },
     {
-      "id": 314,
-      "name": "Illumise",
+      "id": 241,
+      "name": "Miltank",
       "rate": 0.07,
       "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/314.png"
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/241.png"
     },
     {
       "id": 580,
@@ -1382,11 +1326,46 @@
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/580.png"
     },
     {
+      "id": 165,
+      "name": "Ledyba",
+      "rate": 0.07,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/165.png"
+    },
+    {
+      "id": 619,
+      "name": "Mienfoo",
+      "rate": 0.07,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/619.png"
+    },
+    {
+      "id": 314,
+      "name": "Illumise",
+      "rate": 0.07,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/314.png"
+    },
+    {
       "id": 810,
       "name": "Grookey",
       "rate": 0.07,
       "shiny": true,
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/810.png"
+    },
+    {
+      "id": 401,
+      "name": "Kricketot",
+      "rate": 0.07,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/401.png"
+    },
+    {
+      "id": 761,
+      "name": "Bounsweet",
+      "rate": 0.07,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/761.png"
     },
     {
       "id": 318,
@@ -1396,11 +1375,25 @@
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/318.png"
     },
     {
+      "id": 527,
+      "name": "Woobat",
+      "rate": 0.07,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/527.png"
+    },
+    {
       "id": 299,
       "name": "Nosepass",
       "rate": 0.07,
       "shiny": true,
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/299.png"
+    },
+    {
+      "id": 255,
+      "name": "Torchic",
+      "rate": 0.07,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/255.png"
     },
     {
       "id": 114,
@@ -1410,151 +1403,11 @@
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/114.png"
     },
     {
-      "id": 58,
-      "name": "Growlithe Hisuian",
-      "rate": 0.07,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/Skatecrete/pogo-raid-data/main/images/58_growlithe-hisuian.webp"
-    },
-    {
-      "id": 971,
-      "name": "Greavard",
-      "rate": 0.06,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/971.png"
-    },
-    {
-      "id": 672,
-      "name": "Skiddo",
-      "rate": 0.06,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/672.png"
-    },
-    {
       "id": 568,
       "name": "Trubbish",
-      "rate": 0.06,
+      "rate": 0.07,
       "shiny": true,
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/568.png"
-    },
-    {
-      "id": 183,
-      "name": "Marill",
-      "rate": 0.06,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/183.png"
-    },
-    {
-      "id": 129,
-      "name": "Magikarp",
-      "rate": 0.06,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/129.png"
-    },
-    {
-      "id": 597,
-      "name": "Ferroseed",
-      "rate": 0.06,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/597.png"
-    },
-    {
-      "id": 767,
-      "name": "Wimpod",
-      "rate": 0.06,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/767.png"
-    },
-    {
-      "id": 307,
-      "name": "Meditite",
-      "rate": 0.06,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/307.png"
-    },
-    {
-      "id": 702,
-      "name": "Dedenne",
-      "rate": 0.06,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/702.png"
-    },
-    {
-      "id": 570,
-      "name": "Zorua",
-      "rate": 0.06,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/570.png"
-    },
-    {
-      "id": 225,
-      "name": "Delibird",
-      "rate": 0.06,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/225.png"
-    },
-    {
-      "id": 285,
-      "name": "Shroomish",
-      "rate": 0.06,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/285.png"
-    },
-    {
-      "id": 124,
-      "name": "Jynx",
-      "rate": 0.06,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/124.png"
-    },
-    {
-      "id": 339,
-      "name": "Barboach",
-      "rate": 0.06,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/339.png"
-    },
-    {
-      "id": 669,
-      "name": "Flab\u00e9b\u00e9 Yellow Flower",
-      "rate": 0.06,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/669.png"
-    },
-    {
-      "id": 37,
-      "name": "Vulpix Alola",
-      "rate": 0.06,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/37.png"
-    },
-    {
-      "id": 83,
-      "name": "Farfetch'd Galarian",
-      "rate": 0.06,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/83.png"
-    },
-    {
-      "id": 618,
-      "name": "Stunfisk",
-      "rate": 0.06,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/618.png"
-    },
-    {
-      "id": 41,
-      "name": "Zubat",
-      "rate": 0.06,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/41.png"
-    },
-    {
-      "id": 734,
-      "name": "Yungoos",
-      "rate": 0.06,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/734.png"
     },
     {
       "id": 393,
@@ -1564,6 +1417,83 @@
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/393.png"
     },
     {
+      "id": 971,
+      "name": "Greavard",
+      "rate": 0.06,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/971.png"
+    },
+    {
+      "id": 307,
+      "name": "Meditite",
+      "rate": 0.06,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/307.png"
+    },
+    {
+      "id": 358,
+      "name": "Chimecho",
+      "rate": 0.06,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/358.png"
+    },
+    {
+      "id": 672,
+      "name": "Skiddo",
+      "rate": 0.06,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/672.png"
+    },
+    {
+      "id": 597,
+      "name": "Ferroseed",
+      "rate": 0.06,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/597.png"
+    },
+    {
+      "id": 58,
+      "name": "Growlithe Hisuian",
+      "rate": 0.06,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/Skatecrete/pogo-raid-data/main/images/58_growlithe-hisuian.webp"
+    },
+    {
+      "id": 129,
+      "name": "Magikarp",
+      "rate": 0.06,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/129.png"
+    },
+    {
+      "id": 285,
+      "name": "Shroomish",
+      "rate": 0.06,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/285.png"
+    },
+    {
+      "id": 570,
+      "name": "Zorua",
+      "rate": 0.06,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/570.png"
+    },
+    {
+      "id": 669,
+      "name": "Flab\u00e9b\u00e9 Yellow Flower",
+      "rate": 0.06,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/669.png"
+    },
+    {
+      "id": 618,
+      "name": "Stunfisk",
+      "rate": 0.06,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/618.png"
+    },
+    {
       "id": 113,
       "name": "Chansey",
       "rate": 0.06,
@@ -1571,11 +1501,109 @@
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/113.png"
     },
     {
-      "id": 859,
-      "name": "Impidimp",
+      "id": 702,
+      "name": "Dedenne",
       "rate": 0.06,
       "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/702.png"
+    },
+    {
+      "id": 41,
+      "name": "Zubat",
+      "rate": 0.06,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/41.png"
+    },
+    {
+      "id": 225,
+      "name": "Delibird",
+      "rate": 0.06,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/225.png"
+    },
+    {
+      "id": 128,
+      "name": "Tauros",
+      "rate": 0.06,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/128.png"
+    },
+    {
+      "id": 183,
+      "name": "Marill",
+      "rate": 0.06,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/183.png"
+    },
+    {
+      "id": 767,
+      "name": "Wimpod",
+      "rate": 0.06,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/767.png"
+    },
+    {
+      "id": 194,
+      "name": "Wooper",
+      "rate": 0.06,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/194.png"
+    },
+    {
+      "id": 83,
+      "name": "Farfetch'd Galarian",
+      "rate": 0.06,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/83.png"
+    },
+    {
+      "id": 449,
+      "name": "Hippopotas",
+      "rate": 0.06,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/449.png"
+    },
+    {
+      "id": 734,
+      "name": "Yungoos",
+      "rate": 0.05,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/734.png"
+    },
+    {
+      "id": 859,
+      "name": "Impidimp",
+      "rate": 0.05,
+      "shiny": true,
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/859.png"
+    },
+    {
+      "id": 339,
+      "name": "Barboach",
+      "rate": 0.05,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/339.png"
+    },
+    {
+      "id": 37,
+      "name": "Vulpix Alola",
+      "rate": 0.05,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/37.png"
+    },
+    {
+      "id": 777,
+      "name": "Togedemaru",
+      "rate": 0.05,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/777.png"
+    },
+    {
+      "id": 127,
+      "name": "Pinsir",
+      "rate": 0.05,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/127.png"
     },
     {
       "id": 741,
@@ -1585,32 +1613,18 @@
       "image_url": "https://raw.githubusercontent.com/Skatecrete/pogo-raid-data/main/images/741_oricorio-baile-style.webp"
     },
     {
-      "id": 449,
-      "name": "Hippopotas",
+      "id": 124,
+      "name": "Jynx",
       "rate": 0.05,
       "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/449.png"
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/124.png"
     },
     {
-      "id": 128,
-      "name": "Tauros",
+      "id": 351,
+      "name": "Castform",
       "rate": 0.05,
       "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/128.png"
-    },
-    {
-      "id": 343,
-      "name": "Baltoy",
-      "rate": 0.05,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/343.png"
-    },
-    {
-      "id": 218,
-      "name": "Slugma",
-      "rate": 0.05,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/218.png"
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/351.png"
     },
     {
       "id": 524,
@@ -1627,46 +1641,18 @@
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/191.png"
     },
     {
-      "id": 669,
-      "name": "Flab\u00e9b\u00e9 Red Flower",
+      "id": 122,
+      "name": "Mr. Mime",
       "rate": 0.05,
       "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/669.png"
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/122.png"
     },
     {
-      "id": 287,
-      "name": "Slakoth",
+      "id": 343,
+      "name": "Baltoy",
       "rate": 0.05,
       "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/287.png"
-    },
-    {
-      "id": 194,
-      "name": "Wooper",
-      "rate": 0.05,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/194.png"
-    },
-    {
-      "id": 741,
-      "name": "Oricorio Pom-Pom Style",
-      "rate": 0.05,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/741.png"
-    },
-    {
-      "id": 777,
-      "name": "Togedemaru",
-      "rate": 0.05,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/777.png"
-    },
-    {
-      "id": 669,
-      "name": "Flab\u00e9b\u00e9 White Flower",
-      "rate": 0.05,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/669.png"
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/343.png"
     },
     {
       "id": 176,
@@ -1676,25 +1662,25 @@
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/176.png"
     },
     {
-      "id": 122,
-      "name": "Mr. Mime",
+      "id": 669,
+      "name": "Flab\u00e9b\u00e9 Orange Flower",
       "rate": 0.05,
       "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/122.png"
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/669.png"
     },
     {
-      "id": 127,
-      "name": "Pinsir",
+      "id": 669,
+      "name": "Flab\u00e9b\u00e9 Red Flower",
       "rate": 0.05,
       "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/127.png"
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/669.png"
     },
     {
-      "id": 77,
-      "name": "Ponyta Galarian",
+      "id": 741,
+      "name": "Oricorio Pom-Pom Style",
       "rate": 0.05,
       "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/Skatecrete/pogo-raid-data/main/images/77_ponyta-galarian.webp"
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/741.png"
     },
     {
       "id": 602,
@@ -1704,60 +1690,25 @@
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/602.png"
     },
     {
+      "id": 218,
+      "name": "Slugma",
+      "rate": 0.05,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/218.png"
+    },
+    {
+      "id": 287,
+      "name": "Slakoth",
+      "rate": 0.05,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/287.png"
+    },
+    {
       "id": 669,
-      "name": "Flab\u00e9b\u00e9 Orange Flower",
+      "name": "Flab\u00e9b\u00e9 White Flower",
       "rate": 0.05,
       "shiny": true,
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/669.png"
-    },
-    {
-      "id": 50,
-      "name": "Diglett Alola",
-      "rate": 0.05,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/50.png"
-    },
-    {
-      "id": 242,
-      "name": "Blissey",
-      "rate": 0.04,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/242.png"
-    },
-    {
-      "id": 223,
-      "name": "Remoraid",
-      "rate": 0.04,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/223.png"
-    },
-    {
-      "id": 351,
-      "name": "Castform",
-      "rate": 0.04,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/351.png"
-    },
-    {
-      "id": 751,
-      "name": "Dewpider",
-      "rate": 0.04,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/751.png"
-    },
-    {
-      "id": 692,
-      "name": "Clauncher",
-      "rate": 0.04,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/692.png"
-    },
-    {
-      "id": 137,
-      "name": "Porygon",
-      "rate": 0.04,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/137.png"
     },
     {
       "id": 213,
@@ -1767,60 +1718,25 @@
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/213.png"
     },
     {
-      "id": 304,
-      "name": "Aron",
+      "id": 77,
+      "name": "Ponyta Galarian",
       "rate": 0.04,
       "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/304.png"
+      "image_url": "https://raw.githubusercontent.com/Skatecrete/pogo-raid-data/main/images/77_ponyta-galarian.webp"
     },
     {
-      "id": 627,
-      "name": "Rufflet",
+      "id": 50,
+      "name": "Diglett Alola",
       "rate": 0.04,
       "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/627.png"
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/50.png"
     },
     {
-      "id": 938,
-      "name": "Tadbulb",
+      "id": 223,
+      "name": "Remoraid",
       "rate": 0.04,
       "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/938.png"
-    },
-    {
-      "id": 722,
-      "name": "Rowlet",
-      "rate": 0.04,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/722.png"
-    },
-    {
-      "id": 163,
-      "name": "Hoothoot",
-      "rate": 0.04,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/163.png"
-    },
-    {
-      "id": 837,
-      "name": "Rolycoly",
-      "rate": 0.04,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/837.png"
-    },
-    {
-      "id": 755,
-      "name": "Morelull",
-      "rate": 0.04,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/755.png"
-    },
-    {
-      "id": 436,
-      "name": "Bronzor",
-      "rate": 0.04,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/436.png"
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/223.png"
     },
     {
       "id": 118,
@@ -1830,11 +1746,81 @@
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/118.png"
     },
     {
-      "id": 351,
-      "name": "Castform Rainy",
+      "id": 692,
+      "name": "Clauncher",
       "rate": 0.04,
       "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/Skatecrete/pogo-raid-data/main/images/351_castform-rainy.webp"
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/692.png"
+    },
+    {
+      "id": 938,
+      "name": "Tadbulb",
+      "rate": 0.04,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/938.png"
+    },
+    {
+      "id": 755,
+      "name": "Morelull",
+      "rate": 0.04,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/755.png"
+    },
+    {
+      "id": 627,
+      "name": "Rufflet",
+      "rate": 0.04,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/627.png"
+    },
+    {
+      "id": 436,
+      "name": "Bronzor",
+      "rate": 0.04,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/436.png"
+    },
+    {
+      "id": 751,
+      "name": "Dewpider",
+      "rate": 0.04,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/751.png"
+    },
+    {
+      "id": 304,
+      "name": "Aron",
+      "rate": 0.04,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/304.png"
+    },
+    {
+      "id": 242,
+      "name": "Blissey",
+      "rate": 0.04,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/242.png"
+    },
+    {
+      "id": 722,
+      "name": "Rowlet",
+      "rate": 0.04,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/722.png"
+    },
+    {
+      "id": 562,
+      "name": "Yamask",
+      "rate": 0.04,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/562.png"
+    },
+    {
+      "id": 837,
+      "name": "Rolycoly",
+      "rate": 0.04,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/837.png"
     },
     {
       "id": 676,
@@ -1844,39 +1830,32 @@
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/676.png"
     },
     {
-      "id": 710,
-      "name": "Pumpkaboo Average",
+      "id": 234,
+      "name": "Stantler",
       "rate": 0.04,
       "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/710.png"
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/234.png"
     },
     {
-      "id": 562,
-      "name": "Yamask",
-      "rate": 0.03,
+      "id": 163,
+      "name": "Hoothoot",
+      "rate": 0.04,
       "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/562.png"
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/163.png"
+    },
+    {
+      "id": 137,
+      "name": "Porygon",
+      "rate": 0.04,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/137.png"
     },
     {
       "id": 79,
       "name": "Slowpoke Galarian",
-      "rate": 0.03,
+      "rate": 0.04,
       "shiny": true,
       "image_url": "https://raw.githubusercontent.com/Skatecrete/pogo-raid-data/main/images/79_slowpoke-galarian.webp"
-    },
-    {
-      "id": 618,
-      "name": "Stunfisk Galarian",
-      "rate": 0.03,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/Skatecrete/pogo-raid-data/main/images/618_stunfisk-galarian.webp"
-    },
-    {
-      "id": 234,
-      "name": "Stantler",
-      "rate": 0.03,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/234.png"
     },
     {
       "id": 451,
@@ -1886,18 +1865,25 @@
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/451.png"
     },
     {
-      "id": 686,
-      "name": "Inkay",
+      "id": 618,
+      "name": "Stunfisk Galarian",
       "rate": 0.03,
       "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/686.png"
+      "image_url": "https://raw.githubusercontent.com/Skatecrete/pogo-raid-data/main/images/618_stunfisk-galarian.webp"
     },
     {
-      "id": 707,
-      "name": "Klefki",
+      "id": 710,
+      "name": "Pumpkaboo Average",
       "rate": 0.03,
       "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/707.png"
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/710.png"
+    },
+    {
+      "id": 222,
+      "name": "Corsola",
+      "rate": 0.03,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/222.png"
     },
     {
       "id": 710,
@@ -1907,25 +1893,11 @@
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/710.png"
     },
     {
-      "id": 562,
-      "name": "Yamask Galarian",
+      "id": 686,
+      "name": "Inkay",
       "rate": 0.03,
       "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/Skatecrete/pogo-raid-data/main/images/562_yamask-galarian.webp"
-    },
-    {
-      "id": 300,
-      "name": "Skitty",
-      "rate": 0.03,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/300.png"
-    },
-    {
-      "id": 142,
-      "name": "Aerodactyl",
-      "rate": 0.03,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/142.png"
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/686.png"
     },
     {
       "id": 548,
@@ -1935,6 +1907,13 @@
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/548.png"
     },
     {
+      "id": 216,
+      "name": "Teddiursa",
+      "rate": 0.03,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/216.png"
+    },
+    {
       "id": 408,
       "name": "Cranidos",
       "rate": 0.03,
@@ -1942,11 +1921,25 @@
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/408.png"
     },
     {
-      "id": 216,
-      "name": "Teddiursa",
+      "id": 300,
+      "name": "Skitty",
       "rate": 0.03,
       "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/216.png"
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/300.png"
+    },
+    {
+      "id": 707,
+      "name": "Klefki",
+      "rate": 0.03,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/707.png"
+    },
+    {
+      "id": 410,
+      "name": "Shieldon",
+      "rate": 0.03,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/410.png"
     },
     {
       "id": 531,
@@ -1956,39 +1949,18 @@
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/531.png"
     },
     {
-      "id": 874,
-      "name": "Stonjourner",
+      "id": 142,
+      "name": "Aerodactyl",
       "rate": 0.03,
       "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/874.png"
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/142.png"
     },
     {
-      "id": 302,
-      "name": "Sableye",
+      "id": 562,
+      "name": "Yamask Galarian",
       "rate": 0.03,
       "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/302.png"
-    },
-    {
-      "id": 917,
-      "name": "Tarountula",
-      "rate": 0.03,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/917.png"
-    },
-    {
-      "id": 710,
-      "name": "Pumpkaboo Large",
-      "rate": 0.03,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/710.png"
-    },
-    {
-      "id": 202,
-      "name": "Wobbuffet",
-      "rate": 0.03,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/202.png"
+      "image_url": "https://raw.githubusercontent.com/Skatecrete/pogo-raid-data/main/images/562_yamask-galarian.webp"
     },
     {
       "id": 227,
@@ -1998,46 +1970,39 @@
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/227.png"
     },
     {
-      "id": 410,
-      "name": "Shieldon",
-      "rate": 0.02,
+      "id": 710,
+      "name": "Pumpkaboo Large",
+      "rate": 0.03,
       "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/410.png"
-    },
-    {
-      "id": 100,
-      "name": "Voltorb Hisuian",
-      "rate": 0.02,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/Skatecrete/pogo-raid-data/main/images/100_voltorb-hisuian.webp"
-    },
-    {
-      "id": 222,
-      "name": "Corsola",
-      "rate": 0.02,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/222.png"
-    },
-    {
-      "id": 605,
-      "name": "Elgyem",
-      "rate": 0.02,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/605.png"
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/710.png"
     },
     {
       "id": 303,
       "name": "Mawile",
-      "rate": 0.02,
+      "rate": 0.03,
       "shiny": true,
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/303.png"
     },
     {
-      "id": 366,
-      "name": "Clamperl",
+      "id": 917,
+      "name": "Tarountula",
+      "rate": 0.03,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/917.png"
+    },
+    {
+      "id": 302,
+      "name": "Sableye",
+      "rate": 0.03,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/302.png"
+    },
+    {
+      "id": 874,
+      "name": "Stonjourner",
       "rate": 0.02,
       "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/366.png"
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/874.png"
     },
     {
       "id": 775,
@@ -2047,11 +2012,11 @@
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/775.png"
     },
     {
-      "id": 610,
-      "name": "Axew",
+      "id": 100,
+      "name": "Voltorb Hisuian",
       "rate": 0.02,
       "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/610.png"
+      "image_url": "https://raw.githubusercontent.com/Skatecrete/pogo-raid-data/main/images/100_voltorb-hisuian.webp"
     },
     {
       "id": 140,
@@ -2061,6 +2026,20 @@
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/140.png"
     },
     {
+      "id": 610,
+      "name": "Axew",
+      "rate": 0.02,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/610.png"
+    },
+    {
+      "id": 605,
+      "name": "Elgyem",
+      "rate": 0.02,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/605.png"
+    },
+    {
       "id": 696,
       "name": "Tyrunt",
       "rate": 0.02,
@@ -2068,11 +2047,18 @@
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/696.png"
     },
     {
-      "id": 420,
-      "name": "Cherubi",
+      "id": 202,
+      "name": "Wobbuffet",
       "rate": 0.02,
       "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/420.png"
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/202.png"
+    },
+    {
+      "id": 824,
+      "name": "Blipbug",
+      "rate": 0.02,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/824.png"
     },
     {
       "id": 95,
@@ -2082,11 +2068,11 @@
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/95.png"
     },
     {
-      "id": 590,
-      "name": "Foongus",
+      "id": 420,
+      "name": "Cherubi",
       "rate": 0.02,
       "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/590.png"
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/420.png"
     },
     {
       "id": 622,
@@ -2094,6 +2080,20 @@
       "rate": 0.02,
       "shiny": true,
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/622.png"
+    },
+    {
+      "id": 366,
+      "name": "Clamperl",
+      "rate": 0.02,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/366.png"
+    },
+    {
+      "id": 351,
+      "name": "Castform Rainy",
+      "rate": 0.02,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/Skatecrete/pogo-raid-data/main/images/351_castform-rainy.webp"
     },
     {
       "id": 270,
@@ -2110,11 +2110,11 @@
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/712.png"
     },
     {
-      "id": 824,
-      "name": "Blipbug",
+      "id": 590,
+      "name": "Foongus",
       "rate": 0.02,
       "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/824.png"
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/590.png"
     },
     {
       "id": 747,
@@ -2138,39 +2138,11 @@
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/626.png"
     },
     {
-      "id": 207,
-      "name": "Gligar",
-      "rate": 0.02,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/207.png"
-    },
-    {
       "id": 204,
       "name": "Pineco",
       "rate": 0.02,
       "shiny": true,
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/204.png"
-    },
-    {
-      "id": 27,
-      "name": "Sandshrew Alola",
-      "rate": 0.02,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/27.png"
-    },
-    {
-      "id": 98,
-      "name": "Krabby",
-      "rate": 0.01,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/98.png"
-    },
-    {
-      "id": 703,
-      "name": "Carbink",
-      "rate": 0.01,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/703.png"
     },
     {
       "id": 779,
@@ -2180,67 +2152,18 @@
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/779.png"
     },
     {
-      "id": 541,
-      "name": "Swadloon",
+      "id": 27,
+      "name": "Sandshrew Alola",
       "rate": 0.01,
       "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/541.png"
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/27.png"
     },
     {
-      "id": 90,
-      "name": "Shellder",
+      "id": 207,
+      "name": "Gligar",
       "rate": 0.01,
       "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/90.png"
-    },
-    {
-      "id": 536,
-      "name": "Palpitoad",
-      "rate": 0.01,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/536.png"
-    },
-    {
-      "id": 226,
-      "name": "Mantine",
-      "rate": 0.01,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/226.png"
-    },
-    {
-      "id": 370,
-      "name": "Luvdisc",
-      "rate": 0.01,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/370.png"
-    },
-    {
-      "id": 852,
-      "name": "Clobbopus",
-      "rate": 0.01,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/852.png"
-    },
-    {
-      "id": 120,
-      "name": "Staryu",
-      "rate": 0.01,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/120.png"
-    },
-    {
-      "id": 544,
-      "name": "Whirlipede",
-      "rate": 0.01,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/544.png"
-    },
-    {
-      "id": 156,
-      "name": "Quilava",
-      "rate": 0.01,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/156.png"
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/207.png"
     },
     {
       "id": 814,
@@ -2250,11 +2173,67 @@
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/814.png"
     },
     {
-      "id": 766,
-      "name": "Passimian",
+      "id": 703,
+      "name": "Carbink",
       "rate": 0.01,
       "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/766.png"
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/703.png"
+    },
+    {
+      "id": 370,
+      "name": "Luvdisc",
+      "rate": 0.01,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/370.png"
+    },
+    {
+      "id": 541,
+      "name": "Swadloon",
+      "rate": 0.01,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/541.png"
+    },
+    {
+      "id": 536,
+      "name": "Palpitoad",
+      "rate": 0.01,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/536.png"
+    },
+    {
+      "id": 120,
+      "name": "Staryu",
+      "rate": 0.01,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/120.png"
+    },
+    {
+      "id": 852,
+      "name": "Clobbopus",
+      "rate": 0.01,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/852.png"
+    },
+    {
+      "id": 98,
+      "name": "Krabby",
+      "rate": 0.01,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/98.png"
+    },
+    {
+      "id": 544,
+      "name": "Whirlipede",
+      "rate": 0.01,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/544.png"
+    },
+    {
+      "id": 226,
+      "name": "Mantine",
+      "rate": 0.01,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/226.png"
     },
     {
       "id": 948,
@@ -2271,11 +2250,11 @@
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/710.png"
     },
     {
-      "id": 726,
-      "name": "Torracat",
+      "id": 24,
+      "name": "Arbok",
       "rate": 0.01,
       "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/726.png"
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/24.png"
     },
     {
       "id": 662,
@@ -2285,25 +2264,11 @@
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/662.png"
     },
     {
-      "id": 765,
-      "name": "Oranguru",
+      "id": 90,
+      "name": "Shellder",
       "rate": 0.01,
       "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/765.png"
-    },
-    {
-      "id": 17,
-      "name": "Pidgeotto",
-      "rate": 0.01,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/17.png"
-    },
-    {
-      "id": 507,
-      "name": "Herdier",
-      "rate": 0.01,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/507.png"
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/90.png"
     },
     {
       "id": 11,
@@ -2313,46 +2278,25 @@
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/11.png"
     },
     {
-      "id": 24,
-      "name": "Arbok",
+      "id": 766,
+      "name": "Passimian",
       "rate": 0.01,
       "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/24.png"
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/766.png"
     },
     {
-      "id": 910,
-      "name": "Crocalor",
+      "id": 17,
+      "name": "Pidgeotto",
       "rate": 0.01,
       "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/910.png"
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/17.png"
     },
     {
-      "id": 441,
-      "name": "Chatot",
+      "id": 156,
+      "name": "Quilava",
       "rate": 0.01,
       "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/441.png"
-    },
-    {
-      "id": 916,
-      "name": "Oinkologne",
-      "rate": 0.01,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/916.png"
-    },
-    {
-      "id": 556,
-      "name": "Maractus",
-      "rate": 0.01,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/556.png"
-    },
-    {
-      "id": 916,
-      "name": "Oinkologne Female",
-      "rate": 0.01,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/Skatecrete/pogo-raid-data/main/images/916_oinkologne-female.webp"
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/156.png"
     },
     {
       "id": 359,
@@ -2362,11 +2306,25 @@
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/359.png"
     },
     {
-      "id": 423,
-      "name": "Gastrodon East Sea",
+      "id": 910,
+      "name": "Crocalor",
       "rate": 0.01,
       "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/423.png"
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/910.png"
+    },
+    {
+      "id": 507,
+      "name": "Herdier",
+      "rate": 0.01,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/507.png"
+    },
+    {
+      "id": 916,
+      "name": "Oinkologne",
+      "rate": 0.01,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/916.png"
     },
     {
       "id": 400,
@@ -2376,67 +2334,18 @@
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/400.png"
     },
     {
-      "id": 22,
-      "name": "Fearow",
+      "id": 916,
+      "name": "Oinkologne Female",
       "rate": 0.01,
       "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/22.png"
+      "image_url": "https://raw.githubusercontent.com/Skatecrete/pogo-raid-data/main/images/916_oinkologne-female.webp"
     },
     {
-      "id": 502,
-      "name": "Dewott",
+      "id": 726,
+      "name": "Torracat",
       "rate": 0.01,
       "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/502.png"
-    },
-    {
-      "id": 214,
-      "name": "Heracross",
-      "rate": 0.01,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/214.png"
-    },
-    {
-      "id": 188,
-      "name": "Skiploom",
-      "rate": 0.01,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/188.png"
-    },
-    {
-      "id": 5,
-      "name": "Charmeleon",
-      "rate": 0.01,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/5.png"
-    },
-    {
-      "id": 520,
-      "name": "Tranquill",
-      "rate": 0.01,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/520.png"
-    },
-    {
-      "id": 907,
-      "name": "Floragato",
-      "rate": 0.01,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/907.png"
-    },
-    {
-      "id": 8,
-      "name": "Wartortle",
-      "rate": 0.01,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/8.png"
-    },
-    {
-      "id": 262,
-      "name": "Mightyena",
-      "rate": 0.01,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/262.png"
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/726.png"
     },
     {
       "id": 153,
@@ -2446,74 +2355,39 @@
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/153.png"
     },
     {
-      "id": 822,
-      "name": "Corvisquire",
+      "id": 765,
+      "name": "Oranguru",
       "rate": 0.01,
       "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/822.png"
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/765.png"
     },
     {
-      "id": 723,
-      "name": "Dartrix",
+      "id": 22,
+      "name": "Fearow",
       "rate": 0.01,
       "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/723.png"
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/22.png"
     },
     {
-      "id": 732,
-      "name": "Trumbeak",
+      "id": 423,
+      "name": "Gastrodon East Sea",
       "rate": 0.01,
       "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/732.png"
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/423.png"
     },
     {
-      "id": 169,
-      "name": "Crobat",
+      "id": 520,
+      "name": "Tranquill",
       "rate": 0.01,
       "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/169.png"
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/520.png"
     },
     {
-      "id": 496,
-      "name": "Servine",
+      "id": 502,
+      "name": "Dewott",
       "rate": 0.01,
       "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/496.png"
-    },
-    {
-      "id": 363,
-      "name": "Spheal",
-      "rate": 0.01,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/363.png"
-    },
-    {
-      "id": 499,
-      "name": "Pignite",
-      "rate": 0.01,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/499.png"
-    },
-    {
-      "id": 397,
-      "name": "Staravia",
-      "rate": 0.01,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/397.png"
-    },
-    {
-      "id": 167,
-      "name": "Spinarak",
-      "rate": 0.01,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/167.png"
-    },
-    {
-      "id": 14,
-      "name": "Kakuna",
-      "rate": 0.01,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/14.png"
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/502.png"
     },
     {
       "id": 728,
@@ -2523,11 +2397,88 @@
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/728.png"
     },
     {
+      "id": 20,
+      "name": "Raticate",
+      "rate": 0.01,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/20.png"
+    },
+    {
+      "id": 441,
+      "name": "Chatot",
+      "rate": 0.01,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/441.png"
+    },
+    {
+      "id": 5,
+      "name": "Charmeleon",
+      "rate": 0.01,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/5.png"
+    },
+    {
+      "id": 556,
+      "name": "Maractus",
+      "rate": 0.01,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/556.png"
+    },
+    {
+      "id": 14,
+      "name": "Kakuna",
+      "rate": 0.01,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/14.png"
+    },
+    {
+      "id": 214,
+      "name": "Heracross",
+      "rate": 0.01,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/214.png"
+    },
+    {
+      "id": 167,
+      "name": "Spinarak",
+      "rate": 0.01,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/167.png"
+    },
+    {
+      "id": 907,
+      "name": "Floragato",
+      "rate": 0.01,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/907.png"
+    },
+    {
       "id": 575,
       "name": "Gothorita",
       "rate": 0.01,
       "shiny": true,
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/575.png"
+    },
+    {
+      "id": 732,
+      "name": "Trumbeak",
+      "rate": 0.01,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/732.png"
+    },
+    {
+      "id": 188,
+      "name": "Skiploom",
+      "rate": 0.01,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/188.png"
+    },
+    {
+      "id": 822,
+      "name": "Corvisquire",
+      "rate": 0.01,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/822.png"
     },
     {
       "id": 2,
@@ -2537,25 +2488,11 @@
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/2.png"
     },
     {
-      "id": 448,
-      "name": "Lucario",
+      "id": 499,
+      "name": "Pignite",
       "rate": 0.01,
       "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/448.png"
-    },
-    {
-      "id": 922,
-      "name": "Pawmo",
-      "rate": 0.01,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/922.png"
-    },
-    {
-      "id": 178,
-      "name": "Xatu",
-      "rate": 0.01,
-      "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/178.png"
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/499.png"
     },
     {
       "id": 277,
@@ -2565,32 +2502,32 @@
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/277.png"
     },
     {
-      "id": 20,
-      "name": "Raticate",
+      "id": 324,
+      "name": "Torkoal",
       "rate": 0.01,
       "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/20.png"
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/324.png"
     },
     {
-      "id": 670,
-      "name": "Floette Blue Flower",
+      "id": 131,
+      "name": "Lapras",
       "rate": 0.01,
       "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/Skatecrete/pogo-raid-data/main/images/670_floette-blue-flower.webp"
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/131.png"
     },
     {
-      "id": 688,
-      "name": "Binacle",
+      "id": 8,
+      "name": "Wartortle",
       "rate": 0.01,
       "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/688.png"
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/8.png"
     },
     {
-      "id": 432,
-      "name": "Purugly",
+      "id": 169,
+      "name": "Crobat",
       "rate": 0.01,
       "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/432.png"
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/169.png"
     },
     {
       "id": 40,
@@ -2600,11 +2537,11 @@
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/40.png"
     },
     {
-      "id": 264,
-      "name": "Linoone Galarian",
+      "id": 448,
+      "name": "Lucario",
       "rate": 0.01,
       "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/Skatecrete/pogo-raid-data/main/images/264_linoone-galarian.webp"
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/448.png"
     },
     {
       "id": 20,
@@ -2614,18 +2551,74 @@
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/20.png"
     },
     {
-      "id": 417,
-      "name": "Pachirisu",
+      "id": 178,
+      "name": "Xatu",
       "rate": 0.01,
       "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/417.png"
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/178.png"
     },
     {
-      "id": 388,
-      "name": "Grotle",
+      "id": 670,
+      "name": "Floette Blue Flower",
       "rate": 0.01,
       "shiny": true,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/388.png"
+      "image_url": "https://raw.githubusercontent.com/Skatecrete/pogo-raid-data/main/images/670_floette-blue-flower.webp"
+    },
+    {
+      "id": 723,
+      "name": "Dartrix",
+      "rate": 0.01,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/723.png"
+    },
+    {
+      "id": 922,
+      "name": "Pawmo",
+      "rate": 0.01,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/922.png"
+    },
+    {
+      "id": 820,
+      "name": "Greedent",
+      "rate": 0.01,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/820.png"
+    },
+    {
+      "id": 496,
+      "name": "Servine",
+      "rate": 0.01,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/496.png"
+    },
+    {
+      "id": 262,
+      "name": "Mightyena",
+      "rate": 0.01,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/262.png"
+    },
+    {
+      "id": 817,
+      "name": "Drizzile",
+      "rate": 0.01,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/817.png"
+    },
+    {
+      "id": 363,
+      "name": "Spheal",
+      "rate": 0.01,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/363.png"
+    },
+    {
+      "id": 170,
+      "name": "Chinchou",
+      "rate": 0.01,
+      "shiny": true,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/170.png"
     }
   ]
 }
