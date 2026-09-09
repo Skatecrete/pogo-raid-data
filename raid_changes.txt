@@ -1,3 +1,9 @@
 
-**⭐⭐⭐ 3-Star Raids:**
-  ✅ Added: falinks
+**🌑 Shadow 1-Star:**
+  ✅ Added: Shadow Bagon, Shadow Bellsprout, Shadow Machop, Shadow Torchic
+
+**🌑 Shadow 3-Star:**
+  ✅ Added: Shadow Alolan Sandslash, Shadow Quagsire
+
+**🌑 Shadow Legendary:**
+  ✅ Added: Shadow Thundurus (Incarnate)

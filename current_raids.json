@@ -1,31 +1,30 @@
 {
-  "last_updated": "2026-09-08",
+  "last_updated": "2026-09-09",
   "tier1": [
-    "Amaura",
-    "Honedge",
-    "Dunsparce",
     "Alolan Rattata",
+    "Fidough",
+    "Honedge",
     "Dratini",
-    "Tyrunt",
     "Scraggy",
-    "Fidough"
+    "Tyrunt",
+    "Amaura",
+    "Dunsparce"
   ],
   "tier3": [
-    "Lapras",
-    "Hisuian Lilligant",
-    "Alolan Dugtrio",
-    "Hisuian Sneasel",
     "Falinks",
-    "Passimian"
+    "Hisuian Sneasel",
+    "Alolan Dugtrio",
+    "Passimian",
+    "Lapras",
+    "Hisuian Lilligant"
   ],
   "tier5": [
-    "Regirock",
-    "Registeel",
     "Regice",
-    "Zacian (Hero)"
+    "Zacian (Hero)",
+    "Registeel",
+    "Regirock"
   ],
   "mega": [
-    "Mega Gyarados",
     "Mega Beedrill"
   ],
   "primal": [],
@@ -92,5 +91,5 @@
   ],
   "dynamax_tier5": [],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-09-08 21:59:01"
+  "gigantamax_last_updated": "2026-09-09 09:34:17"
 }
