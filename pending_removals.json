@@ -1,58 +1,18 @@
 {
-  "name:honedge|1-star raids": {
-    "first_seen": "2026-09-09T09:34:17.693039",
+  "name:mega gyarados|mega raids": {
+    "first_seen": "2026-09-10T23:19:24.849045",
     "count": 1
   },
-  "name:amaura|1-star raids": {
-    "first_seen": "2026-09-09T09:34:17.693039",
+  "id:379|5-star raids": {
+    "first_seen": "2026-09-10T23:19:24.849045",
     "count": 1
   },
-  "name:passimian|3-star raids": {
-    "first_seen": "2026-09-09T09:34:17.693039",
+  "id:377|5-star raids": {
+    "first_seen": "2026-09-10T23:19:24.849045",
     "count": 1
   },
-  "name:dratini|1-star raids": {
-    "first_seen": "2026-09-09T09:34:17.693039",
-    "count": 1
-  },
-  "name:shadow aipom|1-star raids": {
-    "first_seen": "2026-09-09T09:34:17.693039",
-    "count": 1
-  },
-  "name:tyrunt|1-star raids": {
-    "first_seen": "2026-09-09T09:34:17.693039",
-    "count": 1
-  },
-  "name:hisuian sneasel|3-star raids": {
-    "first_seen": "2026-09-09T09:34:17.693039",
-    "count": 1
-  },
-  "name:hisuian lilligant|3-star raids": {
-    "first_seen": "2026-09-09T09:34:17.693039",
-    "count": 1
-  },
-  "name:shadow slowpoke|1-star raids": {
-    "first_seen": "2026-09-09T09:34:17.693039",
-    "count": 1
-  },
-  "name:shadow grubbin|1-star raids": {
-    "first_seen": "2026-09-09T09:34:17.693039",
-    "count": 1
-  },
-  "name:shadow giratina (altered)|5-star raids": {
-    "first_seen": "2026-09-09T09:34:17.693039",
-    "count": 1
-  },
-  "name:shadow snorlax|3-star raids": {
-    "first_seen": "2026-09-09T09:34:17.693039",
-    "count": 1
-  },
-  "name:shadow croagunk|1-star raids": {
-    "first_seen": "2026-09-09T09:34:17.693039",
-    "count": 1
-  },
-  "name:shadow hitmontop|3-star raids": {
-    "first_seen": "2026-09-09T09:34:17.693039",
+  "id:378|5-star raids": {
+    "first_seen": "2026-09-10T23:19:24.849045",
     "count": 1
   }
 }

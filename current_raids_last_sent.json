@@ -1,30 +1,21 @@
 {
-  "last_updated": "2026-09-09",
+  "last_updated": "2026-09-10",
   "tier1": [
-    "Alolan Rattata",
-    "Fidough",
-    "Honedge",
-    "Dratini",
     "Scraggy",
-    "Tyrunt",
-    "Amaura",
-    "Dunsparce"
+    "Alolan Rattata",
+    "Dunsparce",
+    "Fidough"
   ],
   "tier3": [
     "Falinks",
-    "Hisuian Sneasel",
-    "Alolan Dugtrio",
-    "Passimian",
     "Lapras",
-    "Hisuian Lilligant"
+    "Alolan Dugtrio"
   ],
   "tier5": [
-    "Regice",
-    "Zacian (Hero)",
-    "Registeel",
-    "Regirock"
+    "Zacian (Hero)"
   ],
   "mega": [
+    "Mega Houndoom",
     "Mega Beedrill"
   ],
   "primal": [],
@@ -91,13 +82,17 @@
   ],
   "dynamax_tier5": [],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-09-09 09:34:17",
+  "gigantamax_last_updated": "2026-09-10 23:19:24",
   "scrapedduck_raids": [
-    "regirock|5-star raids",
-    "regice|5-star raids",
-    "registeel|5-star raids",
+    "alolan rattata|1-star raids",
+    "dunsparce|1-star raids",
+    "scraggy|1-star raids",
+    "fidough|1-star raids",
+    "alolan dugtrio|3-star raids",
+    "lapras|3-star raids",
+    "falinks|3-star raids",
+    "zacian (hero)|5-star raids",
     "mega beedrill|mega raids",
-    "mega gyarados|mega raids",
     "shadow machop|1-star raids",
     "shadow bellsprout|1-star raids",
     "shadow torchic|1-star raids",
@@ -108,11 +103,15 @@
     "shadow thundurus (incarnate)|5-star raids"
   ],
   "scrapedduck_normalized": [
-    "id:377|5-star raids",
-    "id:378|5-star raids",
-    "id:379|5-star raids",
+    "name:alolan rattata|1-star raids",
+    "name:dunsparce|1-star raids",
+    "name:scraggy|1-star raids",
+    "name:fidough|1-star raids",
+    "name:alolan dugtrio|3-star raids",
+    "name:lapras|3-star raids",
+    "name:falinks|3-star raids",
+    "name:zacian (hero)|5-star raids",
     "name:mega beedrill|mega raids",
-    "name:mega gyarados|mega raids",
     "name:shadow machop|1-star raids",
     "name:shadow bellsprout|1-star raids",
     "name:shadow torchic|1-star raids",
@@ -124,23 +123,59 @@
   ],
   "scrapedduck_raids_objects": [
     {
-      "name": "Regirock",
-      "tier": "5-Star Raids",
+      "name": "Alolan Rattata",
+      "tier": "1-Star Raids",
       "canBeShiny": true,
       "types": [
         {
-          "name": "rock",
-          "image": "https://leekduck.com/assets/img/types/rock.png"
+          "name": "dark",
+          "image": "https://leekduck.com/assets/img/types/dark.png"
+        },
+        {
+          "name": "normal",
+          "image": "https://leekduck.com/assets/img/types/normal.png"
         }
       ],
       "combatPower": {
         "normal": {
-          "min": 1703,
-          "max": 1784
+          "min": 381,
+          "max": 419
         },
         "boosted": {
-          "min": 2129,
-          "max": 2230
+          "min": 477,
+          "max": 524
+        }
+      },
+      "boostedWeather": [
+        {
+          "name": "fog",
+          "image": "https://leekduck.com/assets/img/weather/foggy.png"
+        },
+        {
+          "name": "partly cloudy",
+          "image": "https://leekduck.com/assets/img/weather/partlycloudy.png"
+        }
+      ],
+      "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm19.fALOLA.icon.png"
+    },
+    {
+      "name": "Dunsparce",
+      "tier": "1-Star Raids",
+      "canBeShiny": true,
+      "types": [
+        {
+          "name": "normal",
+          "image": "https://leekduck.com/assets/img/types/normal.png"
+        }
+      ],
+      "combatPower": {
+        "normal": {
+          "min": 906,
+          "max": 965
+        },
+        "boosted": {
+          "min": 1132,
+          "max": 1206
         }
       },
       "boostedWeather": [
@@ -149,41 +184,81 @@
           "image": "https://leekduck.com/assets/img/weather/partlycloudy.png"
         }
       ],
-      "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm377.icon.png"
+      "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm206.icon.png"
     },
     {
-      "name": "Regice",
-      "tier": "5-Star Raids",
+      "name": "Scraggy",
+      "tier": "1-Star Raids",
       "canBeShiny": true,
       "types": [
         {
-          "name": "ice",
-          "image": "https://leekduck.com/assets/img/types/ice.png"
+          "name": "dark",
+          "image": "https://leekduck.com/assets/img/types/dark.png"
+        },
+        {
+          "name": "fighting",
+          "image": "https://leekduck.com/assets/img/types/fighting.png"
         }
       ],
       "combatPower": {
         "normal": {
-          "min": 1703,
-          "max": 1784
+          "min": 732,
+          "max": 784
         },
         "boosted": {
-          "min": 2129,
-          "max": 2230
+          "min": 915,
+          "max": 980
         }
       },
       "boostedWeather": [
         {
-          "name": "snow",
-          "image": "https://leekduck.com/assets/img/weather/snowy.png"
+          "name": "fog",
+          "image": "https://leekduck.com/assets/img/weather/foggy.png"
+        },
+        {
+          "name": "cloudy",
+          "image": "https://leekduck.com/assets/img/weather/cloudy.png"
         }
       ],
-      "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm378.icon.png"
+      "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm559.icon.png"
     },
     {
-      "name": "Registeel",
-      "tier": "5-Star Raids",
+      "name": "Fidough",
+      "tier": "1-Star Raids",
       "canBeShiny": true,
       "types": [
+        {
+          "name": "fairy",
+          "image": "https://leekduck.com/assets/img/types/fairy.png"
+        }
+      ],
+      "combatPower": {
+        "normal": {
+          "min": 519,
+          "max": 563
+        },
+        "boosted": {
+          "min": 648,
+          "max": 703
+        }
+      },
+      "boostedWeather": [
+        {
+          "name": "cloudy",
+          "image": "https://leekduck.com/assets/img/weather/cloudy.png"
+        }
+      ],
+      "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm926.icon.png"
+    },
+    {
+      "name": "Alolan Dugtrio",
+      "tier": "3-Star Raids",
+      "canBeShiny": true,
+      "types": [
+        {
+          "name": "ground",
+          "image": "https://leekduck.com/assets/img/types/ground.png"
+        },
         {
           "name": "steel",
           "image": "https://leekduck.com/assets/img/types/steel.png"
@@ -191,21 +266,117 @@
       ],
       "combatPower": {
         "normal": {
-          "min": 1326,
-          "max": 1398
+          "min": 1021,
+          "max": 1084
         },
         "boosted": {
-          "min": 1658,
-          "max": 1748
+          "min": 1276,
+          "max": 1355
         }
       },
       "boostedWeather": [
+        {
+          "name": "sunny",
+          "image": "https://leekduck.com/assets/img/weather/sunny.png"
+        },
         {
           "name": "snow",
           "image": "https://leekduck.com/assets/img/weather/snowy.png"
         }
       ],
-      "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm379.icon.png"
+      "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm51.fALOLA.icon.png"
+    },
+    {
+      "name": "Lapras",
+      "tier": "3-Star Raids",
+      "canBeShiny": true,
+      "types": [
+        {
+          "name": "water",
+          "image": "https://leekduck.com/assets/img/types/water.png"
+        },
+        {
+          "name": "ice",
+          "image": "https://leekduck.com/assets/img/types/ice.png"
+        }
+      ],
+      "combatPower": {
+        "normal": {
+          "min": 1435,
+          "max": 1509
+        },
+        "boosted": {
+          "min": 1794,
+          "max": 1886
+        }
+      },
+      "boostedWeather": [
+        {
+          "name": "rainy",
+          "image": "https://leekduck.com/assets/img/weather/rainy.png"
+        },
+        {
+          "name": "snow",
+          "image": "https://leekduck.com/assets/img/weather/snowy.png"
+        }
+      ],
+      "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm131.icon.png"
+    },
+    {
+      "name": "Falinks",
+      "tier": "3-Star Raids",
+      "canBeShiny": true,
+      "types": [
+        {
+          "name": "fighting",
+          "image": "https://leekduck.com/assets/img/types/fighting.png"
+        }
+      ],
+      "combatPower": {
+        "normal": {
+          "min": 1278,
+          "max": 1347
+        },
+        "boosted": {
+          "min": 1598,
+          "max": 1683
+        }
+      },
+      "boostedWeather": [
+        {
+          "name": "cloudy",
+          "image": "https://leekduck.com/assets/img/weather/cloudy.png"
+        }
+      ],
+      "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm870.icon.png"
+    },
+    {
+      "name": "Zacian (Hero)",
+      "tier": "5-Star Raids",
+      "canBeShiny": true,
+      "types": [
+        {
+          "name": "fairy",
+          "image": "https://leekduck.com/assets/img/types/fairy.png"
+        }
+      ],
+      "combatPower": {
+        "normal": {
+          "min": 2100,
+          "max": 2188
+        },
+        "boosted": {
+          "min": 2625,
+          "max": 2735
+        }
+      },
+      "boostedWeather": [
+        {
+          "name": "cloudy",
+          "image": "https://leekduck.com/assets/img/weather/cloudy.png"
+        }
+      ],
+      "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm888.fHERO.icon.png"
     },
     {
       "name": "Mega Beedrill",
@@ -242,42 +413,6 @@
         }
       ],
       "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm15.fMEGA.icon.png"
-    },
-    {
-      "name": "Mega Gyarados",
-      "tier": "Mega Raids",
-      "canBeShiny": true,
-      "types": [
-        {
-          "name": "water",
-          "image": "https://leekduck.com/assets/img/types/water.png"
-        },
-        {
-          "name": "dark",
-          "image": "https://leekduck.com/assets/img/types/dark.png"
-        }
-      ],
-      "combatPower": {
-        "normal": {
-          "min": 1855,
-          "max": 1937
-        },
-        "boosted": {
-          "min": 2319,
-          "max": 2422
-        }
-      },
-      "boostedWeather": [
-        {
-          "name": "rainy",
-          "image": "https://leekduck.com/assets/img/weather/rainy.png"
-        },
-        {
-          "name": "windy",
-          "image": "https://leekduck.com/assets/img/weather/windy.png"
-        }
-      ],
-      "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm130.fMEGA.icon.png"
     },
     {
       "name": "Shadow Machop",
@@ -540,5 +675,5 @@
       "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm642.fINCARNATE.icon.png"
     }
   ],
-  "last_sent_time": "2026-09-09T09:34:17.693275"
+  "last_sent_time": "2026-09-10T23:19:24.849287"
 }
