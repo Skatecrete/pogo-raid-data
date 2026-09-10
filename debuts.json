@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-10 10:30:51",
+  "last_updated": "2026-09-10 15:45:38",
   "debuts": [
     {
       "event_name": "Harvest Festival 2026",
@@ -66,6 +66,44 @@
         "Mega \t\tGreninja": "https://www.serebii.net/pokemongo/pokemon/658-m.png"
       },
       "event_type": "global"
+    },
+    {
+      "event_name": "GO Wild Area 2026 Mexico City",
+      "event_date": "November 6th - 8th 2026",
+      "new_pokemon": [
+        "Sliggoo (Hisuian Form)",
+        "Goodra (Hisuian Form)",
+        "Machamp (Modern Jacket)"
+      ],
+      "new_shiny": [
+        "Sliggoo (Hisuian Form)",
+        "Goodra (Hisuian Form)"
+      ],
+      "pokemon_images": {
+        "Sliggoo (Hisuian Form)": "https://www.serebii.net/pokemongo/pokemon/shiny/705-h.png",
+        "Goodra (Hisuian Form)": "https://www.serebii.net/pokemongo/pokemon/shiny/706-h.png",
+        "Machamp (Modern Jacket)": "https://www.serebii.net/pokemongo/pokemon/068.png"
+      },
+      "event_type": "reallife"
+    },
+    {
+      "event_name": "GO Wild Area 2026 Sendai Tohoku",
+      "event_date": "November 6th - 8th 2026",
+      "new_pokemon": [
+        "Sliggoo (Hisuian Form)",
+        "Goodra (Hisuian Form)",
+        "Machamp (Modern Jacket)"
+      ],
+      "new_shiny": [
+        "Sliggoo (Hisuian Form)",
+        "Goodra (Hisuian Form)"
+      ],
+      "pokemon_images": {
+        "Sliggoo (Hisuian Form)": "https://www.serebii.net/pokemongo/pokemon/shiny/705-h.png",
+        "Goodra (Hisuian Form)": "https://www.serebii.net/pokemongo/pokemon/shiny/706-h.png",
+        "Machamp (Modern Jacket)": "https://www.serebii.net/pokemongo/pokemon/068.png"
+      },
+      "event_type": "reallife"
     }
   ]
 }
