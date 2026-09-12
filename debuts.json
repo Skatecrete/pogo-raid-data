@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-12 02:56:01",
+  "last_updated": "2026-09-12 10:00:01",
   "debuts": [
     {
       "event_name": "Harvest Festival 2026",
@@ -86,6 +86,18 @@
         "Sliggoo (Hisuian Form)": "https://www.serebii.net/pokemongo/pokemon/shiny/705-h.png",
         "Goodra (Hisuian Form)": "https://www.serebii.net/pokemongo/pokemon/shiny/706-h.png",
         "Machamp (Modern Jacket)": "https://www.serebii.net/pokemongo/pokemon/068.png"
+      },
+      "event_type": "reallife"
+    },
+    {
+      "event_name": "PokeXciting Malaysia",
+      "event_date": "September 12th - 13th 2026",
+      "new_pokemon": [
+        "Pikachu (Pok\u00e9Xciting Malaysia)"
+      ],
+      "new_shiny": [],
+      "pokemon_images": {
+        "Pikachu (Pok\u00e9Xciting Malaysia)": "https://www.serebii.net/pokemongo/pokemon/025-pokexcitingmalaysia.png"
       },
       "event_type": "reallife"
     }
