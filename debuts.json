@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-11 20:23:13",
+  "last_updated": "2026-09-12 02:56:01",
   "debuts": [
     {
       "event_name": "Harvest Festival 2026",
@@ -48,22 +48,6 @@
       "pokemon_images": {
         "Maschiff": "https://www.serebii.net/pokemongo/pokemon/942.png",
         "Mabosstiff": "https://www.serebii.net/pokemongo/pokemon/943.png"
-      },
-      "event_type": "global"
-    },
-    {
-      "event_name": "GO Fest 2026 Mega Finale",
-      "event_date": "September 5th - 6th 2026",
-      "new_pokemon": [
-        "Mega \t\tChesnaught",
-        "Mega \t\tDelphox",
-        "Mega \t\tGreninja"
-      ],
-      "new_shiny": [],
-      "pokemon_images": {
-        "Mega \t\tChesnaught": "https://www.serebii.net/pokemongo/pokemon/652-m.png",
-        "Mega \t\tDelphox": "https://www.serebii.net/pokemongo/pokemon/655-m.png",
-        "Mega \t\tGreninja": "https://www.serebii.net/pokemongo/pokemon/658-m.png"
       },
       "event_type": "global"
     },
