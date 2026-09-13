@@ -1,22 +1,22 @@
 {
-  "last_updated": "2026-09-10",
+  "last_updated": "2026-09-13",
   "tier1": [
-    "Scraggy",
+    "Fidough",
     "Alolan Rattata",
-    "Dunsparce",
-    "Fidough"
+    "Scraggy",
+    "Dunsparce"
   ],
   "tier3": [
-    "Falinks",
+    "Alolan Dugtrio",
     "Lapras",
-    "Alolan Dugtrio"
+    "Falinks"
   ],
   "tier5": [
     "Zacian (Hero)"
   ],
   "mega": [
-    "Mega Houndoom",
-    "Mega Beedrill"
+    "Mega Beedrill",
+    "Mega Houndoom"
   ],
   "primal": [],
   "ultra_beasts": [],
@@ -43,6 +43,7 @@
     "Pidove",
     "Pikachu",
     "Ralts",
+    "Rhyhorn",
     "Roggenrola",
     "Rookidee",
     "Scorbunny",
@@ -82,5 +83,5 @@
   ],
   "dynamax_tier5": [],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-09-10 23:19:24"
+  "gigantamax_last_updated": "2026-09-13 14:58:09"
 }

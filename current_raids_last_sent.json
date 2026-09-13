@@ -1,22 +1,22 @@
 {
-  "last_updated": "2026-09-10",
+  "last_updated": "2026-09-13",
   "tier1": [
-    "Scraggy",
+    "Fidough",
     "Alolan Rattata",
-    "Dunsparce",
-    "Fidough"
+    "Scraggy",
+    "Dunsparce"
   ],
   "tier3": [
-    "Falinks",
+    "Alolan Dugtrio",
     "Lapras",
-    "Alolan Dugtrio"
+    "Falinks"
   ],
   "tier5": [
     "Zacian (Hero)"
   ],
   "mega": [
-    "Mega Houndoom",
-    "Mega Beedrill"
+    "Mega Beedrill",
+    "Mega Houndoom"
   ],
   "primal": [],
   "ultra_beasts": [],
@@ -43,6 +43,7 @@
     "Pidove",
     "Pikachu",
     "Ralts",
+    "Rhyhorn",
     "Roggenrola",
     "Rookidee",
     "Scorbunny",
@@ -82,7 +83,7 @@
   ],
   "dynamax_tier5": [],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-09-10 23:19:24",
+  "gigantamax_last_updated": "2026-09-13 14:58:09",
   "scrapedduck_raids": [
     "alolan rattata|1-star raids",
     "dunsparce|1-star raids",
@@ -93,6 +94,7 @@
     "falinks|3-star raids",
     "zacian (hero)|5-star raids",
     "mega beedrill|mega raids",
+    "mega houndoom|mega raids",
     "shadow machop|1-star raids",
     "shadow bellsprout|1-star raids",
     "shadow torchic|1-star raids",
@@ -112,6 +114,7 @@
     "name:falinks|3-star raids",
     "name:zacian (hero)|5-star raids",
     "name:mega beedrill|mega raids",
+    "name:mega houndoom|mega raids",
     "name:shadow machop|1-star raids",
     "name:shadow bellsprout|1-star raids",
     "name:shadow torchic|1-star raids",
@@ -415,6 +418,42 @@
       "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm15.fMEGA.icon.png"
     },
     {
+      "name": "Mega Houndoom",
+      "tier": "Mega Raids",
+      "canBeShiny": true,
+      "types": [
+        {
+          "name": "dark",
+          "image": "https://leekduck.com/assets/img/types/dark.png"
+        },
+        {
+          "name": "fire",
+          "image": "https://leekduck.com/assets/img/types/fire.png"
+        }
+      ],
+      "combatPower": {
+        "normal": {
+          "min": 1432,
+          "max": 1505
+        },
+        "boosted": {
+          "min": 1790,
+          "max": 1882
+        }
+      },
+      "boostedWeather": [
+        {
+          "name": "fog",
+          "image": "https://leekduck.com/assets/img/weather/foggy.png"
+        },
+        {
+          "name": "sunny",
+          "image": "https://leekduck.com/assets/img/weather/sunny.png"
+        }
+      ],
+      "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm229.fMEGA.icon.png"
+    },
+    {
       "name": "Shadow Machop",
       "tier": "1-Star Raids",
       "canBeShiny": true,
@@ -675,5 +714,5 @@
       "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm642.fINCARNATE.icon.png"
     }
   ],
-  "last_sent_time": "2026-09-10T23:19:24.849287"
+  "last_sent_time": "2026-09-13T14:58:09.243365"
 }
