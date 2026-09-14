@@ -1,6 +1,18 @@
 {
-  "last_updated": "2026-09-13 20:14:25",
+  "last_updated": "2026-09-14 03:09:37",
   "debuts": [
+    {
+      "event_name": "GO Wild Area 2026 Global",
+      "event_date": "November 14th - 15th 2026",
+      "new_pokemon": [
+        "Machamp (Modern Jacket)"
+      ],
+      "new_shiny": [],
+      "pokemon_images": {
+        "Machamp (Modern Jacket)": "https://www.serebii.net/pokemongo/pokemon/068.png"
+      },
+      "event_type": "global"
+    },
     {
       "event_name": "Harvest Festival 2026",
       "event_date": "September 29th - October 5th 2026",
