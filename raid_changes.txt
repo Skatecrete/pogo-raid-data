@@ -1,9 +1,3 @@
 
-**⭐ 1-Star Raids:**
-  ✅ Added: alolan grimer, hatenna, rockruff, tinkatink
-
-**⭐⭐⭐ 3-Star Raids:**
-  ✅ Added: meowscarada, quaquaval, skeledirge
-
-**⭐⭐⭐⭐⭐ 5-Star Raids:**
-  ✅ Added: zamazenta (hero)
+**🔴 Mega Raids:**
+  ✅ Added: venusaur
