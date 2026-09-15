@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-14 21:23:43",
+  "last_updated": "2026-09-15 03:11:53",
   "debuts": [
     {
       "event_name": "GO Wild Area 2026 Global",
@@ -46,20 +46,6 @@
         "Charmander (Friede's Goggles)": "https://www.serebii.net/pokemongo/pokemon/004-friede.png",
         "Charmeleon (Friede's Goggles)": "https://www.serebii.net/pokemongo/pokemon/005-friede.png",
         "Charizard (Friede's Goggles)": "https://www.serebii.net/pokemongo/pokemon/006-friede.png"
-      },
-      "event_type": "global"
-    },
-    {
-      "event_name": "Mega Squads",
-      "event_date": "September 8th - 14th 2026",
-      "new_pokemon": [
-        "Maschiff",
-        "Mabosstiff"
-      ],
-      "new_shiny": [],
-      "pokemon_images": {
-        "Maschiff": "https://www.serebii.net/pokemongo/pokemon/942.png",
-        "Mabosstiff": "https://www.serebii.net/pokemongo/pokemon/943.png"
       },
       "event_type": "global"
     },
