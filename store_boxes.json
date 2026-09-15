@@ -1,6 +1,30 @@
 {
-  "last_updated": "2026-09-15 16:48:15",
-  "error": true,
-  "message": "Failed to scrape store boxes. Please contact admin.",
-  "boxes": []
+  "last_updated": "2026-09-15 21:10:49",
+  "error": false,
+  "total": 1,
+  "boxes": [
+    {
+      "box_name": "Ultra Raid Box",
+      "in_store_price": 550.0,
+      "box_image": "https://storage.googleapis.com/platform-webstore-rel-assets/pgo/sku_assets/web-raid-box-071323.png",
+      "items": [
+        {
+          "name": "Remote Raid Pass",
+          "count": 3,
+          "image": "https://storage.googleapis.com/platform-webstore-rel-assets/pgo/sku_assets/item_remote_raid_ticket.png"
+        },
+        {
+          "name": "Super Incubator",
+          "count": 2,
+          "image": "https://storage.googleapis.com/platform-webstore-rel-assets/pgo/sku_assets/item_incubator_super.png"
+        },
+        {
+          "name": "Premium Battle Pass",
+          "count": 2,
+          "image": "https://storage.googleapis.com/platform-webstore-rel-assets/pgo/sku_assets/item_paid_raid_ticket.png"
+        }
+      ],
+      "silphco_price": 275.0
+    }
+  ]
 }
