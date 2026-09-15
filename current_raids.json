@@ -1,22 +1,30 @@
 {
-  "last_updated": "2026-09-13",
+  "last_updated": "2026-09-15",
   "tier1": [
-    "Fidough",
     "Alolan Rattata",
+    "Dunsparce",
+    "Tinkatink",
     "Scraggy",
-    "Dunsparce"
+    "Hatenna",
+    "Alolan Grimer",
+    "Rockruff",
+    "Fidough"
   ],
   "tier3": [
-    "Alolan Dugtrio",
     "Lapras",
-    "Falinks"
+    "Falinks",
+    "Skeledirge",
+    "Meowscarada",
+    "Alolan Dugtrio",
+    "Quaquaval"
   ],
   "tier5": [
+    "Zamazenta (Hero)",
     "Zacian (Hero)"
   ],
   "mega": [
-    "Mega Beedrill",
-    "Mega Houndoom"
+    "Mega Houndoom",
+    "Mega Beedrill"
   ],
   "primal": [],
   "ultra_beasts": [],
@@ -83,5 +91,5 @@
   ],
   "dynamax_tier5": [],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-09-13 14:58:09"
+  "gigantamax_last_updated": "2026-09-15 20:00:02"
 }

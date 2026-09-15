@@ -1,22 +1,30 @@
 {
-  "last_updated": "2026-09-13",
+  "last_updated": "2026-09-15",
   "tier1": [
-    "Fidough",
     "Alolan Rattata",
+    "Dunsparce",
+    "Tinkatink",
     "Scraggy",
-    "Dunsparce"
+    "Hatenna",
+    "Alolan Grimer",
+    "Rockruff",
+    "Fidough"
   ],
   "tier3": [
-    "Alolan Dugtrio",
     "Lapras",
-    "Falinks"
+    "Falinks",
+    "Skeledirge",
+    "Meowscarada",
+    "Alolan Dugtrio",
+    "Quaquaval"
   ],
   "tier5": [
+    "Zamazenta (Hero)",
     "Zacian (Hero)"
   ],
   "mega": [
-    "Mega Beedrill",
-    "Mega Houndoom"
+    "Mega Houndoom",
+    "Mega Beedrill"
   ],
   "primal": [],
   "ultra_beasts": [],
@@ -83,7 +91,7 @@
   ],
   "dynamax_tier5": [],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-09-13 14:58:09",
+  "gigantamax_last_updated": "2026-09-15 20:00:02",
   "scrapedduck_raids": [
     "alolan rattata|1-star raids",
     "dunsparce|1-star raids",
@@ -714,5 +722,5 @@
       "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm642.fINCARNATE.icon.png"
     }
   ],
-  "last_sent_time": "2026-09-13T14:58:09.243365"
+  "last_sent_time": "2026-09-15T20:00:02.812576"
 }
