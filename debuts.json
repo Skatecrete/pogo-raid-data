@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-19 15:16:31",
+  "last_updated": "2026-09-19 19:58:45",
   "debuts": [
     {
       "event_name": "GO Wild Area 2026 Global",
@@ -84,6 +84,18 @@
         "Sliggoo (Hisuian Form)": "https://www.serebii.net/pokemongo/pokemon/shiny/705-h.png",
         "Goodra (Hisuian Form)": "https://www.serebii.net/pokemongo/pokemon/shiny/706-h.png",
         "Machamp (Modern Jacket)": "https://www.serebii.net/pokemongo/pokemon/068-jacket.png"
+      },
+      "event_type": "reallife"
+    },
+    {
+      "event_name": "Pokemon GO x ESA",
+      "event_date": "October 4th 2026 - April 30th 2076",
+      "new_pokemon": [
+        "Pikachu (Astronaut)"
+      ],
+      "new_shiny": [],
+      "pokemon_images": {
+        "Pikachu (Astronaut)": "https://www.serebii.net/pokemongo/pokemon/025.png"
       },
       "event_type": "reallife"
     },
