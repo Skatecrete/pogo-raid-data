@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-19 10:14:41",
+  "last_updated": "2026-09-19 15:16:31",
   "debuts": [
     {
       "event_name": "GO Wild Area 2026 Global",
@@ -84,6 +84,18 @@
         "Sliggoo (Hisuian Form)": "https://www.serebii.net/pokemongo/pokemon/shiny/705-h.png",
         "Goodra (Hisuian Form)": "https://www.serebii.net/pokemongo/pokemon/shiny/706-h.png",
         "Machamp (Modern Jacket)": "https://www.serebii.net/pokemongo/pokemon/068-jacket.png"
+      },
+      "event_type": "reallife"
+    },
+    {
+      "event_name": "Pikachu's Autumn Adventure",
+      "event_date": "September 18th - October 11th 2026",
+      "new_pokemon": [
+        "Pikachu (Orange Hanbok)"
+      ],
+      "new_shiny": [],
+      "pokemon_images": {
+        "Pikachu (Orange Hanbok)": "https://www.serebii.net/pokemongo/pokemon/025-hanbok.png"
       },
       "event_type": "reallife"
     }
