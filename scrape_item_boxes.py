@@ -31,76 +31,73 @@ def decode_image_url(srcset_or_src):
     return None
 
 def scrape_item_boxes():
-    """Scrape item boxes from the Pokémon GO store."""
+    """Scrape item boxes from the Pokémon GO store by finding any button with 'Box' and a USD price."""
     print("🚀 Starting Item Box scraper...")
     print(f"Time: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
-    
+
     url = "https://store.pokemongo.com/"
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
     }
-    
+
     try:
         response = requests.get(url, headers=headers, timeout=15)
         response.raise_for_status()
         soup = BeautifulSoup(response.text, 'html.parser')
-        
-        bundle_section = soup.find('div', id='BUNDLE')
-        if not bundle_section:
-            print("❌ Could not find #BUNDLE section")
-            return []
-        
-        box_buttons = bundle_section.find_all('button')
-        print(f"📦 Found {len(box_buttons)} boxes")
-        
+
+        # Find EVERY button on the page
+        all_buttons = soup.find_all('button')
+        print(f"🔍 Scanning {len(all_buttons)} buttons for 'Box' or 'GO Pass' with USD price...")
+
         boxes = []
-        
-        for i, button in enumerate(box_buttons):
+
+        for i, button in enumerate(all_buttons):
             try:
+                button_text = button.get_text(separator=' ', strip=True)
+
+                # Must contain "Box" or "GO Pass" (case-insensitive)
+                text_lower = button_text.lower()
+                if 'box' not in text_lower and 'go pass' not in text_lower:
+                    continue
+
+                # Must contain a USD price ($X.XX or $X)
+                price_match = re.search(r'\$([\d.]+)', button_text)
+                if not price_match:
+                    continue
+
+                in_store_price = float(price_match.group(1))
+
                 # Extract box name
                 title_elem = button.find('h6', class_='contentContainerTitle')
-                if not title_elem:
-                    continue
-                box_name = title_elem.get_text().strip()
-                
-                # Extract price
-                price_elem = button.find('div', class_='flex', recursive=True)
-                if price_elem:
-                    price_text = price_elem.get_text().strip()
-                    price_match = re.search(r'[\d.]+', price_text)
-                    if price_match:
-                        in_store_price = float(price_match.group())
-                    else:
-                        continue
+                if title_elem:
+                    box_name = title_elem.get_text().strip()
                 else:
+                    # Fallback: take the button text, strip the price
+                    box_name = re.sub(r'\$[\d.]+', '', button_text).strip()
+                    box_name = re.sub(r'\s+', ' ', box_name)[:120]
+
+                # Skip if it looks like a duplicate or a coin bundle
+                if 'coin' in box_name.lower() or 'pokécoin' in box_name.lower() or 'pokecoin' in box_name.lower():
+                    print(f"  ⏭️ Skipping coin bundle: {box_name}")
                     continue
-                
-                # ========== FIX: Extract box image (skip badge) ==========
+
+                # Extract box image
                 box_image = None
-                
-                # Method 1: Look for media-main-container
                 media_container = button.find('div', {'data-testid': 'sku-card.media-main-container'})
                 if media_container:
                     img = media_container.find('img')
                     if img:
-                        srcset = img.get('srcset', '')
-                        src = img.get('src', '')
-                        box_image = decode_image_url(srcset) or decode_image_url(src)
-                
-                # Method 2: Fallback - get any img that's NOT a badge
+                        box_image = decode_image_url(img.get('srcset', '')) or decode_image_url(img.get('src', ''))
+
                 if not box_image:
                     for img in button.find_all('img'):
                         alt = img.get('alt', '').lower()
-                        # Skip badge images
                         if 'badge' in alt or 'web only' in alt:
                             continue
-                        srcset = img.get('srcset', '')
-                        src = img.get('src', '')
-                        box_image = decode_image_url(srcset) or decode_image_url(src)
+                        box_image = decode_image_url(img.get('srcset', '')) or decode_image_url(img.get('src', ''))
                         if box_image:
                             break
-                # =========================================================
-                
+
                 # Extract items and counts
                 items = []
                 item_list = button.find('ul')
@@ -109,39 +106,39 @@ def scrape_item_boxes():
                         img = li.find('img')
                         if not img:
                             continue
-                        
+
                         item_name = img.get('alt', '').strip()
                         item_image = decode_image_url(img.get('srcset', '')) or decode_image_url(img.get('src', ''))
-                        
+
                         count_elem = li.find('p')
                         item_count = 1
                         if count_elem:
                             count_text = count_elem.get_text().strip()
                             if count_text.isdigit():
                                 item_count = int(count_text)
-                        
+
                         if item_name or item_image:
                             items.append({
                                 'name': item_name if item_name else f"Item {len(items) + 1}",
                                 'count': item_count,
                                 'image': item_image
                             })
-                
+
                 boxes.append({
                     'box_name': box_name,
                     'in_store_price': in_store_price,
                     'box_image': box_image,
                     'items': items
                 })
-                
+
                 print(f"  ✅ {box_name} - ${in_store_price:.2f} ({len(items)} items)")
-                
+
             except Exception as e:
-                print(f"  ⚠️ Error parsing box {i+1}: {e}")
+                print(f"  ⚠️ Error parsing button {i+1}: {e}")
                 continue
-        
+
         return boxes
-        
+
     except Exception as e:
         print(f"❌ Error scraping store: {e}")
         return []
