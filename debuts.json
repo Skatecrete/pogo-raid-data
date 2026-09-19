@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-18 20:20:03",
+  "last_updated": "2026-09-19 02:56:47",
   "debuts": [
     {
       "event_name": "GO Wild Area 2026 Global",
@@ -84,18 +84,6 @@
         "Sliggoo (Hisuian Form)": "https://www.serebii.net/pokemongo/pokemon/shiny/705-h.png",
         "Goodra (Hisuian Form)": "https://www.serebii.net/pokemongo/pokemon/shiny/706-h.png",
         "Machamp (Modern Jacket)": "https://www.serebii.net/pokemongo/pokemon/068-jacket.png"
-      },
-      "event_type": "reallife"
-    },
-    {
-      "event_name": "PokeXciting Malaysia",
-      "event_date": "September 12th - 13th 2026",
-      "new_pokemon": [
-        "Pikachu (Pok\u00e9Xciting Malaysia)"
-      ],
-      "new_shiny": [],
-      "pokemon_images": {
-        "Pikachu (Pok\u00e9Xciting Malaysia)": "https://www.serebii.net/pokemongo/pokemon/025-pokexcitingmalaysia.png"
       },
       "event_type": "reallife"
     }
