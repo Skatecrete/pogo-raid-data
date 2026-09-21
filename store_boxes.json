@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-09-21 12:37:30",
+  "last_updated": "2026-09-21 21:55:05",
   "error": false,
-  "total": 7,
+  "total": 8,
   "boxes": [
     {
       "box_name": "GO Pass Deluxe: September Ultra Box",
@@ -111,6 +111,24 @@
         }
       ],
       "silphco_price": 4.5
+    },
+    {
+      "box_name": "Phantump Catch Mastery Ultra Ticket Box",
+      "in_store_price": 1.99,
+      "box_image": "https://storage.googleapis.com/platform-webstore-rel-assets/pgo/sku_assets/bundle.general1.medium.1.png",
+      "items": [
+        {
+          "name": "Phantump Catch Mastery Ticket",
+          "count": 1,
+          "image": "https://storage.googleapis.com/platform-webstore-rel-assets/pgo/sku_assets/item_event_ticket_s24_sep_26_catch.png"
+        },
+        {
+          "name": "Rare Candy",
+          "count": 2,
+          "image": "https://storage.googleapis.com/platform-webstore-rel-assets/pgo/sku_assets/item_rare_candy.png"
+        }
+      ],
+      "silphco_price": 1.5
     },
     {
       "box_name": "GO Pass Deluxe: September",
