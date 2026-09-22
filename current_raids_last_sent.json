@@ -1,22 +1,32 @@
 {
-  "last_updated": "2026-09-20",
+  "last_updated": "2026-09-22",
   "tier1": [
-    "Pikachu (Cap\u2019s hat)"
+    "Larvitar",
+    "Bagon",
+    "Pikachu (Cap\u2019s hat)",
+    "Dratini",
+    "Deino"
   ],
   "tier3": [
     "Skeledirge",
-    "Quaquaval",
+    "Hisuian Decidueye",
+    "Hisuian Typhlosion",
     "Meowscarada",
-    "Charizard (Friede's Goggles)"
+    "Quaquaval",
+    "Charizard (Friede's Goggles)",
+    "Hisuian Samurott"
   ],
   "tier5": [
     "Zamazenta (Hero)"
   ],
   "mega": [
+    "Mega Malamar",
     "Mega Venusaur"
   ],
   "primal": [],
-  "ultra_beasts": [],
+  "ultra_beasts": [
+    "Xurkitree"
+  ],
   "super_mega": [],
   "dynamax_tier1": [
     "Abra",
@@ -40,7 +50,6 @@
     "Pidove",
     "Pikachu",
     "Ralts",
-    "Rhyhorn",
     "Roggenrola",
     "Rookidee",
     "Scorbunny",
@@ -84,7 +93,7 @@
     "Zapdos"
   ],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-09-20 17:33:50",
+  "gigantamax_last_updated": "2026-09-22 20:21:13",
   "scrapedduck_raids": [
     "captain's cap pikachu|1-star raids",
     "charizard wearing friede's goggles|3-star raids",
@@ -617,5 +626,5 @@
       "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm642.fINCARNATE.icon.png"
     }
   ],
-  "last_sent_time": "2026-09-20T17:33:50.381475"
+  "last_sent_time": "2026-09-22T20:21:14.172518"
 }
