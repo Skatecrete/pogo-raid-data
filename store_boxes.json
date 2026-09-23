@@ -1,42 +1,42 @@
 {
-  "last_updated": "2026-09-23 16:43:02",
+  "last_updated": "2026-09-23 21:24:44",
   "error": false,
   "total": 5,
   "boxes": [
     {
       "box_name": "GO Pass Deluxe: September Ultra Box",
       "in_store_price": 14.99,
-      "box_image": "https://storage.googleapis.com/platform-webstore-rel-assets/pgo/sku_assets/genericbox_c3.png",
+      "box_image": null,
       "items": [
         {
           "name": "GO Pass Deluxe: September",
           "count": 1,
-          "image": "https://storage.googleapis.com/platform-webstore-rel-assets/pgo/sku_assets/badge_event_0236.png"
+          "image": null
         },
         {
           "name": "+ 10 Ranks",
           "count": 1,
-          "image": "https://storage.googleapis.com/platform-webstore-rel-assets/pgo/sku_assets/item_event_pass_point_monthly_01.png"
+          "image": null
         },
         {
           "name": "Ultra Ball",
           "count": 20,
-          "image": "https://storage.googleapis.com/platform-webstore-rel-assets/pgo/sku_assets/item_ultra_ball.png"
+          "image": null
         },
         {
           "name": "Max Revive",
           "count": 10,
-          "image": "https://storage.googleapis.com/platform-webstore-rel-assets/pgo/sku_assets/item_max_revive.png"
+          "image": null
         },
         {
           "name": "Premium Battle Pass",
           "count": 5,
-          "image": "https://storage.googleapis.com/platform-webstore-rel-assets/pgo/sku_assets/item_paid_raid_ticket.png"
+          "image": null
         },
         {
           "name": "Max Potion",
           "count": 10,
-          "image": "https://storage.googleapis.com/platform-webstore-rel-assets/pgo/sku_assets/item_max_potion.png"
+          "image": null
         }
       ],
       "silphco_price": 9.0
@@ -44,17 +44,17 @@
     {
       "box_name": "Phantump Catch Mastery Ultra Ticket Box",
       "in_store_price": 1.99,
-      "box_image": "https://storage.googleapis.com/platform-webstore-rel-assets/pgo/sku_assets/bundle.general1.medium.1.png",
+      "box_image": null,
       "items": [
         {
           "name": "Phantump Catch Mastery Ticket",
           "count": 1,
-          "image": "https://storage.googleapis.com/platform-webstore-rel-assets/pgo/sku_assets/item_event_ticket_s24_sep_26_catch.png"
+          "image": null
         },
         {
           "name": "Rare Candy",
           "count": 2,
-          "image": "https://storage.googleapis.com/platform-webstore-rel-assets/pgo/sku_assets/item_rare_candy.png"
+          "image": null
         }
       ],
       "silphco_price": 1.5
@@ -62,32 +62,32 @@
     {
       "box_name": "GO Pass Deluxe: September",
       "in_store_price": 7.99,
-      "box_image": "https://storage.googleapis.com/platform-webstore-rel-assets/pgo/sku_assets/genericbox_c1.png",
+      "box_image": null,
       "items": [
         {
           "name": "GO Pass Deluxe: September",
           "count": 1,
-          "image": "https://storage.googleapis.com/platform-webstore-rel-assets/pgo/sku_assets/badge_event_0236.png"
+          "image": null
         },
         {
           "name": "Ultra Ball",
           "count": 10,
-          "image": "https://storage.googleapis.com/platform-webstore-rel-assets/pgo/sku_assets/item_ultra_ball.png"
+          "image": null
         },
         {
           "name": "Max Revive",
           "count": 5,
-          "image": "https://storage.googleapis.com/platform-webstore-rel-assets/pgo/sku_assets/item_max_revive.png"
+          "image": null
         },
         {
           "name": "Premium Battle Pass",
           "count": 1,
-          "image": "https://storage.googleapis.com/platform-webstore-rel-assets/pgo/sku_assets/item_paid_raid_ticket.png"
+          "image": null
         },
         {
           "name": "Max Potion",
           "count": 5,
-          "image": "https://storage.googleapis.com/platform-webstore-rel-assets/pgo/sku_assets/item_max_potion.png"
+          "image": null
         }
       ],
       "silphco_price": 5.0
@@ -95,37 +95,37 @@
     {
       "box_name": "GO Pass Deluxe: September + 10 Ranks",
       "in_store_price": 9.99,
-      "box_image": "https://storage.googleapis.com/platform-webstore-rel-assets/pgo/sku_assets/genericbox_c2.png",
+      "box_image": null,
       "items": [
         {
           "name": "GO Pass Deluxe: September",
           "count": 1,
-          "image": "https://storage.googleapis.com/platform-webstore-rel-assets/pgo/sku_assets/badge_event_0236.png"
+          "image": null
         },
         {
           "name": "+ 10 Ranks",
           "count": 1,
-          "image": "https://storage.googleapis.com/platform-webstore-rel-assets/pgo/sku_assets/item_event_pass_point_monthly_01.png"
+          "image": null
         },
         {
           "name": "Ultra Ball",
           "count": 10,
-          "image": "https://storage.googleapis.com/platform-webstore-rel-assets/pgo/sku_assets/item_ultra_ball.png"
+          "image": null
         },
         {
           "name": "Max Revive",
           "count": 5,
-          "image": "https://storage.googleapis.com/platform-webstore-rel-assets/pgo/sku_assets/item_max_revive.png"
+          "image": null
         },
         {
           "name": "Premium Battle Pass",
           "count": 2,
-          "image": "https://storage.googleapis.com/platform-webstore-rel-assets/pgo/sku_assets/item_paid_raid_ticket.png"
+          "image": null
         },
         {
           "name": "Max Potion",
           "count": 5,
-          "image": "https://storage.googleapis.com/platform-webstore-rel-assets/pgo/sku_assets/item_max_potion.png"
+          "image": null
         }
       ],
       "silphco_price": 6.0
@@ -133,22 +133,22 @@
     {
       "box_name": "Pok\u00e9mon GO Wild Area 2026: Global Ultra Ticket Box",
       "in_store_price": 11.99,
-      "box_image": "https://storage.googleapis.com/platform-webstore-rel-assets/pgo/sku_assets/genericbox_b1.png",
+      "box_image": null,
       "items": [
         {
           "name": "Pok\u00e9mon GO Wild Area 2026: Global Ticket",
           "count": 1,
-          "image": "https://storage.googleapis.com/platform-webstore-rel-assets/pgo/sku_assets/item_event_ticket_s24_nov9_gowaol.png"
+          "image": null
         },
         {
           "name": "Premium Battle Pass",
           "count": 3,
-          "image": "https://storage.googleapis.com/platform-webstore-rel-assets/pgo/sku_assets/item_paid_raid_ticket.png"
+          "image": null
         },
         {
           "name": "Max Particles",
           "count": 800,
-          "image": "https://storage.googleapis.com/platform-webstore-rel-assets/pgo/sku_assets/item_mp.png"
+          "image": null
         }
       ],
       "silphco_price": 7.5
