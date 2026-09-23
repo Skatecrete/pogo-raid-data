@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-22 20:49:46",
+  "last_updated": "2026-09-23 03:06:24",
   "debuts": [
     {
       "event_name": "GO Wild Area 2026 Global",
@@ -42,22 +42,6 @@
         "Appletun": "https://www.serebii.net/pokemongo/pokemon/shiny/842.png",
         "Dipplin": "https://www.serebii.net/pokemongo/pokemon/shiny/1011.png",
         "Hydrapple": "https://www.serebii.net/pokemongo/pokemon/shiny/1019.png"
-      },
-      "event_type": "global"
-    },
-    {
-      "event_name": "Pokemon Horizons Celebration Event 2026",
-      "event_date": "September 16th - 22nd 2026",
-      "new_pokemon": [
-        "Charmander (Friede's Goggles)",
-        "Charmeleon (Friede's Goggles)",
-        "Charizard (Friede's Goggles)"
-      ],
-      "new_shiny": [],
-      "pokemon_images": {
-        "Charmander (Friede's Goggles)": "https://www.serebii.net/pokemongo/pokemon/004-friede.png",
-        "Charmeleon (Friede's Goggles)": "https://www.serebii.net/pokemongo/pokemon/005-friede.png",
-        "Charizard (Friede's Goggles)": "https://www.serebii.net/pokemongo/pokemon/006-friede.png"
       },
       "event_type": "global"
     },
