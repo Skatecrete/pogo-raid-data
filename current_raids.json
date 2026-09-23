@@ -1,32 +1,33 @@
 {
   "last_updated": "2026-09-23",
   "tier1": [
+    "Deino",
+    "Bagon",
     "Dratini",
     "Pikachu (Cap\u2019s hat)",
-    "Deino",
-    "Larvitar",
-    "Bagon"
+    "Larvitar"
   ],
   "tier3": [
-    "Charizard (Friede's Goggles)",
-    "Meowscarada",
-    "Skeledirge",
     "Hisuian Typhlosion",
     "Hisuian Decidueye",
+    "Meowscarada",
     "Hisuian Samurott",
-    "Quaquaval"
+    "Quaquaval",
+    "Charizard (Friede's Goggles)",
+    "Skeledirge"
   ],
   "tier5": [
     "Zamazenta (Hero)"
   ],
   "mega": [
-    "Mega Malamar",
-    "Mega Venusaur"
+    "Mega Venusaur",
+    "Mega Malamar"
   ],
   "primal": [],
   "ultra_beasts": [
-    "Xurkitree",
-    "Pheromosa"
+    "Pheromosa",
+    "Buzzwole",
+    "Xurkitree"
   ],
   "super_mega": [],
   "dynamax_tier1": [
@@ -94,5 +95,5 @@
     "Zapdos"
   ],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-09-23 07:21:47"
+  "gigantamax_last_updated": "2026-09-23 17:42:30"
 }
