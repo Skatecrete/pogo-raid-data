@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-09-25 11:40:16",
+  "last_updated": "2026-09-25 17:02:19",
   "error": false,
-  "total": 5,
+  "total": 8,
   "boxes": [
     {
       "box_name": "GO Pass Deluxe: September Ultra Box",
@@ -60,6 +60,44 @@
       "silphco_price": 1.5
     },
     {
+      "box_name": "GO Pass Deluxe: Harvest Festival + 6 Ranks",
+      "in_store_price": 6.99,
+      "box_image": null,
+      "items": [
+        {
+          "name": "GO Pass Deluxe: Harvest Festival",
+          "count": 1,
+          "image": null
+        },
+        {
+          "name": "+6 Ranks",
+          "count": 600,
+          "image": null
+        },
+        {
+          "name": "Ultra Ball",
+          "count": 10,
+          "image": null
+        },
+        {
+          "name": "Max Revive",
+          "count": 5,
+          "image": null
+        },
+        {
+          "name": "Premium Battle Pass",
+          "count": 2,
+          "image": null
+        },
+        {
+          "name": "Max Potion",
+          "count": 5,
+          "image": null
+        }
+      ],
+      "silphco_price": 4.5
+    },
+    {
       "box_name": "GO Pass Deluxe: September",
       "in_store_price": 7.99,
       "box_image": null,
@@ -91,6 +129,77 @@
         }
       ],
       "silphco_price": 5.0
+    },
+    {
+      "box_name": "GO Pass Deluxe: Harvest Festival",
+      "in_store_price": 4.99,
+      "box_image": null,
+      "items": [
+        {
+          "name": "GO Pass Deluxe: Harvest Festival",
+          "count": 1,
+          "image": null
+        },
+        {
+          "name": "Ultra Ball",
+          "count": 10,
+          "image": null
+        },
+        {
+          "name": "Max Revive",
+          "count": 5,
+          "image": null
+        },
+        {
+          "name": "Premium Battle Pass",
+          "count": 1,
+          "image": null
+        },
+        {
+          "name": "Max Potion",
+          "count": 5,
+          "image": null
+        }
+      ],
+      "silphco_price": 3.0
+    },
+    {
+      "box_name": "GO Pass Deluxe: Harvest Festival Ultra Box",
+      "in_store_price": 8.99,
+      "box_image": null,
+      "items": [
+        {
+          "name": "GO Pass Deluxe: Harvest Festival",
+          "count": 1,
+          "image": null
+        },
+        {
+          "name": "+6 Ranks",
+          "count": 600,
+          "image": null
+        },
+        {
+          "name": "Ultra Ball",
+          "count": 20,
+          "image": null
+        },
+        {
+          "name": "Max Revive",
+          "count": 10,
+          "image": null
+        },
+        {
+          "name": "Premium Battle Pass",
+          "count": 5,
+          "image": null
+        },
+        {
+          "name": "Max Potion",
+          "count": 10,
+          "image": null
+        }
+      ],
+      "silphco_price": 5.5
     },
     {
       "box_name": "GO Pass Deluxe: September + 10 Ranks",
