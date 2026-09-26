@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-09-26 16:15:06",
+  "last_updated": "2026-09-26 20:58:56",
   "error": false,
-  "total": 8,
+  "total": 7,
   "boxes": [
     {
       "box_name": "GO Pass Deluxe: September Ultra Box",
@@ -40,24 +40,6 @@
         }
       ],
       "silphco_price": 9.0
-    },
-    {
-      "box_name": "Phantump Catch Mastery Ultra Ticket Box",
-      "in_store_price": 1.99,
-      "box_image": null,
-      "items": [
-        {
-          "name": "Phantump Catch Mastery Ticket",
-          "count": 1,
-          "image": null
-        },
-        {
-          "name": "Rare Candy",
-          "count": 2,
-          "image": null
-        }
-      ],
-      "silphco_price": 1.5
     },
     {
       "box_name": "GO Pass Deluxe: Harvest Festival + 6 Ranks",
