@@ -1,33 +1,26 @@
 {
-  "last_updated": "2026-09-23",
+  "last_updated": "2026-09-27",
   "tier1": [
-    "Deino",
     "Bagon",
+    "Deino",
     "Dratini",
-    "Pikachu (Cap\u2019s hat)",
     "Larvitar"
   ],
   "tier3": [
-    "Hisuian Typhlosion",
-    "Hisuian Decidueye",
-    "Meowscarada",
     "Hisuian Samurott",
-    "Quaquaval",
-    "Charizard (Friede's Goggles)",
-    "Skeledirge"
+    "Hisuian Typhlosion",
+    "Hisuian Decidueye"
   ],
-  "tier5": [
-    "Zamazenta (Hero)"
-  ],
+  "tier5": [],
   "mega": [
-    "Mega Venusaur",
+    "Mega Gengar",
     "Mega Malamar"
   ],
   "primal": [],
   "ultra_beasts": [
+    "Xurkitree",
     "Pheromosa",
-    "Buzzwole",
-    "Xurkitree"
+    "Buzzwole"
   ],
   "super_mega": [],
   "dynamax_tier1": [
@@ -95,7 +88,7 @@
     "Zapdos"
   ],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-09-23 17:42:30",
+  "gigantamax_last_updated": "2026-09-27 20:17:11",
   "scrapedduck_raids": [
     "dratini|1-star raids",
     "larvitar|1-star raids",
@@ -772,5 +765,5 @@
       "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm642.fINCARNATE.icon.png"
     }
   ],
-  "last_sent_time": "2026-09-23T17:42:31.085047"
+  "last_sent_time": "2026-09-27T20:17:11.400879"
 }
