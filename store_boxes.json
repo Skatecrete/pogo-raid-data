@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-09-28 13:39:12",
+  "last_updated": "2026-09-28 23:10:24",
   "error": false,
-  "total": 7,
+  "total": 8,
   "boxes": [
     {
       "box_name": "GO Pass Deluxe: September Ultra Box",
@@ -140,6 +140,24 @@
         {
           "name": "Max Potion",
           "count": 5,
+          "image": null
+        }
+      ],
+      "silphco_price": 3.0
+    },
+    {
+      "box_name": "Gigantamax Cinderace Max Battle Day Ultra Ticket Box",
+      "in_store_price": 4.99,
+      "box_image": null,
+      "items": [
+        {
+          "name": "Gigantamax Cinderace Max Battle Day Ticket",
+          "count": 1,
+          "image": null
+        },
+        {
+          "name": "Max Particles",
+          "count": 800,
           "image": null
         }
       ],
