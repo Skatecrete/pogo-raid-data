@@ -1,26 +1,26 @@
 {
-  "last_updated": "2026-09-27",
+  "last_updated": "2026-09-28",
   "tier1": [
+    "Dratini",
     "Bagon",
     "Deino",
-    "Dratini",
     "Larvitar"
   ],
   "tier3": [
-    "Hisuian Samurott",
     "Hisuian Typhlosion",
-    "Hisuian Decidueye"
+    "Hisuian Decidueye",
+    "Hisuian Samurott"
   ],
   "tier5": [],
   "mega": [
-    "Mega Gengar",
-    "Mega Malamar"
+    "Mega Malamar",
+    "Mega Gengar"
   ],
   "primal": [],
   "ultra_beasts": [
+    "Buzzwole",
     "Xurkitree",
-    "Pheromosa",
-    "Buzzwole"
+    "Pheromosa"
   ],
   "super_mega": [],
   "dynamax_tier1": [
@@ -70,6 +70,7 @@
     "Beldum",
     "Chansey",
     "Cryogonal",
+    "Debaty",
     "Deino",
     "Drampa",
     "Electabuzz",
@@ -81,12 +82,7 @@
     "Passimian",
     "Sableye"
   ],
-  "dynamax_tier5": [
-    "Articuno",
-    "Debaty",
-    "Moltres",
-    "Zapdos"
-  ],
+  "dynamax_tier5": [],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-09-27 20:17:11"
+  "gigantamax_last_updated": "2026-09-28 16:52:58"
 }
