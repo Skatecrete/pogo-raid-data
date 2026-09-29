@@ -1,26 +1,36 @@
 {
   "last_updated": "2026-09-29",
   "tier1": [
-    "Larvitar",
-    "Deino",
     "Bagon",
-    "Dratini"
+    "Larvitar",
+    "Dratini",
+    "Galarian Zigzagoon",
+    "Galarian Farfetch'd",
+    "Combee",
+    "Deino",
+    "Honedge"
   ],
   "tier3": [
+    "Miltank",
+    "Hisuian Lilligant",
+    "Hisuian Decidueye",
     "Hisuian Samurott",
-    "Hisuian Typhlosion",
-    "Hisuian Decidueye"
+    "Dondozo",
+    "Hisuian Typhlosion"
   ],
-  "tier5": [],
+  "tier5": [
+    "Xerneas"
+  ],
   "mega": [
     "Mega Malamar",
+    "Mega Victreebel",
     "Mega Gengar"
   ],
   "primal": [],
   "ultra_beasts": [
+    "Xurkitree",
     "Pheromosa",
-    "Buzzwole",
-    "Xurkitree"
+    "Buzzwole"
   ],
   "super_mega": [],
   "dynamax_tier1": [
@@ -86,5 +96,5 @@
     "Moltres"
   ],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-09-29 08:51:41"
+  "gigantamax_last_updated": "2026-09-29 20:06:58"
 }

@@ -1,3 +1,12 @@
 
-**🌀 Ultra Beasts:**
-  ✅ Added: pheromosa
+**⭐ 1-Star Raids:**
+  ✅ Added: combee, galarian farfetch'd, galarian zigzagoon, honedge
+
+**⭐⭐⭐ 3-Star Raids:**
+  ✅ Added: dondozo, hisuian lilligant, miltank
+
+**⭐⭐⭐⭐⭐ 5-Star Raids:**
+  ✅ Added: xerneas
+
+**🔴 Mega Raids:**
+  ✅ Added: victreebel
