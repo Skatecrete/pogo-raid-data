@@ -1,11 +1,11 @@
 {
-  "last_updated": "2026-09-29 12:38:15",
+  "last_updated": "2026-09-29 22:08:57",
   "error": false,
   "total": 8,
   "boxes": [
     {
       "box_name": "GO Pass Deluxe: September Ultra Box",
-      "in_store_price": 139.0,
+      "in_store_price": 14.99,
       "box_image": null,
       "items": [
         {
@@ -39,11 +39,11 @@
           "image": null
         }
       ],
-      "silphco_price": 69.5
+      "silphco_price": 9.0
     },
     {
       "box_name": "GO Pass Deluxe: Harvest Festival + 6 Ranks",
-      "in_store_price": 64.0,
+      "in_store_price": 6.99,
       "box_image": null,
       "items": [
         {
@@ -77,11 +77,11 @@
           "image": null
         }
       ],
-      "silphco_price": 32.0
+      "silphco_price": 4.5
     },
     {
       "box_name": "GO Pass Deluxe: September",
-      "in_store_price": 74.0,
+      "in_store_price": 7.99,
       "box_image": null,
       "items": [
         {
@@ -110,11 +110,11 @@
           "image": null
         }
       ],
-      "silphco_price": 37.0
+      "silphco_price": 5.0
     },
     {
       "box_name": "GO Pass Deluxe: Harvest Festival",
-      "in_store_price": 45.0,
+      "in_store_price": 4.99,
       "box_image": null,
       "items": [
         {
@@ -143,11 +143,11 @@
           "image": null
         }
       ],
-      "silphco_price": 22.5
+      "silphco_price": 3.0
     },
     {
       "box_name": "Gigantamax Cinderace Max Battle Day Ultra Ticket Box",
-      "in_store_price": 45.0,
+      "in_store_price": 4.99,
       "box_image": null,
       "items": [
         {
@@ -161,11 +161,11 @@
           "image": null
         }
       ],
-      "silphco_price": 22.5
+      "silphco_price": 3.0
     },
     {
       "box_name": "GO Pass Deluxe: Harvest Festival Ultra Box",
-      "in_store_price": 84.0,
+      "in_store_price": 8.99,
       "box_image": null,
       "items": [
         {
@@ -199,11 +199,11 @@
           "image": null
         }
       ],
-      "silphco_price": 42.0
+      "silphco_price": 5.5
     },
     {
       "box_name": "GO Pass Deluxe: September + 10 Ranks",
-      "in_store_price": 89.0,
+      "in_store_price": 9.99,
       "box_image": null,
       "items": [
         {
@@ -237,11 +237,11 @@
           "image": null
         }
       ],
-      "silphco_price": 44.5
+      "silphco_price": 6.0
     },
     {
       "box_name": "Pok\u00e9mon GO Wild Area 2026: Global Ultra Ticket Box",
-      "in_store_price": 109.0,
+      "in_store_price": 11.99,
       "box_image": null,
       "items": [
         {
@@ -260,7 +260,7 @@
           "image": null
         }
       ],
-      "silphco_price": 54.5
+      "silphco_price": 7.5
     }
   ]
 }
