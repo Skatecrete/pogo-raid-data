@@ -1,15 +1,15 @@
 {
   "last_updated": "2026-09-29",
   "tier1": [
+    "Larvitar",
     "Deino",
     "Bagon",
-    "Dratini",
-    "Larvitar"
+    "Dratini"
   ],
   "tier3": [
-    "Hisuian Decidueye",
     "Hisuian Samurott",
-    "Hisuian Typhlosion"
+    "Hisuian Typhlosion",
+    "Hisuian Decidueye"
   ],
   "tier5": [],
   "mega": [
@@ -18,8 +18,9 @@
   ],
   "primal": [],
   "ultra_beasts": [
-    "Xurkitree",
-    "Buzzwole"
+    "Pheromosa",
+    "Buzzwole",
+    "Xurkitree"
   ],
   "super_mega": [],
   "dynamax_tier1": [
@@ -85,5 +86,5 @@
     "Moltres"
   ],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-09-29 02:09:43"
+  "gigantamax_last_updated": "2026-09-29 08:51:41"
 }
