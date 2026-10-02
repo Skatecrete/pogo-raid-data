@@ -1,37 +1,25 @@
 {
-  "last_updated": "2026-09-29",
+  "last_updated": "2026-10-02",
   "tier1": [
-    "Bagon",
-    "Larvitar",
-    "Dratini",
-    "Galarian Zigzagoon",
     "Galarian Farfetch'd",
     "Combee",
-    "Deino",
-    "Honedge"
+    "Honedge",
+    "Galarian Zigzagoon"
   ],
   "tier3": [
     "Miltank",
     "Hisuian Lilligant",
-    "Hisuian Decidueye",
-    "Hisuian Samurott",
-    "Dondozo",
-    "Hisuian Typhlosion"
+    "Dondozo"
   ],
   "tier5": [
     "Xerneas"
   ],
   "mega": [
-    "Mega Malamar",
-    "Mega Victreebel",
-    "Mega Gengar"
+    "Mega Gengar",
+    "Mega Victreebel"
   ],
   "primal": [],
-  "ultra_beasts": [
-    "Xurkitree",
-    "Pheromosa",
-    "Buzzwole"
-  ],
+  "ultra_beasts": [],
   "super_mega": [],
   "dynamax_tier1": [
     "Abra",
@@ -95,6 +83,8 @@
     "Debaty",
     "Moltres"
   ],
-  "gigantamax": [],
-  "gigantamax_last_updated": "2026-09-29 20:06:58"
+  "gigantamax": [
+    "Cinderace"
+  ],
+  "gigantamax_last_updated": "2026-10-02 16:29:11"
 }
