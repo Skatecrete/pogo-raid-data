@@ -1,15 +1,16 @@
 {
-  "last_updated": "2026-10-02",
+  "last_updated": "2026-10-03",
   "tier1": [
-    "Galarian Farfetch'd",
-    "Combee",
+    "Pikachu (Astronaut)",
+    "Galarian Zigzagoon",
     "Honedge",
-    "Galarian Zigzagoon"
+    "Galarian Farfetch'd",
+    "Combee"
   ],
   "tier3": [
+    "Dondozo",
     "Miltank",
-    "Hisuian Lilligant",
-    "Dondozo"
+    "Hisuian Lilligant"
   ],
   "tier5": [
     "Xerneas"
@@ -86,5 +87,5 @@
   "gigantamax": [
     "Cinderace"
   ],
-  "gigantamax_last_updated": "2026-10-02 16:29:11"
+  "gigantamax_last_updated": "2026-10-03 18:46:23"
 }
