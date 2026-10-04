@@ -1,16 +1,16 @@
 {
-  "last_updated": "2026-10-03",
+  "last_updated": "2026-10-04",
   "tier1": [
+    "Combee",
+    "Honedge",
     "Pikachu (Astronaut)",
     "Galarian Zigzagoon",
-    "Honedge",
-    "Galarian Farfetch'd",
-    "Combee"
+    "Galarian Farfetch'd"
   ],
   "tier3": [
-    "Dondozo",
     "Miltank",
-    "Hisuian Lilligant"
+    "Hisuian Lilligant",
+    "Dondozo"
   ],
   "tier5": [
     "Xerneas"
@@ -48,6 +48,7 @@
     "Rookidee",
     "Scorbunny",
     "Search",
+    "Sizzlipede",
     "Skwovet",
     "Sobble",
     "Spheal",
@@ -84,8 +85,6 @@
     "Debaty",
     "Moltres"
   ],
-  "gigantamax": [
-    "Cinderace"
-  ],
-  "gigantamax_last_updated": "2026-10-03 18:46:23"
+  "gigantamax": [],
+  "gigantamax_last_updated": "2026-10-04 12:43:59"
 }
