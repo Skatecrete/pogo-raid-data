@@ -1,3 +1,9 @@
 
-**⚡ Dynamax Tier 1:**
-  ✅ Added: sizzlipede
+**⭐⭐⭐ 3-Star Raids:**
+  ✅ Added: gothitelle, starmie, umbreon
+
+**⭐⭐⭐⭐⭐ 5-Star Raids:**
+  ✅ Added: yveltal
+
+**🔴 Mega Raids:**
+  ✅ Added: blastoise

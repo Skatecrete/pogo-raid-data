@@ -1,23 +1,24 @@
 {
-  "last_updated": "2026-10-04",
+  "last_updated": "2026-10-06",
   "tier1": [
-    "Combee",
-    "Honedge",
-    "Pikachu (Astronaut)",
-    "Galarian Zigzagoon",
-    "Galarian Farfetch'd"
+    "Pikachu (Astronaut)"
   ],
   "tier3": [
-    "Miltank",
+    "Gothitelle",
+    "Starmie",
     "Hisuian Lilligant",
-    "Dondozo"
+    "Dondozo",
+    "Miltank",
+    "Umbreon"
   ],
   "tier5": [
-    "Xerneas"
+    "Xerneas",
+    "Yveltal"
   ],
   "mega": [
-    "Mega Gengar",
-    "Mega Victreebel"
+    "Mega Victreebel",
+    "Mega Blastoise",
+    "Mega Gengar"
   ],
   "primal": [],
   "ultra_beasts": [],
@@ -86,5 +87,5 @@
     "Moltres"
   ],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-10-04 12:43:59"
+  "gigantamax_last_updated": "2026-10-06 19:42:04"
 }
