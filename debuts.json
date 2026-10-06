@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-05 23:40:21",
+  "last_updated": "2026-10-06 04:38:58",
   "debuts": [
     {
       "event_name": "GO Wild Area 2026 Global",
@@ -36,26 +36,6 @@
       "new_shiny": [],
       "pokemon_images": {
         "Pikachu (Astronaut)": "https://www.serebii.net/pokemongo/pokemon/025-astronaut.png"
-      },
-      "event_type": "global"
-    },
-    {
-      "event_name": "Harvest Festival: Applin Picking",
-      "event_date": "September 29th - October 5th 2026",
-      "new_pokemon": [],
-      "new_shiny": [
-        "Applin",
-        "Flapple",
-        "Appletun",
-        "Dipplin",
-        "Hydrapple"
-      ],
-      "pokemon_images": {
-        "Applin": "https://www.serebii.net/pokemongo/pokemon/shiny/840.png",
-        "Flapple": "https://www.serebii.net/pokemongo/pokemon/shiny/841.png",
-        "Appletun": "https://www.serebii.net/pokemongo/pokemon/shiny/842.png",
-        "Dipplin": "https://www.serebii.net/pokemongo/pokemon/shiny/1011.png",
-        "Hydrapple": "https://www.serebii.net/pokemongo/pokemon/shiny/1019.png"
       },
       "event_type": "global"
     },
