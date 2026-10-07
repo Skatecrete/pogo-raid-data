@@ -1,15 +1,16 @@
 {
-  "last_updated": "2026-10-06",
+  "last_updated": "2026-10-07",
   "tier1": [
-    "Pikachu (Astronaut)"
+    "Pikachu (Astronaut)",
+    "Pikachu (Anniversary 2026)"
   ],
   "tier3": [
-    "Gothitelle",
-    "Starmie",
     "Hisuian Lilligant",
-    "Dondozo",
     "Miltank",
-    "Umbreon"
+    "Dondozo",
+    "Starmie",
+    "Umbreon",
+    "Gothitelle"
   ],
   "tier5": [
     "Xerneas",
@@ -87,5 +88,5 @@
     "Moltres"
   ],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-10-06 19:42:04"
+  "gigantamax_last_updated": "2026-10-07 11:15:41"
 }

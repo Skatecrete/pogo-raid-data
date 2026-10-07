@@ -1,9 +1,12 @@
 
-**⭐⭐⭐ 3-Star Raids:**
-  ✅ Added: gothitelle, starmie, umbreon
+**⭐ 1-Star Raids:**
+  ✅ Added: pikachu (anniversary 2026)
 
-**⭐⭐⭐⭐⭐ 5-Star Raids:**
-  ✅ Added: yveltal
+**🌑 Shadow 1-Star:**
+  ✅ Added: Shadow Gastly, Shadow Gible, Shadow Shieldon, Shadow Totodile
 
-**🔴 Mega Raids:**
-  ✅ Added: blastoise
+**🌑 Shadow 3-Star:**
+  ✅ Added: Shadow Drapion, Shadow Kirlia, Shadow Primeape
+
+**🌑 Shadow Legendary:**
+  ✅ Added: Shadow Landorus (Incarnate)
