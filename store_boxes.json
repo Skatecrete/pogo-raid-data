@@ -1,22 +1,22 @@
 {
-  "last_updated": "2026-10-07 13:09:00",
+  "last_updated": "2026-10-07 22:59:33",
   "error": false,
   "total": 5,
   "boxes": [
     {
       "box_name": "Community Day: Zorua Ultra Ticket Box",
       "in_store_price": 1.99,
-      "box_image": null,
+      "box_image": "https://assets.pgo.webstore.scopelyexplore.com/pgo/sku_assets/bundle.general1.small.2.png",
       "items": [
         {
           "name": "Community Day: Zorua Ticket",
           "count": 1,
-          "image": null
+          "image": "https://assets.pgo.webstore.scopelyexplore.com/pgo/sku_assets/item_event_ticket_s24_oct_10_community.png"
         },
         {
           "name": "Ultra Ball",
           "count": 5,
-          "image": null
+          "image": "https://assets.pgo.webstore.scopelyexplore.com/pgo/sku_assets/item_ultra_ball.png"
         }
       ],
       "silphco_price": 1.5
@@ -24,32 +24,32 @@
     {
       "box_name": "GO Pass Deluxe: October",
       "in_store_price": 7.99,
-      "box_image": null,
+      "box_image": "https://assets.pgo.webstore.scopelyexplore.com/pgo/sku_assets/halloween_giftboxv1.png",
       "items": [
         {
           "name": "GO Pass Deluxe: October",
           "count": 1,
-          "image": null
+          "image": "https://assets.pgo.webstore.scopelyexplore.com/pgo/sku_assets/badge_event_0237.png"
         },
         {
           "name": "Ultra Ball",
           "count": 10,
-          "image": null
+          "image": "https://assets.pgo.webstore.scopelyexplore.com/pgo/sku_assets/item_ultra_ball.png"
         },
         {
           "name": "Max Revive",
           "count": 5,
-          "image": null
+          "image": "https://assets.pgo.webstore.scopelyexplore.com/pgo/sku_assets/item_max_revive.png"
         },
         {
           "name": "Premium Battle Pass",
           "count": 1,
-          "image": null
+          "image": "https://assets.pgo.webstore.scopelyexplore.com/pgo/sku_assets/item_paid_raid_ticket.png"
         },
         {
           "name": "Max Potion",
           "count": 5,
-          "image": null
+          "image": "https://assets.pgo.webstore.scopelyexplore.com/pgo/sku_assets/item_max_potion.png"
         }
       ],
       "silphco_price": 5.0
@@ -57,37 +57,37 @@
     {
       "box_name": "GO Pass Deluxe: October + 10 Ranks",
       "in_store_price": 9.99,
-      "box_image": null,
+      "box_image": "https://assets.pgo.webstore.scopelyexplore.com/pgo/sku_assets/halloween_giftboxv2.png",
       "items": [
         {
           "name": "GO Pass Deluxe: October",
           "count": 1,
-          "image": null
+          "image": "https://assets.pgo.webstore.scopelyexplore.com/pgo/sku_assets/badge_event_0237.png"
         },
         {
           "name": "+10 Ranks",
           "count": 1,
-          "image": null
+          "image": "https://assets.pgo.webstore.scopelyexplore.com/pgo/sku_assets/item_event_pass_point_monthly_02.png"
         },
         {
           "name": "Ultra Ball",
           "count": 10,
-          "image": null
+          "image": "https://assets.pgo.webstore.scopelyexplore.com/pgo/sku_assets/item_ultra_ball.png"
         },
         {
           "name": "Max Revive",
           "count": 5,
-          "image": null
+          "image": "https://assets.pgo.webstore.scopelyexplore.com/pgo/sku_assets/item_max_revive.png"
         },
         {
           "name": "Premium Battle Pass",
           "count": 2,
-          "image": null
+          "image": "https://assets.pgo.webstore.scopelyexplore.com/pgo/sku_assets/item_paid_raid_ticket.png"
         },
         {
           "name": "Max Potion",
           "count": 5,
-          "image": null
+          "image": "https://assets.pgo.webstore.scopelyexplore.com/pgo/sku_assets/item_max_potion.png"
         }
       ],
       "silphco_price": 6.0
@@ -95,37 +95,37 @@
     {
       "box_name": "GO Pass Deluxe: October Ultra Box",
       "in_store_price": 14.99,
-      "box_image": null,
+      "box_image": "https://assets.pgo.webstore.scopelyexplore.com/pgo/sku_assets/halloween_giftboxv3.png",
       "items": [
         {
           "name": "GO Pass Deluxe: October",
           "count": 1,
-          "image": null
+          "image": "https://assets.pgo.webstore.scopelyexplore.com/pgo/sku_assets/badge_event_0237.png"
         },
         {
           "name": "+10 Ranks",
           "count": 1,
-          "image": null
+          "image": "https://assets.pgo.webstore.scopelyexplore.com/pgo/sku_assets/item_event_pass_point_monthly_02.png"
         },
         {
           "name": "Ultra Ball",
           "count": 20,
-          "image": null
+          "image": "https://assets.pgo.webstore.scopelyexplore.com/pgo/sku_assets/item_ultra_ball.png"
         },
         {
           "name": "Max Revive",
           "count": 10,
-          "image": null
+          "image": "https://assets.pgo.webstore.scopelyexplore.com/pgo/sku_assets/item_max_revive.png"
         },
         {
           "name": "Premium Battle Pass",
           "count": 5,
-          "image": null
+          "image": "https://assets.pgo.webstore.scopelyexplore.com/pgo/sku_assets/item_paid_raid_ticket.png"
         },
         {
           "name": "Max Potion",
           "count": 10,
-          "image": null
+          "image": "https://assets.pgo.webstore.scopelyexplore.com/pgo/sku_assets/item_max_potion.png"
         }
       ],
       "silphco_price": 9.0
@@ -133,22 +133,22 @@
     {
       "box_name": "Pok\u00e9mon GO Wild Area 2026: Global Ultra Ticket Box",
       "in_store_price": 11.99,
-      "box_image": null,
+      "box_image": "https://assets.pgo.webstore.scopelyexplore.com/pgo/sku_assets/genericbox_b1.png",
       "items": [
         {
           "name": "Pok\u00e9mon GO Wild Area 2026: Global Ticket",
           "count": 1,
-          "image": null
+          "image": "https://assets.pgo.webstore.scopelyexplore.com/pgo/sku_assets/item_event_ticket_s24_nov9_gowaol.png"
         },
         {
           "name": "Premium Battle Pass",
           "count": 3,
-          "image": null
+          "image": "https://assets.pgo.webstore.scopelyexplore.com/pgo/sku_assets/item_paid_raid_ticket.png"
         },
         {
           "name": "Max Particles",
           "count": 800,
-          "image": null
+          "image": "https://assets.pgo.webstore.scopelyexplore.com/pgo/sku_assets/item_mp.png"
         }
       ],
       "silphco_price": 7.5
