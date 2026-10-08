@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-08 12:44:17",
+  "last_updated": "2026-10-08 22:48:51",
   "debuts": [
     {
       "event_name": "GO Wild Area 2026 Global",
@@ -10,6 +10,44 @@
       "new_shiny": [],
       "pokemon_images": {
         "Machamp (Modern Jacket)": "https://www.serebii.net/pokemongo/pokemon/068-jacket.png"
+      },
+      "event_type": "global"
+    },
+    {
+      "event_name": "Halloween 2026 Part 2",
+      "event_date": "November 1st - November 5th 2026",
+      "new_pokemon": [],
+      "new_shiny": [
+        "Houndstone"
+      ],
+      "pokemon_images": {
+        "Houndstone": "https://www.serebii.net/pokemongo/pokemon/shiny/972.png"
+      },
+      "event_type": "global"
+    },
+    {
+      "event_name": "Halloween 2026 Part 1",
+      "event_date": "October 27th - November 1st 2026",
+      "new_pokemon": [
+        "Pikachu (Halloween 2026)",
+        "Zubat (Top hat)",
+        "Golbat (Top hat)",
+        "Crobat (Top hat)",
+        "Sinistea (Halloween Bow - Phony Form)",
+        "Sinistea (Halloween Bow - Antique Form)",
+        "Polteageist (Halloween Bow - Phony Form)",
+        "Polteageist (Halloween Bow - Antique Form)"
+      ],
+      "new_shiny": [],
+      "pokemon_images": {
+        "Pikachu (Halloween 2026)": "https://www.serebii.net/pokemongo/pokemon/025-halloween2026.png",
+        "Zubat (Top hat)": "https://www.serebii.net/pokemongo/pokemon/041.png",
+        "Golbat (Top hat)": "https://www.serebii.net/pokemongo/pokemon/042.png",
+        "Crobat (Top hat)": "https://www.serebii.net/pokemongo/pokemon/169.png",
+        "Sinistea (Halloween Bow - Phony Form)": "https://www.serebii.net/pokemongo/pokemon/854-bow.png",
+        "Sinistea (Halloween Bow - Antique Form)": "https://www.serebii.net/pokemongo/pokemon/854-bow.png",
+        "Polteageist (Halloween Bow - Phony Form)": "https://www.serebii.net/pokemongo/pokemon/855-bow.png",
+        "Polteageist (Halloween Bow - Antique Form)": "https://www.serebii.net/pokemongo/pokemon/855-bow.png"
       },
       "event_type": "global"
     },
