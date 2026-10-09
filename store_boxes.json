@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-10-09 13:03:13",
+  "last_updated": "2026-10-09 22:32:19",
   "error": false,
-  "total": 5,
+  "total": 8,
   "boxes": [
     {
       "box_name": "Community Day: Zorua Ultra Ticket Box",
@@ -20,6 +20,44 @@
         }
       ],
       "silphco_price": 1.5
+    },
+    {
+      "box_name": "GO Pass Deluxe: Fall Marathon Ultra Box",
+      "in_store_price": 8.99,
+      "box_image": "https://assets.pgo.webstore.scopelyexplore.com/pgo/sku_assets/genericbox_b2.png",
+      "items": [
+        {
+          "name": "GO Pass Deluxe: Fall Marathon",
+          "count": 1,
+          "image": "https://assets.pgo.webstore.scopelyexplore.com/pgo/sku_assets/badge_event_0244.png"
+        },
+        {
+          "name": "+6 Ranks",
+          "count": 600,
+          "image": "https://assets.pgo.webstore.scopelyexplore.com/pgo/sku_assets/item_event_pass_point_live_ops_04.png"
+        },
+        {
+          "name": "Ultra Ball",
+          "count": 20,
+          "image": "https://assets.pgo.webstore.scopelyexplore.com/pgo/sku_assets/item_ultra_ball.png"
+        },
+        {
+          "name": "Max Revive",
+          "count": 10,
+          "image": "https://assets.pgo.webstore.scopelyexplore.com/pgo/sku_assets/item_max_revive.png"
+        },
+        {
+          "name": "Premium Battle Pass",
+          "count": 5,
+          "image": "https://assets.pgo.webstore.scopelyexplore.com/pgo/sku_assets/item_paid_raid_ticket.png"
+        },
+        {
+          "name": "Max Potion",
+          "count": 10,
+          "image": "https://assets.pgo.webstore.scopelyexplore.com/pgo/sku_assets/item_max_potion.png"
+        }
+      ],
+      "silphco_price": 5.5
     },
     {
       "box_name": "GO Pass Deluxe: October",
@@ -53,6 +91,77 @@
         }
       ],
       "silphco_price": 5.0
+    },
+    {
+      "box_name": "GO Pass Deluxe: Fall Marathon",
+      "in_store_price": 4.99,
+      "box_image": "https://assets.pgo.webstore.scopelyexplore.com/pgo/sku_assets/genericbox_b3.png",
+      "items": [
+        {
+          "name": "GO Pass Deluxe: Fall Marathon",
+          "count": 1,
+          "image": "https://assets.pgo.webstore.scopelyexplore.com/pgo/sku_assets/badge_event_0244.png"
+        },
+        {
+          "name": "Ultra Ball",
+          "count": 10,
+          "image": "https://assets.pgo.webstore.scopelyexplore.com/pgo/sku_assets/item_ultra_ball.png"
+        },
+        {
+          "name": "Max Revive",
+          "count": 5,
+          "image": "https://assets.pgo.webstore.scopelyexplore.com/pgo/sku_assets/item_max_revive.png"
+        },
+        {
+          "name": "Premium Battle Pass",
+          "count": 1,
+          "image": "https://assets.pgo.webstore.scopelyexplore.com/pgo/sku_assets/item_paid_raid_ticket.png"
+        },
+        {
+          "name": "Max Potion",
+          "count": 5,
+          "image": "https://assets.pgo.webstore.scopelyexplore.com/pgo/sku_assets/item_max_potion.png"
+        }
+      ],
+      "silphco_price": 3.0
+    },
+    {
+      "box_name": "GO Pass Deluxe: Fall Marathon + 6 Ranks",
+      "in_store_price": 6.99,
+      "box_image": "https://assets.pgo.webstore.scopelyexplore.com/pgo/sku_assets/genericbox_d3.png",
+      "items": [
+        {
+          "name": "GO Pass Deluxe: Fall Marathon",
+          "count": 1,
+          "image": "https://assets.pgo.webstore.scopelyexplore.com/pgo/sku_assets/badge_event_0244.png"
+        },
+        {
+          "name": "+6 Ranks",
+          "count": 600,
+          "image": "https://assets.pgo.webstore.scopelyexplore.com/pgo/sku_assets/item_event_pass_point_live_ops_04.png"
+        },
+        {
+          "name": "Ultra Ball",
+          "count": 10,
+          "image": "https://assets.pgo.webstore.scopelyexplore.com/pgo/sku_assets/item_ultra_ball.png"
+        },
+        {
+          "name": "Max Revive",
+          "count": 5,
+          "image": "https://assets.pgo.webstore.scopelyexplore.com/pgo/sku_assets/item_max_revive.png"
+        },
+        {
+          "name": "Premium Battle Pass",
+          "count": 2,
+          "image": "https://assets.pgo.webstore.scopelyexplore.com/pgo/sku_assets/item_paid_raid_ticket.png"
+        },
+        {
+          "name": "Max Potion",
+          "count": 5,
+          "image": "https://assets.pgo.webstore.scopelyexplore.com/pgo/sku_assets/item_max_potion.png"
+        }
+      ],
+      "silphco_price": 4.5
     },
     {
       "box_name": "GO Pass Deluxe: October + 10 Ranks",
