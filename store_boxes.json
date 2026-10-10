@@ -1,26 +1,8 @@
 {
-  "last_updated": "2026-10-10 12:20:01",
+  "last_updated": "2026-10-10 21:30:31",
   "error": false,
-  "total": 8,
+  "total": 7,
   "boxes": [
-    {
-      "box_name": "Community Day: Zorua Ultra Ticket Box",
-      "in_store_price": 1.99,
-      "box_image": "https://assets.pgo.webstore.scopelyexplore.com/pgo/sku_assets/bundle.general1.small.2.png",
-      "items": [
-        {
-          "name": "Community Day: Zorua Ticket",
-          "count": 1,
-          "image": "https://assets.pgo.webstore.scopelyexplore.com/pgo/sku_assets/item_event_ticket_s24_oct_10_community.png"
-        },
-        {
-          "name": "Ultra Ball",
-          "count": 5,
-          "image": "https://assets.pgo.webstore.scopelyexplore.com/pgo/sku_assets/item_ultra_ball.png"
-        }
-      ],
-      "silphco_price": 1.5
-    },
     {
       "box_name": "GO Pass Deluxe: Fall Marathon Ultra Box",
       "in_store_price": 8.99,
