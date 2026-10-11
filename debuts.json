@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-10 21:05:52",
+  "last_updated": "2026-10-11 03:44:21",
   "debuts": [
     {
       "event_name": "GO Wild Area 2026 Global",
@@ -80,18 +80,6 @@
       "event_type": "global"
     },
     {
-      "event_name": "World Space Week",
-      "event_date": "October 4th - October 10th 2026",
-      "new_pokemon": [
-        "Pikachu (Astronaut)"
-      ],
-      "new_shiny": [],
-      "pokemon_images": {
-        "Pikachu (Astronaut)": "https://www.serebii.net/pokemongo/pokemon/025-astronaut.png"
-      },
-      "event_type": "global"
-    },
-    {
       "event_name": "GO Wild Area 2026 Mexico City",
       "event_date": "November 6th - 8th 2026",
       "new_pokemon": [
@@ -130,18 +118,6 @@
         "Goodra (Hisuian Form)": "https://www.serebii.net/pokemongo/pokemon/shiny/706-h.png",
         "Machamp (Modern Jacket)": "https://www.serebii.net/pokemongo/pokemon/068-jacket.png",
         "Duraludon": "https://www.serebii.net/pokemongo/pokemon/884-gi.png"
-      },
-      "event_type": "reallife"
-    },
-    {
-      "event_name": "Pokemon GO x ESA",
-      "event_date": "October 4th 2026 - April 30th 2076",
-      "new_pokemon": [
-        "Pikachu (Astronaut)"
-      ],
-      "new_shiny": [],
-      "pokemon_images": {
-        "Pikachu (Astronaut)": "https://www.serebii.net/pokemongo/pokemon/025-astronaut.png"
       },
       "event_type": "reallife"
     }
