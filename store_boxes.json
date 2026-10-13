@@ -1,8 +1,26 @@
 {
-  "last_updated": "2026-10-12 15:09:43",
+  "last_updated": "2026-10-13 00:30:17",
   "error": false,
-  "total": 7,
+  "total": 8,
   "boxes": [
+    {
+      "box_name": "Sandile Hatch Day Ultra Ticket Box",
+      "in_store_price": 1.99,
+      "box_image": "https://assets.pgo.webstore.scopelyexplore.com/pgo/sku_assets/web-seasonal-delights-2024-box.png",
+      "items": [
+        {
+          "name": "Sandile Hatch Day Ticket",
+          "count": 1,
+          "image": "https://assets.pgo.webstore.scopelyexplore.com/pgo/sku_assets/item_event_ticket_s24_oct_17_hatch.png"
+        },
+        {
+          "name": "Lucky Egg",
+          "count": 1,
+          "image": "https://assets.pgo.webstore.scopelyexplore.com/pgo/sku_assets/item_lucky_egg.png"
+        }
+      ],
+      "silphco_price": 1.5
+    },
     {
       "box_name": "GO Pass Deluxe: Fall Marathon Ultra Box",
       "in_store_price": 8.99,
