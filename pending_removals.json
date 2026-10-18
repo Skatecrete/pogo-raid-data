@@ -1,6 +1,38 @@
 {
-  "name:astronaut pikachu|1-star raids": {
-    "first_seen": "2026-10-13T21:43:10.429175",
+  "name:umbreon|3-star raids": {
+    "first_seen": "2026-10-18T12:42:50.819894",
+    "count": 1
+  },
+  "name:gothitelle|3-star raids": {
+    "first_seen": "2026-10-18T12:42:50.819894",
+    "count": 1
+  },
+  "name:mega blastoise|mega raids": {
+    "first_seen": "2026-10-18T12:42:50.819894",
+    "count": 1
+  },
+  "name:teddiursa|1-star raids": {
+    "first_seen": "2026-10-18T12:42:50.819894",
+    "count": 1
+  },
+  "name:starmie|3-star raids": {
+    "first_seen": "2026-10-18T12:42:50.819894",
+    "count": 1
+  },
+  "name:clefairy|1-star raids": {
+    "first_seen": "2026-10-18T12:42:50.819894",
+    "count": 1
+  },
+  "name:elgyem|1-star raids": {
+    "first_seen": "2026-10-18T12:42:50.819894",
+    "count": 1
+  },
+  "name:amaura|1-star raids": {
+    "first_seen": "2026-10-18T12:42:50.819894",
+    "count": 1
+  },
+  "name:yveltal|5-star raids": {
+    "first_seen": "2026-10-18T12:42:50.819894",
     "count": 1
   }
 }

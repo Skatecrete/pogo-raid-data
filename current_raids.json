@@ -1,32 +1,23 @@
 {
-  "last_updated": "2026-10-13",
+  "last_updated": "2026-10-18",
   "tier1": [
-    "Beldum",
-    "Clefairy",
-    "Pikachu (Astronaut)",
-    "Galarian Slowpoke",
-    "Elgyem",
-    "Nincada",
     "Pikachu (Anniversary 2026)",
-    "Amaura",
-    "Teddiursa",
-    "Hisuian Voltorb"
+    "Nincada",
+    "Hisuian Voltorb",
+    "Pikachu (Astronaut)",
+    "Beldum",
+    "Galarian Slowpoke"
   ],
   "tier3": [
-    "Gothitelle",
-    "Snorlax",
+    "Kleavor",
     "Hisuian Arcanine",
-    "Umbreon",
-    "Starmie",
-    "Kleavor"
+    "Snorlax"
   ],
   "tier5": [
-    "Dialga",
-    "Yveltal"
+    "Dialga"
   ],
   "mega": [
     "Mega Gengar",
-    "Mega Blastoise",
     "Mega Dragonite"
   ],
   "primal": [],
@@ -73,6 +64,7 @@
     "Feebas",
     "Machop",
     "Shuckle",
+    "Sneasel",
     "Wailmer"
   ],
   "dynamax_tier3": [
@@ -95,5 +87,5 @@
     "Moltres"
   ],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-10-13 21:43:10"
+  "gigantamax_last_updated": "2026-10-18 12:42:50"
 }
