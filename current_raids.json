@@ -1,33 +1,21 @@
 {
-  "last_updated": "2026-10-20",
+  "last_updated": "2026-10-24",
   "tier1": [
     "Frigibax",
     "Goomy",
-    "Jangmo-o",
-    "Nincada",
-    "Hisuian Voltorb",
-    "Pikachu (Anniversary 2026)",
-    "Pikachu (Astronaut)",
-    "Galarian Slowpoke",
-    "Beldum",
-    "Axew"
+    "Axew",
+    "Jangmo-o"
   ],
   "tier3": [
-    "Kleavor",
+    "Alolan Raichu",
     "Alolan Ninetales",
-    "Snorlax",
-    "Hisuian Arcanine",
-    "Alolan Muk",
-    "Alolan Raichu"
+    "Alolan Muk"
   ],
   "tier5": [
-    "Dialga",
     "Palkia"
   ],
   "mega": [
-    "Mega Dragonite",
     "Mega Charizard X",
-    "Mega Gengar",
     "Mega Charizard Y"
   ],
   "primal": [],
@@ -94,8 +82,9 @@
   ],
   "dynamax_tier5": [
     "Debaty",
-    "Moltres"
+    "Moltres",
+    "Uxie"
   ],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-10-20 18:36:04"
+  "gigantamax_last_updated": "2026-10-24 01:21:57"
 }
