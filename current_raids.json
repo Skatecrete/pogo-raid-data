@@ -1,24 +1,24 @@
 {
   "last_updated": "2026-10-24",
   "tier1": [
-    "Pikachu (Anniversary 2026)",
-    "Jangmo-o",
-    "Pikachu (Astronaut)",
-    "Goomy",
     "Axew",
-    "Frigibax"
+    "Pikachu (Astronaut)",
+    "Frigibax",
+    "Jangmo-o",
+    "Pikachu (Anniversary 2026)",
+    "Goomy"
   ],
   "tier3": [
     "Alolan Ninetales",
-    "Alolan Muk",
-    "Alolan Raichu"
+    "Alolan Raichu",
+    "Alolan Muk"
   ],
   "tier5": [
     "Palkia"
   ],
   "mega": [
-    "Mega Charizard Y",
-    "Mega Charizard X"
+    "Mega Charizard X",
+    "Mega Charizard Y"
   ],
   "primal": [],
   "ultra_beasts": [],
@@ -84,8 +84,9 @@
   ],
   "dynamax_tier5": [
     "Debaty",
+    "Mesprit",
     "Moltres"
   ],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-10-24 11:24:01"
+  "gigantamax_last_updated": "2026-10-24 14:44:25"
 }
