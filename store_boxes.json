@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-10-24 15:47:24",
+  "last_updated": "2026-10-24 20:35:36",
   "error": false,
-  "total": 8,
+  "total": 7,
   "boxes": [
     {
       "box_name": "GO Pass Deluxe: Halloween + 10 Ranks",
@@ -182,24 +182,6 @@
         }
       ],
       "silphco_price": 6.0
-    },
-    {
-      "box_name": "Dynamax Uxie, Mesprit, and Azelf Max Battle Day Ultra Ticket Box",
-      "in_store_price": 4.99,
-      "box_image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/web-ultra-beast-ticket-box.png",
-      "items": [
-        {
-          "name": "Dynamax Uxie, Mesprit, and Azelf Max Battle Day Ticket",
-          "count": 1,
-          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/item_event_ticket_s24_oct_24_maxbattle.png"
-        },
-        {
-          "name": "Max Particles",
-          "count": 800,
-          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/item_mp.png"
-        }
-      ],
-      "silphco_price": 3.0
     },
     {
       "box_name": "GO Pass Deluxe: October Ultra Box",
