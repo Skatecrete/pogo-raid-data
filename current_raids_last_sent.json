@@ -1,15 +1,16 @@
 {
   "last_updated": "2026-10-24",
   "tier1": [
-    "Frigibax",
     "Goomy",
+    "Frigibax",
+    "Jangmo-o",
     "Axew",
-    "Jangmo-o"
+    "Pikachu (Anniversary 2026)"
   ],
   "tier3": [
-    "Alolan Raichu",
     "Alolan Ninetales",
-    "Alolan Muk"
+    "Alolan Muk",
+    "Alolan Raichu"
   ],
   "tier5": [
     "Palkia"
@@ -86,7 +87,7 @@
     "Uxie"
   ],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-10-24 01:21:57",
+  "gigantamax_last_updated": "2026-10-24 06:12:41",
   "scrapedduck_raids": [
     "axew|1-star raids",
     "goomy|1-star raids",
@@ -737,5 +738,5 @@
       "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm645.fINCARNATE.icon.png"
     }
   ],
-  "last_sent_time": "2026-10-24T01:21:57.666565"
+  "last_sent_time": "2026-10-24T06:12:41.715169"
 }
