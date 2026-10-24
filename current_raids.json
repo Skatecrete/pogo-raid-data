@@ -1,17 +1,15 @@
 {
   "last_updated": "2026-10-24",
   "tier1": [
-    "Axew",
-    "Pikachu (Astronaut)",
     "Frigibax",
+    "Axew",
     "Jangmo-o",
-    "Pikachu (Anniversary 2026)",
     "Goomy"
   ],
   "tier3": [
     "Alolan Ninetales",
-    "Alolan Raichu",
-    "Alolan Muk"
+    "Alolan Muk",
+    "Alolan Raichu"
   ],
   "tier5": [
     "Palkia"
@@ -83,10 +81,10 @@
     "Sableye"
   ],
   "dynamax_tier5": [
+    "Azelf",
     "Debaty",
-    "Mesprit",
     "Moltres"
   ],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-10-24 14:44:25"
+  "gigantamax_last_updated": "2026-10-24 22:37:55"
 }
