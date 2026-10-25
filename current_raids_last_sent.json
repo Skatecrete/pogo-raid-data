@@ -1,14 +1,15 @@
 {
-  "last_updated": "2026-10-24",
+  "last_updated": "2026-10-25",
   "tier1": [
-    "Frigibax",
     "Axew",
-    "Jangmo-o",
-    "Goomy"
+    "Pikachu (Anniversary 2026)",
+    "Frigibax",
+    "Goomy",
+    "Jangmo-o"
   ],
   "tier3": [
-    "Alolan Ninetales",
     "Alolan Muk",
+    "Alolan Ninetales",
     "Alolan Raichu"
   ],
   "tier5": [
@@ -81,12 +82,11 @@
     "Sableye"
   ],
   "dynamax_tier5": [
-    "Azelf",
     "Debaty",
     "Moltres"
   ],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-10-24 22:37:55",
+  "gigantamax_last_updated": "2026-10-25 05:41:50",
   "scrapedduck_raids": [
     "axew|1-star raids",
     "goomy|1-star raids",
@@ -737,5 +737,5 @@
       "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm645.fINCARNATE.icon.png"
     }
   ],
-  "last_sent_time": "2026-10-24T22:37:55.980850"
+  "last_sent_time": "2026-10-25T05:41:50.329077"
 }
