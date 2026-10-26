@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-10-26 12:44:34",
+  "last_updated": "2026-10-26 22:33:44",
   "error": false,
-  "total": 7,
+  "total": 8,
   "boxes": [
     {
       "box_name": "GO Pass Deluxe: Halloween + 10 Ranks",
@@ -144,6 +144,24 @@
         }
       ],
       "silphco_price": 5.0
+    },
+    {
+      "box_name": "Chandelure Super Mega Raid Day Ultra Ticket Box",
+      "in_store_price": 4.99,
+      "box_image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/web-seasonal-delights-2024-box.png",
+      "items": [
+        {
+          "name": "Chandelure Super Mega Raid Day Ticket",
+          "count": 1,
+          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/item_event_ticket_s24_oct31_megaraid.png"
+        },
+        {
+          "name": "Premium Battle Pass",
+          "count": 1,
+          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/item_paid_raid_ticket.png"
+        }
+      ],
+      "silphco_price": 3.0
     },
     {
       "box_name": "GO Pass Deluxe: October + 10 Ranks",
