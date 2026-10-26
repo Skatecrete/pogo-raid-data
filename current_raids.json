@@ -1,16 +1,16 @@
 {
-  "last_updated": "2026-10-25",
+  "last_updated": "2026-10-26",
   "tier1": [
-    "Frigibax",
-    "Jangmo-o",
     "Goomy",
-    "Pikachu (Anniversary 2026)",
-    "Pikachu (Astronaut)",
-    "Axew"
+    "Sinistea (Phony Bow)",
+    "Pikachu (Hat and Capelet)",
+    "Axew",
+    "Jangmo-o",
+    "Frigibax"
   ],
   "tier3": [
-    "Alolan Ninetales",
     "Alolan Muk",
+    "Alolan Ninetales",
     "Alolan Raichu"
   ],
   "tier5": [
@@ -87,5 +87,5 @@
     "Moltres"
   ],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-10-25 10:45:57"
+  "gigantamax_last_updated": "2026-10-26 23:34:41"
 }
