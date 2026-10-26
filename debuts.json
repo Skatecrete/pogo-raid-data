@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-25 20:19:51",
+  "last_updated": "2026-10-26 02:59:57",
   "debuts": [
     {
       "event_name": "GO Wild Area 2026 Global",
@@ -48,20 +48,6 @@
         "Sinistea (Halloween Bow - Antique Form)": "https://www.serebii.net/pokemongo/pokemon/854-bow.png",
         "Polteageist (Halloween Bow - Phony Form)": "https://www.serebii.net/pokemongo/pokemon/855-bow.png",
         "Polteageist (Halloween Bow - Antique Form)": "https://www.serebii.net/pokemongo/pokemon/855-bow.png"
-      },
-      "event_type": "global"
-    },
-    {
-      "event_name": "Minior Showers - Orionids",
-      "event_date": "October 19th - October 24th 2026",
-      "new_pokemon": [
-        "Minior",
-        "Minior (Green Core)"
-      ],
-      "new_shiny": [],
-      "pokemon_images": {
-        "Minior": "https://www.serebii.net/pokemongo/pokemon/774.png",
-        "Minior (Green Core)": "https://www.serebii.net/pokemongo/pokemon/774-g.png"
       },
       "event_type": "global"
     },
