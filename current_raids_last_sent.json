@@ -1,18 +1,19 @@
 {
   "last_updated": "2026-10-27",
   "tier1": [
-    "Pikachu (Hat and Capelet)",
-    "Axew",
     "Frigibax",
-    "Goomy",
     "Sinistea (Phony Bow)",
+    "Goomy",
     "Pikachu (Anniversary 2026)",
-    "Jangmo-o"
+    "Pikachu (Hat and Capelet)",
+    "Jangmo-o",
+    "Pikachu (Astronaut)",
+    "Axew"
   ],
   "tier3": [
-    "Alolan Raichu",
     "Alolan Ninetales",
-    "Alolan Muk"
+    "Alolan Muk",
+    "Alolan Raichu"
   ],
   "tier5": [
     "Palkia"
@@ -88,7 +89,7 @@
     "Moltres"
   ],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-10-27 03:47:46",
+  "gigantamax_last_updated": "2026-10-27 09:36:42",
   "scrapedduck_raids": [
     "axew|1-star raids",
     "goomy|1-star raids",
@@ -739,5 +740,5 @@
       "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm645.fINCARNATE.icon.png"
     }
   ],
-  "last_sent_time": "2026-10-27T03:47:46.221538"
+  "last_sent_time": "2026-10-27T09:36:42.968757"
 }
