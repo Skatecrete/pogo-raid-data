@@ -1,11 +1,11 @@
 {
-  "last_updated": "2026-10-28 05:20:11",
+  "last_updated": "2026-10-28 12:37:30",
   "error": false,
   "total": 8,
   "boxes": [
     {
       "box_name": "GO Pass Deluxe: Halloween + 10 Ranks",
-      "in_store_price": 89.0,
+      "in_store_price": 9.99,
       "box_image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/bundle.halloween.large.1.png",
       "items": [
         {
@@ -39,11 +39,11 @@
           "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/item_max_potion.png"
         }
       ],
-      "silphco_price": 44.5
+      "silphco_price": 6.0
     },
     {
       "box_name": "GO Pass Deluxe: October",
-      "in_store_price": 74.0,
+      "in_store_price": 7.99,
       "box_image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/halloween_giftboxv1.png",
       "items": [
         {
@@ -72,11 +72,11 @@
           "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/item_max_potion.png"
         }
       ],
-      "silphco_price": 37.0
+      "silphco_price": 5.0
     },
     {
       "box_name": "GO Pass Deluxe: Halloween Ultra Box",
-      "in_store_price": 139.0,
+      "in_store_price": 14.99,
       "box_image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/bundle.halloween.adventure.1.png",
       "items": [
         {
@@ -110,11 +110,11 @@
           "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/item_max_potion.png"
         }
       ],
-      "silphco_price": 69.5
+      "silphco_price": 9.0
     },
     {
       "box_name": "GO Pass Deluxe: Halloween",
-      "in_store_price": 74.0,
+      "in_store_price": 7.99,
       "box_image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/bundle.halloween.small.1.png",
       "items": [
         {
@@ -143,11 +143,11 @@
           "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/item_max_potion.png"
         }
       ],
-      "silphco_price": 37.0
+      "silphco_price": 5.0
     },
     {
       "box_name": "Chandelure Super Mega Raid Day Ultra Ticket Box",
-      "in_store_price": 45.0,
+      "in_store_price": 4.99,
       "box_image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/web-seasonal-delights-2024-box.png",
       "items": [
         {
@@ -161,11 +161,11 @@
           "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/item_paid_raid_ticket.png"
         }
       ],
-      "silphco_price": 22.5
+      "silphco_price": 3.0
     },
     {
       "box_name": "GO Pass Deluxe: October + 10 Ranks",
-      "in_store_price": 89.0,
+      "in_store_price": 9.99,
       "box_image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/halloween_giftboxv2.png",
       "items": [
         {
@@ -199,11 +199,11 @@
           "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/item_max_potion.png"
         }
       ],
-      "silphco_price": 44.5
+      "silphco_price": 6.0
     },
     {
       "box_name": "GO Pass Deluxe: October Ultra Box",
-      "in_store_price": 139.0,
+      "in_store_price": 14.99,
       "box_image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/halloween_giftboxv3.png",
       "items": [
         {
@@ -237,11 +237,11 @@
           "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/item_max_potion.png"
         }
       ],
-      "silphco_price": 69.5
+      "silphco_price": 9.0
     },
     {
       "box_name": "Pok\u00e9mon GO Wild Area 2026: Global Ultra Ticket Box",
-      "in_store_price": 109.0,
+      "in_store_price": 11.99,
       "box_image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/genericbox_b1.png",
       "items": [
         {
@@ -260,7 +260,7 @@
           "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/item_mp.png"
         }
       ],
-      "silphco_price": 54.5
+      "silphco_price": 7.5
     }
   ]
 }
