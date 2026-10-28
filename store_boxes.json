@@ -1,42 +1,42 @@
 {
-  "last_updated": "2026-10-28 12:37:30",
+  "last_updated": "2026-10-28 22:28:01",
   "error": false,
   "total": 8,
   "boxes": [
     {
       "box_name": "GO Pass Deluxe: Halloween + 10 Ranks",
       "in_store_price": 9.99,
-      "box_image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/bundle.halloween.large.1.png",
+      "box_image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/bundle.halloween.large.1-845d3e4d3ce1.png",
       "items": [
         {
           "name": "GO Pass Deluxe: Halloween",
           "count": 1,
-          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/badge_event_0245.png"
+          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/badge_event_0245-31c1e2c017e8.png"
         },
         {
           "name": "+6 Ranks",
           "count": 1,
-          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/item_event_pass_point_live_ops_05.png"
+          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/item_event_pass_point_live_ops_05-f6c0bb0556e7.png"
         },
         {
           "name": "Ultra Ball",
           "count": 10,
-          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/item_ultra_ball.png"
+          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/item_ultra_ball-cbbb04b4daf8.png"
         },
         {
           "name": "Max Revive",
           "count": 5,
-          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/item_max_revive.png"
+          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/item_max_revive-7998834abd5d.png"
         },
         {
           "name": "Premium Battle Pass",
           "count": 2,
-          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/item_paid_raid_ticket.png"
+          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/item_paid_raid_ticket-583080af6a8c.png"
         },
         {
           "name": "Max Potion",
           "count": 5,
-          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/item_max_potion.png"
+          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/item_max_potion-a3caeba9993f.png"
         }
       ],
       "silphco_price": 6.0
@@ -44,32 +44,32 @@
     {
       "box_name": "GO Pass Deluxe: October",
       "in_store_price": 7.99,
-      "box_image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/halloween_giftboxv1.png",
+      "box_image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/halloween_giftboxv1-795ba6023305.png",
       "items": [
         {
           "name": "GO Pass Deluxe: October",
           "count": 1,
-          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/badge_event_0237.png"
+          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/badge_event_0237-31c1e2c017e8.png"
         },
         {
           "name": "Ultra Ball",
           "count": 10,
-          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/item_ultra_ball.png"
+          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/item_ultra_ball-cbbb04b4daf8.png"
         },
         {
           "name": "Max Revive",
           "count": 5,
-          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/item_max_revive.png"
+          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/item_max_revive-7998834abd5d.png"
         },
         {
           "name": "Premium Battle Pass",
           "count": 1,
-          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/item_paid_raid_ticket.png"
+          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/item_paid_raid_ticket-583080af6a8c.png"
         },
         {
           "name": "Max Potion",
           "count": 5,
-          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/item_max_potion.png"
+          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/item_max_potion-a3caeba9993f.png"
         }
       ],
       "silphco_price": 5.0
@@ -77,37 +77,37 @@
     {
       "box_name": "GO Pass Deluxe: Halloween Ultra Box",
       "in_store_price": 14.99,
-      "box_image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/bundle.halloween.adventure.1.png",
+      "box_image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/bundle.halloween.adventure.1-87205cf53155.png",
       "items": [
         {
           "name": "GO Pass Deluxe: Halloween",
           "count": 1,
-          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/badge_event_0245.png"
+          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/badge_event_0245-31c1e2c017e8.png"
         },
         {
           "name": "+6 Ranks",
           "count": 1,
-          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/item_event_pass_point_live_ops_05.png"
+          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/item_event_pass_point_live_ops_05-f6c0bb0556e7.png"
         },
         {
           "name": "Ultra Ball",
           "count": 20,
-          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/item_ultra_ball.png"
+          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/item_ultra_ball-cbbb04b4daf8.png"
         },
         {
           "name": "Max Revive",
           "count": 10,
-          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/item_max_revive.png"
+          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/item_max_revive-7998834abd5d.png"
         },
         {
           "name": "Premium Battle Pass",
           "count": 5,
-          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/item_paid_raid_ticket.png"
+          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/item_paid_raid_ticket-583080af6a8c.png"
         },
         {
           "name": "Max Potion",
           "count": 10,
-          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/item_max_potion.png"
+          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/item_max_potion-a3caeba9993f.png"
         }
       ],
       "silphco_price": 9.0
@@ -115,32 +115,32 @@
     {
       "box_name": "GO Pass Deluxe: Halloween",
       "in_store_price": 7.99,
-      "box_image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/bundle.halloween.small.1.png",
+      "box_image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/bundle.halloween.small.1-9ee003ae49a1.png",
       "items": [
         {
           "name": "GO Pass Deluxe: Halloween",
           "count": 1,
-          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/badge_event_0245.png"
+          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/badge_event_0245-31c1e2c017e8.png"
         },
         {
           "name": "Ultra Ball",
           "count": 10,
-          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/item_ultra_ball.png"
+          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/item_ultra_ball-cbbb04b4daf8.png"
         },
         {
           "name": "Max Revive",
           "count": 5,
-          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/item_max_revive.png"
+          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/item_max_revive-7998834abd5d.png"
         },
         {
           "name": "Premium Battle Pass",
           "count": 1,
-          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/item_paid_raid_ticket.png"
+          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/item_paid_raid_ticket-583080af6a8c.png"
         },
         {
           "name": "Max Potion",
           "count": 5,
-          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/item_max_potion.png"
+          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/item_max_potion-a3caeba9993f.png"
         }
       ],
       "silphco_price": 5.0
@@ -148,17 +148,17 @@
     {
       "box_name": "Chandelure Super Mega Raid Day Ultra Ticket Box",
       "in_store_price": 4.99,
-      "box_image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/web-seasonal-delights-2024-box.png",
+      "box_image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/web-seasonal-delights-2024-box-7b84574d59ea.png",
       "items": [
         {
           "name": "Chandelure Super Mega Raid Day Ticket",
           "count": 1,
-          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/item_event_ticket_s24_oct31_megaraid.png"
+          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/item_event_ticket_s24_oct31_megaraid-d52a2ca94751.png"
         },
         {
           "name": "Premium Battle Pass",
           "count": 1,
-          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/item_paid_raid_ticket.png"
+          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/item_paid_raid_ticket-583080af6a8c.png"
         }
       ],
       "silphco_price": 3.0
@@ -166,37 +166,37 @@
     {
       "box_name": "GO Pass Deluxe: October + 10 Ranks",
       "in_store_price": 9.99,
-      "box_image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/halloween_giftboxv2.png",
+      "box_image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/halloween_giftboxv2-c4d4e08ed634.png",
       "items": [
         {
           "name": "GO Pass Deluxe: October",
           "count": 1,
-          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/badge_event_0237.png"
+          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/badge_event_0237-31c1e2c017e8.png"
         },
         {
           "name": "+ 10 Ranks",
           "count": 1,
-          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/item_event_pass_point_monthly_02.png"
+          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/item_event_pass_point_monthly_02-4519eced2d84.png"
         },
         {
           "name": "Ultra Ball",
           "count": 10,
-          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/item_ultra_ball.png"
+          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/item_ultra_ball-cbbb04b4daf8.png"
         },
         {
           "name": "Max Revive",
           "count": 5,
-          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/item_max_revive.png"
+          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/item_max_revive-7998834abd5d.png"
         },
         {
           "name": "Premium Battle Pass",
           "count": 2,
-          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/item_paid_raid_ticket.png"
+          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/item_paid_raid_ticket-583080af6a8c.png"
         },
         {
           "name": "Max Potion",
           "count": 5,
-          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/item_max_potion.png"
+          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/item_max_potion-a3caeba9993f.png"
         }
       ],
       "silphco_price": 6.0
@@ -204,37 +204,37 @@
     {
       "box_name": "GO Pass Deluxe: October Ultra Box",
       "in_store_price": 14.99,
-      "box_image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/halloween_giftboxv3.png",
+      "box_image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/halloween_giftboxv3-506b5d585c8b.png",
       "items": [
         {
           "name": "GO Pass Deluxe: October",
           "count": 1,
-          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/badge_event_0237.png"
+          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/badge_event_0237-31c1e2c017e8.png"
         },
         {
           "name": "+ 10 Ranks",
           "count": 1,
-          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/item_event_pass_point_monthly_02.png"
+          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/item_event_pass_point_monthly_02-4519eced2d84.png"
         },
         {
           "name": "Ultra Ball",
           "count": 20,
-          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/item_ultra_ball.png"
+          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/item_ultra_ball-cbbb04b4daf8.png"
         },
         {
           "name": "Max Revive",
           "count": 10,
-          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/item_max_revive.png"
+          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/item_max_revive-7998834abd5d.png"
         },
         {
           "name": "Premium Battle Pass",
           "count": 5,
-          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/item_paid_raid_ticket.png"
+          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/item_paid_raid_ticket-583080af6a8c.png"
         },
         {
           "name": "Max Potion",
           "count": 10,
-          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/item_max_potion.png"
+          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/item_max_potion-a3caeba9993f.png"
         }
       ],
       "silphco_price": 9.0
@@ -242,22 +242,22 @@
     {
       "box_name": "Pok\u00e9mon GO Wild Area 2026: Global Ultra Ticket Box",
       "in_store_price": 11.99,
-      "box_image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/genericbox_b1.png",
+      "box_image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/genericbox_b1-a1f81b732c06.png",
       "items": [
         {
           "name": "Pok\u00e9mon GO Wild Area 2026: Global Ticket",
           "count": 1,
-          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/item_event_ticket_s24_nov9_gowaol.png"
+          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/item_event_ticket_s24_nov9_gowaol-2a65b0ad9617.png"
         },
         {
           "name": "Premium Battle Pass",
           "count": 3,
-          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/item_paid_raid_ticket.png"
+          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/item_paid_raid_ticket-583080af6a8c.png"
         },
         {
           "name": "Max Particles",
           "count": 800,
-          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/item_mp.png"
+          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/sku_assets/item_mp-9b405a6feb9f.png"
         }
       ],
       "silphco_price": 7.5
