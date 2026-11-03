@@ -1,6 +1,18 @@
 {
-  "last_updated": "2026-11-03 00:26:17",
+  "last_updated": "2026-11-03 13:32:11",
   "debuts": [
+    {
+      "event_name": "Minior Showers - Leonids",
+      "event_date": "November 14th - November 19th 2026",
+      "new_pokemon": [
+        "Minior (Indigo Core)"
+      ],
+      "new_shiny": [],
+      "pokemon_images": {
+        "Minior (Indigo Core)": "https://www.serebii.net/pokemongo/pokemon/774-i.png"
+      },
+      "event_type": "global"
+    },
     {
       "event_name": "GO Wild Area 2026 Global",
       "event_date": "November 14th - 15th 2026",
