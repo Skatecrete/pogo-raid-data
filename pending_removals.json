@@ -1,1 +1,42 @@
-{}
+{
+  "name:alolan raichu|3-star raids": {
+    "first_seen": "2026-11-03T19:04:46.163048",
+    "count": 1
+  },
+  "name:axew|1-star raids": {
+    "first_seen": "2026-11-03T19:04:46.163048",
+    "count": 1
+  },
+  "name:frigibax|1-star raids": {
+    "first_seen": "2026-11-03T19:04:46.163048",
+    "count": 1
+  },
+  "name:mega charizard y|mega raids": {
+    "first_seen": "2026-11-03T19:04:46.163048",
+    "count": 1
+  },
+  "name:mega charizard x|mega raids": {
+    "first_seen": "2026-11-03T19:04:46.163048",
+    "count": 1
+  },
+  "name:alolan muk|3-star raids": {
+    "first_seen": "2026-11-03T19:04:46.163048",
+    "count": 1
+  },
+  "id:484|5-star raids": {
+    "first_seen": "2026-11-03T19:04:46.163048",
+    "count": 1
+  },
+  "name:alolan ninetales|3-star raids": {
+    "first_seen": "2026-11-03T19:04:46.163048",
+    "count": 1
+  },
+  "name:goomy|1-star raids": {
+    "first_seen": "2026-11-03T19:04:46.163048",
+    "count": 1
+  },
+  "name:jangmo-o|1-star raids": {
+    "first_seen": "2026-11-03T19:04:46.163048",
+    "count": 1
+  }
+}

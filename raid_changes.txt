@@ -1,9 +1,3 @@
 
-**⭐⭐⭐ 3-Star Raids:**
-  ✅ Added: cofagrigus, dhelmise, trevenant
-
 **⭐⭐⭐⭐⭐ 5-Star Raids:**
-  ✅ Added: giratina (origin)
-
-**🔴 Mega Raids:**
-  ✅ Added: sableye
+  ✅ Added: giratina (altered)

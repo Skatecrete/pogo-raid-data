@@ -1,31 +1,22 @@
 {
-  "last_updated": "2026-10-27",
+  "last_updated": "2026-11-03",
   "tier1": [
-    "Goomy",
-    "Jangmo-o",
-    "Frigibax",
-    "Pikachu (Hat and Capelet)",
-    "Sinistea (Phony Bow)",
-    "Axew",
     "Pikachu (Anniversary 2026)",
-    "Pikachu (Astronaut)"
+    "Pikachu (Hat and Capelet)",
+    "Pikachu (Astronaut)",
+    "Sinistea (Phony Bow)"
   ],
   "tier3": [
-    "Alolan Muk",
     "Trevenant",
     "Cofagrigus",
-    "Alolan Ninetales",
-    "Dhelmise",
-    "Alolan Raichu"
+    "Dhelmise"
   ],
   "tier5": [
-    "Giratina (Origin)",
-    "Palkia"
+    "Giratina (Altered)",
+    "Giratina (Origin)"
   ],
   "mega": [
-    "Mega Charizard X",
-    "Mega Sableye",
-    "Mega Charizard Y"
+    "Mega Sableye"
   ],
   "primal": [],
   "ultra_beasts": [],
@@ -94,5 +85,5 @@
     "Moltres"
   ],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-10-27 20:26:12"
+  "gigantamax_last_updated": "2026-11-03 19:04:45"
 }
