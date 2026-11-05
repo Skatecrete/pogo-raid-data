@@ -1,10 +1,13 @@
 {
-  "last_updated": "2026-11-03",
+  "last_updated": "2026-11-05",
   "tier1": [
-    "Pikachu (Anniversary 2026)",
-    "Pikachu (Hat and Capelet)",
+    "Frillish (Female)",
+    "Duskull",
+    "Litwick",
     "Pikachu (Astronaut)",
-    "Sinistea (Phony Bow)"
+    "Sinistea (Phony Bow)",
+    "Pikachu (Hat and Capelet)",
+    "Pikachu (Anniversary 2026)"
   ],
   "tier3": [
     "Trevenant",
@@ -12,8 +15,7 @@
     "Dhelmise"
   ],
   "tier5": [
-    "Giratina (Altered)",
-    "Giratina (Origin)"
+    "Giratina (Altered)"
   ],
   "mega": [
     "Mega Sableye"
@@ -85,5 +87,5 @@
     "Moltres"
   ],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-11-03 19:04:45"
+  "gigantamax_last_updated": "2026-11-05 17:15:16"
 }

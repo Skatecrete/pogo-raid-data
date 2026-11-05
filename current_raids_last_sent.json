@@ -1,10 +1,13 @@
 {
-  "last_updated": "2026-11-03",
+  "last_updated": "2026-11-05",
   "tier1": [
-    "Pikachu (Anniversary 2026)",
-    "Pikachu (Hat and Capelet)",
+    "Frillish (Female)",
+    "Duskull",
+    "Litwick",
     "Pikachu (Astronaut)",
-    "Sinistea (Phony Bow)"
+    "Sinistea (Phony Bow)",
+    "Pikachu (Hat and Capelet)",
+    "Pikachu (Anniversary 2026)"
   ],
   "tier3": [
     "Trevenant",
@@ -12,8 +15,7 @@
     "Dhelmise"
   ],
   "tier5": [
-    "Giratina (Altered)",
-    "Giratina (Origin)"
+    "Giratina (Altered)"
   ],
   "mega": [
     "Mega Sableye"
@@ -85,15 +87,13 @@
     "Moltres"
   ],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-11-03 19:04:45",
+  "gigantamax_last_updated": "2026-11-05 17:15:16",
   "scrapedduck_raids": [
-    "pikachu wearing a hat and capelet|1-star raids",
-    "sinistea wearing a bow|1-star raids",
-    "cofagrigus|3-star raids",
-    "trevenant|3-star raids",
-    "dhelmise|3-star raids",
-    "giratina (origin)|5-star raids",
-    "mega sableye|mega raids",
+    "modern jacket machamp|3-star raids",
+    "zekrom|5-star raids",
+    "kyurem (white)|5-star raids",
+    "reshiram|5-star raids",
+    "kyurem (black)|5-star raids",
     "shadow gastly|1-star raids",
     "shadow totodile|1-star raids",
     "shadow shieldon|1-star raids",
@@ -104,13 +104,11 @@
     "shadow landorus (incarnate)|5-star raids"
   ],
   "scrapedduck_normalized": [
-    "name:pikachu wearing a hat and capelet|1-star raids",
-    "name:sinistea wearing a bow|1-star raids",
-    "name:cofagrigus|3-star raids",
-    "name:trevenant|3-star raids",
-    "name:dhelmise|3-star raids",
-    "name:giratina (origin)|5-star raids",
-    "name:mega sableye|mega raids",
+    "name:modern jacket machamp|3-star raids",
+    "name:zekrom|5-star raids",
+    "name:kyurem (white)|5-star raids",
+    "name:reshiram|5-star raids",
+    "name:kyurem (black)|5-star raids",
     "name:shadow gastly|1-star raids",
     "name:shadow totodile|1-star raids",
     "name:shadow shieldon|1-star raids",
@@ -122,10 +120,42 @@
   ],
   "scrapedduck_raids_objects": [
     {
-      "name": "Pikachu wearing a hat and capelet",
-      "tier": "1-Star Raids",
+      "name": "Modern Jacket Machamp",
+      "tier": "3-Star Raids",
       "canBeShiny": true,
       "types": [
+        {
+          "name": "fighting",
+          "image": "https://leekduck.com/assets/img/types/fighting.png"
+        }
+      ],
+      "combatPower": {
+        "normal": {
+          "min": 1667,
+          "max": 1746
+        },
+        "boosted": {
+          "min": 2084,
+          "max": 2183
+        }
+      },
+      "boostedWeather": [
+        {
+          "name": "cloudy",
+          "image": "https://leekduck.com/assets/img/weather/cloudy.png"
+        }
+      ],
+      "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm68.fWILDAREA_2026_01.icon.png"
+    },
+    {
+      "name": "Zekrom",
+      "tier": "5-Star Raids",
+      "canBeShiny": true,
+      "types": [
+        {
+          "name": "dragon",
+          "image": "https://leekduck.com/assets/img/types/dragon.png"
+        },
         {
           "name": "electric",
           "image": "https://leekduck.com/assets/img/types/electric.png"
@@ -133,217 +163,133 @@
       ],
       "combatPower": {
         "normal": {
-          "min": 493,
-          "max": 536
+          "min": 2217,
+          "max": 2307
         },
         "boosted": {
-          "min": 616,
-          "max": 670
+          "min": 2771,
+          "max": 2884
         }
       },
       "boostedWeather": [
+        {
+          "name": "windy",
+          "image": "https://leekduck.com/assets/img/weather/windy.png"
+        },
         {
           "name": "rainy",
           "image": "https://leekduck.com/assets/img/weather/rainy.png"
         }
       ],
-      "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm25.fHALLOWEEN_2026.icon.png"
+      "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm644.icon.png"
     },
     {
-      "name": "Sinistea wearing a bow",
-      "tier": "1-Star Raids",
-      "canBeShiny": true,
-      "types": [
-        {
-          "name": "ghost",
-          "image": "https://leekduck.com/assets/img/types/ghost.png"
-        }
-      ],
-      "combatPower": {
-        "normal": {
-          "min": 603,
-          "max": 650
-        },
-        "boosted": {
-          "min": 754,
-          "max": 813
-        }
-      },
-      "boostedWeather": [
-        {
-          "name": "fog",
-          "image": "https://leekduck.com/assets/img/weather/foggy.png"
-        }
-      ],
-      "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm854.fP_HALLOWEEN_2026_01.icon.png"
-    },
-    {
-      "name": "Cofagrigus",
-      "tier": "3-Star Raids",
-      "canBeShiny": true,
-      "types": [
-        {
-          "name": "ghost",
-          "image": "https://leekduck.com/assets/img/types/ghost.png"
-        }
-      ],
-      "combatPower": {
-        "normal": {
-          "min": 1231,
-          "max": 1299
-        },
-        "boosted": {
-          "min": 1539,
-          "max": 1624
-        }
-      },
-      "boostedWeather": [
-        {
-          "name": "fog",
-          "image": "https://leekduck.com/assets/img/weather/foggy.png"
-        }
-      ],
-      "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm563.icon.png"
-    },
-    {
-      "name": "Trevenant",
-      "tier": "3-Star Raids",
-      "canBeShiny": true,
-      "types": [
-        {
-          "name": "ghost",
-          "image": "https://leekduck.com/assets/img/types/ghost.png"
-        },
-        {
-          "name": "grass",
-          "image": "https://leekduck.com/assets/img/types/grass.png"
-        }
-      ],
-      "combatPower": {
-        "normal": {
-          "min": 1390,
-          "max": 1462
-        },
-        "boosted": {
-          "min": 1738,
-          "max": 1828
-        }
-      },
-      "boostedWeather": [
-        {
-          "name": "fog",
-          "image": "https://leekduck.com/assets/img/weather/foggy.png"
-        },
-        {
-          "name": "sunny",
-          "image": "https://leekduck.com/assets/img/weather/sunny.png"
-        }
-      ],
-      "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm709.icon.png"
-    },
-    {
-      "name": "Dhelmise",
-      "tier": "3-Star Raids",
-      "canBeShiny": true,
-      "types": [
-        {
-          "name": "ghost",
-          "image": "https://leekduck.com/assets/img/types/ghost.png"
-        },
-        {
-          "name": "grass",
-          "image": "https://leekduck.com/assets/img/types/grass.png"
-        }
-      ],
-      "combatPower": {
-        "normal": {
-          "min": 1608,
-          "max": 1685
-        },
-        "boosted": {
-          "min": 2010,
-          "max": 2107
-        }
-      },
-      "boostedWeather": [
-        {
-          "name": "fog",
-          "image": "https://leekduck.com/assets/img/weather/foggy.png"
-        },
-        {
-          "name": "sunny",
-          "image": "https://leekduck.com/assets/img/weather/sunny.png"
-        }
-      ],
-      "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm781.icon.png"
-    },
-    {
-      "name": "Giratina (Origin)",
+      "name": "Kyurem (White)",
       "tier": "5-Star Raids",
       "canBeShiny": true,
       "types": [
         {
-          "name": "ghost",
-          "image": "https://leekduck.com/assets/img/types/ghost.png"
-        },
-        {
           "name": "dragon",
           "image": "https://leekduck.com/assets/img/types/dragon.png"
+        },
+        {
+          "name": "ice",
+          "image": "https://leekduck.com/assets/img/types/ice.png"
         }
       ],
       "combatPower": {
         "normal": {
-          "min": 2018,
-          "max": 2105
+          "min": 1957,
+          "max": 2042
         },
         "boosted": {
-          "min": 2523,
-          "max": 2631
+          "min": 2446,
+          "max": 2553
         }
       },
       "boostedWeather": [
-        {
-          "name": "fog",
-          "image": "https://leekduck.com/assets/img/weather/foggy.png"
-        },
         {
           "name": "windy",
           "image": "https://leekduck.com/assets/img/weather/windy.png"
+        },
+        {
+          "name": "snow",
+          "image": "https://leekduck.com/assets/img/weather/snowy.png"
         }
       ],
-      "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm487.fORIGIN.icon.png"
+      "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm646.fWHITE.icon.png"
     },
     {
-      "name": "Mega Sableye",
-      "tier": "Mega Raids",
+      "name": "Reshiram",
+      "tier": "5-Star Raids",
       "canBeShiny": true,
       "types": [
         {
-          "name": "dark",
-          "image": "https://leekduck.com/assets/img/types/dark.png"
+          "name": "dragon",
+          "image": "https://leekduck.com/assets/img/types/dragon.png"
         },
         {
-          "name": "ghost",
-          "image": "https://leekduck.com/assets/img/types/ghost.png"
+          "name": "fire",
+          "image": "https://leekduck.com/assets/img/types/fire.png"
         }
       ],
       "combatPower": {
         "normal": {
-          "min": 789,
-          "max": 843
+          "min": 2217,
+          "max": 2307
         },
         "boosted": {
-          "min": 986,
-          "max": 1054
+          "min": 2771,
+          "max": 2884
         }
       },
       "boostedWeather": [
         {
-          "name": "fog",
-          "image": "https://leekduck.com/assets/img/weather/foggy.png"
+          "name": "windy",
+          "image": "https://leekduck.com/assets/img/weather/windy.png"
+        },
+        {
+          "name": "sunny",
+          "image": "https://leekduck.com/assets/img/weather/sunny.png"
         }
       ],
-      "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm302.fMEGA.icon.png"
+      "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm643.icon.png"
+    },
+    {
+      "name": "Kyurem (Black)",
+      "tier": "5-Star Raids",
+      "canBeShiny": true,
+      "types": [
+        {
+          "name": "dragon",
+          "image": "https://leekduck.com/assets/img/types/dragon.png"
+        },
+        {
+          "name": "ice",
+          "image": "https://leekduck.com/assets/img/types/ice.png"
+        }
+      ],
+      "combatPower": {
+        "normal": {
+          "min": 1957,
+          "max": 2042
+        },
+        "boosted": {
+          "min": 2446,
+          "max": 2553
+        }
+      },
+      "boostedWeather": [
+        {
+          "name": "windy",
+          "image": "https://leekduck.com/assets/img/weather/windy.png"
+        },
+        {
+          "name": "snow",
+          "image": "https://leekduck.com/assets/img/weather/snowy.png"
+        }
+      ],
+      "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm646.fBLACK.icon.png"
     },
     {
       "name": "Shadow Gastly",
@@ -618,5 +564,5 @@
       "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm645.fINCARNATE.icon.png"
     }
   ],
-  "last_sent_time": "2026-11-03T19:04:46.163370"
+  "last_sent_time": "2026-11-05T17:15:16.912871"
 }
