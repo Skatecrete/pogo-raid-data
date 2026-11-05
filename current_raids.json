@@ -1,18 +1,19 @@
 {
   "last_updated": "2026-11-05",
   "tier1": [
+    "Pikachu (Astronaut)",
+    "Pikachu (Anniversary 2026)",
+    "Pikachu (Hat and Capelet)",
     "Frillish (Female)",
     "Duskull",
     "Litwick",
-    "Pikachu (Astronaut)",
-    "Sinistea (Phony Bow)",
-    "Pikachu (Hat and Capelet)",
-    "Pikachu (Anniversary 2026)"
+    "Frillish (Normal)",
+    "Sinistea (Phony Bow)"
   ],
   "tier3": [
     "Trevenant",
-    "Cofagrigus",
-    "Dhelmise"
+    "Dhelmise",
+    "Cofagrigus"
   ],
   "tier5": [
     "Giratina (Altered)"
@@ -87,5 +88,5 @@
     "Moltres"
   ],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-11-05 17:15:16"
+  "gigantamax_last_updated": "2026-11-05 22:45:30"
 }

@@ -1,30 +1,22 @@
 {
-  "name:pikachu wearing a hat and capelet|1-star raids": {
-    "first_seen": "2026-11-05T17:15:16.912482",
+  "name:modern jacket machamp|3-star raids": {
+    "first_seen": "2026-11-05T22:45:31.144806",
     "count": 1
   },
-  "name:trevenant|3-star raids": {
-    "first_seen": "2026-11-05T17:15:16.912482",
+  "name:zekrom|5-star raids": {
+    "first_seen": "2026-11-05T22:45:31.144806",
     "count": 1
   },
-  "name:giratina (origin)|5-star raids": {
-    "first_seen": "2026-11-05T17:15:16.912482",
+  "name:reshiram|5-star raids": {
+    "first_seen": "2026-11-05T22:45:31.144806",
     "count": 1
   },
-  "name:sinistea wearing a bow|1-star raids": {
-    "first_seen": "2026-11-05T17:15:16.912482",
+  "name:kyurem (black)|5-star raids": {
+    "first_seen": "2026-11-05T22:45:31.144806",
     "count": 1
   },
-  "name:cofagrigus|3-star raids": {
-    "first_seen": "2026-11-05T17:15:16.912482",
-    "count": 1
-  },
-  "name:dhelmise|3-star raids": {
-    "first_seen": "2026-11-05T17:15:16.912482",
-    "count": 1
-  },
-  "name:mega sableye|mega raids": {
-    "first_seen": "2026-11-05T17:15:16.912482",
+  "name:kyurem (white)|5-star raids": {
+    "first_seen": "2026-11-05T22:45:31.144806",
     "count": 1
   }
 }
