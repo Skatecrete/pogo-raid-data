@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-06 22:39:55",
+  "last_updated": "2026-11-07 04:27:05",
   "debuts": [
     {
       "event_name": "Minior Showers - Leonids",
@@ -38,6 +38,18 @@
       "pokemon_images": {
         "Greavard": "https://www.serebii.net/pokemongo/pokemon/shiny/971.png",
         "Houndstone": "https://www.serebii.net/pokemongo/pokemon/shiny/972.png"
+      },
+      "event_type": "global"
+    },
+    {
+      "event_name": "Kecleon Appears",
+      "event_date": "January 7th 5pm - 7pm",
+      "new_pokemon": [
+        "Kecleon"
+      ],
+      "new_shiny": [],
+      "pokemon_images": {
+        "Kecleon": "https://www.serebii.net/pokemongo/pokemon/352.png"
       },
       "event_type": "global"
     },
