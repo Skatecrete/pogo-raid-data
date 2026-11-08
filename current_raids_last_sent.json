@@ -1,22 +1,24 @@
 {
-  "last_updated": "2026-11-05",
+  "last_updated": "2026-11-08",
   "tier1": [
-    "Pikachu (Astronaut)",
-    "Pikachu (Anniversary 2026)",
-    "Pikachu (Hat and Capelet)",
-    "Frillish (Female)",
-    "Duskull",
     "Litwick",
+    "Frillish (Female)",
+    "Pikachu (Astronaut)",
+    "Duskull",
     "Frillish (Normal)",
-    "Sinistea (Phony Bow)"
+    "Pikachu (Anniversary 2026)"
   ],
   "tier3": [
+    "Druddigon",
+    "Orthworm",
     "Trevenant",
     "Dhelmise",
     "Cofagrigus"
   ],
   "tier5": [
-    "Giratina (Altered)"
+    "Zamazenta (Crowned Shield)",
+    "Giratina (Altered)",
+    "Zacian (Crowned Sword)"
   ],
   "mega": [
     "Mega Sableye"
@@ -88,7 +90,7 @@
     "Moltres"
   ],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-11-05 22:45:30",
+  "gigantamax_last_updated": "2026-11-08 18:39:39",
   "scrapedduck_raids": [
     "duskull|1-star raids",
     "frillish|1-star raids",
@@ -705,5 +707,5 @@
       "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm645.fINCARNATE.icon.png"
     }
   ],
-  "last_sent_time": "2026-11-05T22:45:31.145055"
+  "last_sent_time": "2026-11-08T18:39:39.323256"
 }
