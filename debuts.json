@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-07 21:23:25",
+  "last_updated": "2026-11-08 04:11:43",
   "debuts": [
     {
       "event_name": "Minior Showers - Leonids",
@@ -24,20 +24,6 @@
       "pokemon_images": {
         "Machamp (Modern Jacket)": "https://www.serebii.net/pokemongo/pokemon/068-jacket.png",
         "Gigantamax Duraludon": "https://www.serebii.net/pokemongo/pokemon/884-gi.png"
-      },
-      "event_type": "global"
-    },
-    {
-      "event_name": "Halloween 2026 Part 2",
-      "event_date": "November 1st - November 5th 2026",
-      "new_pokemon": [],
-      "new_shiny": [
-        "Greavard",
-        "Houndstone"
-      ],
-      "pokemon_images": {
-        "Greavard": "https://www.serebii.net/pokemongo/pokemon/shiny/971.png",
-        "Houndstone": "https://www.serebii.net/pokemongo/pokemon/shiny/972.png"
       },
       "event_type": "global"
     },
