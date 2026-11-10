@@ -1,9 +1,3 @@
 
-**🌑 Shadow 1-Star:**
-  ✅ Added: Shadow Cranidos, Shadow Larvitar, Shadow Makuhita, Shadow Mudkip
-
-**🌑 Shadow 3-Star:**
-  ✅ Added: Shadow Piloswine, Shadow Poliwhirl, Shadow Prinplup
-
-**🌑 Shadow Legendary:**
-  ✅ Added: Shadow Tornadus (Incarnate)
+**⭐ 1-Star Raids:**
+  ✅ Added: pikachu (astronaut)

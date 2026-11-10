@@ -1,6 +1,7 @@
 {
   "last_updated": "2026-11-10",
   "tier1": [
+    "Pikachu (Astronaut)",
     "Pikachu (Anniversary 2026)"
   ],
   "tier3": [
@@ -8,8 +9,8 @@
     "Orthworm"
   ],
   "tier5": [
-    "Zamazenta (Crowned Shield)",
-    "Zacian (Crowned Sword)"
+    "Zacian (Crowned Sword)",
+    "Zamazenta (Crowned Shield)"
   ],
   "mega": [],
   "primal": [],
@@ -79,5 +80,5 @@
     "Moltres"
   ],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-11-10 03:15:13"
+  "gigantamax_last_updated": "2026-11-10 11:31:02"
 }
