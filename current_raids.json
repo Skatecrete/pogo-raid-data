@@ -1,28 +1,17 @@
 {
-  "last_updated": "2026-11-08",
+  "last_updated": "2026-11-10",
   "tier1": [
-    "Litwick",
-    "Frillish (Female)",
-    "Pikachu (Astronaut)",
-    "Duskull",
-    "Frillish (Normal)",
     "Pikachu (Anniversary 2026)"
   ],
   "tier3": [
     "Druddigon",
-    "Orthworm",
-    "Trevenant",
-    "Dhelmise",
-    "Cofagrigus"
+    "Orthworm"
   ],
   "tier5": [
     "Zamazenta (Crowned Shield)",
-    "Giratina (Altered)",
     "Zacian (Crowned Sword)"
   ],
-  "mega": [
-    "Mega Sableye"
-  ],
+  "mega": [],
   "primal": [],
   "ultra_beasts": [],
   "super_mega": [],
@@ -90,5 +79,5 @@
     "Moltres"
   ],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-11-08 18:39:39"
+  "gigantamax_last_updated": "2026-11-10 03:15:13"
 }

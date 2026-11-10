@@ -1,6 +1,9 @@
 
-**⭐⭐⭐ 3-Star Raids:**
-  ✅ Added: druddigon, orthworm
+**🌑 Shadow 1-Star:**
+  ✅ Added: Shadow Cranidos, Shadow Larvitar, Shadow Makuhita, Shadow Mudkip
 
-**⭐⭐⭐⭐⭐ 5-Star Raids:**
-  ✅ Added: zacian (crowned sword), zamazenta (crowned shield)
+**🌑 Shadow 3-Star:**
+  ✅ Added: Shadow Piloswine, Shadow Poliwhirl, Shadow Prinplup
+
+**🌑 Shadow Legendary:**
+  ✅ Added: Shadow Tornadus (Incarnate)

@@ -1,28 +1,17 @@
 {
-  "last_updated": "2026-11-08",
+  "last_updated": "2026-11-10",
   "tier1": [
-    "Litwick",
-    "Frillish (Female)",
-    "Pikachu (Astronaut)",
-    "Duskull",
-    "Frillish (Normal)",
     "Pikachu (Anniversary 2026)"
   ],
   "tier3": [
     "Druddigon",
-    "Orthworm",
-    "Trevenant",
-    "Dhelmise",
-    "Cofagrigus"
+    "Orthworm"
   ],
   "tier5": [
     "Zamazenta (Crowned Shield)",
-    "Giratina (Altered)",
     "Zacian (Crowned Sword)"
   ],
-  "mega": [
-    "Mega Sableye"
-  ],
+  "mega": [],
   "primal": [],
   "ultra_beasts": [],
   "super_mega": [],
@@ -90,291 +79,41 @@
     "Moltres"
   ],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-11-08 18:39:39",
+  "gigantamax_last_updated": "2026-11-10 03:15:13",
   "scrapedduck_raids": [
-    "duskull|1-star raids",
-    "frillish|1-star raids",
-    "frillish (female)|1-star raids",
-    "litwick|1-star raids",
-    "cofagrigus|3-star raids",
-    "trevenant|3-star raids",
-    "dhelmise|3-star raids",
-    "giratina (altered)|5-star raids",
-    "mega sableye|mega raids",
-    "shadow gastly|1-star raids",
-    "shadow totodile|1-star raids",
-    "shadow shieldon|1-star raids",
-    "shadow gible|1-star raids",
-    "shadow primeape|3-star raids",
-    "shadow kirlia|3-star raids",
-    "shadow drapion|3-star raids",
-    "shadow landorus (incarnate)|5-star raids"
+    "druddigon|3-star raids",
+    "orthworm|3-star raids",
+    "zacian (crowned sword)|5-star raids",
+    "zamazenta (crowned shield)|5-star raids",
+    "shadow larvitar|1-star raids",
+    "shadow mudkip|1-star raids",
+    "shadow makuhita|1-star raids",
+    "shadow cranidos|1-star raids",
+    "shadow poliwhirl|3-star raids",
+    "shadow piloswine|3-star raids",
+    "shadow prinplup|3-star raids",
+    "shadow tornadus (incarnate)|5-star raids"
   ],
   "scrapedduck_normalized": [
-    "name:duskull|1-star raids",
-    "name:frillish|1-star raids",
-    "name:frillish (female)|1-star raids",
-    "name:litwick|1-star raids",
-    "name:cofagrigus|3-star raids",
-    "name:trevenant|3-star raids",
-    "name:dhelmise|3-star raids",
-    "name:giratina (altered)|5-star raids",
-    "name:mega sableye|mega raids",
-    "name:shadow gastly|1-star raids",
-    "name:shadow totodile|1-star raids",
-    "name:shadow shieldon|1-star raids",
-    "name:shadow gible|1-star raids",
-    "name:shadow primeape|3-star raids",
-    "name:shadow kirlia|3-star raids",
-    "name:shadow drapion|3-star raids",
-    "name:shadow landorus (incarnate)|5-star raids"
+    "name:druddigon|3-star raids",
+    "name:orthworm|3-star raids",
+    "name:zacian (crowned sword)|5-star raids",
+    "name:zamazenta (crowned shield)|5-star raids",
+    "name:shadow larvitar|1-star raids",
+    "name:shadow mudkip|1-star raids",
+    "name:shadow makuhita|1-star raids",
+    "name:shadow cranidos|1-star raids",
+    "name:shadow poliwhirl|3-star raids",
+    "name:shadow piloswine|3-star raids",
+    "name:shadow prinplup|3-star raids",
+    "name:shadow tornadus (incarnate)|5-star raids"
   ],
   "scrapedduck_raids_objects": [
     {
-      "name": "Duskull",
-      "tier": "1-Star Raids",
-      "canBeShiny": true,
-      "types": [
-        {
-          "name": "ghost",
-          "image": "https://leekduck.com/assets/img/types/ghost.png"
-        }
-      ],
-      "combatPower": {
-        "normal": {
-          "min": 364,
-          "max": 403
-        },
-        "boosted": {
-          "min": 456,
-          "max": 504
-        }
-      },
-      "boostedWeather": [
-        {
-          "name": "fog",
-          "image": "https://leekduck.com/assets/img/weather/foggy.png"
-        }
-      ],
-      "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm355.icon.png"
-    },
-    {
-      "name": "Frillish",
-      "tier": "1-Star Raids",
-      "canBeShiny": true,
-      "types": [
-        {
-          "name": "water",
-          "image": "https://leekduck.com/assets/img/types/water.png"
-        },
-        {
-          "name": "ghost",
-          "image": "https://leekduck.com/assets/img/types/ghost.png"
-        }
-      ],
-      "combatPower": {
-        "normal": {
-          "min": 668,
-          "max": 718
-        },
-        "boosted": {
-          "min": 835,
-          "max": 898
-        }
-      },
-      "boostedWeather": [
-        {
-          "name": "rainy",
-          "image": "https://leekduck.com/assets/img/weather/rainy.png"
-        },
-        {
-          "name": "fog",
-          "image": "https://leekduck.com/assets/img/weather/foggy.png"
-        }
-      ],
-      "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm592.icon.png"
-    },
-    {
-      "name": "Frillish (Female)",
-      "tier": "1-Star Raids",
-      "canBeShiny": true,
-      "types": [
-        {
-          "name": "water",
-          "image": "https://leekduck.com/assets/img/types/water.png"
-        },
-        {
-          "name": "ghost",
-          "image": "https://leekduck.com/assets/img/types/ghost.png"
-        }
-      ],
-      "combatPower": {
-        "normal": {
-          "min": 668,
-          "max": 718
-        },
-        "boosted": {
-          "min": 835,
-          "max": 898
-        }
-      },
-      "boostedWeather": [
-        {
-          "name": "rainy",
-          "image": "https://leekduck.com/assets/img/weather/rainy.png"
-        },
-        {
-          "name": "fog",
-          "image": "https://leekduck.com/assets/img/weather/foggy.png"
-        }
-      ],
-      "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm592.fFEMALE.icon.png"
-    },
-    {
-      "name": "Litwick",
-      "tier": "1-Star Raids",
-      "canBeShiny": true,
-      "types": [
-        {
-          "name": "ghost",
-          "image": "https://leekduck.com/assets/img/types/ghost.png"
-        },
-        {
-          "name": "fire",
-          "image": "https://leekduck.com/assets/img/types/fire.png"
-        }
-      ],
-      "combatPower": {
-        "normal": {
-          "min": 530,
-          "max": 575
-        },
-        "boosted": {
-          "min": 663,
-          "max": 719
-        }
-      },
-      "boostedWeather": [
-        {
-          "name": "fog",
-          "image": "https://leekduck.com/assets/img/weather/foggy.png"
-        },
-        {
-          "name": "sunny",
-          "image": "https://leekduck.com/assets/img/weather/sunny.png"
-        }
-      ],
-      "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm607.icon.png"
-    },
-    {
-      "name": "Cofagrigus",
+      "name": "Druddigon",
       "tier": "3-Star Raids",
       "canBeShiny": true,
       "types": [
-        {
-          "name": "ghost",
-          "image": "https://leekduck.com/assets/img/types/ghost.png"
-        }
-      ],
-      "combatPower": {
-        "normal": {
-          "min": 1231,
-          "max": 1299
-        },
-        "boosted": {
-          "min": 1539,
-          "max": 1624
-        }
-      },
-      "boostedWeather": [
-        {
-          "name": "fog",
-          "image": "https://leekduck.com/assets/img/weather/foggy.png"
-        }
-      ],
-      "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm563.icon.png"
-    },
-    {
-      "name": "Trevenant",
-      "tier": "3-Star Raids",
-      "canBeShiny": true,
-      "types": [
-        {
-          "name": "ghost",
-          "image": "https://leekduck.com/assets/img/types/ghost.png"
-        },
-        {
-          "name": "grass",
-          "image": "https://leekduck.com/assets/img/types/grass.png"
-        }
-      ],
-      "combatPower": {
-        "normal": {
-          "min": 1390,
-          "max": 1462
-        },
-        "boosted": {
-          "min": 1738,
-          "max": 1828
-        }
-      },
-      "boostedWeather": [
-        {
-          "name": "fog",
-          "image": "https://leekduck.com/assets/img/weather/foggy.png"
-        },
-        {
-          "name": "sunny",
-          "image": "https://leekduck.com/assets/img/weather/sunny.png"
-        }
-      ],
-      "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm709.icon.png"
-    },
-    {
-      "name": "Dhelmise",
-      "tier": "3-Star Raids",
-      "canBeShiny": true,
-      "types": [
-        {
-          "name": "ghost",
-          "image": "https://leekduck.com/assets/img/types/ghost.png"
-        },
-        {
-          "name": "grass",
-          "image": "https://leekduck.com/assets/img/types/grass.png"
-        }
-      ],
-      "combatPower": {
-        "normal": {
-          "min": 1608,
-          "max": 1685
-        },
-        "boosted": {
-          "min": 2010,
-          "max": 2107
-        }
-      },
-      "boostedWeather": [
-        {
-          "name": "fog",
-          "image": "https://leekduck.com/assets/img/weather/foggy.png"
-        },
-        {
-          "name": "sunny",
-          "image": "https://leekduck.com/assets/img/weather/sunny.png"
-        }
-      ],
-      "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm781.icon.png"
-    },
-    {
-      "name": "Giratina (Altered)",
-      "tier": "5-Star Raids",
-      "canBeShiny": true,
-      "types": [
-        {
-          "name": "ghost",
-          "image": "https://leekduck.com/assets/img/types/ghost.png"
-        },
         {
           "name": "dragon",
           "image": "https://leekduck.com/assets/img/types/dragon.png"
@@ -382,130 +121,58 @@
       ],
       "combatPower": {
         "normal": {
-          "min": 1848,
-          "max": 1931
+          "min": 1487,
+          "max": 1561
         },
         "boosted": {
-          "min": 2310,
-          "max": 2414
+          "min": 1859,
+          "max": 1951
         }
       },
       "boostedWeather": [
-        {
-          "name": "fog",
-          "image": "https://leekduck.com/assets/img/weather/foggy.png"
-        },
         {
           "name": "windy",
           "image": "https://leekduck.com/assets/img/weather/windy.png"
         }
       ],
-      "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm487.fALTERED.icon.png"
+      "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm621.icon.png"
     },
     {
-      "name": "Mega Sableye",
-      "tier": "Mega Raids",
-      "canBeShiny": true,
+      "name": "Orthworm",
+      "tier": "3-Star Raids",
+      "canBeShiny": false,
       "types": [
         {
-          "name": "dark",
-          "image": "https://leekduck.com/assets/img/types/dark.png"
-        },
-        {
-          "name": "ghost",
-          "image": "https://leekduck.com/assets/img/types/ghost.png"
+          "name": "steel",
+          "image": "https://leekduck.com/assets/img/types/steel.png"
         }
       ],
       "combatPower": {
         "normal": {
-          "min": 789,
-          "max": 843
+          "min": 1245,
+          "max": 1313
         },
         "boosted": {
-          "min": 986,
-          "max": 1054
+          "min": 1557,
+          "max": 1642
         }
       },
       "boostedWeather": [
         {
-          "name": "fog",
-          "image": "https://leekduck.com/assets/img/weather/foggy.png"
+          "name": "snow",
+          "image": "https://leekduck.com/assets/img/weather/snowy.png"
         }
       ],
-      "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm302.fMEGA.icon.png"
+      "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm968.icon.png"
     },
     {
-      "name": "Shadow Gastly",
-      "tier": "1-Star Raids",
+      "name": "Zacian (Crowned Sword)",
+      "tier": "5-Star Raids",
       "canBeShiny": true,
       "types": [
         {
-          "name": "ghost",
-          "image": "https://leekduck.com/assets/img/types/ghost.png"
-        },
-        {
-          "name": "poison",
-          "image": "https://leekduck.com/assets/img/types/poison.png"
-        }
-      ],
-      "combatPower": {
-        "normal": {
-          "min": 608,
-          "max": 702
-        },
-        "boosted": {
-          "min": 760,
-          "max": 878
-        }
-      },
-      "boostedWeather": [
-        {
-          "name": "fog",
-          "image": "https://leekduck.com/assets/img/weather/foggy.png"
-        },
-        {
-          "name": "cloudy",
-          "image": "https://leekduck.com/assets/img/weather/cloudy.png"
-        }
-      ],
-      "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm92.icon.png"
-    },
-    {
-      "name": "Shadow Totodile",
-      "tier": "1-Star Raids",
-      "canBeShiny": true,
-      "types": [
-        {
-          "name": "water",
-          "image": "https://leekduck.com/assets/img/types/water.png"
-        }
-      ],
-      "combatPower": {
-        "normal": {
-          "min": 562,
-          "max": 646
-        },
-        "boosted": {
-          "min": 703,
-          "max": 808
-        }
-      },
-      "boostedWeather": [
-        {
-          "name": "rainy",
-          "image": "https://leekduck.com/assets/img/weather/rainy.png"
-        }
-      ],
-      "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm158.icon.png"
-    },
-    {
-      "name": "Shadow Shieldon",
-      "tier": "1-Star Raids",
-      "canBeShiny": true,
-      "types": [
-        {
-          "name": "rock",
-          "image": "https://leekduck.com/assets/img/types/rock.png"
+          "name": "fairy",
+          "image": "https://leekduck.com/assets/img/types/fairy.png"
         },
         {
           "name": "steel",
@@ -514,34 +181,70 @@
       ],
       "combatPower": {
         "normal": {
-          "min": 431,
-          "max": 509
+          "min": 2100,
+          "max": 2188
         },
         "boosted": {
-          "min": 539,
-          "max": 636
+          "min": 2625,
+          "max": 2735
         }
       },
       "boostedWeather": [
         {
-          "name": "partly cloudy",
-          "image": "https://leekduck.com/assets/img/weather/partlycloudy.png"
+          "name": "cloudy",
+          "image": "https://leekduck.com/assets/img/weather/cloudy.png"
         },
         {
           "name": "snow",
           "image": "https://leekduck.com/assets/img/weather/snowy.png"
         }
       ],
-      "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm410.icon.png"
+      "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm888.fCROWNED_SWORD.icon.png"
     },
     {
-      "name": "Shadow Gible",
+      "name": "Zamazenta (Crowned Shield)",
+      "tier": "5-Star Raids",
+      "canBeShiny": true,
+      "types": [
+        {
+          "name": "fighting",
+          "image": "https://leekduck.com/assets/img/types/fighting.png"
+        },
+        {
+          "name": "steel",
+          "image": "https://leekduck.com/assets/img/types/steel.png"
+        }
+      ],
+      "combatPower": {
+        "normal": {
+          "min": 2100,
+          "max": 2188
+        },
+        "boosted": {
+          "min": 2625,
+          "max": 2735
+        }
+      },
+      "boostedWeather": [
+        {
+          "name": "cloudy",
+          "image": "https://leekduck.com/assets/img/weather/cloudy.png"
+        },
+        {
+          "name": "snow",
+          "image": "https://leekduck.com/assets/img/weather/snowy.png"
+        }
+      ],
+      "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm889.fCROWNED_SHIELD.icon.png"
+    },
+    {
+      "name": "Shadow Larvitar",
       "tier": "1-Star Raids",
       "canBeShiny": true,
       "types": [
         {
-          "name": "dragon",
-          "image": "https://leekduck.com/assets/img/types/dragon.png"
+          "name": "rock",
+          "image": "https://leekduck.com/assets/img/types/rock.png"
         },
         {
           "name": "ground",
@@ -550,29 +253,57 @@
       ],
       "combatPower": {
         "normal": {
-          "min": 551,
-          "max": 635
+          "min": 513,
+          "max": 594
         },
         "boosted": {
-          "min": 689,
-          "max": 794
+          "min": 642,
+          "max": 743
         }
       },
       "boostedWeather": [
         {
-          "name": "windy",
-          "image": "https://leekduck.com/assets/img/weather/windy.png"
+          "name": "partly cloudy",
+          "image": "https://leekduck.com/assets/img/weather/partlycloudy.png"
         },
         {
           "name": "sunny",
           "image": "https://leekduck.com/assets/img/weather/sunny.png"
         }
       ],
-      "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm443.icon.png"
+      "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm246.icon.png"
     },
     {
-      "name": "Shadow Primeape",
-      "tier": "3-Star Raids",
+      "name": "Shadow Mudkip",
+      "tier": "1-Star Raids",
+      "canBeShiny": true,
+      "types": [
+        {
+          "name": "water",
+          "image": "https://leekduck.com/assets/img/types/water.png"
+        }
+      ],
+      "combatPower": {
+        "normal": {
+          "min": 560,
+          "max": 644
+        },
+        "boosted": {
+          "min": 700,
+          "max": 805
+        }
+      },
+      "boostedWeather": [
+        {
+          "name": "rainy",
+          "image": "https://leekduck.com/assets/img/weather/rainy.png"
+        }
+      ],
+      "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm258.icon.png"
+    },
+    {
+      "name": "Shadow Makuhita",
+      "tier": "1-Star Raids",
       "canBeShiny": true,
       "types": [
         {
@@ -582,12 +313,12 @@
       ],
       "combatPower": {
         "normal": {
-          "min": 1185,
-          "max": 1307
+          "min": 391,
+          "max": 467
         },
         "boosted": {
-          "min": 1482,
-          "max": 1634
+          "min": 489,
+          "max": 583
         }
       },
       "boostedWeather": [
@@ -596,89 +327,133 @@
           "image": "https://leekduck.com/assets/img/weather/cloudy.png"
         }
       ],
-      "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm57.icon.png"
+      "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm296.icon.png"
     },
     {
-      "name": "Shadow Kirlia",
-      "tier": "3-Star Raids",
+      "name": "Shadow Cranidos",
+      "tier": "1-Star Raids",
       "canBeShiny": true,
       "types": [
         {
-          "name": "psychic",
-          "image": "https://leekduck.com/assets/img/types/psychic.png"
-        },
-        {
-          "name": "fairy",
-          "image": "https://leekduck.com/assets/img/types/fairy.png"
+          "name": "rock",
+          "image": "https://leekduck.com/assets/img/types/rock.png"
         }
       ],
       "combatPower": {
         "normal": {
-          "min": 475,
-          "max": 552
+          "min": 922,
+          "max": 1040
         },
         "boosted": {
-          "min": 593,
-          "max": 690
+          "min": 1153,
+          "max": 1300
         }
       },
       "boostedWeather": [
         {
-          "name": "windy",
-          "image": "https://leekduck.com/assets/img/weather/windy.png"
-        },
-        {
-          "name": "cloudy",
-          "image": "https://leekduck.com/assets/img/weather/cloudy.png"
+          "name": "partly cloudy",
+          "image": "https://leekduck.com/assets/img/weather/partlycloudy.png"
         }
       ],
-      "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm281.icon.png"
+      "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm408.icon.png"
     },
     {
-      "name": "Shadow Drapion",
+      "name": "Shadow Poliwhirl",
       "tier": "3-Star Raids",
       "canBeShiny": true,
       "types": [
         {
-          "name": "poison",
-          "image": "https://leekduck.com/assets/img/types/poison.png"
-        },
-        {
-          "name": "dark",
-          "image": "https://leekduck.com/assets/img/types/dark.png"
+          "name": "water",
+          "image": "https://leekduck.com/assets/img/types/water.png"
         }
       ],
       "combatPower": {
         "normal": {
-          "min": 1277,
-          "max": 1401
+          "min": 716,
+          "max": 811
         },
         "boosted": {
-          "min": 1596,
-          "max": 1752
+          "min": 895,
+          "max": 1013
         }
       },
       "boostedWeather": [
         {
-          "name": "cloudy",
-          "image": "https://leekduck.com/assets/img/weather/cloudy.png"
-        },
-        {
-          "name": "fog",
-          "image": "https://leekduck.com/assets/img/weather/foggy.png"
+          "name": "rainy",
+          "image": "https://leekduck.com/assets/img/weather/rainy.png"
         }
       ],
-      "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm452.icon.png"
+      "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm61.icon.png"
     },
     {
-      "name": "Shadow Landorus (Incarnate)",
-      "tier": "5-Star Raids",
+      "name": "Shadow Piloswine",
+      "tier": "3-Star Raids",
       "canBeShiny": true,
       "types": [
+        {
+          "name": "ice",
+          "image": "https://leekduck.com/assets/img/types/ice.png"
+        },
         {
           "name": "ground",
           "image": "https://leekduck.com/assets/img/types/ground.png"
+        }
+      ],
+      "combatPower": {
+        "normal": {
+          "min": 1217,
+          "max": 1340
         },
+        "boosted": {
+          "min": 1521,
+          "max": 1675
+        }
+      },
+      "boostedWeather": [
+        {
+          "name": "snow",
+          "image": "https://leekduck.com/assets/img/weather/snowy.png"
+        },
+        {
+          "name": "sunny",
+          "image": "https://leekduck.com/assets/img/weather/sunny.png"
+        }
+      ],
+      "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm221.icon.png"
+    },
+    {
+      "name": "Shadow Prinplup",
+      "tier": "3-Star Raids",
+      "canBeShiny": true,
+      "types": [
+        {
+          "name": "water",
+          "image": "https://leekduck.com/assets/img/types/water.png"
+        }
+      ],
+      "combatPower": {
+        "normal": {
+          "min": 868,
+          "max": 972
+        },
+        "boosted": {
+          "min": 1086,
+          "max": 1215
+        }
+      },
+      "boostedWeather": [
+        {
+          "name": "rainy",
+          "image": "https://leekduck.com/assets/img/weather/rainy.png"
+        }
+      ],
+      "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm394.icon.png"
+    },
+    {
+      "name": "Shadow Tornadus (Incarnate)",
+      "tier": "5-Star Raids",
+      "canBeShiny": true,
+      "types": [
         {
           "name": "flying",
           "image": "https://leekduck.com/assets/img/types/flying.png"
@@ -686,26 +461,22 @@
       ],
       "combatPower": {
         "normal": {
-          "min": 1897,
-          "max": 2050
+          "min": 1762,
+          "max": 1911
         },
         "boosted": {
-          "min": 2372,
-          "max": 2563
+          "min": 2203,
+          "max": 2389
         }
       },
       "boostedWeather": [
-        {
-          "name": "sunny",
-          "image": "https://leekduck.com/assets/img/weather/sunny.png"
-        },
         {
           "name": "windy",
           "image": "https://leekduck.com/assets/img/weather/windy.png"
         }
       ],
-      "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm645.fINCARNATE.icon.png"
+      "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm641.fINCARNATE.icon.png"
     }
   ],
-  "last_sent_time": "2026-11-08T18:39:39.323256"
+  "last_sent_time": "2026-11-10T03:15:13.393976"
 }
