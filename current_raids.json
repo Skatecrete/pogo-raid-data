@@ -1,7 +1,6 @@
 {
-  "last_updated": "2026-11-10",
+  "last_updated": "2026-11-11",
   "tier1": [
-    "Pikachu (Astronaut)",
     "Pikachu (Anniversary 2026)"
   ],
   "tier3": [
@@ -43,6 +42,7 @@
     "Scorbunny",
     "Search",
     "Skwovet",
+    "Sobble",
     "Spheal",
     "Squirtle",
     "Trapinch",
@@ -80,5 +80,5 @@
     "Registeel"
   ],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-11-10 19:19:56"
+  "gigantamax_last_updated": "2026-11-11 06:54:54"
 }
