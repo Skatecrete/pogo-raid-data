@@ -5,12 +5,12 @@
     "Pikachu (Anniversary 2026)"
   ],
   "tier3": [
-    "Orthworm",
-    "Druddigon"
+    "Druddigon",
+    "Orthworm"
   ],
   "tier5": [
-    "Zamazenta (Crowned Shield)",
-    "Zacian (Crowned Sword)"
+    "Zacian (Crowned Sword)",
+    "Zamazenta (Crowned Shield)"
   ],
   "mega": [],
   "primal": [],
@@ -43,6 +43,7 @@
     "Scorbunny",
     "Search",
     "Skwovet",
+    "Sobble",
     "Spheal",
     "Squirtle",
     "Trapinch",
@@ -81,7 +82,7 @@
     "Registeel"
   ],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-11-11 14:54:55",
+  "gigantamax_last_updated": "2026-11-11 21:44:00",
   "scrapedduck_raids": [
     "druddigon|3-star raids",
     "orthworm|3-star raids",
@@ -480,5 +481,5 @@
       "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm641.fINCARNATE.icon.png"
     }
   ],
-  "last_sent_time": "2026-11-11T14:54:56.063493"
+  "last_sent_time": "2026-11-11T21:44:01.182787"
 }
