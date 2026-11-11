@@ -1,6 +1,7 @@
 {
   "last_updated": "2026-11-11",
   "tier1": [
+    "Pikachu (Astronaut)",
     "Pikachu (Anniversary 2026)"
   ],
   "tier3": [
@@ -8,8 +9,8 @@
     "Druddigon"
   ],
   "tier5": [
-    "Zacian (Crowned Sword)",
-    "Zamazenta (Crowned Shield)"
+    "Zamazenta (Crowned Shield)",
+    "Zacian (Crowned Sword)"
   ],
   "mega": [],
   "primal": [],
@@ -42,7 +43,6 @@
     "Scorbunny",
     "Search",
     "Skwovet",
-    "Sobble",
     "Spheal",
     "Squirtle",
     "Trapinch",
@@ -77,8 +77,9 @@
   "dynamax_tier5": [
     "Debaty",
     "Moltres",
+    "Regidrago",
     "Registeel"
   ],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-11-11 06:54:54"
+  "gigantamax_last_updated": "2026-11-11 14:54:55"
 }
