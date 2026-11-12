@@ -1,16 +1,16 @@
 {
-  "last_updated": "2026-11-11",
+  "last_updated": "2026-11-12",
   "tier1": [
-    "Pikachu (Astronaut)",
-    "Pikachu (Anniversary 2026)"
+    "Pikachu (Anniversary 2026)",
+    "Pikachu (Astronaut)"
   ],
   "tier3": [
-    "Druddigon",
-    "Orthworm"
+    "Orthworm",
+    "Druddigon"
   ],
   "tier5": [
-    "Zacian (Crowned Sword)",
-    "Zamazenta (Crowned Shield)"
+    "Zamazenta (Crowned Shield)",
+    "Zacian (Crowned Sword)"
   ],
   "mega": [],
   "primal": [],
@@ -77,12 +77,13 @@
   ],
   "dynamax_tier5": [
     "Debaty",
+    "Latias",
+    "Latios",
     "Moltres",
-    "Regidrago",
-    "Registeel"
+    "Regidrago"
   ],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-11-11 21:44:00",
+  "gigantamax_last_updated": "2026-11-12 18:41:24",
   "scrapedduck_raids": [
     "druddigon|3-star raids",
     "orthworm|3-star raids",
@@ -481,5 +482,5 @@
       "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm641.fINCARNATE.icon.png"
     }
   ],
-  "last_sent_time": "2026-11-11T21:44:01.182787"
+  "last_sent_time": "2026-11-12T18:41:24.915931"
 }
