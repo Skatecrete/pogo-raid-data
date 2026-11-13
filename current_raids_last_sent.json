@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-12",
+  "last_updated": "2026-11-13",
   "tier1": [
     "Pikachu (Anniversary 2026)",
     "Pikachu (Astronaut)"
@@ -43,7 +43,6 @@
     "Scorbunny",
     "Search",
     "Skwovet",
-    "Sobble",
     "Spheal",
     "Squirtle",
     "Trapinch",
@@ -77,13 +76,13 @@
   ],
   "dynamax_tier5": [
     "Debaty",
+    "Dialga",
     "Latias",
     "Latios",
-    "Moltres",
-    "Regidrago"
+    "Moltres"
   ],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-11-12 18:41:24",
+  "gigantamax_last_updated": "2026-11-13 14:19:55",
   "scrapedduck_raids": [
     "druddigon|3-star raids",
     "orthworm|3-star raids",
@@ -482,5 +481,5 @@
       "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm641.fINCARNATE.icon.png"
     }
   ],
-  "last_sent_time": "2026-11-12T18:41:24.915931"
+  "last_sent_time": "2026-11-13T14:19:55.586772"
 }
