@@ -1,21 +1,14 @@
 {
   "last_updated": "2026-11-14",
-  "tier1": [
-    "Pikachu (Anniversary 2026)",
-    "Pikachu (Astronaut)"
-  ],
+  "tier1": [],
   "tier3": [
-    "Machamp (Modern Jacket)",
-    "Druddigon",
-    "Orthworm"
+    "Machamp (Modern Jacket)"
   ],
   "tier5": [
-    "Kyurem (White)",
-    "Zacian (Crowned Sword)",
-    "Zamazenta (Crowned Shield)",
     "Zekrom",
     "Reshiram",
-    "Kyurem (Black)"
+    "Kyurem (Black)",
+    "Kyurem (White)"
   ],
   "mega": [],
   "primal": [],
@@ -48,6 +41,7 @@
     "Scorbunny",
     "Search",
     "Skwovet",
+    "Sobble",
     "Spheal",
     "Squirtle",
     "Trapinch",
@@ -86,5 +80,5 @@
     "Palkia"
   ],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-11-14 19:42:07"
+  "gigantamax_last_updated": "2026-11-14 23:38:00"
 }
