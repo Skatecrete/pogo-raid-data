@@ -1,19 +1,18 @@
 {
-  "last_updated": "2026-11-13",
+  "last_updated": "2026-11-14",
   "tier1": [
-    "Pikachu (Astronaut)",
     "Pikachu (Anniversary 2026)"
   ],
   "tier3": [
     "Druddigon",
-    "Machamp (Modern Jacket)",
-    "Orthworm"
+    "Orthworm",
+    "Machamp (Modern Jacket)"
   ],
   "tier5": [
     "Kyurem (White)",
-    "Zekrom",
+    "Zamazenta (Crowned Shield)",
     "Zacian (Crowned Sword)",
-    "Zamazenta (Crowned Shield)"
+    "Zekrom"
   ],
   "mega": [],
   "primal": [],
@@ -46,6 +45,7 @@
     "Scorbunny",
     "Search",
     "Skwovet",
+    "Sobble",
     "Spheal",
     "Squirtle",
     "Trapinch",
@@ -85,7 +85,7 @@
     "Moltres"
   ],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-11-13 20:56:52",
+  "gigantamax_last_updated": "2026-11-14 01:19:45",
   "scrapedduck_raids": [
     "druddigon|3-star raids",
     "orthworm|3-star raids",
@@ -484,5 +484,5 @@
       "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm641.fINCARNATE.icon.png"
     }
   ],
-  "last_sent_time": "2026-11-13T20:56:52.940133"
+  "last_sent_time": "2026-11-14T01:19:46.024125"
 }

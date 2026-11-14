@@ -1,6 +1,3 @@
 
-**⭐⭐⭐ 3-Star Raids:**
-  ✅ Added: machamp (modern jacket)
-
-**⭐⭐⭐⭐⭐ 5-Star Raids:**
-  ✅ Added: kyurem (white), zekrom
+**⚡ Dynamax Tier 1:**
+  ✅ Added: sobble
