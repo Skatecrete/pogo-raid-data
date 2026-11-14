@@ -1,16 +1,17 @@
 {
   "last_updated": "2026-11-14",
   "tier1": [
+    "Pikachu (Astronaut)",
     "Pikachu (Anniversary 2026)"
   ],
   "tier3": [
-    "Druddigon",
     "Orthworm",
-    "Machamp (Modern Jacket)"
+    "Machamp (Modern Jacket)",
+    "Druddigon"
   ],
   "tier5": [
-    "Kyurem (White)",
     "Zamazenta (Crowned Shield)",
+    "Kyurem (White)",
     "Zacian (Crowned Sword)",
     "Zekrom"
   ],
@@ -80,17 +81,17 @@
   "dynamax_tier5": [
     "Debaty",
     "Dialga",
-    "Latias",
-    "Latios",
-    "Moltres"
+    "Moltres",
+    "Palkia"
   ],
   "gigantamax": [],
-  "gigantamax_last_updated": "2026-11-14 01:19:45",
+  "gigantamax_last_updated": "2026-11-14 14:46:03",
   "scrapedduck_raids": [
-    "druddigon|3-star raids",
-    "orthworm|3-star raids",
-    "zacian (crowned sword)|5-star raids",
-    "zamazenta (crowned shield)|5-star raids",
+    "modern jacket machamp|3-star raids",
+    "zekrom|5-star raids",
+    "kyurem (white)|5-star raids",
+    "reshiram|5-star raids",
+    "kyurem (black)|5-star raids",
     "shadow larvitar|1-star raids",
     "shadow mudkip|1-star raids",
     "shadow makuhita|1-star raids",
@@ -101,10 +102,11 @@
     "shadow tornadus (incarnate)|5-star raids"
   ],
   "scrapedduck_normalized": [
-    "name:druddigon|3-star raids",
-    "name:orthworm|3-star raids",
-    "name:zacian (crowned sword)|5-star raids",
-    "name:zamazenta (crowned shield)|5-star raids",
+    "name:modern jacket machamp|3-star raids",
+    "name:zekrom|5-star raids",
+    "name:kyurem (white)|5-star raids",
+    "name:reshiram|5-star raids",
+    "name:kyurem (black)|5-star raids",
     "name:shadow larvitar|1-star raids",
     "name:shadow mudkip|1-star raids",
     "name:shadow makuhita|1-star raids",
@@ -116,132 +118,176 @@
   ],
   "scrapedduck_raids_objects": [
     {
-      "name": "Druddigon",
+      "name": "Modern Jacket Machamp",
       "tier": "3-Star Raids",
+      "canBeShiny": true,
+      "types": [
+        {
+          "name": "fighting",
+          "image": "https://leekduck.com/assets/img/types/fighting.png"
+        }
+      ],
+      "combatPower": {
+        "normal": {
+          "min": 1667,
+          "max": 1746
+        },
+        "boosted": {
+          "min": 2084,
+          "max": 2183
+        }
+      },
+      "boostedWeather": [
+        {
+          "name": "cloudy",
+          "image": "https://leekduck.com/assets/img/weather/cloudy.png"
+        }
+      ],
+      "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm68.fWILDAREA_2026_01.icon.png"
+    },
+    {
+      "name": "Zekrom",
+      "tier": "5-Star Raids",
       "canBeShiny": true,
       "types": [
         {
           "name": "dragon",
           "image": "https://leekduck.com/assets/img/types/dragon.png"
+        },
+        {
+          "name": "electric",
+          "image": "https://leekduck.com/assets/img/types/electric.png"
         }
       ],
       "combatPower": {
         "normal": {
-          "min": 1487,
-          "max": 1561
+          "min": 2217,
+          "max": 2307
         },
         "boosted": {
-          "min": 1859,
-          "max": 1951
+          "min": 2771,
+          "max": 2884
         }
       },
       "boostedWeather": [
         {
           "name": "windy",
           "image": "https://leekduck.com/assets/img/weather/windy.png"
-        }
-      ],
-      "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm621.icon.png"
-    },
-    {
-      "name": "Orthworm",
-      "tier": "3-Star Raids",
-      "canBeShiny": false,
-      "types": [
-        {
-          "name": "steel",
-          "image": "https://leekduck.com/assets/img/types/steel.png"
-        }
-      ],
-      "combatPower": {
-        "normal": {
-          "min": 1245,
-          "max": 1313
         },
-        "boosted": {
-          "min": 1557,
-          "max": 1642
-        }
-      },
-      "boostedWeather": [
         {
-          "name": "snow",
-          "image": "https://leekduck.com/assets/img/weather/snowy.png"
+          "name": "rainy",
+          "image": "https://leekduck.com/assets/img/weather/rainy.png"
         }
       ],
-      "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm968.icon.png"
+      "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm644.icon.png"
     },
     {
-      "name": "Zacian (Crowned Sword)",
+      "name": "Kyurem (White)",
       "tier": "5-Star Raids",
       "canBeShiny": true,
       "types": [
         {
-          "name": "fairy",
-          "image": "https://leekduck.com/assets/img/types/fairy.png"
+          "name": "dragon",
+          "image": "https://leekduck.com/assets/img/types/dragon.png"
         },
         {
-          "name": "steel",
-          "image": "https://leekduck.com/assets/img/types/steel.png"
+          "name": "ice",
+          "image": "https://leekduck.com/assets/img/types/ice.png"
         }
       ],
       "combatPower": {
         "normal": {
-          "min": 2100,
-          "max": 2188
+          "min": 1957,
+          "max": 2042
         },
         "boosted": {
-          "min": 2625,
-          "max": 2735
+          "min": 2446,
+          "max": 2553
         }
       },
       "boostedWeather": [
         {
-          "name": "cloudy",
-          "image": "https://leekduck.com/assets/img/weather/cloudy.png"
+          "name": "windy",
+          "image": "https://leekduck.com/assets/img/weather/windy.png"
         },
         {
           "name": "snow",
           "image": "https://leekduck.com/assets/img/weather/snowy.png"
         }
       ],
-      "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm888.fCROWNED_SWORD.icon.png"
+      "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm646.fWHITE.icon.png"
     },
     {
-      "name": "Zamazenta (Crowned Shield)",
+      "name": "Reshiram",
       "tier": "5-Star Raids",
       "canBeShiny": true,
       "types": [
         {
-          "name": "fighting",
-          "image": "https://leekduck.com/assets/img/types/fighting.png"
+          "name": "dragon",
+          "image": "https://leekduck.com/assets/img/types/dragon.png"
         },
         {
-          "name": "steel",
-          "image": "https://leekduck.com/assets/img/types/steel.png"
+          "name": "fire",
+          "image": "https://leekduck.com/assets/img/types/fire.png"
         }
       ],
       "combatPower": {
         "normal": {
-          "min": 2100,
-          "max": 2188
+          "min": 2217,
+          "max": 2307
         },
         "boosted": {
-          "min": 2625,
-          "max": 2735
+          "min": 2771,
+          "max": 2884
         }
       },
       "boostedWeather": [
         {
-          "name": "cloudy",
-          "image": "https://leekduck.com/assets/img/weather/cloudy.png"
+          "name": "windy",
+          "image": "https://leekduck.com/assets/img/weather/windy.png"
+        },
+        {
+          "name": "sunny",
+          "image": "https://leekduck.com/assets/img/weather/sunny.png"
+        }
+      ],
+      "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm643.icon.png"
+    },
+    {
+      "name": "Kyurem (Black)",
+      "tier": "5-Star Raids",
+      "canBeShiny": true,
+      "types": [
+        {
+          "name": "dragon",
+          "image": "https://leekduck.com/assets/img/types/dragon.png"
+        },
+        {
+          "name": "ice",
+          "image": "https://leekduck.com/assets/img/types/ice.png"
+        }
+      ],
+      "combatPower": {
+        "normal": {
+          "min": 1957,
+          "max": 2042
+        },
+        "boosted": {
+          "min": 2446,
+          "max": 2553
+        }
+      },
+      "boostedWeather": [
+        {
+          "name": "windy",
+          "image": "https://leekduck.com/assets/img/weather/windy.png"
         },
         {
           "name": "snow",
           "image": "https://leekduck.com/assets/img/weather/snowy.png"
         }
       ],
-      "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm889.fCROWNED_SHIELD.icon.png"
+      "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm646.fBLACK.icon.png"
     },
     {
       "name": "Shadow Larvitar",
@@ -484,5 +530,5 @@
       "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm641.fINCARNATE.icon.png"
     }
   ],
-  "last_sent_time": "2026-11-14T01:19:46.024125"
+  "last_sent_time": "2026-11-14T14:46:04.125048"
 }
