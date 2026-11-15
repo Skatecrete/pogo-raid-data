@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-11-15 06:05:30",
+  "last_updated": "2026-11-15 18:44:23",
   "error": false,
-  "total": 7,
+  "total": 6,
   "boxes": [
     {
       "box_name": "GO Pass Deluxe: Into the Wild + 10 Ranks Ultra Box",
@@ -220,29 +220,6 @@
         }
       ],
       "silphco_price": 9.0
-    },
-    {
-      "box_name": "Pok\u00e9mon GO Wild Area 2026: Global Ultra Ticket Box",
-      "in_store_price": 11.99,
-      "box_image": "https://assets.pgo.webstore.nianticlabs.com/pgo/image_variants/v1/sku_assets/genericbox_b1-a1f81b732c06/w384.webp",
-      "items": [
-        {
-          "name": "Pok\u00e9mon GO Wild Area 2026: Global Ticket",
-          "count": 1,
-          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/image_variants/v1/sku_assets/item_event_ticket_s24_nov9_gowaol-2a65b0ad9617/w128.webp"
-        },
-        {
-          "name": "Premium Battle Pass",
-          "count": 3,
-          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/image_variants/v1/sku_assets/item_paid_raid_ticket-583080af6a8c/w128.webp"
-        },
-        {
-          "name": "Max Particles",
-          "count": 800,
-          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/image_variants/v1/sku_assets/item_mp-9b405a6feb9f/w128.webp"
-        }
-      ],
-      "silphco_price": 7.5
     }
   ]
 }
