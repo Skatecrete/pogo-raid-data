@@ -1,46 +1,8 @@
 {
-  "last_updated": "2026-11-15 18:44:23",
+  "last_updated": "2026-11-16 06:03:54",
   "error": false,
-  "total": 6,
+  "total": 3,
   "boxes": [
-    {
-      "box_name": "GO Pass Deluxe: Into the Wild + 10 Ranks Ultra Box",
-      "in_store_price": 24.99,
-      "box_image": "https://assets.pgo.webstore.nianticlabs.com/pgo/image_variants/v1/sku_assets/safari_box-3105cd1d398d/w384.webp",
-      "items": [
-        {
-          "name": "GO Pass Deluxe: Into the Wild",
-          "count": 1,
-          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/image_variants/v1/sku_assets/badge_gowa_2026_event_01-31c1e2c017e8/w128.webp"
-        },
-        {
-          "name": "+ 10 Ranks",
-          "count": 100,
-          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/image_variants/v1/sku_assets/item_event_pass_point_go_wild_area_01-4519eced2d84/w128.webp"
-        },
-        {
-          "name": "Ultra Ball",
-          "count": 20,
-          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/image_variants/v1/sku_assets/item_ultra_ball-cbbb04b4daf8/w128.webp"
-        },
-        {
-          "name": "Max Revive",
-          "count": 10,
-          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/image_variants/v1/sku_assets/item_max_revive-7998834abd5d/w128.webp"
-        },
-        {
-          "name": "Premium Battle Pass",
-          "count": 5,
-          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/image_variants/v1/sku_assets/item_paid_raid_ticket-583080af6a8c/w128.webp"
-        },
-        {
-          "name": "Max Potion",
-          "count": 10,
-          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/image_variants/v1/sku_assets/item_max_potion-a3caeba9993f/w128.webp"
-        }
-      ],
-      "silphco_price": 12.5
-    },
     {
       "box_name": "GO Pass Deluxe: November Ultra Box",
       "in_store_price": 14.99,
@@ -118,44 +80,6 @@
       "silphco_price": 6.0
     },
     {
-      "box_name": "GO Pass Deluxe: Into the Wild + 10 Ranks",
-      "in_store_price": 19.99,
-      "box_image": "https://assets.pgo.webstore.nianticlabs.com/pgo/image_variants/v1/sku_assets/safari_box-3105cd1d398d/w384.webp",
-      "items": [
-        {
-          "name": "GO Pass Deluxe: Into the Wild",
-          "count": 1,
-          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/image_variants/v1/sku_assets/badge_gowa_2026_event_01-31c1e2c017e8/w128.webp"
-        },
-        {
-          "name": "+ 10 Ranks",
-          "count": 100,
-          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/image_variants/v1/sku_assets/item_event_pass_point_go_wild_area_01-4519eced2d84/w128.webp"
-        },
-        {
-          "name": "Ultra Ball",
-          "count": 10,
-          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/image_variants/v1/sku_assets/item_ultra_ball-cbbb04b4daf8/w128.webp"
-        },
-        {
-          "name": "Max Revive",
-          "count": 5,
-          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/image_variants/v1/sku_assets/item_max_revive-7998834abd5d/w128.webp"
-        },
-        {
-          "name": "Premium Battle Pass",
-          "count": 2,
-          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/image_variants/v1/sku_assets/item_paid_raid_ticket-583080af6a8c/w128.webp"
-        },
-        {
-          "name": "Max Potion",
-          "count": 5,
-          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/image_variants/v1/sku_assets/item_max_potion-a3caeba9993f/w128.webp"
-        }
-      ],
-      "silphco_price": 12.0
-    },
-    {
       "box_name": "GO Pass Deluxe: November",
       "in_store_price": 7.99,
       "box_image": "https://assets.pgo.webstore.nianticlabs.com/pgo/image_variants/v1/sku_assets/bundle1.sprite.a-2d087dfb6a85/w384.webp",
@@ -187,39 +111,6 @@
         }
       ],
       "silphco_price": 5.0
-    },
-    {
-      "box_name": "GO Pass Deluxe: Into the Wild",
-      "in_store_price": 14.99,
-      "box_image": "https://assets.pgo.webstore.nianticlabs.com/pgo/image_variants/v1/sku_assets/safari_box-3105cd1d398d/w384.webp",
-      "items": [
-        {
-          "name": "GO Pass Deluxe: Into the Wild",
-          "count": 1,
-          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/image_variants/v1/sku_assets/badge_gowa_2026_event_01-31c1e2c017e8/w128.webp"
-        },
-        {
-          "name": "Ultra Ball",
-          "count": 10,
-          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/image_variants/v1/sku_assets/item_ultra_ball-cbbb04b4daf8/w128.webp"
-        },
-        {
-          "name": "Max Revive",
-          "count": 5,
-          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/image_variants/v1/sku_assets/item_max_revive-7998834abd5d/w128.webp"
-        },
-        {
-          "name": "Premium Battle Pass",
-          "count": 1,
-          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/image_variants/v1/sku_assets/item_paid_raid_ticket-583080af6a8c/w128.webp"
-        },
-        {
-          "name": "Max Potion",
-          "count": 5,
-          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/image_variants/v1/sku_assets/item_max_potion-a3caeba9993f/w128.webp"
-        }
-      ],
-      "silphco_price": 9.0
     }
   ]
 }
