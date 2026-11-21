@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-11-21 06:51:32",
+  "last_updated": "2026-11-21 19:01:40",
   "error": false,
-  "total": 8,
+  "total": 7,
   "boxes": [
     {
       "box_name": "GO Pass Deluxe: November Ultra Box",
@@ -111,24 +111,6 @@
         }
       ],
       "silphco_price": 6.0
-    },
-    {
-      "box_name": "Pawniard Community Day Ultra Ticket Box",
-      "in_store_price": 1.99,
-      "box_image": "https://assets.pgo.webstore.nianticlabs.com/pgo/image_variants/v1/sku_assets/bundle.general1.small.2-22dd61ad0ef2/w384.webp",
-      "items": [
-        {
-          "name": "Pawniard Community Day Ticket",
-          "count": 1,
-          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/image_variants/v1/sku_assets/item_event_ticket_s24_nov21_community-51c2e97a489c/w128.webp"
-        },
-        {
-          "name": "Ultra Ball",
-          "count": 5,
-          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/image_variants/v1/sku_assets/item_ultra_ball-cbbb04b4daf8/w128.webp"
-        }
-      ],
-      "silphco_price": 1.5
     },
     {
       "box_name": "GO Pass Deluxe: Twilight Wishes",
