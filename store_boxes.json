@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-11-23 07:15:31",
+  "last_updated": "2026-11-23 23:44:50",
   "error": false,
-  "total": 7,
+  "total": 8,
   "boxes": [
     {
       "box_name": "GO Pass Deluxe: November Ultra Box",
@@ -253,6 +253,24 @@
         }
       ],
       "silphco_price": 4.5
+    },
+    {
+      "box_name": "Clefable Super Mega Raid Day Ultra Ticket Box",
+      "in_store_price": 4.99,
+      "box_image": "https://assets.pgo.webstore.nianticlabs.com/pgo/image_variants/v1/sku_assets/bundle3.sprite.d-9d537440a8a0/w384.webp",
+      "items": [
+        {
+          "name": "Clefable Super Mega Raid Day Ticket",
+          "count": 1,
+          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/image_variants/v1/sku_assets/item_event_ticket_s24_nov28_megaraid-d52a2ca94751/w128.webp"
+        },
+        {
+          "name": "Premium Battle Pass",
+          "count": 1,
+          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/image_variants/v1/sku_assets/item_paid_raid_ticket-583080af6a8c/w128.webp"
+        }
+      ],
+      "silphco_price": 3.0
     }
   ]
 }
