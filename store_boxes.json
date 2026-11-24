@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-11-23 23:44:50",
+  "last_updated": "2026-11-24 09:38:32",
   "error": false,
-  "total": 8,
+  "total": 7,
   "boxes": [
     {
       "box_name": "GO Pass Deluxe: November Ultra Box",
@@ -40,39 +40,6 @@
         }
       ],
       "silphco_price": 9.0
-    },
-    {
-      "box_name": "GO Pass Deluxe: Dynamax Trails",
-      "in_store_price": 4.99,
-      "box_image": "https://assets.pgo.webstore.nianticlabs.com/pgo/image_variants/v1/sku_assets/genericbox_c1-af8d1a2b0020/w384.webp",
-      "items": [
-        {
-          "name": "GO Pass Deluxe: Dynamax Trails",
-          "count": 1,
-          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/image_variants/v1/sku_assets/badge_gowa_2026_event_02-31c1e2c017e8/w128.webp"
-        },
-        {
-          "name": "Ultra Ball",
-          "count": 10,
-          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/image_variants/v1/sku_assets/item_ultra_ball-cbbb04b4daf8/w128.webp"
-        },
-        {
-          "name": "Max Revive",
-          "count": 5,
-          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/image_variants/v1/sku_assets/item_max_revive-7998834abd5d/w128.webp"
-        },
-        {
-          "name": "Premium Battle Pass",
-          "count": 1,
-          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/image_variants/v1/sku_assets/item_paid_raid_ticket-583080af6a8c/w128.webp"
-        },
-        {
-          "name": "Max Potion",
-          "count": 5,
-          "image": "https://assets.pgo.webstore.nianticlabs.com/pgo/image_variants/v1/sku_assets/item_max_potion-a3caeba9993f/w128.webp"
-        }
-      ],
-      "silphco_price": 3.0
     },
     {
       "box_name": "GO Pass Deluxe: November + 10 Ranks",
