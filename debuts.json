@@ -1,6 +1,20 @@
 {
-  "last_updated": "2026-11-25 16:43:33",
+  "last_updated": "2026-11-26 01:29:34",
   "debuts": [
+    {
+      "event_name": "Tropical Paradise",
+      "event_date": "December 1st - 7th 2026",
+      "new_pokemon": [
+        "Pyukumuku"
+      ],
+      "new_shiny": [
+        "Pyukumuku"
+      ],
+      "pokemon_images": {
+        "Pyukumuku": "https://www.serebii.net/pokemongo/pokemon/shiny/771.png"
+      },
+      "event_type": "global"
+    },
     {
       "event_name": "Kecleon Appears",
       "event_date": "January 7th 5pm - 7pm",
